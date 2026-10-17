@@ -142,9 +142,6 @@
 .prof-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .prof-c{border-radius:var(--r-card);overflow:hidden;background:#110c1c;border:1px solid rgba(255,255,255,.08)}
 .prof-c .ph{aspect-ratio:4/4;background:var(--grad-blaze);display:flex;align-items:flex-end;padding:16px;font-family:var(--display);font-weight:800;font-size:56px;color:rgba(255,255,255,.85);letter-spacing:-.04em}
-.prof-c:nth-child(2) .ph{background:var(--grad-lilac);color:rgba(0,0,0,.6)}
-.prof-c:nth-child(3) .ph{background:linear-gradient(135deg,#2a1f3b,var(--purple-royal))}
-.prof-c:nth-child(4) .ph{background:linear-gradient(135deg,var(--gray-fog),var(--blaze-b));color:rgba(0,0,0,.55)}
 .prof-c .tx{padding:18px}
 .prof-c b{display:block;font-family:var(--display);color:#fff;font-size:16px}
 .prof-c span{font-size:13px;color:var(--gray-fog)}
@@ -302,3 +299,6 @@ a.step:hover{transform:translateY(-4px)}
   .journey li{padding:0 0 0 64px}
   .c-hero h1.h-sprint{font-size:42px}
 }
+
+/* fotos reais dos instrutores */
+.prof-c .ph{background-color:#2a1f3b;background-size:cover;background-position:center 20%;font-size:0}

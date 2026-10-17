@@ -64,13 +64,7 @@ button{font:inherit;color:inherit}
 .sec-head .lead{margin:0}
 @media (max-width:860px){.sec-head{grid-template-columns:1fr}}
 
-/* grade de fundo com cruzetas (referência Pareto, em dose baixa) */
-.gridlines{position:relative;isolation:isolate}
-.gridlines::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);
-  background-size:calc(100% / 6) 100%;background-position:0 0;
-  -webkit-mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent)}
-.on-dark.gridlines::before,.gridlines.on-dark::before{background-image:linear-gradient(to right,var(--line-dark) 1px,transparent 1px)}
+/* cruzetas dos números */
 .cross{position:absolute;width:13px;height:13px;pointer-events:none;color:var(--gray-fog)}
 .cross::before,.cross::after{content:'';position:absolute;background:currentColor}
 .cross::before{left:6px;top:0;width:1px;height:13px}

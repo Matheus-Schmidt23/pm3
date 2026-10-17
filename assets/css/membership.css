@@ -247,3 +247,6 @@
   .aurora i,.marquee .track{animation:none}
   .fill-text .w{color:var(--ink)}
 }
+
+/* fotos reais dos instrutores (nunca iniciais) */
+.prof img.av{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center 20%;background:var(--gray-fog-soft);flex:none}

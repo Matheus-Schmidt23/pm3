@@ -27,26 +27,20 @@
 .intent{margin-top:clamp(32px,4vw,52px);border-top:1px solid rgba(255,255,255,.14)}
 .intent > p{font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-fog);margin:22px 0 0}
 .intent ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr)}
-.intent li{border-left:1px solid rgba(255,255,255,.14)}
+.intent li{border-left:1px solid rgba(255,255,255,.14);display:flex}
 .intent li:first-child{border-left:0}
-.intent a{display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:150px;padding:22px 22px 24px;text-decoration:none;color:#fff;position:relative;transition:background .3s}
+.intent a{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:150px;padding:22px 22px 24px;text-decoration:none;color:#fff;position:relative;transition:background .3s}
 .intent li:first-child a{padding-left:0}
 .intent a::before{content:'';position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--yellow);transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .intent a:hover::before{transform:scaleX(1)}
 .intent a:hover{background:rgba(255,255,255,.04)}
-.intent .q{font-family:var(--display);font-weight:700;font-size:clamp(19px,1.7vw,24px);line-height:1.12;letter-spacing:-.02em}
+.intent .q{font-family:var(--display);font-weight:700;font-size:clamp(19px,1.6vw,23px);line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
 .intent .to{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13.5px;color:var(--gray-fog)}
 .intent .to svg{width:18px;height:18px;transition:transform .25s;flex:none}
 .intent a:hover .to svg{transform:translateX(4px)}
 .intent a:hover .to{color:#fff}
 
 /* ---------- prêmios ---------- */
-.awards{background:#fff;border-bottom:1px solid var(--line)}
-.awards .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:12px 36px;padding-top:20px;padding-bottom:20px;font-size:13.5px;color:var(--muted)}
-.awards b{font-family:var(--display);color:var(--ink);font-size:13.5px}
-.awards span{display:flex;align-items:center;gap:10px}
-.awards span::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--purple-royal)}
-.awards span:first-child::before{display:none}
 
 /* ---------- vitrine de produtos (bento) ---------- */
 .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto auto;gap:16px}
@@ -219,3 +213,21 @@
   .free a{border-left:0;border-top:1px solid var(--line)}
   .free a:first-child{border-top:0}
 }
+
+/* fotos reais nos depoimentos */
+.qcard .who img.av{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center 25%;flex:none;background:#2a1f3b}
+
+/* ---------- faixa de reconhecimentos ---------- */
+.awards{position:relative;isolation:isolate;overflow:hidden;background:var(--grad-blaze);color:#fff}
+.awards::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 140% at 100% 50%,rgba(176,77,221,.55),transparent 60%)}
+.awards.grain::after{z-index:-1;opacity:.18}
+.awards .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px;padding-top:22px;padding-bottom:22px}
+.aw-lbl{display:flex;align-items:center;gap:12px;margin:0;font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.aw-ico{width:34px;height:34px;color:var(--yellow);flex:none}
+.aw-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px;flex:1}
+.aw-list li{display:flex;align-items:center;gap:14px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-pill);padding:8px 22px 8px 12px;backdrop-filter:blur(6px)}
+.aw-laurel{width:46px;height:38px;color:var(--yellow);flex:none}
+.aw-list b{display:block;font-family:var(--display);font-weight:800;font-size:15.5px;line-height:1.15}
+.aw-list span{display:block;font-size:12.5px;color:rgba(255,255,255,.78);margin-top:2px}
+@media (max-width:860px){.awards .wrap{flex-direction:column;align-items:flex-start}.aw-list{width:100%}.aw-list li{flex:1;min-width:260px}}
+@media (max-width:600px){.aw-list li{border-radius:var(--r-card);min-width:0;width:100%}}

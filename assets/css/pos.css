@@ -147,3 +147,6 @@
   .perks{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){ .p-buy .when::before{animation:none} }
+
+/* fotos reais da coordenação */
+.co img.av{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center 20%;flex:none;background:#2a1f3b}

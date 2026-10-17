@@ -177,3 +177,8 @@ fieldset.field{border:0;margin:0;padding:0}
   .prog{min-height:280px}
 }
 @media (prefers-reduced-motion:reduce){ .clients .tr{animation:none} }
+
+/* fotos reais de especialistas e relatos */
+.ex img.av{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center 20%;flex:none;background:var(--gray-fog-soft)}
+.story figcaption{display:flex;gap:14px;align-items:center}
+.story figcaption img.av{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none;background:#2a1f3b}
