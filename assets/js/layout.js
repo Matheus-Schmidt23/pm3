@@ -98,7 +98,7 @@
 
   document.body.insertAdjacentHTML('afterbegin', header);
   document.body.insertAdjacentHTML('beforeend', footer + consent +
-    '<div class="proto-bar"><a href="index.html">Protótipo</a><button type="button" id="notas" aria-pressed="false">Por quê?</button></div><div class="toast" id="toast"></div>');
+    '<div class="proto-bar"><a href="index.html">Protótipo</a><a href="/sair" title="Sair do protótipo">Sair</a><button type="button" id="notas" aria-pressed="false">Por quê?</button></div><div class="toast" id="toast"></div>');
 
   /* menu: mega no desktop, gaveta no celular */
   const nav = document.getElementById('nav');
