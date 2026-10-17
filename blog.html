@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog da PM3: produto, IA, dados e carreira</title>
+<meta name="description" content="Artigos, guias e pesquisas sobre gestão de produtos, IA, dados, design, marketing e carreira em produto, escritos por quem faz produto no Brasil.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://pm3.com.br/blog/">
+<meta property="og:title" content="Blog da PM3">
+<meta property="og:description" content="Produto, IA, dados e carreira, por quem faz produto no Brasil.">
+<meta property="og:image" content="https://pm3.com.br/og/blog.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/logo/pm3-simbolo-roxo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Rubik:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/content.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://pm3.com.br/"},
+  {"@type":"ListItem","position":2,"name":"Blog","item":"https://pm3.com.br/blog/"}]},
+ {"@type":"Blog","name":"Blog da PM3","url":"https://pm3.com.br/blog/","publisher":{"@type":"EducationalOrganization","name":"PM3"}}
+]}
+</script>
+</head>
+<body data-page="blog">
+
+<main>
+
+<!-- 1 · CABEÇALHO DO BLOG -->
+<section class="mast" aria-labelledby="h1" data-nota="O blog segue no WordPress atual, em /blog/ (os 910 posts não mudam de endereço). Só esta capa é refeita, com o mesmo cabeçalho e rodapé do site novo: hoje o blog tem menu próprio.">
+  <div class="wrap">
+    <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Blog</li></ol>
+    <div class="mast-grid">
+      <h1 class="display" id="h1">Blog<br><span class="c2">da PM3</span></h1>
+      <div>
+        <p class="lead">Produto, IA, dados e carreira, escritos por quem faz produto no Brasil. Guias, pesquisas e o que acontece nos eventos da comunidade.</p>
+        <label class="search"><span class="sr-only">Buscar no blog</span>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6.5"/><path d="m14 14 4 4"/></svg>
+          <input id="bq" type="search" placeholder="Buscar artigos, guias e termos" autocomplete="off">
+        </label>
+      </div>
+    </div>
+    <nav class="cats" aria-label="Temas" data-nota="26 categorias e 115 tags viram 8 temas, a mesma taxonomia dos cursos (regra 5 da arquitetura). Categoria de cada post é proposta: revisar com o time de conteúdo.">
+      <button type="button" aria-pressed="true" data-c="todos">Todos</button>
+      <button type="button" aria-pressed="false" data-c="gestao">Gestão de produtos</button>
+      <button type="button" aria-pressed="false" data-c="ia">IA</button>
+      <button type="button" aria-pressed="false" data-c="dados">Dados</button>
+      <button type="button" aria-pressed="false" data-c="marketing">Marketing</button>
+      <button type="button" aria-pressed="false" data-c="design">Design</button>
+      <button type="button" aria-pressed="false" data-c="lideranca">Liderança</button>
+      <button type="button" aria-pressed="false" data-c="carreira">Carreira</button>
+      <button type="button" aria-pressed="false" data-c="eventos">Eventos</button>
+    </nav>
+  </div>
+</section>
+
+<!-- 2 · DESTAQUES -->
+<section class="section" aria-label="Destaques">
+  <div class="wrap feat">
+    <a class="post-big reveal" href="#"><div class="bg" style="background-image:url('assets/img/foto-equipe.jpg')"></div>
+      <span class="tag tag-yellow" style="align-self:flex-start">Eventos</span>
+      <h2>Product Camp 2026: tudo sobre o maior evento de produto da América Latina</h2>
+      <p>Tudo sobre o encontro anual da comunidade de produto: dois dias, seis palcos e mais de 3.000 pessoas.</p>
+    </a>
+    <div class="side">
+      <a class="post-sm reveal" data-d="1" href="#"><div class="im"><div style="background-image:url('assets/tex/tex-aurora.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">IA</span><span>PM3 Summit</span></div><h3>Sachin Rekhi no PM3 Summit: a IA está devolvendo o product management ao seu lugar mais estratégico</h3></a>
+      <a class="post-sm reveal" data-d="2" href="#"><div class="im"><div style="background-image:url('assets/tex/tex-dobras-azuis.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Gestão de produtos</span><span>Product Camp</span></div><h3>O que Marty Cagan ensinou no Product Camp sobre o futuro de produto e o Product Operating Model</h3></a>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · MAIS RECENTES -->
+<section class="section white" aria-labelledby="rc-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker"><span class="n">01</span> Atualizados recentemente</p><h2 class="h2" id="rc-t">Mais<br><span class="c2">recentes</span></h2></div>
+      <p class="lead">A data de atualização aparece em todo artigo: frescor é o que o Google e as IAs mais cobram.</p>
+    </div>
+    <div class="posts-g" id="posts" data-nota="Data visível em todos os posts. Hoje 90% dos artigos não são atualizados desde 2024, e frescor é a dimensão mais fraca no diagnóstico GEO (85 de 100).">
+      <a class="post-c reveal" href="#" data-cat="carreira"><div class="im"><div style="background-image:url('assets/img/foto-fone-branco.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Carreira</span><span>22 set 2026</span></div><h3>Product Builder: o que faz, salário, habilidades e como entrar na carreira</h3><p>O perfil que constrói antes de pedir permissão, e como chegar lá.</p></a>
+      <a class="post-c reveal" data-d="1" href="#" data-cat="marketing"><div class="im"><div style="background-image:url('assets/tex/tex-linhas-dados.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Marketing</span><span>10 set 2026</span></div><h3>Construí um time de PMM do zero, e faria diferente com IA hoje</h3><p>O que mudaria na estrutura de um time de product marketing com IA.</p></a>
+      <a class="post-c reveal" data-d="2" href="#" data-cat="ia"><div class="im"><div style="background-image:url('assets/tex/tex-dobras-roxas.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">IA</span><span>4 set 2026</span></div><h3>O Product Manager Builder na era da IA: por que esse perfil virou o mais cobiçado do mercado</h3><p>Como a IA aproximou estratégia e construção no trabalho de produto.</p></a>
+      <a class="post-c reveal" href="#" data-cat="ia"><div class="im"><div style="background-image:url('assets/img/foto-sofa-homem.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">IA</span><span>1 set 2026</span></div><h3>Quem são os builders que estão construindo antes de pedir permissão</h3><p>Histórias de profissionais que trocaram o slide pelo protótipo.</p></a>
+      <a class="post-c reveal" data-d="1" href="#" data-cat="ia"><div class="im"><div style="background-image:url('assets/tex/tex-montanhas-dados.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">IA</span><span>25 ago 2026</span></div><h3>Como a IA virou o time de produto de founders sem engenheiros</h3><p>Do MVP ao primeiro cliente sem time técnico.</p></a>
+      <a class="post-c reveal" data-d="2" href="#" data-cat="gestao"><div class="im"><div style="background-image:url('assets/img/foto-conversa.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Gestão de produtos</span><span>18 ago 2026</span></div><h3>O que a IA ainda não faz pelo PM (e provavelmente nunca vai)</h3><p>Julgamento, contexto e escolha continuam sendo trabalho humano.</p></a>
+      <div class="no-res" id="nores"><b style="display:block;font-family:var(--display);font-size:19px;color:var(--ink)">Nenhum artigo encontrado</b>Tente outro termo ou tema.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · PESQUISAS -->
+<section class="section" aria-labelledby="ps-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker"><span class="n">02</span> Pesquisas PM3</p><h2 class="h2" id="ps-t">Dados do<br><span class="c2">mercado</span></h2></div>
+      <p class="lead">Estudos próprios sobre salários e o mercado de produto no Brasil: o conteúdo que mais gera citações.</p>
+    </div>
+    <div class="studies">
+      <a class="study s1 grain reveal" href="#"><span class="n">2025–26</span><div><h3>Salários de produto</h3><p>Os dados do novo estudo da PM3 sobre salários no mercado de produto.</p></div><span class="go">Ver o estudo →</span></a>
+      <a class="study s2 reveal" data-d="1" href="#"><span class="n">2.337</span><div><h3>Panorama 2026</h3><p>Profissionais de produto responderam a maior pesquisa do mercado no Brasil.</p></div><span class="go">Baixar o Panorama →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · GUIAS E TEMAS -->
+<section class="section white" aria-labelledby="gd-t">
+  <div class="wrap guides">
+    <div>
+      <p class="kicker"><span class="n">03</span> Guias essenciais</p>
+      <h2 class="h2" id="gd-t">Por onde<br><span class="c2">começar</span></h2>
+      <div class="glist" style="margin-top:28px">
+        <a href="#"><span><b>Product Manager: o que faz, salário e como ingressar na profissão</b><span>Guia completo da carreira</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        <a href="#"><span><b>AI Product Builder ou AI Product Specialist: qual formação é para você?</b><span>Comparativo das formações de IA</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        <a href="#"><span><b>OKR e KPI: qual a diferença e qual utilizar?</b><span>Métricas e metas</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <p class="kicker">Explore por tema</p>
+      <div class="topics-g reveal">
+        <a href="#">Gestão de produtos<small>Estratégia, discovery, roadmap</small></a>
+        <a href="#">IA<small>Builders, agentes e automação</small></a>
+        <a href="#">Dados<small>Analytics, métricas e experimentos</small></a>
+        <a href="#">Marketing<small>Growth e product marketing</small></a>
+        <a href="#">Design<small>UX, pesquisa e interface</small></a>
+        <a href="#">Carreira<small>Salários, cargos e transição</small></a>
+        <a href="#">Liderança<small>Times, feedback e gestão</small></a>
+        <a href="#">Eventos<small>Product Camp e PM3 Summit</small></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · GLOSSÁRIO -->
+<section class="section deep on-dark" aria-labelledby="gl-t">
+  <div class="wrap gloss">
+    <div><p class="kicker"><span class="n">04</span> Glossário de produto</p><h2 class="h2" id="gl-t">143 termos,<br><span class="c2">de A a Z</span></h2><p class="lead" style="margin-top:16px">Do backlog ao zero-based roadmap, explicados em linguagem simples.</p></div>
+    <nav class="az" aria-label="Glossário por letra" data-nota="O glossário continua no WordPress (143 URLs, sem redirecionamento). A capa do blog passa a linkar para ele: hoje ele só aparece no menu do blog.">
+      <a href="#">A</a><a href="#">B</a><a href="#">C</a><a href="#">D</a><a href="#">E</a><a href="#">F</a><a href="#">G</a><a href="#">H</a><a href="#">I</a><a href="#">J</a><a href="#">K</a><a href="#">L</a><a href="#">M</a><a href="#">N</a><a href="#">O</a><a href="#">P</a><a href="#">Q</a><a href="#">R</a><a href="#">S</a><a href="#">T</a><a href="#">U</a><a href="#">V</a><a href="#">W</a><a href="#">X</a><a href="#">Y</a><a href="#">Z</a>
+    </nav>
+  </div>
+</section>
+
+<!-- 7 · DO ARTIGO AO CURSO -->
+<section class="final grain on-dark" aria-labelledby="fn-t">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <p class="kicker" style="justify-content:center">Do artigo ao curso</p>
+    <h2 class="display" id="fn-t">Leu e quer<br>ir mais fundo?</h2>
+    <p>As formações e sprints da PM3 transformam estes temas em prática, com quem faz produto todo dia.</p>
+    <div class="btns"><a class="btn btn-light" href="formacoes.html">Ver as formações</a><a class="btn btn-line" href="membership.html">Conhecer a Membership</a></div>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/layout.js"></script>
+<script>
+/* capa do blog: tema e busca filtram os mais recentes (no WordPress, busca e temas vão para o servidor) */
+(function(){
+  const cards = [...document.querySelectorAll('#posts .post-c')], btns = [...document.querySelectorAll('.cats button')];
+  const sem = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+  let cat = 'todos', q = '';
+  const aplica = () => {
+    let n = 0;
+    cards.forEach(c => { const ok = (cat === 'todos' || c.dataset.cat === cat) && (!q || sem(c.textContent).includes(q)); c.classList.toggle('is-hidden', !ok); if (ok){ n++; c.classList.add('in'); } });
+    document.getElementById('nores').classList.toggle('show', n === 0);
+  };
+  btns.forEach(b => b.addEventListener('click', () => { cat = b.dataset.c; btns.forEach(x => x.setAttribute('aria-pressed', x === b)); aplica(); }));
+  document.getElementById('bq').addEventListener('input', e => { q = sem(e.target.value.trim()); aplica(); });
+})();
+</script>
+</body>
+</html>

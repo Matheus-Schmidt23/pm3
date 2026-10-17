@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisão do alfa · Site PM3 2027</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/logo/pm3-simbolo-roxo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Rubik:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+  .r-head{background:#000;color:#fff;padding:56px 0 48px}
+  .r-head img{height:28px;margin-bottom:48px}
+  .r-head h1{font-size:clamp(44px,6vw,92px)}
+  .r-head h1 .em{display:block;font-size:.42em;color:var(--gray-fog);margin-top:.2em}
+  .r-head p{color:var(--gray-fog);max-width:62ch;margin:24px 0 0;font-size:17px}
+  .r-head .meta{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:28px;font-size:14px;color:var(--gray-fog)}
+  .r-head .meta b{color:#fff;font-family:var(--display)}
+  .r-head nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+  .r-head nav a{font-family:var(--display);font-weight:600;font-size:14px;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:9px 16px}
+  .r-head nav a:hover{background:#fff;color:var(--purple-deep)}
+  .r-sec{padding:72px 0;border-bottom:1px solid var(--line)}
+  .r-sec:nth-of-type(even){background:#fff}
+  .r-sec h2{font-size:clamp(30px,3.6vw,48px);font-weight:800;text-transform:uppercase;line-height:1;margin-bottom:12px}
+  .r-sec h2 .c2{color:var(--purple-royal)}
+  .r-sec > .wrap > p.lead{margin:0 0 36px}
+  .dec{display:grid;gap:16px}
+  .d{display:grid;grid-template-columns:56px 1.2fr 1fr 1fr;gap:24px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:24px 26px}
+  .r-sec:nth-of-type(even) .d{background:var(--paper)}
+  .d .n{font-family:var(--display);font-weight:800;font-size:28px;color:var(--purple-royal);line-height:1}
+  .d h3{font-size:19px;font-weight:700;line-height:1.2;margin-bottom:8px}
+  .d p{margin:0;font-size:14.5px;color:#4a4458}
+  .d .lb{display:block;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .d .rec{background:#f3effc;border-radius:12px;padding:12px 14px}
+  .d .rec .lb{color:var(--purple-royal)}
+  .d .rec p{color:var(--ink)}
+  .d .where{margin-top:10px;font-size:13px}
+  .d .where a{color:var(--purple-royal)}
+  .pri{display:inline-block;font-family:var(--display);font-weight:800;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:99px;margin-bottom:8px}
+  .pri.a{background:var(--yellow);color:#000}
+  .pri.b{background:var(--blaze-b);color:var(--purple-deep)}
+  .tbl{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-card);background:#fff}
+  .tbl table{width:100%;border-collapse:collapse;min-width:860px;font-size:14.5px}
+  .tbl th,.tbl td{padding:14px 16px;text-align:left;border-top:1px solid var(--line);vertical-align:top}
+  .tbl thead th{border-top:0;background:var(--paper);font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .tbl td:first-child{font-family:var(--display);font-weight:700}
+  .tbl .use{font-family:var(--display);font-weight:800;color:var(--purple-deep);white-space:nowrap}
+  .tbl .vs span{display:inline-block;margin:0 6px 6px 0;padding:3px 9px;border-radius:99px;background:var(--gray-fog-soft);font-size:13px;white-space:nowrap}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .col{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:24px}
+  .r-sec:nth-of-type(even) .col{background:var(--paper)}
+  .col h3{font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.02em;margin-bottom:14px}
+  .col ul{margin:0;padding:0;list-style:none}
+  .col li{padding:10px 0;border-top:1px solid var(--line);font-size:14.5px;color:#4a4458}
+  .col li:first-child{border-top:0}
+  .col li b{color:var(--ink);font-family:var(--display)}
+  .ok li::before{content:'✓ ';color:#2c9a4b;font-weight:700}
+  @media (max-width:980px){.d{grid-template-columns:40px 1fr}.d > div:nth-child(n+3){grid-column:2}.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="r-head">
+  <div class="wrap">
+    <img src="assets/logo/pm3-logo-branco.svg" alt="PM3">
+    <h1 class="display">Revisão do alfa<span class="em">O que precisa de decisão antes do desenvolvimento.</span></h1>
+    <p>Revisão das 11 páginas do protótipo: consistência visual, números que hoje divergem entre as páginas da PM3 e as decisões que só a diretoria pode tomar. Cada item aponta a página onde aparece.</p>
+    <div class="meta"><span><b>11</b> páginas em alta fidelidade</span><span><b>6</b> modelos de página</span><span><b>7</b> decisões para o Farina</span><span><b>8</b> números a oficializar</span><span>Revisão de <b>16/10/2026</b></span></div>
+    <nav aria-label="Seções"><a href="#decisoes">Decisões</a><a href="#numeros">Números oficiais</a><a href="#conteudo">Conteúdo a coletar</a><a href="#visual">Consistência visual</a><a href="index.html">← Galeria do protótipo</a></nav>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 · DECISÕES -->
+<section class="r-sec" id="decisoes" aria-labelledby="d-t">
+  <div class="wrap">
+    <h2 id="d-t">Decisões<br><span class="c2">para o Farina</span></h2>
+    <p class="lead">Ordenadas pelo impacto no desenvolvimento: as primeiras mudam a estrutura das páginas; as últimas mudam só texto.</p>
+    <div class="dec">
+      <div class="d"><span class="n">01</span>
+        <div><span class="pri a">Estrutura</span><h3>Como as sprints são vendidas</h3><p>Hoje o botão da sprint leva à assinatura "PM3 Sprints", sem preço em nenhuma página. A Membership já inclui todas as sprints.</p><p class="where">Aparece em <a href="sprint-fundamentos-gestao-produtos.html">Sprint</a>, <a href="sprints.html">Sprints</a> e <a href="faq.html">FAQ</a></p></div>
+        <div><span class="lb">Opções</span><p>A · Só Membership como porta de entrada.<br>B · Membership e PM3 Sprints lado a lado, com preço público.<br>C · Sprint avulsa com preço próprio.</p></div>
+        <div class="rec"><span class="lb">Recomendação</span><p>A. Uma oferta só simplifica a escolha e concentra o tráfego no produto que gera 67% das ativações. Se a PM3 Sprints continuar, ela precisa de preço visível.</p></div>
+      </div>
+      <div class="d"><span class="n">02</span>
+        <div><span class="pri a">Estrutura</span><h3>Padrão de URL das páginas novas</h3><p>O protótipo mantém as URLs que já rankeiam (/curso-product-manager/, /pm3-para-empresas/) e cria /formacoes/ e /pos-tech/.</p><p class="where">Aparece em todas as páginas (breadcrumb e canonical)</p></div>
+        <div><span class="lb">Opções</span><p>A · Manter as URLs atuais e criar só as novas.<br>B · Padronizar tudo (/formacoes/product-manager/) com 301 individual.</p></div>
+        <div class="rec"><span class="lb">Recomendação</span><p>A. É a regra 2 da arquitetura: o que já rankeia fica igual. Menos risco na migração, sem perda de posição.</p></div>
+      </div>
+      <div class="d"><span class="n">03</span>
+        <div><span class="pri a">Estrutura</span><h3>Pós Tech dentro do pm3.com.br</h3><p>O site provisório (pm3-postech.pages.dev) vira o hub /pos-tech/, com uma página por pós no modelo de produto.</p><p class="where">Aparece em <a href="pos-tech.html">Pós Tech</a> e <a href="home.html">Home</a></p></div>
+        <div><span class="lb">Opções</span><p>A · Hub e três páginas em /pos-tech/.<br>B · Manter domínio próprio e só linkar.</p></div>
+        <div class="rec"><span class="lb">Recomendação</span><p>A. Soma autoridade ao site e responde à pergunta "pós reconhecida pelo MEC", em que a PM3 não aparece nas IAs.</p></div>
+      </div>
+      <div class="d"><span class="n">04</span>
+        <div><span class="pri b">Preço</span><h3>Preço da formação avulsa</h3><p>A página da Formação usa R$ 3.299 (12x R$ 274,91). Os dados estruturados atuais dizem R$ 2.699. As outras 9 formações não têm preço público.</p><p class="where">Aparece em <a href="formacao-product-manager.html">Formação</a> e <a href="membership.html">Membership</a></p></div>
+        <div><span class="lb">A confirmar</span><p>Preço de cada formação avulsa, condição de parcelamento e se as formações continuam sendo vendidas avulsas.</p></div>
+        <div class="rec"><span class="lb">Por que importa</span><p>É a âncora da Membership: "por R$ 300 a mais, as 10 formações". Se o preço avulso mudar, o argumento muda.</p></div>
+      </div>
+      <div class="d"><span class="n">05</span>
+        <div><span class="pri b">Preço</span><h3>Desconto no Pix na Membership</h3><p>O FAQ atual diz 10% de desconto no Pix "nos cursos da PM3". O protótipo aplica os 10% também à Membership.</p><p class="where">Aparece em <a href="membership.html">Membership</a> e <a href="faq.html">FAQ</a></p></div>
+        <div><span class="lb">A confirmar</span><p>Se os 10% valem para a Membership e se a renovação automática segue a regra da PM3 Sprints.</p></div>
+        <div class="rec"><span class="lb">Por que importa</span><p>Preço e condição precisam estar iguais na página, no checkout e nos dados estruturados. Hoje divergem.</p></div>
+      </div>
+      <div class="d"><span class="n">06</span>
+        <div><span class="pri b">Marca</span><h3>Direção visual</h3><p>Base sóbria e editorial (Strategy&amp;, Deloitte) com um efeito moderno por página (Pareto), dentro do Design System PM3.</p><p class="where">Aparece em todas as páginas</p></div>
+        <div><span class="lb">Para validar</span><p>Intensidade dos efeitos (aurora, brilho no cursor, texto que se preenche) e o uso de fotos geradas por IA e Shutterstock.</p></div>
+        <div class="rec"><span class="lb">Atenção</span><p>O README do Design System pede confirmar os direitos de uso das imagens antes de publicar.</p></div>
+      </div>
+      <div class="d"><span class="n">07</span>
+        <div><span class="pri b">Operação</span><h3>Formulário B2B e canal de atendimento</h3><p>Formulário próprio com consentimento (no lugar do pop-up do HubSpot) e um único WhatsApp para o site todo (hoje são dois).</p><p class="where">Aparece em <a href="para-empresas.html">Para empresas</a> e <a href="faq.html">FAQ</a></p></div>
+        <div><span class="lb">A confirmar</span><p>Para onde vão os leads (HubSpot, RD Station) e qual número de WhatsApp fica.</p></div>
+        <div class="rec"><span class="lb">Recomendação</span><p>Formulário próprio enviando ao CRM por integração, sem script de marketing antes do consentimento.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · NÚMEROS -->
+<section class="r-sec" id="numeros" aria-labelledby="n-t">
+  <div class="wrap">
+    <h2 id="n-t">Números<br><span class="c2">oficiais</span></h2>
+    <p class="lead">Os mesmos indicadores aparecem com valores diferentes nas páginas atuais. O protótipo usa um valor só em todas as páginas, o mais seguro entre os encontrados. Falta a PM3 bater o martelo em cada um.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Indicador</th><th>Valores encontrados hoje</th><th>Usado no protótipo</th><th>Observação</th></tr></thead>
+        <tbody>
+          <tr><td>Alunos formados</td><td class="vs"><span>+40 mil (página da sprint)</span><span>+50 mil (home, formação)</span><span>+60 mil (Membership, Pós Tech)</span></td><td class="use">+60 mil</td><td>Valor das páginas mais recentes.</td></tr>
+          <tr><td>Instrutores</td><td class="vs"><span>+80 (home, sprint)</span><span>+100 (formação, empresas, Pós Tech)</span><span>+120 (Membership)</span></td><td class="use">+100</td><td>Verdadeiro tanto para 100 quanto para 120.</td></tr>
+          <tr><td>Empresas clientes</td><td class="vs"><span>+500 (formação, sprint)</span><span>+800 (home)</span></td><td class="use">+800</td><td>Confirmar com o time B2B.</td></tr>
+          <tr><td>Sprints</td><td class="vs"><span>+30 (Pós Tech)</span><span>+40 (Membership)</span><span>44 (catálogo)</span><span>+45 (empresas)</span><span>48 (sitemap)</span><span>+50 (Pós Tech)</span></td><td class="use">+40 · 44 no catálogo</td><td>Fechar a lista oficial antes da migração: define as 1:1 de redirecionamento.</td></tr>
+          <tr><td>Formações</td><td class="vs"><span>+9 (empresas)</span><span>9 completas + AI Product Builder (Membership)</span><span>10 (catálogo)</span></td><td class="use">10</td><td>Contar o AI Product Builder como formação.</td></tr>
+          <tr><td>Carga da formação PM</td><td class="vs"><span>37h (plano 2025)</span><span>40h (/cursos/)</span><span>75h (material antigo)</span></td><td class="use">37h</td><td>Plano de estudos oficial. Outras formações também divergem entre /cursos/ e a Membership.</td></tr>
+          <tr><td>Módulos da formação PM</td><td class="vs"><span>6 (plano 2025)</span><span>7 (página atual)</span></td><td class="use">6</td><td>A página atual mostra a ementa antiga.</td></tr>
+          <tr><td>Parcela da Membership</td><td class="vs"><span>12x R$ 299,91 (Membership)</span><span>12x R$ 299,92 (/cursos/)</span></td><td class="use">12x R$ 299,91</td><td>Diferença de centavo, mas página e checkout precisam bater.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · CONTEÚDO -->
+<section class="r-sec" id="conteudo" aria-labelledby="c-t">
+  <div class="wrap">
+    <h2 id="c-t">Conteúdo<br><span class="c2">a coletar</span></h2>
+    <p class="lead">O protótipo não inventa nada: onde faltava dado real, ficou um espaço reservado com nota. Estes são os itens que destravam a versão final.</p>
+    <div class="cols">
+      <div class="col"><h3>Com o time de produto e pedagógico</h3><ul>
+        <li><b>Instrutores por formação</b>, com foto e minibio</li>
+        <li><b>Carga e módulos oficiais</b> de cada formação e sprint</li>
+        <li><b>Nível</b> de cada formação (base, intermediário, avançado)</li>
+        <li><b>Ementa das fases 2 a 5</b> de cada pós</li>
+        <li><b>Ementa em PDF</b> de cada curso</li>
+      </ul></div>
+      <div class="col"><h3>Com marketing e conteúdo</h3><ul>
+        <li><b>Depoimentos reais</b> com foto, cargo antes e depois e autorização</li>
+        <li><b>Categorias do blog</b>: revisar a proposta de 8 temas</li>
+        <li><b>Títulos e imagens</b> de compartilhamento por página</li>
+        <li><b>Direitos de uso</b> das fotos do Design System</li>
+        <li><b>Calendário de campanhas</b>, com data de saída de cada uma</li>
+      </ul></div>
+      <div class="col"><h3>Com B2B, FIAP e atendimento</h3><ul>
+        <li><b>Logos dos clientes</b> em SVG, com autorização de marca</li>
+        <li><b>Processo in company</b>: validar as 4 etapas</li>
+        <li><b>Nome do in company</b>: "PM3 Boost" continua?</li>
+        <li><b>Respostas da FIAP</b>: documentos, TCC, avaliação e instituição emissora</li>
+        <li><b>Destino dos leads</b> e número único de WhatsApp</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · CONSISTÊNCIA VISUAL -->
+<section class="r-sec" id="visual" aria-labelledby="v-t">
+  <div class="wrap">
+    <h2 id="v-t">Consistência<br><span class="c2">visual</span></h2>
+    <p class="lead">As 11 páginas usam os mesmos tokens, cabeçalho, rodapé e componentes. Cada modelo tem um hero próprio, e cada página tem no máximo um efeito forte.</p>
+    <div class="tbl" style="margin-bottom:24px">
+      <table>
+        <thead><tr><th>Modelo</th><th>Páginas</th><th>Hero</th><th>Efeito da página</th></tr></thead>
+        <tbody>
+          <tr><td>Home</td><td>Home</td><td>Preto, título editorial e seletor de objetivo</td><td>Brilho que segue o cursor</td></tr>
+          <tr><td>Oferta</td><td>Membership</td><td>Grid fluido: bloco roxo, foto e número</td><td>Aurora e texto que se preenche ao rolar</td></tr>
+          <tr><td>Produto</td><td>Formação PM, Sprint Fundamentos</td><td>Roxo (formação) ou preto (sprint) com cartão de compra</td><td>Subnavegação fixa com preço</td></tr>
+          <tr><td>Vitrine</td><td>Formações, Sprints, Cursos</td><td>Claro (formações, cursos) ou preto (sprints)</td><td>Filtros e busca em tempo real</td></tr>
+          <tr><td>Hub e B2B</td><td>Pós Tech, Para empresas</td><td>Grid fluido (Pós) ou claro com foto (B2B)</td><td>Faixa de clientes em movimento</td></tr>
+          <tr><td>Conteúdo</td><td>Blog, FAQ</td><td>Cabeçalho editorial com busca</td><td>Busca com destaque do termo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cols">
+      <div class="col ok"><h3>Corrigido nesta revisão</h3><ul>
+        <li>Instrutores unificados em +100 em todas as páginas</li>
+        <li>Pix com 10% de desconto na Membership, como no FAQ</li>
+        <li>Banner de cookies virou barra baixa no desktop: não cobre mais o preço da Pós Tech nem os cartões de compra</li>
+        <li>Descrições para o Google com até 160 caracteres</li>
+        <li>Rótulo solto "?" removido do FAQ</li>
+      </ul></div>
+      <div class="col ok"><h3>Verificado em todas as páginas</h3><ul>
+        <li>Um H1 por página, título e descrição próprios</li>
+        <li>Breadcrumb visível e marcado (exceto Home)</li>
+        <li>Nenhuma imagem sem texto alternativo</li>
+        <li>Sem rolagem lateral no celular (375 px)</li>
+        <li>Preço e botão na primeira tela das páginas de venda</li>
+      </ul></div>
+      <div class="col"><h3>Ainda em aberto</h3><ul>
+        <li>Fotos de instrutores: hoje são iniciais em gradiente</li>
+        <li>Logos de clientes: hoje são nomes em texto</li>
+        <li>Imagens dos posts: texturas do Design System no lugar das imagens reais</li>
+        <li>Páginas de cada pós e das outras 9 formações seguem o modelo, ainda não desenhadas</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

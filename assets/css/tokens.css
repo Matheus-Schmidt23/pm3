@@ -1,0 +1,43 @@
+/* PM3 · tokens do Design System v1.0 (KeyVisual/Design System) */
+:root{
+  /* marca: oficiais, Key Visual 2025 */
+  --purple-deep:#452E78;
+  --purple-royal:#6645B1;
+  --black:#000000;
+  --white:#FFFFFF;
+  --gray-fog:#B9B5C1;
+  --yellow:#FFB12A;            /* acento mínimo, até 2% da composição */
+  --lilac-a:#B04DDD; --lilac-b:#FCCBC9;
+  --blaze-a:#4D2B9F; --blaze-b:#DACBF6;
+
+  /* interface: derivadas */
+  --ink:#16121F;
+  --paper:#FAFAF9;
+  --gray-fog-soft:#E4E1EA;
+  --muted:#6F6A7C;
+  --line:rgba(22,18,31,.09);
+  --line-dark:rgba(255,255,255,.12);
+
+  --grad-lilac:linear-gradient(135deg,var(--lilac-a) 0%,var(--lilac-b) 100%);
+  --grad-blaze:linear-gradient(90deg,var(--blaze-a) 0%,var(--blaze-b) 100%);
+
+  /* tipografia */
+  --display:"Inter Tight",-apple-system,"Segoe UI",Arial,sans-serif;
+  --body:"Rubik",-apple-system,"Segoe UI",Arial,sans-serif;
+  --serif:"Playfair Display",Georgia,serif;
+
+  /* forma */
+  --r-sm:8px; --r-btn:14px; --r-card:18px; --r-xl:40px; --r-pill:99px;
+  --shadow:0 1px 2px rgba(22,18,31,.04),0 10px 28px rgba(22,18,31,.06);
+  --shadow-lg:0 2px 4px rgba(22,18,31,.05),0 24px 56px rgba(22,18,31,.14);
+
+  /* espaçamento, base 4 px */
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px;
+  --sp-6:32px; --sp-7:48px; --sp-8:64px; --sp-9:96px; --sp-10:128px;
+
+  /* layout */
+  --wrap:1200px;
+  --gutter:32px;
+  --nav-h:68px;
+}
+@media (max-width:600px){ :root{ --gutter:16px; --nav-h:60px; } }

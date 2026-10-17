@@ -1,0 +1,73 @@
+/* PM3 · Membership · interações da página */
+(function(){
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const calmo = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* manifesto: palavras se preenchem conforme a rolagem; *palavra* ganha destaque */
+  const fill = $('#fill');
+  if (fill){
+    const pin = fill.querySelector('.nota-pin'); if (pin) pin.remove();
+    const html = fill.textContent.trim().split(/\s+/).map(w => {
+      const hl = /^\*.*\*[.,]?$/.test(w);
+      return `<span class="w${hl ? ' hl' : ''}">${w.replace(/\*/g,'')}</span>`;
+    }).join(' ');
+    fill.innerHTML = html; if (pin) fill.appendChild(pin);
+    const ws = [...fill.querySelectorAll('.w')];
+    const pinta = () => {
+      const r = fill.getBoundingClientRect(), vh = innerHeight;
+      const p = Math.max(0, Math.min(1, (vh * .82 - r.top) / (r.height + vh * .38)));
+      const k = Math.round(p * ws.length);
+      ws.forEach((w, i) => w.classList.toggle('on', i < k));
+    };
+    if (calmo) ws.forEach(w => w.classList.add('on'));
+    else { addEventListener('scroll', pinta, { passive: true }); pinta(); }
+  }
+
+  /* filtro do catálogo */
+  $$('.chip').forEach(ch => ch.addEventListener('click', () => {
+    $$('.chip').forEach(c => c.setAttribute('aria-pressed', c === ch));
+    const f = ch.dataset.f;
+    $$('#fgrid .f-card').forEach(c => c.classList.toggle('is-hidden', f !== 'todas' && c.dataset.a !== f));
+  }));
+
+  /* trilhas: um item aberto por vez */
+  $$('.acc-item > button').forEach(b => b.addEventListener('click', () => {
+    const it = b.parentElement, abrir = !it.classList.contains('open');
+    $$('.acc-item').forEach(x => { x.classList.remove('open'); x.querySelector('button').setAttribute('aria-expanded','false'); });
+    if (abrir){ it.classList.add('open'); b.setAttribute('aria-expanded','true'); }
+  }));
+
+  /* benefícios: abas que trocam foto e texto */
+  const tabs = $$('[role="tab"]'), ph = $('#incph');
+  const ativa = t => {
+    tabs.forEach(x => x.setAttribute('aria-selected', x === t));
+    $$('[role="tabpanel"]').forEach(p => { const on = p.id === t.getAttribute('aria-controls'); p.hidden = !on; p.classList.toggle('on', on);
+      if (on){ ph.style.opacity = .2; setTimeout(() => { ph.style.backgroundImage = `url('${p.dataset.img}')`; ph.style.opacity = 1; }, 180); } });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => ativa(t));
+    t.addEventListener('keydown', e => { const d = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? -1 : 0;
+      if (d){ e.preventDefault(); const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); ativa(n); } });
+  });
+
+  /* seletor de pagamento */
+  const P = {
+    6:  ['6x', '599,83', 'ou R$ 3.599 à vista no cartão · sem juros'],
+    12: ['12x', '299,91', 'ou R$ 3.599 à vista no cartão · sem juros'],
+    24: ['24x', '149,95', 'via NuPay, sem juros, sujeito a aprovação de crédito'],
+    1:  ['', '3.599', 'à vista no cartão · ou no Pix com 10% de desconto']
+  };
+  $$('.seg button').forEach(b => b.addEventListener('click', () => {
+    $$('.seg button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    const [x, v, n] = P[b.dataset.p];
+    $('#px').textContent = x; $('#px').style.display = x ? '' : 'none';
+    $('#pv').textContent = v; $('#pn').textContent = n;
+  }));
+
+  /* barra de compra fixa no celular: aparece depois do hero e some na seção de planos */
+  const bar = $('#buybar'), hero = $('.m-hero'), planos = $('#planos');
+  const vis = { hero: true, planos: false };
+  const atualiza = () => bar.classList.toggle('show', !vis.hero && !vis.planos);
+  new IntersectionObserver(([e]) => { vis.hero = e.isIntersecting; atualiza(); }).observe(hero);
+  new IntersectionObserver(([e]) => { vis.planos = e.isIntersecting; atualiza(); }, { threshold: .15 }).observe(planos);
+})();

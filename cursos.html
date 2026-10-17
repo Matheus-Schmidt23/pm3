@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Todos os cursos da PM3: formações, sprints e pós-graduação</title>
+<meta name="description" content="O catálogo completo da PM3: 10 formações, 44 sprints e 3 pós-graduações em produto, dados, design, marketing, negócios, liderança e IA.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://pm3.com.br/cursos/">
+<meta property="og:title" content="Todos os cursos da PM3">
+<meta property="og:description" content="Formações, sprints e pós-graduação em um só lugar.">
+<meta property="og:image" content="https://pm3.com.br/og/cursos.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/logo/pm3-simbolo-roxo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Rubik:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/showcase.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://pm3.com.br/"},
+  {"@type":"ListItem","position":2,"name":"Cursos","item":"https://pm3.com.br/cursos/"}]},
+ {"@type":"CollectionPage","name":"Todos os cursos da PM3","url":"https://pm3.com.br/cursos/"}
+]}
+</script>
+</head>
+<body data-page="cursos">
+
+<main>
+
+<!-- 1 · CABEÇALHO E BUSCA -->
+<section class="cat-head" aria-labelledby="h1">
+  <div class="wrap">
+    <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Cursos</li></ol>
+    <div class="cat-head-grid">
+      <h1 class="display" id="h1">Todos os<br><span class="c2">cursos</span></h1>
+      <div>
+        <p class="lead" style="margin:0 0 20px">10 formações, 44 sprints e 3 pós-graduações. Busque pelo que você quer aprender ou filtre por área, formato e duração.</p>
+        <label class="search" data-nota="Busca e filtros na mesma página, sem as 8 páginas de paginação de hoje. No site real, as combinações de filtro não viram URLs indexáveis: canonical sempre para /cursos/."><span class="sr-only">Buscar curso</span>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6.5"/><path d="m14 14 4 4"/></svg>
+          <input id="q" type="search" placeholder="Ex.: SQL, roadmap, IA, feedback" autocomplete="off">
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · CATÁLOGO -->
+<div class="wrap cat-layout">
+  <details class="filters" open>
+    <summary>Filtrar <span id="fcount"></span></summary>
+    <div class="fbody">
+      <fieldset class="fgroup" style="border:0;margin:0;padding-left:0;padding-right:0"><legend class="sr-only">Formato</legend><h3>Formato</h3><div id="f-tipo"></div></fieldset>
+      <fieldset class="fgroup" style="border-left:0;border-right:0;border-bottom:0;margin:0;padding-left:0;padding-right:0"><legend class="sr-only">Área</legend><h3>Área</h3><div id="f-area"></div></fieldset>
+      <fieldset class="fgroup" style="border-left:0;border-right:0;border-bottom:0;margin:0;padding-left:0;padding-right:0"><legend class="sr-only">Duração</legend><h3>Duração</h3><div id="f-dur"></div></fieldset>
+      <button class="fclear" id="fclear" type="button">Limpar filtros</button>
+    </div>
+  </details>
+  <div>
+    <div class="res-bar">
+      <p class="cnt" id="cnt" aria-live="polite" style="margin:0"></p>
+      <label><span class="sr-only">Ordenar</span><select id="ord"><option value="rel">Mais relevantes</option><option value="menor">Menor duração</option><option value="maior">Maior duração</option><option value="az">A a Z</option></select></label>
+    </div>
+    <div class="active-f" id="active"></div>
+    <div class="cgrid" id="cgrid" data-nota="Cada formato tem cor própria: formação em roxo, sprint em claro, pós em preto. A Membership aparece como primeiro cartão quando não há filtro."></div>
+  </div>
+</div>
+
+<!-- 3 · MEMBERSHIP -->
+<section class="section white" aria-label="Membership">
+  <div class="wrap">
+    <div class="mband grain on-dark reveal">
+      <div><p class="kicker">Membership PM3</p><h2>O catálogo inteiro.<span class="em">Um só acesso.</span></h2><p>As 10 formações e as mais de 40 sprints por 12 meses, com mentorias, workshops ao vivo e comunidade.</p></div>
+      <div class="pr"><small>Assinatura anual</small><b>12x R$ 299,91</b><span>ou R$ 3.599 à vista</span><a class="btn btn-light" href="membership.html">Conhecer a Membership</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/catalogo.js"></script>
+<script src="assets/js/vitrines.js"></script>
+<script src="assets/js/layout.js"></script>
+</body>
+</html>

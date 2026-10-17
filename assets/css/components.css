@@ -1,0 +1,36 @@
+/* PM3 · componentes compartilhados entre páginas */
+
+/* aurora com grão: o momento "Pareto" da página */
+.aurora{position:absolute;inset:-20%;z-index:-2;filter:blur(60px) saturate(1.1);opacity:.95}
+.aurora i{position:absolute;border-radius:50%;mix-blend-mode:screen;animation:flutua 22s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:62%;height:70%;left:38%;top:-6%;background:radial-gradient(circle,var(--lilac-a),transparent 66%)}
+.aurora i:nth-child(2){width:56%;height:62%;left:52%;top:38%;background:radial-gradient(circle,var(--blaze-a),transparent 64%);animation-duration:26s;animation-delay:-8s}
+.aurora i:nth-child(3){width:44%;height:46%;left:66%;top:20%;background:radial-gradient(circle,var(--lilac-b),transparent 62%);opacity:.55;animation-duration:30s;animation-delay:-14s}
+@keyframes flutua{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-9%,6%) scale(1.12)}100%{transform:translate(6%,-5%) scale(.94)}}
+
+/* faixa de números com cruzetas */
+.stats{background:#fff;border-bottom:1px solid var(--line)}
+.stats .row{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:48px 28px 44px;border-left:1px solid var(--line);position:relative}
+.stat:first-child{border-left:0}
+.stat .n{font-family:var(--display);font-weight:800;font-size:clamp(44px,5vw,72px);letter-spacing:-.04em;line-height:1;color:var(--purple-deep);font-variant-numeric:tabular-nums}
+.stat p{margin:12px 0 0;font-size:15px;color:var(--muted);max-width:22ch}
+.stat .cross{top:-7px;left:-7px}
+
+/* chamada final com aurora */
+.final{position:relative;overflow:hidden;background:#000;color:#fff;padding:clamp(96px,14vw,180px) 0;isolation:isolate;text-align:center}
+.final .aurora{inset:-10% -10% -40% -10%;opacity:.8}
+.final.grain::after{z-index:-1}
+.final .display .em{display:block;font-size:.6em;color:#fff;margin-top:.1em}
+.final p{color:var(--gray-fog);margin:24px auto 36px;max-width:46ch;font-size:18px}
+.final .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .stats .row{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:600px){
+  .stat{padding:30px 16px 28px}
+}
+@media (prefers-reduced-motion:reduce){ .aurora i{animation:none} }
