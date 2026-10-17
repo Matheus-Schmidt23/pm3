@@ -18,7 +18,7 @@ const lerCookie = (req, nome) => {
   return m ? m[1] : null;
 };
 
-const destinoSeguro = d => (d && d.startsWith('/') && !d.startsWith('//')) ? d : '/';
+const destinoSeguro = d => (d && d.startsWith('/') && !d.startsWith('//') && d !== '/') ? d : '/home.html';
 
 export default async function middleware(request) {
   const url = new URL(request.url);
@@ -30,7 +30,7 @@ export default async function middleware(request) {
   if (url.pathname === '/entrar' && request.method === 'POST') {
     const form = await request.formData();
     const senha = String(form.get('senha') || '');
-    const para = destinoSeguro(String(form.get('next') || '/'));
+    const para = destinoSeguro(String(form.get('next') || ''));
     if ((await sha256('pm3-alfa:' + senha)) === hash) {
       return new Response(null, { status: 303, headers: {
         Location: para,

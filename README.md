@@ -4,7 +4,7 @@ Páginas-modelo do novo pm3.com.br para aprovação. HTML, CSS e JavaScript est�
 
 ## Como abrir
 
-Abra `index.html` (galeria com todas as páginas) por um servidor local. No Windows, sem Node nem Python:
+A raiz abre a Home (`home.html`). A galeria com todas as páginas fica em `galeria.html`. Abra por um servidor local. No Windows, sem Node nem Python:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File serve.ps1

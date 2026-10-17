@@ -2,68 +2,11 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Protótipo alfa · Site PM3 2027</title>
+<title>PM3</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="icon" type="image/svg+xml" href="assets/logo/pm3-simbolo-roxo.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Rubik:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<style>
-  body{background:#000;color:#fff}
-  .g-head{padding:72px 0 48px;border-bottom:1px solid rgba(255,255,255,.1)}
-  .g-head img{height:30px;margin-bottom:56px}
-  .g-head .display{font-size:clamp(40px,6vw,88px)}
-  .g-head .display .em{display:block;font-size:.6em;color:var(--gray-fog)}
-  .g-head p{color:var(--gray-fog);max-width:60ch;margin-top:24px;font-size:18px}
-  .g-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;font-size:14px;color:var(--gray-fog)}
-  .g-meta b{color:#fff;font-family:var(--display)}
-  .g-rev{display:inline-flex;margin-top:28px;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#000;background:var(--yellow);border-radius:99px;padding:12px 20px;text-decoration:none}
-  .g-rev:hover{filter:brightness(1.06)}
-  .g-list{list-style:none;margin:0;padding:24px 0 96px}
-  .g-list li{border-bottom:1px solid rgba(255,255,255,.1)}
-  .g-list a,.g-list .off{display:grid;grid-template-columns:60px 1.4fr 1fr 150px 40px;gap:20px;align-items:center;padding:24px 0;text-decoration:none;color:#fff}
-  .g-list a:hover .nm{color:var(--blaze-b)}
-  .g-list .n{font-family:var(--display);font-weight:600;color:var(--yellow);font-size:14px}
-  .g-list .nm{font-family:var(--display);font-weight:700;font-size:clamp(20px,2.2vw,28px);letter-spacing:-.02em;transition:color .2s}
-  .g-list .url{font-size:13.5px;color:var(--gray-fog);font-family:ui-monospace,Consolas,monospace}
-  .g-list .st{justify-self:start}
-  .g-list .off{opacity:.45}
-  .st-ok{background:var(--yellow);color:#000}
-  .st-wip{border:1.5px solid rgba(255,255,255,.3);color:var(--gray-fog)}
-  .g-sec{font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-fog);padding:40px 0 4px}
-  @media (max-width:760px){.g-list a,.g-list .off{grid-template-columns:40px 1fr;gap:6px 14px}.g-list .url,.g-list .st{grid-column:2}.g-list .ar{display:none}}
-</style>
+<meta http-equiv="refresh" content="0; url=home.html">
+<link rel="canonical" href="home.html">
+<script>location.replace('home.html' + location.hash)</script>
 </head>
-<body>
-<div class="wrap">
-  <header class="g-head">
-    <img src="assets/logo/pm3-logo-branco.svg" alt="PM3">
-    <h1 class="display">Site PM3 2027<span class="em">Protótipo alfa</span></h1>
-    <p>Páginas-modelo para aprovação. Cada modelo depois gera as demais páginas do site. Em qualquer página, o botão <b>Por quê?</b> mostra as notas que ligam cada decisão ao diagnóstico.</p>
-    <div class="g-meta"><span>Base: <b>Design System PM3 v1.0</b></span><span>Direção: <b>editorial tecnológico</b></span><span>Atualizado: <b>16/10/2026</b></span><span><b>11 de 11</b> páginas prontas</span></div>
-    <a class="g-rev" href="decisoes.html">Revisão e decisões pendentes →</a>
-  </header>
-
-  <p class="g-sec">Menu principal</p>
-  <ul class="g-list">
-    <li><a href="home.html"><span class="n">01</span><span class="nm">Home</span><span class="url">/</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-    <li><a href="membership.html"><span class="n">02</span><span class="nm">Membership</span><span class="url">/membership/</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-    <li><a href="formacoes.html"><span class="n">03</span><span class="nm">Formações</span><span class="url">/formacoes/</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-    <li><a href="cursos.html"><span class="n">03b</span><span class="nm">Catálogo completo</span><span class="url">/cursos/</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-    <li><a href="sprints.html"><span class="n">04</span><span class="nm">Sprints</span><span class="url">/sprints/</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-    <li><a href="pos-tech.html"><span class="n">05</span><span class="nm">Pós Tech</span><span class="url">/pos-tech/</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-    <li><a href="para-empresas.html"><span class="n">06</span><span class="nm">PM3 para empresas</span><span class="url">/pm3-para-empresas/</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-    <li><a href="blog.html"><span class="n">07</span><span class="nm">Blog (capa)</span><span class="url">/blog/</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-    <li><a href="faq.html"><span class="n">08</span><span class="nm">FAQ</span><span class="url">/faq/</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-  </ul>
-  <p class="g-sec">Páginas de produto</p>
-  <ul class="g-list">
-    <li><a href="formacao-product-manager.html"><span class="n">09</span><span class="nm">Formação Product Manager</span><span class="url">/curso-product-manager/</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-    <li><a href="sprint-fundamentos-gestao-produtos.html"><span class="n">10</span><span class="nm">Sprint Fundamentos de Gestão de Produtos</span><span class="url">/sprints/gestao-produtos/…</span><span class="st"><span class="tag st-ok">Alta fidelidade</span></span><span class="ar">→</span></a></li>
-  </ul>
-</div>
-</body>
+<body style="background:#000"></body>
 </html>
