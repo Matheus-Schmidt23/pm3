@@ -265,3 +265,13 @@
 @media (max-width:860px){.st-scrim{background:linear-gradient(180deg,rgba(18,18,18,.55) 0%,rgba(18,18,18,.92) 55%)}.st-bg img{object-position:60% 0}}
 @media (prefers-reduced-motion:reduce){.st-bg img.bright{display:none}.st-btn,.st-track{animation:none}}
 @media (max-width:600px){.st-meta .sep{display:none}}
+/* faixa Stack mais curta (~40%): menos respiro, título em 2 linhas, botão e números na mesma linha */
+.st-in{padding-top:clamp(56px,5.6vw,76px);padding-bottom:clamp(48px,5vw,68px)}
+.st-in > *{max-width:780px}
+.st-partners{margin-bottom:.8rem}
+.stack-band p.st-kick{margin-bottom:12px}
+.stack-band h2{font-size:clamp(30px,3.3vw,46px);margin-bottom:14px}
+.stack-band .st-sub{margin-bottom:24px}
+.st-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px}
+.st-row .st-meta{margin-top:0}
+.st-marquee{padding:.75rem 0}
