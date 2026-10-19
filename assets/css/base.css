@@ -60,9 +60,11 @@ button{font:inherit;color:inherit}
 .section.white{background:#fff}
 .section.deep{background:var(--purple-deep);color:#fff}
 .section.black{background:#000;color:#fff}
-.sec-head{display:grid;grid-template-columns:2fr 3fr;gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(40px,6vw,72px)}
+.sec-head{display:grid;grid-template-columns:3fr 2fr;gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(40px,6vw,72px)}
 .sec-head .lead{margin:0}
 @media (max-width:860px){.sec-head{grid-template-columns:1fr}}
+.br-m{display:none}
+@media (max-width:600px){.br-m{display:inline}}
 
 /* cruzetas dos números */
 .cross{position:absolute;width:13px;height:13px;pointer-events:none;color:var(--gray-fog)}
