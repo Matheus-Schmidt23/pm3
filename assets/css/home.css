@@ -238,10 +238,10 @@
 .dp-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;padding-bottom:4px}
 .dp-track::-webkit-scrollbar{display:none}
 /* 3 cards por vez no desktop: foto em cima, depoimento embaixo.
-   Cada foto tem o seu recorte (object-position no HTML) porque os enquadramentos originais variam muito. */
-.dp-card{flex:0 0 calc((100% - 32px) / 3);scroll-snap-align:start;margin:0;display:grid;grid-template-rows:clamp(200px,16.5vw,240px) 1fr;border-radius:var(--r-xl);background:#110c1c;border:1px solid rgba(255,255,255,.08);overflow:hidden}
-.dp-card .ph{position:relative;background:#2a1f3b}
-.dp-card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+   As fotos já vêm em 3:2 com a cabeça inteira (laterais completadas no Magnific), então nada é recortado. */
+.dp-card{flex:0 0 calc((100% - 32px) / 3);scroll-snap-align:start;margin:0;display:grid;grid-template-rows:auto 1fr;border-radius:var(--r-xl);background:#110c1c;border:1px solid rgba(255,255,255,.08);overflow:hidden}
+.dp-card .ph{position:relative;aspect-ratio:3/2;background:#2a1f3b}
+.dp-card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .dp-card .tx{padding:20px 22px 22px;display:flex;flex-direction:column;gap:12px}
 .dp-card .qm{font-family:var(--serif);font-style:italic;color:var(--yellow);font-size:40px;line-height:.5}
 .dp-card blockquote{margin:0;flex:1}
@@ -260,6 +260,6 @@
 .dp-btns svg{width:18px;height:18px}
 @media (max-width:1080px){.dp-card{flex-basis:calc((100% - 16px) / 2)}}
 @media (max-width:760px){
-  .dp-card{grid-template-rows:220px auto;flex-basis:82%}
+  .dp-card{flex-basis:82%}
   .dp-bar{display:none}
 }
