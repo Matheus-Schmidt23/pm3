@@ -54,6 +54,8 @@
   car.querySelector('[data-dp=prox]').addEventListener('click', () => { avancar(); segurar(); });
   car.querySelector('[data-dp=ant]').addEventListener('click', () => { voltar(); segurar(); });
   mostrar();
+  /* ao mudar a largura (girar o celular, redimensionar), realinha no card atual sem animação */
+  addEventListener('resize', () => { track.style.scrollBehavior = 'auto'; ir(atual); track.style.scrollBehavior = ''; });
 
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   let pausa = false;
