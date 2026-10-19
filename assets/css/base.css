@@ -129,22 +129,23 @@ button{font:inherit;color:inherit}
 /* rodapé secundário Grupo Alun: faixa baixa e discreta, logos clicáveis.
    Grafismo de pixels do brandbook Alun (magenta #ED1360, laranja #FF9413) só nas pontas. */
 .alun-band{position:relative;overflow:hidden;margin-top:0;background:#080808;border-top:1px solid rgba(255,255,255,.08);isolation:isolate}
-.alun-band .mz{position:absolute;top:0;bottom:0;width:22%;z-index:-1;background:url('../alun/mosaico.svg') left center/auto 300px repeat-y;opacity:.75;-webkit-mask-image:linear-gradient(90deg,#000 25%,transparent);mask-image:linear-gradient(90deg,#000 25%,transparent)}
+.alun-band .mz{position:absolute;top:0;bottom:0;width:max(0px,calc((100% - var(--wrap)) / 2 - 12px));z-index:-1;background:url('../alun/mosaico.svg') left center/auto 300px repeat-y;opacity:.75;-webkit-mask-image:linear-gradient(90deg,#000 25%,transparent);mask-image:linear-gradient(90deg,#000 25%,transparent)}
 .alun-band .mz-l{left:0}
 .alun-band .mz-r{right:0;transform:scaleX(-1)}
-.alun-in{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding-top:24px;padding-bottom:24px}
-.site-footer .alun-id{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-fog);line-height:1.5}
+.alun-in{display:flex;align-items:center;justify-content:space-between;gap:16px 40px;flex-wrap:wrap;padding-top:26px;padding-bottom:26px}
+.site-footer .alun-id{font-family:var(--display);font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-fog);line-height:1.5}
 .site-footer .alun-id b{color:#fff;font-weight:800}
-.alun-brands{list-style:none;margin:0;padding:0;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px clamp(22px,3vw,36px)}
+.alun-brands{list-style:none;margin:0;padding:0;display:flex;align-items:center;flex-wrap:wrap;gap:8px clamp(22px,3vw,36px)}
 .alun-brands li{margin:0}
 .alun-brands a{display:block;padding:4px 0}
 .alun-brands img{width:auto;display:block;opacity:.55;transition:opacity .2s}
 .alun-brands a:hover img,.alun-brands a:focus-visible img{opacity:1}
 .site-footer .alun-id:hover{color:#fff}
-@media (max-width:1180px){ .alun-band .mz{width:12%} }
-@media (max-width:760px){ .alun-band .mz{display:none} }
-@media (max-width:600px){
-  .alun-in{gap:12px}
+/* a textura fica só nas margens fora do conteúdo; sem margem, ela some */
+@media (max-width:1280px){ .alun-band .mz{display:none} }
+@media (max-width:760px){
+  .alun-in{flex-direction:column;align-items:flex-start;gap:14px}
+  .site-footer .alun-id{font-size:12.5px}
 }
 .foot-top{display:grid;grid-template-columns:1.3fr repeat(4,1fr);gap:40px;padding-bottom:64px;}
 .foot-brand img{height:34px;width:auto;margin-bottom:24px}
