@@ -232,3 +232,31 @@
 @media (max-width:1080px){.awards .wrap{grid-template-columns:1fr}}
 @media (max-width:760px){.aw-list{grid-template-columns:1fr}}
 
+
+/* ---------- depoimentos: carrossel com foto grande ---------- */
+.dp-car{position:relative}
+.dp-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;padding-bottom:4px}
+.dp-track::-webkit-scrollbar{display:none}
+.dp-card{flex:0 0 min(620px,86%);scroll-snap-align:start;margin:0;display:grid;grid-template-columns:42% 1fr;border-radius:var(--r-xl);background:#110c1c;border:1px solid rgba(255,255,255,.08);overflow:hidden;min-height:380px}
+.dp-card .ph{position:relative;background:#2a1f3b}
+.dp-card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.dp-card .tx{padding:clamp(24px,2.6vw,36px);display:flex;flex-direction:column;gap:20px}
+.dp-card .qm{font-family:var(--serif);font-style:italic;color:var(--yellow);font-size:64px;line-height:.5}
+.dp-card blockquote{margin:0;flex:1}
+.dp-card blockquote p{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(17px,1.4vw,20px);line-height:1.45;color:#fff;margin:6px 0 0}
+.dp-card .who b{display:block;font-family:var(--display);color:#fff;font-size:16px}
+.dp-card .who span{font-size:13px;color:var(--gray-fog)}
+.dp-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:24px}
+.dp-count{font-family:var(--display);font-weight:700;font-size:14px;color:var(--gray-fog);font-variant-numeric:tabular-nums}
+.dp-count b{color:#fff}
+.dp-bar{flex:1;height:2px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;max-width:420px}
+.dp-bar i{display:block;height:100%;width:0;background:var(--yellow);transition:width .4s ease}
+.dp-btns{display:flex;gap:10px}
+.dp-btns button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.dp-btns button:hover{background:#fff;color:#000;border-color:#fff}
+.dp-btns button:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.dp-btns svg{width:18px;height:18px}
+@media (max-width:760px){
+  .dp-card{grid-template-columns:1fr;grid-template-rows:260px auto;flex-basis:88%;min-height:0}
+  .dp-bar{display:none}
+}
