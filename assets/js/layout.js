@@ -85,15 +85,15 @@
       <div class="foot-bottom"><span>© 2027 PM3. Todos os direitos reservados.</span><nav><a href="#">Política de privacidade</a><a href="#">Termos de uso</a><a href="#" data-consent-open>Preferências de cookies</a></nav></div>
     </div>
     <div class="alun-band" aria-label="Grupo Alun">
-      <img class="mz mz-l" src="assets/alun/mosaico.svg" alt="" aria-hidden="true">
-      <img class="mz mz-r" src="assets/alun/mosaico.svg" alt="" aria-hidden="true">
+      <span class="mz mz-l" aria-hidden="true"></span>
+      <span class="mz mz-r" aria-hidden="true"></span>
       <div class="wrap alun-in">
         <a class="alun-id" href="https://alun.com.br/" target="_blank" rel="noopener">A PM3 faz parte do <b>Grupo Alun</b>: maior ecossistema de educação tech da América Latina</a>
         <ul class="alun-brands" aria-label="Empresas do Grupo Alun">
-          <li><a href="home.html"><img src="assets/logo/pm3-logo-branco.svg" alt="PM3" style="height:17px"></a></li>
-          <li><a href="https://www.alura.com.br/" target="_blank" rel="noopener"><img src="assets/alun/alura-branco.svg" alt="Alura" style="height:16px"></a></li>
-          <li><a href="https://www.fiap.com.br/" target="_blank" rel="noopener"><img src="assets/alun/fiap-branco.png" alt="FIAP" style="height:17px"></a></li>
-          <li><a href="https://www.startse.com/" target="_blank" rel="noopener"><img src="assets/alun/startse-branco.svg" alt="StartSe" style="height:15px"></a></li>
+          <li><a href="home.html"><img src="assets/logo/pm3-logo-branco.svg" alt="PM3" style="height:14px"></a></li>
+          <li><a href="https://www.alura.com.br/" target="_blank" rel="noopener"><img src="assets/alun/alura-branco.svg" alt="Alura" style="height:13px"></a></li>
+          <li><a href="https://www.fiap.com.br/" target="_blank" rel="noopener"><img src="assets/alun/fiap-branco.png" alt="FIAP" style="height:14px"></a></li>
+          <li><a href="https://www.startse.com/" target="_blank" rel="noopener"><img src="assets/alun/startse-branco.svg" alt="StartSe" style="height:12px"></a></li>
         </ul>
       </div>
     </div>
