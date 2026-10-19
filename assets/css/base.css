@@ -132,14 +132,14 @@ button{font:inherit;color:inherit}
 .alun-band .mz{position:absolute;top:0;height:100%;width:auto;max-width:9%;object-fit:cover;object-position:left center;z-index:-1;opacity:.6;-webkit-mask-image:linear-gradient(90deg,#000 30%,transparent);mask-image:linear-gradient(90deg,#000 30%,transparent)}
 .alun-band .mz-l{left:0}
 .alun-band .mz-r{right:0;transform:scaleX(-1)}
-.alun-in{display:flex;align-items:center;justify-content:space-between;gap:16px 32px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
-.site-footer .alun-id{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;color:var(--gray-fog)}
-.alun-id img{height:15px;width:auto;opacity:.85;transition:opacity .2s}
+.alun-in{display:flex;align-items:center;justify-content:space-between;gap:16px 32px;flex-wrap:wrap;padding-top:27px;padding-bottom:27px}
+.site-footer .alun-id{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-fog);line-height:1.5}
+.site-footer .alun-id b{color:#fff;font-weight:800}
 .alun-brands{list-style:none;margin:0;padding:0;display:flex;align-items:center;flex-wrap:wrap;gap:8px clamp(22px,3vw,40px)}
 .alun-brands li{margin:0}
 .alun-brands a{display:block;padding:4px 0}
 .alun-brands img{width:auto;display:block;opacity:.55;transition:opacity .2s}
-.alun-brands a:hover img,.alun-brands a:focus-visible img,.site-footer .alun-id:hover img{opacity:1}
+.alun-brands a:hover img,.alun-brands a:focus-visible img{opacity:1}
 .site-footer .alun-id:hover{color:#fff}
 @media (max-width:1180px){ .alun-band .mz{display:none} }
 @media (max-width:600px){
@@ -177,9 +177,6 @@ button{font:inherit;color:inherit}
 }
 
 /* ---------- notas de protótipo (botão "Por quê?") ---------- */
-.proto-bar{position:fixed;right:16px;bottom:16px;z-index:110;display:flex;gap:8px}
-.proto-bar button,.proto-bar a{font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--yellow);color:#000;border:0;border-radius:var(--r-pill);padding:11px 16px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
-.proto-bar a{background:#fff}
 [data-nota]{position:relative}
 .nota-pin{display:none}
 .show-notes .nota-pin{display:block;position:absolute;z-index:70;top:16px;right:16px;max-width:320px;background:var(--yellow);color:#000;border-radius:14px;padding:12px 14px 12px 40px;font-family:var(--body);font-size:13px;line-height:1.4;text-align:left;box-shadow:0 10px 30px rgba(0,0,0,.25);text-transform:none;letter-spacing:0;font-weight:400}
@@ -214,7 +211,6 @@ button{font:inherit;color:inherit}
 @media (max-width:600px){
   body{font-size:16px}
   .foot-top{grid-template-columns:1fr}
-  .proto-bar{right:12px;bottom:84px}
   .consent{right:12px;bottom:12px;width:calc(100% - 24px)}
 }
 @media (prefers-reduced-motion:reduce){

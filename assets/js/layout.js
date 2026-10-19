@@ -88,7 +88,7 @@
       <img class="mz mz-l" src="assets/alun/mosaico.svg" alt="" aria-hidden="true">
       <img class="mz mz-r" src="assets/alun/mosaico.svg" alt="" aria-hidden="true">
       <div class="wrap alun-in">
-        <a class="alun-id" href="https://alun.com.br/" target="_blank" rel="noopener">Uma empresa do <img src="assets/alun/alun-branco.png" alt="Grupo Alun" width="630" height="153"></a>
+        <a class="alun-id" href="https://alun.com.br/" target="_blank" rel="noopener">A PM3 faz parte do <b>Grupo Alun</b>: maior ecossistema de educação tech da América Latina</a>
         <ul class="alun-brands" aria-label="Empresas do Grupo Alun">
           <li><a href="home.html"><img src="assets/logo/pm3-logo-branco.svg" alt="PM3" style="height:17px"></a></li>
           <li><a href="https://www.alura.com.br/" target="_blank" rel="noopener"><img src="assets/alun/alura-branco.svg" alt="Alura" style="height:16px"></a></li>
@@ -109,7 +109,7 @@
 
   document.body.insertAdjacentHTML('afterbegin', header);
   document.body.insertAdjacentHTML('beforeend', footer + consent +
-    '<div class="proto-bar"><a href="galeria.html">Protótipo</a><a href="/sair" title="Sair do protótipo">Sair</a><button type="button" id="notas" aria-pressed="false">Por quê?</button></div><div class="toast" id="toast"></div>');
+    '<div class="toast" id="toast"></div>');
 
   /* menu: mega no desktop, gaveta no celular */
   const nav = document.getElementById('nav');
@@ -143,11 +143,6 @@
     const arq = h.split('#')[0];
     if (arq && arq.endsWith('.html') && arq !== 'index.html' && arq !== 'galeria.html' && !PRONTAS.includes(arq)){ e.preventDefault(); aviso('Página prevista no protótipo, ainda em desenho'); }
   });
-
-  /* notas de decisão: cada [data-nota] ganha um balão numerado */
-  document.querySelectorAll('[data-nota]').forEach((el, i) => el.insertAdjacentHTML('beforeend', `<span class="nota-pin"><i>${i+1}</i>${el.dataset.nota}</span>`));
-  const bt = document.getElementById('notas');
-  bt.addEventListener('click', () => { const on = document.body.classList.toggle('show-notes'); bt.setAttribute('aria-pressed', on); bt.textContent = on ? 'Ocultar notas' : 'Por quê?'; });
 
   /* números que contam ao aparecer: data-count, data-pre, data-suf */
   const calmo = matchMedia('(prefers-reduced-motion: reduce)').matches;
