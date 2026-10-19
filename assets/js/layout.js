@@ -82,7 +82,6 @@
           <h4 style="margin-top:28px">Para você</h4><ul><li><a href="membership.html">Membership</a></li><li><a href="pos-tech.html">Pós Tech</a></li><li><a href="para-empresas.html">Para empresas</a></li></ul></div>
         <div><h4>PM3</h4><ul><li><a href="#">Sobre a PM3</a></li><li><a href="#">Instrutores</a></li><li><a href="#">Dar aula na PM3</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Contato</a></li></ul></div>
       </div>
-      <div class="foot-bottom"><span>© 2027 PM3. Todos os direitos reservados.</span><nav><a href="#">Política de privacidade</a><a href="#">Termos de uso</a><a href="#" data-consent-open>Preferências de cookies</a></nav></div>
     </div>
     <div class="alun-band" aria-label="Grupo Alun">
       <span class="mz mz-l" aria-hidden="true"></span>
@@ -97,6 +96,7 @@
         </ul>
       </div>
     </div>
+    <div class="wrap"><div class="foot-bottom"><span>© 2027 PM3. Todos os direitos reservados.</span><nav><a href="#">Política de privacidade</a><a href="#">Termos de uso</a><a href="#" data-consent-open>Preferências de cookies</a></nav></div></div>
   </footer>`;
 
   const consent = `
