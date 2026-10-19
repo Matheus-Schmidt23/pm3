@@ -69,7 +69,21 @@
 
   const footer = `
   <footer class="site-footer">
-    <img class="foot-giant" src="assets/logo/pm3-simbolo-branco.svg" alt="" aria-hidden="true">
+    <section class="alun-band" aria-label="Grupo Alun">
+      <img class="mz mz-l" src="assets/alun/mosaico.svg" alt="" aria-hidden="true">
+      <img class="mz mz-r" src="assets/alun/mosaico.svg" alt="" aria-hidden="true">
+      <div class="wrap alun-in">
+        <span class="alun-tag">Uma empresa do grupo</span>
+        <img class="alun-logo" src="assets/alun/alun-branco.png" alt="Grupo Alun" width="630" height="153">
+        <p>O maior ecossistema de educação tech da América Latina, em tecnologia, negócios e IA.</p>
+        <ul class="alun-brands" aria-label="Empresas do Grupo Alun">
+          <li><img src="assets/logo/pm3-logo-branco.svg" alt="PM3" style="height:24px"></li>
+          <li><img src="assets/alun/alura-branco.svg" alt="Alura" style="height:23px"></li>
+          <li><img src="assets/alun/fiap-branco.png" alt="FIAP" style="height:25px"></li>
+          <li><img src="assets/alun/stack-branco.svg" alt="Stack" style="height:17px"></li>
+        </ul>
+      </div>
+    </section>
     <div class="wrap">
       <div class="foot-top">
         <div class="foot-brand">
@@ -83,7 +97,6 @@
           <h4 style="margin-top:28px">Para você</h4><ul><li><a href="membership.html">Membership</a></li><li><a href="pos-tech.html">Pós Tech</a></li><li><a href="para-empresas.html">Para empresas</a></li></ul></div>
         <div><h4>PM3</h4><ul><li><a href="#">Sobre a PM3</a></li><li><a href="#">Instrutores</a></li><li><a href="#">Dar aula na PM3</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Contato</a></li></ul></div>
       </div>
-      <div class="foot-alun"><span>A PM3 faz parte do <b>Grupo Alun</b>, ecossistema de educação em tecnologia, negócios e IA.</span><span class="brands"><span>PM3</span><span>Alura</span><span>FIAP</span><span>Stack</span></span></div>
       <div class="foot-bottom"><span>© 2027 PM3. Todos os direitos reservados.</span><nav><a href="#">Política de privacidade</a><a href="#">Termos de uso</a><a href="#" data-consent-open>Preferências de cookies</a></nav></div>
     </div>
   </footer>`;

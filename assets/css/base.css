@@ -125,7 +125,27 @@ button{font:inherit;color:inherit}
 .mega-foot a{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);text-decoration:none}
 
 /* ---------- rodapé ---------- */
-.site-footer{background:#000;color:var(--gray-fog);padding:96px 0 40px;position:relative;overflow:hidden}
+.site-footer{background:#000;color:var(--gray-fog);padding:0 0 40px;position:relative;overflow:hidden}
+/* faixa Grupo Alun: grafismo de módulos de pixel do brandbook Alun (magenta #ED1360, laranja #FF9413) nas laterais */
+.alun-band{position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:80px;isolation:isolate}
+.alun-band .mz{position:absolute;top:0;height:100%;width:auto;max-width:40%;object-fit:cover;object-position:left center;z-index:-1;-webkit-mask-image:linear-gradient(90deg,#000 55%,transparent);mask-image:linear-gradient(90deg,#000 55%,transparent)}
+.alun-band .mz-l{left:0}
+.alun-band .mz-r{right:0;transform:scaleX(-1)}
+.alun-in{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:clamp(56px,6vw,80px);padding-bottom:clamp(56px,6vw,80px)}
+.alun-tag{font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#fff;color:#000;padding:3px 8px;margin-bottom:22px}
+.alun-logo{height:clamp(40px,4.4vw,56px);width:auto}
+.alun-in p{color:#d5d0cf;font-size:16px;max-width:44ch;margin:18px 0 34px}
+.alun-brands{list-style:none;margin:0;padding:0;display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.alun-brands li{display:flex;align-items:center;padding:6px clamp(20px,3vw,40px);border-left:1px solid rgba(255,255,255,.18)}
+.alun-brands li:first-child{border-left:0}
+.alun-brands img{width:auto;display:block}
+@media (max-width:760px){
+  /* no celular o grafismo vira uma faixa no topo, longe dos logos */
+  .alun-band .mz{max-width:none;width:50%;height:96px;object-fit:cover;object-position:left top;-webkit-mask-image:linear-gradient(180deg,#000 40%,transparent);mask-image:linear-gradient(180deg,#000 40%,transparent)}
+  .alun-in{padding-top:112px}
+  .alun-brands{display:grid;grid-template-columns:1fr 1fr;gap:22px 0}
+  .alun-brands li{justify-content:center;border-left:0}
+}
 .foot-top{display:grid;grid-template-columns:1.3fr repeat(4,1fr);gap:40px;padding-bottom:64px;border-bottom:1px solid rgba(255,255,255,.1)}
 .foot-brand img{height:34px;width:auto;margin-bottom:24px}
 .foot-brand p{font-size:15px;max-width:30ch}
@@ -135,12 +155,8 @@ button{font:inherit;color:inherit}
 .site-footer a{color:var(--gray-fog);text-decoration:none;font-size:14.5px;transition:color .2s}
 .site-footer a:hover{color:#fff}
 .site-footer .btn-light,.site-footer .btn-light:hover{color:var(--purple-deep)}
-.foot-alun{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:14px}
-.foot-alun b{color:#fff;font-family:var(--display)}
-.foot-alun .brands{display:flex;gap:24px;font-family:var(--display);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px;color:#fff}
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:28px;font-size:13px}
 .foot-bottom nav{display:flex;flex-wrap:wrap;gap:20px}
-.foot-giant{position:absolute;right:-60px;bottom:-140px;width:520px;opacity:.07;pointer-events:none}
 
 /* ---------- consentimento (LGPD: recusar com o mesmo peso de aceitar) ---------- */
 .consent{position:fixed;right:16px;bottom:72px;z-index:120;width:min(420px,calc(100% - 32px));background:#fff;color:var(--ink);border-radius:var(--r-card);box-shadow:var(--shadow-lg);padding:20px 20px 18px;font-size:14px;border:1px solid var(--line);transform:translateY(20px);opacity:0;transition:.35s}
