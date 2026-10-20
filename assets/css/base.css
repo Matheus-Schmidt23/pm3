@@ -134,7 +134,7 @@ button{font:inherit;color:inherit}
 .alun-band .mz-r{right:0;transform:scaleX(-1)}
 .alun-in{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding-top:24px;padding-bottom:24px}
 .alun-brands{order:-1}
-.site-footer .alun-id{font-family:var(--display);font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-fog);line-height:1.5}
+.site-footer .alun-id{font-family:var(--display);font-size:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-fog);line-height:1.5}
 .site-footer .alun-id b{color:#fff;font-weight:800}
 .alun-brands{list-style:none;margin:0;padding:0;display:flex;align-items:center;flex-wrap:wrap;gap:8px clamp(22px,3vw,36px)}
 .alun-brands li{margin:0}
@@ -146,7 +146,7 @@ button{font:inherit;color:inherit}
 @media (max-width:1280px){ .alun-band .mz{display:none} }
 @media (max-width:760px){
   .alun-in{gap:12px}
-  .site-footer .alun-id{font-size:12.5px}
+  .site-footer .alun-id{font-size:13.5px}
 }
 .foot-top{display:grid;grid-template-columns:1.3fr repeat(4,1fr);gap:40px;padding-bottom:64px;}
 .foot-brand img{height:34px;width:auto;margin-bottom:24px}
