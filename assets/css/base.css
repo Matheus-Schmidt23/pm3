@@ -157,7 +157,7 @@ button{font:inherit;color:inherit}
 .site-footer a{color:var(--gray-fog);text-decoration:none;font-size:14.5px;transition:color .2s}
 .site-footer a:hover{color:#fff}
 .site-footer .btn-light,.site-footer .btn-light:hover{color:var(--purple-deep)}
-.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:22px 0 26px;font-size:13px}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:22px 0 26px;font-size:13px;border-top:1px solid rgba(255,255,255,.1)}
 .foot-bottom nav{display:flex;flex-wrap:wrap;gap:20px}
 
 /* ---------- consentimento (LGPD: recusar com o mesmo peso de aceitar) ---------- */
