@@ -37,19 +37,6 @@
     if (abrir){ it.classList.add('open'); b.setAttribute('aria-expanded','true'); }
   }));
 
-  /* benefícios: abas que trocam foto e texto */
-  const tabs = $$('[role="tab"]'), ph = $('#incph');
-  const ativa = t => {
-    tabs.forEach(x => x.setAttribute('aria-selected', x === t));
-    $$('[role="tabpanel"]').forEach(p => { const on = p.id === t.getAttribute('aria-controls'); p.hidden = !on; p.classList.toggle('on', on);
-      if (on){ ph.style.opacity = .2; setTimeout(() => { ph.style.backgroundImage = `url('${p.dataset.img}')`; ph.style.opacity = 1; }, 180); } });
-  };
-  tabs.forEach((t, i) => {
-    t.addEventListener('click', () => ativa(t));
-    t.addEventListener('keydown', e => { const d = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? -1 : 0;
-      if (d){ e.preventDefault(); const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); ativa(n); } });
-  });
-
   /* seletor de pagamento */
   const P = {
     6:  ['6x', '599,83', 'ou R$ 3.599 à vista no cartão · sem juros'],
