@@ -103,3 +103,29 @@
     liga(main, false);
   }
 })();
+
+/* instrutores: slider de uma fileira; as setas avançam uma "página" de cards */
+(function(){
+  const track = document.querySelector('.prof-grid');
+  if (!track) return;
+  const cards = [...track.children];
+  const ant = document.querySelector('[data-pf=ant]'), prox = document.querySelector('[data-pf=prox]');
+  const cont = document.querySelector('.prof-count');
+  const passo = () => cards[1] ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth;
+  const porTela = () => Math.max(1, Math.round(track.clientWidth / passo()));
+  const pad = n => String(n).padStart(2, '0');
+  const atualiza = () => {
+    const i = Math.round(track.scrollLeft / passo()), n = porTela();
+    const fim = Math.min(cards.length, i + n);
+    cont.innerHTML = `<b>${pad(i + 1)}–${pad(fim)}</b> de ${cards.length} instrutores`;
+    ant.disabled = track.scrollLeft <= 4;
+    prox.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+  };
+  const vai = d => track.scrollBy({ left: d * porTela() * passo() });
+  ant.addEventListener('click', () => vai(-1));
+  prox.addEventListener('click', () => vai(1));
+  track.addEventListener('scroll', atualiza, { passive: true });
+  track.addEventListener('scrollend', atualiza);
+  addEventListener('resize', atualiza);
+  atualiza();
+})();

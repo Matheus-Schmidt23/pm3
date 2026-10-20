@@ -146,7 +146,19 @@
 
 /* ---------- instrutores ---------- */
 /* cards com foto grande e a empresa em destaque sobre a foto */
-.prof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+/* slider: uma fileira só, 4 por vez no desktop, 2 no celular */
+.prof-grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;padding:6px 0 4px}
+.prof-grid::-webkit-scrollbar{display:none}
+.prof-grid > .prof{flex:0 0 calc((100% - 48px) / 4);scroll-snap-align:start}
+.prof-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:22px}
+.prof-count{font-family:var(--display);font-weight:700;font-size:14px;color:var(--gray-fog)}
+.prof-count b{color:#fff}
+.prof-btns{display:flex;gap:10px}
+.prof-btns button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.prof-btns button:hover{background:#fff;color:#000;border-color:#fff}
+.prof-btns button:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.prof-btns button:disabled{opacity:.3;cursor:default;background:transparent;color:#fff;border-color:rgba(255,255,255,.22)}
+.prof-btns svg{width:18px;height:18px}
 .prof{margin:0;background:#0d0a14;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-card);overflow:hidden;transition:border-color .3s,transform .3s}
 .prof:hover{border-color:rgba(176,77,221,.55);transform:translateY(-4px)}
 .prof .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#1a1226}
@@ -240,7 +252,7 @@
 @media (max-width:1080px){
   .f-grid{grid-template-columns:1fr 1fr}
   .f-grid .s-row{grid-column:1/-1}
-  .prof-grid{grid-template-columns:repeat(3,1fr)}
+  .prof-grid > .prof{flex-basis:calc((100% - 32px) / 3)}
   .plans{grid-template-columns:1fr}
   .plan-single{order:2}
 }
@@ -264,7 +276,7 @@
   .m-buy .btns,.m-buy .btns .btn{width:100%}
   .f-grid{grid-template-columns:1fr}
   .f-card{min-height:0}
-  .prof-grid{grid-template-columns:1fr 1fr}
+  .prof-grid > .prof{flex-basis:calc((100% - 10px) / 2)}
   .prof-grid{gap:10px} .prof figcaption{padding:12px 12px 14px} .prof b{font-size:15px} .prof .co{font-size:10.5px;left:10px;bottom:10px;padding:5px 9px}
   .acc-body .in{padding-left:0}
   .plan-m .cols{grid-template-columns:1fr}
