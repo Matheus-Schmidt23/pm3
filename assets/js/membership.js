@@ -34,8 +34,23 @@
   $$('.acc-item > button').forEach(b => b.addEventListener('click', () => {
     const it = b.parentElement, abrir = !it.classList.contains('open');
     $$('.acc-item').forEach(x => { x.classList.remove('open'); x.querySelector('button').setAttribute('aria-expanded','false'); });
-    if (abrir){ it.classList.add('open'); b.setAttribute('aria-expanded','true'); }
+    if (abrir){ it.classList.add('open'); b.setAttribute('aria-expanded','true'); trocaFoto(it); }
   }));
+
+  /* trilhas: o painel ao lado troca para a foto da trilha aberta (duas camadas que se cruzam) */
+  const art = $('.trilhas-art'), fotos = art ? [...art.querySelectorAll('.ph')] : [];
+  function trocaFoto(it){
+    if (!art || !it.dataset.img) return;
+    const atual = fotos.find(f => f.classList.contains('on')), prox = fotos.find(f => f !== atual);
+    if (atual && atual.style.backgroundImage.includes(it.dataset.img)) return;
+    prox.style.backgroundImage = `url('${it.dataset.img}')`;
+    prox.classList.add('on'); if (atual) atual.classList.remove('on');
+    const itens = [...it.parentElement.children];
+    $('#trN').textContent = String(itens.indexOf(it) + 1).padStart(2, '0');
+    $('#trT').textContent = it.querySelector('.tt').textContent;
+  }
+  /* pré-carrega as fotos das trilhas para a troca não piscar */
+  $$('.acc-item[data-img]').forEach(it => { const im = new Image(); im.src = it.dataset.img; });
 
   /* seletor de pagamento */
   const P = {

@@ -59,7 +59,7 @@
 /* ---------- manifesto que se preenche ao rolar ---------- */
 .m-manifesto{padding:clamp(96px,14vw,180px) 0;position:relative;overflow:hidden;isolation:isolate}
 /* textura lilás bem suave à direita, sumindo em direção ao texto */
-.m-manifesto::before{content:"";position:absolute;top:0;bottom:0;right:0;width:64%;z-index:-1;background:url("../tex/tex-dobras-lilas.jpg") 30% center/cover;opacity:.3;-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%);mask-image:linear-gradient(90deg,transparent,#000 60%)}
+.m-manifesto::before{content:"";position:absolute;top:0;bottom:0;right:0;width:64%;z-index:-1;background:url("../tex/tex-dobras-lilas-hd.jpg") 30% center/cover;opacity:.3;-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%);mask-image:linear-gradient(90deg,transparent,#000 60%)}
 @media (max-width:760px){ .m-manifesto::before{width:100%;opacity:.16} }
 .fill-text{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.4vw,62px);line-height:1.08;letter-spacing:-.03em;max-width:22ch}
 .fill-text .w{color:rgba(22,18,31,.14);transition:color .35s}
@@ -77,9 +77,9 @@
 .f-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s,border-color .3s,opacity .3s}
 .f-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent}
 .f-card.is-hidden{display:none}
-.f-vis{position:relative;height:118px;background-size:cover;background-position:center;isolation:isolate}
+.f-vis{position:relative;height:172px;background-size:cover;background-position:center 32%;isolation:isolate}
 .f-vis::before{content:'';position:absolute;inset:0;z-index:-1;background:inherit;background-size:inherit;background-position:inherit;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.f-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,7,19,.05),rgba(11,7,19,.45))}
+.f-vis::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,7,19,0) 45%,rgba(11,7,19,.55))}
 .f-card:hover .f-vis::before{transform:scale(1.08)}
 .f-n{position:absolute;right:18px;bottom:-6px;z-index:1;font-family:var(--display);font-weight:800;font-size:64px;line-height:1;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.85)}
 .f-body{flex:1;display:flex;flex-direction:column;gap:12px;padding:20px 24px 20px}
@@ -128,16 +128,32 @@
 .acc-body > div{overflow:hidden}
 .acc-body .in{padding:0 0 30px 48px}
 .acc-body p{color:var(--gray-fog);margin:0 0 18px;max-width:52ch}
-.path{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.path span{font-family:var(--display);font-weight:600;font-size:14px;padding:9px 14px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff}
-.path span.k{background:#fff;color:var(--purple-deep)}
-.path span em{font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--blaze-b);margin-right:8px}
-.path span.k em{color:var(--purple-royal)}
-.path i{color:var(--gray-fog);font-style:normal}
-.trilhas-art{position:sticky;top:calc(var(--nav-h) + 32px);aspect-ratio:4/5;border-radius:var(--r-xl) var(--r-xl) var(--r-xl) 0;overflow:hidden;background:url('../tex/tex-fitas-vidro.jpg') center/cover}
-.trilhas-art .lbl{position:absolute;left:0;bottom:0;background:var(--purple-deep);padding:22px 26px 24px;border-radius:0 var(--r-xl) 0 0;max-width:80%}
+/* caminho da trilha: linha do tempo com etapas numeradas (o destaque, .k, é a formação principal) */
+.path{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(var(--n,3),1fr);gap:14px;position:relative}
+.path::before{content:'';position:absolute;left:15px;right:calc(100% / var(--n,3) - 15px);top:15px;height:2px;background:linear-gradient(90deg,var(--yellow),rgba(255,255,255,.25))}
+.path li{position:relative;display:flex;flex-direction:column;gap:4px;padding-right:6px}
+.path .dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:14px;background:var(--purple-deep);color:#fff;border:2px solid rgba(255,255,255,.35);margin-bottom:10px;position:relative;z-index:1}
+.path li.k .dot{background:var(--yellow);color:#000;border-color:var(--yellow);box-shadow:0 0 0 6px rgba(255,177,42,.18)}
+.path em{font-style:normal;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blaze-b)}
+.path li.k em{color:var(--yellow)}
+.path b{font-family:var(--display);font-weight:700;font-size:16px;line-height:1.25;color:#fff}
+/* fundo da seção: aurora em movimento, grão e o 3 em contorno */
+.trilhas-sec{overflow:hidden;isolation:isolate}
+.trilhas-sec .aurora{opacity:.55;inset:-30% -10% -30% 20%}
+.trilhas-sec.grain::after{z-index:-1}
+.tr-three{position:absolute;left:-6%;bottom:-18%;width:min(46%,560px);z-index:-1;opacity:.18;pointer-events:none}
+.tr-three path{fill:none;stroke:#fff;stroke-width:1.1;vector-effect:non-scaling-stroke}
+/* painel de foto da trilha: duas camadas que se cruzam + zoom lento contínuo (Ken Burns) */
+.trilhas-art{position:sticky;top:calc(var(--nav-h) + 32px);aspect-ratio:4/5;border-radius:var(--r-xl) var(--r-xl) var(--r-xl) 0;overflow:hidden;background:#1a1226;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.trilhas-art .ph{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:0;transform:scale(1.08);transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.trilhas-art .ph.on{opacity:1;transform:scale(1);animation:tr-kb 14s ease-in-out 1.2s infinite alternate}
+@keyframes tr-kb{from{transform:scale(1)}to{transform:scale(1.09) translate(-1.5%,-1%)}}
+.trilhas-art::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(69,46,120,0) 50%,rgba(69,46,120,.55));pointer-events:none}
+.trilhas-art .lbl{position:absolute;left:0;bottom:0;z-index:2;background:var(--purple-deep);padding:22px 26px 24px;border-radius:0 var(--r-xl) 0 0;max-width:82%}
 .trilhas-art .lbl b{display:block;font-family:var(--display);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-fog);margin-bottom:6px}
+.trilhas-art .lbl b i{font-style:normal;color:var(--yellow)}
 .trilhas-art .lbl span{font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;text-transform:uppercase;color:#fff}
+@media (prefers-reduced-motion:reduce){ .trilhas-art .ph.on{animation:none} }
 .trilhas-art .ic{--c:var(--purple-deep)}
 
 /* ---------- incluso (lista que troca o painel) ---------- */
@@ -289,10 +305,10 @@
   .m-buy{gap:16px}
   .m-buy .btns,.m-buy .btns .btn{width:100%}
   .f-grid{grid-template-columns:1fr}
-  .f-vis{height:96px} .f-n{font-size:52px}
+  .f-vis{height:170px} .f-n{font-size:52px}
   .prof-grid > .prof{flex-basis:calc((100% - 10px) / 2)}
   .prof-grid{gap:10px} .prof figcaption{padding:12px 12px 14px} .prof b{font-size:15px} .prof .co{font-size:10.5px;left:10px;bottom:10px;padding:5px 9px}
-  .acc-body .in{padding-left:0}
+  .acc-body .in{padding-left:0} .path{grid-template-columns:1fr;gap:16px} .path::before{left:15px;right:auto;top:16px;bottom:16px;width:2px;height:auto;background:linear-gradient(180deg,var(--yellow),rgba(255,255,255,.25))} .path li{flex-direction:row;align-items:center;flex-wrap:wrap;gap:4px 12px} .path .dot{margin:0} .path li em{flex-basis:calc(100% - 48px);order:2} .path li b{flex-basis:calc(100% - 48px);margin-left:44px;order:3} .path li .dot{order:1}
   .plan-m .cols{grid-template-columns:1fr}
   .p-big .v{font-size:60px}
   .site-footer{padding-bottom:110px}
