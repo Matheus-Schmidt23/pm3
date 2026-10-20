@@ -24,20 +24,22 @@
 .m-safe{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--gray-fog);margin-top:4px}
 .m-safe span{display:flex;align-items:center;gap:8px}
 .m-safe svg{width:16px;height:16px;color:var(--blaze-b)}
+.m-photo{position:relative;overflow:hidden;border-radius:0 var(--r-xl) 0 0;background:url('../img/foto-sofa-fone.jpg') 50% 30%/cover}
+.m-photo .tag{position:absolute;left:18px;bottom:18px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff}
 
-.m-photo{position:relative;overflow:hidden;border-radius:0 var(--r-xl) 0 0;background:#1a1226}
-/* a foto fica num pseudo-elemento maior que o card, para poder se mover por trás (efeito janela) */
-.m-photo::before{content:'';position:absolute;inset:-5%;background:url('../img/foto-sofa-fone.jpg') 50% 30%/cover;transform:translate(calc(var(--px,0) * -18px),calc(var(--py,0) * -12px)) scale(1.02);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.m-photo .tag{position:absolute;left:18px;bottom:18px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;z-index:2;transform:translate(calc(var(--px,0) * 8px),calc(var(--py,0) * 6px));transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+/* ---------- efeito de mouse nos cards do topo: um wobble curto, sem deformar ---------- */
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .m-photo:hover,.m-tile:hover{animation:fx-wobble .7s cubic-bezier(.36,.07,.19,.97)}
+}
+@keyframes fx-wobble{
+  0%{transform:rotate(0)}
+  18%{transform:rotate(-1.6deg)}
+  36%{transform:rotate(1.2deg)}
+  54%{transform:rotate(-.7deg)}
+  72%{transform:rotate(.35deg)}
+  100%{transform:rotate(0)}
+}
 
-/* ---------- efeitos de mouse nos cards do topo ---------- */
-.fx-tilt{transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .5s;will-change:transform}
-.fx-tilt.on{transition:transform .15s ease-out,box-shadow .5s;box-shadow:0 30px 60px -20px rgba(140,70,220,.45)}
-.fx-tilt.on::before,.fx-tilt.on .tag,.fx-tilt.on .big{transition-duration:.15s}
-.fx-glare{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.42),rgba(255,255,255,.08) 38%,transparent 62%);mix-blend-mode:soft-light}
-.on > .fx-glare{opacity:1}
-.m-tile{background-size:160% 160%;background-position:calc(50% + var(--px,0) * 40%) calc(50% + var(--py,0) * 40%);transition:background-position .6s}
-.m-tile .big{transform:translate(calc(var(--px,0) * -10px),calc(var(--py,0) * -6px));transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 /* card principal: sem inclinar (o botão de compra fica parado); luz que segue o mouse e o 3 com um traço de luz */
 .m-main .spot{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity .5s;background:radial-gradient(560px circle at var(--mx,70%) var(--my,40%),rgba(176,77,221,.38),transparent 60%)}
 .m-main.on .spot{opacity:1}

@@ -72,11 +72,10 @@
   new IntersectionObserver(([e]) => { vis.planos = e.isIntersecting; atualiza(); }, { threshold: .15 }).observe(planos);
 })();
 
-/* cards do topo: efeitos que seguem o mouse (só com mouse de verdade e sem "reduzir movimento") */
+/* card principal do topo: luz que segue o mouse e traço de luz no 3 (só com mouse de verdade e sem "reduzir movimento") */
 (function(){
   if (!matchMedia('(hover: hover) and (pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const main = document.querySelector('.m-main');
-  const tilts = [...document.querySelectorAll('.m-photo, .m-tile')];
 
   /* --mx/--my: posição do cursor em %; --px/--py: de -0.5 a 0.5; --rx/--ry: inclinação em graus */
   const liga = (el, inclina) => {
@@ -104,11 +103,6 @@
     });
   };
 
-  tilts.forEach(el => {
-    el.classList.add('fx-tilt');
-    el.insertAdjacentHTML('beforeend', '<span class="fx-glare" aria-hidden="true"></span>');
-    liga(el, true);
-  });
 
   if (main){
     main.insertAdjacentHTML('afterbegin', '<span class="spot" aria-hidden="true"></span>');
