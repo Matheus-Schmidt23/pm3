@@ -91,8 +91,8 @@
         <ul class="alun-brands" aria-label="Empresas do Grupo Alun">
           <li><a href="home.html"><img src="assets/logo/pm3-logo-branco.svg" alt="PM3" style="height:16px"></a></li>
           <li><a href="https://www.alura.com.br/" target="_blank" rel="noopener"><img src="assets/alun/alura-branco.svg" alt="Alura" style="height:16px"></a></li>
-          <li><a href="https://www.fiap.com.br/" target="_blank" rel="noopener"><img src="assets/alun/fiap-branco.png" alt="FIAP" style="height:16px"></a></li>
-          <li><a href="https://www.startse.com/" target="_blank" rel="noopener"><img src="assets/alun/startse-branco.svg" alt="StartSe" style="height:16px"></a></li>
+          <li><a href="https://www.fiap.com.br/" target="_blank" rel="noopener"><img src="assets/alun/fiap-branco.png" alt="FIAP" style="height:13.5px"></a></li>
+          <li><a href="https://www.startse.com/" target="_blank" rel="noopener"><img src="assets/alun/startse-branco.svg" alt="StartSe" style="height:13.5px"></a></li>
         </ul>
       </div>
     </div>
