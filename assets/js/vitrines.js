@@ -88,7 +88,7 @@
         <h3>${i.nome}</h3><p>${i.txt}</p><div class="ft"><span><b>${i.h ? i.h + 'h' : i.tipo === 'pos' ? 'Pós-graduação' : '6 módulos'}</b> · ${AREAS[i.area].curto}</span><span class="inc">${inc}</span></div></a>`;
     };
     const membro = `<a class="ccard member" href="membership.html"><div class="top"><span class="tag" style="background:#000;color:#fff">Membership</span></div>
-      <h3>Todas as formações e sprints em uma assinatura</h3><p>10 formações, +40 sprints, mentorias e comunidade por 12 meses.</p>
+      <h3>Todas as formações e sprints em uma assinatura</h3><p>10 formações, +40 sprints, mentorias, workshops ao vivo e comunidade por 12 meses.</p>
       <div class="ft"><span><b>12x R$ 299,91</b></span><span class="inc" style="color:#000">Conhecer →</span></div></a>`;
 
     const sem = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();

@@ -19,7 +19,7 @@
     const v = el.value.trim();
     if (el.required && !v) return erro(el, 'Campo obrigatório'), false;
     if (el.type === 'email' && v && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) return erro(el, 'E-mail inválido'), false;
-    if (el.type === 'email' && LIVRES.test(v)) return erro(el, 'Use o e-mail da empresa'), false;
+    if (el.type === 'email' && LIVRES.test(v)) return erro(el, 'Use o seu e-mail corporativo'), false;
     return erro(el, ''), true;
   };
   form.querySelectorAll('input[required]:not([type=checkbox]),select[required]').forEach(el => el.addEventListener('blur', () => valida(el)));
