@@ -1,7 +1,7 @@
 /* PM3 · vitrines (Formações, Sprints) e catálogo /cursos/ */
 
 /* ---------- hero claro das vitrines ---------- */
-.v-hero{background:var(--paper);padding:clamp(28px,3.6vw,48px) 0 clamp(56px,7vw,96px);position:relative;overflow:hidden}
+.v-hero{background:var(--paper);padding:clamp(24px,min(3.6vw,4vh),48px) 0 clamp(40px,min(7vw,7vh),96px);position:relative;overflow:hidden}
 .crumbs{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:13px;color:var(--muted);margin:0;padding:0;list-style:none}
 .crumbs a{color:var(--muted);text-decoration:none}
 .crumbs a:hover{color:var(--purple-royal)}
@@ -9,11 +9,11 @@
 .on-dark .crumbs,.on-dark .crumbs a{color:var(--gray-fog)}
 .on-dark .crumbs a:hover{color:#fff}
 .v-hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(28px,5vw,80px);align-items:end;margin-top:32px}
-.v-hero h1{font-size:clamp(56px,8.4vw,132px)}
+.v-hero h1{font-size:clamp(56px,min(8.4vw,12vh),132px)}
 .v-hero h1 .c2{color:var(--purple-royal)}
 .v-hero h1 .em{display:block;font-size:.36em;line-height:1.1;margin-top:.24em;color:var(--ink);letter-spacing:-.01em}
 .v-hero .lead{margin:26px 0 0}
-.v-pic{position:relative;aspect-ratio:4/5;max-height:520px;border-radius:var(--r-xl) var(--r-xl) var(--r-xl) 0;overflow:hidden;background-size:cover;background-position:center}
+.v-pic{position:relative;aspect-ratio:4/5;max-height:min(520px,52vh);border-radius:var(--r-xl) var(--r-xl) var(--r-xl) 0;overflow:hidden;background-size:cover;background-position:center}
 .v-pic .chip-stat{position:absolute;left:0;bottom:0;background:var(--paper);padding:20px 26px 0 0;border-radius:0 var(--r-xl) 0 0;font-family:var(--display)}
 .v-pic .chip-stat b{display:block;font-weight:800;font-size:clamp(40px,4vw,60px);letter-spacing:-.04em;line-height:.95;color:var(--purple-deep)}
 .v-pic .chip-stat span{font-size:13.5px;color:var(--muted)}
