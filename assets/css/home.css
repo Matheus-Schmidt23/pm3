@@ -31,17 +31,17 @@
 
 /* seletor de intenção: a home como roteador */
 .intent{margin-top:clamp(32px,4vw,52px)}
-.intent > p{font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-fog);margin:0 0 14px}
-.intent ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(255,255,255,.14)}
+.intent > p{font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-fog);margin:0 0 14px;padding-left:22px}
+.intent ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.14)}
 .intent li{border-left:1px solid rgba(255,255,255,.14);display:flex}
 .intent li:first-child{border-left:0}
-.intent a{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:150px;padding:22px 22px 24px;text-decoration:none;color:#fff;position:relative;transition:background .3s}
-.intent li:first-child a{padding-left:0}
+.intent a{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:150px;padding:22px 16px 24px 22px;text-decoration:none;color:#fff;position:relative;transition:background .3s}
+/* todos os boxes com a mesma margem interna; o rótulo acompanha o texto */
 .intent a::before{content:'';position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--yellow);transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .intent a:hover::before{transform:scaleX(1)}
 .intent a:hover{background:rgba(255,255,255,.04)}
 .intent .q{font-family:var(--display);font-weight:700;font-size:clamp(19px,1.6vw,23px);line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
-.intent .to{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13.5px;color:var(--gray-fog)}
+.intent .to{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13.5px;color:var(--gray-fog)}
 .intent .to svg{width:18px;height:18px;transition:transform .25s;flex:none}
 .intent a:hover .to svg{transform:translateX(4px)}
 .intent a:hover .to{color:#fff}
@@ -95,6 +95,7 @@
 
 .t-sprint{grid-column:3/4;background:var(--paper);border:1px solid var(--line)}
 .t-sprint .n{font-family:var(--display);font-weight:800;font-size:clamp(56px,5.6vw,84px);letter-spacing:-.05em;line-height:.9;color:var(--purple-deep)}
+.t-sprint .n-lbl{color:var(--purple-deep);margin:4px 0 14px}
 .t-sprint .more{color:var(--purple-royal)}
 .t-sprint p{color:#4a4458}
 
@@ -177,7 +178,7 @@
   .intent ul{grid-template-columns:repeat(3,1fr)}
   .intent li:nth-child(4){border-left:0}
   .intent li:nth-child(n+4){border-top:1px solid rgba(255,255,255,.14)}
-  .intent li:nth-child(4) a{padding-left:0}
+
   .bento{grid-template-columns:1fr 1fr}
   .t-member{grid-column:1/3;grid-row:auto;min-height:520px}
   .t-form{grid-column:1/3}
@@ -212,6 +213,7 @@
   .intent li{border-left:0;border-top:1px solid rgba(255,255,255,.14)}
   .intent li:first-child{border-top:0}
   .intent a{min-height:0;padding:20px 0;flex-direction:row;align-items:center}
+  .intent > p{padding-left:0}
   .intent .to span{display:none}
   .bento{grid-template-columns:1fr}
   .t-member,.t-form,.t-sprint,.t-pos,.t-b2b{grid-column:auto}
