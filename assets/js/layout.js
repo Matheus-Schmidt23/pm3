@@ -150,8 +150,8 @@
   const conta = el => {
     const alvo = +el.dataset.count, pre = el.dataset.pre || '', suf = el.dataset.suf || '';
     if (calmo){ el.textContent = pre + fmt(alvo) + suf; return; }
-    const t0 = performance.now(), dur = 1400;
-    const passo = t => { const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+    const t0 = performance.now(), dur = 3000;
+    const passo = t => { const p = Math.min(1, (t - t0) / dur), e = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
       el.textContent = pre + fmt(Math.round(alvo * e)) + suf; if (p < 1) requestAnimationFrame(passo); };
     requestAnimationFrame(passo);
   };
