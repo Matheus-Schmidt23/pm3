@@ -17,7 +17,7 @@
 .h-hero h1 .l2{color:var(--gray-fog)}
 .h-hero h1 .em{display:block;font-size:.34em;line-height:1.1;margin-top:.22em;color:#fff;letter-spacing:-.01em}
 .h-hero .lead{margin:22px 0 0;max-width:52ch}
-.h-pic{position:relative;aspect-ratio:4/3;border-radius:var(--r-xl) var(--r-xl) 0 var(--r-xl);overflow:hidden;background:#c99be6;align-self:end}
+.h-pic{position:relative;aspect-ratio:1/1;border-radius:var(--r-xl) var(--r-xl) 0 var(--r-xl);overflow:hidden;background:#c99be6;align-self:end}
 .h-pic .ph{position:absolute;inset:0;background:50% 40%/cover no-repeat;opacity:0;transition:opacity 1.4s ease;animation:kb 18s ease-in-out infinite alternate;will-change:transform}
 .h-pic .ph:nth-child(3n+2){transform-origin:30% 25%;animation-delay:-6s}
 .h-pic .ph:nth-child(3n+3){transform-origin:70% 35%;animation-delay:-12s}
