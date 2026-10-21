@@ -162,3 +162,33 @@
   const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }}), { rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 })();
+
+/* primeira dobra: em telas mais baixas que o desenho (notebooks 16:9), o hero encolhe por inteiro,
+   como um zoom, mantendo a proporção entre título, foto e textos. Não mexe em celular nem tablet. */
+(function(){
+  const hero = document.querySelector('.h-hero, .c-hero, .v-hero, .b-hero');
+  const wrap = hero && hero.querySelector(':scope > .wrap');
+  if (!wrap || !('zoom' in wrap.style)) return;
+  const encaixa = () => {
+    wrap.style.zoom = '';
+    if (innerWidth < 1081) return;
+    const topo = hero.getBoundingClientRect().top + scrollY;
+    const livre = innerHeight - topo;
+    const resto = hero.offsetHeight - wrap.offsetHeight;
+    if (hero.offsetHeight <= livre) return;
+    /* o texto pode quebrar diferente depois do zoom: refina a escala em até 3 passadas */
+    let z = 1;
+    for (let i = 0; i < 3; i++){
+      const alto = wrap.getBoundingClientRect().height;
+      if (alto <= livre - resto + 1) break;
+      z = Math.max(.7, z * (livre - resto) / alto);
+      wrap.style.zoom = z.toFixed(3);
+    }
+  };
+  encaixa();
+  addEventListener('resize', encaixa);
+  addEventListener('load', encaixa);
+  if (document.fonts) document.fonts.ready.then(encaixa);
+  /* fechar a faixa de campanha libera espaço: recalcula */
+  document.addEventListener('click', e => { if (e.target.closest('#camp button')) requestAnimationFrame(encaixa); });
+})();

@@ -9,16 +9,15 @@
 .camp.off{display:none}
 
 /* ---------- hero ---------- */
-/* tamanhos do hero respeitam a largura e a altura da tela: a primeira dobra inteira cabe em telas 16:9 (1366x768, 1536x864, 1920x1080) */
-.h-hero{position:relative;background:#000;color:#fff;overflow:hidden;isolation:isolate;padding:clamp(24px,min(4.4vw,4.5vh),64px) 0 0}
+.h-hero{position:relative;background:#000;color:#fff;overflow:hidden;isolation:isolate;padding:clamp(40px,4.4vw,64px) 0 0}
 .h-hero .glow{position:absolute;z-index:-1;width:900px;height:900px;left:var(--gx,70%);top:var(--gy,30%);transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(176,77,221,.34),rgba(77,43,159,.18) 38%,transparent 66%);pointer-events:none;transition:left .9s cubic-bezier(.2,.7,.2,1),top .9s cubic-bezier(.2,.7,.2,1)}
 .h-hero.grain::after{z-index:-1;opacity:.18}
 .h-top{display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(28px,4vw,64px);align-items:end}
-.h-hero h1{font-size:clamp(52px,min(7.2vw,10vh),112px);line-height:.88}
+.h-hero h1{font-size:clamp(52px,7.2vw,112px);line-height:.88}
 .h-hero h1 .l2{color:var(--gray-fog)}
 .h-hero h1 .em{display:block;font-size:.34em;line-height:1.1;margin-top:.22em;color:#fff;letter-spacing:-.01em}
-.h-hero .lead{margin:clamp(14px,2.4vh,22px) 0 0;max-width:52ch}
-.h-pic{position:relative;aspect-ratio:4/5;border-radius:var(--r-xl) var(--r-xl) 0 var(--r-xl);overflow:hidden;background:#c99be6;align-self:stretch;max-height:min(520px,50vh)}
+.h-hero .lead{margin:22px 0 0;max-width:52ch}
+.h-pic{position:relative;aspect-ratio:4/5;border-radius:var(--r-xl) var(--r-xl) 0 var(--r-xl);overflow:hidden;background:#c99be6;align-self:stretch;max-height:520px}
 .h-pic .ph{position:absolute;inset:0;background:50% 30%/cover no-repeat;opacity:0;transition:opacity 1.4s ease;animation:kb 18s ease-in-out infinite alternate;will-change:transform}
 .h-pic .ph:nth-child(3n+2){transform-origin:30% 25%;animation-delay:-6s}
 .h-pic .ph:nth-child(3n+3){transform-origin:70% 35%;animation-delay:-12s}
@@ -31,12 +30,12 @@
 .h-pic .ic{--c:#000}
 
 /* seletor de intenção: a home como roteador */
-.intent{margin-top:clamp(24px,min(4vw,4.5vh),52px)}
+.intent{margin-top:clamp(32px,4vw,52px)}
 .intent > p{font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-fog);margin:0 0 14px;padding-left:22px}
 .intent ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.14)}
 .intent li{border-left:1px solid rgba(255,255,255,.14);display:flex}
 .intent li:first-child{border-left:0}
-.intent a{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:clamp(14px,2.4vh,28px);min-height:clamp(100px,14vh,150px);padding:clamp(16px,2.4vh,22px) 16px clamp(16px,2.6vh,24px) 22px;text-decoration:none;color:#fff;position:relative;transition:background .3s}
+.intent a{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:150px;padding:22px 16px 24px 22px;text-decoration:none;color:#fff;position:relative;transition:background .3s}
 /* todos os boxes com a mesma margem interna; o rótulo acompanha o texto */
 .intent a::before{content:'';position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--yellow);transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .intent a:hover::before{transform:scaleX(1)}
