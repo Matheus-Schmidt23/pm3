@@ -74,6 +74,9 @@
   if (!pic) return;
   const fotos = [...pic.querySelectorAll('.ph')];
   if (fotos.length < 2) return;
+  /* só a primeira foto entra no carregamento da página; as outras vêm depois */
+  const carrega = () => fotos.forEach(f => { if (f.dataset.bg) f.style.backgroundImage = `url('${f.dataset.bg}')`; });
+  if (document.readyState === 'complete') carrega(); else addEventListener('load', carrega);
   let i = 0;
   setInterval(() => {
     if (document.hidden) return;
