@@ -13,7 +13,7 @@
 .b-hero .lead{margin:24px 0 32px}
 .b-hero .btns{display:flex;gap:12px;flex-wrap:wrap}
 .b-hero .pad{padding-bottom:clamp(48px,6vw,88px)}
-.b-pic{position:relative;align-self:stretch;min-height:520px;border-radius:var(--r-xl) var(--r-xl) 0 0;background:url('../img/foto-equipe.jpg') 60% 30%/cover}
+.b-pic{position:relative;align-self:stretch;min-height:520px;border-radius:var(--r-xl) var(--r-xl) 0 0;background:url('../img/foto-equipe.jpg?v=3') 60% 30%/cover}
 .b-card{position:absolute;left:-40px;bottom:40px;background:#fff;border-radius:var(--r-card);box-shadow:var(--shadow-lg);padding:20px 24px;font-family:var(--display);min-width:220px}
 .b-card b{display:block;font-size:44px;font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--purple-deep)}
 .b-card span{font-size:13.5px;color:var(--muted)}
