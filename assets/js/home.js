@@ -28,7 +28,6 @@
   let ate = 0;
   const segurar = (ms = 9000) => { ate = Date.now() + ms; };
   const cards = [...track.children];
-  const cur = car.querySelector('.dp-count b');
   const bar = car.querySelector('.dp-bar i');
   const passo = () => cards[1] ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth;
   /* último índice que a rolagem alcança (no desktop cabem dois cards por vez) */
@@ -36,7 +35,6 @@
   let atual = 0;
   const mostrar = () => {
     const n = atual >= ultimo() ? cards.length : atual + 1;
-    if (cur) cur.textContent = String(n).padStart(2, '0');
     if (bar) bar.style.width = (n / cards.length * 100) + '%';
   };
   const ir = i => { atual = Math.min(Math.max(0, i), ultimo()); track.scrollTo({ left: atual * passo() }); mostrar(); };

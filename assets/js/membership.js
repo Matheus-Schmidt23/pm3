@@ -125,14 +125,9 @@
   if (!track) return;
   const cards = [...track.children];
   const ant = document.querySelector('[data-pf=ant]'), prox = document.querySelector('[data-pf=prox]');
-  const cont = document.querySelector('.prof-count');
   const passo = () => cards[1] ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth;
   const porTela = () => Math.max(1, Math.round(track.clientWidth / passo()));
-  const pad = n => String(n).padStart(2, '0');
   const atualiza = () => {
-    const i = Math.round(track.scrollLeft / passo()), n = porTela();
-    const fim = Math.min(cards.length, i + n);
-    cont.innerHTML = `<b>${pad(i + 1)}–${pad(fim)}</b> de ${cards.length} instrutores`;
     ant.disabled = track.scrollLeft <= 4;
     prox.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
   };
@@ -169,17 +164,10 @@
   const track = document.getElementById('fgrid');
   if (!track) return;
   const ant = document.querySelector('[data-fc=ant]'), prox = document.querySelector('[data-fc=prox]');
-  const cont = document.querySelector('.f-count');
   const vis = () => [...track.children].filter(c => !c.classList.contains('is-hidden'));
   const passo = () => { const v = vis(); return v[1] ? v[1].offsetLeft - v[0].offsetLeft : track.clientWidth; };
   const porTela = () => Math.max(1, Math.round(track.clientWidth / passo()));
-  const pad = n => String(n).padStart(2, '0');
   const atualiza = () => {
-    const v = vis(), n = porTela();
-    const i = Math.min(Math.max(v.length - 1, 0), Math.round(track.scrollLeft / passo())), fim = Math.min(v.length, i + n);
-    cont.innerHTML = v.length <= n
-      ? `<b>${v.length}</b> ${v.length === 1 ? 'formação' : 'formações'}`
-      : `<b>${pad(i + 1)}–${pad(fim)}</b> de ${v.length} formações`;
     ant.disabled = track.scrollLeft <= 4;
     prox.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
   };
