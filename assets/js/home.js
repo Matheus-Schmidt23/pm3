@@ -67,3 +67,18 @@
   new IntersectionObserver(es => es.forEach(e => visivel = e.isIntersecting), { threshold: .3 }).observe(car);
   setInterval(() => { if (visivel && !pausa && Date.now() > ate && !document.hidden) avancar(); }, 4800);
 })();
+
+/* hero: as fotos de pessoas da PM3 se alternam com um cruzamento suave */
+(function(){
+  const pic = document.getElementById('hPic');
+  if (!pic) return;
+  const fotos = [...pic.querySelectorAll('.ph')];
+  if (fotos.length < 2) return;
+  let i = 0;
+  setInterval(() => {
+    if (document.hidden) return;
+    fotos[i].classList.remove('on');
+    i = (i + 1) % fotos.length;
+    fotos[i].classList.add('on');
+  }, 4500);
+})();
