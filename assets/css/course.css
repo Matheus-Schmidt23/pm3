@@ -12,7 +12,7 @@
 .crumbs a:hover{color:#fff}
 .crumbs li+li::before{content:'/';margin-right:10px;opacity:.5}
 .c-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.c-hero h1{font-size:clamp(52px,7vw,108px)}
+.c-hero h1{font-size:calc(clamp(52px,7vw,108px) * var(--s,1))}
 .c-hero h1 .em{display:block;font-size:.4em;line-height:1.1;margin-top:.22em;color:#fff;letter-spacing:-.01em}
 .c-hero .lead{margin:24px 0 0;max-width:54ch}
 .facts{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:0;margin-top:36px;border-top:1px solid rgba(255,255,255,.16);padding-top:24px}
@@ -238,7 +238,7 @@
 /* hero preto com lilás: diferencia sprint (curto) de formação (roxo profundo) */
 .c-hero-sprint{background:#000}
 .c-hero-sprint::before{background:radial-gradient(60% 90% at 100% 0%,rgba(176,77,221,.5),transparent 62%),radial-gradient(50% 70% at 70% 100%,rgba(77,43,159,.55),transparent 70%)}
-.c-hero h1.h-sprint{font-size:clamp(46px,5.6vw,88px)}
+.c-hero h1.h-sprint{font-size:calc(clamp(46px,5.6vw,88px) * var(--s,1))}
 
 /* jornada em 4 etapas */
 .journey{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}

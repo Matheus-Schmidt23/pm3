@@ -163,27 +163,25 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 })();
 
-/* primeira dobra: em telas mais baixas que o desenho (notebooks 16:9), o hero encolhe por inteiro,
-   como um zoom, mantendo a proporção entre título, foto e textos. Não mexe em celular nem tablet. */
+/* primeira dobra: em telas mais baixas que o desenho (notebooks 16:9), os elementos do hero
+   (título, foto, textos, atalhos) encolhem juntos pela variável --s. A largura e as margens
+   do container não mudam, então o hero segue alinhado ao header e ao resto do site. */
 (function(){
   const hero = document.querySelector('.h-hero, .c-hero, .v-hero, .b-hero');
-  const wrap = hero && hero.querySelector(':scope > .wrap');
-  if (!wrap || !('zoom' in wrap.style)) return;
+  if (!hero) return;
   const encaixa = () => {
-    wrap.style.zoom = '';
+    hero.style.removeProperty('--s');
     if (innerWidth < 1081) return;
-    const topo = hero.getBoundingClientRect().top + scrollY;
-    const livre = innerHeight - topo;
-    const resto = hero.offsetHeight - wrap.offsetHeight;
-    if (hero.offsetHeight <= livre) return;
-    /* o texto pode quebrar diferente depois do zoom: refina a escala em até 3 passadas */
-    let z = 1;
-    for (let i = 0; i < 3; i++){
-      const alto = wrap.getBoundingClientRect().height;
-      if (alto <= livre - resto + 1) break;
-      z = Math.max(.7, z * (livre - resto) / alto);
-      wrap.style.zoom = z.toFixed(3);
+    const livre = innerHeight - (hero.getBoundingClientRect().top + scrollY);
+    if (hero.offsetHeight <= livre + 1) return;
+    /* nem tudo escala (paddings laterais, textos pequenos): busca a maior escala que cabe */
+    let lo = .62, hi = 1;
+    for (let i = 0; i < 8; i++){
+      const s = (lo + hi) / 2;
+      hero.style.setProperty('--s', s.toFixed(3));
+      if (hero.offsetHeight <= livre + 1) lo = s; else hi = s;
     }
+    hero.style.setProperty('--s', lo.toFixed(3));
   };
   encaixa();
   addEventListener('resize', encaixa);
