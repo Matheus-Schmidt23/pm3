@@ -59,7 +59,7 @@
   let pausa = false;
   car.addEventListener('mouseenter', () => pausa = true);
   car.addEventListener('mouseleave', () => pausa = false);
-  car.addEventListener('focusin', () => pausa = true);
+  car.addEventListener('focusin', e => { if (e.target.matches(':focus-visible')) pausa = true; });
   car.addEventListener('focusout', () => pausa = false);
   track.addEventListener('pointerdown', () => segurar());
   track.addEventListener('wheel', () => segurar(), { passive: true });

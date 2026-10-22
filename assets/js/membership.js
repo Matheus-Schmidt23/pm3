@@ -149,7 +149,7 @@
   const visivel = () => { const r = track.getBoundingClientRect(); return r.bottom > innerHeight * .2 && r.top < innerHeight * .8; };
   track.addEventListener('mouseenter', () => pausa = true);
   track.addEventListener('mouseleave', () => pausa = false);
-  area.addEventListener('focusin', () => pausa = true);
+  area.addEventListener('focusin', e => { if (e.target.matches(':focus-visible')) pausa = true; });
   area.addEventListener('focusout', () => pausa = false);
   ['pointerdown', 'wheel', 'touchstart'].forEach(ev => track.addEventListener(ev, () => segura(), { passive: true }));
   setInterval(() => {
@@ -193,7 +193,7 @@
   const visivel = () => { const r = track.getBoundingClientRect(); return r.bottom > innerHeight * .2 && r.top < innerHeight * .8; };
   track.addEventListener('mouseenter', () => pausa = true);
   track.addEventListener('mouseleave', () => pausa = false);
-  area.addEventListener('focusin', () => pausa = true);
+  area.addEventListener('focusin', e => { if (e.target.matches(':focus-visible')) pausa = true; });
   area.addEventListener('focusout', () => pausa = false);
   ['pointerdown', 'wheel', 'touchstart'].forEach(ev => track.addEventListener(ev, () => segura(), { passive: true }));
   setInterval(() => {
