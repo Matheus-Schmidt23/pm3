@@ -17,8 +17,9 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=20">
 <link rel="stylesheet" href="assets/css/components.css?v=5">
-<link rel="stylesheet" href="assets/css/showcase.css?v=27">
+<link rel="stylesheet" href="assets/css/showcase.css?v=30">
 <link rel="stylesheet" href="assets/css/hero-card.css?v=1">
+<link rel="stylesheet" href="assets/css/cards-formacao.css?v=6">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -45,7 +46,7 @@
       <div>
         <div class="m-buy">
           <div class="btns">
-            <a class="btn btn-light" href="#vnav">Ver as sprints <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+            <a class="btn btn-light" href="#catalogo">Ver as sprints <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
             <a class="btn btn-line" href="membership.html">Conhecer a Membership</a>
           </div>
         </div>
@@ -65,23 +66,19 @@
   </div>
 </section>
 
-<!-- 2 · NAVEGAÇÃO POR VERTICAL -->
-<nav class="vnav" aria-label="Verticais de sprints" data-nota="As 6 verticais viram âncoras desta página. Hoje cada vertical é uma URL própria (/sprints/dados/ etc.): manter essas URLs como seções ou páginas filhas, com 301 se mudarem."><div class="wrap" id="vnav"></div></nav>
-
-<!-- 3 · VERTICAIS -->
-<div class="wrap" id="verts" data-nota="44 sprints do catálogo consolidado (jul/2026). O marketing diz '+40' e o sitemap tem 48 páginas: alinhar a lista oficial antes da migração."></div>
-
-<!-- 4 · ACESSO -->
-<section class="section" aria-label="Como acessar as sprints">
+<!-- 2 · CATÁLOGO -->
+<section class="section" id="catalogo" aria-labelledby="ar-t">
   <div class="wrap">
-    <div class="mband grain on-dark reveal" data-nota="Mesma decisão da página da sprint: a assinatura só de sprints continua? Sem preço público hoje.">
-      <div><p class="kicker">Todas as sprints inclusas</p><h2>Sprints e formações.<span class="em">No mesmo acesso.</span></h2><p>A Membership é uma assinatura de 12 meses com as +40 sprints, as 10 formações, mentorias, workshops ao vivo e comunidade.</p></div>
-      <div class="pr"><small>Membership PM3</small><b>12x R$ 299,91</b><span>ou R$ 3.599 à vista</span><a class="btn btn-light" href="membership.html">Conhecer a Membership</a></div>
+    <div class="sec-head">
+      <div><p class="kicker"><span class="n">01</span> Catálogo</p><h2 class="h2" id="ar-t">Escolha a<br><span class="c2">sua sprint</span></h2></div>
+      <p class="lead">44 cursos curtos, de 2 a 12 horas, cada um focado em um desafio do dia a dia. Faça uma ou tenha todas na Membership.</p>
     </div>
+    <div class="fx-chips" id="fx-chips" role="group" aria-label="Filtrar por vertical"></div>
+    <div class="f-grid" id="fx-grid" data-nota="44 sprints do catálogo consolidado (jul/2026), com capas geradas no Magnific (pessoas fictícias). O marketing diz '+40' e o sitemap tem 48 páginas: alinhar a lista oficial antes da migração."></div>
   </div>
 </section>
 
-<!-- 5 · CERTIFICADO -->
+<!-- 3 · CERTIFICADO -->
 <section class="cx-sec on-dark" aria-labelledby="ce-t">
   <div class="cx-hero cx-sprint" data-nota="Mockup gerado no Magnific a partir do certificado real das Sprints (QR code e código de validação removidos).">
     <div class="wrap">
@@ -109,21 +106,11 @@
     </div>
   </div>
 </section>
-<!-- 6 · CTA FINAL -->
-<section class="final grain on-dark" aria-labelledby="fn-t">
-  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="wrap">
-    <p class="kicker" style="justify-content:center">Por onde começar</p>
-    <h2 class="display" id="fn-t">Comece pelos<br>fundamentos.</h2>
-    <p>12 horas para entender como produtos digitais são feitos, do problema ao roadmap.</p>
-    <div class="btns"><a class="btn btn-light" href="sprint-fundamentos-gestao-produtos.html">Sprint Fundamentos</a><a class="btn btn-line" href="cursos.html">Catálogo completo</a></div>
-  </div>
-</section>
 
 </main>
 
 <script src="assets/js/catalogo.js?v=T3"></script>
-<script src="assets/js/vitrines.js?v=T9"></script>
+<script src="assets/js/vitrines.js?v=T10"></script>
 <script src="assets/js/layout.js?v=23"></script>
 <script src="assets/js/hero-card.js?v=1"></script>
 </body>

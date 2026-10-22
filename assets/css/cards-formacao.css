@@ -50,3 +50,6 @@
 .f-grid .f-facts li{font-size:12px;padding:4px 8px;gap:5px}
 .f-grid .f-card .tag{font-size:10.5px;padding:4px 9px;white-space:nowrap}
 .f-grid .f-facts .fc-cert{display:none}
+.f-more.f-more-full{grid-column:1/-1;flex-direction:row;align-items:flex-end}
+.f-more.f-more-full > div:first-child{flex:1}
+@media (max-width:860px){ .f-more.f-more-full{flex-direction:column;align-items:stretch} }

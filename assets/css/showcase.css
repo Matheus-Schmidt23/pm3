@@ -274,4 +274,9 @@
 .cx-levels i{display:inline-flex;align-self:flex-start;font-style:normal;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-pill);padding:5px 11px;margin-bottom:16px}
 .cx-levels div{display:flex;flex-direction:column;padding-top:24px}
 @media (max-width:1080px){ .cx-levels{grid-template-columns:1fr} .cx-levels div + div{padding-left:0;border-left:0} }
-.cx-hero.cx-sprint::before{background-image:url('../img/certificado-sprint-veludo.jpg');right:4%}
+.cx-hero.cx-sprint::before{background-image:url('../img/certificado-sprint-veludo.jpg?v=2')}
+/* o mockup (recortado no certificado) fica sempre à direita da coluna de texto: nunca passa por baixo dele */
+@media (min-width:861px){
+  .cx-hero::before{top:4%;bottom:4%;right:0;left:max(48%,calc(max(var(--gutter),(100% - var(--wrap)) / 2) + 640px));aspect-ratio:auto;background-image:url('../img/certificado-veludo-crop.jpg?v=2');background-size:contain;background-position:right center;-webkit-mask-image:none;mask-image:none}
+  .cx-hero.cx-sprint::before{background-image:url('../img/certificado-sprint-veludo-crop.jpg?v=2')}
+}

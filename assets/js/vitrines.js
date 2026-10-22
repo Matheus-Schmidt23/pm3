@@ -43,25 +43,33 @@
 
   /* ---------- /sprints/ ---------- */
   if (PAGE === 'sprints'){
+    /* catálogo: um card por sprint (mesmo card de Formações), filtrável por vertical */
     const ordem = ['gestao','dados','design','marketing','negocios','lideranca'];
-    const intro = {
-      gestao: 'Roadmap, PRD, pesquisa e operações de produto.', dados: 'SQL, Python, BI, métricas e experimentos.',
-      design: 'Design thinking, serviço e interface.', marketing: 'Growth, go-to-market e aquisição.',
-      negocios: 'OKRs, ágil e processos.', lideranca: 'Comunicação, feedback, negociação e gestão de pessoas.'
+    const nomeA = a => a === 'lideranca' ? 'Liderança' : AREAS[a].curto;
+    const CAPAS = ['fundamentos-gestao-produtos','roadmap-priorizacao','tecnicas-pesquisa','tecnologia-pms','prd','product-ops-fundamentos','product-ops-avancado','metodos-analise-dados','power-bi','excel','metricas-negocios','python','visualizacao-dashboards','teste-ab','sql','lgpd','problem-solving','vieses-analises','design-thinking','design-servico','ui-design','go-to-market','product-growth','product-marketing','aquisicao','sales-enablement','okrs','metodologias-ageis','gestao-processos','educacao-corporativa','negociacao-lideres','comunicacao-assertiva','apresentacao-slides','diversidade-inclusao','trabalho-remoto','gestao-tempo','lideranca-equipe','saude-mental','delegacao','feedback','ie-lideres','ie-trabalho','oratoria','tecnicas-negociacao'];
+    SPRINTS.forEach((s, i) => { s.capa = CAPAS[i]; });
+    const ic = {
+      h: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>',
+      cert: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.2" r="4.2"/><path d="m5.6 9.6-1.1 4.8L8 12.8l3.5 1.6-1.1-4.8"/></svg>',
+      go: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg>'
     };
-    const grupos = ordem.map(a => ({ a, ss: SPRINTS.filter(s => s.area === a) }));
-    $('#vnav').innerHTML = grupos.map(g => `<a href="#${g.a}">${AREAS[g.a].nome}<small>${g.ss.length}</small></a>`).join('');
-    $('#verts').innerHTML = grupos.map(g => {
-      const tot = g.ss.reduce((t, s) => t + s.h, 0);
-      return `<section class="vert" id="${g.a}" aria-labelledby="t-${g.a}">
-        <div class="vert-head"><span class="n">${String(g.ss.length).padStart(2,'0')}</span><div><h2 id="t-${g.a}">${AREAS[g.a].nome}</h2><p>${intro[g.a]}</p></div><div class="tot"><b>${tot}h</b>de conteúdo na vertical</div></div>
-        <div class="slist">${g.ss.map(s => `<a class="srow${s.url !== '#' ? ' hot' : ''}" href="${s.url}"><b>${s.nome}</b><span>${s.obj}</span><em class="hh" style="font-style:normal">${s.h}h</em></a>`).join('')}</div>
-      </section>`;
-    }).join('');
-    const links = [...document.querySelectorAll('#vnav a')], secs = links.map(l => $(l.getAttribute('href')));
-    const marca = () => { let cur = null; secs.forEach(s => { if (s.getBoundingClientRect().top < 200) cur = s.id; });
-      links.forEach(l => l.classList.toggle('on', l.getAttribute('href') === '#' + cur)); };
-    addEventListener('scroll', marca, { passive: true }); marca();
+    const lista = ordem.flatMap(a => SPRINTS.filter(s => s.area === a));
+    $('#fx-chips').innerHTML = `<button type="button" class="on" data-f="">Todas <small>${lista.length}</small></button>` +
+      ordem.map(a => `<button type="button" data-f="${a}">${nomeA(a)} <small>${SPRINTS.filter(s => s.area === a).length}</small></button>`).join('');
+    $('#fx-grid').innerHTML = lista.map((s, i) => `<a class="f-card reveal${s.url !== '#' ? ' feature' : ''}" data-a="${s.area}" data-d="${i % 4}" href="${s.url}">
+      <div class="f-vis" style="background-image:url('assets/capas/sprints/${s.capa}.jpg')" aria-hidden="true"></div>
+      <div class="f-body"><div class="top"><span class="tag tag-area">${nomeA(s.area)}</span>${s.url !== '#' ? '<span class="tag tag-yellow">Comece aqui</span>' : ''}</div>
+        <h3>${s.nome}</h3><p>${s.obj}</p>
+        <ul class="f-facts"><li>${ic.h}${s.h}h</li><li>${ic.cert}Certificado</li></ul>
+        <div class="meta"><span>Ver sprint</span><span class="go">${ic.go}</span></div></div></a>`).join('') +
+      `<a class="f-more f-more-full reveal" href="membership.html"><div><small>Membership PM3</small><h3>Todas as sprints<span class="em">e as 10 formações.</span></h3>
+        <p>12 meses de acesso às +40 sprints, às 10 formações, mentorias, workshops ao vivo e comunidade.</p></div>
+        <div class="row"><div class="pr"><b>12x R$ 299,91</b><span>ou R$ 3.599 à vista</span></div><span class="btn btn-light">Conhecer a Membership ${ic.go}</span></div></a>`;
+    const filtra = a => {
+      document.querySelectorAll('#fx-chips button').forEach(b => b.classList.toggle('on', b.dataset.f === a));
+      document.querySelectorAll('#fx-grid .f-card').forEach(c => c.hidden = !!a && c.dataset.a !== a);
+    };
+    $('#fx-chips').addEventListener('click', e => { const b = e.target.closest('button'); if (b) filtra(b.dataset.f); });
   }
 
   /* ---------- /cursos/ ---------- */
