@@ -12,26 +12,39 @@
 /* hero em cards, no mesmo sistema da Membership e da Pós Tech: texto, foto, número e atalhos */
 /* --livre e --s vêm do layout.js: o grid ocupa a primeira dobra e, se faltar altura, os tamanhos encolhem juntos */
 .h-hero{position:relative;background:#000;color:#fff;padding:12px}
-.h-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);grid-template-rows:1fr auto auto;gap:12px;min-height:calc(var(--livre,0px) - 24px)}
-.h-main{grid-row:1/3;position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-xl) 0 0 0;background:#0B0713;padding:calc(clamp(28px,4.4vw,64px) * var(--s,1));display:flex;flex-direction:column;justify-content:flex-end}
+.h-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);grid-template-rows:1fr;gap:12px;min-height:calc(var(--livre,0px) - 24px)}
+.h-main{grid-row:1;position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-xl) 0 0 var(--r-xl);background:#0B0713;padding:calc(clamp(28px,4.4vw,64px) * var(--s,1));display:flex;flex-direction:column;justify-content:space-between;gap:calc(36px * var(--s,1))}
 .h-hero .glow{position:absolute;z-index:-1;width:900px;height:900px;left:var(--gx,70%);top:var(--gy,30%);transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(176,77,221,.34),rgba(77,43,159,.18) 38%,transparent 66%);pointer-events:none;transition:left .9s cubic-bezier(.2,.7,.2,1),top .9s cubic-bezier(.2,.7,.2,1)}
 .h-main.grain::after{z-index:-1;opacity:.25}
-.h-hero h1{font-size:calc(clamp(52px,6.4vw,92px) * var(--s,1));line-height:.88;margin-top:calc(18px * var(--s,1))}
+.h-main .aurora{inset:-30% -25% -40% 35%;opacity:.6}
+.h-main .three{position:absolute;right:-3%;top:-12%;width:min(40%,480px);z-index:-1;opacity:.4;pointer-events:none}
+.h-main .three path{fill:none;stroke:rgba(255,255,255,.6);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.h-hero h1{font-size:calc(clamp(56px,7.2vw,124px) * var(--s,1));line-height:.88;margin-top:calc(18px * var(--s,1))}
 .h-hero h1 .l2{color:var(--gray-fog)}
 .h-hero h1 .em{display:block;font-size:.34em;line-height:1.1;margin-top:.22em;color:#fff;letter-spacing:-.01em}
 .h-hero .lead{margin:calc(22px * var(--s,1)) 0 0;max-width:52ch;font-size:calc(clamp(17px,1.5vw,20px) * max(var(--s,1),.85))}
-.h-pic{grid-column:2;grid-row:1;position:relative;overflow:hidden;border-radius:0 var(--r-xl) 0 0;background:#c99be6;min-height:calc(240px * var(--s,1))}
-.h-pic .ph{position:absolute;inset:0;background:50% 40%/cover no-repeat;opacity:0;transition:opacity 1.4s ease;animation:kb 18s ease-in-out infinite alternate;will-change:transform}
+.h-pic{grid-column:2;grid-row:1;position:relative;overflow:hidden;border-radius:0 var(--r-xl) var(--r-xl) 0;background:#c99be6;min-height:calc(240px * var(--s,1))}
+.h-pic .ph{position:absolute;inset:0;background:50% 30%/cover no-repeat;opacity:0;transition:opacity 1.4s ease;animation:kb 18s ease-in-out infinite alternate;will-change:transform}
 .h-pic .ph:nth-child(3n+2){transform-origin:30% 25%;animation-delay:-6s}
 .h-pic .ph:nth-child(3n+3){transform-origin:70% 35%;animation-delay:-12s}
 @keyframes kb{from{transform:scale(1) translate(0,0)}to{transform:scale(1.1) translate(-1.5%,-1%)}}
 .h-pic .ph.on{opacity:1}
 @media (prefers-reduced-motion:reduce){.h-pic .ph{transition:opacity .4s;animation:none}}
 .h-pic .tag{position:absolute;left:18px;bottom:18px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;z-index:1}
-.h-tile{grid-column:2;grid-row:2;position:relative;overflow:hidden;background:var(--grad-lilac);color:#000;padding:calc(clamp(22px,2.6vw,36px) * var(--s,1));display:flex;flex-direction:column;justify-content:flex-end}
-.h-tile b{display:block;font-family:var(--display);font-weight:800;font-size:calc(clamp(48px,4.6vw,72px) * var(--s,1));letter-spacing:-.045em;line-height:.9}
-.h-tile small{display:block;font-family:var(--display);font-weight:600;font-size:14.5px;margin-top:8px;color:#2a1d3d}
-.h-routes{grid-column:1/3;grid-row:3;background:#0B0713;border-radius:0 0 var(--r-xl) var(--r-xl);padding:calc(22px * var(--s,1)) clamp(28px,4.4vw,64px) 0}
+.h-pic .badge{position:absolute;right:0;bottom:0;z-index:1;background:#0B0713;color:#fff;padding:calc(20px * var(--s,1)) calc(26px * var(--s,1)) calc(14px * var(--s,1));border-radius:var(--r-xl) 0 0 0;font-family:var(--display)}
+.h-pic .badge b{display:block;font-weight:800;font-size:calc(clamp(40px,4vw,60px) * var(--s,1));letter-spacing:-.045em;line-height:1}
+.h-pic .badge span{font-size:13.5px;color:var(--gray-fog)}
+.h-routes{margin:0}
+.intent.h-routes > p{padding-left:0}
+/* atalhos dentro do card: lista em 2 colunas, uma linha por objetivo */
+.intent.h-routes ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(20px,2.4vw,40px);border-top:0}
+.intent.h-routes li,.intent.h-routes li:first-child{border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+.intent.h-routes a{min-height:0;flex-direction:column;justify-content:center;gap:3px;padding:calc(14px * var(--s,1)) 40px calc(14px * var(--s,1)) 0}
+.intent.h-routes a:hover{background:none}
+.intent.h-routes .q{font-size:calc(clamp(17px,1.35vw,22px) * max(var(--s,1),.9))}
+.intent.h-routes .to{font-size:13px}
+.intent.h-routes .to svg{position:absolute;right:6px;top:50%;transform:translateY(-50%)}
+.intent.h-routes a:hover .to svg{transform:translate(4px,-50%)}
 
 /* seletor de intenção: a home como roteador */
 .intent{margin-top:0}
@@ -196,11 +209,12 @@
 }
 @media (max-width:860px){
   .h-grid{grid-template-columns:1fr;grid-template-rows:none;min-height:0}
-  .h-main,.h-pic,.h-tile,.h-routes{grid-column:auto;grid-row:auto}
+  .h-main,.h-pic{grid-column:auto;grid-row:auto}
+  .intent.h-routes ul{grid-template-columns:1fr}
   .h-main{border-radius:var(--r-xl) var(--r-xl) 0 0}
-  .h-routes{padding:8px 24px 0}
-  .h-pic{aspect-ratio:3/2;border-radius:0}
-  .h-pic .ph{background-position:50% 40%}
+  .h-pic{border-radius:0 0 var(--r-xl) var(--r-xl)}
+  .h-pic{aspect-ratio:4/5}
+  .h-pic .ph{background-position:50% 30%}
   .shift{grid-template-columns:1fr 1fr}
   .shift .lb{grid-column:1/3;padding:18px 0 6px;border-bottom:0}
   .shift .hd.lbh{display:none}
@@ -215,7 +229,7 @@
   .camp .wrap{justify-content:flex-start;text-align:left;gap:10px;flex-wrap:nowrap}
   .camp .wrap > span{display:none}
   .h-hero h1{font-size:58px}
-  .h-pic{aspect-ratio:3/2}
+  .h-pic{aspect-ratio:4/5}
   .intent ul{grid-template-columns:1fr}
   .intent li{border-left:0;border-top:1px solid rgba(255,255,255,.14)}
   .intent li:first-child{border-top:0}
