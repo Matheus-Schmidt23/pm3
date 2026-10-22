@@ -12,21 +12,27 @@
   /* ---------- /formacoes/ ---------- */
   if (PAGE === 'formacoes'){
     const ordem = ['gestao','ia','dados','marketing','design','lideranca'];
-    const intro = {
-      gestao: 'A base de quem trabalha com produto.', ia: 'Da estratégia à construção com IA.',
-      dados: 'Decidir com evidência.', marketing: 'A ponte entre produto e mercado.',
-      design: 'Da pesquisa à interface.', lideranca: 'Para quem lidera pessoas e decisões.'
+    /* catálogo: um card de venda por formação, filtrável por área */
+    const nomeA = a => a === 'gestao' ? AREAS[a].nome : AREAS[a].curto;
+    const lista = ordem.flatMap(a => FORMACOES.filter(f => f.area === a));
+    const check = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3.5 8.5 3 3 6-7"/></svg>';
+    $('#fx-chips').innerHTML = `<button type="button" class="on" data-f="">Todas <small>${lista.length}</small></button>` +
+      ordem.map(a => `<button type="button" data-f="${a}">${nomeA(a)} <small>${FORMACOES.filter(f => f.area === a).length}</small></button>`).join('');
+    $('#fx-grid').innerHTML = lista.map((f, i) => `<a class="fx reveal" data-a="${f.area}" data-d="${i % 2}" href="${f.url}">
+      <div class="fx-vis" style="background-image:url('assets/capas/${f.capa}-800.jpg?v=3')"><span class="tag">${nomeA(f.area)}</span>${f.destaque ? `<span class="tag tag-yellow">${f.destaque}</span>` : ''}</div>
+      <div class="fx-body">
+        <span class="fx-lvl">${lvl(f.nivel)}${f.nivel}</span>
+        <h3>${f.nome}</h3>
+        <p>${f.quem}</p>
+        <ul class="fx-learn">${f.aprende.map(t => `<li>${check}${t}</li>`).join('')}</ul>
+        <div class="fx-foot"><span class="fx-facts"><b>${f.h ? f.h + 'h' : f.mod + ' módulos'}</b>${f.h ? ` · ${f.mod} módulos` : ''} · Certificado</span><span class="fx-go">Ver formação${arrow}</span></div>
+      </div></a>`).join('');
+    const filtra = a => {
+      document.querySelectorAll('#fx-chips button').forEach(b => b.classList.toggle('on', b.dataset.f === a));
+      document.querySelectorAll('#fx-grid .fx').forEach(c => c.hidden = !!a && c.dataset.a !== a);
     };
-    $('#areas').innerHTML = ordem.map(a => {
-      const fs = FORMACOES.filter(f => f.area === a);
-      if (!fs.length) return '';
-      return `<div class="area-block" id="${a}">
-        <div class="area-lbl"><span class="n">${String(fs.length).padStart(2,'0')}</span><h2>${AREAS[a].nome}</h2><p>${intro[a]}</p></div>
-        <div>${fs.map(f => `<a class="frow reveal" href="${f.url}">
-          <div><h3>${f.nome}${f.destaque ? ` <span class="tag tag-yellow">${f.destaque}</span>` : ''}</h3><p>${f.quem}</p>
-          <div class="meta"><span>${f.h ? `<b>${f.h}h</b> de conteúdo` : `Carga a confirmar`}</span><span><b>${f.mod}</b> módulos</span><span>${lvl(f.nivel)}${f.nivel}</span><span>Inclusa na Membership</span></div></div>
-          <span class="go">${arrow}</span></a>`).join('')}</div></div>`;
-    }).join('');
+    $('#fx-chips').addEventListener('click', e => { const b = e.target.closest('button'); if (b) filtra(b.dataset.f); });
+    document.querySelectorAll('[data-filtro]').forEach(l => l.addEventListener('click', () => filtra(l.dataset.filtro)));
     const max = Math.max(...FORMACOES.map(f => f.h || 0));
     $('#cmp tbody').innerHTML = FORMACOES.map(f => `<tr>
       <td><a href="${f.url}">${f.nome}</a></td><td>${AREAS[f.area].curto}</td>

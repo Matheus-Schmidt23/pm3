@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=18">
 <link rel="stylesheet" href="assets/css/components.css?v=4">
-<link rel="stylesheet" href="assets/css/showcase.css?v=6">
+<link rel="stylesheet" href="assets/css/showcase.css?v=7">
 <link rel="stylesheet" href="assets/css/hero-card.css?v=1">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -45,12 +45,12 @@
       <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
       <div>
         <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Formações</li></ol>
-        <h1 class="display" id="h1">Dez<br>formações.<br><span class="l2">Ponta a<br class="br-m"> ponta.</span><span class="em">Do primeiro cargo à liderança.</span></h1>
-        <p class="lead">Cursos completos de 21 a 79 horas, com módulos em sequência, projeto prático e certificado. Cada formação cobre uma área, com IA aplicada em todo o caminho.</p>
+        <h1 class="display" id="h1">Torne-se<br>referência<br><span class="l2">em produto.</span><span class="em">Com certificado PM3.</span></h1>
+        <p class="lead">Dez formações completas, com projeto prático e certificado, ensinadas por quem faz produto todo dia. Escolha a sua área e avance do primeiro cargo à liderança, com IA aplicada em todo o caminho.</p>
       </div>
       <div>
         <nav class="v-jump" aria-label="Ir para a área">
-          <a href="#gestao">Gestão de produtos <small>2</small></a><a href="#ia">IA <small>2</small></a><a href="#dados">Dados <small>2</small></a><a href="#marketing">Marketing <small>2</small></a><a href="#design">Design <small>1</small></a><a href="#lideranca">Liderança <small>1</small></a>
+          <a href="#catalogo" data-filtro="gestao">Gestão de produtos <small>2</small></a><a href="#catalogo" data-filtro="ia">IA <small>2</small></a><a href="#catalogo" data-filtro="dados">Dados <small>2</small></a><a href="#catalogo" data-filtro="marketing">Marketing <small>2</small></a><a href="#catalogo" data-filtro="design">Design <small>1</small></a><a href="#catalogo" data-filtro="lideranca">Liderança <small>1</small></a>
         </nav>
         <div class="m-safe">
           <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg> 21 a 79 horas</span>
@@ -68,11 +68,22 @@
   </div>
 </section>
 
-<!-- 2 · ESCOLHA GUIADA -->
+<!-- 3 · CATÁLOGO -->
+<section class="section tex" id="catalogo" aria-labelledby="ar-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker"><span class="n">02</span> Catálogo</p><h2 class="h2" id="ar-t">Escolha a<br><span class="c2">sua formação</span></h2></div>
+      <p class="lead">Dez formações completas, cada uma com módulos em sequência, projeto prático e certificado. Faça uma ou tenha todas na Membership.</p>
+    </div>
+    <div class="fx-chips" id="fx-chips" role="group" aria-label="Filtrar por área"></div>
+    <div class="fx-grid" id="fx-grid" data-nota="Cards gerados da mesma fonte de dados do catálogo e das páginas de curso (regra 1 de governança: página nasce de modelo). Tópicos de cada card: módulos da ementa oficial (00. DADOS PM3/Catálogo de cursos)."></div>
+  </div>
+</section>
+<!-- 4 · ESCOLHA GUIADA -->
 <section class="section white" aria-labelledby="pk-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">01</span> Por onde começar</p><h2 class="h2" id="pk-t">Qual o seu<br><span class="c2">objetivo?</span></h2></div>
+      <div><p class="kicker"><span class="n">03</span> Por onde começar</p><h2 class="h2" id="pk-t">Qual o seu<br><span class="c2">objetivo?</span></h2></div>
       <p class="lead">Escolha pelo objetivo. Cada opção indica a formação que a PM3 recomenda como ponto de partida.</p>
     </div>
     <div class="pick">
@@ -84,22 +95,11 @@
   </div>
 </section>
 
-<!-- 3 · FORMAÇÕES POR ÁREA -->
-<section class="section tex" aria-labelledby="ar-t">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><p class="kicker"><span class="n">02</span> Todas as formações</p><h2 class="h2" id="ar-t">Por área<br><span class="c2">de atuação</span></h2></div>
-      <p class="lead">Seis áreas: produto, IA, dados, marketing, design e liderança. Cada formação mostra carga, módulos e nível.</p>
-    </div>
-    <div id="areas" data-nota="Lista gerada da mesma fonte de dados do catálogo e das páginas de curso (regra 1 de governança: página nasce de modelo). Horas e módulos da página da Membership."></div>
-  </div>
-</section>
-
 <!-- 4 · COMPARADOR -->
 <section class="section white" aria-labelledby="cp-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">03</span> Compare</p><h2 class="h2" id="cp-t">Lado<br><span class="c2">a lado</span></h2></div>
+      <div><p class="kicker"><span class="n">04</span> Compare</p><h2 class="h2" id="cp-t">Lado<br><span class="c2">a lado</span></h2></div>
       <p class="lead">Carga, módulos, nível e público de cada formação, em uma única tabela.</p>
     </div>
     <div class="cmp-wrap reveal" data-nota="Tabela em HTML real: responde perguntas como 'qual formação tem mais horas' direto no Google e nas IAs. Nível é proposta para validar com o time pedagógico.">
@@ -134,8 +134,8 @@
 
 </main>
 
-<script src="assets/js/catalogo.js?v=T2"></script>
-<script src="assets/js/vitrines.js?v=T2"></script>
+<script src="assets/js/catalogo.js?v=T3"></script>
+<script src="assets/js/vitrines.js?v=T4"></script>
 <script src="assets/js/layout.js?v=22"></script>
 <script src="assets/js/hero-card.js?v=1"></script>
 </body>

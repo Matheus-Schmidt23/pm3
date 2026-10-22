@@ -14,25 +14,25 @@ window.PM3_CATALOGO = (function(){
 
   /* formações: horas e módulos da página atual da Membership */
   const FORMACOES = [
-    { nome: 'Product Manager', area: 'gestao', h: 37, mod: 6, nivel: 'Base', url: 'formacao-product-manager.html', destaque: 'Comece aqui',
+    { nome: 'Product Manager', area: 'gestao', h: 37, mod: 6, nivel: 'Base', capa: 'product-manager', aprende: ['Product Market Fit','Discovery na era da IA','Dados e analytics'], url: 'formacao-product-manager.html', destaque: 'Comece aqui',
       quem: 'Para quem está entrando em produto ou quer consolidar estratégia, discovery e execução.' },
-    { nome: 'Product Discovery', area: 'gestao', h: 26, mod: 5, nivel: 'Intermediário', url: '#',
+    { nome: 'Product Discovery', area: 'gestao', h: 26, mod: 5, nivel: 'Intermediário', capa: 'product-discovery', aprende: ['Problemas e oportunidades','Desenho e teste de soluções','Discovery contínuo'], url: '#',
       quem: 'Para validar hipóteses e reduzir o risco de produto antes de construir.' },
-    { nome: 'Product Leadership', area: 'lideranca', h: 29, mod: 5, nivel: 'Avançado', url: '#',
+    { nome: 'Product Leadership', area: 'lideranca', h: 29, mod: 5, nivel: 'Avançado', capa: 'product-leadership', aprende: ['Visão e estratégia','Gestão de pessoas','Estratégia de portfólio'], url: '#',
       quem: 'Para PMs plenos e sêniores que assumem pessoas e decisões de alto nível.' },
-    { nome: 'AI Product Builder', area: 'ia', h: null, mod: 6, nivel: 'Intermediário', url: '#', destaque: 'IA na prática',
+    { nome: 'AI Product Builder', area: 'ia', h: null, mod: 6, nivel: 'Intermediário', capa: 'ai-product-builder', aprende: ['Automações com n8n','Agentes com Claude Code','Aplicações com Lovable'], url: '#', destaque: 'IA na prática',
       quem: 'Para ir além do uso de IA e construir automações, agentes e aplicações.' },
-    { nome: 'AI Product Specialist', area: 'ia', h: 40, mod: 5, nivel: 'Intermediário', url: '#',
+    { nome: 'AI Product Specialist', area: 'ia', h: 40, mod: 5, nivel: 'Intermediário', capa: 'ai-product-specialist', aprende: ['Base técnica de IA','IA aplicada ao produto','Confiabilidade e segurança'], url: '#',
       quem: 'Para aplicar IA de forma estratégica na construção e priorização de produto.' },
-    { nome: 'Product Analytics', area: 'dados', h: 21, mod: 6, nivel: 'Intermediário', url: '#',
+    { nome: 'Product Analytics', area: 'dados', h: 21, mod: 6, nivel: 'Intermediário', capa: 'product-analytics', aprende: ['Métricas de produto','Experimentos e testes','Dados para stakeholders'], url: '#',
       quem: 'Para usar dados com segurança: métricas certas, experimentos e stakeholders.' },
-    { nome: 'Analista de Dados', area: 'dados', h: 74, mod: 6, nivel: 'Base', url: '#',
+    { nome: 'Analista de Dados', area: 'dados', h: 74, mod: 6, nivel: 'Base', capa: 'analista-de-dados', aprende: ['Arquitetura e governança','Estatística aplicada','Visualização de dados'], url: '#',
       quem: 'Para migrar para dados ou estruturar a base técnica de análise.' },
-    { nome: 'Product Growth', area: 'marketing', h: 44, mod: 7, nivel: 'Intermediário', url: '#',
+    { nome: 'Product Growth', area: 'marketing', h: 44, mod: 7, nivel: 'Intermediário', capa: 'product-growth', aprende: ['Aquisição e ativação','Retenção e recomendação','Monetização'], url: '#',
       quem: 'Para dominar aquisição, ativação, retenção, recomendação e monetização.' },
-    { nome: 'Product Marketing', area: 'marketing', h: 36, mod: 5, nivel: 'Intermediário', url: '#',
+    { nome: 'Product Marketing', area: 'marketing', h: 36, mod: 5, nivel: 'Intermediário', capa: 'product-marketing', aprende: ['Inteligência de mercado','Posicionamento','Pricing e go-to-market'], url: '#',
       quem: 'Para especializar-se em posicionamento e go-to-market na interface com produto.' },
-    { nome: 'Product Design', area: 'design', h: 79, mod: 6, nivel: 'Intermediário', url: '#',
+    { nome: 'Product Design', area: 'design', h: 79, mod: 6, nivel: 'Intermediário', capa: 'product-design', aprende: ['Design estratégico','Pesquisa e enquadramento','Interfaces e validação'], url: '#',
       quem: 'Para designers e PMs que precisam dominar o processo de design, da pesquisa à interface.' }
   ];
 
