@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="assets/css/base.css?v=18">
 <link rel="stylesheet" href="assets/css/components.css?v=4">
 <link rel="stylesheet" href="assets/css/showcase.css?v=5">
+<link rel="stylesheet" href="assets/css/hero-card.css?v=1">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -32,21 +33,34 @@
 <main>
 
 <!-- 1 · HERO -->
-<section class="v-hero dark grain on-dark" aria-labelledby="h1">
-  <div class="wrap">
-    <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Sprints</li></ol>
-    <div class="v-hero-grid">
+<section class="m-hero on-dark" aria-labelledby="h1">
+  <div class="m-hero-grid">
+    <div class="m-main grain">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
       <div>
-        <p class="kicker">PM3 Sprints</p>
-        <h1 class="display" id="h1">Sprints<br><span class="c2">direto<br>ao ponto.</span><span class="em">Um desafio do dia a dia, resolvido em horas.</span></h1>
-        <p class="lead">Cursos curtos, de 2 a 12 horas, cada um focado em um desafio específico: de SQL a feedback, de roadmap a OKRs.</p>
-        <div class="v-jump" aria-hidden="true" style="pointer-events:none">
-          <a><span>44 sprints</span></a><a><span>6 verticais</span></a><a><span>Todas na Membership</span></a>
+        <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Sprints</li></ol>
+        <h1 class="display" id="h1">Sprints<br>direto<br><span class="l2">ao ponto.</span><span class="em">Resolvido em horas.</span></h1>
+        <p class="lead">Cursos curtos, de 2 a 12 horas, cada um focado em um desafio específico do dia a dia: de SQL a feedback, de roadmap a OKRs.</p>
+      </div>
+      <div>
+        <div class="m-buy">
+          <div class="btns">
+            <a class="btn btn-light" href="#vnav">Ver as sprints <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+            <a class="btn btn-line" href="membership.html">Conhecer a Membership</a>
+          </div>
+        </div>
+        <div class="m-safe">
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg> 44 sprints</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2.5" width="12" height="11" rx="2"/><path d="M5 6h6M5 9h4"/></svg> 6 verticais</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 1.5 3 9h4.5L7 14.5 13 7H8.5z"/></svg> Todas na Membership</span>
         </div>
       </div>
-      <div class="v-pic" style="background-image:url('assets/img/foto-sofa-loira.jpg')" role="img" aria-label="Profissional estudando no sofá">
-        <div class="chip-stat"><b>2 a 12h</b><span>por sprint, no seu ritmo</span></div>
-      </div>
+    </div>
+    <div class="m-photo" style="background-image:url('assets/img/foto-sofa-loira.jpg')" role="img" aria-label="Profissional estudando no sofá"><span class="tag">No seu ritmo</span></div>
+    <div class="m-tile">
+      <span class="ic ic-tl" style="left:0;top:0;--c:#000;--r:40px" aria-hidden="true"></span>
+      <div class="big">2 a 12h<small>por sprint,<br>no seu ritmo</small></div>
+      <p>Um desafio específico por curso, para aplicar no trabalho na mesma semana.</p>
     </div>
   </div>
 </section>
@@ -83,5 +97,6 @@
 <script src="assets/js/catalogo.js?v=T2"></script>
 <script src="assets/js/vitrines.js?v=T2"></script>
 <script src="assets/js/layout.js?v=22"></script>
+<script src="assets/js/hero-card.js?v=1"></script>
 </body>
 </html>

@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="assets/css/base.css?v=18">
 <link rel="stylesheet" href="assets/css/components.css?v=4">
 <link rel="stylesheet" href="assets/css/showcase.css?v=5">
+<link rel="stylesheet" href="assets/css/hero-card.css?v=1">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -38,21 +39,31 @@
 <main>
 
 <!-- 1 · HERO -->
-<section class="v-hero" aria-labelledby="h1">
-  <div class="wrap">
-    <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Formações</li></ol>
-    <div class="v-hero-grid">
+<section class="m-hero on-dark" aria-labelledby="h1">
+  <div class="m-hero-grid">
+    <div class="m-main grain" data-nota="Página nova: hoje não existe uma vitrine de formações, só o catálogo /cursos/ com 8 páginas de filtro. Aqui as formações têm contexto e links internos fortes. Hero no mesmo sistema de cards da Membership.">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
       <div>
-        <p class="kicker">Formações PM3</p>
-        <h1 class="display" id="h1">Dez<br><span class="c2">formações.</span><span class="em">Do primeiro cargo à liderança, com IA em todo o caminho.</span></h1>
-        <p class="lead">Cursos completos de 21 a 79 horas, com módulos em sequência, projeto prático e certificado. Cada formação cobre uma área de ponta a ponta.</p>
-        <nav class="v-jump" aria-label="Ir para a área" data-nota="Página nova: hoje não existe uma vitrine de formações, só o catálogo /cursos/ com 8 páginas de filtro. Aqui as formações têm contexto e links internos fortes.">
+        <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Formações</li></ol>
+        <h1 class="display" id="h1">Dez<br>formações.<br><span class="l2">Ponta a<br class="br-m"> ponta.</span><span class="em">Do primeiro cargo à liderança.</span></h1>
+        <p class="lead">Cursos completos de 21 a 79 horas, com módulos em sequência, projeto prático e certificado. Cada formação cobre uma área, com IA aplicada em todo o caminho.</p>
+      </div>
+      <div>
+        <nav class="v-jump" aria-label="Ir para a área">
           <a href="#gestao">Gestão de produtos <small>2</small></a><a href="#ia">IA <small>2</small></a><a href="#dados">Dados <small>2</small></a><a href="#marketing">Marketing <small>2</small></a><a href="#design">Design <small>1</small></a><a href="#lideranca">Liderança <small>1</small></a>
         </nav>
+        <div class="m-safe">
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg> 21 a 79 horas</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2.5" width="12" height="11" rx="2"/><path d="M5 6h6M5 9h4"/></svg> Projeto prático</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="6" r="4"/><path d="m5.5 9.5-1 5 3.5-2 3.5 2-1-5"/></svg> Certificado</span>
+        </div>
       </div>
-      <div class="v-pic" style="background-image:url('assets/img/foto-fone-oculos.jpg')" role="img" aria-label="Profissional estudando com fones e notebook">
-        <div class="chip-stat"><b data-count="386" data-pre="+" data-suf="h">+386h</b><span>de conteúdo nas formações</span></div>
-      </div>
+    </div>
+    <div class="m-photo" style="background-image:url('assets/img/foto-fone-oculos.jpg')" role="img" aria-label="Profissional estudando com fones e notebook"><span class="tag">Do primeiro cargo à liderança</span></div>
+    <div class="m-tile">
+      <span class="ic ic-tl" style="left:0;top:0;--c:#000;--r:40px" aria-hidden="true"></span>
+      <div class="big">+386h<small>de conteúdo<br>nas formações</small></div>
+      <p>As dez formações também estão incluídas na Membership, com mais de 40 sprints.</p>
     </div>
   </div>
 </section>
@@ -126,5 +137,6 @@
 <script src="assets/js/catalogo.js?v=T2"></script>
 <script src="assets/js/vitrines.js?v=T2"></script>
 <script src="assets/js/layout.js?v=22"></script>
+<script src="assets/js/hero-card.js?v=1"></script>
 </body>
 </html>
