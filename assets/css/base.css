@@ -6,6 +6,8 @@
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:var(--body);font-size:17px;line-height:1.55;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 h1,h2,h3,h4{font-family:var(--display);margin:0;letter-spacing:-.025em;text-wrap:balance}
+/* sem viúvas: parágrafos, listas e legendas não terminam com uma palavra sozinha (títulos já usam balance) */
+p,li,dd,blockquote,figcaption,small,label,.lead{text-wrap:pretty}
 p{margin:0 0 1em}
 img,svg{display:block;max-width:100%}
 a{color:inherit}

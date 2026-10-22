@@ -194,3 +194,47 @@
   /* fechar a faixa de campanha libera espaço: recalcula */
   document.addEventListener('click', e => { if (e.target.closest('#camp button')) requestAnimationFrame(encaixa); });
 })();
+
+/* sem viúvas em todo o site: as últimas palavras de parágrafos, listas e legendas ficam juntas
+   (espaço não separável), então nenhuma linha final fica com uma ou duas palavras sozinhas.
+   Vale também para o que é desenhado depois (catálogo, FAQ), via MutationObserver. */
+(function(){
+  const SEL = 'p, li, dd, small, figcaption, blockquote, .lead, .to > span, .who span';
+  const NB = '\u00A0';
+  const cola = el => {
+    if (el.dataset.semViuva || el.closest('[contenteditable], pre, code, nav.site-nav')) return;
+    el.dataset.semViuva = '1';
+    const txt = el.textContent.trim();
+    if (txt.split(/\s+/).length < 6) return;
+    /* junta as 3 últimas palavras; se ficar longo demais para telas estreitas, junta só 2 */
+    const ult = txt.split(/\s+/).slice(-3);
+    const n = ult.join(' ').length <= 30 ? 2 : (ult.slice(-2).join(' ').length <= 22 ? 1 : 0);
+    if (!n) return;
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    const nos = []; let t; while ((t = walker.nextNode())) nos.push(t);
+    const orig = nos.map(x => x.data);
+    let falta = n;
+    for (let i = nos.length - 1; i >= 0 && falta > 0; i--){
+      const s = nos[i].data.replace(/\s+$/, '');
+      const fim = nos[i].data.slice(s.length);
+      let out = '';
+      for (let j = s.length - 1; j >= 0; j--){
+        if (falta > 0 && s[j] === ' ' && j > 0 && s[j - 1] !== ' '){ out = NB + out; falta--; }
+        else out = s[j] + out;
+      }
+      nos[i].data = out + fim;
+    }
+    /* se as palavras juntas não cabem na largura do bloco (ex.: colunas estreitas no celular), desfaz */
+    if (el.scrollWidth > el.clientWidth + 1 || document.documentElement.scrollWidth > innerWidth) nos.forEach((x, k) => { x.data = orig[k]; });
+  };
+  const roda = raiz => (raiz.querySelectorAll ? raiz.querySelectorAll(SEL) : []).forEach(cola);
+  const inicia = () => {
+    roda(document);
+    let pend = 0;
+    new MutationObserver(ms => {
+      cancelAnimationFrame(pend);
+      pend = requestAnimationFrame(() => ms.forEach(m => m.addedNodes.forEach(nd => { if (nd.nodeType === 1){ if (nd.matches(SEL)) cola(nd); roda(nd); } })));
+    }).observe(document.body, { childList: true, subtree: true });
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', inicia); else inicia();
+})();
