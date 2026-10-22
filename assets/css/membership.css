@@ -132,10 +132,10 @@
 .path::before{content:'';position:absolute;left:15px;right:calc(100% / var(--n,3) - 15px);top:15px;height:2px;background:linear-gradient(90deg,var(--yellow),rgba(255,255,255,.25))}
 .path li{position:relative;display:flex;flex-direction:column;gap:4px;padding-right:6px}
 .path .dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:14px;background:var(--purple-deep);color:#fff;border:2px solid rgba(255,255,255,.35);margin-bottom:10px;position:relative;z-index:1}
-.path li.k .dot{background:var(--yellow);color:#000;border-color:var(--yellow);box-shadow:0 0 0 6px rgba(255,177,42,.18)}
+.path li.k .dot{background:var(--yellow);color:#000;border-color:var(--yellow)}
 .path em{font-style:normal;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blaze-b)}
 .path li.k em{color:var(--yellow)}
-.path b{font-family:var(--display);font-weight:700;font-size:16px;line-height:1.25;color:#fff}
+.path b{font-family:var(--display);font-weight:700;font-size:15px;line-height:1.3;color:#fff;text-wrap:balance;max-width:20ch}
 /* fundo da seção: aurora em movimento, grão e o 3 em contorno */
 .trilhas-sec{overflow:hidden;isolation:isolate}
 .trilhas-sec .aurora{opacity:.55;inset:-30% -10% -30% 20%}
