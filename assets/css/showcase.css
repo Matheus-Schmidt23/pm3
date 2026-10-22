@@ -274,3 +274,4 @@
 .cx-levels i{display:inline-flex;align-self:flex-start;font-style:normal;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-pill);padding:5px 11px;margin-bottom:16px}
 .cx-levels div{display:flex;flex-direction:column;padding-top:24px}
 @media (max-width:1080px){ .cx-levels{grid-template-columns:1fr} .cx-levels div + div{padding-left:0;border-left:0} }
+.cx-hero.cx-sprint::before{background-image:url('../img/certificado-sprint-veludo.jpg');right:4%}
