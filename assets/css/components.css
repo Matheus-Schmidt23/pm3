@@ -43,3 +43,16 @@
 .section.tex{isolation:isolate;overflow:hidden}
 .section.tex::before{content:"";position:absolute;top:0;bottom:0;right:0;width:64%;z-index:-1;background:url("../tex/tex-dobras-lilas-hd.jpg") 30% center/cover;opacity:.3;-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%);mask-image:linear-gradient(90deg,transparent,#000 60%);pointer-events:none}
 @media (max-width:760px){ .section.tex::before{width:100%;opacity:.16} }
+
+/* ---------- filtros em pílula (site todo): contador em selo, sombra suave, estado ativo marcado ---------- */
+body :is(.chip,.fx-chips button,.v-jump a,.next .chips a){display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:14px;line-height:1;color:var(--ink);background:#fff;border:1px solid rgba(69,46,120,.14);border-radius:var(--r-pill);padding:7px 7px 7px 16px;box-shadow:0 1px 2px rgba(22,18,31,.05),inset 0 -1px 0 rgba(69,46,120,.06);cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s,background .2s,color .2s}
+body :is(.chip,.fx-chips button,.v-jump a,.next .chips a):not(:has(small)){padding:10px 18px}
+body :is(.chip,.fx-chips button,.v-jump a,.next .chips a) small{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 7px;margin:0;border-radius:var(--r-pill);background:#F1ECFA;color:var(--purple-royal);font-size:12px;font-weight:700;opacity:1;transition:background .2s,color .2s}
+body :is(.chip,.fx-chips button,.v-jump a,.next .chips a):hover{transform:translateY(-1px);border-color:rgba(102,69,177,.5);box-shadow:0 6px 16px -6px rgba(69,46,120,.35);color:var(--purple-deep)}
+body :is(.chip[aria-pressed="true"],.fx-chips button.on){background:linear-gradient(135deg,var(--purple-deep),var(--purple-royal));border-color:transparent;color:#fff;box-shadow:0 8px 18px -8px rgba(69,46,120,.7)}
+body :is(.chip[aria-pressed="true"],.fx-chips button.on) small{background:var(--yellow);color:#000}
+/* sobre fundo escuro */
+body .on-dark :is(.v-jump a,.chips a){background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.06);backdrop-filter:blur(6px)}
+body .on-dark :is(.v-jump a,.chips a) small{background:rgba(255,255,255,.12);color:var(--blaze-b)}
+body .on-dark :is(.v-jump a,.chips a):hover{background:#fff;color:var(--purple-deep);border-color:#fff}
+body .on-dark :is(.v-jump a,.chips a):hover small{background:#F1ECFA;color:var(--purple-royal)}
