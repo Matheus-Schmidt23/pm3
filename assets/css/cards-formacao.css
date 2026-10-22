@@ -1,0 +1,42 @@
+/* PM3 · card de formação (Membership e Formações) */
+.f-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s,border-color .3s,opacity .3s}
+.f-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent}
+.f-card.is-hidden{display:none}
+.f-vis{position:relative;height:172px;background-size:cover;background-position:center 32%;isolation:isolate;overflow:hidden}
+.f-vis::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,7,19,0) 45%,rgba(11,7,19,.55))}
+.f-body{flex:1;display:flex;flex-direction:column;gap:12px;padding:20px 24px 20px}
+.f-card .top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.f-card .tag-area{background:var(--lilac-soft,#ECE6F7);color:var(--purple-royal)}
+.f-card h3{font-size:23px;font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:-.02em}
+.f-card p{font-size:14.5px;color:#4a4458;margin:0}
+.f-facts{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.f-facts li{display:inline-flex;align-items:center;gap:6px;font-family:var(--display);font-weight:600;font-size:12.5px;color:#3b3450;background:#F4F2F8;border-radius:999px;padding:5px 10px}
+.f-facts svg{width:14px;height:14px;color:var(--purple-royal)}
+.f-card .meta{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--line);font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--purple-royal)}
+.f-card .go{width:36px;height:36px;border-radius:50%;background:var(--purple-royal);color:#fff;display:flex;align-items:center;justify-content:center;transition:transform .25s}
+.f-card .go svg{width:15px;height:15px}
+.f-card:hover .go{transform:rotate(-45deg)}
+.f-card.feature{background:var(--purple-deep);color:#fff;border:0}
+.f-card.feature p{color:var(--gray-fog)}
+.f-card.feature .tag-area{background:rgba(255,255,255,.14);color:#fff}
+.f-card.feature .f-facts li{background:rgba(255,255,255,.1);color:#fff}
+.f-card.feature .f-facts svg{color:var(--yellow)}
+.f-card.feature .meta{color:var(--yellow);border-color:rgba(255,255,255,.12)}
+.f-card.feature .go{background:var(--yellow);color:#000}
+.f-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.f-grid > .f-card[hidden]{display:none}
+@media (max-width:1080px){ .f-grid{grid-template-columns:1fr 1fr} }
+@media (max-width:600px){ .f-grid{grid-template-columns:1fr} }
+.f-more{grid-column:span 2;position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-card);background:#0B0713;color:#fff;padding:clamp(28px,3.4vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:28px;text-decoration:none}
+.f-more::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 90% at 100% 0,rgba(176,77,221,.55),transparent 60%),radial-gradient(60% 80% at 0 110%,rgba(77,43,159,.7),transparent 70%)}
+.f-more[hidden]{display:none}
+.f-more small{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blaze-b)}
+.f-more h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.03em;font-size:clamp(30px,3.2vw,46px);line-height:.95;margin:12px 0 0}
+.f-more h3 .em{display:block;font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.01em;color:var(--blaze-b);margin-top:6px}
+.f-more p{margin:14px 0 0;max-width:44ch;font-size:15px;color:rgba(255,255,255,.8)}
+.f-more .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.f-more .pr{font-family:var(--display);line-height:1}
+.f-more .pr b{font-size:clamp(26px,2.4vw,34px);font-weight:800;letter-spacing:-.03em}
+.f-more .pr span{display:block;font-family:var(--body);font-size:13.5px;color:var(--gray-fog);margin-top:6px}
+.f-more:hover .btn{background:var(--yellow);color:#000}
+@media (max-width:600px){ .f-more{grid-column:auto} }

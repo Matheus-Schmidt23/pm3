@@ -14,21 +14,28 @@
     /* catálogo: um card de venda por formação, filtrável por área */
     const nomeA = a => a === 'gestao' ? AREAS[a].nome : AREAS[a].curto;
     const lista = ordem.flatMap(a => FORMACOES.filter(f => f.area === a));
-    const check = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3.5 8.5 3 3 6-7"/></svg>';
+    /* mesmo card da Membership (cards-formacao.css) */
+    const ic = {
+      h: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>',
+      mod: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 1.8 14.2 5 8 8.2 1.8 5z"/><path d="m1.8 8 6.2 3.2L14.2 8"/><path d="m1.8 11 6.2 3.2 6.2-3.2"/></svg>',
+      cert: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.2" r="4.2"/><path d="m5.6 9.6-1.1 4.8L8 12.8l3.5 1.6-1.1-4.8"/></svg>',
+      go: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg>'
+    };
     $('#fx-chips').innerHTML = `<button type="button" class="on" data-f="">Todas <small>${lista.length}</small></button>` +
       ordem.map(a => `<button type="button" data-f="${a}">${nomeA(a)} <small>${FORMACOES.filter(f => f.area === a).length}</small></button>`).join('');
-    $('#fx-grid').innerHTML = lista.map((f, i) => `<a class="fx reveal" data-a="${f.area}" data-d="${i % 2}" href="${f.url}">
-      <div class="fx-vis" style="background-image:url('assets/capas/${f.capa}-800.jpg?v=3')"><span class="tag">${nomeA(f.area)}</span>${f.destaque ? `<span class="tag tag-yellow">${f.destaque}</span>` : ''}</div>
-      <div class="fx-body">
-        <span class="fx-lvl">${lvl(f.nivel)}${f.nivel}</span>
-        <h3>${f.nome}</h3>
-        <p>${f.quem}</p>
-        <ul class="fx-learn">${f.aprende.map(t => `<li>${check}${t}</li>`).join('')}</ul>
-        <div class="fx-foot"><span class="fx-facts"><b>${f.h ? f.h + 'h' : f.mod + ' módulos'}</b>${f.h ? ` · ${f.mod} módulos` : ''} · Certificado</span><span class="fx-go">Ver formação${arrow}</span></div>
-      </div></a>`).join('');
+    $('#fx-grid').innerHTML = lista.map((f, i) => `<a class="f-card reveal${f.destaque === 'Comece aqui' ? ' feature' : ''}" data-a="${f.area}" data-d="${i % 3}" href="${f.url}">
+      <div class="f-vis" style="background-image:url('assets/capas/${f.capa}-800.jpg?v=3')" aria-hidden="true"></div>
+      <div class="f-body"><div class="top"><span class="tag tag-area">${nomeA(f.area)}</span>${f.destaque ? `<span class="tag tag-yellow">${f.destaque}</span>` : ''}</div>
+        <h3>${f.nome}</h3><p>${f.quem}</p>
+        <ul class="f-facts">${f.h ? `<li>${ic.h}${f.h}h</li>` : ''}<li>${ic.mod}${f.mod} módulos</li><li>${ic.cert}Certificado</li></ul>
+        <div class="meta"><span>Ver formação</span><span class="go">${ic.go}</span></div></div></a>`).join('') +
+      `<a class="f-more reveal" href="membership.html"><div><small>Membership PM3</small><h3>Todas as dez<span class="em">em uma só assinatura.</span></h3>
+        <p>12 meses de acesso às 10 formações, às +40 sprints, mentorias, workshops ao vivo e comunidade.</p></div>
+        <div class="row"><div class="pr"><b>12x R$ 299,91</b><span>ou R$ 3.599 à vista</span></div><span class="btn btn-light">Conhecer a Membership ${ic.go}</span></div></a>`;
     const filtra = a => {
       document.querySelectorAll('#fx-chips button').forEach(b => b.classList.toggle('on', b.dataset.f === a));
-      document.querySelectorAll('#fx-grid .fx').forEach(c => c.hidden = !!a && c.dataset.a !== a);
+      document.querySelectorAll('#fx-grid .f-card').forEach(c => c.hidden = !!a && c.dataset.a !== a);
+      $('#fx-grid .f-more').hidden = !!a;
     };
     $('#fx-chips').addEventListener('click', e => { const b = e.target.closest('button'); if (b) filtra(b.dataset.f); });
     document.querySelectorAll('[data-filtro]').forEach(l => l.addEventListener('click', () => filtra(l.dataset.filtro)));

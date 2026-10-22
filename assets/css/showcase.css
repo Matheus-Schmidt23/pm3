@@ -217,39 +217,6 @@
   .ccard{min-height:0}
 }
 
-/* ---------- formações: catálogo de venda (um card por formação) ---------- */
-.fx-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
-.fx-chips button{font-family:var(--display);font-weight:600;font-size:14px;border:1.5px solid var(--gray-fog-soft);background:#fff;border-radius:var(--r-pill);padding:10px 18px;color:var(--ink);cursor:pointer;transition:.2s}
-.fx-chips button small{color:var(--muted);margin-left:4px}
-.fx-chips button:hover{border-color:var(--purple-royal);color:var(--purple-royal)}
-.fx-chips button.on{background:var(--purple-deep);border-color:var(--purple-deep);color:#fff}
-.fx-chips button.on small{color:var(--blaze-b)}
-.fx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.fx{display:grid;grid-template-columns:42% 1fr;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;text-decoration:none;color:inherit;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
-.fx[hidden]{display:none}
-.fx:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
-.fx-vis{position:relative;min-height:100%;background-size:cover;background-position:center;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:16px;overflow:hidden;isolation:isolate}
-.fx-vis::before{content:'';position:absolute;inset:0;z-index:-1;background:inherit;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.fx:hover .fx-vis::before{transform:scale(1.07)}
-.fx-vis .tag{background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff}
-.fx-vis .tag.tag-yellow{background:var(--yellow);color:#000}
-.fx-body{display:flex;flex-direction:column;padding:24px 26px 22px;min-width:0}
-.fx-lvl{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--purple-royal)}
-.fx h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(22px,2vw,28px);line-height:1;margin:10px 0 10px}
-.fx p{margin:0;font-size:14.5px;line-height:1.45;color:var(--muted)}
-.fx-learn{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:7px}
-.fx-learn li{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:500;color:var(--ink)}
-.fx-learn svg{flex:none;width:18px;height:18px;padding:3px;border-radius:50%;background:var(--lilac-bg,#EFE9F8);color:var(--purple-royal)}
-.fx-foot{margin-top:auto;padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.fx-learn + .fx-foot{border-top:1px solid var(--line);margin-top:20px}
-.fx-facts{font-size:13px;color:var(--muted)}
-.fx-facts b{font-family:var(--display);color:var(--ink);font-size:15px}
-.fx-go{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--purple-royal);border-radius:var(--r-pill);padding:10px 16px;transition:background .3s,color .3s}
-.fx-go svg{width:14px;height:14px;transition:transform .3s}
-.fx:hover .fx-go{background:var(--yellow);color:#000}
-.fx:hover .fx-go svg{transform:translateX(3px)}
-@media (max-width:1080px){ .fx-grid{grid-template-columns:1fr} }
-@media (max-width:600px){ .fx{grid-template-columns:1fr} .fx-vis{min-height:0;aspect-ratio:16/9} .fx-body{padding:20px} }
 
 /* ---------- formações: certificação e mercado ---------- */
 .cx-band{position:relative;margin-top:clamp(56px,7vw,96px);border-radius:var(--r-xl);background:var(--purple-deep);color:#fff;padding:clamp(28px,4vw,56px);overflow:hidden;isolation:isolate}
@@ -281,3 +248,11 @@
   .cx-hero::before{width:100%;bottom:auto;height:62vw;background-size:150% auto;background-position:85% 40%;-webkit-mask-image:linear-gradient(180deg,#000 75%,transparent);mask-image:linear-gradient(180deg,#000 75%,transparent)}
   .cx-proof li{grid-template-columns:1fr;gap:6px}
 }
+
+/* ---------- formações: filtro do catálogo ---------- */
+.fx-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.fx-chips button{font-family:var(--display);font-weight:600;font-size:14px;border:1.5px solid var(--gray-fog-soft);background:#fff;border-radius:var(--r-pill);padding:10px 18px;color:var(--ink);cursor:pointer;transition:.2s}
+.fx-chips button small{color:var(--muted);margin-left:4px}
+.fx-chips button:hover{border-color:var(--purple-royal);color:var(--purple-royal)}
+.fx-chips button.on{background:var(--purple-deep);border-color:var(--purple-deep);color:#fff}
+.fx-chips button.on small{color:var(--blaze-b)}
