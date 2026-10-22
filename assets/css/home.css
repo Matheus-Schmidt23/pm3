@@ -22,7 +22,7 @@
 .h-hero h1{font-size:calc(clamp(56px,7.2vw,124px) * var(--s,1));line-height:.88;margin-top:calc(18px * var(--s,1))}
 .h-hero h1 .l2{color:var(--gray-fog)}
 .h-hero h1 .em{display:block;font-size:.34em;line-height:1.1;margin-top:.22em;color:#fff;letter-spacing:-.01em}
-.h-hero .lead{margin:calc(22px * var(--s,1)) 0 0;max-width:52ch;font-size:calc(clamp(17px,1.5vw,20px) * max(var(--s,1),.85))}
+.h-hero .lead{margin:calc(22px * var(--s,1)) 0 0;max-width:80ch;font-size:max(14px,calc(clamp(15px,1.12vw,18px) * max(var(--s,1),.85)))}
 .h-pic{grid-column:2;grid-row:1;position:relative;overflow:hidden;border-radius:0 var(--r-xl) var(--r-xl) 0;background:#c99be6;min-height:calc(240px * var(--s,1))}
 .h-pic .ph{position:absolute;inset:0;background:50% 30%/cover no-repeat;opacity:0;transition:opacity 1.4s ease;animation:kb 18s ease-in-out infinite alternate;will-change:transform}
 .h-pic .ph:nth-child(3n+2){transform-origin:30% 25%;animation-delay:-6s}
