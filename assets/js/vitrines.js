@@ -5,7 +5,6 @@
   const PAGE = document.body.dataset.page;
   const $ = s => document.querySelector(s);
   const arrow = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg>';
-  const horas = h => h == null ? 'carga a confirmar' : h + 'h';
   const NIVEL = { 'Base': 1, 'Intermediário': 2, 'Avançado': 3 };
   const lvl = n => `<span class="lvl" aria-hidden="true">${[1,2,3].map(i => `<i class="${i <= NIVEL[n] ? 'on' : ''}"></i>`).join('')}</span>`;
 
@@ -33,11 +32,6 @@
     };
     $('#fx-chips').addEventListener('click', e => { const b = e.target.closest('button'); if (b) filtra(b.dataset.f); });
     document.querySelectorAll('[data-filtro]').forEach(l => l.addEventListener('click', () => filtra(l.dataset.filtro)));
-    const max = Math.max(...FORMACOES.map(f => f.h || 0));
-    $('#cmp tbody').innerHTML = FORMACOES.map(f => `<tr>
-      <td><a href="${f.url}">${f.nome}</a></td><td>${AREAS[f.area].curto}</td>
-      <td class="num">${horas(f.h)}${f.h ? `<span class="bar" style="width:${Math.round(f.h / max * 100)}%"></span>` : ''}</td>
-      <td class="num">${f.mod}</td><td>${lvl(f.nivel)}${f.nivel}</td><td>${f.quem}</td></tr>`).join('');
   }
 
   /* ---------- /sprints/ ---------- */
