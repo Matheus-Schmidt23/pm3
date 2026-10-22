@@ -65,7 +65,7 @@
       `<a class="f-more f-more-full reveal" href="membership.html"><div><small>Membership PM3</small><h3>Todas as sprints<span class="em">e as 10 formações.</span></h3>
         <p>12 meses de acesso às +40 sprints, às 10 formações, mentorias, workshops ao vivo e comunidade.</p></div>
         <div class="row"><div class="pr"><b>12x R$ 299,91</b><span>ou R$ 3.599 à vista</span></div><span class="btn btn-light">Conhecer a Membership ${ic.go}</span></div></a>`;
-    /* mostra 12 por vez; "Carregar mais" abre os próximos 12 (respeitando o filtro) */
+    /* mostra 12; "Carregar mais" abre todas as restantes de uma vez (respeitando o filtro) */
     const PAG = 12; let area = '', limite = PAG;
     $('#fx-grid').insertAdjacentHTML('afterend', '<div class="fx-more"><button type="button" class="btn btn-primary" id="fx-mais">Carregar mais sprints</button><small id="fx-cont"></small></div>');
     $('.fx-more').after($('#fx-grid .f-more'));
@@ -76,7 +76,7 @@
       doFiltro.slice(0, limite).forEach(c => { c.hidden = false; c.classList.add('in'); });
       const resta = doFiltro.length - Math.min(limite, doFiltro.length);
       $('#fx-mais').hidden = resta <= 0;
-      $('#fx-mais').textContent = `Carregar mais ${Math.min(PAG, resta)} sprints`;
+      $('#fx-mais').textContent = `Carregar mais (${resta})`;
       $('#fx-cont').textContent = `Mostrando ${Math.min(limite, doFiltro.length)} de ${doFiltro.length}`;
     };
     const filtra = a => {
@@ -85,7 +85,7 @@
       mostra();
     };
     $('#fx-chips').addEventListener('click', e => { const b = e.target.closest('button'); if (b) filtra(b.dataset.f); });
-    $('#fx-mais').addEventListener('click', () => { limite += PAG; mostra(); });
+    $('#fx-mais').addEventListener('click', () => { limite = Infinity; mostra(); });
     mostra();
   }
 
