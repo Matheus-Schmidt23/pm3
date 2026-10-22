@@ -68,6 +68,7 @@
     /* mostra 12 por vez; "Carregar mais" abre os próximos 12 (respeitando o filtro) */
     const PAG = 12; let area = '', limite = PAG;
     $('#fx-grid').insertAdjacentHTML('afterend', '<div class="fx-more"><button type="button" class="btn btn-primary" id="fx-mais">Carregar mais sprints</button><small id="fx-cont"></small></div>');
+    $('.fx-more').after($('#fx-grid .f-more'));
     const mostra = () => {
       const cards = [...document.querySelectorAll('#fx-grid .f-card')];
       const doFiltro = cards.filter(c => !area || c.dataset.a === area);
