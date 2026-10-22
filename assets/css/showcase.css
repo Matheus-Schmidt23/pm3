@@ -252,9 +252,6 @@
 .fx-chips button.on{background:var(--purple-deep);border-color:var(--purple-deep);color:#fff}
 .fx-chips button.on small{color:var(--blaze-b)}
 .cx-proof{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.cx-proof li{display:flex;flex-direction:column;gap:8px;padding:16px 16px 18px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.03)}
-.cx-proof b{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-.02em;line-height:1;color:var(--yellow)}
-.cx-proof span{font-size:14.5px;line-height:1.4;color:rgba(255,255,255,.78)}
 @media (max-width:600px){ .cx-proof{grid-template-columns:1fr} }
 /* mockup do certificado sobre veludo (Magnific) como fundo da dobra */
 @media (max-width:860px){
@@ -263,3 +260,12 @@
 .cx-hero::before{content:'';position:absolute;z-index:-1;top:3%;bottom:3%;right:-5%;aspect-ratio:2880/1607;background:url('../img/certificado-veludo.jpg') center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 94%,transparent),linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 94%,transparent),linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent);mask-composite:intersect}
 @media (max-width:860px){ .cx-hero{padding-top:62vw} .cx-hero::before{top:0;bottom:auto;right:-25%;height:auto;width:150%} }
 .cx-copy .lead{max-width:520px}
+/* provas como selos de premiação */
+.cx-proof li{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:18px 14px 18px;border-radius:14px;border:1px solid rgba(255,177,42,.28);background:linear-gradient(180deg,rgba(255,177,42,.09),rgba(255,255,255,.015) 70%);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s}
+.cx-proof li::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 30%,rgba(255,220,150,.18) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.cx-proof li:hover{transform:translateY(-3px);border-color:rgba(255,177,42,.6);box-shadow:0 14px 30px -14px rgba(255,177,42,.45),inset 0 1px 0 rgba(255,255,255,.08)}
+.cx-proof li:hover::after{transform:translateX(120%)}
+.cx-aw{position:relative;display:grid;place-items:center;width:120px;height:48px;color:var(--yellow)}
+.cx-aw .lr{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.cx-aw b{position:relative;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.01em;line-height:1;color:#fff}
+.cx-lb{font-family:var(--display);font-weight:700;font-size:10.5px;line-height:1.45;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72);max-width:19em}
