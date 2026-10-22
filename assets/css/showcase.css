@@ -250,3 +250,36 @@
 .fx:hover .fx-go svg{transform:translateX(3px)}
 @media (max-width:1080px){ .fx-grid{grid-template-columns:1fr} }
 @media (max-width:600px){ .fx{grid-template-columns:1fr} .fx-vis{min-height:0;aspect-ratio:16/9} .fx-body{padding:20px} }
+
+/* ---------- formações: certificação e mercado ---------- */
+.cx-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:center}
+.cx-cert{position:relative;padding:clamp(20px,3vw,40px);border-radius:var(--r-xl);background:var(--grad-lilac);isolation:isolate}
+.cx-paper{position:relative;background:#fff;border-radius:14px;padding:clamp(24px,3vw,40px);box-shadow:0 30px 60px -20px rgba(69,46,120,.45);transform:rotate(-2.5deg);transition:transform .6s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;gap:4px;overflow:hidden}
+.cx-paper::before{content:'';position:absolute;inset:10px;border:1px solid rgba(69,46,120,.18);border-radius:8px;pointer-events:none}
+.cx-cert:hover .cx-paper{transform:rotate(0) translateY(-4px)}
+.cx-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.cx-logo{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--purple-deep)}
+.cx-paper small{font-size:13px;color:var(--muted)}
+.cx-name{font-family:var(--serif,'Playfair Display'),serif;font-style:italic;font-weight:400;font-size:clamp(30px,3vw,42px);color:var(--ink);margin:2px 0 12px}
+.cx-course{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(22px,2.2vw,30px);line-height:1;color:var(--purple-deep);margin-top:4px}
+.cx-foot{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.cx-foot b{font-family:var(--display);color:var(--ink)}
+.cx-seal{position:absolute;right:clamp(20px,3vw,36px);bottom:clamp(56px,6vw,72px);width:64px;height:64px;border-radius:50%;background:var(--yellow);color:#000;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:30px;box-shadow:0 0 0 6px rgba(255,177,42,.25)}
+.cx-proof{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:0}
+.cx-proof li{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--line)}
+.cx-proof b{font-family:var(--display);font-weight:800;font-size:clamp(26px,2.4vw,34px);letter-spacing:-.03em;color:var(--purple-royal);line-height:1}
+.cx-proof span{font-size:15px;line-height:1.45;color:var(--ink)}
+.cx-band{position:relative;margin-top:clamp(56px,7vw,96px);border-radius:var(--r-xl);background:var(--purple-deep);color:#fff;padding:clamp(28px,4vw,56px);overflow:hidden;isolation:isolate}
+.cx-band::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 90% at 100% 0,rgba(176,77,221,.5),transparent 60%)}
+.cx-band.grain::after{z-index:-1;opacity:.2}
+.cx-band h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.03em;font-size:clamp(30px,3.4vw,48px);line-height:.95;margin:10px 0 0}
+.cx-band h3 .em{display:block;font-family:var(--serif,'Playfair Display'),serif;font-style:italic;text-transform:none;font-weight:400;letter-spacing:-.01em;color:var(--blaze-b);margin-top:6px}
+.cx-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:36px}
+.cx-stats div{padding:20px 24px 4px 0;border-top:1px solid rgba(255,255,255,.18)}
+.cx-stats div + div{padding-left:24px;border-left:1px solid rgba(255,255,255,.12)}
+.cx-stats b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(34px,3.4vw,52px);letter-spacing:-.04em;line-height:1;color:var(--yellow)}
+.cx-stats span{display:block;margin-top:12px;font-size:15px;line-height:1.45;color:rgba(255,255,255,.85)}
+.cx-src{margin:28px 0 0;font-size:12.5px;color:rgba(255,255,255,.55)}
+@media (max-width:1080px){ .cx-grid{grid-template-columns:1fr} .cx-cert{max-width:560px} .cx-stats{grid-template-columns:1fr 1fr} .cx-stats div:nth-child(3){padding-left:0;border-left:0} }
+@media (max-width:600px){ .cx-stats{grid-template-columns:1fr} .cx-stats div + div{padding-left:0;border-left:0} .cx-proof li{grid-template-columns:1fr;gap:6px} }
+.cx-grid .lead{margin-top:22px}
