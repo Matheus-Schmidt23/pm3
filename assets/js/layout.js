@@ -3,7 +3,7 @@
 (function(){
   const PAGE = document.body.dataset.page || '';
   /* páginas já desenhadas no protótipo; as outras mostram um aviso */
-  const PRONTAS = ['membership.html','home.html','formacao-product-manager.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html'];
+  const PRONTAS = ['membership.html','home.html','formacao-product-manager.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html','comunidade.html'];
 
   const FORMACOES = [
     ['Product Manager','formacao-product-manager.html','Gestão de produtos'],
@@ -55,6 +55,7 @@
         </li>
         <li><a href="pos-tech.html"${cur('pos-tech')}>Pós Tech</a></li>
         <li><a href="para-empresas.html"${cur('para-empresas')}>Para empresas</a></li>
+        <li><a href="comunidade.html"${cur('comunidade')}>Comunidade</a></li>
         <li><a href="blog.html"${cur('blog')}>Blog</a></li>
         <li><a href="faq.html"${cur('faq')}>FAQ</a></li>
         <li class="nav-mobile-cta"><a class="btn btn-light btn-block" href="#">Login</a><a class="btn btn-primary btn-block" href="membership.html#planos">Assinar a Membership</a></li>
@@ -79,7 +80,7 @@
         <div><h4>Formações</h4><ul>${FORMACOES.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}</ul></div>
         <div><h4>Sprints</h4><ul>${SPRINTS.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}<li><a href="cursos.html">Catálogo completo</a></li></ul></div>
         <div><h4>Conteúdo</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="#">Glossário de produto</a></li><li><a href="#">Biblioteca</a></li><li><a href="#">Panorama do mercado de produto</a></li></ul>
-          <h4 style="margin-top:28px">Para você</h4><ul><li><a href="membership.html">Membership</a></li><li><a href="pos-tech.html">Pós Tech</a></li><li><a href="para-empresas.html">Para empresas</a></li></ul></div>
+          <h4 style="margin-top:28px">Para você</h4><ul><li><a href="membership.html">Membership</a></li><li><a href="pos-tech.html">Pós Tech</a></li><li><a href="para-empresas.html">Para empresas</a></li><li><a href="comunidade.html">Comunidade</a></li></ul></div>
         <div><h4>PM3</h4><ul><li><a href="#">Sobre a PM3</a></li><li><a href="#">Instrutores</a></li><li><a href="#">Dar aula na PM3</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Contato</a></li></ul></div>
       </div>
     </div>
