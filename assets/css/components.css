@@ -14,7 +14,7 @@
 .stat{padding:48px 28px 44px;border-left:1px solid var(--line);position:relative}
 .stat:first-child{border-left:0}
 .stat .n{font-family:var(--display);font-weight:800;font-size:clamp(44px,5vw,72px);letter-spacing:-.04em;line-height:1;color:var(--purple-deep);font-variant-numeric:tabular-nums}
-.stat p{margin:12px 0 0;font-size:15px;color:var(--muted);max-width:22ch}
+.stat p{margin:14px 0 0;font-size:clamp(17px,1.35vw,20px);line-height:1.4;color:var(--muted);max-width:22ch}
 .stat .cross{top:-7px;left:-7px}
 
 /* chamada final com aurora */
