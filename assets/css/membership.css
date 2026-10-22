@@ -279,7 +279,7 @@
 .s-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 6%,rgba(0,0,0,.6) 46%,rgba(0,0,0,.12))}
 .s-kick{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-fog)}
 .s-kick::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--yellow)}
-.s-big{font-family:var(--display);font-weight:800;font-size:clamp(88px,11vw,156px);line-height:.82;letter-spacing:-.05em;margin:14px 0 8px;background:var(--grad-lilac);-webkit-background-clip:text;background-clip:text;color:transparent}
+.s-big{font-family:var(--display);font-weight:800;font-size:clamp(60px,6.6vw,96px);line-height:.86;text-transform:uppercase;letter-spacing:-.05em;margin:14px 0 8px;background:var(--grad-lilac);-webkit-background-clip:text;background-clip:text;color:transparent}
 .s-intro h3{font-size:clamp(24px,2.6vw,34px);text-transform:uppercase;font-weight:800;line-height:1;margin:0 0 12px}
 .s-intro p{color:var(--gray-fog);font-size:16px;max-width:34ch;margin:0 0 24px}
 .s-areas{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
