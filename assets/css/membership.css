@@ -24,7 +24,7 @@
 .m-safe{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--gray-fog);margin-top:4px}
 .m-safe span{display:flex;align-items:center;gap:8px}
 .m-safe svg{width:16px;height:16px;color:var(--blaze-b)}
-.m-photo{position:relative;overflow:hidden;border-radius:0 var(--r-xl) 0 0;background:url('../img/foto-sofa-fone.jpg') 50% 30%/cover}
+.m-photo{position:relative;overflow:hidden;border-radius:0 var(--r-xl) 0 0;background:url('../img/membership-giovanna.jpg') 22% 35%/cover}
 .m-photo .tag{position:absolute;left:18px;bottom:18px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff}
 
 /* ---------- efeito de mouse nos cards do topo: um wobble curto, sem deformar ---------- */
