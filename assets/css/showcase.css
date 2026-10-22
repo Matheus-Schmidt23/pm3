@@ -269,3 +269,8 @@
 .cx-aw .lr{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
 .cx-aw b{position:relative;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.01em;line-height:1;color:#fff}
 .cx-lb{font-family:var(--display);font-weight:700;font-size:10.5px;line-height:1.45;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72);max-width:19em}
+/* faixa de mercado por estágio de carreira */
+.cx-levels{grid-template-columns:repeat(3,1fr)}
+.cx-levels i{display:inline-flex;align-self:flex-start;font-style:normal;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-pill);padding:5px 11px;margin-bottom:16px}
+.cx-levels div{display:flex;flex-direction:column;padding-top:24px}
+@media (max-width:1080px){ .cx-levels{grid-template-columns:1fr} .cx-levels div + div{padding-left:0;border-left:0} }
