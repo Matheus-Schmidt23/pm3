@@ -223,3 +223,9 @@ button{font:inherit;color:inherit}
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
   .reveal{opacity:1;transform:none}
 }
+
+/* heroes em card: o texto do card principal começa na mesma coluna do conteúdo (.wrap) da página */
+.m-hero,.h-hero,.cm-hero,.p-hero{container-type:inline-size}
+@media (min-width:861px){
+  :is(.m-hero,.h-hero,.cm-hero,.p-hero) :is(.m-main,.h-main,.cm-main,.p-main){padding-left:max(calc(var(--gutter) - 12px),calc((100cqw - var(--wrap)) / 2))}
+}
