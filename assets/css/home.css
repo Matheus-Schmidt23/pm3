@@ -17,12 +17,12 @@
 .h-hero .glow{position:absolute;z-index:-1;width:900px;height:900px;left:var(--gx,70%);top:var(--gy,30%);transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(176,77,221,.34),rgba(77,43,159,.18) 38%,transparent 66%);pointer-events:none;transition:left .9s cubic-bezier(.2,.7,.2,1),top .9s cubic-bezier(.2,.7,.2,1)}
 .h-main.grain::after{z-index:-1;opacity:.25}
 .h-main .aurora{inset:-30% -25% -40% 35%;opacity:.6}
-.h-main .three{position:absolute;right:-2%;top:-16%;width:min(30%,400px);z-index:-1;opacity:.4;pointer-events:none}
+.h-main .three{position:absolute;right:-4%;top:-14%;width:min(44%,600px);z-index:-1;opacity:.4;pointer-events:none}
 .h-main .three path{fill:none;stroke:rgba(255,255,255,.6);stroke-width:1.2;vector-effect:non-scaling-stroke}
 .h-hero h1{font-size:calc(clamp(56px,7.2vw,124px) * var(--s,1));line-height:.88;margin-top:calc(18px * var(--s,1))}
 .h-hero h1 .l2{color:var(--gray-fog)}
-.h-hero h1 .em{display:block;font-size:.34em;line-height:1.1;margin-top:.22em;color:#fff;letter-spacing:-.01em}
-.h-hero .lead{margin:calc(26px * var(--s,1)) 0 0;max-width:56ch;font-size:max(14px,calc(clamp(15px,1.12vw,18px) * max(var(--s,1),.85)))}
+.h-hero h1 .em{display:block;font-size:.34em;line-height:1.1;margin-top:.22em;color:#fff;letter-spacing:-.01em;max-width:15em;text-wrap:balance}
+.h-hero .lead{margin:calc(26px * var(--s,1)) 0 0;max-width:41ch;text-wrap:pretty;font-size:max(14px,calc(clamp(15px,1.12vw,18px) * max(var(--s,1),.85)))}
 .h-pic{grid-column:2;grid-row:1;position:relative;overflow:hidden;border-radius:0 var(--r-xl) var(--r-xl) 0;background:#c99be6;min-height:calc(240px * var(--s,1))}
 .h-pic .ph{position:absolute;inset:0;background:50% 30%/cover no-repeat;opacity:0;transition:opacity 1.4s ease;animation:kb 18s ease-in-out infinite alternate;will-change:transform}
 .h-pic .ph:nth-child(3n+2){transform-origin:30% 25%;animation-delay:-6s}
@@ -268,6 +268,15 @@
 .aw-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .aw-list li{display:flex;align-items:center;gap:14px;min-width:0;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-card);padding:12px 18px 12px 14px;backdrop-filter:blur(6px)}
 .aw-laurel{width:46px;height:38px;color:var(--yellow);flex:none}
+.aw-list li{position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),background .35s,border-color .35s,box-shadow .35s}
+.aw-list li::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.22) 50%,transparent 70%);transform:translateX(-120%)}
+.aw-laurel{transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .35s}
+@media (hover:hover) and (pointer:fine){
+  .aw-list li:hover{transform:translateY(-4px);background:rgba(0,0,0,.32);border-color:rgba(255,177,42,.55);box-shadow:0 14px 30px -12px rgba(20,8,40,.55)}
+  .aw-list li:hover::after{transform:translateX(120%);transition:transform .9s ease}
+  .aw-list li:hover .aw-laurel{transform:scale(1.12) rotate(-6deg);filter:drop-shadow(0 0 8px rgba(255,177,42,.75))}
+}
+@media (prefers-reduced-motion:reduce){.aw-list li,.aw-laurel{transition:none}.aw-list li::after{display:none}}
 .aw-list b{display:block;font-family:var(--display);font-weight:800;font-size:15.5px;line-height:1.15}
 .aw-list span{display:block;font-size:12.5px;color:rgba(255,255,255,.78);margin-top:2px}
 @media (max-width:1080px){.awards .wrap{grid-template-columns:1fr}}
@@ -303,3 +312,11 @@
   .dp-bar{display:none}
 }
 @media (max-width:600px){ .mem-list{grid-template-columns:1fr} .mem-prof{align-items:flex-start;flex-direction:column;gap:10px} }
+
+/* hero: o 3 "energizado" (mesmo efeito da Membership): um traço de luz amarela percorre o contorno.
+   Roda sempre, devagar; com o mouse em cima do card, acelera e o 3 acompanha o cursor */
+.h-main .three{transform:translate(calc(var(--px,0) * -26px),calc(var(--py,0) * -18px));transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.h-main .three .trace{stroke:var(--yellow);stroke-width:.24;vector-effect:none;stroke-linecap:round;stroke-dasharray:.07 .93;stroke-dashoffset:0;opacity:.85;filter:drop-shadow(0 0 6px rgba(255,177,42,.9));animation:fx-trace 6s linear infinite}
+.h-main.on .three .trace{opacity:1;animation-duration:3.2s}
+@keyframes fx-trace{to{stroke-dashoffset:-1}}
+@media (prefers-reduced-motion:reduce){ .h-main .three .trace{display:none} }

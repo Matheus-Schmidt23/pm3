@@ -21,7 +21,7 @@ window.PM3_CATALOGO = (function(){
     { nome: 'Product Leadership', area: 'lideranca', h: 29, mod: 5, nivel: 'Avançado', url: '#',
       quem: 'Para PMs plenos e sêniores que assumem pessoas e decisões de alto nível.' },
     { nome: 'AI Product Builder', area: 'ia', h: null, mod: 6, nivel: 'Intermediário', url: '#', destaque: 'IA na prática',
-      quem: 'Para sair de usuário de IA e construir automações, agentes e aplicações.' },
+      quem: 'Para ir além do uso de IA e construir automações, agentes e aplicações.' },
     { nome: 'AI Product Specialist', area: 'ia', h: 40, mod: 5, nivel: 'Intermediário', url: '#',
       quem: 'Para aplicar IA de forma estratégica na construção e priorização de produto.' },
     { nome: 'Product Analytics', area: 'dados', h: 21, mod: 6, nivel: 'Intermediário', url: '#',

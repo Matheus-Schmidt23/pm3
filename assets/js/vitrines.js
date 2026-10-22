@@ -103,7 +103,7 @@
       const filtrando = st.q || st.tipo.size || st.area.size || st.dur;
       $('#cnt').innerHTML = `${r.length} <span>${r.length === 1 ? 'curso' : 'cursos'}${filtrando ? (r.length === 1 ? ' encontrado' : ' encontrados') : ' no catálogo'}</span>`;
       $('#cgrid').innerHTML = r.length ? (!filtrando ? membro : '') + r.map(card).join('')
-        : `<div class="empty"><b>Nenhum curso com esses filtros</b>Tente tirar um filtro ou buscar outro termo.</div>`;
+        : `<div class="empty"><b>Nenhum curso com esses filtros</b>Remova um filtro ou busque outro termo.</div>`;
       const chips = [...st.tipo].map(v => ['tipo', v, TIPOS[v]]).concat([...st.area].map(v => ['area', v, AREAS[v].curto]), st.dur ? [['dur', st.dur, DUR[st.dur][0]]] : []);
       $('#active').innerHTML = chips.map(([k, v, l]) => `<button type="button" data-k="${k}" data-v="${v}">${l}</button>`).join('');
       $('#fcount').textContent = chips.length ? `(${chips.length})` : '';

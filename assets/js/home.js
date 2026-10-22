@@ -85,3 +85,26 @@
     fotos[i].classList.add('on');
   }, 4500);
 })();
+
+/* hero: traço de luz no contorno do 3 e leve paralaxe com o cursor */
+(function(){
+  const main = document.querySelector('#hero .h-main');
+  const path = main && main.querySelector('.three path');
+  if (!path) return;
+  const trace = path.cloneNode();
+  trace.setAttribute('class', 'trace');
+  trace.setAttribute('pathLength', '1');
+  path.after(trace);
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let raf = 0;
+  main.addEventListener('pointerenter', () => main.classList.add('on'));
+  main.addEventListener('pointermove', e => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      const r = main.getBoundingClientRect();
+      main.style.setProperty('--px', ((e.clientX - r.left) / r.width - .5).toFixed(3));
+      main.style.setProperty('--py', ((e.clientY - r.top) / r.height - .5).toFixed(3));
+    });
+  });
+  main.addEventListener('pointerleave', () => { main.classList.remove('on'); main.style.setProperty('--px', 0); main.style.setProperty('--py', 0); });
+})();

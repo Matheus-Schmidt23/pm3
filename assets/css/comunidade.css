@@ -8,7 +8,7 @@
 .cm-main{grid-row:1/3;position:relative;overflow:hidden;border-radius:var(--r-xl) 0 0 var(--r-xl);background:#0B0713;padding:clamp(28px,4.5vw,64px);display:flex;flex-direction:column;justify-content:space-between;gap:40px;isolation:isolate}
 .cm-main.grain::after{z-index:-1;opacity:.3}
 .cm-main .aurora{inset:-30% -25% -40% 35%;opacity:.6}
-.cm-main .three{position:absolute;right:-6%;bottom:-14%;width:min(54%,520px);z-index:-1;opacity:.5;pointer-events:none}
+.cm-main .three{position:absolute;right:-4%;top:-14%;width:min(40%,460px);z-index:-1;opacity:.5;pointer-events:none}
 .cm-main .three path{fill:none;stroke:rgba(255,255,255,.55);stroke-width:1.2;vector-effect:non-scaling-stroke}
 .crumbs{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:13px;color:var(--gray-fog);margin:0;padding:0;list-style:none}
 .crumbs a{color:var(--gray-fog);text-decoration:none}
@@ -22,7 +22,7 @@
 .cm-facts{display:flex;gap:10px 22px;flex-wrap:wrap;font-size:13.5px;color:var(--gray-fog);margin-top:22px}
 .cm-facts span{display:flex;align-items:center;gap:8px}
 .cm-facts svg{width:16px;height:16px;color:var(--blaze-b);flex:none}
-.cm-photo{position:relative;overflow:hidden;border-radius:0 var(--r-xl) 0 0;background:url('../img/eventos/comunidade.webp') 42% 40%/cover}
+.cm-photo{position:relative;overflow:hidden;border-radius:0 var(--r-xl) 0 0;background:url('../img/eventos/product-camp.webp') 42% 40%/cover}
 .cm-photo .tag{position:absolute;left:18px;bottom:18px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff}
 .cm-tile{position:relative;overflow:hidden;border-radius:0 0 var(--r-xl) 0;background:var(--grad-lilac);color:#000;padding:clamp(22px,2.6vw,36px);display:flex;flex-direction:column;justify-content:space-between;gap:16px}
 .cm-tile .ic{--c:#000}
@@ -107,7 +107,7 @@
 
 /* ---------- podcast Mesa de Produto ---------- */
 .pod{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:center}
-.pod-ph{aspect-ratio:4/3;border-radius:var(--r-xl) var(--r-xl) var(--r-xl) 0;background:url('../img/eventos/mesa-de-produto.webp') center/cover;position:relative}
+.pod-ph{aspect-ratio:4/3;border-radius:var(--r-xl) var(--r-xl) var(--r-xl) 0;background:url('../img/eventos/podcast.jpg') center/cover;position:relative}
 .pod-ph .tag{position:absolute;left:18px;top:18px}
 .pod .h2{font-size:clamp(34px,4vw,56px)}
 .pod .lead{margin:20px 0 0}
