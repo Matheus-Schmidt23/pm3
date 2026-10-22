@@ -23,7 +23,8 @@
 .f-card.feature .f-facts svg{color:var(--yellow)}
 .f-card.feature .meta{color:var(--yellow);border-color:rgba(255,255,255,.12)}
 .f-card.feature .go{background:var(--yellow);color:#000}
-.f-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.f-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:1280px){ .f-grid{grid-template-columns:repeat(3,1fr)} }
 .f-grid > .f-card[hidden]{display:none}
 @media (max-width:1080px){ .f-grid{grid-template-columns:1fr 1fr} }
 @media (max-width:600px){ .f-grid{grid-template-columns:1fr} }
@@ -40,3 +41,12 @@
 .f-more .pr span{display:block;font-family:var(--body);font-size:13.5px;color:var(--gray-fog);margin-top:6px}
 .f-more:hover .btn{background:var(--yellow);color:#000}
 @media (max-width:600px){ .f-more{grid-column:auto} }
+/* grade de 4 colunas (Formações): card mais compacto */
+.f-grid .f-vis{height:150px}
+.f-grid .f-body{padding:18px 20px 18px;gap:10px}
+.f-grid .f-card h3{font-size:20px}
+.f-grid .f-card p{font-size:13.5px;line-height:1.45}
+.f-grid .f-facts{gap:5px}
+.f-grid .f-facts li{font-size:12px;padding:4px 8px;gap:5px}
+.f-grid .f-card .tag{font-size:10.5px;padding:4px 9px;white-space:nowrap}
+.f-grid .f-facts .fc-cert{display:none}

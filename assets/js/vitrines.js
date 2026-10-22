@@ -12,7 +12,7 @@
   if (PAGE === 'formacoes'){
     const ordem = ['gestao','ia','dados','marketing','design','lideranca'];
     /* catálogo: um card de venda por formação, filtrável por área */
-    const nomeA = a => a === 'gestao' ? AREAS[a].nome : AREAS[a].curto;
+    const nomeA = a => AREAS[a].curto;
     const lista = ordem.flatMap(a => FORMACOES.filter(f => f.area === a));
     /* mesmo card da Membership (cards-formacao.css) */
     const ic = {
@@ -27,7 +27,7 @@
       <div class="f-vis" style="background-image:url('assets/capas/${f.capa}-800.jpg?v=3')" aria-hidden="true"></div>
       <div class="f-body"><div class="top"><span class="tag tag-area">${nomeA(f.area)}</span>${f.destaque ? `<span class="tag tag-yellow">${f.destaque}</span>` : ''}</div>
         <h3>${f.nome}</h3><p>${f.quem}</p>
-        <ul class="f-facts">${f.h ? `<li>${ic.h}${f.h}h</li>` : ''}<li>${ic.mod}${f.mod} módulos</li><li>${ic.cert}Certificado</li></ul>
+        <ul class="f-facts">${f.h ? `<li>${ic.h}${f.h}h</li>` : ''}<li>${ic.mod}${f.mod} módulos</li><li class="fc-cert">${ic.cert}Certificado</li></ul>
         <div class="meta"><span>Ver formação</span><span class="go">${ic.go}</span></div></div></a>`).join('') +
       `<a class="f-more reveal" href="membership.html"><div><small>Membership PM3</small><h3>Todas as dez<span class="em">em uma só assinatura.</span></h3>
         <p>12 meses de acesso às 10 formações, às +40 sprints, mentorias, workshops ao vivo e comunidade.</p></div>
