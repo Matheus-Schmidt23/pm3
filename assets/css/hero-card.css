@@ -67,3 +67,8 @@
   .m-buy .btns,.m-buy .btns .btn{width:100%}
 }
 .m-main .v-jump{margin:0 0 20px}
+/* celular: foto do hero mais alta e ancorada no rosto (nunca cortar a cabeça) */
+@media (max-width:860px){
+  .m-hero-grid{grid-template-rows:auto clamp(300px,82vw,420px) 200px}
+  .m-photo{background-position-y:18% !important}
+}
