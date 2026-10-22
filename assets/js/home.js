@@ -6,7 +6,7 @@
   camp.querySelector('button').addEventListener('click', () => { camp.classList.add('off'); try { sessionStorage.setItem('pm3_camp','off'); } catch(e){} });
 
   /* brilho do hero segue o cursor: o único efeito forte da página */
-  const hero = document.getElementById('hero');
+  const hero = document.querySelector('#hero .h-main') || document.getElementById('hero');
   if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches){
     let raf;
     hero.addEventListener('pointermove', e => {

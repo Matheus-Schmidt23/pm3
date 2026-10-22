@@ -171,8 +171,11 @@
   if (!hero) return;
   const encaixa = () => {
     hero.style.removeProperty('--s');
+    hero.style.removeProperty('--livre');
     if (innerWidth < 1081) return;
     const livre = innerHeight - (hero.getBoundingClientRect().top + scrollY);
+    /* o hero em cards (Home) ocupa exatamente a primeira dobra */
+    hero.style.setProperty('--livre', livre + 'px');
     if (hero.offsetHeight <= livre + 1) return;
     /* nem tudo escala (paddings laterais, textos pequenos): busca a maior escala que cabe */
     let lo = .62, hi = 1;
