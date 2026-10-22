@@ -50,13 +50,33 @@
 .cx-aw b{position:relative;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.01em;line-height:1;color:#fff}
 .cx-lb{font-family:var(--display);font-weight:700;font-size:10.5px;line-height:1.45;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72);max-width:19em}
 /* faixa de mercado por estágio de carreira */
-.cx-levels{grid-template-columns:repeat(3,1fr)}
+.cx-levels{grid-template-columns:repeat(4,1fr)}
 .cx-levels i{display:inline-flex;align-self:flex-start;font-style:normal;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-pill);padding:5px 11px;margin-bottom:16px}
 .cx-levels div{display:flex;flex-direction:column;padding-top:24px}
-@media (max-width:1080px){ .cx-levels{grid-template-columns:1fr} .cx-levels div + div{padding-left:0;border-left:0} }
+@media (max-width:1080px){ .cx-levels{grid-template-columns:1fr 1fr} .cx-levels div + div{padding-left:0;border-left:0} }
 .cx-hero.cx-sprint::before{background-image:url('../img/certificado-sprint-veludo.jpg?v=2')}
 /* o mockup (recortado no certificado) fica sempre à direita da coluna de texto: nunca passa por baixo dele */
 @media (min-width:861px){
   .cx-hero::before{top:4%;bottom:4%;right:0;left:max(48%,calc(max(var(--gutter),(100% - var(--wrap)) / 2) + 640px));aspect-ratio:auto;background-image:url('../img/certificado-veludo-crop.jpg?v=2');background-size:contain;background-position:right center;-webkit-mask-image:none;mask-image:none}
   .cx-hero.cx-sprint::before{background-image:url('../img/certificado-sprint-veludo-crop.jpg?v=2')}
 }
+/* hover nos três estágios: a coluna acende, a linha amarela corre no topo e o número cresce */
+.cx-levels div{position:relative;isolation:isolate;padding-right:24px;padding-bottom:20px;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.cx-levels div::after{content:"";position:absolute;inset:8px 0 0;z-index:-1;border-radius:16px;background:radial-gradient(120% 90% at 20% 0,rgba(176,77,221,.32),rgba(255,255,255,.05) 70%);border:1px solid rgba(255,255,255,.12);opacity:0;transition:opacity .4s}
+.cx-levels div::before{content:'';position:absolute;left:0;right:0;top:-1px;height:2px;background:linear-gradient(90deg,var(--yellow),transparent);transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.cx-levels b{transform-origin:left bottom;transition:transform .45s cubic-bezier(.2,.7,.2,1),text-shadow .45s}
+.cx-levels i{transition:background .35s,color .35s,border-color .35s}
+.cx-levels span{transition:color .35s}
+@media (hover:hover){
+  .cx-levels div:hover{transform:translateY(-4px)}
+  .cx-levels div:hover::after{opacity:1}
+  .cx-levels div:hover::before{transform:scaleX(1)}
+  .cx-levels div:hover b{transform:scale(1.12);text-shadow:0 0 28px rgba(255,177,42,.45)}
+  .cx-levels div:hover i{background:var(--yellow);border-color:var(--yellow);color:#000}
+  .cx-levels div:hover span{color:#fff}
+  .cx-levels div:hover + div,.cx-levels div:has(+ div:hover){border-left-color:transparent}
+}
+@media (prefers-reduced-motion:reduce){ .cx-levels div,.cx-levels b,.cx-levels div::before{transition:none} }
+.cx-levels div:first-child{padding-left:24px;margin-left:-24px}
+@media (max-width:1080px){ .cx-levels div{padding-left:20px;margin-left:-20px} }
+@media (max-width:600px){ .cx-levels{grid-template-columns:1fr} }
