@@ -171,15 +171,34 @@
     ant.disabled = track.scrollLeft <= 4;
     prox.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
   };
+  let ate = 0;
+  const segura = (ms = 6000) => { ate = Date.now() + ms; };
   const vai = d => track.scrollBy({ left: d * porTela() * passo() });
-  ant.addEventListener('click', () => vai(-1));
-  prox.addEventListener('click', () => vai(1));
+  ant.addEventListener('click', () => { vai(-1); segura(); });
+  prox.addEventListener('click', () => { vai(1); segura(); });
   track.addEventListener('scroll', atualiza, { passive: true });
   track.addEventListener('scrollend', atualiza);
   addEventListener('resize', atualiza);
   document.querySelectorAll('.chip').forEach(ch => ch.addEventListener('click', () => {
     track.scrollTo({ left: 0, behavior: 'instant' });
     requestAnimationFrame(atualiza);
+    segura();
   }));
   atualiza();
+
+  /* passa sozinho: um card a cada 3 s; no fim volta ao começo. Mesmas pausas do carrossel de sprints. */
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const area = track.closest('section');
+  let pausa = false;
+  const visivel = () => { const r = track.getBoundingClientRect(); return r.bottom > innerHeight * .2 && r.top < innerHeight * .8; };
+  track.addEventListener('mouseenter', () => pausa = true);
+  track.addEventListener('mouseleave', () => pausa = false);
+  area.addEventListener('focusin', () => pausa = true);
+  area.addEventListener('focusout', () => pausa = false);
+  ['pointerdown', 'wheel', 'touchstart'].forEach(ev => track.addEventListener(ev, () => segura(), { passive: true }));
+  setInterval(() => {
+    if (!visivel() || pausa || document.hidden || Date.now() < ate || vis().length < 2) return;
+    const noFim = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+    if (noFim) track.scrollTo({ left: 0 }); else track.scrollBy({ left: passo() });
+  }, 3000);
 })();
