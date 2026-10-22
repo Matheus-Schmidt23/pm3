@@ -135,7 +135,7 @@
 .path li.k .dot{background:var(--yellow);color:#000;border-color:var(--yellow)}
 .path em{font-style:normal;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blaze-b)}
 .path li.k em{color:var(--yellow)}
-.path b{font-family:var(--display);font-weight:700;font-size:15px;line-height:1.3;color:#fff;text-wrap:balance;max-width:20ch}
+.path b{font-family:var(--display);font-weight:700;font-size:15px;line-height:1.3;color:#fff}
 /* fundo da seção: aurora em movimento, grão e o 3 em contorno */
 .trilhas-sec{overflow:hidden;isolation:isolate}
 .trilhas-sec .aurora{opacity:.55;inset:-30% -10% -30% 20%}
