@@ -12,13 +12,13 @@
 .h-hero{position:relative;background:#000;color:#fff;overflow:hidden;isolation:isolate;padding:calc(clamp(40px,4.4vw,64px) * var(--s,1)) 0 0}
 .h-hero .glow{position:absolute;z-index:-1;width:900px;height:900px;left:var(--gx,70%);top:var(--gy,30%);transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(176,77,221,.34),rgba(77,43,159,.18) 38%,transparent 66%);pointer-events:none;transition:left .9s cubic-bezier(.2,.7,.2,1),top .9s cubic-bezier(.2,.7,.2,1)}
 .h-hero.grain::after{z-index:-1;opacity:.18}
-.h-top{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:end}
-.h-hero h1{font-size:calc(clamp(52px,6.8vw,100px) * var(--s,1));line-height:.88}
+.h-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.14fr);gap:clamp(28px,4vw,64px);align-items:end}
+.h-hero h1{font-size:calc(clamp(52px,6.4vw,92px) * var(--s,1));line-height:.88}
 .h-hero h1 .l2{color:var(--gray-fog)}
 .h-hero h1 .em{display:block;font-size:.34em;line-height:1.1;margin-top:.22em;color:#fff;letter-spacing:-.01em}
 .h-hero .lead{margin:calc(22px * var(--s,1)) 0 0;max-width:52ch;font-size:calc(clamp(17px,1.5vw,20px) * max(var(--s,1),.85))}
 /* --s: escala da primeira dobra (layout.js). Reduz tamanhos, nunca a largura do container: as margens seguem alinhadas ao resto do site */
-.h-pic{position:relative;aspect-ratio:1/1;border-radius:var(--r-xl) var(--r-xl) 0 var(--r-xl);overflow:hidden;background:#c99be6;align-self:end;justify-self:end;width:calc(100% * var(--s,1))}
+.h-pic{position:relative;aspect-ratio:4/3;border-radius:var(--r-xl) var(--r-xl) 0 var(--r-xl);overflow:hidden;background:#c99be6;align-self:end;justify-self:end;width:calc(100% * var(--s,1))}
 .h-pic .ph{position:absolute;inset:0;background:50% 40%/cover no-repeat;opacity:0;transition:opacity 1.4s ease;animation:kb 18s ease-in-out infinite alternate;will-change:transform}
 .h-pic .ph:nth-child(3n+2){transform-origin:30% 25%;animation-delay:-6s}
 .h-pic .ph:nth-child(3n+3){transform-origin:70% 35%;animation-delay:-12s}
