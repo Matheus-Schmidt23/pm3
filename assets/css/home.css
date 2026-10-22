@@ -104,7 +104,7 @@
 
 .t-form{grid-column:3/5;background:#fff;border:1px solid var(--line);flex-direction:row;align-items:stretch;padding:0}
 .t-form .txt{flex:1;padding:clamp(24px,2.6vw,36px);display:flex;flex-direction:column;justify-content:space-between;gap:24px}
-.t-form .pic{width:42%;background:url('../img/foto-mesa-cafe.jpg?v=2') 50% 40%/cover;border-radius:0 var(--r-xl) var(--r-xl) 0;position:relative}
+.t-form .pic{width:42%;background:url('../img/foto-mesa-cafe.jpg?v=4') 50% 40%/cover;border-radius:0 var(--r-xl) var(--r-xl) 0;position:relative}
 .t-form .pic .ic{--c:#fff;left:0;top:0}
 .t-form p{color:#4a4458}
 .t-form .more{color:var(--purple-royal)}
@@ -122,7 +122,7 @@
 .t-pos .seal{display:inline-flex;gap:10px;align-items:center;font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.2);padding:8px 12px;border-radius:var(--r-pill);align-self:flex-start}
 
 .t-b2b{grid-column:1/5;background:#000;color:#fff;flex-direction:row;align-items:center;min-height:240px}
-.t-b2b .bg{background-image:linear-gradient(90deg,#000 44%,rgba(0,0,0,0) 66%),url('../img/foto-equipe.jpg?v=3');background-size:auto 100%,58% auto;background-repeat:no-repeat;background-position:0 0,right 30%}
+.t-b2b .bg{background-image:linear-gradient(90deg,#000 44%,rgba(0,0,0,0) 66%),url('../img/foto-equipe.jpg?v=4');background-size:auto 100%,58% auto;background-repeat:no-repeat;background-position:0 0,right 30%}
 .t-b2b .txt{max-width:560px}
 .t-b2b p{color:var(--gray-fog)}
 .t-b2b .num{margin-left:clamp(24px,4vw,64px);margin-right:auto;padding-left:clamp(24px,3vw,40px);border-left:1px solid rgba(255,255,255,.16);font-family:var(--display)}
@@ -267,7 +267,7 @@
   .t-form{flex-direction:column}
   .t-form .pic{width:100%;height:180px;border-radius:0 0 var(--r-xl) var(--r-xl);order:2}
   .t-b2b{flex-direction:column;align-items:flex-start}
-  .t-b2b .bg{background-image:linear-gradient(180deg,rgba(0,0,0,.6),#000 70%),url('../img/foto-equipe.jpg?v=3')}
+  .t-b2b .bg{background-image:linear-gradient(180deg,rgba(0,0,0,.6),#000 70%),url('../img/foto-equipe.jpg?v=4')}
   .t-b2b .num{margin-left:0;text-align:left}
   .quotes{grid-template-columns:1fr}
   .qslot{grid-column:auto}
