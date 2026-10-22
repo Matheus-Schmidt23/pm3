@@ -13,16 +13,16 @@
 /* --livre e --s vêm do layout.js: o grid ocupa a primeira dobra e, se faltar altura, os tamanhos encolhem juntos */
 .h-hero{position:relative;background:#000;color:#fff;padding:12px}
 .h-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);grid-template-rows:1fr;gap:12px;min-height:calc(var(--livre,0px) - 24px)}
-.h-main{grid-row:1;position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-xl) 0 0 var(--r-xl);background:#0B0713;padding:calc(clamp(28px,4.4vw,64px) * var(--s,1));display:flex;flex-direction:column;justify-content:space-between;gap:calc(36px * var(--s,1))}
+.h-main{grid-row:1;position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-xl) 0 0 var(--r-xl);background:#0B0713;padding:calc(clamp(28px,4.4vw,64px) * var(--s,1));display:flex;flex-direction:column;justify-content:space-between;gap:calc(clamp(44px,4.4vw,72px) * var(--s,1))}
 .h-hero .glow{position:absolute;z-index:-1;width:900px;height:900px;left:var(--gx,70%);top:var(--gy,30%);transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(176,77,221,.34),rgba(77,43,159,.18) 38%,transparent 66%);pointer-events:none;transition:left .9s cubic-bezier(.2,.7,.2,1),top .9s cubic-bezier(.2,.7,.2,1)}
 .h-main.grain::after{z-index:-1;opacity:.25}
 .h-main .aurora{inset:-30% -25% -40% 35%;opacity:.6}
-.h-main .three{position:absolute;right:-3%;top:-12%;width:min(40%,480px);z-index:-1;opacity:.4;pointer-events:none}
+.h-main .three{position:absolute;right:-2%;top:-16%;width:min(30%,400px);z-index:-1;opacity:.4;pointer-events:none}
 .h-main .three path{fill:none;stroke:rgba(255,255,255,.6);stroke-width:1.2;vector-effect:non-scaling-stroke}
 .h-hero h1{font-size:calc(clamp(56px,7.2vw,124px) * var(--s,1));line-height:.88;margin-top:calc(18px * var(--s,1))}
 .h-hero h1 .l2{color:var(--gray-fog)}
 .h-hero h1 .em{display:block;font-size:.34em;line-height:1.1;margin-top:.22em;color:#fff;letter-spacing:-.01em}
-.h-hero .lead{margin:calc(22px * var(--s,1)) 0 0;max-width:80ch;font-size:max(14px,calc(clamp(15px,1.12vw,18px) * max(var(--s,1),.85)))}
+.h-hero .lead{margin:calc(26px * var(--s,1)) 0 0;max-width:80ch;font-size:max(14px,calc(clamp(15px,1.12vw,18px) * max(var(--s,1),.85)))}
 .h-pic{grid-column:2;grid-row:1;position:relative;overflow:hidden;border-radius:0 var(--r-xl) var(--r-xl) 0;background:#c99be6;min-height:calc(240px * var(--s,1))}
 .h-pic .ph{position:absolute;inset:0;background:50% 30%/cover no-repeat;opacity:0;transition:opacity 1.4s ease;animation:kb 18s ease-in-out infinite alternate;will-change:transform}
 .h-pic .ph:nth-child(3n+2){transform-origin:30% 25%;animation-delay:-6s}
@@ -35,11 +35,11 @@
 .h-pic .badge b{display:block;font-weight:800;font-size:calc(clamp(40px,4vw,60px) * var(--s,1));letter-spacing:-.045em;line-height:1}
 .h-pic .badge span{font-size:13.5px;color:var(--gray-fog)}
 .h-routes{margin:0}
-.intent.h-routes > p{padding-left:0}
+.intent.h-routes > p{padding-left:0;margin-bottom:calc(18px * var(--s,1))}
 /* atalhos dentro do card: lista em 2 colunas, uma linha por objetivo */
 .intent.h-routes ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(20px,2.4vw,40px);border-top:0}
 .intent.h-routes li,.intent.h-routes li:first-child{border-left:0;border-top:1px solid rgba(255,255,255,.14)}
-.intent.h-routes a{min-height:0;flex-direction:column;justify-content:center;gap:3px;padding:calc(14px * var(--s,1)) 40px calc(14px * var(--s,1)) 0}
+.intent.h-routes a{min-height:0;flex-direction:column;justify-content:center;gap:3px;padding:calc(20px * var(--s,1)) 40px calc(20px * var(--s,1)) 0}
 .intent.h-routes a:hover{background:none}
 .intent.h-routes .q{font-size:calc(clamp(17px,1.35vw,22px) * max(var(--s,1),.9))}
 .intent.h-routes .to{font-size:13px}
