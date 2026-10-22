@@ -251,32 +251,15 @@
 .fx-chips button:hover{border-color:var(--purple-royal);color:var(--purple-royal)}
 .fx-chips button.on{background:var(--purple-deep);border-color:var(--purple-deep);color:#fff}
 .fx-chips button.on small{color:var(--blaze-b)}
-/* certificado em HTML (modelo real, logo oficial) */
-.cx-cert3{position:absolute;right:clamp(16px,4vw,72px);top:50%;width:min(48vw,680px);transform:translateY(-50%);perspective:1800px;z-index:-1}
-.cx-cert3::before{content:'';position:absolute;inset:-18% -10%;z-index:-1;background:radial-gradient(50% 50% at 55% 50%,rgba(102,69,177,.45),transparent 70%);filter:blur(20px)}
-.cx-c{position:relative;aspect-ratio:1.414;background:#0c0b10;border-radius:10px;overflow:hidden;transform:rotateX(10deg) rotateY(-16deg) rotateZ(-7deg);transform-style:preserve-3d;box-shadow:0 60px 90px -30px rgba(0,0,0,.9),0 0 0 1px rgba(176,77,221,.35),0 0 60px -10px rgba(102,69,177,.6);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-.cx-hero:hover .cx-c{transform:rotateX(4deg) rotateY(-8deg) rotateZ(-4deg)}
-.cx-ribbon{position:absolute;left:0;right:0;top:0;height:16%;background:url('../tex/tex-dobras-roxas.jpg') center 40%/cover;clip-path:polygon(0 0,100% 0,100% 55%,62% 55%,56% 100%,0 100%)}
-.cx-foot3{position:absolute;left:0;right:0;bottom:0;height:3.2%;background:linear-gradient(90deg,#6645B1,#DACBF6 60%,#FCCBC9)}
-.cx-foot3::before{content:'';position:absolute;left:0;right:0;bottom:100%;height:220%;background:linear-gradient(90deg,#4D2B9F,#6645B1);clip-path:polygon(0 100%,8% 0,92% 0,100% 100%);opacity:.9}
-.cx-in{position:absolute;inset:18% 8% 12%;display:flex;flex-direction:column;align-items:center;text-align:center;color:#fff;font-size:clamp(7px,.72vw,10.5px)}
-.cx-lg{height:2.2em;width:auto;margin-bottom:1.4em}
-.cx-k{font-family:var(--display);font-weight:300;letter-spacing:.06em;text-transform:uppercase;font-size:1.6em;color:rgba(255,255,255,.7)}
-.cx-t{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.01em;font-size:3.3em;line-height:1.05;margin:.15em 0 .7em}
-.cx-o{font-family:var(--display);font-weight:700;font-size:1.15em}
-.cx-n{font-family:var(--display);font-weight:700;font-size:2.3em;margin:.2em 0 .45em}
-.cx-in p{margin:0;font-size:1.05em;line-height:1.45;color:rgba(255,255,255,.85);max-width:46em}
-.cx-sig{margin-top:auto;display:flex;gap:6em}
-.cx-sig span{display:flex;flex-direction:column;align-items:center}
-.cx-sig i{font-family:'Mrs Saint Delafield',cursive;font-style:normal;font-size:2.6em;line-height:1;color:#fff}
-.cx-sig b{font-family:var(--display);font-size:.95em;font-weight:700;margin-top:.1em}
-.cx-sig em{font-style:normal;font-size:.85em;color:rgba(255,255,255,.6)}
-@media (max-width:860px){
-  .cx-cert3{position:relative;right:auto;top:auto;transform:none;width:92%;margin:0 auto 40px;z-index:0}
-  .cx-in{font-size:clamp(5.5px,1.55vw,10px)}
-}
 .cx-proof{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .cx-proof li{display:flex;flex-direction:column;gap:8px;padding:16px 16px 18px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.03)}
 .cx-proof b{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-.02em;line-height:1;color:var(--yellow)}
 .cx-proof span{font-size:14.5px;line-height:1.4;color:rgba(255,255,255,.78)}
 @media (max-width:600px){ .cx-proof{grid-template-columns:1fr} }
+/* mockup do certificado sobre veludo (Magnific) como fundo da dobra */
+@media (max-width:860px){
+
+}
+.cx-hero::before{content:'';position:absolute;z-index:-1;top:3%;bottom:3%;right:-5%;aspect-ratio:2880/1607;background:url('../img/certificado-veludo.jpg') center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 94%,transparent),linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 94%,transparent),linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent);mask-composite:intersect}
+@media (max-width:860px){ .cx-hero{padding-top:62vw} .cx-hero::before{top:0;bottom:auto;right:-25%;height:auto;width:150%} }
+.cx-copy .lead{max-width:520px}
