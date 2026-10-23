@@ -330,3 +330,4 @@
 @media (hover:hover){ .cb:hover{transform:translateY(-4px);border-color:rgba(255,177,42,.45)} .cb:hover .cb-ic{background:var(--yellow);color:#000} }
 @media (max-width:1080px){ .cb-grid{grid-template-columns:1fr 1fr} }
 @media (max-width:600px){ .cb-grid,.cb-track{grid-template-columns:1fr} .cb-track > div{border-radius:10px !important} }
+.pos-dark .pos-card .pc-call{text-wrap:balance}
