@@ -152,7 +152,7 @@
 .co img.av{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center 20%;flex:none;background:#2a1f3b}
 
 /* ---------- ajustes de outubro: foto no topo, cards com capa, fases, coordenação ---------- */
-.p-tex.p-photo{background:#1a1028 url('../img/pos-hero.jpg') 50% 22%/cover}
+.p-tex.p-photo{background:#1a1028 url('../img/pos-hero-kelly.jpg') 50% 22%/cover}
 @media (max-width:860px){ .p-tex.p-photo{min-height:clamp(300px,82vw,420px);background-position:50% 18%} }
 .pos-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .pos-card .f-vis{height:200px}
