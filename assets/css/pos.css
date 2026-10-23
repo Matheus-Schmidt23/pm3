@@ -261,3 +261,4 @@
 @media (min-width:861px){ .cx-hero.cx-pos::before{background-image:url('../img/certificado-pos-veludo-crop.jpg?v=2')} }
 @media (max-width:860px){ .cx-hero.cx-pos::before{background-image:url('../img/certificado-pos-veludo-crop.jpg?v=2')} }
 .pos-dark .pos-card .f-vis{background-position:center}
+.pos-dark .pos-card .f-vis{background-position:72% 30%}
