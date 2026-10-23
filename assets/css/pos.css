@@ -257,3 +257,6 @@
 @media (hover:hover){ .on-dark .eco > div:hover{background:rgba(255,255,255,.08)} }
 .on-dark .eco-strip{color:rgba(255,255,255,.55)}
 .on-dark .eco > div:first-child .n{color:var(--yellow)}
+/* fundo do card do topo: degradê roxo → preto */
+.p-main{background:linear-gradient(135deg,#000 0%,#0B0713 38%,#2a1856 72%,#6645B1 100%)}
+.p-main .aurora{opacity:.45}
