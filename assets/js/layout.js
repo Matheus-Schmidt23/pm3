@@ -51,7 +51,7 @@
         <li><button type="button" aria-expanded="false" aria-controls="mega-sprints">Sprints ${chev}</button>
           ${mega('mega-sprints','Sprints','Cursos de 2 a 12 horas, cada um focado em um desafio específico. Inclusos na Membership.',
             SPRINTS.map(([n,h,q])=>`<li><a href="${h}">${n}<small>${q} cursos</small></a></li>`).join(''),
-            '<a href="sprints.html">Ver todos os sprints →</a><a href="sprint-fundamentos-gestao-produtos.html">Comece por Fundamentos →</a>')}
+            '<a href="sprints.html">Ver todos os sprints →</a>')}
         </li>
         <li><a href="pos-tech.html"${cur('pos-tech')}>Pós Tech</a></li>
         <li><a href="para-empresas.html"${cur('para-empresas')}>Para empresas</a></li>
