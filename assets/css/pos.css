@@ -257,5 +257,3 @@
 @media (hover:hover){ .on-dark .eco > div:hover{background:rgba(255,255,255,.08)} }
 .on-dark .eco-strip{color:rgba(255,255,255,.55)}
 .on-dark .eco > div:first-child .n{color:var(--yellow)}
-/* o 3 do topo fica mais discreto e afastado do texto e dos números */
-.p-main .three{right:-16%;bottom:-30%;width:min(44%,420px);opacity:.22}
