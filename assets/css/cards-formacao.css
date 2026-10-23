@@ -42,7 +42,7 @@
 
 /* ---------- card da Membership no fim do catálogo ---------- */
 .f-more{grid-column:span 2;position:relative;overflow:hidden;isolation:isolate;container-type:inline-size;display:grid;grid-template-columns:1fr minmax(260px,320px);gap:clamp(24px,3vw,48px);align-items:center;border-radius:var(--r-xl);background:#0B0713;color:#fff;padding:clamp(28px,3.4vw,52px);text-decoration:none;transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
-.f-more::before{content:'';position:absolute;inset:0;z-index:-2;background:url('../tex/tex-dobras-roxas.jpg') right center/cover;opacity:.55;-webkit-mask-image:linear-gradient(90deg,transparent 15%,#000 75%);mask-image:linear-gradient(90deg,transparent 15%,#000 75%)}
+.f-more::before{content:'';position:absolute;inset:0;z-index:-2;background:url('../tex/tex-dobras-roxas-hd.jpg') right center/cover;opacity:.55;-webkit-mask-image:linear-gradient(90deg,transparent 15%,#000 75%);mask-image:linear-gradient(90deg,transparent 15%,#000 75%)}
 .f-more::after{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 90% at 0 100%,rgba(77,43,159,.55),transparent 70%)}
 .f-more[hidden]{display:none}
 .f-more:hover{transform:translateY(-4px);box-shadow:0 30px 60px -30px rgba(69,46,120,.8)}
