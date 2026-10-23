@@ -199,3 +199,61 @@
 .perk .ico{transition:background .3s,color .3s}
 @media (hover:hover){ .perk:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent} .perk:not(.wide):hover .ico{background:var(--purple-royal);color:#fff} }
 @media (max-width:860px){ .p-grid{grid-template-rows:auto auto clamp(300px,82vw,420px)} }
+
+/* ---------- Pós Tech dark premium ---------- */
+.pos-dark{background:#05040a}
+.pos-dark + .pos-dark,.pos-dark + .cx-sec,.cx-sec + .pos-dark{border-top:1px solid rgba(255,255,255,.06)}
+.pos-ink{background:#0B0713}
+.pos-dark .h2 .c2,.pos-ink .h2 .c2{color:var(--blaze-b)}
+/* cards das pós: escuros, com foto que se funde no card e acento dourado */
+.pos-dark .pos-card{background:linear-gradient(180deg,#120d1d,#0b0812);border:1px solid rgba(255,255,255,.1);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.pos-dark .pos-card .f-vis{height:240px}
+.pos-dark .pos-card .f-vis::after{background:linear-gradient(180deg,rgba(11,8,18,0) 35%,#120d1d)}
+.pos-dark .pos-card .tag-area{background:rgba(255,177,42,.12);color:var(--yellow);border:1px solid rgba(255,177,42,.35)}
+.pos-dark .pos-card .pc-n{color:rgba(255,255,255,.35);font-size:28px;letter-spacing:-.02em}
+.pos-dark .pos-card h3{color:#fff;font-size:26px}
+.pos-dark .pos-card p{color:rgba(255,255,255,.72)}
+.pos-dark .pc-dl{border-color:rgba(255,255,255,.1)}
+.pos-dark .pc-dl dt{color:var(--blaze-b)}
+.pos-dark .pc-dl dd{color:#fff}
+.pos-dark .pos-card .f-facts li{background:rgba(255,255,255,.07);color:#fff}
+.pos-dark .pos-card .f-facts svg{color:var(--yellow)}
+.pos-dark .pos-card .meta{border-color:rgba(255,255,255,.1);color:var(--yellow)}
+.pos-dark .pos-card .go{background:var(--yellow);color:#000}
+.pos-dark .pos-card:hover{border-color:rgba(255,177,42,.5);box-shadow:0 30px 60px -30px rgba(102,69,177,.9),inset 0 1px 0 rgba(255,255,255,.08)}
+.pos-dark .pos-card:hover .f-vis::before{transform:scale(1.06)}
+/* fases em 5 colunas */
+.phases.phases5{grid-template-columns:repeat(5,1fr);gap:12px}
+.phases5 .ph{min-height:250px;padding:24px;transition:transform .4s cubic-bezier(.2,.7,.2,1),border-color .4s}
+.phases5 .ph h3{font-size:clamp(19px,1.5vw,22px);text-transform:uppercase;letter-spacing:-.01em}
+.phases5 .ph p{font-size:14px;line-height:1.5;color:rgba(255,255,255,.75)}
+.phases5 .ph .cert{display:inline-flex;align-self:flex-start;font-size:11.5px;background:rgba(255,177,42,.12);border:1px solid rgba(255,177,42,.35);border-radius:var(--r-pill);padding:5px 10px}
+.phases5 .ph-final{background:linear-gradient(160deg,rgba(102,69,177,.5),rgba(255,255,255,.04));border-color:rgba(176,77,221,.5)}
+@media (hover:hover){ .phases5 .ph:hover{transform:translateY(-4px);border-color:rgba(255,177,42,.45)} }
+@media (max-width:1080px){ .phases.phases5{grid-template-columns:1fr 1fr} }
+@media (max-width:600px){ .phases.phases5{grid-template-columns:1fr} }
+/* benefícios e investimento no escuro */
+.pos-dark .perk{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff}
+.pos-dark .perk p{color:rgba(255,255,255,.7)}
+.pos-dark .perk .ico{background:rgba(255,177,42,.14);color:var(--yellow)}
+.pos-dark .perk.wide{background:linear-gradient(135deg,#2a1856,#0b0812);border-color:rgba(176,77,221,.4)}
+@media (hover:hover){ .pos-dark .perk:hover{border-color:rgba(255,177,42,.45);box-shadow:none} .pos-dark .perk:not(.wide):hover .ico{background:var(--yellow);color:#000} }
+.pos-dark .pinv > div{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:#fff}
+.pos-dark .pinv > div p{color:rgba(255,255,255,.7)}
+.pos-dark .pinv > div h3{color:rgba(255,255,255,.6)}
+.pos-dark .pinv > div .btn-line{border-color:rgba(255,255,255,.3);color:#fff}
+.pos-dark .pinv > .hl{background:linear-gradient(160deg,#6645B1,#2a1856);border-color:rgba(255,177,42,.45);box-shadow:0 30px 60px -30px rgba(102,69,177,.9)}
+/* coordenação em 4 */
+.coord.coord4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1080px){ .coord.coord4{grid-template-columns:1fr 1fr} }
+.cop .ph img{filter:grayscale(1) contrast(1.05)}
+@media (hover:hover){ .cop:hover .ph img{filter:none} }
+/* Grupo Alun no fundo roxo: painel escuro de vidro */
+.on-dark .eco{background:rgba(5,4,10,.55);border-color:rgba(255,255,255,.14);backdrop-filter:blur(10px)}
+.on-dark .eco > div{border-color:rgba(255,255,255,.1);color:#fff;transition:background .3s}
+.on-dark .eco > div:first-child{background:rgba(255,255,255,.06)}
+.on-dark .eco p{color:rgba(255,255,255,.72)}
+.on-dark .eco .n{color:var(--yellow)}
+@media (hover:hover){ .on-dark .eco > div:hover{background:rgba(255,255,255,.08)} }
+.on-dark .eco-strip{color:rgba(255,255,255,.55)}
+.on-dark .eco > div:first-child .n{color:var(--yellow)}

@@ -1,7 +1,7 @@
 /* card principal do topo: luz que segue o mouse e traço de luz no 3 (só com mouse de verdade e sem "reduzir movimento") */
 (function(){
   if (!matchMedia('(hover: hover) and (pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const main = document.querySelector('.m-main');
+  const main = document.querySelector('.m-main, .p-main');
 
   /* --mx/--my: posição do cursor em %; --px/--py: de -0.5 a 0.5; --rx/--ry: inclinação em graus */
   const liga = (el, inclina) => {

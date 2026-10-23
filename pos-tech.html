@@ -18,9 +18,10 @@
 <link rel="stylesheet" href="assets/css/base.css?v=20">
 <link rel="stylesheet" href="assets/css/components.css?v=5">
 <link rel="stylesheet" href="assets/css/course.css?v=4">
+<link rel="stylesheet" href="assets/css/hero-card.css?v=3">
 <link rel="stylesheet" href="assets/css/cards-formacao.css?v=12">
 <link rel="stylesheet" href="assets/css/certificado.css?v=5">
-<link rel="stylesheet" href="assets/css/pos.css?v=4">
+<link rel="stylesheet" href="assets/css/pos.css?v=7">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -45,6 +46,8 @@
 <section class="p-hero on-dark" aria-labelledby="h1">
   <div class="p-grid">
     <div class="p-main grain" data-nota="A Pós Tech passa a morar em pm3.com.br/pos-tech/, e não mais em www2 ou num domínio à parte: autoridade somada ao site e resposta para a pergunta 'pós reconhecida pelo MEC' (GEOV.ai).">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+      <svg class="three" viewBox="0 0 55 55" aria-hidden="true"><path d="M47.9654 0H6.74073C3.01862 0 0 3.01757 0 6.73838V47.9486C0 51.6694 3.01862 54.687 6.74073 54.687H32.6165C37.0037 54.687 41.5188 49.7131 41.5188 44.0488C41.5188 37.6301 35.2897 32.4261 28.8688 32.4261H20.0687V29.3062L36.7351 13.4768H11.7163V8.59239H44.8572V11.9552L44.2944 12.4922L28.6513 27.5289C38.27 27.5289 46.4177 35.4564 46.4177 44.036C46.4177 48.2555 44.8956 51.7973 42.5165 54.6742H47.9526C51.6747 54.6742 54.6933 51.6567 54.6933 47.9358V6.73838C54.6933 3.01757 51.6747 0 47.9526 0"/></svg>
       <div>
         <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Pós Tech</li></ol>
         <h1 class="display" id="h1">Sua pós em<br>produto e<br><span class="l2">tecnologia.</span><span class="em">Com certificado do MEC.</span></h1>
@@ -60,10 +63,10 @@
     <div class="p-tex p-photo" role="img" aria-label="Profissional em um campus de tecnologia segurando um notebook"><span class="seal"><i></i>PM3 + FIAP · Grupo Alun</span></div>
     <div class="p-buy" data-nota="Data da turma vira campo editável no CMS, com data de saída: quando a inscrição fecha, o selo troca sozinho para a próxima turma.">
       <span class="ic ic-tl" style="left:0;top:0;--c:#000;--r:40px" aria-hidden="true"></span>
-      <span class="when">Próxima turma: 29 de outubro</span>
+      <span class="when">Últimas vagas · inscrições até 28/10</span>
       <div>
         <div class="val"><span class="x">18x</span><b><sup>R$</sup>735</b></div>
-        <p class="alm">Alumni PM3 e FIAP: <b>18x R$ 580</b></p>
+        <p class="alm">Alunos e ex-alunos FIAP, Alura e PM3: <b>18x R$ 580</b></p>
       </div>
       <a class="btn btn-primary" href="#pos">Escolher a pós <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
     </div>
@@ -71,7 +74,7 @@
 </section>
 
 <!-- 2 · AS TRÊS PÓS -->
-<section class="section" id="pos" aria-labelledby="ps-t">
+<section class="section black on-dark pos-dark" id="pos" aria-labelledby="ps-t">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">01</span> Pós-graduações</p><h2 class="h2" id="ps-t">Escolha a<br><span class="c2">sua pós</span></h2></div>
@@ -86,18 +89,20 @@
 </section>
 
 <!-- 4 · COMO FUNCIONA -->
-<section class="section black on-dark" aria-labelledby="cf-t">
+<section class="section on-dark pos-dark pos-ink" aria-labelledby="cf-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">02</span> Como funciona</p><h2 class="h2" id="cf-t">Um projeto real,<br><span class="c2">do primeiro ao último mês</span></h2></div>
-      <p class="lead">Você aplica cada conteúdo em um projeto que evolui até virar portfólio, com um certificado a cada fase concluída.</p>
+      <div><p class="kicker"><span class="n">02</span> Como funciona</p><h2 class="h2" id="cf-t">5 fases,<br><span class="c2">um projeto real</span></h2></div>
+      <p class="lead">A cada dois meses, uma fase nova e uma entrega do seu projeto. Cada fase concluída vale uma micro-certificação, antes mesmo do fim do curso.</p>
     </div>
-    <div class="phases phases3" data-nota="Estrutura comum às três pós (meses 1 e 2 de fundamentos, especialização em 3 fases, projeto final). O conteúdo de cada fase vem da ementa de cada pós; hoje há ementa publicada só para os meses 1 e 2 de Digital Product Management.">
-      <div class="ph reveal" style="--i:1"><span class="m">Meses 1 e 2</span><h3>Fundamentos</h3><p>Negócios de tecnologia, inteligência de mercado e estratégia: a base comum às três pós.</p><span class="cert">1 certificado</span></div>
-      <div class="ph ph-wide reveal" data-d="1" style="--i:2"><span class="m">Meses 3 a 8</span><h3>Especialização</h3><p>Três fases com o conteúdo da sua pós. A cada fase, o projeto avança com o que você acabou de aprender, com encontros ao vivo e mentoria dos professores.</p><span class="cert">3 certificados de fase</span></div>
-      <div class="ph ph-final reveal" data-d="2" style="--i:3"><span class="m">Meses 9 e 10</span><h3>Projeto final</h3><p>O projeto completo, apresentado e pronto para o portfólio.</p><span class="cert">Certificado de pós MEC</span></div>
+    <div class="phases phases5" data-nota="Fases da pós em Digital Product Management, conforme a página da FIAP (postech.fiap.com.br). As outras pós seguem a mesma estrutura de 5 fases com conteúdo próprio.">
+      <div class="ph reveal" style="--i:1"><span class="m">Fase 1 · meses 1 e 2</span><h3>Inovação e estratégia</h3><p>Negócios de tecnologia, inteligência de mercado e cultura de inovação.</p><span class="cert">Micro-certificação</span></div>
+      <div class="ph reveal" data-d="1" style="--i:2"><span class="m">Fase 2 · meses 3 e 4</span><h3>Design e pesquisa</h3><p>Problemas complexos, design thinking, pesquisa e desenho de MVPs.</p><span class="cert">Micro-certificação</span></div>
+      <div class="ph reveal" data-d="2" style="--i:3"><span class="m">Fase 3 · meses 5 e 6</span><h3>UX, no-code e IA</h3><p>UX/UI, no/low-code, gestão ágil e IA aplicada a produtos.</p><span class="cert">Micro-certificação</span></div>
+      <div class="ph reveal" data-d="3" style="--i:4"><span class="m">Fase 4 · meses 7 e 8</span><h3>Marketing e growth</h3><p>Aquisição, ativação, product-led growth e product marketing.</p><span class="cert">Micro-certificação</span></div>
+      <div class="ph ph-final reveal" data-d="4" style="--i:5"><span class="m">Fase 5 · meses 9 e 10</span><h3>Dados e liderança</h3><p>Métricas, OKRs, roadmaps, finanças de produto e liderança.</p><span class="cert">Certificado FIAP · MEC</span></div>
     </div>
-    <div class="hands2 reveal"><p>Durante a pós</p><ul><li><b>Hackathons</b><span>Desafios em equipe com prazo curto</span></li><li><b>Datathons</b><span>Competições com bases de dados reais</span></li><li><b>Capture the Flag</b><span>Desafios práticos de tecnologia</span></li><li><b>Bootcamps</b><span>Imersões intensivas em um tema</span></li><li><b>Lives hands-on</b><span>Aulas práticas ao vivo</span></li><li><b>Code in the Dark</b><span>Competição de front-end às cegas</span></li></ul></div>
+    <div class="hands2 reveal"><p>Do primeiro ao último mês</p><ul><li><b>Tech Challenge</b><span>O projeto principal, com uma entrega ao fim de cada fase</span></li><li><b>Aula inaugural ao vivo</b><span>Para conhecer coordenação, professores e turma</span></li><li><b>Hackathon Experience</b><span>Um dia inteiro para aplicar tudo o que aprendeu</span></li><li><b>Dois especialistas por aula</b><span>Aulas assíncronas, no seu ritmo, com vídeo e prática</span></li><li><b>Lives com professores</b><span>Encontros ao vivo, opcionais, durante as fases</span></li><li><b>Portfólio real</b><span>Um case completo para mostrar no mercado</span></li></ul></div>
   </div>
 </section>
 
@@ -131,7 +136,7 @@
   </div>
 </section>
 <!-- 5 · GRUPO ALUN -->
-<section class="section tex" aria-labelledby="al-t">
+<section class="section deep on-dark grain" aria-labelledby="al-t">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">04</span> Grupo Alun</p><h2 class="h2" id="al-t">Três escolas,<br><span class="c2">uma pós</span></h2></div>
@@ -147,18 +152,18 @@
 </section>
 
 <!-- 6 · BENEFÍCIOS -->
-<section class="section white" aria-labelledby="bn-t">
+<section class="section black on-dark pos-dark" aria-labelledby="bn-t">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">05</span> Incluso na matrícula</p><h2 class="h2" id="bn-t">Benefícios<br><span class="c2">da matrícula</span></h2></div>
-      <p class="lead">A partir da matrícula, você tem acesso a cursos da PM3 e da Alura para se preparar e complementar a pós.</p>
+      <p class="lead">A partir da matrícula, você já começa a estudar e entra na comunidade da Pós Tech.</p>
     </div>
     <div class="perks">
-      <div class="perk reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><h3>PM3 Sprints</h3><p>Acesso aos cursos curtos da plataforma de sprints da PM3 durante a pós.</p></div>
-      <div class="perk reveal" data-d="1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/></svg></span><h3>Alura completa</h3><p>Mais de 1.300 cursos da plataforma Alura, incluindo o Alura Língua.</p></div>
-      <div class="perk reveal" data-d="2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/></svg></span><h3>Warm-up</h3><p>Trilha preparatória de cursos para começar a pós com a base necessária.</p></div>
-      <div class="perk reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Unidades e polos</h3><p>Estude online e conte com 3 unidades FIAP em São Paulo e 4 polos pelo Brasil.</p></div>
-      <div class="perk wide reveal" data-d="1"><div><h3>Extensões internacionais</h3><p>Ao terminar a pós, amplie os estudos com parceiros internacionais em transformação digital e empreendedorismo.</p></div><div class="cities"><span>Lisboa</span><span>Boston</span><span>Coimbra</span></div></div>
+      <div class="perk reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><h3>PM3 Sprints</h3><p>Acesso completo a mais de 30 cursos da plataforma PM3 Sprints desde a matrícula.</p></div>
+      <div class="perk reveal" data-d="1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/></svg></span><h3>Comunidade no Discord</h3><p>Professores, especialistas e community managers para discutir projetos e tirar dúvidas o tempo todo.</p></div>
+      <div class="perk reveal" data-d="2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/></svg></span><h3>Warm-up</h3><p>Antes da aula inaugural, uma trilha de cursos PM3 Sprints e Alura para chegar aquecido.</p></div>
+      <div class="perk reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Unidades e polos</h3><p>Estude online e conte com unidades FIAP em São Paulo e polos no Rio, em Porto Alegre, Belo Horizonte e Recife.</p></div>
+      <div class="perk wide reveal" data-d="1"><div><h3>Extensões internacionais</h3><p>Ao terminar a pós, amplie os estudos com parceiros internacionais em transformação digital e empreendedorismo.</p></div><div class="cities"><span>Lisboa</span><span>Boston</span><span>Coimbra</span><span>Porto</span></div></div>
     </div>
   </div>
 </section>
@@ -168,26 +173,27 @@
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">06</span> Coordenação</p><h2 class="h2" id="co-t">Quem conduz<br><span class="c2">a pós</span></h2></div>
-      <p class="lead">Professores, experts de mercado e especialistas da FIAP e da PM3, com encontros ao vivo e exclusivos.</p>
+      <p class="lead">Coordenação da FIAP e professores que lideram produto em empresas como Oracle e Portobello. Na pós de Digital Product Management:</p>
     </div>
-    <div class="coord coord2" data-nota="Coordenação da pós em Digital Product Management, conforme o site provisório. Cada pós mostra a sua na própria página. Fotos do site atual (resolução baixa para cards grandes: pedir originais).">
-      <figure class="cop reveal"><div class="ph"><img src="assets/people/andrea-paiva.webp" alt="Andréa Paiva" loading="lazy"></div><figcaption><small>Diretora</small><b>Andréa Paiva</b><span>Diretora de Pós-Graduação Digital, FIAP</span></figcaption></figure>
-      <figure class="cop reveal" data-d="1"><div class="ph"><img src="assets/people/jose-rubens-rodrigues.webp" alt="José Rubens Rodrigues" loading="lazy"></div><figcaption><small>Gerente acadêmico</small><b>José Rubens Rodrigues</b><span>Gestor acadêmico Pós Tech, FIAP</span></figcaption></figure>
-      <figure class="cop reveal" data-d="2"><div class="ph"><img src="assets/people/monica-lobenschuss.webp" alt="Monica Lobenschuss" loading="lazy"></div><figcaption><small>Coordenadora</small><b>Monica Lobenschuss</b><span>Sócia na Vendas Exponenciais</span></figcaption></figure>
+    <div class="coord coord2 coord4" data-nota="Coordenação e professores da pós em Digital Product Management, conforme a página da FIAP. Cada pós mostra a sua equipe na própria página.">
+      <figure class="cop reveal"><div class="ph"><img src="assets/people/pos-andrea-paiva.png" alt="Andréa Paiva" loading="lazy"></div><figcaption><small>Diretora</small><b>Andréa Paiva</b><span>Diretora de Pós-Graduação Digital, FIAP</span></figcaption></figure>
+      <figure class="cop reveal" data-d="1"><div class="ph"><img src="assets/people/pos-renato-bonario.png" alt="Renato Bonario" loading="lazy"></div><figcaption><small>Coordenador</small><b>Renato Bonario</b><span>Product Owner de dados, Portobello Shop</span></figcaption></figure>
+      <figure class="cop reveal" data-d="2"><div class="ph"><img src="assets/people/pos-laura-napoles.png" alt="Laura Nápoles" loading="lazy"></div><figcaption><small>Professora</small><b>Laura Nápoles</b><span>Community-Led Growth, Oracle</span></figcaption></figure>
+      <figure class="cop reveal" data-d="3"><div class="ph"><img src="assets/people/pos-cassio-oliveira.png" alt="Cassio Oliveira" loading="lazy"></div><figcaption><small>Professor</small><b>Cassio Oliveira</b><span>Gerente de Projetos, Triggo AI</span></figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- 8 · INVESTIMENTO -->
-<section class="section" id="investimento" aria-labelledby="iv-t">
+<section class="section black on-dark pos-dark" id="investimento" aria-labelledby="iv-t">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">07</span> Investimento</p><h2 class="h2" id="iv-t">Condições<br><span class="c2">de matrícula</span></h2></div>
-      <p class="lead">Processo seletivo 100% digital e matrícula própria, separada da Membership. O valor é o mesmo para as três pós.</p>
+      <p class="lead">Processo seletivo 100% digital. À vista ou em até 18x, com o mesmo valor para as três pós. Inscrições até 28/10, início das aulas em 29/10.</p>
     </div>
     <div class="pinv">
       <div class="reveal"><h3>Matrícula</h3><div class="v"><span class="x">18x</span><b><sup>R$</sup>735</b></div><p>Para qualquer uma das três pós-graduações.</p><a class="btn btn-line" href="#">Inscreva-se</a></div>
-      <div class="hl on-dark reveal" data-d="1" data-nota="Condição para quem já é aluno PM3: liga a Pós Tech à base da Membership e das formações."><h3>Alumni PM3 e FIAP</h3><div class="v"><span class="x">18x</span><b><sup>R$</sup>580</b></div><p>20% de desconto para alunos e ex-alunos da PM3 ou da FIAP.</p><a class="btn btn-light" href="#">Inscreva-se como alumni</a></div>
+      <div class="hl on-dark reveal" data-d="1" data-nota="Condição para quem já é aluno PM3: liga a Pós Tech à base da Membership e das formações."><h3>Alumni FIAP, Alura e PM3</h3><div class="v"><span class="x">18x</span><b><sup>R$</sup>580</b></div><p>20% de desconto para alunos e ex-alunos. O desconto entra automático na matrícula.</p><a class="btn btn-light" href="#">Inscreva-se como alumni</a></div>
       <div class="reveal" data-d="2"><h3>Empresas parceiras</h3><div class="v"><b>20% off</b></div><p>Colaboradores de empresas parceiras da FIAP também têm 20% de desconto.</p><a class="btn btn-line" href="para-empresas.html">PM3 para empresas</a></div>
     </div>
   </div>
@@ -206,8 +212,9 @@
       <details open><summary>A Pós Tech é reconhecida pelo MEC?<i aria-hidden="true"></i></summary><p>Sim. A Pós Tech é uma pós-graduação da FIAP, criada com a PM3, com certificado reconhecido pelo MEC.</p></details>
       <details><summary>Quem pode fazer a Pós Tech?<i aria-hidden="true"></i></summary><p>Pessoas com formação superior completa realizada no Brasil, com colação de grau em curso tecnólogo, bacharelado ou licenciatura. Cursos de formação específica ou sequenciais não habilitam para o ingresso.</p></details>
       <details><summary>Quanto tempo dura?<i aria-hidden="true"></i></summary><p>10 meses e 360 horas de conteúdo, com encontros ao vivo com os professores.</p></details>
-      <details><summary>Qual a modalidade?<i aria-hidden="true"></i></summary><p>100% digital e hands-on, com a opção de contar com as 3 unidades da FIAP em São Paulo e 4 polos pelo Brasil.</p></details>
-      <details><summary>Sou aluno da PM3. Tenho desconto?<i aria-hidden="true"></i></summary><p>Sim. Alunos e ex-alunos da PM3 ou da FIAP têm 20% de desconto: 18x de R$ 580.</p></details>
+      <details><summary>Qual a modalidade?<i aria-hidden="true"></i></summary><p>Aulas 100% digitais, assíncronas e hands-on, com lives opcionais e suporte no Discord. Ao final, há uma única atividade individual presencial, agendada por você em uma unidade ou polo da FIAP (São Paulo, Rio, Porto Alegre, Belo Horizonte ou Recife).</p></details>
+      <details><summary>Sou aluno da PM3. Tenho desconto?<i aria-hidden="true"></i></summary><p>Sim. Alunos e ex-alunos da PM3, da FIAP e da Alura têm 20% de desconto: 18x de R$ 580. Basta usar na matrícula o mesmo e-mail da plataforma PM3; o desconto aparece automaticamente.</p></details>
+      <details><summary>Tem TCC? Como sou avaliado?<i aria-hidden="true"></i></summary><p>Não há TCC. A avaliação é feita pelo Tech Challenge (uma entrega ao final de cada fase), pelo Hackathon Experience e por uma atividade individual presencial no fim do curso. O certificado é emitido pela FIAP, Centro Universitário com nota máxima no MEC.</p></details>
       <details><summary>Qual a diferença para as formações e a Membership?<i aria-hidden="true"></i></summary><p>As formações são cursos livres, no seu ritmo, e fazem parte da Membership. A Pós Tech é uma pós-graduação de 10 meses com certificado reconhecido pelo MEC, turmas e projeto em 5 fases. Tem matrícula e valor próprios e não está incluída na Membership.</p></details>
     </div>
   </div>
@@ -227,5 +234,6 @@
 </main>
 
 <script src="assets/js/layout.js?v=23"></script>
+<script src="assets/js/hero-card.js?v=2"></script>
 </body>
 </html>
