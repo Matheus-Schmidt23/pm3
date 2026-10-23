@@ -180,8 +180,6 @@
 @media (hover:hover){ .hands2 li:hover{background:rgba(102,69,177,.25);border-color:rgba(176,77,221,.5)} }
 @media (max-width:1080px){ .phases.phases3{grid-template-columns:1fr} .hands2 ul{grid-template-columns:1fr 1fr} }
 @media (max-width:600px){ .hands2 ul{grid-template-columns:1fr} }
-/* dobra do certificado: enquanto não houver o mockup do certificado FIAP/MEC, usa a textura do topo como fundo à direita */
-.cx-hero.cx-pos::before{background-image:url('../tex/tex-fitas-vidro.jpg') !important;background-size:cover !important;background-position:center !important;-webkit-mask-image:linear-gradient(90deg,transparent,#000 35%),linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent) !important;-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 35%),linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent) !important;mask-composite:intersect}
 .coord.coord2{grid-template-columns:repeat(3,1fr);gap:16px}
 .cop{margin:0;border-radius:var(--r-card);overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);transition:transform .4s cubic-bezier(.2,.7,.2,1),border-color .4s}
 .cop .ph{position:relative;aspect-ratio:4/4.2;overflow:hidden;background:#1a1226}
@@ -260,3 +258,5 @@
 /* fundo do card do topo: degradê roxo → preto */
 .p-main{background:linear-gradient(135deg,#000 0%,#0B0713 38%,#2a1856 72%,#6645B1 100%)}
 .p-main .aurora{opacity:.45}
+@media (min-width:861px){ .cx-hero.cx-pos::before{background-image:url('../img/certificado-pos-veludo-crop.jpg')} }
+@media (max-width:860px){ .cx-hero.cx-pos::before{background-image:url('../img/certificado-pos-veludo-crop.jpg')} }
