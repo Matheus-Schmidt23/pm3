@@ -345,3 +345,8 @@
 .h-main.on .three .trace{opacity:1;animation-duration:3.2s}
 @keyframes fx-trace{to{stroke-dashoffset:-1}}
 @media (prefers-reduced-motion:reduce){ .h-main .three .trace{display:none} }
+/* Ken Burns consistente: cada foto entra sempre em escala 1 e aproxima devagar só enquanto está visível
+   (ao sair, mantém o zoom durante o fade e volta a 1 já invisível) */
+.h-pic .ph{animation:none;transform:scale(1);transform-origin:50% 30%;transition:opacity 1.4s ease,transform 0s linear 1.4s}
+.h-pic .ph.on{transform:scale(1.06);transition:opacity 1.4s ease,transform 6s linear}
+@media (prefers-reduced-motion:reduce){ .h-pic .ph,.h-pic .ph.on{transform:none;transition:opacity .4s} }
