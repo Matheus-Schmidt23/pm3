@@ -28,19 +28,6 @@
 .f-grid > .f-card[hidden]{display:none}
 @media (max-width:1080px){ .f-grid{grid-template-columns:1fr 1fr} }
 @media (max-width:600px){ .f-grid{grid-template-columns:1fr} }
-.f-more{grid-column:span 2;position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-card);background:#0B0713;color:#fff;padding:clamp(28px,3.4vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:28px;text-decoration:none}
-.f-more::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 90% at 100% 0,rgba(176,77,221,.55),transparent 60%),radial-gradient(60% 80% at 0 110%,rgba(77,43,159,.7),transparent 70%)}
-.f-more[hidden]{display:none}
-.f-more small{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blaze-b)}
-.f-more h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.03em;font-size:clamp(30px,3.2vw,46px);line-height:.95;margin:12px 0 0}
-.f-more h3 .em{display:block;font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.01em;color:var(--blaze-b);margin-top:6px}
-.f-more p{margin:14px 0 0;max-width:44ch;font-size:15px;color:rgba(255,255,255,.8)}
-.f-more .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
-.f-more .pr{font-family:var(--display);line-height:1}
-.f-more .pr b{font-size:clamp(26px,2.4vw,34px);font-weight:800;letter-spacing:-.03em}
-.f-more .pr span{display:block;font-family:var(--body);font-size:13.5px;color:var(--gray-fog);margin-top:6px}
-.f-more:hover .btn{background:var(--yellow);color:#000}
-@media (max-width:600px){ .f-more{grid-column:auto} }
 /* grade de 4 colunas (Formações): card mais compacto */
 .f-grid .f-vis{height:150px}
 .f-grid .f-body{padding:18px 20px 18px;gap:10px}
@@ -50,9 +37,42 @@
 .f-grid .f-facts li{font-size:12px;padding:4px 8px;gap:5px}
 .f-grid .f-card .tag{font-size:10.5px;padding:4px 9px;white-space:nowrap}
 .f-grid .f-facts .fc-cert{display:none}
-.f-more.f-more-full{grid-column:1/-1;flex-direction:row;align-items:flex-end}
-.f-more.f-more-full > div:first-child{flex:1}
-@media (max-width:860px){ .f-more.f-more-full{flex-direction:column;align-items:stretch} }
 .fx-more{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:32px}
 .fx-more small{font-size:13px;color:var(--muted)}
-#catalogo > .wrap > .f-more{margin-top:40px}
+
+/* ---------- card da Membership no fim do catálogo ---------- */
+.f-more{grid-column:span 2;position:relative;overflow:hidden;isolation:isolate;container-type:inline-size;display:grid;grid-template-columns:1fr minmax(260px,320px);gap:clamp(24px,3vw,48px);align-items:center;border-radius:var(--r-xl);background:#0B0713;color:#fff;padding:clamp(28px,3.4vw,52px);text-decoration:none;transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.f-more::before{content:'';position:absolute;inset:0;z-index:-2;background:url('../tex/tex-dobras-roxas.jpg') right center/cover;opacity:.55;-webkit-mask-image:linear-gradient(90deg,transparent 15%,#000 75%);mask-image:linear-gradient(90deg,transparent 15%,#000 75%)}
+.f-more::after{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 90% at 0 100%,rgba(77,43,159,.55),transparent 70%)}
+.f-more[hidden]{display:none}
+.f-more:hover{transform:translateY(-4px);box-shadow:0 30px 60px -30px rgba(69,46,120,.8)}
+.f-more .fm-copy small{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blaze-b)}
+.f-more h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.03em;font-size:clamp(30px,3vw,44px);line-height:.95;margin:12px 0 0}
+.f-more h3 .em{display:block;font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.01em;color:var(--blaze-b);margin-top:6px}
+.f-more p{margin:16px 0 0;max-width:46ch;font-size:15.5px;line-height:1.5;color:rgba(255,255,255,.78)}
+.fm-list{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.fm-list li{display:flex;align-items:center;gap:10px;font-size:14.5px;color:#fff}
+.fm-list svg{flex:none;width:22px;height:22px;padding:4px;border-radius:50%;background:rgba(255,177,42,.16);color:var(--yellow)}
+.fm-price{position:relative;display:flex;flex-direction:column;gap:6px;padding:26px 24px 22px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-family:var(--display)}
+.fm-price small{font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.fm-price b{font-weight:800;font-size:clamp(30px,2.6vw,38px);letter-spacing:-.03em;line-height:1}
+.fm-price b i{font-style:normal;font-size:.5em;font-weight:700;color:var(--blaze-b);margin-right:2px}
+.fm-price > span:not(.btn){font-family:var(--body);font-size:14px;color:rgba(255,255,255,.7)}
+.fm-price .btn{margin-top:14px;justify-content:center}
+.fm-price em{font-style:normal;font-family:var(--body);font-size:12.5px;text-align:center;color:rgba(255,255,255,.6);margin-top:4px}
+.f-more:hover .fm-price .btn{background:var(--yellow);color:#000}
+.f-more-full{grid-column:1/-1;margin-top:40px}
+@container (max-width:720px){ .fm-list{grid-template-columns:1fr} }
+
+@media (max-width:860px){ .f-more,.f-more-full{grid-template-columns:1fr;grid-column:1/-1} }
+/* versão compacta (ocupa 2 colunas do catálogo de Formações): texto em cima, preço em linha embaixo */
+.f-more:not(.f-more-full){grid-template-columns:1fr;align-content:space-between;gap:24px}
+.f-more:not(.f-more-full) .fm-list{grid-template-columns:1fr 1fr;gap:8px 16px}
+.f-more:not(.f-more-full) .fm-list li{font-size:13.5px}
+.f-more:not(.f-more-full) .fm-price{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:16px;row-gap:2px;padding:18px 20px}
+.f-more:not(.f-more-full) .fm-price small{grid-column:1}
+.f-more:not(.f-more-full) .fm-price .btn{grid-column:2;grid-row:1/4;margin:0}
+.f-more:not(.f-more-full) .fm-price em{display:none}
+@media (max-width:600px){ .f-more:not(.f-more-full) .fm-price{grid-template-columns:1fr} .f-more:not(.f-more-full) .fm-price .btn{grid-column:1;grid-row:auto;margin-top:12px} .f-more:not(.f-more-full) .fm-list{grid-template-columns:1fr} }
+.fm-price b{white-space:nowrap}
+.f-more:not(.f-more-full) .fm-price b{font-size:30px}

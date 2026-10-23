@@ -8,6 +8,17 @@
   const NIVEL = { 'Base': 1, 'Intermediário': 2, 'Avançado': 3 };
   const lvl = n => `<span class="lvl" aria-hidden="true">${[1,2,3].map(i => `<i class="${i <= NIVEL[n] ? 'on' : ''}"></i>`).join('')}</span>`;
 
+  /* card da Membership no fim dos catálogos de Formações e Sprints */
+  const membCard = (extra = '') => {
+    const ok = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>';
+    const itens = ['10 formações completas, com certificado', '+40 sprints de 2 a 12 horas', 'Mentorias e workshops ao vivo', 'Comunidade com +60 mil profissionais'];
+    return `<a class="f-more${extra} reveal" href="membership.html">
+      <div class="fm-copy"><small>Membership PM3</small><h3>Um ano para<span class="em">acelerar a sua carreira.</span></h3>
+        <p>Acesso completo ao catálogo da PM3 por 12 meses. Você escolhe a ordem, a PM3 indica o caminho.</p>
+        <ul class="fm-list">${itens.map(t => `<li>${ok}${t}</li>`).join('')}</ul></div>
+      <div class="fm-price"><small>Assinatura anual</small><b><i>12x</i> R$ 299,91</b><span>ou R$ 3.599 à vista</span>
+        <span class="btn btn-primary">Assinar a Membership ${arrow}</span><em>7 dias de garantia · acesso imediato</em></div></a>`;
+  };
   /* ---------- /formacoes/ ---------- */
   if (PAGE === 'formacoes'){
     const ordem = ['gestao','ia','dados','marketing','design','lideranca'];
@@ -28,10 +39,7 @@
       <div class="f-body"><div class="top"><span class="tag tag-area">${nomeA(f.area)}</span>${f.destaque ? `<span class="tag tag-yellow">${f.destaque}</span>` : ''}</div>
         <h3>${f.nome}</h3><p>${f.quem}</p>
         <ul class="f-facts">${f.h ? `<li>${ic.h}${f.h}h</li>` : ''}<li>${ic.mod}${f.mod} módulos</li><li class="fc-cert">${ic.cert}Certificado</li></ul>
-        <div class="meta"><span>Ver formação</span><span class="go">${ic.go}</span></div></div></a>`).join('') +
-      `<a class="f-more reveal" href="membership.html"><div><small>Membership PM3</small><h3>Todas as dez<span class="em">em uma só assinatura.</span></h3>
-        <p>12 meses de acesso às 10 formações, às +40 sprints, mentorias, workshops ao vivo e comunidade.</p></div>
-        <div class="row"><div class="pr"><b>12x R$ 299,91</b><span>ou R$ 3.599 à vista</span></div><span class="btn btn-light">Conhecer a Membership ${ic.go}</span></div></a>`;
+        <div class="meta"><span>Ver formação</span><span class="go">${ic.go}</span></div></div></a>`).join('') + membCard();
     const filtra = a => {
       document.querySelectorAll('#fx-chips button').forEach(b => b.classList.toggle('on', b.dataset.f === a));
       document.querySelectorAll('#fx-grid .f-card').forEach(c => c.hidden = !!a && c.dataset.a !== a);
@@ -61,10 +69,7 @@
       <div class="f-body"><div class="top"><span class="tag tag-area">${nomeA(s.area)}</span>${s.url !== '#' ? '<span class="tag tag-yellow">Comece aqui</span>' : ''}</div>
         <h3>${s.nome}</h3><p>${s.obj}</p>
         <ul class="f-facts"><li>${ic.h}${s.h}h</li><li>${ic.cert}Certificado</li></ul>
-        <div class="meta"><span>Ver sprint</span><span class="go">${ic.go}</span></div></div></a>`).join('') +
-      `<a class="f-more f-more-full reveal" href="membership.html"><div><small>Membership PM3</small><h3>Todas as sprints<span class="em">e as 10 formações.</span></h3>
-        <p>12 meses de acesso às +40 sprints, às 10 formações, mentorias, workshops ao vivo e comunidade.</p></div>
-        <div class="row"><div class="pr"><b>12x R$ 299,91</b><span>ou R$ 3.599 à vista</span></div><span class="btn btn-light">Conhecer a Membership ${ic.go}</span></div></a>`;
+        <div class="meta"><span>Ver sprint</span><span class="go">${ic.go}</span></div></div></a>`).join('') + membCard(' f-more-full');
     /* mostra 12; "Carregar mais" abre todas as restantes de uma vez (respeitando o filtro) */
     const PAG = 12; let area = '', limite = PAG;
     $('#fx-grid').insertAdjacentHTML('afterend', '<div class="fx-more"><button type="button" class="btn btn-primary" id="fx-mais">Carregar mais sprints</button><small id="fx-cont"></small></div>');
