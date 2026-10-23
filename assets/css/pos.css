@@ -262,3 +262,12 @@
 @media (max-width:860px){ .cx-hero.cx-pos::before{background-image:url('../img/certificado-pos-veludo-crop.jpg?v=2')} }
 .pos-dark .pos-card .f-vis{background-position:center}
 .pos-dark .pos-card .f-vis{background-position:72% 30%}
+/* capas oficiais da FIAP nos cards, com o lockup e a tipografia fina das páginas dos cursos */
+.pos-dark .pos-card .f-vis.fv-fiap{height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;background-size:cover;background-position:center;padding:20px}
+.pos-dark .pos-card .f-vis.fv-fiap::after{background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.15) 55%,#120d1d)}
+.fv-fiap > *{position:relative;z-index:1}
+.fv-lock{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:300;font-size:12px;letter-spacing:.24em;color:#fff}
+.fv-lock i{width:1px;height:14px;background:rgba(255,255,255,.45)}
+.fv-pm3{height:14px;width:auto}
+.fv-name{font-family:var(--display);font-weight:300;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(24px,2.2vw,32px);line-height:1.02;color:#fff}
+.fv-sub{font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#ED145B}
