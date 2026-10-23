@@ -312,3 +312,21 @@
 @media (prefers-reduced-motion:reduce){ .ab-video{display:none} .alun-band{background:#000 url('../alun/site/hero-intro-poster.jpg') center/cover} }
 /* chamada única de cada pós (texto da página do curso na FIAP) */
 .pos-dark .pos-card .pc-call{margin:2px 0 0;padding:14px 0 14px 16px;border-left:2px solid #ED145B;border-top:0;font-family:var(--display);font-weight:600;font-size:15.5px;line-height:1.4;color:#fff}
+
+/* ---------- Na sua carreira: trilho de fases + benefícios ---------- */
+.cb-track{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-bottom:28px}
+.cb-track > div{position:relative;padding:16px 16px 14px;background:rgba(255,255,255,.04);border-top:3px solid rgba(255,177,42,.55)}
+.cb-track > div:first-child{border-radius:12px 0 0 12px}.cb-track > div:last-child{border-radius:0 12px 12px 0}
+.cb-track b{display:block;font-family:var(--display);font-weight:800;font-size:15px;color:#fff}
+.cb-track span{font-size:12.5px;color:rgba(255,255,255,.6)}
+.cb-track .fin{background:linear-gradient(135deg,rgba(102,69,177,.6),rgba(237,20,91,.25));border-top-color:#ED145B}
+.cb-track .fin span{color:#fff;font-weight:600}
+.cb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cb{display:flex;flex-direction:column;gap:12px;padding:26px 26px 28px;border-radius:var(--r-card);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.1);transition:transform .4s cubic-bezier(.2,.7,.2,1),border-color .4s}
+.cb-ic{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:rgba(255,177,42,.12);color:var(--yellow);transition:background .3s,color .3s}
+.cb-ic svg{width:24px;height:24px}
+.cb h3{margin:6px 0 0;font-family:var(--display);font-weight:800;font-size:clamp(20px,1.7vw,24px);line-height:1.1;letter-spacing:-.02em;color:#fff}
+.cb p{margin:0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.72)}
+@media (hover:hover){ .cb:hover{transform:translateY(-4px);border-color:rgba(255,177,42,.45)} .cb:hover .cb-ic{background:var(--yellow);color:#000} }
+@media (max-width:1080px){ .cb-grid{grid-template-columns:1fr 1fr} }
+@media (max-width:600px){ .cb-grid,.cb-track{grid-template-columns:1fr} .cb-track > div{border-radius:10px !important} }
