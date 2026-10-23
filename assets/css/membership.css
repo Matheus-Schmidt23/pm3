@@ -254,3 +254,24 @@
 .prof .co-logo{display:inline-flex;align-items:center;padding:7px 12px;min-height:30px}
 .prof .ph .co-logo img{position:static;inset:auto;display:block;width:auto;max-width:120px;object-fit:contain;transform:none;transition:none}
 @media (max-width:760px){ .prof .co-logo{padding:5px 9px;min-height:24px} .prof .co-logo img{transform:scale(.82);transform-origin:left center} }
+
+/* ---------- trilhas em 4 boxes (2 formações + 4 sprints) ---------- */
+.trb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.trb{display:flex;flex-direction:column;border-radius:var(--r-card);overflow:hidden;background:rgba(11,7,19,.55);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(8px);transition:transform .4s cubic-bezier(.2,.7,.2,1),border-color .4s}
+.trb-vis{position:relative;height:140px;background-size:cover;background-position:center 30%;overflow:hidden}
+.trb-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(11,7,19,.9))}
+.trb-n{position:absolute;left:16px;top:14px;z-index:1;font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.08em;background:var(--yellow);color:#000;border-radius:var(--r-pill);padding:4px 9px}
+.trb-body{display:flex;flex-direction:column;gap:14px;padding:18px 20px 22px}
+.trb h3{margin:0;font-family:var(--display);font-weight:800;font-size:21px;line-height:1.05;letter-spacing:-.02em;color:#fff}
+.trb p{margin:0;font-size:14px;line-height:1.45;color:rgba(255,255,255,.72)}
+.trb-grp small{display:block;margin-bottom:8px;font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blaze-b)}
+.trb-grp ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.trb-grp li{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;line-height:1.35;color:#fff}
+.trb-grp svg{flex:none;width:15px;height:15px;margin-top:1px}
+.trb-f li{font-family:var(--display);font-weight:700;font-size:14.5px}
+.trb-f svg{color:var(--yellow)}
+.trb-s svg{color:var(--blaze-b)}
+.trb-grp + .trb-grp{padding-top:14px;border-top:1px solid rgba(255,255,255,.1)}
+@media (hover:hover){ .trb:hover{transform:translateY(-4px);border-color:rgba(255,177,42,.45)} }
+@media (max-width:1080px){ .trb-grid{grid-template-columns:1fr 1fr} }
+@media (max-width:600px){ .trb-grid{grid-template-columns:1fr} }
