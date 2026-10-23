@@ -394,3 +394,18 @@
 .cb h3{padding-top:22px;font-size:clamp(17px,1.35vw,19px);font-weight:700;color:rgba(255,255,255,.92)}
 .cb p{font-size:14.5px}
 .cb-stat{flex-direction:column;align-items:flex-start;gap:8px}.cb-stat span{max-width:16ch}
+
+/* ---------- extensões internacionais ---------- */
+.ext-sec{background:#05040a}
+.ext-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ext{position:relative;overflow:hidden;isolation:isolate;aspect-ratio:3/4.2;border-radius:var(--r-card);border:1px solid rgba(255,255,255,.1);display:flex;align-items:flex-end;transition:transform .5s cubic-bezier(.2,.7,.2,1),border-color .4s}
+.ext-ph{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.ext::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,4,10,.05) 20%,rgba(5,4,10,.55) 50%,rgba(5,4,10,.96))}
+.ext-in{display:flex;flex-direction:column;gap:12px;padding:22px}
+.ext-city{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(30px,2.8vw,40px);line-height:.95;color:#fff}
+.ext-logo{height:28px;width:auto;max-width:100%;object-fit:contain;object-position:left;opacity:.9}
+.ext p{margin:0;font-size:14px;line-height:1.45;color:rgba(255,255,255,.78)}
+@media (hover:hover){ .ext:hover{transform:translateY(-6px);border-color:rgba(255,177,42,.5)} .ext:hover .ext-ph{transform:scale(1.06)} }
+@media (max-width:1080px){ .ext-grid{grid-template-columns:1fr 1fr} }
+@media (max-width:600px){ .ext-grid{grid-template-columns:1fr} .ext{aspect-ratio:4/3.4} }
+.ext-prog{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);line-height:1.35}
