@@ -434,3 +434,35 @@
 .prof .co-logo{display:inline-flex;align-items:center;padding:7px 12px;min-height:30px}
 .prof .ph .co-logo img{position:static;inset:auto;display:block;width:auto;max-width:120px;object-fit:contain;transform:none;transition:none}
 @media (max-width:1080px){ .prof-row{grid-template-columns:1fr 1fr} }
+
+/* ---------- certificações por curso (interativo) ---------- */
+.cr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
+.cr{position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-card);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.1);padding:26px 24px 22px}
+.cr::before{content:'';position:absolute;z-index:-1;width:300px;height:300px;right:-120px;top:-150px;border-radius:50%;background:radial-gradient(circle,rgba(237,20,91,.35),transparent 65%)}
+.cr header{padding-bottom:16px;margin-bottom:6px;border-bottom:1px solid rgba(255,255,255,.1)}
+.cr-k{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#ED145B}
+.cr h3{margin:6px 0 4px;font-family:var(--display);font-weight:800;font-size:clamp(22px,1.9vw,26px);line-height:1.05;letter-spacing:-.02em;color:#fff}
+.cr header p{margin:0;font-size:13.5px;color:rgba(255,255,255,.6)}
+.cr ol{list-style:none;margin:0;padding:0;position:relative}
+.cr ol::before{content:'';position:absolute;left:15px;top:20px;bottom:24px;width:2px;background:linear-gradient(180deg,#FFB12A,#ED145B)}
+.cr li{position:relative;display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start;padding:9px 8px 9px 0;border-radius:12px;cursor:default;outline:0;transition:background .3s}
+.cr-n{position:relative;z-index:1;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#16111f;border:2px solid #FFB12A;font-family:var(--display);font-weight:800;font-size:13px;color:#fff;transition:background .3s,color .3s,transform .3s}
+.cr-fin .cr-n{border-color:#ED145B;color:#ED145B}
+.cr-b b{display:block;padding-top:6px;font-family:var(--display);font-weight:700;font-size:15px;line-height:1.2;color:#fff}
+.cr-b small{display:grid;grid-template-rows:0fr;overflow:hidden;font-size:13px;line-height:1.4;color:rgba(255,255,255,.65);transition:grid-template-rows .35s ease,margin .35s ease;margin-top:0}
+.cr li:hover,.cr li:focus-visible{background:rgba(255,255,255,.05)}
+.cr li:hover .cr-b small,.cr li:focus-visible .cr-b small,.cr li.on .cr-b small{grid-template-rows:1fr;margin-top:4px}
+.cr-b small{max-height:0;transition:max-height .35s ease,margin .35s ease}
+.cr li:hover .cr-b small,.cr li:focus-visible .cr-b small,.cr li.on .cr-b small{max-height:60px}
+.cr li:hover .cr-n,.cr li:focus-visible .cr-n,.cr li.on .cr-n{background:#FFB12A;color:#000;transform:scale(1.08)}
+.cr-fin:hover .cr-n,.cr-fin.on .cr-n{background:#ED145B !important;color:#fff !important}
+.cb-grid.cb-3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1080px){ .cr-grid,.cb-grid.cb-3{grid-template-columns:1fr} }
+.cr-b small{display:block;max-height:0;opacity:0;transition:max-height .35s ease,opacity .3s,margin .35s ease}
+.cr li:hover .cr-b small,.cr li:focus-visible .cr-b small,.cr li.on .cr-b small{max-height:60px;opacity:1;margin-top:4px}
+.cb-grid.cb-3 .cb{min-height:0}
+.cb-grid.cb-3 .cb h3{padding-top:18px}
+.coord-sec{position:relative;isolation:isolate;background:linear-gradient(180deg,#120a24 0%,#1d0f38 55%,#0B0713 100%)}
+.coord-sec::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(55% 60% at 85% 10%,rgba(102,69,177,.45),transparent 70%),radial-gradient(40% 50% at 5% 90%,rgba(237,20,91,.18),transparent 70%)}
+.coord-sec .h2 .c2{color:var(--blaze-b)}
+.coord-sec .prof{background:rgba(11,7,19,.75)}
