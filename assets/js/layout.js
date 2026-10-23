@@ -46,7 +46,7 @@
         <li><button type="button" aria-expanded="false" aria-controls="mega-formacoes">Formações ${chev}</button>
           ${mega('mega-formacoes','Formações','Cursos completos de 21 a 79 horas, com projeto real e certificado. Todos inclusos na Membership.',
             FORMACOES.map(([n,h,a])=>`<li><a href="${h}">${n}<small>${a}</small></a></li>`).join(''),
-            '<a href="formacoes.html">Ver todas as formações →</a><a href="cursos.html">Catálogo completo →</a>')}
+            '<a href="formacoes.html">Ver todas as formações →</a>')}
         </li>
         <li><button type="button" aria-expanded="false" aria-controls="mega-sprints">Sprints ${chev}</button>
           ${mega('mega-sprints','Sprints','Cursos de 2 a 12 horas, cada um focado em um desafio específico. Inclusos na Membership.',
