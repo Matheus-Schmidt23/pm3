@@ -469,3 +469,4 @@
 /* faixa de dados comuns: número em cima, legenda embaixo, tudo alinhado */
 .pos-spec li{flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;padding:20px 24px}
 .pos-spec span{font-size:13px;letter-spacing:.02em;white-space:nowrap}
+.cr h3{text-wrap:balance}
