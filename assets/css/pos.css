@@ -517,3 +517,8 @@
 .cx-sec .pinv > div p{color:rgba(255,255,255,.7)}.cx-sec .pinv > div h3{color:rgba(255,255,255,.6)}
 .cx-sec .pinv > div .btn-line{border-color:rgba(255,255,255,.3);color:#fff}
 .cx-sec .pinv > .hl{background:linear-gradient(160deg,#6645B1,#2a1856);border-color:rgba(255,177,42,.45)}
+/* alinhamento dos cards de extensão: cada linha com altura fixa */
+.ext-in{width:100%}
+.ext-logo{height:30px;width:100%;max-width:none}
+.ext-prog{min-height:calc(2 * 1.35em)}
+.ext p{min-height:calc(3 * 1.45em);text-wrap:pretty}
