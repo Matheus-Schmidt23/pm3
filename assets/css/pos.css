@@ -310,3 +310,5 @@
 .ab-logos img{height:26px;width:auto;filter:brightness(0) invert(1);opacity:.75;transition:opacity .3s}
 .ab-logos li:hover img{opacity:1}
 @media (prefers-reduced-motion:reduce){ .ab-video{display:none} .alun-band{background:#000 url('../alun/site/hero-intro-poster.jpg') center/cover} }
+/* chamada única de cada pós (texto da página do curso na FIAP) */
+.pos-dark .pos-card .pc-call{margin:2px 0 0;padding:14px 0 14px 16px;border-left:2px solid #ED145B;border-top:0;font-family:var(--display);font-weight:600;font-size:15.5px;line-height:1.4;color:#fff}
