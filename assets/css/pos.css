@@ -271,3 +271,29 @@
 .fv-pm3{height:14px;width:auto}
 .fv-name{font-family:var(--display);font-weight:300;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(24px,2.2vw,32px);line-height:1.02;color:#fff}
 .fv-sub{font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#ED145B}
+
+/* ---------- Grupo Alun (Brandbook Alun 2025) ---------- */
+.alun-sec{--al-mag:#ED1360;--al-mag-off:#600724;--al-ods:#FF9413;--al-pm:#D1CDCD;background:#000;padding:clamp(56px,7vw,104px) 0}
+.al-board{display:grid;grid-template-columns:1fr 1.15fr 1fr;min-height:clamp(460px,40vw,580px);border-radius:var(--r-xl);overflow:hidden}
+.al-pane{position:relative;display:flex;flex-direction:column;padding:clamp(24px,2.6vw,40px);overflow:hidden}
+.al-tag,.al-mono{font-family:'Space Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+.al-tag{align-self:flex-start;background:#000;color:#fff;padding:3px 7px}
+.al-mag{background:var(--al-mag);color:#000}
+.al-mag h2{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(32px,3.2vw,50px);line-height:1.02;letter-spacing:-.015em;margin:22px 0 0;text-transform:none}
+.al-foot{margin-top:auto;display:flex;flex-direction:column;gap:14px}
+.al-logo{width:100%;max-width:300px;height:auto;filter:brightness(0)}
+.al-photo{background:#1a1a1a url('../img/foto-equipe.jpg?v=4') center/cover;justify-content:flex-start}
+.al-mosaic{position:absolute;top:0;bottom:0;right:-4%;width:46%;background:url('../alun/mosaico.svg') left center/auto 100% repeat-y;opacity:.95;transform:scaleX(-1);-webkit-mask-image:linear-gradient(90deg,#000 55%,transparent);mask-image:linear-gradient(90deg,#000 55%,transparent);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.al-board:hover .al-mosaic{transform:scaleX(-1) translateY(-14px)}
+.al-card{position:relative;max-width:300px;background:var(--al-pm);color:#000;padding:18px 18px 16px;display:flex;flex-direction:column;gap:22px}
+.al-card p{margin:0;font-size:15px;line-height:1.35}
+.al-dark{background:#0c0c0c;color:#fff;border:1px solid rgba(255,255,255,.1);border-left:0;border-radius:0 var(--r-xl) var(--r-xl) 0}
+.al-big{margin:0;font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(28px,2.7vw,42px);line-height:1.08;letter-spacing:-.01em}
+.al-big em{font-style:normal;color:var(--al-pm)}
+.al-brands{list-style:none;margin:auto 0 0;padding:0;display:grid;gap:0}
+.al-brands li{display:grid;grid-template-columns:78px 1fr;gap:12px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(255,255,255,.14);transition:color .3s}
+.al-brands b{font-family:'Space Mono',monospace;font-weight:400;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--al-ods)}
+.al-brands span{font-size:13.5px;line-height:1.4;color:rgba(255,255,255,.72)}
+@media (hover:hover){ .al-brands li:hover b{color:var(--al-mag)} .al-brands li:hover span{color:#fff} }
+@media (max-width:1080px){ .al-board{grid-template-columns:1fr 1fr} .al-dark{grid-column:1/-1;border-left:0} }
+@media (max-width:600px){ .al-board{grid-template-columns:1fr} .al-photo{min-height:340px} }
