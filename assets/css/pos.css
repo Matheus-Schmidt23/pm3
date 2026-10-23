@@ -353,3 +353,8 @@
 @media (max-width:1080px){ .cc-list{grid-template-columns:repeat(3,1fr)} .cc-list li{border-radius:10px !important} }
 @media (max-width:600px){ .cc-list{grid-template-columns:1fr} }
 .cc-t{text-wrap:balance}
+/* cards das pós: chamada sempre em 3 linhas + certificações em tags */
+.pos-dark .pos-card .pc-call{min-height:calc(3 * 1.4em + 28px)}
+.pc-certs small{display:block;margin-bottom:8px;font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blaze-b)}
+.pc-certs ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.pc-certs li{font-family:var(--display);font-weight:600;font-size:12px;line-height:1;color:#fff;background:rgba(237,20,91,.12);border:1px solid rgba(237,20,91,.35);border-radius:var(--r-pill);padding:6px 10px}
