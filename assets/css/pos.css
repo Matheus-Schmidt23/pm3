@@ -418,3 +418,19 @@
 @media (max-width:1080px){ .pos-spec{grid-template-columns:repeat(3,1fr)} .pos-spec li:nth-child(4){border-left:0} .pos-spec li:nth-child(n+4){border-top:1px solid rgba(255,255,255,.1)} }
 @media (max-width:600px){ .pos-spec{grid-template-columns:1fr 1fr} .pos-spec li{border-left:0;border-top:1px solid rgba(255,255,255,.1)} .pos-spec li:first-child{border-top:0} }
 .pos-spec b{white-space:nowrap}
+
+/* ---------- coordenação: mesmo card dos instrutores da Membership ---------- */
+.prof-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.prof{margin:0;background:#0d0a14;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-card);overflow:hidden;transition:border-color .3s,transform .3s}
+.prof:hover{border-color:rgba(176,77,221,.55);transform:translateY(-4px)}
+.prof .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#1a1226}
+.prof .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.prof:hover .ph > img{transform:scale(1.05)}
+.prof .ph::after{content:'';position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(180deg,transparent,rgba(13,10,20,.85))}
+.prof .co{position:absolute;left:14px;bottom:14px;z-index:1;background:#fff;color:#000;font-family:var(--display);font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
+.prof figcaption{padding:16px 18px 18px}
+.prof b{display:block;font-family:var(--display);font-size:18px;color:#fff;line-height:1.2}
+.prof figcaption span{font-size:13.5px;color:var(--gray-fog);line-height:1.35;display:block;margin-top:4px}
+.prof .co-logo{display:inline-flex;align-items:center;padding:7px 12px;min-height:30px}
+.prof .ph .co-logo img{position:static;inset:auto;display:block;width:auto;max-width:120px;object-fit:contain;transform:none;transition:none}
+@media (max-width:1080px){ .prof-row{grid-template-columns:1fr 1fr} }
