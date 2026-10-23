@@ -297,3 +297,16 @@
 @media (hover:hover){ .al-brands li:hover b{color:var(--al-mag)} .al-brands li:hover span{color:#fff} }
 @media (max-width:1080px){ .al-board{grid-template-columns:1fr 1fr} .al-dark{grid-column:1/-1;border-left:0} }
 @media (max-width:600px){ .al-board{grid-template-columns:1fr} .al-photo{min-height:340px} }
+
+/* ---------- faixa Grupo Alun (padrão alun.com.br) ---------- */
+.alun-band{position:relative;isolation:isolate;overflow:hidden;background:#000;color:#fff;padding:clamp(80px,10vw,140px) 0;text-align:center}
+.ab-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.55}
+.alun-band::after{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 90% at 50% 50%,rgba(0,0,0,.35),rgba(0,0,0,.85))}
+.ab-in{display:flex;flex-direction:column;align-items:center;gap:22px}
+.ab-alun{height:34px;width:auto}
+.alun-band h2{margin:0;max-width:18ch;font-family:var(--display);font-weight:700;font-size:clamp(32px,3.6vw,54px);line-height:1.02;letter-spacing:-.03em;text-transform:none}
+.alun-band p{margin:0;max-width:52ch;font-size:clamp(15px,1.2vw,17px);color:rgba(255,255,255,.75)}
+.ab-logos{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(28px,4vw,64px)}
+.ab-logos img{height:26px;width:auto;filter:brightness(0) invert(1);opacity:.75;transition:opacity .3s}
+.ab-logos li:hover img{opacity:1}
+@media (prefers-reduced-motion:reduce){ .ab-video{display:none} .alun-band{background:#000 url('../alun/site/hero-intro-poster.jpg') center/cover} }
