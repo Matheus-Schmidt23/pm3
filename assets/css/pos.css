@@ -466,3 +466,6 @@
 .coord-sec::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(55% 60% at 85% 10%,rgba(102,69,177,.45),transparent 70%),radial-gradient(40% 50% at 5% 90%,rgba(237,20,91,.18),transparent 70%)}
 .coord-sec .h2 .c2{color:var(--blaze-b)}
 .coord-sec .prof{background:rgba(11,7,19,.75)}
+/* faixa de dados comuns: número em cima, legenda embaixo, tudo alinhado */
+.pos-spec li{flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;padding:20px 24px}
+.pos-spec span{font-size:13px;letter-spacing:.02em;white-space:nowrap}
