@@ -470,3 +470,34 @@
 .pos-spec li{flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;padding:20px 24px}
 .pos-spec span{font-size:13px;letter-spacing:.02em;white-space:nowrap}
 .cr h3{text-wrap:balance}
+
+/* ---------- O que você leva para o mercado (bento) ---------- */
+.mk{display:grid;grid-template-columns:repeat(4,1fr);grid-template-areas:"cert cert com com" "proj mec com com" "par par par par";gap:16px}
+.mk-c{position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-card);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.1);padding:30px;display:flex;flex-direction:column;gap:12px;transition:border-color .4s,transform .4s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){ .mk-c:hover{border-color:rgba(237,20,91,.5);transform:translateY(-3px)} }
+.mk-k{font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#ED145B}
+.mk-c h3{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(22px,2vw,30px);line-height:1.08;letter-spacing:-.02em;color:#fff;text-wrap:balance}
+.mk-c h3 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--blaze-b)}
+.mk-c p{margin:0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.72);max-width:52ch}
+.mk-cert{grid-area:cert}
+.mk-cert::before{content:"";position:absolute;z-index:-1;width:360px;height:360px;right:-140px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(237,20,91,.35),transparent 65%)}
+.mk-track{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr) 1.6fr;gap:6px}
+.mk-track li{display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:3px solid #FFB12A}
+.mk-track b{font-family:var(--display);font-weight:800;font-size:22px;color:#fff;line-height:1}
+.mk-track span{font-size:12px;color:rgba(255,255,255,.6)}
+.mk-track .fin{border-top-color:#ED145B}.mk-track .fin b,.mk-track .fin span{color:#ED145B}
+.mk-com{grid-area:com;padding:0;display:grid;grid-template-columns:1fr 1fr;background:#000}
+.mk-com-in{display:flex;flex-direction:column;gap:12px;padding:30px;justify-content:flex-end}
+.mk-com-ph{background:url("../img/pos-sec/comunidade.png") center/cover;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%);mask-image:linear-gradient(90deg,transparent,#000 30%);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.mk-com:hover .mk-com-ph{transform:scale(1.04)}
+.mk-chips{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.mk-chips li{font-family:var(--display);font-weight:600;font-size:12.5px;color:#fff;background:rgba(237,20,91,.14);border:1px solid rgba(237,20,91,.4);border-radius:var(--r-pill);padding:6px 11px}
+.mk-proj{grid-area:proj}
+.mk-mec{grid-area:mec;background:linear-gradient(150deg,rgba(102,69,177,.55),rgba(237,20,91,.18))}
+.mk-par{grid-area:par;flex-direction:row;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.mk-par > div{display:flex;flex-direction:column;gap:10px;max-width:420px}
+.mk-logos{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:clamp(24px,3vw,48px);flex-wrap:wrap}
+.mk-logos img{height:30px;width:auto;opacity:.7;transition:opacity .3s}
+.mk-logos li:hover img{opacity:1}
+@media (max-width:1080px){ .mk{grid-template-columns:1fr 1fr;grid-template-areas:"cert cert" "com com" "proj mec" "par par"} .mk-com{min-height:420px} }
+@media (max-width:600px){ .mk{grid-template-columns:1fr;grid-template-areas:"cert" "com" "proj" "mec" "par"} .mk-com{grid-template-columns:1fr} .mk-com-ph{min-height:260px;order:-1;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)} .mk-track{grid-template-columns:repeat(3,1fr)} }
