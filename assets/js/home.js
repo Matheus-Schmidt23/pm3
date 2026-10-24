@@ -77,9 +77,12 @@
   /* só a primeira foto entra no carregamento da página; as outras vêm depois */
   const carrega = () => fotos.forEach(f => { if (f.dataset.bg) f.style.backgroundImage = `url('${f.dataset.bg}')`; });
   if (document.readyState === 'complete') carrega(); else addEventListener('load', carrega);
-  let i = 0;
+  /* só gira com a foto na tela: assim a primeira pessoa vista é sempre a primeira da lista (uma mulher),
+     inclusive no celular, onde a foto fica abaixo do texto */
+  let i = 0, visivel = false;
+  new IntersectionObserver(es => es.forEach(e => visivel = e.isIntersecting), { threshold: .5 }).observe(pic);
   setInterval(() => {
-    if (document.hidden) return;
+    if (document.hidden || !visivel) return;
     fotos[i].classList.remove('on');
     i = (i + 1) % fotos.length;
     fotos[i].classList.add('on');
