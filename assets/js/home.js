@@ -77,15 +77,36 @@
   /* só a primeira foto entra no carregamento da página; as outras vêm depois */
   const carrega = () => fotos.forEach(f => { if (f.dataset.bg) f.style.backgroundImage = `url('${f.dataset.bg}')`; });
   if (document.readyState === 'complete') carrega(); else addEventListener('load', carrega);
-  /* só gira com a foto na tela: assim a primeira pessoa vista é sempre a primeira da lista (uma mulher),
-     inclusive no celular, onde a foto fica abaixo do texto */
-  let i = 0, visivel = false;
+  /* etiqueta com o nome de quem está na foto (Instrutor/Instrutora PM3) */
+  const tag = pic.querySelector('.tag');
+  const legenda = (f, anima) => {
+    if (!tag || !f.dataset.nome) return;
+    const html = `<b>${f.dataset.nome}</b><span>Instrutor${f.dataset.g === 'a' ? 'a' : ''} PM3</span>`;
+    if (!anima) { tag.innerHTML = html; return; }
+    tag.classList.add('troca');
+    setTimeout(() => { tag.innerHTML = html; tag.classList.remove('troca'); }, 450);
+  };
+  /* cada visita começa por uma pessoa sorteada (sem animação na troca inicial) */
+  let i = Math.floor(Math.random() * fotos.length);
+  if (i) {
+    const f = fotos[i];
+    if (f.dataset.bg) f.style.backgroundImage = `url('${f.dataset.bg}')`;
+    pic.classList.add('sem-anim');
+    fotos[0].classList.remove('on');
+    f.classList.add('on');
+    requestAnimationFrame(() => requestAnimationFrame(() => pic.classList.remove('sem-anim')));
+  }
+  legenda(fotos[i], false);
+  /* só gira com a foto na tela: assim a primeira pessoa vista é a sorteada, inclusive no celular,
+     onde a foto fica abaixo do texto */
+  let visivel = false;
   new IntersectionObserver(es => es.forEach(e => visivel = e.isIntersecting), { threshold: .5 }).observe(pic);
   setInterval(() => {
     if (document.hidden || !visivel) return;
     fotos[i].classList.remove('on');
     i = (i + 1) % fotos.length;
     fotos[i].classList.add('on');
+    legenda(fotos[i], true);
   }, 4500);
 })();
 
