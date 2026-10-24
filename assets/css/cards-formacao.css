@@ -76,3 +76,32 @@
 @media (max-width:600px){ .f-more:not(.f-more-full) .fm-price{grid-template-columns:1fr} .f-more:not(.f-more-full) .fm-price .btn{grid-column:1;grid-row:auto;margin-top:12px} .f-more:not(.f-more-full) .fm-list{grid-template-columns:1fr} }
 .fm-price b{white-space:nowrap}
 .f-more:not(.f-more-full) .fm-price b{font-size:30px}
+
+/* ---------- catálogo completo (/cursos/): formato do curso no card ---------- */
+.f-card .tag-tipo{background:var(--purple-deep);color:#fff}
+.f-card.c-sprint .tag-tipo{background:#F4F2F8;color:var(--purple-royal);box-shadow:inset 0 0 0 1px rgba(102,69,177,.25)}
+.f-card.feature .tag-tipo{background:var(--yellow);color:#000}
+.f-card .top{justify-content:flex-start;flex-wrap:wrap;gap:6px}
+/* pós: card escuro com a capa oficial da FIAP (mesmo da página da Pós Tech) */
+.f-card.c-pos{background:linear-gradient(180deg,#120d1d,#0b0812);border:1px solid rgba(255,255,255,.1);color:#fff}
+.f-card.c-pos .f-vis.fv-fiap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;background-size:cover;background-position:center;padding:16px}
+.f-card.c-pos .f-vis.fv-fiap::after{background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.15) 55%,#120d1d)}
+.f-card.c-pos .fv-name{font-size:clamp(20px,1.7vw,26px)}
+.f-card.c-pos .tag-tipo{background:#ED145B;color:#fff}
+.f-card.c-pos .tag-area{background:rgba(255,255,255,.12);color:#fff}
+.f-card.c-pos p{color:rgba(255,255,255,.72)}
+.f-card.c-pos .f-facts li{background:rgba(255,255,255,.08);color:#fff}
+.f-card.c-pos .f-facts svg{color:#ED145B}
+.f-card.c-pos .meta{border-color:rgba(255,255,255,.1);color:#fff}
+.f-card.c-pos .go{background:#ED145B;color:#fff}
+.f-card.c-pos:hover{border-color:rgba(237,20,91,.55);box-shadow:0 30px 60px -30px rgba(237,20,91,.5)}
+.f-grid .f-card.c-pos .fc-cert{display:inline-flex}
+/* lockup das capas FIAP (o mesmo de pos.css, para usar fora da página da Pós Tech) */
+.fv-fiap > *{position:relative;z-index:1}
+.fv-lock{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:300;font-size:12px;letter-spacing:.24em;color:#fff}
+.fv-lock i{width:1px;height:14px;background:rgba(255,255,255,.45)}
+.fv-pm3{height:14px;width:auto}
+.fv-name{font-family:var(--display);font-weight:300;text-transform:uppercase;letter-spacing:.02em;line-height:1.02;color:#fff}
+.fv-sub{font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#ED145B}
+.f-grid .f-card.c-pos .f-vis{height:170px}
+.f-card.c-pos .fv-name{font-size:clamp(18px,1.5vw,22px)}

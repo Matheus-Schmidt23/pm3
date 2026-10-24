@@ -17,7 +17,9 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=20">
 <link rel="stylesheet" href="assets/css/components.css?v=5">
-<link rel="stylesheet" href="assets/css/showcase.css?v=31">
+<link rel="stylesheet" href="assets/css/showcase.css?v=32">
+<link rel="stylesheet" href="assets/css/hero-card.css?v=3">
+<link rel="stylesheet" href="assets/css/cards-formacao.css?v=14">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -31,25 +33,37 @@
 
 <main>
 
-<!-- 1 · CABEÇALHO E BUSCA -->
-<section class="cat-head" aria-labelledby="h1">
-  <div class="wrap">
-    <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Cursos</li></ol>
-    <div class="cat-head-grid">
-      <h1 class="display" id="h1">Todos os<br><span class="c2">cursos</span></h1>
+<!-- 1 · HERO E BUSCA -->
+<section class="m-hero on-dark cat-hero" aria-labelledby="h1">
+  <div class="m-hero-grid">
+    <div class="m-main grain" data-nota="Busca e filtros na mesma página, sem as 8 páginas de paginação de hoje. No site real, as combinações de filtro não viram URLs indexáveis: canonical sempre para /cursos/. Hero no mesmo sistema de cards de Membership, Formações e Sprints.">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
       <div>
-        <p class="lead" style="margin:0 0 20px">10 formações, 44 sprints e 3 pós-graduações. Busque pelo que você quer aprender ou filtre por área, formato e duração.</p>
-        <label class="search" data-nota="Busca e filtros na mesma página, sem as 8 páginas de paginação de hoje. No site real, as combinações de filtro não viram URLs indexáveis: canonical sempre para /cursos/."><span class="sr-only">Buscar curso</span>
+        <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Cursos</li></ol>
+        <h1 class="display" id="h1">Todo o<br>catálogo<br><span class="l2">PM3.</span><span class="em">Formações, sprints e pós.</span></h1>
+        <p class="lead">Mais de 50 cursos de produto, IA, dados, design, marketing e liderança. Busque pelo que você quer aprender ou filtre por formato, área e duração.</p>
+      </div>
+      <div>
+        <label class="search"><span class="sr-only">Buscar curso</span>
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6.5"/><path d="m14 14 4 4"/></svg>
           <input id="q" type="search" placeholder="Ex.: SQL, roadmap, IA, feedback" autocomplete="off">
         </label>
+        <nav class="v-jump" aria-label="Ir para o formato">
+          <a href="#catalogo" data-tipo="formacao">Formações <small>10</small></a><a href="#catalogo" data-tipo="sprint">Sprints <small>44</small></a><a href="#catalogo" data-tipo="pos">Pós Tech <small>3</small></a>
+        </nav>
       </div>
+    </div>
+    <div class="m-photo" style="background-image:url('assets/img/foto-sofa-fone.jpg');background-position:45% 30%" role="img" aria-label="Pessoa estudando no notebook com fone de ouvido"><span class="tag">Aprenda no seu ritmo</span></div>
+    <div class="m-tile">
+      <span class="ic ic-tl" style="left:0;top:0;--c:#000;--r:40px" aria-hidden="true"></span>
+      <div class="big">+50<small>cursos<br>completos</small></div>
+      <p>Formações e sprints incluídos na Membership. A Pós Tech, com a FIAP, é vendida à parte.</p>
     </div>
   </div>
 </section>
 
 <!-- 2 · CATÁLOGO -->
-<div class="wrap cat-layout">
+<div class="wrap cat-layout" id="catalogo">
   <details class="filters" open>
     <summary>Filtrar <span id="fcount"></span></summary>
     <div class="fbody">
@@ -65,24 +79,16 @@
       <label><span class="sr-only">Ordenar</span><select id="ord"><option value="rel">Mais relevantes</option><option value="menor">Menor duração</option><option value="maior">Maior duração</option><option value="az">A a Z</option></select></label>
     </div>
     <div class="active-f" id="active"></div>
-    <div class="cgrid" id="cgrid" data-nota="Cada formato tem cor própria: formação em roxo, sprint em claro, pós em preto. A Membership aparece como primeiro cartão quando não há filtro."></div>
+    <div class="cgrid f-grid" id="cgrid" data-nota="Cada formato tem cor própria: formação em roxo, sprint em claro, pós em preto. A Membership aparece como primeiro cartão quando não há filtro."></div>
   </div>
 </div>
 
-<!-- 3 · MEMBERSHIP -->
-<section class="section white" aria-label="Membership">
-  <div class="wrap">
-    <div class="mband grain on-dark reveal">
-      <div><p class="kicker">Membership PM3</p><h2>Formações e sprints.<span class="em">Um só acesso.</span></h2><p>As 10 formações e as +40 sprints por 12 meses, com mentorias, workshops ao vivo e comunidade. A Pós Tech é vendida à parte.</p></div>
-      <div class="pr"><small>Assinatura anual</small><b>12x R$ 299,91</b><span>ou R$ 3.599 à vista</span><a class="btn btn-light" href="membership.html">Conhecer a Membership</a></div>
-    </div>
-  </div>
-</section>
 
 </main>
 
-<script src="assets/js/catalogo.js?v=T3"></script>
-<script src="assets/js/vitrines.js?v=T14"></script>
+<script src="assets/js/catalogo.js?v=T4"></script>
+<script src="assets/js/vitrines.js?v=T16"></script>
 <script src="assets/js/layout.js?v=26"></script>
+<script src="assets/js/hero-card.js?v=2"></script>
 </body>
 </html>

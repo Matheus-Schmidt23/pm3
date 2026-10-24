@@ -218,3 +218,16 @@
 }
 
 
+
+/* ---------- /cursos/: hero no sistema de cards + catálogo com os cards de Formações/Sprints ---------- */
+.cat-hero .search{display:block;margin-bottom:16px}
+.cat-hero .search input{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.cat-hero .search input::placeholder{color:rgba(255,255,255,.55)}
+.cat-hero .search input:focus{background:rgba(255,255,255,.14);border-color:var(--yellow);box-shadow:0 0 0 4px rgba(255,177,42,.18)}
+.cat-hero .search svg{color:rgba(255,255,255,.7)}
+.cat-layout{padding-top:clamp(40px,5vw,72px);scroll-margin-top:calc(var(--nav-h) + 8px)}
+.cat-layout .f-grid{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1080px){ .cat-layout .f-grid{grid-template-columns:1fr 1fr} }
+@media (max-width:600px){ .cat-layout .f-grid{grid-template-columns:1fr} }
+.cat-layout .f-more-full{margin-top:48px}
+.cat-layout .fx-more [hidden]{display:none}

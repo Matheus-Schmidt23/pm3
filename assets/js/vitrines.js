@@ -54,8 +54,6 @@
     /* catálogo: um card por sprint (mesmo card de Formações), filtrável por vertical */
     const ordem = ['gestao','dados','design','marketing','negocios','lideranca'];
     const nomeA = a => a === 'lideranca' ? 'Liderança' : AREAS[a].curto;
-    const CAPAS = ['fundamentos-gestao-produtos','roadmap-priorizacao','tecnicas-pesquisa','tecnologia-pms','prd','product-ops-fundamentos','product-ops-avancado','metodos-analise-dados','power-bi','excel','metricas-negocios','python','visualizacao-dashboards','teste-ab','sql','lgpd','problem-solving','vieses-analises','design-thinking','design-servico','ui-design','go-to-market','product-growth','product-marketing','aquisicao','sales-enablement','okrs','metodologias-ageis','gestao-processos','educacao-corporativa','negociacao-lideres','comunicacao-assertiva','apresentacao-slides','diversidade-inclusao','trabalho-remoto','gestao-tempo','lideranca-equipe','saude-mental','delegacao','feedback','ie-lideres','ie-trabalho','oratoria','tecnicas-negociacao'];
-    SPRINTS.forEach((s, i) => { s.capa = CAPAS[i]; });
     const ic = {
       h: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>',
       cert: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.2" r="4.2"/><path d="m5.6 9.6-1.1 4.8L8 12.8l3.5 1.6-1.1-4.8"/></svg>',
@@ -96,15 +94,16 @@
 
   /* ---------- /cursos/ ---------- */
   if (PAGE === 'cursos'){
+    /* pós: mesmos textos e capas oficiais da FIAP usados na página da Pós Tech */
     const POS = [
-      { nome: 'Digital Product Management', area: 'gestao', obj: 'Pós-graduação PM3 + FIAP com certificação do MEC.' },
-      { nome: 'IA para Negócios: Gestão Estratégica e Liderança', area: 'ia', obj: 'Pós-graduação PM3 + FIAP com certificação do MEC.' },
-      { nome: 'Tech Management', area: 'negocios', obj: 'Pós-graduação PM3 + FIAP com certificação do MEC.' }
+      { nome: 'Digital Product Management', capa: 'digital-product-management', area: 'gestao', obj: 'Desenvolva estratégias para gerenciar todas as fases do ciclo de vida de um produto digital, da concepção ao go-to-market.' },
+      { nome: 'IA para Negócios', capa: 'ia-para-negocios', area: 'ia', obj: 'Desenvolva uma visão integrada de negócios e entenda como a IA pode potencializar sua gestão e performance.' },
+      { nome: 'Tech Management', capa: 'tech-management', area: 'negocios', obj: 'Uma jornada completa para impulsionar sua carreira como Tech Lead, gerando mais valor para os negócios.' }
     ];
     const ITENS = [
-      ...FORMACOES.map(f => ({ tipo: 'formacao', nome: f.nome, area: f.area, h: f.h, txt: f.quem, url: f.url, dest: f.destaque })),
-      ...SPRINTS.map(s => ({ tipo: 'sprint', nome: s.nome, area: s.area, h: s.h, txt: s.obj, url: s.url })),
-      ...POS.map(p => ({ tipo: 'pos', nome: p.nome, area: p.area, h: null, txt: p.obj, url: 'pos-tech.html' }))
+      ...FORMACOES.map(f => ({ tipo: 'formacao', nome: f.nome, area: f.area, h: f.h, mod: f.mod, txt: f.quem, url: f.url, dest: f.destaque, capa: `assets/capas/${f.capa}-800.jpg?v=3` })),
+      ...POS.map(p => ({ tipo: 'pos', nome: p.nome, area: p.area, h: null, txt: p.obj, url: `https://postech.fiap.com.br/curso/${p.capa}`, capa: `assets/capas/pos-fiap/${p.capa}.webp` })),
+      ...SPRINTS.map(s => ({ tipo: 'sprint', nome: s.nome, area: s.area, h: s.h, txt: s.obj, url: s.url, dest: s.url !== '#' ? 'Comece aqui' : '', capa: `assets/capas/sprints/${s.capa}.jpg` })),
     ];
     const TIPOS = { formacao: 'Formação', sprint: 'Sprint', pos: 'Pós Tech' };
     const DUR = { curta: ['Até 5 horas', h => h != null && h <= 5], media: ['De 6 a 15 horas', h => h > 5 && h <= 15], longa: ['Mais de 15 horas', h => h > 15] };
@@ -118,15 +117,31 @@
     $('#f-dur').innerHTML = Object.entries(DUR).map(([v, [l]]) => opt('dur','radio',v,l)).join('');
     if (matchMedia('(max-width:860px)').matches) document.querySelector('.filters').open = false;
 
-    const card = i => {
-      const cls = i.tipo === 'formacao' ? ' f' : i.tipo === 'pos' ? ' pos' : '';
-      const inc = i.tipo === 'pos' ? 'PM3 + FIAP' : 'Na Membership';
-      return `<a class="ccard${cls}" href="${i.url}"><div class="top"><span class="tag ${i.tipo === 'sprint' ? 'tag-soft' : 'tag-dark'}">${TIPOS[i.tipo]}</span>${i.dest ? `<span class="tag tag-yellow">${i.dest}</span>` : ''}</div>
-        <h3>${i.nome}</h3><p>${i.txt}</p><div class="ft"><span><b>${i.h ? i.h + 'h' : i.tipo === 'pos' ? 'Pós-graduação' : '6 módulos'}</b> · ${AREAS[i.area].curto}</span><span class="inc">${inc}</span></div></a>`;
+    /* mesmos cards de Formações, Sprints e Pós Tech (cards-formacao.css) */
+    const ic = {
+      h: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>',
+      mod: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 1.8 14.2 5 8 8.2 1.8 5z"/><path d="m1.8 8 6.2 3.2L14.2 8"/><path d="m1.8 11 6.2 3.2 6.2-3.2"/></svg>',
+      cert: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.2" r="4.2"/><path d="m5.6 9.6-1.1 4.8L8 12.8l3.5 1.6-1.1-4.8"/></svg>',
+      go: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg>'
     };
-    const membro = `<a class="ccard member" href="membership.html"><div class="top"><span class="tag" style="background:#000;color:#fff">Membership</span></div>
-      <h3>Todas as formações e sprints em uma assinatura</h3><p>10 formações, +40 sprints, mentorias, workshops ao vivo e comunidade por 12 meses.</p>
-      <div class="ft"><span><b>12x R$ 299,91</b></span><span class="inc" style="color:#000">Conhecer →</span></div></a>`;
+    const VER = { formacao: 'Ver formação', sprint: 'Ver sprint', pos: 'Ver a pós' };
+    const card = i => {
+      const pos = i.tipo === 'pos';
+      const vis = pos
+        ? `<div class="f-vis fv-fiap" style="background-image:url('${i.capa}')" aria-hidden="true"><span class="fv-lock">PÓS TECH <i></i> <img src="assets/logo/pm3-logo-branco.svg" alt="" class="fv-pm3"></span><b class="fv-name">${i.nome}</b><span class="fv-sub">FIAP + Alura + PM3</span></div>`
+        : `<div class="f-vis" style="background-image:url('${i.capa}')" aria-hidden="true"></div>`;
+      const facts = pos
+        ? `<li>${ic.cert}Pós-graduação reconhecida pelo MEC</li>`
+        : (i.h ? `<li>${ic.h}${i.h}h</li>` : '') + (i.mod ? `<li>${ic.mod}${i.mod} módulos</li>` : '') + `<li>${ic.cert}Certificado</li>`;
+      return `<a class="f-card c-${i.tipo}${i.dest === 'Comece aqui' ? ' feature' : ''}" href="${i.url}"${pos ? ' target="_blank" rel="noopener"' : ''}>${vis}
+        <div class="f-body"><div class="top"><span class="tag tag-tipo">${TIPOS[i.tipo]}</span><span class="tag tag-area">${AREAS[i.area].curto}</span></div>
+        <h3>${i.nome}</h3><p>${i.txt}</p><ul class="f-facts">${facts}</ul>
+        <div class="meta"><span>${VER[i.tipo]}</span><span class="go">${ic.go}</span></div></div></a>`;
+    };
+    /* mostra 24 cards; "Carregar mais" abre o restante de uma vez */
+    const PAG = 24; let limite = PAG;
+    $('#cgrid').insertAdjacentHTML('afterend', '<div class="fx-more"><button type="button" class="btn btn-primary" id="fx-mais">Carregar mais</button><small id="fx-cont"></small></div>' + membCard(' f-more-full'));
+    $('#fx-mais').addEventListener('click', () => { limite = Infinity; render(); });
 
     const sem = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
     const render = () => {
@@ -139,8 +154,12 @@
       if (st.ord === 'az') r = [...r].sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
       const filtrando = st.q || st.tipo.size || st.area.size || st.dur;
       $('#cnt').innerHTML = `${r.length} <span>${r.length === 1 ? 'curso' : 'cursos'}${filtrando ? (r.length === 1 ? ' encontrado' : ' encontrados') : ' no catálogo'}</span>`;
-      $('#cgrid').innerHTML = r.length ? (!filtrando ? membro : '') + r.map(card).join('')
+      $('#cgrid').innerHTML = r.length ? r.slice(0, limite).map(card).join('')
         : `<div class="empty"><b>Nenhum curso com esses filtros</b>Remova um filtro ou busque outro termo.</div>`;
+      const resta = Math.max(0, r.length - limite);
+      $('#fx-mais').hidden = !resta;
+      $('#fx-mais').textContent = `Carregar mais (${resta})`;
+      $('#fx-cont').textContent = r.length ? `Mostrando ${Math.min(limite, r.length)} de ${r.length}` : '';
       const chips = [...st.tipo].map(v => ['tipo', v, TIPOS[v]]).concat([...st.area].map(v => ['area', v, AREAS[v].curto]), st.dur ? [['dur', st.dur, DUR[st.dur][0]]] : []);
       $('#active').innerHTML = chips.map(([k, v, l]) => `<button type="button" data-k="${k}" data-v="${v}">${l}</button>`).join('');
       $('#fcount').textContent = chips.length ? `(${chips.length})` : '';
@@ -151,13 +170,16 @@
     document.querySelector('.filters').addEventListener('change', e => {
       const t = e.target; if (!t.name) return;
       if (t.name === 'dur') st.dur = t.value; else t.checked ? st[t.name].add(t.value) : st[t.name].delete(t.value);
-      render();
+      limite = PAG; render();
     });
     $('#active').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return;
-      if (b.dataset.k === 'dur') st.dur = ''; else st[b.dataset.k].delete(b.dataset.v); sync(); render(); });
-    $('#fclear').addEventListener('click', () => { st.tipo.clear(); st.area.clear(); st.dur = ''; sync(); render(); });
-    $('#q').addEventListener('input', e => { st.q = e.target.value.trim(); render(); });
-    $('#ord').addEventListener('change', e => { st.ord = e.target.value; render(); });
+      if (b.dataset.k === 'dur') st.dur = ''; else st[b.dataset.k].delete(b.dataset.v); sync(); limite = PAG; render(); });
+    $('#fclear').addEventListener('click', () => { st.tipo.clear(); st.area.clear(); st.dur = ''; sync(); limite = PAG; render(); });
+    $('#q').addEventListener('input', e => { st.q = e.target.value.trim(); limite = PAG; render(); });
+    $('#ord').addEventListener('change', e => { st.ord = e.target.value; limite = PAG; render(); });
+    /* atalhos do hero: filtram por formato e descem até o catálogo */
+    document.querySelectorAll('[data-tipo]').forEach(l => l.addEventListener('click', () => {
+      st.tipo.clear(); st.tipo.add(l.dataset.tipo); sync(); limite = PAG; render(); }));
 
     /* entrada por link: /cursos/?tipo=sprint&area=dados (no protótipo, via hash) */
     const p = new URLSearchParams(location.hash.slice(1));

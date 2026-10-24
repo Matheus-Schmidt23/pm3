@@ -85,5 +85,9 @@ window.PM3_CATALOGO = (function(){
     S('Técnicas de negociação','lideranca',3,'Método Harvard, perfis comportamentais e persuasão.')
   ];
 
+  /* capa de cada sprint (assets/capas/sprints/), na mesma ordem da lista acima */
+  const CAPAS = ['fundamentos-gestao-produtos','roadmap-priorizacao','tecnicas-pesquisa','tecnologia-pms','prd','product-ops-fundamentos','product-ops-avancado','metodos-analise-dados','power-bi','excel','metricas-negocios','python','visualizacao-dashboards','teste-ab','sql','lgpd','problem-solving','vieses-analises','design-thinking','design-servico','ui-design','go-to-market','product-growth','product-marketing','aquisicao','sales-enablement','okrs','metodologias-ageis','gestao-processos','educacao-corporativa','negociacao-lideres','comunicacao-assertiva','apresentacao-slides','diversidade-inclusao','trabalho-remoto','gestao-tempo','lideranca-equipe','saude-mental','delegacao','feedback','ie-lideres','ie-trabalho','oratoria','tecnicas-negociacao'];
+  SPRINTS.forEach((s, i) => { s.capa = CAPAS[i]; });
+
   return { AREAS, FORMACOES, SPRINTS };
 })();
