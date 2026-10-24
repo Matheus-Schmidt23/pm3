@@ -199,11 +199,16 @@
    (espaço não separável), então nenhuma linha final fica com uma ou duas palavras sozinhas.
    Vale também para o que é desenhado depois (catálogo, FAQ), via MutationObserver. */
 (function(){
+  /* onde o navegador já evita viúvas sozinho (text-wrap:pretty, no base.css), colar palavras
+     só atrapalha: ele passa a quebrar linhas cedo demais no meio do parágrafo */
+  if (window.CSS && CSS.supports('text-wrap', 'pretty')) return;
   const SEL = 'p, li, dd, small, figcaption, blockquote, .lead, .to > span, .who span';
   const NB = '\u00A0';
   const cola = el => {
     if (el.dataset.semViuva || el.closest('[contenteditable], pre, code, nav.site-nav')) return;
     el.dataset.semViuva = '1';
+    /* só o bloco mais interno (ex.: o <p> dentro do <blockquote>), senão as palavras seriam coladas duas vezes */
+    if (el.querySelector(SEL)) return;
     const txt = el.textContent.trim();
     if (txt.split(/\s+/).length < 6) return;
     /* junta as 3 últimas palavras; se ficar longo demais para telas estreitas, junta só 2 */
