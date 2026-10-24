@@ -275,3 +275,26 @@
 @media (hover:hover){ .trb:hover{transform:translateY(-4px);border-color:rgba(255,177,42,.45)} }
 @media (max-width:1080px){ .trb-grid{grid-template-columns:1fr 1fr} }
 @media (max-width:600px){ .trb-grid{grid-template-columns:1fr} }
+
+/* Trilhas como produto (downsell entre formação avulsa e Membership): mais presença visual */
+.trb-grid{gap:20px;align-items:stretch}
+.trb{position:relative;border:1px solid transparent;background:linear-gradient(180deg,#1a1030,#0d0818) padding-box,linear-gradient(160deg,rgba(255,177,42,.7),rgba(170,120,255,.35) 40%,rgba(255,255,255,.08) 75%) border-box;box-shadow:0 24px 60px -28px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.02) inset}
+.trb::before{content:'';position:absolute;inset:auto -30% -40% -30%;height:60%;background:radial-gradient(closest-side,rgba(170,120,255,.22),transparent);pointer-events:none;opacity:.6;transition:opacity .4s}
+.trb-vis{height:170px}
+.trb-vis::after{background:linear-gradient(180deg,rgba(13,8,24,0) 35%,#140c26 100%)}
+.trb-n{letter-spacing:.1em;text-transform:uppercase;font-size:11px;padding:5px 10px}
+.trb-pack{position:absolute;right:14px;top:14px;z-index:1;font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(11,7,19,.6);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);border-radius:var(--r-pill);padding:5px 10px}
+.trb-body{position:relative;flex:1;gap:16px;padding:20px 22px 22px}
+.trb h3{font-size:24px}
+.trb-cta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px;border-radius:var(--r-pill);background:var(--yellow);color:#000;font-family:var(--display);font-weight:800;font-size:14.5px;text-decoration:none;transition:background .3s,transform .3s}
+.trb-cta svg{width:16px;height:16px;transition:transform .3s}
+@media (hover:hover){
+  .trb:hover{transform:translateY(-6px);box-shadow:0 34px 70px -30px rgba(0,0,0,.9),0 0 50px -12px rgba(255,177,42,.35)}
+  .trb:hover::before{opacity:1}
+  .trb-cta:hover{background:#fff}
+  .trb-cta:hover svg{transform:translateX(4px)}
+}
+@media (max-width:600px){ .trb-vis{height:180px} }
+.trb-pack{top:auto;right:auto;left:16px;bottom:12px}
+.trb h3{font-size:21px;white-space:nowrap}
+@media (max-width:1240px) and (min-width:1081px){ .trb h3{white-space:normal} }
