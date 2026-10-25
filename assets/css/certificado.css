@@ -37,7 +37,7 @@
 @media (max-width:860px){
 
 }
-.cx-hero::before{content:'';position:absolute;z-index:-1;top:3%;bottom:3%;right:-5%;aspect-ratio:2880/1607;background:url('../img/certificado-veludo.jpg') center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 94%,transparent),linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 94%,transparent),linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent);mask-composite:intersect}
+.cx-hero::before{content:'';position:absolute;z-index:-1;top:3%;bottom:3%;right:-5%;aspect-ratio:2880/1607;background:url('../img/certificado-veludo.jpg?v=3') center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 94%,transparent),linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 94%,transparent),linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent);mask-composite:intersect}
 @media (max-width:860px){ .cx-hero{padding-top:62vw} .cx-hero::before{top:0;bottom:auto;right:-25%;height:auto;width:150%} }
 .cx-copy .lead{max-width:520px}
 /* provas como selos de premiação */
@@ -54,11 +54,11 @@
 .cx-levels i{display:inline-flex;align-self:flex-start;font-style:normal;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-pill);padding:5px 11px;margin-bottom:16px}
 .cx-levels div{display:flex;flex-direction:column;padding-top:24px}
 @media (max-width:1080px){ .cx-levels{grid-template-columns:1fr 1fr} .cx-levels div + div{padding-left:0;border-left:0} }
-.cx-hero.cx-sprint::before{background-image:url('../img/certificado-sprint-veludo.jpg?v=2')}
+.cx-hero.cx-sprint::before{background-image:url('../img/certificado-sprint-veludo.jpg?v=3')}
 /* o mockup (recortado no certificado) fica sempre à direita da coluna de texto: nunca passa por baixo dele */
 @media (min-width:861px){
-  .cx-hero::before{top:4%;bottom:4%;right:0;left:max(48%,calc(max(var(--gutter),(100% - var(--wrap)) / 2) + 640px));aspect-ratio:auto;background-image:url('../img/certificado-veludo-crop.jpg?v=2');background-size:contain;background-position:right center;-webkit-mask-image:none;mask-image:none}
-  .cx-hero.cx-sprint::before{background-image:url('../img/certificado-sprint-veludo-crop.jpg?v=2')}
+  .cx-hero::before{top:4%;bottom:4%;right:0;left:max(48%,calc(max(var(--gutter),(100% - var(--wrap)) / 2) + 640px));aspect-ratio:auto;background-image:url('../img/certificado-veludo-crop.jpg?v=3');background-size:contain;background-position:right center;-webkit-mask-image:none;mask-image:none}
+  .cx-hero.cx-sprint::before{background-image:url('../img/certificado-sprint-veludo-crop.jpg?v=3')}
 }
 /* hover nos três estágios: a coluna acende, a linha amarela corre no topo e o número cresce */
 .cx-levels div{position:relative;isolation:isolate;padding-right:24px;padding-bottom:20px;transition:transform .4s cubic-bezier(.2,.7,.2,1)}

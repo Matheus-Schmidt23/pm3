@@ -258,8 +258,8 @@
 /* fundo do card do topo: degradê roxo → preto */
 .p-main{background:linear-gradient(135deg,#000 0%,#0B0713 38%,#2a1856 72%,#6645B1 100%)}
 .p-main .aurora{opacity:.45}
-@media (min-width:861px){ .cx-hero.cx-pos::before{background-image:url('../img/certificado-pos-veludo-crop.jpg?v=2')} }
-@media (max-width:860px){ .cx-hero.cx-pos::before{background-image:url('../img/certificado-pos-veludo-crop.jpg?v=2')} }
+@media (min-width:861px){ .cx-hero.cx-pos::before{background-image:url('../img/certificado-pos-veludo-crop.jpg?v=3')} }
+@media (max-width:860px){ .cx-hero.cx-pos::before{background-image:url('../img/certificado-pos-veludo-crop.jpg?v=3')} }
 .pos-dark .pos-card .f-vis{background-position:center}
 .pos-dark .pos-card .f-vis{background-position:72% 30%}
 /* capas oficiais da FIAP nos cards, com o lockup e a tipografia fina das páginas dos cursos */
