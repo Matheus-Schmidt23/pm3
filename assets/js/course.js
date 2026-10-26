@@ -45,4 +45,15 @@
     new IntersectionObserver(([e]) => { vis.hero = e.isIntersecting; at(); }).observe(hero);
     new IntersectionObserver(([e]) => { vis.inv = e.isIntersecting; at(); }, { threshold: .15 }).observe(inv);
   }
+
+  /* carrossel: setas rolam um cartão por vez e se desativam nas pontas */
+  $$('.car').forEach(car => {
+    const tr = car.querySelector('.car-track'), ant = car.querySelector('[data-car=ant]'), prox = car.querySelector('[data-car=prox]');
+    if (!tr || !ant || !prox) return;
+    const passo = () => { const c = tr.children[0], g = parseFloat(getComputedStyle(tr).columnGap) || 16; return (c ? c.getBoundingClientRect().width : tr.clientWidth) + g; };
+    const estado = () => { ant.disabled = tr.scrollLeft < 4; prox.disabled = tr.scrollLeft + tr.clientWidth >= tr.scrollWidth - 4; };
+    ant.addEventListener('click', () => tr.scrollBy({ left: -passo(), behavior: 'smooth' }));
+    prox.addEventListener('click', () => tr.scrollBy({ left: passo(), behavior: 'smooth' }));
+    tr.addEventListener('scroll', estado, { passive: true }); addEventListener('resize', estado); estado();
+  });
 })();

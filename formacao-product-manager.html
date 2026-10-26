@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=20">
 <link rel="stylesheet" href="assets/css/components.css?v=5">
-<link rel="stylesheet" href="assets/css/course.css?v=4">
+<link rel="stylesheet" href="assets/css/course.css?v=6">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -43,7 +43,8 @@
 <main>
 
 <!-- 1 · HERO -->
-<section class="c-hero grain on-dark" id="topo-curso" aria-labelledby="h1">
+<section class="c-hero has-cover grain on-dark" id="topo-curso" aria-labelledby="h1">
+  <div class="cover-bg" aria-hidden="true" style="background-image:url('assets/capas/product-manager-1600.jpg')"></div>
   <div class="wrap">
     <ol class="crumbs" aria-label="Você está em" data-nota="Breadcrumb visível e marcado com dados estruturados (regra 4 da arquitetura). A URL atual /curso-product-manager/ fica igual, porque já rankeia."><li><a href="home.html">Home</a></li><li><a href="formacoes.html">Formações</a></li><li aria-current="page">Product Manager</li></ol>
     <div class="c-hero-grid">
@@ -96,11 +97,11 @@
       <p class="lead">Cinco competências que a formação desenvolve, com método, prática e IA, para atuar no dia a dia de um Product Manager.</p>
     </div>
     <div class="outs reveal">
-      <div class="out"><span class="n">01</span><h3>Entender o papel de produto no negócio</h3><p>Outputs e outcomes, ciclo de vida, times e cultura de produto.</p></div>
-      <div class="out"><span class="n">02</span><h3>Validar product-market fit</h3><p>Pesquisa de mercado, modelo de negócio, proposta de valor e riscos.</p></div>
-      <div class="out"><span class="n">03</span><h3>Conduzir discovery</h3><p>Da oportunidade à solução validada, com entrevistas, ideação e protótipos.</p></div>
-      <div class="out"><span class="n">04</span><h3>Decidir com dados</h3><p>Métricas de produto e negócio, experimentos e testes A/B.</p></div>
-      <div class="out"><span class="n">05</span><h3>Gerir a rotina do time</h3><p>Ágil, priorização, especificação, rollout e stakeholders.</p></div>
+      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="12" height="8" rx="1.5"/><path d="M6 5V3.5h4V5M2 8.5h12"/></svg></span><span class="n">01</span></div><h3>Entender o papel de produto no negócio</h3><p>Outputs e outcomes, ciclo de vida, times e cultura de produto.</p></div>
+      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="2.4"/></svg></span><span class="n">02</span></div><h3>Validar product-market fit</h3><p>Pesquisa de mercado, modelo de negócio, proposta de valor e riscos.</p></div>
+      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3.5 3.5"/></svg></span><span class="n">03</span></div><h3>Conduzir discovery</h3><p>Da oportunidade à solução validada, com entrevistas, ideação e protótipos.</p></div>
+      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13V8M8 13V3M13 13V6"/></svg></span><span class="n">04</span></div><h3>Decidir com dados</h3><p>Métricas de produto e negócio, experimentos e testes A/B.</p></div>
+      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 8a5.5 5.5 0 1 1-1.7-4M13.5 2.5v3h-3"/></svg></span><span class="n">05</span></div><h3>Gerir a rotina do time</h3><p>Ágil, priorização, especificação, rollout e stakeholders.</p></div>
     </div>
   </div>
 </section>
@@ -142,7 +143,8 @@
 </section>
 
 <!-- 5 · IA NA FORMAÇÃO -->
-<section class="section black on-dark" id="ia" aria-labelledby="ia-t">
+<section class="section black on-dark ia-sec" id="ia" aria-labelledby="ia-t">
+  <div class="ia-bg" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">03</span> IA na formação</p><h2 class="h2" id="ia-t">Produto com IA,<br><span class="c2">na prática</span></h2></div>
@@ -166,15 +168,18 @@
       <div><p class="kicker"><span class="n">04</span> Cases reais</p><h2 class="h2" id="cs-t">Aprenda com<br><span class="c2">quem fez</span></h2></div>
       <p class="lead">Empresas brasileiras abrem como resolveram problemas reais de produto, do discovery à priorização.</p>
     </div>
-    <div class="cases">
-      <div class="case reveal"><span class="brand">Creditas</span><p>Como mudar a cultura de produto de uma empresa em crescimento.</p><span class="m">Módulo 1</span></div>
-      <div class="case reveal" data-d="1"><span class="brand">Involves</span><p>Matriz CSD, entrevistas e validação por protótipo, do começo ao fim.</p><span class="m">Módulo 3</span></div>
-      <div class="case reveal" data-d="2"><span class="brand">ContaMais.ai</span><p>Ideação e definição de soluções em um produto de IA.</p><span class="m">Módulo 3</span></div>
-      <div class="case reveal" data-d="3"><span class="brand">Logbit</span><p>Priorização de backlog com IA e os resultados alcançados.</p><span class="m">Módulo 6</span></div>
-      <div class="case reveal"><span class="brand">Soccer Punch</span><p>Pesquisa de mercado aplicada, em duas partes.</p><span class="m">Módulo 2</span></div>
-      <div class="case reveal" data-d="1"><span class="brand">Tempo</span><p>Análise de dados com IA para decidir o próximo passo.</p><span class="m">Módulo 4</span></div>
-      <div class="case reveal" data-d="2"><span class="brand">Lovable e Pipefy</span><p>Experimentos rápidos com ferramentas de IA.</p><span class="m">Módulo 2</span></div>
-      <div class="case reveal" data-d="3"><span class="brand">n8n</span><p>RAG em produto: configuração do fluxo e ajuste de prompts.</p><span class="m">Módulo 6</span></div>
+    <div class="car reveal">
+      <div class="car-track cases" role="region" aria-label="Cases reais" tabindex="0">
+        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-dobras-roxas.jpg')"><span class="brand">Creditas</span></div><div class="cb"><p>Como mudar a cultura de produto de uma empresa em crescimento.</p><span class="m">Módulo 1</span></div></article>
+        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-dobras-azuis.jpg')"><span class="brand">Involves</span></div><div class="cb"><p>Matriz CSD, entrevistas e validação por protótipo, do começo ao fim.</p><span class="m">Módulo 3</span></div></article>
+        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-aurora.jpg')"><span class="brand">ContaMais.ai</span></div><div class="cb"><p>Ideação e definição de soluções em um produto de IA.</p><span class="m">Módulo 3</span></div></article>
+        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-barras-dados.jpg')"><span class="brand">Logbit</span></div><div class="cb"><p>Priorização de backlog com IA e os resultados alcançados.</p><span class="m">Módulo 6</span></div></article>
+        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-montanhas-dados.jpg')"><span class="brand">Soccer Punch</span></div><div class="cb"><p>Pesquisa de mercado aplicada, em duas partes.</p><span class="m">Módulo 2</span></div></article>
+        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-linhas-dados.jpg')"><span class="brand">Tempo</span></div><div class="cb"><p>Análise de dados com IA para decidir o próximo passo.</p><span class="m">Módulo 4</span></div></article>
+        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-fitas-vidro.jpg')"><span class="brand">Lovable e Pipefy</span></div><div class="cb"><p>Experimentos rápidos com ferramentas de IA.</p><span class="m">Módulo 2</span></div></article>
+        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-ondas-dados.jpg')"><span class="brand">n8n</span></div><div class="cb"><p>RAG em produto: configuração do fluxo e ajuste de prompts.</p><span class="m">Módulo 6</span></div></article>
+      </div>
+      <div class="car-nav"><button type="button" data-car="ant" aria-label="Cases anteriores"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8H3M7 4 3 8l4 4"/></svg></button><button type="button" data-car="prox" aria-label="Próximos cases"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button></div>
     </div>
   </div>
 </section>
@@ -192,7 +197,7 @@
         <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Você está no primeiro cargo ou é PM júnior ou pleno</li>
         <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Você quer uma base sólida antes de se especializar</li>
         <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Você quer usar IA no trabalho de produto, com método</li>
-      </ul></div>
+      </ul><a class="btn btn-light" href="#investimento">Ver como se inscrever</a></div>
       <div class="no reveal" data-d="1" data-nota="Encaminha para outra formação quando esta não serve. Reforça a navegação interna entre páginas de curso (links internos para o Google)."><h3>Outra opção é melhor se</h3><ul>
         <li><a href="#"><span><b>Já lidera pessoas ou quer liderar</b><span>Product Leadership</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li>
         <li><a href="#"><span><b>Já domina a base e quer aprofundar discovery</b><span>Product Discovery</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li>
@@ -211,10 +216,10 @@
       <p class="lead">Instrutores que atuam em gestão de produtos no mercado e levam para a aula a prática do dia a dia.</p>
     </div>
     <div class="prof-row" data-nota="Espaço para os instrutores desta formação, com foto e perfil próprio. Os nomes abaixo são da página da Membership: confirmar quem dá aula aqui.">
-      <div class="prof-c reveal"><div class="ph" style="background-image:url('assets/people/marcell-almeida.png')" role="img" aria-label="Foto de Marcell Almeida"></div><div class="tx"><b>Marcell Almeida</b><span>Founder, PM3 e Product Camp</span></div></div>
-      <div class="prof-c reveal" data-d="1"><div class="ph" style="background-image:url('assets/people/raphael-farinazzo.jpg')" role="img" aria-label="Foto de Raphael Farinazzo"></div><div class="tx"><b>Raphael Farinazzo</b><span>CEO, PM3</span></div></div>
-      <div class="prof-c reveal" data-d="2"><div class="ph" style="background-image:url('assets/people/eliza-gurgel.png')" role="img" aria-label="Foto de Eliza Gurgel"></div><div class="tx"><b>Eliza Gurgel</b><span>Sr. Group Product Manager, Neon</span></div></div>
-      <div class="prof-c reveal" data-d="3"><div class="ph" style="background-image:url('assets/people/gabriel-werlich.jpg')" role="img" aria-label="Foto de Gabriel Werlich"></div><div class="tx"><b>Gabriel Werlich</b><span>Product Director, Conta Mais</span></div></div>
+      <figure class="prof reveal"><div class="ph"><img src="assets/people/marcell-almeida-hd.jpg" alt="Foto de Marcell Almeida" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logo/pm3-logo-preto.svg" alt="PM3" style="height:15px"></span></div><figcaption><b>Marcell Almeida</b><span>Founder, PM3 e Product Camp</span></figcaption></figure>
+      <figure class="prof reveal" data-d="1"><div class="ph"><img src="assets/people/raphael-farinazzo.jpg" alt="Foto de Raphael Farinazzo" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logo/pm3-logo-preto.svg" alt="PM3" style="height:15px"></span></div><figcaption><b>Raphael Farinazzo</b><span>CEO, PM3</span></figcaption></figure>
+      <figure class="prof reveal" data-d="2"><div class="ph"><img src="assets/people/eliza-gurgel-hd.jpg" alt="Foto de Eliza Gurgel" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/neon.svg" alt="Neon" style="height:13px"></span></div><figcaption><b>Eliza Gurgel</b><span>Sr. Group Product Manager</span></figcaption></figure>
+      <figure class="prof reveal" data-d="3"><div class="ph"><img src="assets/people/gabriel-werlich.jpg" alt="Foto de Gabriel Werlich" loading="lazy" width="480" height="600"><span class="co">Conta Mais</span></div><figcaption><b>Gabriel Werlich</b><span>Product Director</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -327,6 +332,6 @@
 </div>
 
 <script src="assets/js/layout.js?v=26"></script>
-<script src="assets/js/course.js"></script>
+<script src="assets/js/course.js?v=2"></script>
 </body>
 </html>
