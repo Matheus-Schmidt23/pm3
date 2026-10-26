@@ -370,3 +370,5 @@
 .acc .trb-cta{margin-top:6px}
 @media (max-width:900px){ .trb-grid.acc{height:auto} }
 .trb-mini b{font-size:clamp(15px,1.45vw,20px)} .trb-mini{padding-left:16px;padding-right:14px} @media (max-width:900px){ .trb-mini b{font-size:19px} }
+@media (min-width:901px){ .acc .trb-body{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)} .acc .trb-body .trb-s li{text-wrap:wrap} }
+@media (min-width:901px) and (max-width:1180px){ .acc .trb-body{grid-template-columns:1fr;grid-template-rows:auto auto auto 1fr auto} .acc .trb-grp + .trb-grp{padding-left:0;border-left:0;padding-top:14px;border-top:1px solid rgba(255,255,255,.1)} }
