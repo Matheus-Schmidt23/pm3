@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="assets/css/base.css?v=20">
 <link rel="stylesheet" href="assets/css/components.css?v=5">
 <link rel="stylesheet" href="assets/css/course.css?v=6">
+<link rel="stylesheet" href="assets/css/ementa.css?v=2">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -52,6 +53,7 @@
         <div class="c-tags"><span class="tag tag-dark">Formação</span><span class="tag tag-dark">Gestão de produtos</span><span class="tag tag-yellow">Comece aqui</span></div>
         <h1 class="display" id="h1">Product<br>Manager<span class="em">Do primeiro cargo a um PM que gera resultado.</span></h1>
         <p class="lead">A formação de base da PM3 para quem está entrando em produto ou quer consolidar estratégia, discovery e execução, com IA aplicada em 4 dos 6 módulos.</p>
+        <div class="hero-ctas"><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="hero"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa completa</a><span class="hint">PDF gratuito com módulos e tópicos</span></div>
         <div class="facts" data-nota="Carga oficial do plano de estudos 2025: 37h de conteúdo em 6 módulos. A página atual mostra 7 módulos e materiais antigos citam 75h; alinhar todo o marketing a este número.">
           <div><b>37h</b><span>de conteúdo</span></div>
           <div><b>6</b><span>módulos</span></div>
@@ -85,7 +87,7 @@
     <nav aria-label="Seções da página">
       <a href="#resultados">Visão geral</a><a href="#ementa">Ementa</a><a href="#ia">IA na formação</a><a href="#cases">Cases</a><a href="#para-quem">Para quem é</a><a href="#investimento">Investimento</a><a href="#duvidas">Dúvidas</a>
     </nav>
-    <div class="mini"><b>12x R$ 274,91<small>ou R$ 3.299 à vista</small></b><a class="btn btn-primary btn-sm" href="#investimento">Inscrever</a></div>
+    <div class="sub-cta"><div class="mini"><b>12x R$ 274,91<small>ou R$ 3.299 à vista</small></b><a class="btn btn-primary btn-sm" href="#investimento">Inscrever</a></div><a class="btn btn-line btn-sm btn-em sub-ementa" href="#baixar-ementa" data-ementa="subnav"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Ementa</a></div>
   </div>
 </div>
 
@@ -117,7 +119,7 @@
       <p class="muted" style="font-size:13px;margin:0">Horas por módulo</p>
       <div class="hours-bar" id="hbar" aria-hidden="true"></div>
       <div class="hours-leg"><span>Módulo 1</span><span>Módulo 6</span></div>
-      <a class="btn btn-line btn-sm" href="#">Baixar a ementa completa (PDF)</a>
+      <div class="em-dl"><div class="row"><span class="pdf" aria-hidden="true">PDF</span><div><b>Ementa completa</b><div class="meta">37h · 6 módulos · 176 aulas</div></div></div><ul><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg> Todos os módulos e tópicos</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg> Carga horária e conteúdo de cada módulo</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg> Professores e cases de cada módulo</li></ul><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="lateral-ementa"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa</a></div>
     </div>
     <div class="mods" id="mods" data-nota="Ementa em blocos recolhíveis, com o texto no HTML (lido pelo Google e pelas IAs). Hoje os módulos de curso viram 276 páginas finas que abrem a capa do blog.">
       <div class="mod open" data-h="6.08"><button type="button" aria-expanded="true"><span class="mn">01</span><span class="mt">A área de Produto e seu papel no negócio</span><span class="mh">6h05</span><span class="pl" aria-hidden="true"></span></button>
@@ -138,6 +140,7 @@
       <div class="mod" data-h="8.9"><button type="button" aria-expanded="false"><span class="mn">06</span><span class="mt">Dia a dia de produto</span><span class="mh">8h54</span><span class="pl" aria-hidden="true"></span></button>
         <div class="mod-body"><div><div class="in"><p>Metodologias ágeis no dia a dia, priorização, stakeholders, especificação, rollout e casos práticos com IA.</p>
           <ul><li>Metodologias ágeis e ágil no dia a dia</li><li class="ai">Priorização de backlog com IA <em>Case Logbit</em></li><li>Especificação de requisitos e rollout</li><li>Stakeholders: mapeamento, buy-in e conflitos</li><li class="ai">RAG em produto, com fluxo no n8n <em>IA</em></li><li>Bônus: delivery e interação com engenharia</li></ul></div></div></div></div>
+      <div class="em-strip"><p>Quer ver os tópicos de cada aula?<span>Baixe a ementa completa e compartilhe com seu time ou gestor.</span></p><a class="btn btn-primary btn-em" href="#baixar-ementa" data-ementa="fim-da-ementa"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa</a></div>
     </div>
   </div>
 </section>
@@ -333,5 +336,7 @@
 
 <script src="assets/js/layout.js?v=26"></script>
 <script src="assets/js/course.js?v=2"></script>
+<script>window.EMENTA={curso:"Product Manager",tracking:"ementa cpm",stats:"37 horas, 6 módulos e 176 aulas.",capa:"assets/capas/product-manager-800.jpg"};</script>
+<script src="assets/js/ementa.js?v=3"></script>
 </body>
 </html>
