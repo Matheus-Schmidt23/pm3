@@ -88,13 +88,15 @@
   };
   /* cada visita começa por uma pessoa sorteada (sem animação na troca inicial) */
   let i = Math.floor(Math.random() * fotos.length);
-  if (i) {
+  /* a primeira foto aparece já visível, mas sem zoom; ao soltar o sem-anim o Ken Burns começa nela também */
+  {
     const f = fotos[i];
     if (f.dataset.bg) f.style.backgroundImage = `url('${f.dataset.bg}')`;
     pic.classList.add('sem-anim');
     fotos[0].classList.remove('on');
     f.classList.add('on');
-    requestAnimationFrame(() => requestAnimationFrame(() => pic.classList.remove('sem-anim')));
+    void pic.offsetWidth;
+    setTimeout(() => pic.classList.remove('sem-anim'), 60);
   }
   legenda(fotos[i], false);
   /* só gira com a foto na tela: assim a primeira pessoa vista é a sorteada, inclusive no celular,
