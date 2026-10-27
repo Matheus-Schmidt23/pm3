@@ -90,3 +90,7 @@
 .cx-aw b{font-family:'Barlow Condensed',var(--display);font-weight:300;font-size:40px;letter-spacing:.01em;line-height:1}
 .cx-proof li{gap:12px;padding:20px 14px}
 .cx-aw{width:184px;height:60px}
+/* sombra do mockup: entra suave pela esquerda e some de leve em cima e embaixo (sem borda reta) */
+@media (min-width:861px){
+  .cx-hero::before{-webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 14%,#000 42%),linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 14%,#000 42%),linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
+}
