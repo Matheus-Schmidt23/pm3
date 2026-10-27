@@ -521,3 +521,7 @@ a.step:hover{transform:translateY(-4px)}
 #resultados .cv-ic{right:auto;left:38%}
 #resultados .acc .trb:not(.open) .cv-ic{left:50%;right:auto;transform:translate(-50%,-50%)}
 #resultados .acc .trb:not(.open):hover .cv-ic{transform:translate(-50%,-50%) scale(1.08)}
+/* faixa de cases: título em uma linha e a frase original embaixo, em texto normal */
+.em-cases-lb{font-family:var(--body);font-weight:400;text-transform:none;font-size:15px;line-height:1.45;letter-spacing:0;color:#4a4458;max-width:24ch}
+.em-cases-lb h3{margin:0 0 10px;font-family:var(--display);font-weight:800;font-size:clamp(28px,2.8vw,40px);line-height:1;letter-spacing:-.02em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+.em-cases-lb p{margin:0}

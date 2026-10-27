@@ -16,7 +16,7 @@
       <div class="fm-copy"><small>Membership PM3</small><h3>Um ano para<span class="em">acelerar a sua carreira.</span></h3>
         <p>Acesso completo ao catálogo da PM3 por 12 meses. Você escolhe a ordem, a PM3 indica o caminho.</p>
         <ul class="fm-list">${itens.map(t => `<li>${ok}${t}</li>`).join('')}</ul></div>
-      <div class="fm-price"><small>Assinatura anual</small><b><i>12x</i> R$ 299,91</b><span>ou R$ 3.599 à vista</span>
+      <div class="fm-price"><small>Assinatura anual</small><b><i>12x</i> R$ 299,92</b><span>ou R$ 3.599 à vista</span>
         <span class="btn btn-primary">Assinar a Membership ${arrow}</span><em>7 dias de garantia · acesso imediato</em></div></a>`;
   };
   /* ---------- /formacoes/ ---------- */

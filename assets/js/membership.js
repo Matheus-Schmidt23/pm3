@@ -54,7 +54,7 @@
 
   /* seletor de pagamento */
   const P = {
-    12: ['12x', '299,91', 'ou R$ 3.599 à vista no cartão · sem juros'],
+    12: ['12x', '299,92', 'ou R$ 3.599 à vista no cartão · sem juros'],
     24: ['24x', '149,95', 'via NuPay, sem juros, sujeito a aprovação de crédito'],
     1:  ['', '3.599', 'à vista no cartão · ou no Pix com 10% de desconto']
   };
