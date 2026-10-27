@@ -245,11 +245,11 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', inicia); else inicia();
 })();
 
-/* luz: manchas de luz em toda seção escura e um brilho com malha de pontos que segue o cursor.
+/* luz: manchas de luz em movimento nas seções escuras (o certificado fica de fora).
    As manchas variam por seção (cores e posições sorteadas de forma estável); o cursor anda com inércia
    num único requestAnimationFrame, que só roda enquanto há uma seção escura visível com o mouse em cima. */
 (function(){
-  const alvos = [...document.querySelectorAll('section.section.black, section.cx-sec, section.section.deep')]
+  const alvos = [...document.querySelectorAll('section.section.black, section.section.deep')]
     .filter(s => !s.matches('.bento-sec, .ia-sec, .alun-sec2, .trilhas-sec') && !s.querySelector(':scope > .luz'));
   if (!alvos.length) return;
   const cores = ['rgba(102,69,177,.9)','rgba(176,77,221,.75)','rgba(77,43,159,.9)','rgba(255,177,42,.35)','rgba(237,20,91,.35)','rgba(252,203,201,.3)'];
@@ -261,31 +261,13 @@
     let html = '';
     const n = 2 + (k % 2);
     for (let i = 0; i < n; i++) {
-      const w = 34 + r() * 26, x = (i % 2 ? 55 : -10) + r() * 30, y = -10 + r() * 70;
+      /* caixa sempre dentro da seção (altura em % da seção): a mancha se apaga antes da borda */
+      const w = 32 + r() * 22, h = 50 + r() * 24, x = (i % 2 ? 48 : 0) + r() * (52 - w + 4), y = 4 + r() * (92 - h);
       const c = i === n - 1 && r() > .5 ? cores[3 + Math.floor(r() * 3)] : cores[Math.floor(r() * 3)];
-      html += `<i class="bl" style="width:${w}%;height:${w * 1.2}%;left:${x}%;top:${y}%;background:radial-gradient(circle,${c},transparent 65%);--d:${26 + r() * 16}s;--atraso:${-r() * 20}s;--tx:${(r() - .5) * 22}%;--ty:${(r() - .5) * 18}%"></i>`;
+      html += `<i class="bl" style="width:${w}%;height:${h}%;left:${x}%;top:${y}%;background:radial-gradient(closest-side,${c},transparent);--d:${26 + r() * 16}s;--atraso:${-r() * 20}s;--tx:${(r() - .5) * 22}%;--ty:${(r() - .5) * 18}%"></i>`;
     }
-    luz.innerHTML = html + '<i class="cur"></i><i class="grade"></i>';
+    luz.innerHTML = html;
     s.classList.add('tem-luz');
     s.prepend(luz);
-  });
-  if (!matchMedia('(hover:hover) and (pointer:fine)').matches || matchMedia('(prefers-reduced-motion:reduce)').matches) return;
-  let ativo = null, alvo = { x: 0, y: 0 }, pos = { x: 0, y: 0 }, rodando = false;
-  const passo = () => {
-    if (!ativo) { rodando = false; return; }
-    pos.x += (alvo.x - pos.x) * .12; pos.y += (alvo.y - pos.y) * .12;
-    ativo.style.setProperty('--lx', pos.x.toFixed(1) + 'px');
-    ativo.style.setProperty('--ly', pos.y.toFixed(1) + 'px');
-    requestAnimationFrame(passo);
-  };
-  alvos.forEach(s => {
-    s.addEventListener('pointerenter', e => {
-      const r = s.getBoundingClientRect();
-      ativo = s; pos.x = alvo.x = e.clientX - r.left; pos.y = alvo.y = e.clientY - r.top;
-      s.classList.add('mira');
-      if (!rodando) { rodando = true; requestAnimationFrame(passo); }
-    });
-    s.addEventListener('pointermove', e => { const r = s.getBoundingClientRect(); alvo.x = e.clientX - r.left; alvo.y = e.clientY - r.top; });
-    s.addEventListener('pointerleave', () => { s.classList.remove('mira'); if (ativo === s) ativo = null; });
   });
 })();

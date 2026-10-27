@@ -252,3 +252,6 @@ button{font:inherit;color:inherit}
 .luz .bl{opacity:.72}
 .luz .cur{background:radial-gradient(circle,rgba(176,77,221,.38),rgba(102,69,177,.16) 38%,transparent 66%)}
 .luz .grade{background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.32) 1px,transparent 1.6px)}
+/* revisão das quebras: a camada de luz não escurece mais as bordas (isso criava faixas pretas entre seções);
+   cada mancha se apaga dentro da própria caixa (closest-side), então nunca é cortada na borda da seção */
+.luz{-webkit-mask-image:none;mask-image:none}
