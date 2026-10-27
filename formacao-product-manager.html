@@ -21,7 +21,6 @@
 <link rel="stylesheet" href="assets/css/ementa.css?v=2">
 <link rel="stylesheet" href="assets/css/certificado.css?v=7">
 <link rel="stylesheet" href="assets/css/instrutores.css?v=5">
-<link rel="stylesheet" href="assets/css/trilhas.css?v=1">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -46,12 +45,12 @@
 <!--
   MODELO DE PÁGINA DE CURSO. Para criar outro curso, copie este arquivo e troque só o conteúdo:
   1 · Hero (course.css, .c-hero): nome, frase em itálico, lead, fatos (horas, módulos, aulas), capa em .cover-bg e o box de compra .buy. O sistema de cards (hero-card.css) é só das páginas de categoria.
-  3 a 5 · Resultados, ementa e IA: textos e módulos do curso (course.css, ementa.css).
-  6 · Investimento: preços da formação e da Membership (logo depois da IA, antes dos instrutores).
-  7 · Instrutores (instrutores.css + instrutores.js): um <figure class="prof"> por pessoa e, embaixo, a faixa .marquee com as empresas dos cases; (foto 480x600 em assets/people/,
+  3 e 4 · Ementa e IA: textos e módulos do curso (course.css, ementa.css). A página começa direto na ementa.
+  5 · Investimento: preços da formação e da Membership (logo depois da IA, antes dos instrutores).
+  6 · Instrutores (instrutores.css + instrutores.js): um <figure class="prof"> por pessoa e, embaixo, a faixa .marquee com as empresas dos cases; (foto 480x600 em assets/people/,
       empresa em .co-logo com o logo de assets/logos/ ou em .co com o nome em texto, e o cargo).
-  8 · Certificado (certificado.css): o mockup do curso nas variáveis --cert-full e --cert-crop do .cx-hero.
-  9 · FAQ: perguntas. Atualize também o JSON-LD do <head> e window.EMENTA no fim.
+  7 · Certificado (certificado.css): o mockup do curso nas variáveis --cert-full e --cert-crop do .cx-hero.
+  8 · FAQ: perguntas. Atualize também o JSON-LD do <head> e window.EMENTA no fim.
 -->
 
 <main>
@@ -97,34 +96,17 @@
 <div class="subnav" id="subnav">
   <div class="wrap">
     <nav aria-label="Seções da página">
-      <a href="#resultados">Visão geral</a><a href="#ementa">Ementa</a><a href="#ia">IA na formação</a><a href="#investimento">Investimento</a><a href="#instrutores">Instrutores</a><a href="#certificado">Certificado</a><a href="#duvidas">Dúvidas</a>
+      <a href="#ementa">Ementa</a><a href="#ia">IA na formação</a><a href="#investimento">Investimento</a><a href="#instrutores">Instrutores</a><a href="#certificado">Certificado</a><a href="#duvidas">Dúvidas</a>
     </nav>
     <div class="sub-cta"><div class="mini"><b>12x R$ 274,91<small>ou R$ 3.299 à vista</small></b><a class="btn btn-primary btn-sm" href="#investimento">Inscrever</a></div><a class="btn btn-line btn-sm btn-em sub-ementa" href="#baixar-ementa" data-ementa="subnav"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Ementa</a></div>
   </div>
 </div>
 
-<!-- 3 · RESULTADOS (acordeão de cartões com foto: trilhas.css + trilhas.js, o mesmo das trilhas da Membership) -->
-<section class="section deep on-dark trilhas-sec grain" id="resultados" aria-labelledby="rs-t">
-  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="wrap">
-    <div class="sec-head">
-      <div><p class="kicker"><span class="n">01</span> Ao final da formação</p><h2 class="h2" id="rs-t">O que você<br><span class="c2">vai fazer</span></h2></div>
-      <p class="lead">Cinco competências que a formação desenvolve, com método, prática e IA, para atuar no dia a dia de um Product Manager.</p>
-    </div>
-    <div class="trb-grid" data-nota="Cada competência aponta os módulos e tópicos da ementa onde ela é trabalhada (mesmo texto da ementa).">
-      <article class="trb reveal" data-d="0"><div class="trb-vis cv cv1"><span class="cv-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="12" height="8" rx="1.5"/><path d="M6 5V3.5h4V5M2 8.5h12"/></svg></span><span class="cv-num" aria-hidden="true">01</span><span class="trb-n"><span class="trb-lg">Competência </span>01</span><span class="trb-pack">2 módulos</span></div><div class="trb-body"><h3>Entender o papel de produto no negócio</h3><p>Outputs e outcomes, ciclo de vida, times e cultura de produto.</p><div class="trb-grp"><small>Na ementa</small><ul class="trb-f"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5h4.5a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 0-1.5-1.5H2zM14 3.5H9.5A1.5 1.5 0 0 0 8 5v8a1.5 1.5 0 0 1 1.5-1.5H14z"/></svg>01 · Fundamentos do Product Management</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5h4.5a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 0-1.5-1.5H2zM14 3.5H9.5A1.5 1.5 0 0 0 8 5v8a1.5 1.5 0 0 1 1.5-1.5H14z"/></svg>07 · Cultura de Produto</li></ul></div><div class="trb-grp"><small>Você pratica</small><ul class="trb-s"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Habilidades esperadas do(a) Product Manager</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Estruturas de times de Produto</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Product Operations na prática</li></ul></div><a class="trb-cta" href="#ementa">Ver a ementa <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div></article>
-      <article class="trb reveal" data-d="1"><div class="trb-vis cv cv2"><span class="cv-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="2.4"/></svg></span><span class="cv-num" aria-hidden="true">02</span><span class="trb-n"><span class="trb-lg">Competência </span>02</span><span class="trb-pack">1 módulo</span></div><div class="trb-body"><h3>Validar product-market fit</h3><p>Pesquisa de mercado, modelo de negócio, proposta de valor e riscos.</p><div class="trb-grp"><small>Na ementa</small><ul class="trb-f"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5h4.5a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 0-1.5-1.5H2zM14 3.5H9.5A1.5 1.5 0 0 0 8 5v8a1.5 1.5 0 0 1 1.5-1.5H14z"/></svg>02 · Product Market Fit</li></ul></div><div class="trb-grp"><small>Você pratica</small><ul class="trb-s"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Business Model Canvas, Lean Canvas e Proposta de Valor</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Product-Market Fit e outros fits</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Estratégias para mitigar os riscos de Produto</li></ul></div><a class="trb-cta" href="#ementa">Ver a ementa <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div></article>
-      <article class="trb reveal" data-d="2"><div class="trb-vis cv cv3"><span class="cv-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3.5 3.5"/></svg></span><span class="cv-num" aria-hidden="true">03</span><span class="trb-n"><span class="trb-lg">Competência </span>03</span><span class="trb-pack">1 módulo</span></div><div class="trb-body"><h3>Conduzir discovery</h3><p>Da oportunidade à solução validada, com entrevistas, ideação e protótipos.</p><div class="trb-grp"><small>Na ementa</small><ul class="trb-f"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5h4.5a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 0-1.5-1.5H2zM14 3.5H9.5A1.5 1.5 0 0 0 8 5v8a1.5 1.5 0 0 1 1.5-1.5H14z"/></svg>03 · Product Discovery &amp; Design</li></ul></div><div class="trb-grp"><small>Você pratica</small><ul class="trb-s"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Explorando problemas e descobrindo oportunidades</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Como Product Manager e UX Designer trabalham juntos</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Da ideação à definição da solução</li></ul></div><a class="trb-cta" href="#ementa">Ver a ementa <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div></article>
-      <article class="trb reveal" data-d="3"><div class="trb-vis cv cv4"><span class="cv-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13V8M8 13V3M13 13V6"/></svg></span><span class="cv-num" aria-hidden="true">04</span><span class="trb-n"><span class="trb-lg">Competência </span>04</span><span class="trb-pack">1 módulo</span></div><div class="trb-body"><h3>Decidir com dados</h3><p>Métricas de produto e negócio, experimentos e testes A/B.</p><div class="trb-grp"><small>Na ementa</small><ul class="trb-f"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5h4.5a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 0-1.5-1.5H2zM14 3.5H9.5A1.5 1.5 0 0 0 8 5v8a1.5 1.5 0 0 1 1.5-1.5H14z"/></svg>05 · Dados e Analytics</li></ul></div><div class="trb-grp"><small>Você pratica</small><ul class="trb-s"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Métricas de Produto e negócio</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Análise de dados usando SQL</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Testes A/B e experimentação</li></ul></div><a class="trb-cta" href="#ementa">Ver a ementa <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div></article>
-      <article class="trb reveal" data-d="4"><div class="trb-vis cv cv5"><span class="cv-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 8a5.5 5.5 0 1 1-1.7-4M13.5 2.5v3h-3"/></svg></span><span class="cv-num" aria-hidden="true">05</span><span class="trb-n"><span class="trb-lg">Competência </span>05</span><span class="trb-pack">2 módulos</span></div><div class="trb-body"><h3>Gerir a rotina do time</h3><p>Ágil, priorização, especificação, rollout e stakeholders.</p><div class="trb-grp"><small>Na ementa</small><ul class="trb-f"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5h4.5a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 0-1.5-1.5H2zM14 3.5H9.5A1.5 1.5 0 0 0 8 5v8a1.5 1.5 0 0 1 1.5-1.5H14z"/></svg>04 · Estratégia de Produto</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5h4.5a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 0-1.5-1.5H2zM14 3.5H9.5A1.5 1.5 0 0 0 8 5v8a1.5 1.5 0 0 1 1.5-1.5H14z"/></svg>06 · Dia a dia de Produto</li></ul></div><div class="trb-grp"><small>Você pratica</small><ul class="trb-s"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Técnicas de priorização</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Metodologias Ágeis no dia a dia</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg>Melhores práticas para gerenciar stakeholders</li></ul></div><a class="trb-cta" href="#ementa">Ver a ementa <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div></article>
-    </div>
-  </div>
-</section>
-<!-- 4 · EMENTA -->
+<!-- 3 · EMENTA -->
 <section class="section white" id="ementa" aria-labelledby="em-t">
   <div class="wrap ementa-grid">
     <div class="ementa-aside">
-      <p class="kicker"><span class="n">02</span> Ementa</p>
+      <p class="kicker"><span class="n">01</span> Ementa</p>
       <h2 class="h2" id="em-t">O que<br>você vai<br><span class="c2">aprender</span></h2>
       <p class="lead" style="margin-top:20px">Confira tudo que você vai dominar neste curso.</p>
       <div class="ementa-tot"><div><b>37h</b><span>de conteúdo</span></div><div><b>7</b><span>módulos</span></div><div><b>176</b><span>aulas</span></div></div>
@@ -162,12 +144,12 @@
   </div>
 </section>
 
-<!-- 5 · IA NA FORMAÇÃO -->
+<!-- 4 · IA NA FORMAÇÃO -->
 <section class="section black on-dark ia-sec" id="ia" aria-labelledby="ia-t">
   <div class="ia-bg" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">03</span> IA na formação</p><h2 class="h2" id="ia-t">Produto com IA,<br><span class="c2">na prática</span></h2></div>
+      <div><p class="kicker"><span class="n">02</span> IA na formação</p><h2 class="h2" id="ia-t">Produto com IA,<br><span class="c2">na prática</span></h2></div>
       <p class="lead">A IA não é um módulo à parte. Ela aparece onde o trabalho acontece: na pesquisa, no discovery, na análise e na priorização.</p>
     </div>
     <div class="ia-grid" data-nota="Responde à pergunta em que a PM3 não aparece nas IAs: 'melhor curso de IA para gestores de produto' (diagnóstico GEOV.ai).">
@@ -181,11 +163,11 @@
   </div>
 </section>
 
-<!-- 6 · INVESTIMENTO -->
+<!-- 5 · INVESTIMENTO -->
 <section class="section white" id="investimento" aria-labelledby="iv-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">04</span> Investimento</p><h2 class="h2" id="iv-t">Uma formação<br><span class="c2">ou todas</span></h2></div>
+      <div><p class="kicker"><span class="n">03</span> Investimento</p><h2 class="h2" id="iv-t">Uma formação<br><span class="c2">ou todas</span></h2></div>
       <p class="lead">Compre só esta formação ou, por R$ 300 a mais, assine a Membership: as 10 formações e as +40 sprints por 12 meses.</p>
     </div>
     <div class="inv">
@@ -220,11 +202,11 @@
   </div>
 </section>
 
-<!-- 7 · INSTRUTORES (componente instrutores.css + instrutores.js, o mesmo da Membership) -->
+<!-- 6 · INSTRUTORES (componente instrutores.css + instrutores.js, o mesmo da Membership) -->
 <section class="section black on-dark" id="instrutores" aria-labelledby="in-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">05</span> Quem ensina</p><h2 class="h2" id="in-t">Aulas com grandes nomes<br><span class="c2">do mercado de produto</span></h2></div>
+      <div><p class="kicker"><span class="n">04</span> Quem ensina</p><h2 class="h2" id="in-t">Aulas com grandes nomes<br><span class="c2">do mercado de produto</span></h2></div>
       <p class="lead">20 instrutores que lideram produto em Nubank, Stripe, PicPay, VTEX, Booking.com e outras empresas, e levam para a aula a prática do dia a dia.</p>
     </div>
     <div class="prof-grid" role="region" aria-label="Instrutores da formação" tabindex="0" data-nota="Instrutores listados hoje na página da formação no site da PM3, com cargo e empresa do cadastro de cada um.">
@@ -256,12 +238,12 @@
     </div></div>
   </div>
 </section>
-<!-- 8 · CERTIFICADO (componente certificado.css; o mockup do curso vai em --cert-full e --cert-crop) -->
+<!-- 7 · CERTIFICADO (componente certificado.css; o mockup do curso vai em --cert-full e --cert-crop) -->
 <section class="cx-sec on-dark" id="certificado" aria-labelledby="ce-t">
   <div class="cx-hero cx-var" style="--cert-full:url('../img/certificado-veludo.jpg?v=3');--cert-crop:url('../img/certificado-veludo-crop.jpg?v=3')" data-nota="Mockup do certificado da formação. Para outro curso, troque as duas imagens nas variáveis --cert-full (celular) e --cert-crop (desktop); caminho relativo a assets/css/.">
     <div class="wrap">
       <div class="cx-copy">
-        <p class="kicker"><span class="n">06</span> Certificado</p>
+        <p class="kicker"><span class="n">05</span> Certificado</p>
         <h2 class="h2" id="ce-t">Certificado de<br><span class="c2">Product<br>Management.</span></h2>
         <p class="lead">Ao concluir as 37 horas da formação, você recebe o certificado PM3 de Product Management, com o nome do curso e a carga horária, pronto para o LinkedIn e o currículo.</p>
         <ul class="cx-proof">
@@ -273,11 +255,11 @@
     </div>
   </div>
 </section>
-<!-- 9 · FAQ -->
+<!-- 8 · FAQ -->
 <section class="section" id="duvidas" aria-labelledby="fq-t">
   <div class="wrap faq-grid">
     <div>
-      <p class="kicker"><span class="n">07</span> Dúvidas</p>
+      <p class="kicker"><span class="n">06</span> Dúvidas</p>
       <h2 class="h2" id="fq-t">Perguntas<br><span class="c2">frequentes</span></h2>
       <p class="muted" style="margin-top:20px">Fale com o time pelo WhatsApp ou pelo e-mail contato@pm3.com.br.</p>
       <a class="btn btn-line btn-sm" href="#">Falar no WhatsApp</a>
@@ -303,7 +285,6 @@
 <script src="assets/js/layout.js?v=27"></script>
 <script src="assets/js/course.js?v=3"></script>
 <script src="assets/js/instrutores.js?v=1"></script>
-<script src="assets/js/trilhas.js?v=1"></script>
 <script>window.EMENTA={curso:"Product Manager",tracking:"ementa cpm",stats:"37 horas, 7 módulos e 176 aulas.",capa:"assets/capas/product-manager-800.jpg"};</script>
 <script src="assets/js/ementa.js?v=3"></script>
 </body>
