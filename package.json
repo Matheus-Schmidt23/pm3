@@ -1,8 +1,0 @@
-{
-  "name": "pm3-prototipo-alfa",
-  "private": true,
-  "description": "Protótipo alfa do site PM3 2027 (HTML estático com acesso por senha na Vercel)",
-  "dependencies": {
-    "@vercel/functions": "^2.0.0"
-  }
-}
