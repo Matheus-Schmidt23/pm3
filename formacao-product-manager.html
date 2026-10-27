@@ -17,7 +17,6 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=20">
 <link rel="stylesheet" href="assets/css/components.css?v=5">
-<link rel="stylesheet" href="assets/css/hero-card.css?v=3">
 <link rel="stylesheet" href="assets/css/course.css?v=7">
 <link rel="stylesheet" href="assets/css/ementa.css?v=2">
 <link rel="stylesheet" href="assets/css/certificado.css?v=7">
@@ -45,7 +44,7 @@
 <body data-page="formacao-product-manager">
 <!--
   MODELO DE PÁGINA DE CURSO. Para criar outro curso, copie este arquivo e troque só o conteúdo:
-  1 · Hero (hero-card.css): nome, frase em itálico, lead, preço, fatos (horas, módulos, aulas) e a capa em .m-photo.
+  1 · Hero (course.css, .c-hero): nome, frase em itálico, lead, fatos (horas, módulos, aulas), capa em .cover-bg e o box de compra .buy. O sistema de cards (hero-card.css) é só das páginas de categoria.
   3 a 7 · Resultados, ementa, IA e para quem é: textos e módulos do curso (course.css, ementa.css).
   8 · Instrutores (instrutores.css + instrutores.js): um <figure class="prof"> por pessoa e, embaixo, a faixa .marquee com as empresas dos cases; (foto 480x600 em assets/people/,
       empresa em .co-logo com o logo de assets/logos/ ou em .co com o nome em texto, e o cargo).
@@ -55,38 +54,41 @@
 
 <main>
 
-<!-- 1 · HERO (hero-card.css, o mesmo sistema de cards de Membership, Formações e Sprints) -->
-<section class="m-hero on-dark" id="topo-curso" aria-labelledby="h1">
-  <div class="m-hero-grid">
-    <div class="m-main grain" id="comprar" data-nota="Preço, parcela e botão na primeira tela, também no celular. R$ 3.299 é o preço da página atual; os dados estruturados hoje dizem R$ 2.699. Aqui página e marcação usam o mesmo valor.">
-      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<!-- 1 · HERO -->
+<section class="c-hero has-cover grain on-dark" id="topo-curso" aria-labelledby="h1">
+  <div class="cover-bg" aria-hidden="true" style="background-image:url('assets/capas/product-manager-1600.jpg')"></div>
+  <div class="wrap">
+    <ol class="crumbs" aria-label="Você está em" data-nota="Breadcrumb visível e marcado com dados estruturados (regra 4 da arquitetura). A URL atual /curso-product-manager/ fica igual, porque já rankeia."><li><a href="home.html">Home</a></li><li><a href="formacoes.html">Formações</a></li><li aria-current="page">Product Manager</li></ol>
+    <div class="c-hero-grid">
       <div>
-        <ol class="crumbs" aria-label="Você está em" data-nota="Breadcrumb visível e marcado com dados estruturados (regra 4 da arquitetura). A URL atual /curso-product-manager/ fica igual, porque já rankeia."><li><a href="home.html">Home</a></li><li><a href="formacoes.html">Formações</a></li><li aria-current="page">Product Manager</li></ol>
         <div class="c-tags"><span class="tag tag-dark">Formação</span><span class="tag tag-dark">Gestão de produtos</span><span class="tag tag-yellow">Comece aqui</span></div>
         <h1 class="display" id="h1">Product<br>Manager<span class="em">Do primeiro cargo a um PM que gera resultado.</span></h1>
         <p class="lead">A formação de base da PM3 para quem está entrando em produto ou quer consolidar estratégia, discovery e execução, com IA aplicada em 4 dos 6 módulos.</p>
-      </div>
-      <div>
-        <div class="m-buy">
-          <div class="m-price"><small>Formação avulsa · 12 meses</small><b>12x R$ 274,91</b><span>ou R$ 3.299 à vista</span></div>
-          <div class="btns">
-            <a class="btn btn-light" href="#investimento">Fazer inscrição <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-            <a class="btn btn-line btn-em" href="#baixar-ementa" data-ementa="hero"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa</a>
-          </div>
-        </div>
-        <div class="m-safe">
-          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>37h · 6 módulos · 176 aulas</span>
-          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="6" r="4"/><path d="m5.5 9.5-1 5 3.5-2 3.5 2-1-5"/></svg>Certificado</span>
-          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 1.5 2.5 3.8v3.7c0 3.2 2.3 6 5.5 7 3.2-1 5.5-3.8 5.5-7V3.8z"/><path d="m5.6 8 1.7 1.7 3.2-3.4"/></svg>7 dias de garantia</span>
+        <div class="hero-ctas"><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="hero"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa completa</a><span class="hint">PDF gratuito com módulos e tópicos</span></div>
+        <div class="facts" data-nota="Carga oficial do plano de estudos 2025: 37h de conteúdo em 6 módulos. A página atual mostra 7 módulos e materiais antigos citam 75h; alinhar todo o marketing a este número.">
+          <div><b>37h</b><span>de conteúdo</span></div>
+          <div><b>6</b><span>módulos</span></div>
+          <div><b>176</b><span>aulas</span></div>
+          <div><b>0</b><span>pré-requisitos</span></div>
         </div>
       </div>
+      <aside class="buy" id="comprar" aria-label="Comprar a formação" data-nota="Preço, parcela e botão na primeira tela. R$ 3.299 é o preço da página atual; os dados estruturados hoje dizem R$ 2.699. Aqui página e marcação usam o mesmo valor.">
+        <p class="kicker">Formação avulsa</p>
+        <div class="val"><span class="x">12x</span><b><sup>R$</sup>274,91</b></div>
+        <p class="sub">ou R$ 3.299 à vista · acesso por 12 meses</p>
+        <a class="btn btn-primary" href="#">Fazer inscrição <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        <ul>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Certificado de Product Management</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Estude no seu ritmo, 100% online</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>7 dias de garantia</li>
+        </ul>
+        <a class="upsell" href="membership.html" data-nota="Venda cruzada: por R$ 300 a mais a pessoa leva as 10 formações. É o argumento de valor mais forte do catálogo.">
+          <span class="sym"><img src="assets/logo/pm3-simbolo-preto.svg" alt=""></span>
+          <span><b>Ou acesse as 10 formações</b><span>Membership: 12x R$ 299,91</span></span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+        </a>
+      </aside>
     </div>
-    <div class="m-photo" style="background-image:url('assets/capas/product-manager-1600.jpg');background-position:50% 30%" role="img" aria-label="Capa da formação Product Manager"><span class="tag">Sem pré-requisitos</span></div>
-    <a class="m-tile c-upsell" href="membership.html" data-nota="Venda cruzada: por R$ 300 a mais a pessoa leva as 10 formações. É o argumento de valor mais forte do catálogo.">
-      <span class="ic ic-tl" style="left:0;top:0;--c:#000;--r:40px" aria-hidden="true"></span>
-      <div class="big">10<small>formações por<br>R$ 300 a mais</small></div>
-      <p>Na Membership, esta formação e mais 9, com +40 sprints, por 12x R$ 299,91. Conhecer a Membership →</p>
-    </a>
   </div>
 </section>
 
@@ -318,7 +320,6 @@
 
 <script src="assets/js/layout.js?v=26"></script>
 <script src="assets/js/course.js?v=3"></script>
-<script src="assets/js/hero-card.js?v=2"></script>
 <script src="assets/js/instrutores.js?v=1"></script>
 <script>window.EMENTA={curso:"Product Manager",tracking:"ementa cpm",stats:"37 horas, 6 módulos e 176 aulas.",capa:"assets/capas/product-manager-800.jpg"};</script>
 <script src="assets/js/ementa.js?v=3"></script>
