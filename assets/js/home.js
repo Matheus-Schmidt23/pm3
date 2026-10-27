@@ -107,7 +107,7 @@
     i = (i + 1) % fotos.length;
     fotos[i].classList.add('on');
     legenda(fotos[i], true);
-  }, 8000);
+  }, 6500);
 })();
 
 /* hero: traço de luz no contorno do 3 e leve paralaxe com o cursor */
