@@ -24,6 +24,11 @@
 .marquee .track{display:flex;gap:56px;width:max-content;animation:corre 38s linear infinite}
 .marquee span{font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,40px);letter-spacing:-.02em;text-transform:uppercase;color:rgba(255,255,255,.22);white-space:nowrap}
 .marquee span.on{color:#fff}
+.marquee .track:has(img){align-items:center;gap:72px;padding-right:72px}
+.marquee img{display:block;height:var(--h,30px);width:auto;max-width:none;filter:brightness(0) invert(1);opacity:.62}
+.marquee img.cor{filter:grayscale(1) contrast(1.15);opacity:.8}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes corre{to{transform:translateX(-50%)}}
 .prof .co-logo{display:inline-flex;align-items:center;padding:7px 12px;min-height:30px}
 .prof .ph .co-logo img{position:static;inset:auto;display:block;width:auto;max-width:120px;object-fit:contain;transform:none;transition:none}
 @media (max-width:760px){ .prof .co-logo{padding:5px 9px;min-height:24px} .prof .co-logo img{transform:scale(.82);transform-origin:left center} }
