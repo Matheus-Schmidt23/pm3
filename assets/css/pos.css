@@ -539,3 +539,17 @@
   .p-uno::before{background:linear-gradient(180deg,rgba(6,2,4,0) 0,rgba(6,2,4,.2) 30vw,#0a0306 60vw)}
   .p-uno .p-main{padding-top:46vw}
 }.p-uno .p-main.grain::after{display:none}
+
+/* FAQ da Pós Tech em fundo escuro (a página é toda escura) */
+.faq-dark .c2{color:#ff3b6b}
+.faq-dark .muted{color:var(--gray-fog)}
+.faq-dark .btn-line{color:#fff;border-color:rgba(255,255,255,.4)}
+.faq-dark .btn-line:hover{background:#fff;color:#000;border-color:#fff}
+.faq-dark .faq details,.faq-dark .faq details:first-child{border-color:rgba(255,255,255,.12)}
+.faq-dark .faq summary{color:#fff}
+.faq-dark .faq summary i{border-color:rgba(255,255,255,.3)}
+.faq-dark .faq summary i::before,.faq-dark .faq summary i::after{background:#fff}
+.faq-dark .faq details[open] summary i{background:#ff3b6b;border-color:#ff3b6b}
+.faq-dark .faq details p{color:rgba(255,255,255,.72)}
+/* hero: coluna de texto acompanha o tamanho do título em telas largas (as linhas não quebram) */
+@media (min-width:1081px){ .p-uno .p-main{max-width:min(1040px,64%)} .p-uno .p-main h1{font-size:clamp(46px,5.2vw,92px);white-space:nowrap} .p-uno .p-main h1 .em{white-space:normal} }
