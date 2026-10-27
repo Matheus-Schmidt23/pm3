@@ -42,3 +42,4 @@
 #instrutores .sec-head{grid-template-columns:1fr;gap:22px}
 #instrutores .sec-head .lead{max-width:58ch}
 @media (min-width:861px){ #instrutores .sec-head .h2{white-space:nowrap} }
+.marquee img.sem-filtro{filter:none;opacity:.62}
