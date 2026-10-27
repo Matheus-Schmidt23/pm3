@@ -390,3 +390,12 @@
 .stats .stat .n{color:#a98bff}
 .stats .stat p{color:rgba(255,255,255,.62)}
 .stats .cross{color:rgba(255,255,255,.25)}
+/* números: sem as cruzes e com mais respiro abaixo do hero */
+.stats .cross{display:none}
+.stats{padding:clamp(28px,3.5vw,56px) 0 clamp(16px,2vw,28px)}
+.stats .stat{border-left-color:rgba(255,255,255,.08)}
+/* legenda do hero: nome sempre em uma linha; o selo do logo encolhe para caber */
+.h-pic .tag{max-width:calc(100% - 236px)}
+.h-pic .tag .tg-t b{white-space:nowrap}
+.h-pic .tag .tg-co{min-width:0;padding:0 10px;height:34px}
+.h-pic .tag .tg-co img{max-width:84px;max-height:22px}
