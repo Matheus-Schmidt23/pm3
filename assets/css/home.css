@@ -269,34 +269,7 @@
 @media (max-width:760px){.aw-list{grid-template-columns:1fr}}
 
 
-/* ---------- depoimentos: carrossel com foto grande ---------- */
-.dp-car{position:relative}
-.dp-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;padding-bottom:4px}
-.dp-track::-webkit-scrollbar{display:none}
-/* 3 cards por vez no desktop: foto em cima, depoimento embaixo.
-   As fotos já vêm em 3:2 com a cabeça inteira (laterais completadas no Magnific), então nada é recortado. */
-.dp-card{flex:0 0 calc((100% - 32px) / 3);scroll-snap-align:start;margin:0;display:grid;grid-template-rows:auto 1fr;border-radius:var(--r-xl);background:#110c1c;border:1px solid rgba(255,255,255,.08);overflow:hidden}
-.dp-card .ph{position:relative;aspect-ratio:3/2;background:#2a1f3b}
-.dp-card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.dp-card .tx{padding:20px 22px 22px;display:flex;flex-direction:column;gap:12px}
-.dp-card .qm{font-family:var(--serif);font-style:italic;color:var(--yellow);font-size:40px;line-height:.5}
-.dp-card blockquote{margin:0;flex:1}
-.dp-card blockquote p{font-family:var(--serif);font-style:italic;font-weight:500;font-size:15.5px;line-height:1.45;color:#fff;margin:2px 0 0}
-.dp-card .who b{display:block;font-family:var(--display);color:#fff;font-size:15px}
-.dp-card .who span{font-size:12.5px;color:var(--gray-fog)}
-.dp-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:24px}
-.dp-bar{flex:1;height:2px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;max-width:420px}
-.dp-bar i{display:block;height:100%;width:0;background:var(--yellow);transition:width .4s ease}
-.dp-btns{display:flex;gap:10px}
-.dp-btns button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.dp-btns button:hover{background:#fff;color:#000;border-color:#fff}
-.dp-btns button:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
-.dp-btns svg{width:18px;height:18px}
-@media (max-width:1080px){.dp-card{flex-basis:calc((100% - 16px) / 2)}}
-@media (max-width:760px){
-  .dp-card{flex-basis:82%}
-  .dp-bar{display:none}
-}
+
 @media (max-width:600px){ .mem-list{grid-template-columns:1fr} .mem-prof{align-items:flex-start;flex-direction:column;gap:10px} }
 
 /* hero: o 3 "energizado" (mesmo efeito da Membership): um traço de luz amarela percorre o contorno.
