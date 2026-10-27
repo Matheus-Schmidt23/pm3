@@ -233,3 +233,5 @@ button{font:inherit;color:inherit}
 .foot-brand .ft-link svg{width:15px;height:15px;transition:transform .25s}
 .foot-brand .ft-link:hover{color:var(--yellow)}
 .foot-brand .ft-link:hover svg{transform:translateX(4px)}
+.foot-brand .ft-link + .ft-link{margin-top:12px}
+.foot-brand .ft-link{display:flex;width:fit-content}
