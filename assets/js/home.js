@@ -86,3 +86,26 @@
   });
   main.addEventListener('pointerleave', () => { main.classList.remove('on'); main.style.setProperty('--px', 0); main.style.setProperty('--py', 0); });
 })();
+
+/* formatos: cada cartão inclina de leve e ganha um brilho e uma borda luminosa que seguem o cursor */
+(function(){
+  const tiles = [...document.querySelectorAll('.bento .tile')];
+  if (!tiles.length || !matchMedia('(hover:hover)').matches || matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  tiles.forEach(t => {
+    t.insertAdjacentHTML('beforeend', '<span class="tl-spot" aria-hidden="true"></span><span class="tl-ring" aria-hidden="true"></span>');
+    const forca = t.classList.contains('t-b2b') ? 2 : t.classList.contains('t-member') ? 4 : 6;
+    t.addEventListener('pointermove', e => {
+      const r = t.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      t.classList.add('tilting');
+      t.style.setProperty('--mx', (x * 100) + '%');
+      t.style.setProperty('--my', (y * 100) + '%');
+      t.style.setProperty('--rx', ((.5 - y) * forca) + 'deg');
+      t.style.setProperty('--ry', ((x - .5) * forca) + 'deg');
+    });
+    t.addEventListener('pointerleave', () => {
+      t.classList.remove('tilting');
+      t.style.setProperty('--rx', '0deg');
+      t.style.setProperty('--ry', '0deg');
+    });
+  });
+})();
