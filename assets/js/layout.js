@@ -78,7 +78,7 @@
           <a class="ft-link" href="membership.html#planos">Conhecer a Membership ${arrow}</a>
           <a class="ft-link" href="cursos.html">Catálogo completo ${arrow}</a>
         </div>
-        <div><h4>PM3</h4><ul><li><a href="para-empresas.html">Para empresas</a></li><li><a href="comunidade.html">Comunidade</a></li><li><a href="#">Instrutores</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Contato</a></li><li><a href="blog.html">Blog</a></li><li><a href="#">Glossário de produto</a></li><li><a href="#">Biblioteca</a></li><li><a href="#">Panorama 2026-2027</a></li></ul></div>
+        <div><h4>PM3</h4><ul><li><a href="#">Biblioteca</a></li><li><a href="blog.html">Blog</a></li><li><a href="comunidade.html">Comunidade</a></li><li><a href="#">Contato</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Glossário de produto</a></li><li><a href="#">Instrutores</a></li><li><a href="#">Panorama 2026-2027</a></li><li><a href="para-empresas.html">Para empresas</a></li><li><a href="#">Trabalhe conosco</a></li></ul></div>
         <div><h4>Formações</h4><ul>${FORMACOES.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}</ul></div>
         <div><h4>Sprints</h4><ul>${SPRINTS.map(([n,h])=>`<li><a href="${h}">${n.replace(" e habilidades humanas","")}</a></li>`).join('')}</ul></div>
         <div><h4>Pós Tech</h4><ul><li><a href="pos-tech.html#pos">Digital Product Management</a></li><li><a href="pos-tech.html#pos">Tech Management</a></li><li><a href="pos-tech.html#pos">IA para Negócios</a></li><li><a href="pos-tech.html">Conhecer a Pós Tech</a></li></ul></div>
