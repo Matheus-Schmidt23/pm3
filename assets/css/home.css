@@ -381,3 +381,6 @@
   .bento .tile.reveal{translate:none;scale:none}
 }
 .bento-sec .t-form h3,.bento-sec .t-sprint h3{color:var(--ink)} .bento-sec .t-sprint .n-lbl{color:var(--purple-deep)} .bento-sec .t-form .kicker{color:var(--purple-royal)}
+/* luzes do "Escolha o seu formato" somem antes das bordas (sem corte reto ao trocar de seção) */
+.bs-glow{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 72%,transparent 100%)}
+.bs-glow i:nth-child(3){bottom:auto;top:52%}

@@ -11,3 +11,5 @@
 .ab-logos img{height:26px;width:auto;filter:brightness(0) invert(1);opacity:.75;transition:opacity .3s}
 .ab-logos li:hover img{opacity:1}
 @media (prefers-reduced-motion:reduce){ .ab-video{display:none} .alun-sec2{background:#000 url('../alun/site/hero-intro-poster.jpg') center/cover} }
+/* vídeo some suavemente nas bordas de cima e de baixo (sem corte reto ao encontrar a próxima seção) */
+.alun-sec2 .ab-video{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 78%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 78%,transparent 100%)}
