@@ -56,3 +56,12 @@ body .on-dark :is(.v-jump a,.chips a){background:rgba(255,255,255,.06);border-co
 body .on-dark :is(.v-jump a,.chips a) small{background:rgba(255,255,255,.12);color:var(--blaze-b)}
 body .on-dark :is(.v-jump a,.chips a):hover{background:#fff;color:var(--purple-deep);border-color:#fff}
 body .on-dark :is(.v-jump a,.chips a):hover small{background:#F1ECFA;color:var(--purple-royal)}
+
+/* catálogo em fundo escuro (Membership, Sprints): filtros em vidro, cartões continuam claros */
+body .cat-dark :is(.chip,.fx-chips button){background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:#fff;box-shadow:none}
+body .cat-dark :is(.chip,.fx-chips button) small{background:rgba(255,255,255,.12);color:var(--blaze-b)}
+body .cat-dark :is(.chip,.fx-chips button):hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.32)}
+body .cat-dark :is(.chip[aria-pressed="true"],.fx-chips button.on){background:linear-gradient(135deg,var(--purple-royal),#8b5cf6);border-color:transparent;color:#fff}
+body .cat-dark :is(.chip[aria-pressed="true"],.fx-chips button.on) small{background:var(--yellow);color:#000}
+.cat-dark .f-card{border-color:transparent}
+.cat-dark .f-card:not(.feature) h3{color:var(--ink)} .cat-dark .f-card:not(.feature) p{color:#4a4458}
