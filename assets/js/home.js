@@ -81,7 +81,7 @@
   const tag = pic.querySelector('.tag');
   const legenda = (f, anima) => {
     if (!tag || !f.dataset.nome) return;
-    const html = `<b>${f.dataset.nome}</b><span>Instrutor${f.dataset.g === 'a' ? 'a' : ''} PM3</span>`;
+    const html = `<b>${f.dataset.nome}</b><span>Instrutor${f.dataset.g === 'a' ? 'a' : ''}${f.dataset.emp ? ' · ' + f.dataset.emp : ' PM3'}</span>`;
     if (!anima) { tag.innerHTML = html; return; }
     tag.classList.add('troca');
     setTimeout(() => { tag.innerHTML = html; tag.classList.remove('troca'); }, 450);
