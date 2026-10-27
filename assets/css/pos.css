@@ -525,3 +525,17 @@
   .p-main.p-main-foto::before{background:linear-gradient(90deg,#000 0%,#000 36%,rgba(0,0,0,.78) 52%,rgba(0,0,0,.15) 72%,rgba(0,0,0,0) 86%),linear-gradient(0deg,rgba(0,0,0,.75),transparent 32%)}
 }
 @media (min-width:861px){ .p-main.p-main-foto::before{background:linear-gradient(90deg,#000 0%,#000 47%,rgba(0,0,0,.7) 57%,rgba(0,0,0,.15) 72%,rgba(0,0,0,0) 84%),linear-gradient(0deg,rgba(0,0,0,.75),transparent 32%)} }
+
+/* ---------- hero em card único: foto 16:9 da campanha FIAP no fundo todo ---------- */
+.p-uno{display:block;position:relative;min-height:min(calc(100svh - var(--nav-h) - 24px),800px);border-radius:var(--r-xl);overflow:hidden;isolation:isolate;background:#0a0306 url('../img/pos-hero-fiap-wide.jpg?v=2') 78% 30%/cover no-repeat}
+.p-uno::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(6,2,4,.96) 0%,rgba(6,2,4,.9) 30%,rgba(6,2,4,.55) 48%,rgba(6,2,4,0) 66%),linear-gradient(0deg,rgba(6,2,4,.85) 0%,rgba(6,2,4,0) 38%)}
+.p-uno .p-main{position:relative;z-index:1;background:none;border-radius:0;min-height:inherit;max-width:min(760px,62%)}
+.p-uno .p-main::before,.p-uno .p-main .aurora{display:none}
+.p-uno .p-main h1 .l2{color:#ff3b6b}
+.p-uno .p-buy{position:absolute;z-index:2;right:clamp(20px,3vw,44px);bottom:clamp(20px,3vw,44px);width:min(380px,32%);border-radius:var(--r-card);background:rgba(255,255,255,.96);box-shadow:0 30px 80px -30px rgba(0,0,0,.8)}
+@media (max-width:1080px){ .p-uno .p-main{max-width:none} .p-uno .p-buy{position:relative;right:auto;bottom:auto;width:auto;margin:0 clamp(20px,3vw,44px) clamp(20px,3vw,44px)} }
+@media (max-width:860px){
+  .p-uno{background-position:82% 0;background-size:auto 62vw;background-color:#0a0306}
+  .p-uno::before{background:linear-gradient(180deg,rgba(6,2,4,0) 0,rgba(6,2,4,.2) 30vw,#0a0306 60vw)}
+  .p-uno .p-main{padding-top:46vw}
+}.p-uno .p-main.grain::after{display:none}
