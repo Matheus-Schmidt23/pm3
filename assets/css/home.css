@@ -399,3 +399,4 @@
 .h-pic .tag .tg-t b{white-space:nowrap}
 .h-pic .tag .tg-co{min-width:0;padding:0 10px;height:34px}
 .h-pic .tag .tg-co img{max-width:84px;max-height:22px}
+.stats{padding:clamp(16px,2vw,28px) 0}.stats .stat{padding-top:44px;padding-bottom:44px}
