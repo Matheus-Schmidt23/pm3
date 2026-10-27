@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&display=swap');
 /* PM3 · dobra do certificado + faixa de mercado (Formações, Sprints, Membership) */
 .cx-band{position:relative;margin-top:clamp(56px,7vw,96px);border-radius:var(--r-xl);background:var(--purple-deep);color:#fff;padding:clamp(28px,4vw,56px);overflow:hidden;isolation:isolate}
 .cx-band::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 90% at 100% 0,rgba(176,77,221,.5),transparent 60%)}
@@ -83,3 +84,9 @@
 /* páginas de curso: o mockup do certificado vem da própria página (variáveis --cert-full e --cert-crop) */
 .cx-hero.cx-var::before{background-image:var(--cert-full)}
 @media (min-width:861px){ .cx-hero.cx-var::before{background-image:var(--cert-crop)} }
+
+/* números dos selos: maiores, finos e condensados (Barlow Condensed) */
+.cx-aw{width:150px;height:64px}
+.cx-aw b{font-family:'Barlow Condensed',var(--display);font-weight:300;font-size:40px;letter-spacing:.01em;line-height:1}
+.cx-proof li{gap:12px;padding:20px 14px}
+.cx-aw{width:184px;height:60px}
