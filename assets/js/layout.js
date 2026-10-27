@@ -80,25 +80,11 @@
         </div>
         <div><h4>Formações</h4><ul>${FORMACOES.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}</ul></div>
         <div><h4>Sprints</h4><ul>${SPRINTS.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}</ul></div>
-        <div><h4>Conteúdo</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="#">Glossário de produto</a></li><li><a href="#">Biblioteca</a></li><li><a href="#">Panorama do mercado de produto</a></li></ul>
-          <h4 style="margin-top:28px">Para você</h4><ul><li><a href="membership.html">Membership</a></li><li><a href="pos-tech.html">Pós Tech</a></li><li><a href="para-empresas.html">Para empresas</a></li><li><a href="comunidade.html">Comunidade</a></li></ul></div>
-        <div><h4>PM3</h4><ul><li><a href="#">Sobre a PM3</a></li><li><a href="#">Instrutores</a></li><li><a href="#">Dar aula na PM3</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Contato</a></li></ul></div>
+        <div><h4>Conteúdo</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="#">Glossário de produto</a></li><li><a href="#">Biblioteca</a></li><li><a href="#">Panorama do mercado de produto</a></li></ul></div>
+        <div><h4>PM3</h4><ul><li><a href="membership.html">Membership</a></li><li><a href="pos-tech.html">Pós Tech</a></li><li><a href="para-empresas.html">Para empresas</a></li><li><a href="comunidade.html">Comunidade</a></li><li><a href="#">Sobre a PM3</a></li><li><a href="#">Instrutores</a></li><li><a href="#">Dar aula na PM3</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Contato</a></li></ul></div>
       </div>
     </div>
     <div class="wrap"><div class="foot-bottom"><span>© 2027 PM3. Todos os direitos reservados.</span><nav><a href="#">Política de privacidade</a><a href="#">Termos de uso</a><a href="#" data-consent-open>Preferências de cookies</a></nav></div></div>
-    <div class="alun-band" aria-label="Grupo Alun">
-      <span class="mz mz-l" aria-hidden="true"></span>
-      <span class="mz mz-r" aria-hidden="true"></span>
-      <div class="wrap alun-in">
-        <a class="alun-id" href="https://alun.com.br/" target="_blank" rel="noopener">A PM3 faz parte do <b>Grupo Alun</b>: maior ecossistema de educação tech da América Latina</a>
-        <ul class="alun-brands" aria-label="Empresas do Grupo Alun">
-          <li><img src="assets/logo/pm3-logo-branco.svg" alt="PM3" style="height:16px"></li>
-          <li><img src="assets/alun/alura-branco.svg" alt="Alura" style="height:16px"></li>
-          <li><img src="assets/alun/fiap-branco.png" alt="FIAP" style="height:13.5px"></li>
-          <li><img src="assets/alun/startse-branco.svg" alt="StartSe" style="height:13.5px"></li>
-        </ul>
-      </div>
-    </div>
   </footer>`;
 
   const consent = `

@@ -255,3 +255,14 @@ button{font:inherit;color:inherit}
 /* revisão das quebras: a camada de luz não escurece mais as bordas (isso criava faixas pretas entre seções);
    cada mancha se apaga dentro da própria caixa (closest-side), então nunca é cortada na borda da seção */
 .luz{-webkit-mask-image:none;mask-image:none}
+
+/* ritmo vertical: duas seções escuras seguidas não somam o respiro inteiro de cada uma (sem buraco preto entre elas) */
+.section.on-dark + .section.on-dark{padding-top:clamp(32px,4vw,64px)}
+.section.on-dark + .cx-sec .cx-hero{padding-top:clamp(16px,2vw,32px);min-height:min(640px,52vw)}
+.cx-sec + .alun-sec2,.cx-sec + section.on-dark{padding-top:clamp(24px,3vw,48px)}
+.cx-sec:has(+ .alun-sec2){padding-bottom:clamp(24px,3vw,48px)}
+.section.on-dark:has(+ .section.on-dark),.section.on-dark:has(+ .alun-sec2),.section.on-dark:has(+ .cx-sec){padding-bottom:clamp(56px,6.5vw,96px)}
+.section.on-dark + .alun-sec2,.alun-sec2 + .section{padding-top:clamp(32px,4vw,64px)}
+.alun-sec2:has(+ .section){padding-bottom:clamp(40px,5vw,72px)}
+.section.on-dark:has(+ .section.on-dark),.section.on-dark:has(+ .alun-sec2),.section.on-dark:has(+ .cx-sec){padding-bottom:clamp(40px,5vw,72px)}
+.section.on-dark + .section.on-dark{padding-top:clamp(24px,3vw,48px)}
