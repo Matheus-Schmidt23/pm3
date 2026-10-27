@@ -382,3 +382,10 @@ a.step:hover{transform:translateY(-4px)}
 .m-tile.c-upsell{text-decoration:none;color:inherit;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 .m-tile.c-upsell p{font-weight:500}
 @media (hover:hover){ .m-tile.c-upsell:hover{transform:translateY(-3px);box-shadow:0 24px 50px -24px rgba(102,69,177,.6)} }
+
+/* ementa: cases reais (logos da página atual) */
+.em-cases{margin:26px 0 22px}
+.em-cases p{font-size:13px;color:var(--muted);margin:0 0 14px}
+.em-cases div{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px}
+.em-cases img{width:auto;display:block;filter:grayscale(1);opacity:.75;transition:filter .3s,opacity .3s}
+.em-cases img:hover{filter:none;opacity:1}
