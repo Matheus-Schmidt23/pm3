@@ -45,11 +45,12 @@
 <!--
   MODELO DE PÁGINA DE CURSO. Para criar outro curso, copie este arquivo e troque só o conteúdo:
   1 · Hero (course.css, .c-hero): nome, frase em itálico, lead, fatos (horas, módulos, aulas), capa em .cover-bg e o box de compra .buy. O sistema de cards (hero-card.css) é só das páginas de categoria.
-  3 a 7 · Resultados, ementa, IA e para quem é: textos e módulos do curso (course.css, ementa.css).
-  8 · Instrutores (instrutores.css + instrutores.js): um <figure class="prof"> por pessoa e, embaixo, a faixa .marquee com as empresas dos cases; (foto 480x600 em assets/people/,
+  3 a 5 · Resultados, ementa e IA: textos e módulos do curso (course.css, ementa.css).
+  6 · Investimento: preços da formação e da Membership (logo depois da IA, antes dos instrutores).
+  7 · Instrutores (instrutores.css + instrutores.js): um <figure class="prof"> por pessoa e, embaixo, a faixa .marquee com as empresas dos cases; (foto 480x600 em assets/people/,
       empresa em .co-logo com o logo de assets/logos/ ou em .co com o nome em texto, e o cargo).
-  9 · Certificado (certificado.css): o mockup do curso nas variáveis --cert-full e --cert-crop do .cx-hero.
-  10 e 11 · Investimento e FAQ: preços e perguntas. Atualize também o JSON-LD do <head> e window.EMENTA no fim.
+  8 · Certificado (certificado.css): o mockup do curso nas variáveis --cert-full e --cert-crop do .cx-hero.
+  9 · FAQ: perguntas. Atualize também o JSON-LD do <head> e window.EMENTA no fim.
 -->
 
 <main>
@@ -95,7 +96,7 @@
 <div class="subnav" id="subnav">
   <div class="wrap">
     <nav aria-label="Seções da página">
-      <a href="#resultados">Visão geral</a><a href="#ementa">Ementa</a><a href="#ia">IA na formação</a><a href="#para-quem">Para quem é</a><a href="#instrutores">Instrutores</a><a href="#certificado">Certificado</a><a href="#investimento">Investimento</a><a href="#duvidas">Dúvidas</a>
+      <a href="#resultados">Visão geral</a><a href="#ementa">Ementa</a><a href="#ia">IA na formação</a><a href="#investimento">Investimento</a><a href="#instrutores">Instrutores</a><a href="#certificado">Certificado</a><a href="#duvidas">Dúvidas</a>
     </nav>
     <div class="sub-cta"><div class="mini"><b>12x R$ 274,91<small>ou R$ 3.299 à vista</small></b><a class="btn btn-primary btn-sm" href="#investimento">Inscrever</a></div><a class="btn btn-line btn-sm btn-em sub-ementa" href="#baixar-ementa" data-ementa="subnav"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Ementa</a></div>
   </div>
@@ -179,38 +180,46 @@
   </div>
 </section>
 
-<!-- 7 · PARA QUEM É -->
-<section class="section white" id="para-quem" aria-labelledby="pq-t">
+<!-- 6 · INVESTIMENTO -->
+<section class="section white" id="investimento" aria-labelledby="iv-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">04</span> Para quem é</p><h2 class="h2" id="pq-t">É a formação<br><span class="c2">certa para você?</span></h2></div>
-      <p class="lead">Confira se o seu perfil se encaixa. Se o seu momento for outro, indicamos a formação ou sprint mais adequada.</p>
+      <div><p class="kicker"><span class="n">04</span> Investimento</p><h2 class="h2" id="iv-t">Uma formação<br><span class="c2">ou todas</span></h2></div>
+      <p class="lead">Compre só esta formação ou, por R$ 300 a mais, assine a Membership: as 10 formações e as +40 sprints por 12 meses.</p>
     </div>
-    <div class="fit2">
-      <div class="fit-row">
-        <div class="fit-lb"><h3>É para você se</h3><p>Os perfis que mais aproveitam a formação.</p><a class="btn btn-primary" href="#investimento">Ver como se inscrever <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
-        <ul class="fit-yes">
-          <li class="reveal" data-d="0"><span class="fit-ck"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg></span><p>Você quer migrar para produto vindo de outra área</p></li>
-          <li class="reveal" data-d="1"><span class="fit-ck"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg></span><p>Você está no primeiro cargo ou é PM júnior ou pleno</p></li>
-          <li class="reveal" data-d="0"><span class="fit-ck"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg></span><p>Você quer uma base sólida antes de se especializar</p></li>
-          <li class="reveal" data-d="1"><span class="fit-ck"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-6.5"/></svg></span><p>Você quer usar IA no trabalho de produto, com método</p></li>
+    <div class="inv">
+      <div class="one reveal">
+        <h3>Product Manager<small>Formação avulsa · 12 meses de acesso</small></h3>
+        <div class="v"><span class="x">12x</span><b><sup>R$</sup>274,91</b><small>ou R$ 3.299 à vista</small></div>
+        <ul>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>7 módulos, 37h, 176 aulas</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Certificado de Product Management</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>7 dias de garantia</li>
         </ul>
+        <a class="btn btn-primary" href="#">Comprar a formação</a>
       </div>
-      <div class="fit-row" data-nota="Encaminha para outra formação quando esta não serve. Reforça a navegação interna entre páginas de curso (links internos para o Google).">
-        <div class="fit-lb"><h3>Outra opção é melhor se</h3><p>Se o seu momento for outro, estes caminhos servem melhor.</p></div>
-        <ul class="fit-no">
-          <li class="reveal" data-d="0"><a href="#"><span class="fit-q">Já lidera pessoas ou quer liderar</span><span class="fit-c"><small>Formação</small>Product Leadership</span><span class="fit-go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a></li>
-          <li class="reveal" data-d="1"><a href="#"><span class="fit-q">Já domina a base e quer aprofundar discovery</span><span class="fit-c"><small>Formação</small>Product Discovery</span><span class="fit-go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a></li>
-          <li class="reveal" data-d="0"><a href="#"><span class="fit-q">Quer construir agentes e automações</span><span class="fit-c"><small>Formação</small>AI Product Builder</span><span class="fit-go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a></li>
-          <li class="reveal" data-d="1"><a href="sprint-fundamentos-gestao-produtos.html"><span class="fit-q">Quer só uma introdução de 12 horas</span><span class="fit-c"><small>Sprint</small>Fundamentos de Gestão de Produtos</span><span class="fit-go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a></li>
+      <div class="all on-dark reveal" data-d="1" data-nota="Mesma âncora da página da Membership, vista do outro lado: quem chega pelo curso descobre a assinatura.">
+        <span class="badge">Assinatura anual</span>
+        <h3>Membership PM3<small>10 formações e +40 sprints · 12 meses</small></h3>
+        <div class="v"><span class="x">12x</span><b><sup>R$</sup>299,91</b><small>ou R$ 3.599 à vista</small></div>
+        <ul>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Esta formação e mais 9</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>+40 sprints, mentorias e workshops ao vivo</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Comunidade PM3 e Certificado de Product Master</li>
         </ul>
+        <a class="btn btn-light" href="membership.html">Conhecer a Membership</a>
       </div>
     </div>
-
+    <div class="pay">
+      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="3.5" width="13" height="9" rx="2"/><path d="M1.5 6.5h13"/></svg>Cartão em até 12x</span>
+      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 1.5 2.5 3.8v3.7c0 3.2 2.3 6 5.5 7 3.2-1 5.5-3.8 5.5-7V3.8z"/></svg>7 dias de garantia</span>
+      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 1.5 3 9h4.5L7 14.5 13 7H8.5z"/></svg>Acesso imediato</span>
+      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v4l2.5 1.5"/></svg>Para empresas: <a href="para-empresas.html">fale com a PM3</a></span>
+    </div>
   </div>
 </section>
 
-<!-- 8 · INSTRUTORES (componente instrutores.css + instrutores.js, o mesmo da Membership) -->
+<!-- 7 · INSTRUTORES (componente instrutores.css + instrutores.js, o mesmo da Membership) -->
 <section class="section black on-dark" id="instrutores" aria-labelledby="in-t">
   <div class="wrap">
     <div class="sec-head">
@@ -246,7 +255,7 @@
     </div></div>
   </div>
 </section>
-<!-- 9 · CERTIFICADO (componente certificado.css; o mockup do curso vai em --cert-full e --cert-crop) -->
+<!-- 8 · CERTIFICADO (componente certificado.css; o mockup do curso vai em --cert-full e --cert-crop) -->
 <section class="cx-sec on-dark" id="certificado" aria-labelledby="ce-t">
   <div class="cx-hero cx-var" style="--cert-full:url('../img/certificado-veludo.jpg?v=3');--cert-crop:url('../img/certificado-veludo-crop.jpg?v=3')" data-nota="Mockup do certificado da formação. Para outro curso, troque as duas imagens nas variáveis --cert-full (celular) e --cert-crop (desktop); caminho relativo a assets/css/.">
     <div class="wrap">
@@ -263,50 +272,11 @@
     </div>
   </div>
 </section>
-<!-- 10 · INVESTIMENTO -->
-<section class="section white" id="investimento" aria-labelledby="iv-t">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><p class="kicker"><span class="n">07</span> Investimento</p><h2 class="h2" id="iv-t">Uma formação<br><span class="c2">ou todas</span></h2></div>
-      <p class="lead">Compre só esta formação ou, por R$ 300 a mais, assine a Membership: as 10 formações e as +40 sprints por 12 meses.</p>
-    </div>
-    <div class="inv">
-      <div class="one reveal">
-        <h3>Product Manager<small>Formação avulsa · 12 meses de acesso</small></h3>
-        <div class="v"><span class="x">12x</span><b><sup>R$</sup>274,91</b><small>ou R$ 3.299 à vista</small></div>
-        <ul>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>7 módulos, 37h, 176 aulas</li>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Certificado de Product Management</li>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>7 dias de garantia</li>
-        </ul>
-        <a class="btn btn-primary" href="#">Comprar a formação</a>
-      </div>
-      <div class="all on-dark reveal" data-d="1" data-nota="Mesma âncora da página da Membership, vista do outro lado: quem chega pelo curso descobre a assinatura.">
-        <span class="badge">Assinatura anual</span>
-        <h3>Membership PM3<small>10 formações e +40 sprints · 12 meses</small></h3>
-        <div class="v"><span class="x">12x</span><b><sup>R$</sup>299,91</b><small>ou R$ 3.599 à vista</small></div>
-        <ul>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Esta formação e mais 9</li>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>+40 sprints, mentorias e workshops ao vivo</li>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Comunidade PM3 e Certificado de Product Master</li>
-        </ul>
-        <a class="btn btn-light" href="membership.html">Conhecer a Membership</a>
-      </div>
-    </div>
-    <div class="pay">
-      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="3.5" width="13" height="9" rx="2"/><path d="M1.5 6.5h13"/></svg>Cartão em até 12x</span>
-      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 1.5 2.5 3.8v3.7c0 3.2 2.3 6 5.5 7 3.2-1 5.5-3.8 5.5-7V3.8z"/></svg>7 dias de garantia</span>
-      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 1.5 3 9h4.5L7 14.5 13 7H8.5z"/></svg>Acesso imediato</span>
-      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v4l2.5 1.5"/></svg>Para empresas: <a href="para-empresas.html">fale com a PM3</a></span>
-    </div>
-  </div>
-</section>
-
-<!-- 11 · FAQ -->
+<!-- 9 · FAQ -->
 <section class="section" id="duvidas" aria-labelledby="fq-t">
   <div class="wrap faq-grid">
     <div>
-      <p class="kicker"><span class="n">08</span> Dúvidas</p>
+      <p class="kicker"><span class="n">07</span> Dúvidas</p>
       <h2 class="h2" id="fq-t">Perguntas<br><span class="c2">frequentes</span></h2>
       <p class="muted" style="margin-top:20px">Fale com o time pelo WhatsApp ou pelo e-mail contato@pm3.com.br.</p>
       <a class="btn btn-line btn-sm" href="#">Falar no WhatsApp</a>
