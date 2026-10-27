@@ -80,7 +80,7 @@
         </div>
         <div><h4>PM3</h4><ul><li><a href="pos-tech.html">Pós Tech</a></li><li><a href="para-empresas.html">Para empresas</a></li><li><a href="comunidade.html">Comunidade</a></li><li><a href="#">Instrutores</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Contato</a></li></ul></div>
         <div><h4>Formações</h4><ul>${FORMACOES.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}</ul></div>
-        <div><h4>Sprints</h4><ul>${SPRINTS.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}</ul></div>
+        <div><h4>Sprints</h4><ul>${SPRINTS.map(([n,h])=>`<li><a href="${h}">${n.replace(" e habilidades humanas","")}</a></li>`).join('')}</ul></div>
         <div><h4>Conteúdo</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="#">Glossário de produto</a></li><li><a href="#">Biblioteca</a></li><li><a href="#">Panorama 2026-2027</a></li></ul></div>
       </div>
     </div>
