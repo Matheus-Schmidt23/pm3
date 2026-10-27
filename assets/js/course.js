@@ -38,7 +38,7 @@
   }
 
   /* barra de compra no celular: some no topo e na seção de investimento */
-  const bb = $('#buybar'), hero = $('.c-hero'), inv = $('#investimento');
+  const bb = $('#buybar'), hero = $('#topo-curso'), inv = $('#investimento');
   if (bb && hero && inv){
     const vis = { hero: true, inv: false };
     const at = () => bb.classList.toggle('show', !vis.hero && !vis.inv);

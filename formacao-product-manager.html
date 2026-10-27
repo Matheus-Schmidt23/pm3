@@ -17,8 +17,12 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=20">
 <link rel="stylesheet" href="assets/css/components.css?v=5">
-<link rel="stylesheet" href="assets/css/course.css?v=6">
+<link rel="stylesheet" href="assets/css/hero-card.css?v=3">
+<link rel="stylesheet" href="assets/css/course.css?v=7">
 <link rel="stylesheet" href="assets/css/ementa.css?v=2">
+<link rel="stylesheet" href="assets/css/certificado.css?v=7">
+<link rel="stylesheet" href="assets/css/cards-formacao.css?v=15">
+<link rel="stylesheet" href="assets/css/instrutores.css?v=1">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -40,44 +44,51 @@
 </script>
 </head>
 <body data-page="formacao-product-manager">
+<!--
+  MODELO DE PÁGINA DE CURSO. Para criar outro curso, copie este arquivo e troque só o conteúdo:
+  1 · Hero (hero-card.css): nome, frase em itálico, lead, preço, fatos (horas, módulos, aulas) e a capa em .m-photo.
+  3 a 7 · Resultados, ementa, IA, cases e para quem é: textos e módulos do curso (course.css, ementa.css).
+  8 · Instrutores (instrutores.css + instrutores.js): um <figure class="prof"> por pessoa (foto 480x600 em assets/people/,
+      empresa em .co-logo com o logo de assets/logos/ ou em .co com o nome em texto, e o cargo).
+  9 · Certificado (certificado.css): o mockup do curso nas variáveis --cert-full e --cert-crop do .cx-hero.
+  9b · Próximos passos (cards-formacao.css): os mesmos cards dos catálogos de Formações e Sprints.
+  10 a 12 · Investimento, FAQ e CTA final: preços e perguntas. Atualize também o JSON-LD do <head> e window.EMENTA no fim.
+-->
 
 <main>
 
-<!-- 1 · HERO -->
-<section class="c-hero has-cover grain on-dark" id="topo-curso" aria-labelledby="h1">
-  <div class="cover-bg" aria-hidden="true" style="background-image:url('assets/capas/product-manager-1600.jpg')"></div>
-  <div class="wrap">
-    <ol class="crumbs" aria-label="Você está em" data-nota="Breadcrumb visível e marcado com dados estruturados (regra 4 da arquitetura). A URL atual /curso-product-manager/ fica igual, porque já rankeia."><li><a href="home.html">Home</a></li><li><a href="formacoes.html">Formações</a></li><li aria-current="page">Product Manager</li></ol>
-    <div class="c-hero-grid">
+<!-- 1 · HERO (hero-card.css, o mesmo sistema de cards de Membership, Formações e Sprints) -->
+<section class="m-hero on-dark" id="topo-curso" aria-labelledby="h1">
+  <div class="m-hero-grid">
+    <div class="m-main grain" id="comprar" data-nota="Preço, parcela e botão na primeira tela, também no celular. R$ 3.299 é o preço da página atual; os dados estruturados hoje dizem R$ 2.699. Aqui página e marcação usam o mesmo valor.">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
       <div>
+        <ol class="crumbs" aria-label="Você está em" data-nota="Breadcrumb visível e marcado com dados estruturados (regra 4 da arquitetura). A URL atual /curso-product-manager/ fica igual, porque já rankeia."><li><a href="home.html">Home</a></li><li><a href="formacoes.html">Formações</a></li><li aria-current="page">Product Manager</li></ol>
         <div class="c-tags"><span class="tag tag-dark">Formação</span><span class="tag tag-dark">Gestão de produtos</span><span class="tag tag-yellow">Comece aqui</span></div>
         <h1 class="display" id="h1">Product<br>Manager<span class="em">Do primeiro cargo a um PM que gera resultado.</span></h1>
         <p class="lead">A formação de base da PM3 para quem está entrando em produto ou quer consolidar estratégia, discovery e execução, com IA aplicada em 4 dos 6 módulos.</p>
-        <div class="hero-ctas"><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="hero"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa completa</a><span class="hint">PDF gratuito com módulos e tópicos</span></div>
-        <div class="facts" data-nota="Carga oficial do plano de estudos 2025: 37h de conteúdo em 6 módulos. A página atual mostra 7 módulos e materiais antigos citam 75h; alinhar todo o marketing a este número.">
-          <div><b>37h</b><span>de conteúdo</span></div>
-          <div><b>6</b><span>módulos</span></div>
-          <div><b>176</b><span>aulas</span></div>
-          <div><b>0</b><span>pré-requisitos</span></div>
+      </div>
+      <div>
+        <div class="m-buy">
+          <div class="m-price"><small>Formação avulsa · 12 meses</small><b>12x R$ 274,91</b><span>ou R$ 3.299 à vista</span></div>
+          <div class="btns">
+            <a class="btn btn-light" href="#investimento">Fazer inscrição <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+            <a class="btn btn-line btn-em" href="#baixar-ementa" data-ementa="hero"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa</a>
+          </div>
+        </div>
+        <div class="m-safe">
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>37h · 6 módulos · 176 aulas</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="6" r="4"/><path d="m5.5 9.5-1 5 3.5-2 3.5 2-1-5"/></svg>Certificado</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 1.5 2.5 3.8v3.7c0 3.2 2.3 6 5.5 7 3.2-1 5.5-3.8 5.5-7V3.8z"/><path d="m5.6 8 1.7 1.7 3.2-3.4"/></svg>7 dias de garantia</span>
         </div>
       </div>
-      <aside class="buy" id="comprar" aria-label="Comprar a formação" data-nota="Preço, parcela e botão na primeira tela. R$ 3.299 é o preço da página atual; os dados estruturados hoje dizem R$ 2.699. Aqui página e marcação usam o mesmo valor.">
-        <p class="kicker">Formação avulsa</p>
-        <div class="val"><span class="x">12x</span><b><sup>R$</sup>274,91</b></div>
-        <p class="sub">ou R$ 3.299 à vista · acesso por 12 meses</p>
-        <a class="btn btn-primary" href="#">Fazer inscrição <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-        <ul>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Certificado de Product Management</li>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Estude no seu ritmo, 100% online</li>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>7 dias de garantia</li>
-        </ul>
-        <a class="upsell" href="membership.html" data-nota="Venda cruzada: por R$ 300 a mais a pessoa leva as 10 formações. É o argumento de valor mais forte do catálogo.">
-          <span class="sym"><img src="assets/logo/pm3-simbolo-preto.svg" alt=""></span>
-          <span><b>Ou acesse as 10 formações</b><span>Membership: 12x R$ 299,91</span></span>
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
-        </a>
-      </aside>
     </div>
+    <div class="m-photo" style="background-image:url('assets/capas/product-manager-1600.jpg');background-position:50% 30%" role="img" aria-label="Capa da formação Product Manager"><span class="tag">Sem pré-requisitos</span></div>
+    <a class="m-tile c-upsell" href="membership.html" data-nota="Venda cruzada: por R$ 300 a mais a pessoa leva as 10 formações. É o argumento de valor mais forte do catálogo.">
+      <span class="ic ic-tl" style="left:0;top:0;--c:#000;--r:40px" aria-hidden="true"></span>
+      <div class="big">10<small>formações por<br>R$ 300 a mais</small></div>
+      <p>Na Membership, esta formação e mais 9, com +40 sprints, por 12x R$ 299,91. Conhecer a Membership →</p>
+    </a>
   </div>
 </section>
 
@@ -85,7 +96,7 @@
 <div class="subnav" id="subnav">
   <div class="wrap">
     <nav aria-label="Seções da página">
-      <a href="#resultados">Visão geral</a><a href="#ementa">Ementa</a><a href="#ia">IA na formação</a><a href="#cases">Cases</a><a href="#para-quem">Para quem é</a><a href="#investimento">Investimento</a><a href="#duvidas">Dúvidas</a>
+      <a href="#resultados">Visão geral</a><a href="#ementa">Ementa</a><a href="#ia">IA na formação</a><a href="#cases">Cases</a><a href="#para-quem">Para quem é</a><a href="#instrutores">Instrutores</a><a href="#certificado">Certificado</a><a href="#investimento">Investimento</a><a href="#duvidas">Dúvidas</a>
     </nav>
     <div class="sub-cta"><div class="mini"><b>12x R$ 274,91<small>ou R$ 3.299 à vista</small></b><a class="btn btn-primary btn-sm" href="#investimento">Inscrever</a></div><a class="btn btn-line btn-sm btn-em sub-ementa" href="#baixar-ementa" data-ementa="subnav"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Ementa</a></div>
   </div>
@@ -211,52 +222,70 @@
   </div>
 </section>
 
-<!-- 8 · INSTRUTORES -->
-<section class="section deep on-dark grain" aria-labelledby="in-t">
+<!-- 8 · INSTRUTORES (componente instrutores.css + instrutores.js, o mesmo da Membership) -->
+<section class="section black on-dark" id="instrutores" aria-labelledby="in-t">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">06</span> Quem ensina</p><h2 class="h2" id="in-t">Aulas com quem<br><span class="c2">faz produto</span></h2></div>
-      <p class="lead">Instrutores que atuam em gestão de produtos no mercado e levam para a aula a prática do dia a dia.</p>
+      <p class="lead">20 instrutores que lideram produto em Nubank, Stripe, PicPay, VTEX, Booking.com e outras empresas, e levam para a aula a prática do dia a dia.</p>
     </div>
-    <div class="prof-row" data-nota="Espaço para os instrutores desta formação, com foto e perfil próprio. Os nomes abaixo são da página da Membership: confirmar quem dá aula aqui.">
-      <figure class="prof reveal"><div class="ph"><img src="assets/people/marcell-almeida-hd.jpg" alt="Foto de Marcell Almeida" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logo/pm3-logo-preto.svg" alt="PM3" style="height:15px"></span></div><figcaption><b>Marcell Almeida</b><span>Founder, PM3 e Product Camp</span></figcaption></figure>
-      <figure class="prof reveal" data-d="1"><div class="ph"><img src="assets/people/raphael-farinazzo.jpg" alt="Foto de Raphael Farinazzo" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logo/pm3-logo-preto.svg" alt="PM3" style="height:15px"></span></div><figcaption><b>Raphael Farinazzo</b><span>CEO, PM3</span></figcaption></figure>
-      <figure class="prof reveal" data-d="2"><div class="ph"><img src="assets/people/eliza-gurgel-hd.jpg" alt="Foto de Eliza Gurgel" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/neon.svg" alt="Neon" style="height:13px"></span></div><figcaption><b>Eliza Gurgel</b><span>Sr. Group Product Manager</span></figcaption></figure>
-      <figure class="prof reveal" data-d="3"><div class="ph"><img src="assets/people/gabriel-werlich.jpg" alt="Foto de Gabriel Werlich" loading="lazy" width="480" height="600"><span class="co">Conta Mais</span></div><figcaption><b>Gabriel Werlich</b><span>Product Director</span></figcaption></figure>
+    <div class="prof-grid" role="region" aria-label="Instrutores da formação" tabindex="0" data-nota="Instrutores listados hoje na página da formação no site da PM3, com cargo e empresa do cadastro de cada um.">
+      <figure class="prof"><div class="ph"><img src="assets/people/marcell-almeida-hd.jpg" alt="Foto de Marcell Almeida" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logo/pm3-logo-preto.svg" alt="PM3" style="height:15px"></span></div><figcaption><b>Marcell Almeida</b><span>Founder, PM3 e Product Camp</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/raphael-farinazzo.jpg" alt="Foto de Raphael Farinazzo" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logo/pm3-logo-preto.svg" alt="PM3" style="height:15px"></span></div><figcaption><b>Raphael Farinazzo</b><span>CEO</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/joaquim-torres.jpg" alt="Foto de Joaquim Torres" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/gympass.svg" alt="Gympass" style="height:18px"></span></div><figcaption><b>Joaquim Torres</b><span>Former CPTO @ Locaweb, Gympass, Conta Azul e Lopes</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/camila-lopes.jpg" alt="Foto de Camila Lopes" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/nubank.svg" alt="Nubank" style="height:15px"></span></div><figcaption><b>Camila Lopes</b><span>Senior Product Lead</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/pedro-axelrud.jpg" alt="Foto de Pedro Axelrud" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/nubank.svg" alt="Nubank" style="height:15px"></span></div><figcaption><b>Pedro Axelrud</b><span>Product Director</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/maria-luisa-cantadori.jpg" alt="Foto de Maria Luisa Cantadori" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/stripe.svg" alt="Stripe" style="height:20px"></span></div><figcaption><b>Maria Luisa Cantadori</b><span>Senior Product Manager</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/loren-monteiro.jpg" alt="Foto de Loren Monteiro" loading="lazy" width="480" height="600"><span class="co">Adevinta</span></div><figcaption><b>Loren Monteiro</b><span>CPO Adevinta Benelux</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/bianca-santa-cruz.jpg" alt="Foto de Bianca Santa Cruz" loading="lazy" width="480" height="600"><span class="co">Grupo Boticário</span></div><figcaption><b>Bianca Santa Cruz</b><span>Head of Product</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/rodrigo-iannuzzi.jpg" alt="Foto de Rodrigo Iannuzzi" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/picpay.svg" alt="PicPay" style="height:16px"></span></div><figcaption><b>Rodrigo Iannuzzi</b><span>Gerente Executivo, Novos Produtos PJ</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/marcela-schlaepfer.jpg" alt="Foto de Marcela Schlaepfer" loading="lazy" width="480" height="600"><span class="co">VTEX</span></div><figcaption><b>Marcela Schlaepfer</b><span>Director of Tech Planning &amp; Operations</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/raphael-albino.jpg" alt="Foto de Raphael Albino" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/nubank.svg" alt="Nubank" style="height:15px"></span></div><figcaption><b>Raphael Albino</b><span>Interim General Manager</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/natalia-arsand.jpg" alt="Foto de Natalia Arsand" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/booking.svg" alt="Booking.com" style="height:14px"></span></div><figcaption><b>Natalia Arsand</b><span>Senior UX, Design Systems</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/bernardo-srulzon.jpg" alt="Foto de Bernardo Srulzon" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/nubank.svg" alt="Nubank" style="height:15px"></span></div><figcaption><b>Bernardo Srulzon</b><span>Senior Product Lead</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/thiago-belluf.jpg" alt="Foto de Thiago Belluf" loading="lazy" width="480" height="600"><span class="co">Will Bank</span></div><figcaption><b>Thiago Belluf</b><span>Group Product Manager</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/andre-nery.jpg" alt="Foto de André Nery" loading="lazy" width="480" height="600"><span class="co">Alpha</span></div><figcaption><b>André Nery</b><span>Founder &amp; CEO</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/victor-almaraz.jpg" alt="Foto de Victor Almaraz" loading="lazy" width="480" height="600"><span class="co">Konfidency</span></div><figcaption><b>Victor Almaraz</b><span>Founder &amp; CEO</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/rawley-martos.jpg" alt="Foto de Rawley Martos" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/nubank.svg" alt="Nubank" style="height:15px"></span></div><figcaption><b>Rawley Martos</b><span>Product Manager</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/giovanni-piton.jpg" alt="Foto de Giovanni Piton" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logos/by-aliens.png" alt="By Aliens" style="height:28px"></span></div><figcaption><b>Giovanni Piton</b><span>Game Director &amp; Market Intelligence Lead</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/priscilla-lugao.jpg" alt="Foto de Priscilla Lugão" loading="lazy" width="480" height="600"><span class="co co-logo"><img src="assets/logo/pm3-logo-preto.svg" alt="PM3" style="height:15px"></span></div><figcaption><b>Priscilla Lugão</b><span>Gerente de Novos Negócios e Estratégia</span></figcaption></figure>
+      <figure class="prof"><div class="ph"><img src="assets/people/bruno-coutinho.jpg" alt="Foto de Bruno Coutinho" loading="lazy" width="480" height="600"></div><figcaption><b>Bruno Coutinho</b><span>Chief Marketing Officer</span></figcaption></figure>
     </div>
+    <div class="prof-nav"><div class="prof-btns"><button type="button" data-pf="ant" aria-label="Instrutores anteriores"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8H3M7 4 3 8l4 4"/></svg></button><button type="button" data-pf="prox" aria-label="Próximos instrutores"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button></div></div>
   </div>
 </section>
-
-<!-- 9 · CERTIFICADO E PRÓXIMOS PASSOS -->
-<section class="section" aria-labelledby="ce-t">
-  <div class="wrap cert">
-    <div class="cert-card reveal" aria-hidden="true">
-      <img src="assets/logo/pm3-logo-roxo.svg" alt="">
-      <div><span class="k">Certificado de conclusão</span><div class="nm">Seu nome aqui</div><div class="cs">Product Management</div></div>
-      <div class="ft"><span>Formação · 37 horas</span><span>pm3.com.br</span></div>
-    </div>
-    <div>
-      <p class="kicker"><span class="n">07</span> Certificado</p>
-      <h2 class="h2" id="ce-t">Certificado<br><span class="c2">de conclusão</span></h2>
-      <ul>
-        <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Certificado de Product Management ao concluir a formação</li>
-        <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Pronto para adicionar ao LinkedIn</li>
-        <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Com o nome da formação e a carga de 37 horas</li>
-      </ul>
-      <div class="next" style="grid-template-columns:1fr;margin-top:40px">
-        <div><p class="kicker" style="margin-bottom:14px">Depois desta formação</p>
-          <div class="chips">
-            <a href="#">Roadmap de produto e priorização <small>7h</small></a>
-            <a href="#">PRD: documento de requisitos <small>3h</small></a>
-            <a href="#">Tecnologia para PMs <small>6h</small></a>
-            <a href="#">Gestão de resultados com OKRs</a>
-            <a href="#">Product Discovery <small>formação</small></a>
-          </div></div>
+<!-- 9 · CERTIFICADO (componente certificado.css; o mockup do curso vai em --cert-full e --cert-crop) -->
+<section class="cx-sec on-dark" id="certificado" aria-labelledby="ce-t">
+  <div class="cx-hero cx-var" style="--cert-full:url('../img/certificado-veludo.jpg?v=3');--cert-crop:url('../img/certificado-veludo-crop.jpg?v=3')" data-nota="Mockup do certificado da formação. Para outro curso, troque as duas imagens nas variáveis --cert-full (celular) e --cert-crop (desktop); caminho relativo a assets/css/.">
+    <div class="wrap">
+      <div class="cx-copy">
+        <p class="kicker"><span class="n">07</span> Certificado</p>
+        <h2 class="h2" id="ce-t">Certificado de<br><span class="c2">Product<br>Management.</span></h2>
+        <p class="lead">Ao concluir as 37 horas da formação, você recebe o certificado PM3 de Product Management, com o nome do curso e a carga horária, pronto para o LinkedIn e o currículo.</p>
+        <ul class="cx-proof">
+          <li><span class="cx-aw"><svg class="lr" viewBox="0 0 120 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M30 44C14 38 9 22 15 6"/><path d="M90 44c16-6 21-22 15-38"/></g><g fill="currentColor"><ellipse cx="14" cy="11" rx="2.4" ry="4.6" transform="rotate(-15 14 11)"/><ellipse cx="11.5" cy="20" rx="2.4" ry="4.6" transform="rotate(-38 11.5 20)"/><ellipse cx="13" cy="29" rx="2.4" ry="4.6" transform="rotate(-58 13 29)"/><ellipse cx="19" cy="37" rx="2.4" ry="4.6" transform="rotate(-75 19 37)"/><ellipse cx="106" cy="11" rx="2.4" ry="4.6" transform="rotate(15 106 11)"/><ellipse cx="108.5" cy="20" rx="2.4" ry="4.6" transform="rotate(38 108.5 20)"/><ellipse cx="107" cy="29" rx="2.4" ry="4.6" transform="rotate(58 107 29)"/><ellipse cx="101" cy="37" rx="2.4" ry="4.6" transform="rotate(75 101 37)"/></g></svg><b>Top 5</b></span><span class="cx-lb">Empresas mais admiradas em Produto no Brasil</span></li>
+          <li><span class="cx-aw"><svg class="lr" viewBox="0 0 120 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M30 44C14 38 9 22 15 6"/><path d="M90 44c16-6 21-22 15-38"/></g><g fill="currentColor"><ellipse cx="14" cy="11" rx="2.4" ry="4.6" transform="rotate(-15 14 11)"/><ellipse cx="11.5" cy="20" rx="2.4" ry="4.6" transform="rotate(-38 11.5 20)"/><ellipse cx="13" cy="29" rx="2.4" ry="4.6" transform="rotate(-58 13 29)"/><ellipse cx="19" cy="37" rx="2.4" ry="4.6" transform="rotate(-75 19 37)"/><ellipse cx="106" cy="11" rx="2.4" ry="4.6" transform="rotate(15 106 11)"/><ellipse cx="108.5" cy="20" rx="2.4" ry="4.6" transform="rotate(38 108.5 20)"/><ellipse cx="107" cy="29" rx="2.4" ry="4.6" transform="rotate(58 107 29)"/><ellipse cx="101" cy="37" rx="2.4" ry="4.6" transform="rotate(75 101 37)"/></g></svg><b>+800</b></span><span class="cx-lb">Empresas confiam nas formações da PM3</span></li>
+          <li><span class="cx-aw"><svg class="lr" viewBox="0 0 120 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M30 44C14 38 9 22 15 6"/><path d="M90 44c16-6 21-22 15-38"/></g><g fill="currentColor"><ellipse cx="14" cy="11" rx="2.4" ry="4.6" transform="rotate(-15 14 11)"/><ellipse cx="11.5" cy="20" rx="2.4" ry="4.6" transform="rotate(-38 11.5 20)"/><ellipse cx="13" cy="29" rx="2.4" ry="4.6" transform="rotate(-58 13 29)"/><ellipse cx="19" cy="37" rx="2.4" ry="4.6" transform="rotate(-75 19 37)"/><ellipse cx="106" cy="11" rx="2.4" ry="4.6" transform="rotate(15 106 11)"/><ellipse cx="108.5" cy="20" rx="2.4" ry="4.6" transform="rotate(38 108.5 20)"/><ellipse cx="107" cy="29" rx="2.4" ry="4.6" transform="rotate(58 107 29)"/><ellipse cx="101" cy="37" rx="2.4" ry="4.6" transform="rotate(75 101 37)"/></g></svg><b>9 em 10</b></span><span class="cx-lb">Alunos mais confiantes após o curso</span></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
-
+<!-- 9b · PRÓXIMOS PASSOS (cards-formacao.css, os mesmos cards dos catálogos) -->
+<section class="section" id="proximos" aria-labelledby="nx-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker">Depois desta formação</p><h2 class="h2" id="nx-t">Próximos<br><span class="c2">passos</span></h2></div>
+      <p class="lead">Cursos que aprofundam o que você viu na formação. Todos incluídos na Membership.</p>
+    </div>
+    <div class="f-grid">
+      <a class="f-card reveal" data-d="0" href="#"><div class="f-vis" style="background-image:url('assets/capas/product-discovery-800.jpg?v=3')" aria-hidden="true"></div><div class="f-body"><div class="top"><span class="tag tag-tipo">Formação</span><span class="tag tag-area">Produto</span></div><h3>Product Discovery</h3><p>Para validar hipóteses e reduzir o risco de produto antes de construir.</p><ul class="f-facts"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>26h</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 1.8 14.2 5 8 8.2 1.8 5z"/><path d="m1.8 8 6.2 3.2L14.2 8"/><path d="m1.8 11 6.2 3.2 6.2-3.2"/></svg>5 módulos</li></ul><div class="meta"><span>Ver formação</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></div></div></a>
+      <a class="f-card reveal" data-d="1" href="#"><div class="f-vis" style="background-image:url('assets/capas/sprints/roadmap-priorizacao.jpg')" aria-hidden="true"></div><div class="f-body"><div class="top"><span class="tag tag-tipo">Sprint</span><span class="tag tag-area">Produto</span></div><h3>Roadmap de Produto e Priorização</h3><p>Técnicas de priorização e roadmaps estratégicos orientados a resultados.</p><ul class="f-facts"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>7h</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.2" r="4.2"/><path d="m5.6 9.6-1.1 4.8L8 12.8l3.5 1.6-1.1-4.8"/></svg>Certificado</li></ul><div class="meta"><span>Ver sprint</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></div></div></a>
+      <a class="f-card reveal" data-d="2" href="#"><div class="f-vis" style="background-image:url('assets/capas/sprints/prd.jpg')" aria-hidden="true"></div><div class="f-body"><div class="top"><span class="tag tag-tipo">Sprint</span><span class="tag tag-area">Produto</span></div><h3>PRD: Documento de Requisitos</h3><p>O PRD na prática para alinhar equipes e definir problemas.</p><ul class="f-facts"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>3h</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.2" r="4.2"/><path d="m5.6 9.6-1.1 4.8L8 12.8l3.5 1.6-1.1-4.8"/></svg>Certificado</li></ul><div class="meta"><span>Ver sprint</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></div></div></a>
+      <a class="f-card reveal" data-d="3" href="#"><div class="f-vis" style="background-image:url('assets/capas/sprints/tecnologia-pms.jpg')" aria-hidden="true"></div><div class="f-body"><div class="top"><span class="tag tag-tipo">Sprint</span><span class="tag tag-area">Produto</span></div><h3>Tecnologia para Product Managers</h3><p>Arquitetura, infraestrutura e desenvolvimento para colaborar com engenharia.</p><ul class="f-facts"><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>6h</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.2" r="4.2"/><path d="m5.6 9.6-1.1 4.8L8 12.8l3.5 1.6-1.1-4.8"/></svg>Certificado</li></ul><div class="meta"><span>Ver sprint</span><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></div></div></a>
+    </div>
+  </div>
+</section>
 <!-- 10 · INVESTIMENTO -->
 <section class="section white" id="investimento" aria-labelledby="iv-t">
   <div class="wrap">
@@ -335,7 +364,9 @@
 </div>
 
 <script src="assets/js/layout.js?v=26"></script>
-<script src="assets/js/course.js?v=2"></script>
+<script src="assets/js/course.js?v=3"></script>
+<script src="assets/js/hero-card.js?v=2"></script>
+<script src="assets/js/instrutores.js?v=1"></script>
 <script>window.EMENTA={curso:"Product Manager",tracking:"ementa cpm",stats:"37 horas, 6 módulos e 176 aulas.",capa:"assets/capas/product-manager-800.jpg"};</script>
 <script src="assets/js/ementa.js?v=3"></script>
 </body>

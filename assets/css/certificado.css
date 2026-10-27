@@ -80,3 +80,6 @@
 .cx-levels div:first-child{padding-left:24px;margin-left:-24px}
 @media (max-width:1080px){ .cx-levels div{padding-left:20px;margin-left:-20px} }
 @media (max-width:600px){ .cx-levels{grid-template-columns:1fr} }
+/* páginas de curso: o mockup do certificado vem da própria página (variáveis --cert-full e --cert-crop) */
+.cx-hero.cx-var::before{background-image:var(--cert-full)}
+@media (min-width:861px){ .cx-hero.cx-var::before{background-image:var(--cert-crop)} }

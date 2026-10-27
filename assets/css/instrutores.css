@@ -1,0 +1,35 @@
+/* PM3 · instrutores: cards com foto, empresa e cargo em slider de uma fileira (Membership e páginas de curso).
+   Marcação: section > .prof-grid > figure.prof ... + .prof-nav com botões [data-pf=ant|prox]; script: instrutores.js */
+.prof-grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;padding:6px 0 4px}
+.prof-grid::-webkit-scrollbar{display:none}
+.prof-grid > .prof{flex:0 0 calc((100% - 48px) / 4);scroll-snap-align:start}
+.prof-nav{display:flex;align-items:center;justify-content:flex-end;gap:16px;margin-top:22px}
+.prof-btns{display:flex;gap:10px}
+.prof-btns button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.prof-btns button:hover{background:#fff;color:#000;border-color:#fff}
+.prof-btns button:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.prof-btns button:disabled{opacity:.3;cursor:default;background:transparent;color:#fff;border-color:rgba(255,255,255,.22)}
+.prof-btns svg{width:18px;height:18px}
+.prof{margin:0;background:#0d0a14;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-card);overflow:hidden;transition:border-color .3s,transform .3s}
+.prof:hover{border-color:rgba(176,77,221,.55);transform:translateY(-4px)}
+.prof .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#1a1226}
+.prof .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.prof:hover .ph > img{transform:scale(1.05)}
+.prof .ph::after{content:'';position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(180deg,transparent,rgba(13,10,20,.85))}
+.prof .co{position:absolute;left:14px;bottom:14px;z-index:1;background:#fff;color:#000;font-family:var(--display);font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
+.prof figcaption{padding:16px 18px 18px}
+.prof b{display:block;font-family:var(--display);font-size:18px;color:#fff;line-height:1.2}
+.prof figcaption span{font-size:13.5px;color:var(--gray-fog);line-height:1.35;display:block;margin-top:4px}
+.marquee{margin-top:40px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee .track{display:flex;gap:56px;width:max-content;animation:corre 38s linear infinite}
+.marquee span{font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,40px);letter-spacing:-.02em;text-transform:uppercase;color:rgba(255,255,255,.22);white-space:nowrap}
+.marquee span.on{color:#fff}
+.prof .co-logo{display:inline-flex;align-items:center;padding:7px 12px;min-height:30px}
+.prof .ph .co-logo img{position:static;inset:auto;display:block;width:auto;max-width:120px;object-fit:contain;transform:none;transition:none}
+@media (max-width:760px){ .prof .co-logo{padding:5px 9px;min-height:24px} .prof .co-logo img{transform:scale(.82);transform-origin:left center} }
+@media (max-width:1080px){ .prof-grid > .prof{flex-basis:calc((100% - 32px) / 3)} }
+@media (max-width:600px){
+  .prof-grid > .prof{flex-basis:calc((100% - 10px) / 2)}
+  .prof-grid{gap:10px} .prof figcaption{padding:12px 12px 14px} .prof b{font-size:15px} .prof .co{font-size:10.5px;left:10px;bottom:10px;padding:5px 9px}
+}
+@media (prefers-reduced-motion:reduce){ .marquee .track{animation:none} }
