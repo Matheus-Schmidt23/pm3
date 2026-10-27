@@ -368,3 +368,10 @@
 .h-pic .tag span{font-size:12.5px;opacity:.8}
 .h-pic .tag span::before{content:none}
 @media (max-width:760px){ .h-pic .tag{max-width:calc(100% - 32px)} }
+/* legenda do hero: nome + "Instrutor(a) PM3" e, ao lado, o logo da empresa num selo branco */
+.h-pic .tag{flex-direction:row;align-items:center;gap:12px;padding:8px 8px 8px 14px}
+.h-pic .tag .tg-t{display:flex;flex-direction:column;gap:2px}
+.h-pic .tag .tg-t span{font-size:12.5px;opacity:.8;font-weight:500}
+.h-pic .tag .tg-co{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;padding:0 12px;height:38px;min-width:64px;opacity:1}
+.h-pic .tag .tg-co::before{content:none}
+.h-pic .tag .tg-co img{display:block;width:auto;max-width:110px}
