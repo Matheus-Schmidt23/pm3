@@ -514,3 +514,14 @@
 /* hero no estilo FIAP: retrato em perfil sobre vermelho (asset da Pós Tech FIAP) */
 .p-tex.p-photo{background:#e8003d url('../img/pos-hero-fiap.jpg') 55% 20%/cover}
 @media (max-width:860px){ .p-tex.p-photo{background-position:55% 15%} }
+
+/* a foto da campanha FIAP ocupa toda a faixa da esquerda; o texto fica sobre o preto à esquerda */
+.p-main.p-main-foto{background:#000 url('../img/pos-hero-fiap.jpg') right 30%/auto 118% no-repeat}
+.p-main.p-main-foto::before{background:linear-gradient(90deg,#000 0%,#000 28%,rgba(0,0,0,.82) 44%,rgba(0,0,0,.25) 64%,rgba(0,0,0,0) 80%),linear-gradient(0deg,rgba(0,0,0,.7),transparent 30%)}
+.p-main.p-main-foto .aurora{display:none}
+.p-main.p-main-foto h1 .l2{color:#ff3b6b}
+@media (max-width:860px){ .p-main.p-main-foto{background-size:cover;background-position:70% 20%} .p-main.p-main-foto::before{background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.88) 55%,#000)} }@media (min-width:861px){
+  .p-main.p-main-foto{background-size:auto 112%;background-position:calc(100% + 230px) 25%}
+  .p-main.p-main-foto::before{background:linear-gradient(90deg,#000 0%,#000 36%,rgba(0,0,0,.78) 52%,rgba(0,0,0,.15) 72%,rgba(0,0,0,0) 86%),linear-gradient(0deg,rgba(0,0,0,.75),transparent 32%)}
+}
+@media (min-width:861px){ .p-main.p-main-foto::before{background:linear-gradient(90deg,#000 0%,#000 47%,rgba(0,0,0,.7) 57%,rgba(0,0,0,.15) 72%,rgba(0,0,0,0) 84%),linear-gradient(0deg,rgba(0,0,0,.75),transparent 32%)} }
