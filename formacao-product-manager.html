@@ -46,8 +46,8 @@
 <!--
   MODELO DE PÁGINA DE CURSO. Para criar outro curso, copie este arquivo e troque só o conteúdo:
   1 · Hero (hero-card.css): nome, frase em itálico, lead, preço, fatos (horas, módulos, aulas) e a capa em .m-photo.
-  3 a 7 · Resultados, ementa, IA, cases e para quem é: textos e módulos do curso (course.css, ementa.css).
-  8 · Instrutores (instrutores.css + instrutores.js): um <figure class="prof"> por pessoa (foto 480x600 em assets/people/,
+  3 a 7 · Resultados, ementa, IA e para quem é: textos e módulos do curso (course.css, ementa.css).
+  8 · Instrutores (instrutores.css + instrutores.js): um <figure class="prof"> por pessoa e, embaixo, a faixa .marquee com as empresas dos cases; (foto 480x600 em assets/people/,
       empresa em .co-logo com o logo de assets/logos/ ou em .co com o nome em texto, e o cargo).
   9 · Certificado (certificado.css): o mockup do curso nas variáveis --cert-full e --cert-crop do .cx-hero.
   10 e 11 · Investimento e FAQ: preços e perguntas. Atualize também o JSON-LD do <head> e window.EMENTA no fim.
@@ -94,7 +94,7 @@
 <div class="subnav" id="subnav">
   <div class="wrap">
     <nav aria-label="Seções da página">
-      <a href="#resultados">Visão geral</a><a href="#ementa">Ementa</a><a href="#ia">IA na formação</a><a href="#cases">Cases</a><a href="#para-quem">Para quem é</a><a href="#instrutores">Instrutores</a><a href="#certificado">Certificado</a><a href="#investimento">Investimento</a><a href="#duvidas">Dúvidas</a>
+      <a href="#resultados">Visão geral</a><a href="#ementa">Ementa</a><a href="#ia">IA na formação</a><a href="#para-quem">Para quem é</a><a href="#instrutores">Instrutores</a><a href="#certificado">Certificado</a><a href="#investimento">Investimento</a><a href="#duvidas">Dúvidas</a>
     </nav>
     <div class="sub-cta"><div class="mini"><b>12x R$ 274,91<small>ou R$ 3.299 à vista</small></b><a class="btn btn-primary btn-sm" href="#investimento">Inscrever</a></div><a class="btn btn-line btn-sm btn-em sub-ementa" href="#baixar-ementa" data-ementa="subnav"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Ementa</a></div>
   </div>
@@ -173,34 +173,11 @@
   </div>
 </section>
 
-<!-- 6 · CASES -->
-<section class="section" id="cases" aria-labelledby="cs-t">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><p class="kicker"><span class="n">04</span> Cases reais</p><h2 class="h2" id="cs-t">Aprenda com<br><span class="c2">quem fez</span></h2></div>
-      <p class="lead">Empresas brasileiras abrem como resolveram problemas reais de produto, do discovery à priorização.</p>
-    </div>
-    <div class="car reveal">
-      <div class="car-track cases" role="region" aria-label="Cases reais" tabindex="0">
-        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-dobras-roxas.jpg')"><span class="brand">Creditas</span></div><div class="cb"><p>Como mudar a cultura de produto de uma empresa em crescimento.</p><span class="m">Módulo 1</span></div></article>
-        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-dobras-azuis.jpg')"><span class="brand">Involves</span></div><div class="cb"><p>Matriz CSD, entrevistas e validação por protótipo, do começo ao fim.</p><span class="m">Módulo 3</span></div></article>
-        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-aurora.jpg')"><span class="brand">ContaMais.ai</span></div><div class="cb"><p>Ideação e definição de soluções em um produto de IA.</p><span class="m">Módulo 3</span></div></article>
-        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-barras-dados.jpg')"><span class="brand">Logbit</span></div><div class="cb"><p>Priorização de backlog com IA e os resultados alcançados.</p><span class="m">Módulo 6</span></div></article>
-        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-montanhas-dados.jpg')"><span class="brand">Soccer Punch</span></div><div class="cb"><p>Pesquisa de mercado aplicada, em duas partes.</p><span class="m">Módulo 2</span></div></article>
-        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-linhas-dados.jpg')"><span class="brand">Tempo</span></div><div class="cb"><p>Análise de dados com IA para decidir o próximo passo.</p><span class="m">Módulo 4</span></div></article>
-        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-fitas-vidro.jpg')"><span class="brand">Lovable e Pipefy</span></div><div class="cb"><p>Experimentos rápidos com ferramentas de IA.</p><span class="m">Módulo 2</span></div></article>
-        <article class="case"><div class="cv" style="background-image:url('assets/tex/tex-ondas-dados.jpg')"><span class="brand">n8n</span></div><div class="cb"><p>RAG em produto: configuração do fluxo e ajuste de prompts.</p><span class="m">Módulo 6</span></div></article>
-      </div>
-      <div class="car-nav"><button type="button" data-car="ant" aria-label="Cases anteriores"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8H3M7 4 3 8l4 4"/></svg></button><button type="button" data-car="prox" aria-label="Próximos cases"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button></div>
-    </div>
-  </div>
-</section>
-
 <!-- 7 · PARA QUEM É -->
 <section class="section white" id="para-quem" aria-labelledby="pq-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">05</span> Para quem é</p><h2 class="h2" id="pq-t">É a formação<br><span class="c2">certa para você?</span></h2></div>
+      <div><p class="kicker"><span class="n">04</span> Para quem é</p><h2 class="h2" id="pq-t">É a formação<br><span class="c2">certa para você?</span></h2></div>
       <p class="lead">Confira se o seu perfil se encaixa. Se o seu momento for outro, indicamos a formação ou sprint mais adequada.</p>
     </div>
     <div class="fit">
@@ -224,7 +201,7 @@
 <section class="section black on-dark" id="instrutores" aria-labelledby="in-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">06</span> Quem ensina</p><h2 class="h2" id="in-t">Aulas com quem<br><span class="c2">faz produto</span></h2></div>
+      <div><p class="kicker"><span class="n">05</span> Quem ensina</p><h2 class="h2" id="in-t">Aulas com quem<br><span class="c2">faz produto</span></h2></div>
       <p class="lead">20 instrutores que lideram produto em Nubank, Stripe, PicPay, VTEX, Booking.com e outras empresas, e levam para a aula a prática do dia a dia.</p>
     </div>
     <div class="prof-grid" role="region" aria-label="Instrutores da formação" tabindex="0" data-nota="Instrutores listados hoje na página da formação no site da PM3, com cargo e empresa do cadastro de cada um.">
@@ -250,6 +227,10 @@
       <figure class="prof"><div class="ph"><img src="assets/people/bruno-coutinho.jpg?v=2" alt="Foto de Bruno Coutinho" loading="lazy" width="480" height="600"></div><figcaption><b>Bruno Coutinho</b><span>Chief Marketing Officer</span></figcaption></figure>
     </div>
     <div class="prof-nav"><div class="prof-btns"><button type="button" data-pf="ant" aria-label="Instrutores anteriores"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8H3M7 4 3 8l4 4"/></svg></button><button type="button" data-pf="prox" aria-label="Próximos instrutores"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button></div></div>
+    <div class="marquee" aria-hidden="true" data-nota="Empresas dos cases reais usados nas aulas da formação (antes, uma seção própria)."><div class="track">
+      <span class="on">Creditas</span><span>Involves</span><span class="on">ContaMais.ai</span><span>Logbit</span><span class="on">Soccer Punch</span><span>Tempo</span><span class="on">Lovable</span><span>Pipefy</span><span class="on">n8n</span>
+      <span class="on">Creditas</span><span>Involves</span><span class="on">ContaMais.ai</span><span>Logbit</span><span class="on">Soccer Punch</span><span>Tempo</span><span class="on">Lovable</span><span>Pipefy</span><span class="on">n8n</span>
+    </div></div>
   </div>
 </section>
 <!-- 9 · CERTIFICADO (componente certificado.css; o mockup do curso vai em --cert-full e --cert-crop) -->
@@ -257,7 +238,7 @@
   <div class="cx-hero cx-var" style="--cert-full:url('../img/certificado-veludo.jpg?v=3');--cert-crop:url('../img/certificado-veludo-crop.jpg?v=3')" data-nota="Mockup do certificado da formação. Para outro curso, troque as duas imagens nas variáveis --cert-full (celular) e --cert-crop (desktop); caminho relativo a assets/css/.">
     <div class="wrap">
       <div class="cx-copy">
-        <p class="kicker"><span class="n">07</span> Certificado</p>
+        <p class="kicker"><span class="n">06</span> Certificado</p>
         <h2 class="h2" id="ce-t">Certificado de<br><span class="c2">Product<br>Management.</span></h2>
         <p class="lead">Ao concluir as 37 horas da formação, você recebe o certificado PM3 de Product Management, com o nome do curso e a carga horária, pronto para o LinkedIn e o currículo.</p>
         <ul class="cx-proof">
@@ -273,7 +254,7 @@
 <section class="section white" id="investimento" aria-labelledby="iv-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">08</span> Investimento</p><h2 class="h2" id="iv-t">Uma formação<br><span class="c2">ou todas</span></h2></div>
+      <div><p class="kicker"><span class="n">07</span> Investimento</p><h2 class="h2" id="iv-t">Uma formação<br><span class="c2">ou todas</span></h2></div>
       <p class="lead">Compre só esta formação ou, por R$ 300 a mais, assine a Membership: as 10 formações e as +40 sprints por 12 meses.</p>
     </div>
     <div class="inv">
@@ -312,7 +293,7 @@
 <section class="section" id="duvidas" aria-labelledby="fq-t">
   <div class="wrap faq-grid">
     <div>
-      <p class="kicker"><span class="n">09</span> Dúvidas</p>
+      <p class="kicker"><span class="n">08</span> Dúvidas</p>
       <h2 class="h2" id="fq-t">Perguntas<br><span class="c2">frequentes</span></h2>
       <p class="muted" style="margin-top:20px">Fale com o time pelo WhatsApp ou pelo e-mail contato@pm3.com.br.</p>
       <a class="btn btn-line btn-sm" href="#">Falar no WhatsApp</a>
