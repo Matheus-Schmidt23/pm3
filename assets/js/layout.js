@@ -75,7 +75,7 @@
         <div class="foot-brand">
           <img src="assets/logo/pm3-logo-branco.svg" alt="PM3" width="111" height="34">
           <p>Escola de produtos digitais e IA: formações, sprints, Membership e Pós Tech. Pessoas criam produtos.</p>
-          <a class="btn btn-light btn-sm" href="membership.html#planos">Conhecer a Membership ${arrow}</a>
+          <a class="ft-link" href="membership.html#planos">Conhecer a Membership ${arrow}</a>
         </div>
         <div><h4>Formações</h4><ul>${FORMACOES.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}</ul></div>
         <div><h4>Sprints</h4><ul>${SPRINTS.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}<li><a href="cursos.html">Catálogo completo</a></li></ul></div>

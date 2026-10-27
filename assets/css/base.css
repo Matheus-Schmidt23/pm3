@@ -228,3 +228,8 @@ button{font:inherit;color:inherit}
 @media (min-width:861px){
   :is(.m-hero,.h-hero,.cm-hero,.p-hero) :is(.m-main,.h-main,.cm-main,.p-main){padding-left:max(calc(var(--gutter) - 12px),calc((100cqw - var(--wrap)) / 2))}
 }
+/* rodapé: chamada da Membership como link discreto (texto em negrito + seta) */
+.foot-brand .ft-link{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-family:var(--display);font-weight:700;font-size:15px;color:#fff;text-decoration:none}
+.foot-brand .ft-link svg{width:15px;height:15px;transition:transform .25s}
+.foot-brand .ft-link:hover{color:var(--yellow)}
+.foot-brand .ft-link:hover svg{transform:translateX(4px)}
