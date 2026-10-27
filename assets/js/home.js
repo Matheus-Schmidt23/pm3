@@ -84,7 +84,7 @@
     const html = `<span class="tg-t"><b>${f.dataset.nome}</b><span>Instrutor${f.dataset.g === 'a' ? 'a' : ''} PM3</span></span>` + (f.dataset.logo ? `<span class="tg-co"><img src="${f.dataset.logo}" alt="${f.dataset.emp || ''}" style="height:${f.dataset.lh || 16}px"></span>` : '');
     if (!anima) { tag.innerHTML = html; return; }
     tag.classList.add('troca');
-    setTimeout(() => { tag.innerHTML = html; tag.classList.remove('troca'); }, 450);
+    setTimeout(() => { tag.innerHTML = html; tag.classList.remove('troca'); }, 700);
   };
   /* cada visita começa por uma pessoa sorteada (sem animação na troca inicial) */
   let i = Math.floor(Math.random() * fotos.length);
@@ -107,7 +107,7 @@
     i = (i + 1) % fotos.length;
     fotos[i].classList.add('on');
     legenda(fotos[i], true);
-  }, 4500);
+  }, 8000);
 })();
 
 /* hero: traço de luz no contorno do 3 e leve paralaxe com o cursor */
