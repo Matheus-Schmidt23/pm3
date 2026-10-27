@@ -235,3 +235,20 @@ button{font:inherit;color:inherit}
 .foot-brand .ft-link:hover svg{transform:translateX(4px)}
 .foot-brand .ft-link + .ft-link{margin-top:12px}
 .foot-brand .ft-link{display:flex;width:fit-content}
+
+/* ---------- luz: manchas de luz que se movem + brilho e malha de pontos que seguem o cursor ----------
+   Aplicadas pelo layout.js em toda seção escura (.section.black, .cx-sec). A camada .luz fica atrás do conteúdo. */
+.tem-luz{position:relative;isolation:isolate;overflow:hidden}
+.luz{position:absolute;inset:0;z-index:-1;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 82%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 82%,transparent 100%)}
+.luz .bl{position:absolute;border-radius:50%;filter:blur(70px);mix-blend-mode:screen;opacity:.55;will-change:transform;animation:luz-vaga var(--d,30s) ease-in-out var(--atraso,0s) infinite alternate}
+@keyframes luz-vaga{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(var(--tx,8%),var(--ty,-6%),0) scale(1.18)}100%{transform:translate3d(calc(var(--tx,8%) * -.7),calc(var(--ty,-6%) * -.8),0) scale(.92)}}
+/* brilho do cursor: segue o mouse com inércia (--lx/--ly vêm do layout.js) */
+.luz .cur{position:absolute;left:0;top:0;width:640px;height:640px;margin:-320px 0 0 -320px;border-radius:50%;background:radial-gradient(circle,rgba(176,77,221,.30),rgba(102,69,177,.12) 38%,transparent 66%);transform:translate3d(var(--lx,-999px),var(--ly,-999px),0);opacity:0;transition:opacity .6s}
+/* malha de pontos que só aparece perto do cursor */
+.luz .grade{position:absolute;inset:0;background:radial-gradient(circle at 1px 1px,rgba(255,255,255,.22) 1px,transparent 1.5px) 0 0/22px 22px;-webkit-mask-image:radial-gradient(260px circle at var(--lx,-999px) var(--ly,-999px),#000,transparent 70%);mask-image:radial-gradient(260px circle at var(--lx,-999px) var(--ly,-999px),#000,transparent 70%);opacity:0;transition:opacity .6s}
+.tem-luz.mira .luz .cur,.tem-luz.mira .luz .grade{opacity:1}
+@media (prefers-reduced-motion:reduce){ .luz .bl{animation:none} .luz .cur,.luz .grade{display:none} }
+@media (hover:none){ .luz .cur,.luz .grade{display:none} }
+.luz .bl{opacity:.72}
+.luz .cur{background:radial-gradient(circle,rgba(176,77,221,.38),rgba(102,69,177,.16) 38%,transparent 66%)}
+.luz .grade{background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.32) 1px,transparent 1.6px)}
