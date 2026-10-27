@@ -14,7 +14,7 @@ window.PM3_CATALOGO = (function(){
 
   /* formações: horas e módulos da página atual da Membership */
   const FORMACOES = [
-    { nome: 'Product Manager', area: 'gestao', h: 37, mod: 6, nivel: 'Base', capa: 'product-manager', aprende: ['Product Market Fit','Discovery na era da IA','Dados e analytics'], url: 'formacao-product-manager.html', destaque: 'Comece aqui',
+    { nome: 'Product Management', area: 'gestao', h: 37, mod: 6, nivel: 'Base', capa: 'product-manager', aprende: ['Product Market Fit','Discovery na era da IA','Dados e analytics'], url: 'formacao-product-manager.html', destaque: 'Comece aqui',
       quem: 'Para quem está entrando em produto ou quer consolidar estratégia, discovery e execução.' },
     { nome: 'Product Discovery', area: 'gestao', h: 26, mod: 5, nivel: 'Intermediário', capa: 'product-discovery', aprende: ['Problemas e oportunidades','Desenho e teste de soluções','Discovery contínuo'], url: '#',
       quem: 'Para validar hipóteses e reduzir o risco de produto antes de construir.' },

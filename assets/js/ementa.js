@@ -19,7 +19,7 @@
   el.setAttribute('role', 'dialog');
   el.setAttribute('aria-modal', 'true');
   el.setAttribute('aria-labelledby', 'em-t');
-  el.setAttribute('data-nota', 'No site atual, o botão abre um formulário HubSpot com nome, e-mail*, WhatsApp* e área de interesse, e envia os campos ocultos pm3__segmento=B2C, UTMs e pm3_b2c_form_name_tracking ("ementa cpm" na página de Product Manager). Manter os mesmos campos e nomes para não quebrar a base de leads nem as automações. Aqui nada é enviado.');
+  el.setAttribute('data-nota', 'No site atual, o botão abre um formulário HubSpot com nome, e-mail*, WhatsApp* e área de interesse, e envia os campos ocultos pm3__segmento=B2C, UTMs e pm3_b2c_form_name_tracking ("ementa cpm" na página de Product Management). Manter os mesmos campos e nomes para não quebrar a base de leads nem as automações. Aqui nada é enviado.');
   el.innerHTML =
     '<div class="em-back" data-fechar></div>' +
     '<div class="em-box">' +

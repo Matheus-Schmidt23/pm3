@@ -6,7 +6,7 @@
   const PRONTAS = ['membership.html','home.html','formacao-product-manager.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html','comunidade.html'];
 
   const FORMACOES = [
-    ['Product Manager','formacao-product-manager.html','Gestão de produtos'],
+    ['Product Management','formacao-product-manager.html','Gestão de produtos'],
     ['Product Discovery','#','Gestão de produtos'],
     ['Product Leadership','#','Liderança'],
     ['Product Growth','#','Marketing'],
