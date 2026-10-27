@@ -510,3 +510,7 @@
 .ext-logo{height:30px;width:100%;max-width:none}
 .ext-prog{min-height:calc(2 * 1.35em)}
 .ext p{min-height:calc(3 * 1.45em);text-wrap:pretty}
+
+/* hero no estilo FIAP: retrato em perfil sobre vermelho (asset da Pós Tech FIAP) */
+.p-tex.p-photo{background:#e8003d url('../img/pos-hero-fiap.jpg') 55% 20%/cover}
+@media (max-width:860px){ .p-tex.p-photo{background-position:55% 15%} }
