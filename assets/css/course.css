@@ -489,3 +489,10 @@ a.step:hover{transform:translateY(-4px)}
 .em-cases-logos img,.em-cases-logos li:hover img{width:auto;max-width:72%;object-fit:contain}
 .em-cases-logos li:hover img{transform:scale(1.04)}
 .em-cases-lb{font-size:clamp(28px,3vw,42px);line-height:.98}
+/* IA: módulo no rodapé (discreto) e ícones com mais presença */
+.ia-mod{font-size:12.5px;line-height:1.35;color:rgba(255,255,255,.5)}
+.ia-top{margin-bottom:34px}
+.ia-ic{width:64px;height:64px;border-radius:19px;position:relative;background:linear-gradient(140deg,#a77bff,#7a4fe0 45%,#d054b4);box-shadow:0 0 0 6px rgba(167,123,255,.12),0 18px 34px -12px rgba(167,123,255,.85),inset 0 1px 0 rgba(255,255,255,.45)}
+.ia-ic svg{width:30px;height:30px;stroke-width:1.8}
+.ia-item:hover .ia-ic{box-shadow:0 0 0 8px rgba(255,177,42,.16),0 18px 34px -12px rgba(167,123,255,.9),inset 0 1px 0 rgba(255,255,255,.45)}
+.ia-n{font-size:13px;color:rgba(255,255,255,.38)}
