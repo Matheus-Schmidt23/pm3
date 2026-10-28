@@ -600,4 +600,4 @@
 .p-forte .facts b{color:#fff}
 .p-forte .facts div+div{border-left-color:rgba(255,80,130,.3)}
 @media (prefers-reduced-motion:reduce){ .p-forte .p-foto{animation:none} }
-@media (max-width:860px){ .p-forte .p-foto{background-position:82% 0;background-size:auto 62vw} }
+@media (max-width:860px){ .p-forte .p-foto{background-position:82% 0;background-size:auto 62vw} }.p-forte .p-main h1 .l2{color:#ffc4d6;text-shadow:none}
