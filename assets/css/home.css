@@ -406,3 +406,11 @@
 .aw-laurel{width:56px;height:46px}
 .aw-list b{font-size:18px}
 .aw-list span{font-size:13.5px}
+/* hero com as fotos reais dos instrutores (as mesmas do slider): sem espelhar, recorte no rosto, zoom suave */
+.h-pic{background:#1a1028}
+.h-pic .ph,.h-pic .ph:nth-child(n){background-position:50% 22%;transform:scale(1);transform-origin:50% 30%}
+.h-pic .ph.on{transform:scale(1.1)}
+.h-pic.sem-anim .ph.on{transform:scale(1)!important}
+.h-pic::after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
+.h-pic .tag,.h-pic .badge{z-index:2}
+@media (prefers-reduced-motion:reduce){ .h-pic .ph,.h-pic .ph.on{transform:none} }
