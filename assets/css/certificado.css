@@ -94,3 +94,16 @@
 @media (min-width:861px){
   .cx-hero::before{-webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 14%,#000 42%),linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 14%,#000 42%),linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
 }
+
+/* faixa do Panorama: deixa claro que a pesquisa é da PM3 (selo, número de respondentes e botão para baixar) */
+.pan-head{display:grid;grid-template-columns:1fr auto;gap:24px 56px;align-items:end}
+.pan-k{display:flex;align-items:center;gap:12px}
+.pan-badge{display:inline-flex;align-items:center;padding:6px 12px;border-radius:var(--r-pill);background:var(--yellow);color:#000;font-weight:800;letter-spacing:.1em}
+.pan-head h3{max-width:18ch}
+.pan-n{text-align:right;padding-left:32px;border-left:1px solid rgba(255,255,255,.16)}
+.pan-n b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(44px,5vw,72px);letter-spacing:-.04em;line-height:1;color:#fff}
+.pan-n span{display:block;max-width:18ch;margin-left:auto;margin-top:8px;font-size:14px;line-height:1.4;color:rgba(255,255,255,.7)}
+.pan-foot{display:flex;align-items:center;justify-content:space-between;gap:16px 32px;flex-wrap:wrap;margin-top:28px}
+.pan-foot .cx-src{margin:0;max-width:60ch}
+.pan-foot .btn svg{width:16px;height:16px}
+@media (max-width:860px){ .pan-head{grid-template-columns:1fr} .pan-n{text-align:left;padding-left:0;border-left:0} .pan-n span{margin-left:0} }.pan-head h3{max-width:none}
