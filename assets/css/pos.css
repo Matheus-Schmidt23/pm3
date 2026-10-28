@@ -601,3 +601,13 @@
 .p-forte .facts div+div{border-left-color:rgba(255,80,130,.3)}
 @media (prefers-reduced-motion:reduce){ .p-forte .p-foto{animation:none} }
 @media (max-width:860px){ .p-forte .p-foto{background-position:82% 0;background-size:auto 62vw} }.p-forte .p-main h1 .l2{color:#ffc4d6;text-shadow:none}
+
+/* hero com fundo tecnológico neon (mesmo estilo das capas das pós), sem retrato */
+.p-neon .p-foto{background-image:url('../img/pos-hero-neon.jpg');background-position:right center;filter:none}
+.p-uno.p-neon::before{background:linear-gradient(90deg,rgba(4,1,6,.92) 0%,rgba(4,1,6,.6) 38%,rgba(4,1,6,0) 60%),linear-gradient(0deg,rgba(4,1,6,.75) 0%,rgba(4,1,6,0) 35%)}
+.p-neon .p-main h1 .l2{color:#ff4f8b}
+@media (max-width:860px){ .p-neon .p-foto{background-size:cover;background-position:70% center} }
+@media (min-width:861px){
+  .p-neon .p-foto{background-size:auto 100%;background-position:calc(100% + 320px) center;animation:none}
+  .p-uno.p-neon::before{background:linear-gradient(90deg,#040106 0%,#040106 34%,rgba(4,1,6,.78) 46%,rgba(4,1,6,.15) 62%,rgba(4,1,6,0) 74%),linear-gradient(0deg,rgba(4,1,6,.8) 0%,rgba(4,1,6,0) 34%)}
+}
