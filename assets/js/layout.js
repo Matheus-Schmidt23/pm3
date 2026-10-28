@@ -161,7 +161,7 @@
     hero.style.removeProperty('--s');
     hero.style.removeProperty('--livre');
     if (innerWidth < 1081) return;
-    const livre = innerHeight - (hero.getBoundingClientRect().top + scrollY);
+    const livre = Math.floor(innerHeight - (hero.getBoundingClientRect().top + scrollY)) - 4;
     /* o hero em cards (Home) ocupa exatamente a primeira dobra */
     hero.style.setProperty('--livre', livre + 'px');
     if (hero.offsetHeight <= livre + 1) return;
