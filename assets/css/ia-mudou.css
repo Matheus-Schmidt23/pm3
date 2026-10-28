@@ -43,3 +43,21 @@
   .shift .lb{grid-column:1/3;padding:18px 0 6px;border-bottom:0}
   .sh-hd .lb{display:none}
 }
+
+/* faixa em fundo escuro azul-violeta (mesma família do palco da home e do hero da Pós Tech) */
+.ia-azul{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:radial-gradient(60% 80% at 90% 10%,rgba(77,43,159,.75),transparent 65%),radial-gradient(55% 70% at 0% 100%,rgba(58,64,190,.5),transparent 70%),linear-gradient(160deg,#07061a 0%,#100c33 50%,#1b1450 100%)}
+.ia-azul .h2{color:#fff}
+.ia-azul .h2 .c2{color:#a98bff}
+.ia-azul .lead{color:rgba(255,255,255,.72)}
+.ia-azul .shift{border-top-color:rgba(255,255,255,.12)}
+.ia-azul .sh-row > div{border-bottom-color:rgba(255,255,255,.1)}
+.ia-azul .shift .lb{color:rgba(255,255,255,.55)}
+.ia-azul .shift .old,.ia-azul .sh-hd .old{color:rgba(255,255,255,.6)}
+.ia-azul .shift .old span{background-image:linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5))}
+.ia-azul .shift .new{background:rgba(122,79,224,.35);border-bottom-color:rgba(255,255,255,.08)}
+.ia-azul .sh-ar::before{border-top-color:rgba(255,255,255,.25)}
+.ia-azul .sh-ar span{background:#4d2b9f}
+.ia-azul .shift-cta .or{color:rgba(255,255,255,.6)}
+.ia-azul .shift-cta .or a{color:#fff}
+@media (hover:hover){ .ia-azul .sh-row:not(.sh-hd):hover .lb{color:#fff} }
+.ia-azul .sh-ar span{box-shadow:0 0 0 6px rgba(77,43,159,.25)}
