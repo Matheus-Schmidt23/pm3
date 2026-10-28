@@ -553,3 +553,15 @@
 .faq-dark .faq details p{color:rgba(255,255,255,.72)}
 /* hero: coluna de texto acompanha o tamanho do título em telas largas (as linhas não quebram) */
 @media (min-width:1081px){ .p-uno .p-main{max-width:min(1040px,64%)} .p-uno .p-main h1{font-size:clamp(46px,5.2vw,92px);white-space:nowrap} .p-uno .p-main h1 .em{white-space:normal} }
+
+/* teste: hero com a animação de água da FIAP no lugar da foto */
+.p-uno.p-agua{background:#02070b}
+.p-agua .agua{position:absolute;inset:0;width:100%;height:100%;z-index:-1;display:block}
+.p-uno.p-agua::before{background:linear-gradient(90deg,rgba(2,7,11,.92) 0%,rgba(2,7,11,.75) 34%,rgba(2,7,11,.15) 62%,rgba(2,7,11,0) 80%),linear-gradient(0deg,rgba(2,7,11,.8) 0%,rgba(2,7,11,0) 36%)}
+.p-agua .p-main h1 .l2{color:#8fd3ff}
+@media (max-width:860px){ .p-uno.p-agua{background:#02070b} .p-uno.p-agua::before{background:linear-gradient(180deg,rgba(2,7,11,.2),rgba(2,7,11,.9) 60%)} .p-agua .p-main{padding-top:56vw} }
+.p-agua video.agua{object-fit:cover;object-position:62% 50%}
+@media (prefers-reduced-motion:reduce){ .p-agua video.agua{display:none} .p-uno.p-agua{background:#02070b url('../pos/agua-poster.jpg') 62% 50%/cover} }
+/* hovers dos botões de contorno nos cartões escuros: texto escuro sobre o fundo branco */
+.pos-dark .pinv > div .btn-line:hover,.cx-sec .pinv > div .btn-line:hover{background:#fff;color:#0b0713;border-color:#fff}
+.p-agua .p-main h1 .l2{color:#c9b6ff}
