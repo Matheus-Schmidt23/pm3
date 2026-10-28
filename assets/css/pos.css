@@ -617,3 +617,7 @@
 .p-fluxo .p-main h1 .l2{color:#8fb5ff}
 .p-fluxo .p-main h1 .em{color:#dfe8ff}
 .p-fluxo .facts div+div{border-left-color:rgba(143,181,255,.3)}
+
+/* fluxo refeito no Magnific em alta resolução (fibras de dados azuis) */
+.p-fluxo .p-foto{background-image:url('../img/pos-hero-fibra.jpg');background-position:right center;filter:none}
+.p-fluxo .p-main h1 .l2{color:#7fb4ff}
