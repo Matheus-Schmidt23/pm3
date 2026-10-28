@@ -565,3 +565,16 @@
 /* hovers dos botões de contorno nos cartões escuros: texto escuro sobre o fundo branco */
 .pos-dark .pinv > div .btn-line:hover,.cx-sec .pinv > div .btn-line:hover{background:#fff;color:#0b0713;border-color:#fff}
 .p-agua .p-main h1 .l2{color:#c9b6ff}
+
+/* selo FIAP + PM3 no canto direito do hero */
+.p-selo{position:absolute;z-index:2;right:clamp(24px,3.5vw,56px);bottom:clamp(24px,3.5vw,56px);display:flex;align-items:center;gap:16px;padding:14px 22px;border-radius:var(--r-pill);background:rgba(2,7,11,.55);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px)}
+.p-selo img{display:block;height:24px;width:auto;filter:brightness(0) invert(1)}
+.p-selo span{font-family:var(--display);font-weight:300;font-size:22px;color:rgba(255,255,255,.6);line-height:1}
+@media (max-width:860px){ .p-selo{top:20px;bottom:auto;right:20px;padding:10px 16px;gap:12px} .p-selo img{height:18px} }
+/* selo FIAP + PM3 atrás da água: o vídeo (fundo preto) entra em modo screen, então o logo aparece só onde não há água */
+.p-agua .agua{z-index:-1;mix-blend-mode:screen}
+.p-agua .p-selo{z-index:-2;right:auto;left:58%;top:50%;bottom:auto;transform:translate(-50%,-50%);padding:0;gap:clamp(18px,2vw,32px);background:none;border:0;backdrop-filter:none;opacity:.9}
+.p-agua .p-selo img{height:clamp(40px,4.6vw,72px)}
+.p-agua .p-selo span{font-size:clamp(32px,3.6vw,56px);color:rgba(255,255,255,.45)}
+@media (max-width:860px){ .p-agua .p-selo{left:50%;top:26vw} .p-agua .p-selo img{height:32px} .p-agua .p-selo span{font-size:26px} }
+@media (min-width:861px){ .p-agua .p-selo{left:77%;top:56%} .p-agua .p-selo img{height:clamp(32px,3.4vw,54px)} .p-agua .p-selo span{font-size:clamp(26px,2.6vw,42px)} }
