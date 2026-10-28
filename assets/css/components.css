@@ -68,3 +68,10 @@ body .cat-dark :is(.chip[aria-pressed="true"],.fx-chips button.on) small{backgro
 /* catálogo escuro: sem a linha branca que aparecia em volta da foto nos cantos arredondados */
 .cat-dark .f-card{border:0;background-clip:padding-box;box-shadow:0 18px 40px -28px rgba(0,0,0,.8)}
 .cat-dark .f-card .f-vis{margin:-1px -1px 0;border-radius:var(--r-card) var(--r-card) 0 0}
+
+/* faixa de números em fundo preto com os valores em roxo claro (home, Membership, Comunidade) */
+.stats{background:#000;border-bottom-color:rgba(255,255,255,.08);padding:clamp(16px,2vw,28px) 0}
+.stats .stat{border-left-color:rgba(255,255,255,.08);padding-top:44px;padding-bottom:44px}
+.stats .stat .n{color:#a98bff}
+.stats .stat p{color:rgba(255,255,255,.62)}
+.stats .cross{display:none}
