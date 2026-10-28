@@ -21,7 +21,7 @@
   };
   /* ---------- /formacoes/ ---------- */
   if (PAGE === 'formacoes'){
-    const ordem = ['gestao','ia','dados','marketing','design','lideranca'];
+    const ordem = ['ia','gestao','dados','marketing','design','lideranca'];
     /* catálogo: um card de venda por formação, filtrável por área */
     const nomeA = a => AREAS[a].curto;
     const lista = ordem.flatMap(a => FORMACOES.filter(f => f.area === a));
