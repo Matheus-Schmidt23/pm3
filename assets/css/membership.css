@@ -1,7 +1,7 @@
 /* PM3 · Membership */
 
 /* ---------- hero ---------- */
-.m-photo{background:url('../img/membership-giovanna.jpg') 22% 35%/cover}
+.m-photo{background:url('../img/foto-sofa-loira.jpg') 55% 30%/cover}
 /* ---------- manifesto que se preenche ao rolar ---------- */
 .m-manifesto{padding:clamp(96px,14vw,180px) 0;position:relative;overflow:hidden;isolation:isolate}
 /* textura lilás bem suave à direita, sumindo em direção ao texto */
