@@ -525,3 +525,8 @@ a.step:hover{transform:translateY(-4px)}
 .em-cases-lb{font-family:var(--body);font-weight:400;text-transform:none;font-size:15px;line-height:1.45;letter-spacing:0;color:#4a4458;max-width:24ch}
 .em-cases-lb h3{margin:0 0 10px;font-family:var(--display);font-weight:800;font-size:clamp(28px,2.8vw,40px);line-height:1;letter-spacing:-.02em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
 .em-cases-lb p{margin:0}
+
+/* ---------- planos em fundo lilás (sprint: a ementa branca vem logo antes, sem seção escura no meio) ---------- */
+.section.inv-tint{background:radial-gradient(60% 80% at 100% 0%,rgba(176,77,221,.32),transparent 60%),radial-gradient(55% 75% at 0% 100%,rgba(102,69,177,.26),transparent 65%),linear-gradient(180deg,#ebe2fb,#dccff6)}
+.section.inv-tint .pl3-f{border-color:transparent;box-shadow:0 24px 50px -30px rgba(60,30,120,.45)}
+.section.inv-tint .pay{color:#4a4458}
