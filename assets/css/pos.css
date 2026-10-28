@@ -587,3 +587,17 @@
   linear-gradient(135deg,#050208 0%,#14082a 45%,#2a1356 75%,#3b1a78 100%)}
 .p-uno.p-agua::before{background:linear-gradient(90deg,rgba(5,2,8,.7) 0%,rgba(5,2,8,.35) 40%,rgba(5,2,8,0) 65%),linear-gradient(0deg,rgba(5,2,8,.55) 0%,rgba(5,2,8,0) 30%)}
 .p-uno.p-agua{box-shadow:0 0 0 1px rgba(176,77,221,.25),0 40px 90px -50px rgba(122,79,224,.8)}
+
+/* hero com o retrato vermelho da campanha FIAP, mais impactante: foto em camada própria com zoom lento,
+   brilho magenta atrás do rosto, contraste maior e título maior */
+.p-uno.p-forte{background:#07020a}
+.p-forte .p-foto{position:absolute;inset:0;z-index:-1;background:url('../img/pos-hero-fiap-wide.jpg?v=2') 78% 30%/cover no-repeat;filter:saturate(1.18) contrast(1.08);transform-origin:80% 35%;animation:p-kb 16s ease-in-out infinite alternate}
+@keyframes p-kb{from{transform:scale(1)}to{transform:scale(1.07) translate(-1%,-1%)}}
+.p-uno.p-forte::before{z-index:0;background:radial-gradient(38% 55% at 76% 42%,rgba(255,40,110,.28),transparent 70%),linear-gradient(90deg,rgba(6,2,4,.97) 0%,rgba(6,2,4,.9) 32%,rgba(6,2,4,.45) 50%,rgba(6,2,4,0) 66%),linear-gradient(0deg,rgba(6,2,4,.9) 0%,rgba(6,2,4,0) 40%)}
+.p-forte .p-main h1{font-size:clamp(50px,6vw,104px);letter-spacing:-.045em}
+.p-forte .p-main h1 .l2{color:#ff2d6f;text-shadow:0 0 40px rgba(255,45,111,.45)}
+.p-forte .p-main h1 .em{color:#ffd5e2}
+.p-forte .facts b{color:#fff}
+.p-forte .facts div+div{border-left-color:rgba(255,80,130,.3)}
+@media (prefers-reduced-motion:reduce){ .p-forte .p-foto{animation:none} }
+@media (max-width:860px){ .p-forte .p-foto{background-position:82% 0;background-size:auto 62vw} }
