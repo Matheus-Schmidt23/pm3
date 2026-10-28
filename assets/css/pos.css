@@ -611,3 +611,10 @@
   .p-neon .p-foto{background-size:auto 100%;background-position:calc(100% + 320px) center;animation:none}
   .p-uno.p-neon::before{background:linear-gradient(90deg,#040106 0%,#040106 34%,rgba(4,1,6,.78) 46%,rgba(4,1,6,.15) 62%,rgba(4,1,6,0) 74%),linear-gradient(0deg,rgba(4,1,6,.8) 0%,rgba(4,1,6,0) 34%)}
 }
+
+/* hero com imagem real do site da Pós Tech FIAP (fluxo azul) */
+.p-fluxo .p-foto{background:#000 url('../img/pos-hero-fiap-fluxo.jpg') right top/cover no-repeat;filter:saturate(1.1);animation:p-kb 18s ease-in-out infinite alternate}
+.p-uno.p-fluxo::before{background:linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.4) 40%,rgba(0,0,0,0) 62%),linear-gradient(0deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 34%)}
+.p-fluxo .p-main h1 .l2{color:#8fb5ff}
+.p-fluxo .p-main h1 .em{color:#dfe8ff}
+.p-fluxo .facts div+div{border-left-color:rgba(143,181,255,.3)}
