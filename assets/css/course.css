@@ -10,7 +10,7 @@
 /* fundo derivado da capa do curso: a foto desfocada e tingida de roxo da marca, só textura e cor.
    (desfoque de propósito: o texto e o card de preço ficam por cima e nenhum rosto pode ser coberto).
    A imagem vem no style do elemento (url() em variável CSS resolveria a partir da pasta do css). */
-.c-hero .cover-bg{position:absolute;inset:-8%;z-index:-3;background-position:center 35%;background-size:cover;background-repeat:no-repeat;filter:blur(11px) saturate(1.35) contrast(1.08) brightness(.95);transform:scale(1.05)}
+.c-hero .cover-bg{position:absolute;inset:-8%;z-index:-3;background-position:center 35%;background-size:cover;background-repeat:no-repeat;filter:blur(6px) saturate(1.35) contrast(1.08) brightness(.95);transform:scale(1.05)}
 .c-hero.has-cover::before{z-index:-2;background:
   linear-gradient(90deg,rgba(48,30,92,.9) 0%,rgba(69,46,120,.68) 50%,rgba(69,46,120,.4) 100%),
   radial-gradient(70% 90% at 100% 0%,rgba(176,77,221,.4),transparent 62%),

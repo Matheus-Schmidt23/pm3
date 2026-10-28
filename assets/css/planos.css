@@ -30,3 +30,4 @@
 .pl3-note{margin:-8px 0 0;font-size:13px;color:var(--gray-fog)}
 @media (max-width:1080px){ .pl3{grid-template-columns:1fr 1fr} .pl3-p{grid-column:1 / -1} }
 @media (max-width:700px){ .pl3{grid-template-columns:1fr} .pl3-m{order:-1} .pl3-p{grid-column:auto} }
+.pl3-v b.tbd{font-size:clamp(30px,3vw,42px);color:var(--muted);letter-spacing:-.03em;white-space:normal}
