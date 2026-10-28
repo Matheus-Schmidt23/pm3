@@ -578,3 +578,12 @@
 .p-agua .p-selo span{font-size:clamp(32px,3.6vw,56px);color:rgba(255,255,255,.45)}
 @media (max-width:860px){ .p-agua .p-selo{left:50%;top:26vw} .p-agua .p-selo img{height:32px} .p-agua .p-selo span{font-size:26px} }
 @media (min-width:861px){ .p-agua .p-selo{left:77%;top:56%} .p-agua .p-selo img{height:clamp(32px,3.4vw,54px)} .p-agua .p-selo span{font-size:clamp(26px,2.6vw,42px)} }
+/* hero: gradiente roxo e preto com grade fina (tecnológico), visível por trás da água graças ao modo screen do vídeo */
+.p-uno.p-agua{background:
+  linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/56px 56px,
+  linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/56px 56px,
+  radial-gradient(70% 90% at 82% 30%,rgba(122,79,224,.55),transparent 60%),
+  radial-gradient(60% 80% at 10% 100%,rgba(77,43,159,.6),transparent 65%),
+  linear-gradient(135deg,#050208 0%,#14082a 45%,#2a1356 75%,#3b1a78 100%)}
+.p-uno.p-agua::before{background:linear-gradient(90deg,rgba(5,2,8,.7) 0%,rgba(5,2,8,.35) 40%,rgba(5,2,8,0) 65%),linear-gradient(0deg,rgba(5,2,8,.55) 0%,rgba(5,2,8,0) 30%)}
+.p-uno.p-agua{box-shadow:0 0 0 1px rgba(176,77,221,.25),0 40px 90px -50px rgba(122,79,224,.8)}
