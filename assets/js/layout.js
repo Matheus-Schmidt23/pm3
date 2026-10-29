@@ -3,10 +3,10 @@
 (function(){
   const PAGE = document.body.dataset.page || '';
   /* páginas já desenhadas no protótipo; as outras mostram um aviso */
-  const PRONTAS = ['membership.html','home.html','formacao-product-manager.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html','comunidade.html'];
+  const PRONTAS = ['membership.html','home.html','formacao-product-manager.html','pos-digital-product-management.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html','comunidade.html'];
 
   const FORMACOES = [
-    ['Product Management','formacao-product-manager.html','Gestão de produtos'],
+    ['Product Management','formacao-product-manager.html','pos-digital-product-management.html','Gestão de produtos'],
     ['Product Discovery','#','Gestão de produtos'],
     ['Product Leadership','#','Liderança'],
     ['Product Growth','#','Marketing'],
@@ -24,6 +24,12 @@
     ['Marketing','sprints.html#marketing',5],
     ['Negócios','sprints.html#negocios',3],
     ['Liderança e habilidades humanas','sprints.html#lideranca',19]
+  ];
+
+  const POSTECH = [
+    ['Digital Product Management','pos-digital-product-management.html','Produto'],
+    ['IA para Negócios','pos-tech.html#pos-ia','IA'],
+    ['Tech Management','pos-tech.html#pos-tech','Tecnologia']
   ];
 
   const chev = '<svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1.5 3.5 5 7l3.5-3.5"/></svg>';
@@ -53,7 +59,11 @@
             SPRINTS.map(([n,h,q])=>`<li><a href="${h}">${n}<small>${q} cursos</small></a></li>`).join(''),
             '<a href="sprints.html">Ver todos os sprints →</a>')}
         </li>
-        <li><a href="pos-tech.html"${cur('pos-tech')}>Pós Tech</a></li>
+        <li><button type="button" aria-expanded="false" aria-controls="mega-postech">Pós Tech ${chev}</button>
+          ${mega('mega-postech','Pós Tech','Pós-graduações 100% digitais criadas pela PM3 com a FIAP: 10 meses, 360 horas e certificado reconhecido pelo MEC.',
+            POSTECH.map(([n,h,a])=>`<li><a href="${h}">${n}<small>${a}</small></a></li>`).join(''),
+            '<a href="pos-tech.html">Conhecer a Pós Tech →</a>')}
+        </li>
         <li><a href="para-empresas.html"${cur('para-empresas')}>Para empresas</a></li>
         <li><a href="comunidade.html"${cur('comunidade')}>Comunidade</a></li>
         <li><a href="blog.html"${cur('blog')}>Blog</a></li>
@@ -81,7 +91,7 @@
         <div><h4>PM3</h4><ul><li><a href="#">Biblioteca</a></li><li><a href="blog.html">Blog</a></li><li><a href="comunidade.html">Comunidade</a></li><li><a href="#">Contato</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Glossário de produto</a></li><li><a href="#">Instrutores</a></li><li><a href="#">Panorama 2026-2027</a></li><li><a href="para-empresas.html">Para empresas</a></li><li><a href="#">Trabalhe conosco</a></li></ul></div>
         <div><h4>Formações</h4><ul>${FORMACOES.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}</ul></div>
         <div><h4>Sprints</h4><ul>${SPRINTS.map(([n,h])=>`<li><a href="${h}">${n.replace(" e habilidades humanas","")}</a></li>`).join('')}<li><a href="sprints.html#ia">Inteligência Artificial</a></li></ul></div>
-        <div><h4>Pós Tech</h4><ul><li><a href="pos-tech.html#pos">Digital Product Management</a></li><li><a href="pos-tech.html#pos">Tech Management</a></li><li><a href="pos-tech.html#pos">IA para Negócios</a></li><li><a href="pos-tech.html">Conhecer a Pós Tech</a></li><li><a href="https://alun.com.br/" target="_blank" rel="noopener">Grupo Alun</a></li><li><a href="https://www.fiap.com.br/" target="_blank" rel="noopener">FIAP</a></li></ul></div>
+        <div><h4>Pós Tech</h4><ul><li><a href="pos-digital-product-management.html">Digital Product Management</a></li><li><a href="pos-tech.html#pos-tech">Tech Management</a></li><li><a href="pos-tech.html#pos-ia">IA para Negócios</a></li><li><a href="pos-tech.html">Conhecer a Pós Tech</a></li><li><a href="https://alun.com.br/" target="_blank" rel="noopener">Grupo Alun</a></li><li><a href="https://www.fiap.com.br/" target="_blank" rel="noopener">FIAP</a></li></ul></div>
       </div>
     </div>
     <div class="wrap"><div class="foot-bottom"><span>© 2027 PM3. Todos os direitos reservados.</span><nav><a href="#">Política de privacidade</a><a href="#">Termos de uso</a><a href="#" data-consent-open>Preferências de cookies</a></nav></div></div>

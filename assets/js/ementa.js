@@ -11,6 +11,8 @@
   const tracking = cfg.tracking || 'ementa';
   const stats = cfg.stats || '';
   const capa = cfg.capa || '';
+  const rotulo = cfg.rotulo || 'Ementa em PDF', titulo = cfg.titulo || 'Quer ver mais? Baixe a ementa completa', chamada = cfg.chamada || 'Preencha os dados e receba a ementa do curso.', botao = cfg.botao || 'Baixar ementa', pronto = cfg.pronto || 'Tudo certo! Sua ementa está pronta';
+  const topicos = cfg.topicos || ['Todos os módulos e tópicos', 'Carga horária e conteúdo de cada módulo', 'Professores e cases de cada módulo'];
   const ICON_OK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>';
 
   const el = document.createElement('div');
@@ -18,7 +20,7 @@
   el.id = 'em-modal';
   el.setAttribute('role', 'dialog');
   el.setAttribute('aria-modal', 'true');
-  el.setAttribute('aria-labelledby', 'em-t');
+  el.setAttribute('aria-labelledby', 'em-modal-t');
   el.setAttribute('data-nota', 'No site atual, o botão abre um formulário HubSpot com nome, e-mail*, WhatsApp* e área de interesse, e envia os campos ocultos pm3__segmento=B2C, UTMs e pm3_b2c_form_name_tracking ("ementa cpm" na página de Product Management). Manter os mesmos campos e nomes para não quebrar a base de leads nem as automações. Aqui nada é enviado.');
   el.innerHTML =
     '<div class="em-back" data-fechar></div>' +
@@ -26,25 +28,25 @@
       '<button type="button" class="em-x" data-fechar aria-label="Fechar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m3 3 10 10M13 3 3 13"/></svg></button>' +
       '<div class="em-side">' +
         (capa ? '<div class="em-cover" style="background-image:url(\'' + capa + '\')" role="img" aria-label="Capa de ' + curso + '"></div>' : '') +
-        '<div class="in"><span class="tag">Ementa em PDF</span><h3>' + curso + '</h3>' +
-        '<ul><li>' + ICON_OK + 'Todos os módulos e tópicos</li><li>' + ICON_OK + 'Carga horária e conteúdo de cada módulo</li><li>' + ICON_OK + 'Professores e cases de cada módulo</li></ul></div>' +
+        '<div class="in"><span class="tag">' + rotulo + '</span><h3>' + curso + '</h3>' +
+        '<ul>' + topicos.map(t => '<li>' + ICON_OK + t + '</li>').join('') + '</ul></div>' +
       '</div>' +
       '<div class="em-main">' +
         '<div class="em-form-wrap">' +
-          '<h2 id="em-t">Quer ver mais? Baixe a ementa completa</h2>' +
-          '<p class="sub">Preencha os dados e receba a ementa do curso.' + (stats ? ' ' + stats : '') + '</p>' +
+          '<h2 id="em-modal-t">' + titulo + '</h2>' +
+          '<p class="sub">' + chamada + (stats ? ' ' + stats : '') + '</p>' +
           '<form class="em-form" novalidate>' +
             '<div class="em-field"><label for="em-nome">Nome</label><input id="em-nome" name="firstname" type="text" autocomplete="given-name"></div>' +
             '<div class="em-field"><label for="em-email">Seu melhor e-mail<i>*</i></label><input id="em-email" name="email" type="email" autocomplete="email" inputmode="email" required><span class="msg">Informe um e-mail válido.</span></div>' +
             '<div class="em-field"><label for="em-zap">Número de WhatsApp<i>*</i></label><input id="em-zap" name="hs_whatsapp_phone_number" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999" required><span class="msg">Informe um número com DDD.</span></div>' +
             '<div class="em-field"><label for="em-area">Em qual área você quer aprofundar seus conhecimentos?</label><select id="em-area" name="pm3_b2c_area_de_interesse"><option value="">Selecione</option>' + AREAS.map(a => '<option>' + a + '</option>').join('') + '</select></div>' +
-            '<button class="btn btn-primary btn-em" type="submit"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg>Baixar ementa</button>' +
+            '<button class="btn btn-primary btn-em" type="submit"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg>' + botao + '</button>' +
             '<p class="em-legal">Ao baixar, você aceita receber contato da PM3 sobre este curso. Veja a <a href="#">Política de Privacidade</a>.</p>' +
           '</form>' +
         '</div>' +
         '<div class="em-ok" aria-live="polite">' +
           '<span class="tick">' + ICON_OK + '</span>' +
-          '<h2>Tudo certo! Sua ementa está pronta</h2>' +
+          '<h2>' + pronto + '</h2>' +
           '<p class="sub">Enviamos uma cópia para o seu e-mail. Se preferir, baixe agora.</p>' +
           '<a class="btn btn-primary btn-em" href="#baixar-pdf" data-baixar><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg>Baixar o PDF</a>' +
           '<p class="alt">Ficou com dúvida sobre o curso? <a href="#investimento" data-fechar>Veja como se inscrever</a>.</p>' +
