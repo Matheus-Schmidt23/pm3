@@ -245,3 +245,8 @@ body.pos-page{background:#000}
 .pcert .pc-final .pc-m{color:rgba(255,255,255,.8)}
 @media (max-width:1080px){ .pcert{grid-template-columns:repeat(3,minmax(0,1fr))} .pcert::before{display:none} .pcert li{min-height:0} .pcert .pc-final{grid-column:1/-1;flex-direction:row;align-items:center;flex-wrap:wrap;gap:6px 18px} .pcert .pc-final .pc-k{margin-top:0} .pcert .pc-final .pc-m{margin-top:0;margin-left:auto} }
 @media (max-width:640px){ .pcert{grid-template-columns:1fr 1fr} }
+/* card do e-book: respiro entre o texto e o botão (a regra geral só vale dentro de #ementa; aqui a seção é #conteudo) */
+.pos-page .em-dl{padding:24px 24px 26px}
+.pos-page .em-dl .row{margin-bottom:22px;align-items:flex-start}
+.pos-page .em-dl .meta{line-height:1.45;max-width:30ch}
+.pos-page .em-dl .pdf.book{margin-top:2px}
