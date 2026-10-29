@@ -13,15 +13,16 @@
 <link rel="icon" type="image/svg+xml" href="assets/logo/pm3-simbolo-roxo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;500;600;700;800&family=Rubik:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;500;600;700;800&family=Newsreader:opsz,wght@6..72,300&family=Space+Mono:wght@400&family=Rubik:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=30">
 <link rel="stylesheet" href="assets/css/components.css?v=9">
-<link rel="stylesheet" href="assets/css/course.css?v=22">
+<link rel="stylesheet" href="assets/css/course.css?v=23">
 <link rel="stylesheet" href="assets/css/ementa.css?v=2">
-<link rel="stylesheet" href="assets/css/planos.css?v=2">
+<link rel="stylesheet" href="assets/css/certificado.css?v=12">
 <link rel="stylesheet" href="assets/css/pos.css?v=69">
-<link rel="stylesheet" href="assets/css/pos-curso.css?v=5">
+<link rel="stylesheet" href="assets/css/alun.css?v=2">
+<link rel="stylesheet" href="assets/css/pos-curso.css?v=7">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -42,83 +43,84 @@
 ]}
 </script>
 </head>
-<body data-page="pos-tech">
+<body data-page="pos-tech" class="pos-page">
 <!--
-  PÁGINA DE UMA PÓS TECH (exemplo: Digital Product Management). Modelo de curso da PM3 (course.css) com a identidade da FIAP (pos-curso.css: preto e rosa #ED145B).
+  PÁGINA DE UMA PÓS TECH (exemplo: Digital Product Management), no padrão escuro da pos-tech.html (pos.css) com a identidade da FIAP (pos-curso.css: preto e rosa #ED145B).
   Todo o conteúdo vem da página oficial https://postech.fiap.com.br/curso/digital-product-management. Nada foi inventado: textos, fases, disciplinas, valores e perguntas seguem a FIAP.
+  A matrícula e o pagamento acontecem no site da FIAP, que gerencia as vendas: todo botão de inscrição leva para lá.
   Para criar IA para Negócios e Tech Management, copie este arquivo e troque o conteúdo (capa, fases, coordenação, valores).
 -->
 
 <main>
 
 <!-- 1 · HERO -->
-<section class="c-hero pos-c has-cover grain on-dark" id="topo-curso" aria-labelledby="h1">
-  <div class="cover-bg" aria-hidden="true" style="background-image:url('assets/capas/pos-fiap/digital-product-management.webp')"></div>
-  <div class="wrap">
-    <ol class="crumbs" aria-label="Você está em" data-nota="Breadcrumb visível e marcado com dados estruturados. URL proposta: /pos-tech/digital-product-management/."><li><a href="home.html">Home</a></li><li><a href="pos-tech.html">Pós Tech</a></li><li aria-current="page">Digital Product Management</li></ol>
-    <div class="c-hero-grid">
-      <div>
-        <div class="pos-lock" aria-label="Pós Tech, PM3">Pós Tech <i aria-hidden="true"></i><img src="assets/logo/pm3-logo-branco.svg" alt="PM3"></div>
-        <div class="c-tags"><span class="tag tag-dark">Pós-graduação</span><span class="tag tag-fiap">FIAP + Alura + PM3</span><span class="tag tag-dark">100% digital e hands-on</span></div>
-        <h1 class="display" id="h1">Digital Product<br>Management<span class="em">Uma pós-graduação do ecossistema FIAP + Alura + PM3</span></h1>
-        <p class="lead">Desenvolva estratégias para gerenciar todas as fases do ciclo de vida de um produto digital, desde a concepção até o go-to-market, explorando todo o potencial da tecnologia.</p>
-        <div class="hero-ctas"><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="hero"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar o e-book do curso</a><span class="hint">Saiba mais detalhes sobre a pós</span></div>
-        <div class="facts">
-          <div><b>360h</b><span>de conteúdo</span></div>
-          <div><b>10</b><span>meses</span></div>
-          <div><b>5</b><span>fases</span></div>
-          <div><b>100%</b><span>digital</span></div>
-        </div>
+<section class="pc-hero on-dark" aria-labelledby="h1">
+  <div class="pc-card grain">
+    <div class="cover" aria-hidden="true" style="background-image:url('assets/capas/pos-fiap/digital-product-management.webp')"></div>
+    <div>
+      <ol class="crumbs" aria-label="Você está em" data-nota="Breadcrumb visível e marcado com dados estruturados. URL proposta: /pos-tech/digital-product-management/."><li><a href="home.html">Home</a></li><li><a href="pos-tech.html">Pós Tech</a></li><li aria-current="page">Digital Product Management</li></ol>
+      <div class="pc-lock" aria-label="Pós Tech, PM3">Pós Tech <i aria-hidden="true"></i><img src="assets/logo/pm3-logo-branco.svg" alt="PM3"></div>
+      <div class="c-tags"><span class="tag tag-dark">Pós-graduação</span><span class="tag tag-fiap">FIAP + Alura + PM3</span><span class="tag tag-dark">100% digital e hands-on</span></div>
+      <h1 class="display" id="h1">Digital<br>Product<br><span class="l2">Management</span><span class="em">Uma pós-graduação do ecossistema FIAP + Alura + PM3</span></h1>
+      <p class="lead">Desenvolva estratégias para gerenciar todas as fases do ciclo de vida de um produto digital, desde a concepção até o go-to-market, explorando todo o potencial da tecnologia.</p>
+      <div class="hero-ctas"><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="hero"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar o e-book do curso</a><span class="hint">Saiba mais detalhes sobre a pós</span></div>
+      <div class="facts">
+        <div><b>360h</b><span>de conteúdo</span></div>
+        <div><b>10</b><span>meses</span></div>
+        <div><b>5</b><span>fases</span></div>
+        <div><b>100%</b><span>digital</span></div>
       </div>
-      <aside class="buy" id="comprar" aria-label="Valores da pós-graduação" data-nota="Valores e datas da página oficial da FIAP (turmas de março de 2027). A matrícula acontece no site da FIAP, por processo seletivo 100% digital; o botão leva à página oficial, onde hoje está o 'Avise-me'.">
-        <p class="kicker pos-k">Turmas de março de 2027</p>
-        <div class="val"><span class="x">18x</span><b><sup>R$</sup>735,00</b></div>
-        <p class="sub">Processo seletivo 100% digital</p>
-        <a class="btn btn-primary" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Avise-me <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-        <ul>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Certificado de pós-graduação emitido pela FIAP</li>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>5 micro-certificações, uma a cada fase</li>
-          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Acesso completo à PM3 Sprints</li>
-        </ul>
-        <a class="upsell alunos" href="#investimento">
-          <span class="sym"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2 8 3l6 3.2-6 3.2z"/><path d="M4.5 8v2.8c0 .8 1.6 1.7 3.5 1.7s3.5-.9 3.5-1.7V8"/></svg></span>
-          <span><b>Aluno ou ex-aluno FIAP, Alura ou PM3?</b><span>Condição exclusiva: 18x R$ 580,00</span></span>
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
-        </a>
-      </aside>
     </div>
+    <aside class="pc-buy" id="comprar" aria-label="Valores e matrícula" data-nota="Valores e datas da página oficial da FIAP (turmas de março de 2027). A FIAP gerencia as vendas: inscrição, processo seletivo e pagamento acontecem no site dela, por isso o botão leva para lá (hoje a página oficial mostra 'Avise-me').">
+      <p class="k">Turmas de março de 2027</p>
+      <div class="val"><span class="x">18x</span><b><sup>R$</sup>735,00</b></div>
+      <p class="sub">Processo seletivo 100% digital</p>
+      <a class="btn btn-fiap" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Inscreva-se na FIAP <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <ul>
+        <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Certificado de pós-graduação emitido pela FIAP</li>
+        <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>5 micro-certificações, uma a cada fase</li>
+        <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 8.5 3 3 7-7"/></svg>Acesso completo à PM3 Sprints</li>
+      </ul>
+      <a class="alumni" href="#investimento">
+        <span class="sym"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2 8 3l6 3.2-6 3.2z"/><path d="M4.5 8v2.8c0 .8 1.6 1.7 3.5 1.7s3.5-.9 3.5-1.7V8"/></svg></span>
+        <span><b>Aluno ou ex-aluno FIAP, Alura ou PM3?</b><span>Condição exclusiva: 18x R$ 580,00</span></span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </a>
+      <p class="where"><img src="assets/alun/site/fiap.svg" alt="FIAP"> Matrícula e pagamento no site da FIAP</p>
+    </aside>
   </div>
 </section>
 
 <!-- 2 · SUBNAVEGAÇÃO -->
-<div class="subnav" id="subnav">
+<div class="subnav dark" id="subnav">
   <div class="wrap">
     <nav aria-label="Seções da página">
       <a href="#sobre">Sobre a pós</a><a href="#conteudo">Conteúdo</a><a href="#jornada">Como funciona</a><a href="#coordenacao">Coordenação</a><a href="#investimento">Investimento</a><a href="#duvidas">Dúvidas</a>
     </nav>
-    <div class="sub-cta"><div class="mini"><b>18x R$ 735,00<small>Turmas de março de 2027</small></b><a class="btn btn-primary btn-sm" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Avise-me</a></div><a class="btn btn-line btn-sm btn-em sub-ementa" href="#baixar-ementa" data-ementa="subnav"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> E-book</a></div>
+    <div class="sub-cta"><div class="mini"><b>18x R$ 735,00<small>Turmas de março de 2027</small></b><a class="btn btn-fiap btn-sm" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Inscreva-se</a></div><a class="btn btn-line btn-sm btn-em sub-ementa" href="#baixar-ementa" data-ementa="subnav"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> E-book</a></div>
   </div>
 </div>
 
 <!-- 3 · SOBRE A PÓS -->
-<section class="section tex" id="sobre" aria-labelledby="sb-t">
+<section class="section black on-dark pos-dark" id="sobre" aria-labelledby="sb-t">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">01</span> Sobre a pós</p><h2 class="h2" id="sb-t">Transforme ideias<br><span class="c2">em produtos digitais</span></h2></div>
       <p class="lead">Combinando toda a expertise da FIAP, PM3 e Alura, esta pós-graduação única foi pensada para você que deseja transformar ideias em produtos digitais inovadores que resolvem problemas reais de mercado.</p>
     </div>
+    <ul class="pos-spec reveal" aria-label="Em resumo"><li><b>10&nbsp;meses</b><span>de duração</span></li><li><b>360h</b><span>de conteúdo</span></li><li><b>100%</b><span>digital e hands-on</span></li><li><b>5</b><span>certificações, uma por fase</span></li><li><b>FIAP</b><span>emite o certificado</span></li></ul>
     <div class="sobre-cols reveal">
       <p>Domine todos os aspectos do desenvolvimento de produtos digitais, passando pela compreensão das necessidades dos usuários, baseada em pesquisa e análise de dados, até o design e a idealização do produto.</p>
       <p>Vamos explorar a análise de viabilidade, estratégias de captação de investimentos e técnicas de marketing, aplicando na prática os frameworks e plataformas tecnológicas mais relevantes do mercado, incluindo no e low code e Inteligência Artificial. Além disso, você desenvolve habilidades de liderança essenciais para coordenar projetos e equipes multifuncionais, promovendo uma cultura de inovação.</p>
     </div>
     <p class="kicker" style="margin:0 0 16px">Você vai se preparar para</p>
-    <div class="outs six reveal">
-      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="2" width="9" height="12" rx="1.8"/><path d="M7 12h2"/></svg></span><span class="n">01</span></div><h3>Evoluir produtos digitais</h3><p>Desenvolver e evoluir produtos digitais, explorando plenamente o potencial da tecnologia para garantir sucesso no mercado.</p></div>
-      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h4M7 2.5v4L3.5 12.5a1 1 0 0 0 .9 1.5h7.2a1 1 0 0 0 .9-1.5L9 6.5v-4"/></svg></span><span class="n">02</span></div><h3>Experimentar com agilidade</h3><p>Conduzir experimentações ágeis, criando protótipos e testando oportunidades por meio de MVPs.</p></div>
-      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.2"/><circle cx="11.5" cy="7" r="1.8"/><path d="M2 13c.4-2.4 2-3.6 4-3.6s3.6 1.2 4 3.6M10 10c1.8-.2 3.4.8 3.8 3"/></svg></span><span class="n">03</span></div><h3>Liderar equipes e projetos</h3><p>Liderar equipes e projetos, desenvolvendo relações fundamentais para garantir entregas bem-sucedidas e agregar valor ao negócio.</p></div>
-      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l4-4 3 3 5-6M10.5 5H14v3.5"/></svg></span><span class="n">04</span></div><h3>Marketing, go-to-market e growth</h3><p>Criar estratégias inovadoras e abrangentes de marketing, go-to-market e growth, introduzindo inovações e atraindo investimentos.</p></div>
-      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13V8M8 13V3M13 13V6"/></svg></span><span class="n">05</span></div><h3>Gestão data-driven</h3><p>Adotar uma mentalidade de gestão data-driven, usando soluções tech para desenvolver a capacidade de adaptação contínua.</p></div>
-      <div class="out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="4.5" height="4.5" rx="1"/><rect x="9" y="2.5" width="4.5" height="4.5" rx="1"/><rect x="2.5" y="9" width="4.5" height="4.5" rx="1"/><rect x="9" y="9" width="4.5" height="4.5" rx="1"/></svg></span><span class="n">06</span></div><h3>Ferramentas e metodologias</h3><p>Explorar e aplicar ferramentas, tecnologias e metodologias como IA, Scrum, Kanban, PMI, NoCode, LowCode, Bubble.io, UX/UI, Canvas e mais.</p></div>
+    <div class="pc-outs reveal">
+      <div class="pc-out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="2" width="9" height="12" rx="1.8"/><path d="M7 12h2"/></svg></span><span class="num">01</span></div><h3>Evoluir produtos digitais</h3><p>Desenvolver e evoluir produtos digitais, explorando plenamente o potencial da tecnologia para garantir sucesso no mercado.</p></div>
+      <div class="pc-out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h4M7 2.5v4L3.5 12.5a1 1 0 0 0 .9 1.5h7.2a1 1 0 0 0 .9-1.5L9 6.5v-4"/></svg></span><span class="num">02</span></div><h3>Experimentar com agilidade</h3><p>Conduzir experimentações ágeis, criando protótipos e testando oportunidades por meio de MVPs.</p></div>
+      <div class="pc-out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.2"/><circle cx="11.5" cy="7" r="1.8"/><path d="M2 13c.4-2.4 2-3.6 4-3.6s3.6 1.2 4 3.6M10 10c1.8-.2 3.4.8 3.8 3"/></svg></span><span class="num">03</span></div><h3>Liderar equipes e projetos</h3><p>Liderar equipes e projetos, desenvolvendo relações fundamentais para garantir entregas bem-sucedidas e agregar valor ao negócio.</p></div>
+      <div class="pc-out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l4-4 3 3 5-6M10.5 5H14v3.5"/></svg></span><span class="num">04</span></div><h3>Marketing, go-to-market e growth</h3><p>Criar estratégias inovadoras e abrangentes de marketing, go-to-market e growth, introduzindo inovações e atraindo investimentos.</p></div>
+      <div class="pc-out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13V8M8 13V3M13 13V6"/></svg></span><span class="num">05</span></div><h3>Gestão data-driven</h3><p>Adotar uma mentalidade de gestão data-driven, usando soluções tech para desenvolver a capacidade de adaptação contínua.</p></div>
+      <div class="pc-out"><div class="top"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="4.5" height="4.5" rx="1"/><rect x="9" y="2.5" width="4.5" height="4.5" rx="1"/><rect x="2.5" y="9" width="4.5" height="4.5" rx="1"/><rect x="9" y="9" width="4.5" height="4.5" rx="1"/></svg></span><span class="num">06</span></div><h3>Ferramentas e metodologias</h3><p>Explorar e aplicar ferramentas, tecnologias e metodologias como IA, Scrum, Kanban, PMI, NoCode, LowCode, Bubble.io, UX/UI, Canvas e mais.</p></div>
     </div>
     <div class="eco reveal" data-nota="Texto da página oficial da FIAP: 'uma especialização criada em conjunto por professores, experts de mercado e especialistas da FIAP, da Alura e da PM3. Um projeto especial do maior ecossistema de Ensino Tech do Brasil.'">
       <article class="eco-c"><img src="assets/alun/site/fiap.svg" alt="FIAP"><h3>Centro Universitário de referência em tecnologia</h3><p>Nota máxima na avaliação do Ministério da Educação (MEC). A FIAP emite o certificado de conclusão da Pós Tech.</p></article>
@@ -129,7 +131,7 @@
 </section>
 
 <!-- 4 · CONTEÚDO -->
-<section class="section white" id="conteudo" aria-labelledby="em-t">
+<section class="section on-dark pos-dark pos-ink" id="conteudo" aria-labelledby="em-t">
   <div class="wrap ementa-grid">
     <div class="ementa-aside">
       <p class="kicker"><span class="n">02</span> Conteúdo</p>
@@ -221,11 +223,11 @@
       <p class="lead">Construa e compartilhe seu MVP e outros desafios no Discord, valide seus projetos com os colegas e treine suas skills de gestão e liderança nos projetos em grupo.</p>
     </div>
     <div class="duo reveal">
-      <article class="duo-c cm">
+      <article class="duo-c cm" data-nota="Imagem da comunidade: a mesma usada na pos-tech.html (site da FIAP).">
         <span class="k">Comunidade</span>
         <h3>Uma das maiores comunidades tech do Brasil</h3>
         <p>Conte com os community managers, troque experiências com estudantes e profissionais de todo o país e, ao final, explore todo o seu potencial em um hackathon.</p>
-        <div class="big">Discord<small>professores e especialistas sempre por perto</small></div>
+        <ul class="chips"><li>Discord</li><li>Community managers</li><li>Projetos em grupo</li><li>Hackathon</li></ul>
       </article>
       <article class="duo-c pm">
         <span class="k">PM3 Sprints</span>
@@ -234,14 +236,30 @@
         <div class="big">+30<small>cursos da plataforma PM3 Sprints</small></div>
       </article>
     </div>
-    <div class="parc reveal">
-      <p>Você desenvolverá projetos na prática, utilizando tecnologias e ferramentas de líderes globais em tecnologia e inovação.</p>
-      <ul aria-label="Parceiros"><li>AWS</li><li>MongoDB</li><li>GitHub</li><li>Neo4j</li><li>Microsoft</li><li>Google</li></ul>
+    <div class="mq reveal" aria-label="Parceiros Pós Tech: projetos práticos com tecnologias de líderes globais">
+      <span class="mq-lb">Projetos com tecnologias de</span>
+      <div class="mq-win"><ul class="mq-track"><li><img src="assets/img/pos-sec/p-aws.png" alt="AWS"></li><li><img src="assets/img/pos-sec/p-mongo-db.png" alt="MongoDB"></li><li><img src="assets/img/pos-sec/p-github.png" alt="GitHub"></li><li><img src="assets/img/pos-sec/p-neo4j.png" alt="Neo4j"></li><li><img src="assets/img/pos-sec/p-microsoft.png" alt="Microsoft"></li><li><img src="assets/img/pos-sec/p-google.png" alt="Google Cloud"></li><li><img src="assets/img/pos-sec/p-aws.png" alt="AWS"></li><li><img src="assets/img/pos-sec/p-mongo-db.png" alt="MongoDB"></li><li><img src="assets/img/pos-sec/p-github.png" alt="GitHub"></li><li><img src="assets/img/pos-sec/p-neo4j.png" alt="Neo4j"></li><li><img src="assets/img/pos-sec/p-microsoft.png" alt="Microsoft"></li><li><img src="assets/img/pos-sec/p-google.png" alt="Google Cloud"></li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- 7 · COORDENAÇÃO -->
+<section class="alun-sec2 on-dark" aria-labelledby="al-t" data-nota="Faixa no padrão do site alun.com.br: vídeo de abertura do Grupo Alun ao fundo e logos das quatro marcas. Vídeo e logos baixados de alun.com.br: pedir os arquivos oficiais ao Grupo para a versão final.">
+  <video class="ab-video" autoplay muted loop playsinline preload="metadata" poster="assets/alun/site/hero-intro-poster.jpg" aria-hidden="true"><source src="assets/alun/site/hero-intro.mp4" type="video/mp4"></video>
+  <div class="wrap ab-in">
+    <img src="assets/alun/site/alun.svg" alt="Grupo Alun" class="ab-alun">
+    <h2 id="al-t">O maior grupo de educação em tech, business e IA do Brasil.</h2>
+    <p>A Pós Tech nasce de um ecossistema que já impactou mais de 6 milhões de pessoas e treinou mais de 3.000 empresas em IA.</p>
+    <ul class="ab-logos" aria-label="Empresas do Grupo Alun">
+      <li><img src="assets/alun/site/alura.svg" alt="Alura"></li>
+      <li><img src="assets/alun/site/fiap.svg" alt="FIAP"></li>
+      <li><img src="assets/alun/site/pm3.svg" alt="PM3"></li>
+      <li><img src="assets/alun/site/startse.svg" alt="StartSe"></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- 8 · COORDENAÇÃO -->
 <section class="section on-dark coord-sec" id="coordenacao" aria-labelledby="co-t">
   <div class="wrap">
     <div class="sec-head">
@@ -257,49 +275,33 @@
   </div>
 </section>
 
-<!-- 8 · INVESTIMENTO -->
-<section class="section white" id="investimento" aria-labelledby="iv-t">
+<!-- 9 · INVESTIMENTO -->
+<section class="section black on-dark pos-dark" id="investimento" aria-labelledby="iv-t">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">06</span> Investimento</p><h2 class="h2" id="iv-t">Turmas de março<br><span class="c2">de 2027</span></h2></div>
-      <p class="lead">Processo seletivo 100% digital. Pagamento à vista ou parcelado em até 10, 12 ou 18 vezes.</p>
+      <p class="lead">Processo seletivo 100% digital. Pagamento à vista ou parcelado em até 10, 12 ou 18 vezes, direto no site da FIAP.</p>
     </div>
     <p class="pos-aviso"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.8v3.6M8 11.1v.1"/></svg><span><b>As vagas para as turmas de outubro se esgotaram.</b> Deixe seus dados e garanta um benefício especial para o lançamento das turmas com início em março de 2027.</span></p>
-    <div class="pl3 two" data-nota="Valores da página oficial da FIAP: 18x R$ 735,00 e, para alunos e ex-alunos FIAP, Alura e PM3, 18x R$ 580,00. A FAQ oficial cita 20% de desconto. Nenhum valor total foi calculado ou inventado aqui.">
-      <article class="pl3-card pl3-f reveal">
-        <span class="pl3-k">Turmas de março</span>
-        <h3>Digital Product Management<small>Pós-graduação · 360 horas · 10 meses</small></h3>
-        <div class="pl3-v"><span class="x">18x</span><b><sup>R$</sup>735,00</b></div>
-        <ul><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>360 horas, 100% digital e hands-on</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>5 micro-certificações e o certificado do curso, emitido pela FIAP</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>Acesso completo à PM3 Sprints, com mais de 30 cursos</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>Comunidade no Discord e Hackathon Experience</li></ul>
-        <a class="btn btn-line" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Avise-me</a>
-      </article>
-      <article class="pl3-card pl3-m on-dark reveal" data-d="1">
-        <span class="pl3-best">Condição exclusiva</span>
-        <span class="pl3-k">Alunos e ex-alunos FIAP, Alura e PM3</span>
-        <h3>Mesma pós,<br>valor especial<small>Para quem já estudou no ecossistema</small></h3>
-        <div class="pl3-v"><span class="x">18x</span><b><sup>R$</sup>580,00</b></div>
-        <ul><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>Aluno PM3 ou Alura: use na matrícula o e-mail da plataforma</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>Aluno FIAP: identificado pelo CPF</li><li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>Benefício aplicado automaticamente na tela de plano de pagamento</li></ul>
-        <a class="btn btn-light" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Avise-me <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-      </article>
+    <div class="pinv" data-nota="Valores da página oficial da FIAP: 18x R$ 735,00; alunos e ex-alunos FIAP, Alura e PM3: 18x R$ 580,00; colaboradores de empresas parceiras FIAP: 20% off. A FIAP gerencia as vendas: todos os botões levam ao site dela.">
+      <div class="reveal"><h3>Matrícula</h3><div class="v"><span class="x">18x</span><b><sup>R$</sup>735</b></div><p>Pós-graduação de 360 horas e 10 meses, com 5 micro-certificações e o certificado do curso, emitido pela FIAP.</p><a class="btn btn-line" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Inscreva-se na FIAP</a></div>
+      <div class="hl on-dark reveal" data-d="1"><h3>Alunos e ex-alunos FIAP, Alura e PM3</h3><div class="v"><span class="x">18x</span><b><sup>R$</sup>580</b></div><p>Condição exclusiva. Aluno PM3 ou Alura: use na matrícula o e-mail da plataforma. Aluno FIAP: identificado pelo CPF. O benefício aparece na tela de plano de pagamento.</p><a class="btn btn-light" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Inscreva-se na FIAP</a></div>
+      <div class="reveal" data-d="2"><h3>Empresas parceiras FIAP</h3><div class="v"><b>20% off</b></div><p>Colaboradores de empresas parceiras informam o nome da empresa na matrícula e enviam um comprovante de vínculo antes do início das aulas.</p><a class="btn btn-line" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Inscreva-se na FIAP</a></div>
     </div>
-    <div class="pay">
-      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="3.5" width="13" height="9" rx="2"/><path d="M1.5 6.5h13"/></svg>À vista ou em até 10, 12 ou 18x</span>
-      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 1.5 2.5 3.8v3.7c0 3.2 2.3 6 5.5 7 3.2-1 5.5-3.8 5.5-7V3.8z"/></svg>Processo seletivo 100% digital</span>
-      <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v4l2.5 1.5"/></svg>Colaboradores de empresas parceiras FIAP: 20% off</span>
-    </div>
+    <div class="fiap-note"><img src="assets/alun/site/fiap.svg" alt="FIAP"><span>Inscrição, processo seletivo, matrícula e pagamento acontecem no site da FIAP, que gerencia as vendas da Pós Tech.</span></div>
   </div>
 </section>
 
-<!-- 9 · COMO SE INSCREVER -->
-<section class="section" id="inscricao" aria-labelledby="in-t">
+<!-- 10 · COMO SE INSCREVER -->
+<section class="section on-dark pos-dark pos-ink" id="inscricao" aria-labelledby="in-t">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">07</span> Como se inscrever</p><h2 class="h2" id="in-t">Da inscrição<br><span class="c2">à matrícula</span></h2></div>
-      <p class="lead">Tudo online. Quem tem graduação concluída no Brasil pode participar do processo seletivo.</p>
+      <p class="lead">Tudo online, no site da FIAP. Quem tem graduação concluída no Brasil pode participar do processo seletivo.</p>
     </div>
     <div class="ins">
       <ol class="ins-steps reveal">
-        <li><span class="n">1</span><div><b>Inscrição</b><p>Escolha o seu curso, clique em &ldquo;Inscreva-se&rdquo; e preencha a ficha de inscrição online.</p></div></li>
+        <li><span class="n">1</span><div><b>Inscrição</b><p>No site da FIAP, escolha o seu curso, clique em &ldquo;Inscreva-se&rdquo; e preencha a ficha de inscrição online.</p></div></li>
         <li><span class="n">2</span><div><b>Matrícula</b><p>Ao ser aprovado(a) no processo de admissão, faça a sua matrícula de forma totalmente online e prepare-se para iniciar a Pós Tech.</p></div></li>
         <li><span class="n">3</span><div><b>Pré-requisitos</b><p>Formação superior completa realizada no Brasil, com colação de grau em cursos Tecnólogos, Bacharelados ou Licenciaturas. Cursos de formação específica ou sequenciais não habilitam para ingresso. Graduação feita fora do Brasil: fale pelo WhatsApp (11) 98170-0028.</p></div></li>
       </ol>
@@ -317,11 +319,29 @@
   </div>
 </section>
 
-<!-- 10 · EXTENSÕES INTERNACIONAIS -->
+<!-- 11 · CERTIFICADO FIAP -->
+<section class="cx-sec on-dark" aria-labelledby="ce-t">
+  <div class="cx-hero cx-pos" data-nota="Mockup gerado no Magnific a partir de um certificado real da Pós Tech (FIAP), com o nome da aluna trocado por um nome de exemplo (Francisco Loureiro) e o curso por Digital Product Management.">
+    <div class="wrap">
+      <div class="cx-copy">
+        <p class="kicker"><span class="n">08</span> Certificação</p>
+        <h2 class="h2" id="ce-t">Certificado<br><span class="c2">emitido pela FIAP.</span></h2>
+        <p class="lead">Ao concluir, você recebe o certificado de pós-graduação lato sensu emitido pela FIAP, Centro Universitário com nota máxima na avaliação do MEC, e um portfólio com o projeto que desenvolveu nos 10 meses.</p>
+        <ul class="cx-proof">
+          <li><span class="cx-aw"><svg class="lr" viewBox="0 0 120 48" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M30 44C14 38 9 22 15 6"/><path d="M90 44c16-6 21-22 15-38"/></g><g fill="currentColor"><ellipse cx="14" cy="11" rx="2.4" ry="4.6" transform="rotate(-15 14 11)"/><ellipse cx="11.5" cy="20" rx="2.4" ry="4.6" transform="rotate(-38 11.5 20)"/><ellipse cx="13" cy="29" rx="2.4" ry="4.6" transform="rotate(-58 13 29)"/><ellipse cx="19" cy="37" rx="2.4" ry="4.6" transform="rotate(-75 19 37)"/><ellipse cx="106" cy="11" rx="2.4" ry="4.6" transform="rotate(15 106 11)"/><ellipse cx="108.5" cy="20" rx="2.4" ry="4.6" transform="rotate(38 108.5 20)"/><ellipse cx="107" cy="29" rx="2.4" ry="4.6" transform="rotate(58 107 29)"/><ellipse cx="101" cy="37" rx="2.4" ry="4.6" transform="rotate(75 101 37)"/></g></svg><b>Top 5</b></span><span class="cx-lb">Empresas mais admiradas em Produto no Brasil</span></li>
+          <li><span class="cx-aw"><svg class="lr" viewBox="0 0 120 48" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M30 44C14 38 9 22 15 6"/><path d="M90 44c16-6 21-22 15-38"/></g><g fill="currentColor"><ellipse cx="14" cy="11" rx="2.4" ry="4.6" transform="rotate(-15 14 11)"/><ellipse cx="11.5" cy="20" rx="2.4" ry="4.6" transform="rotate(-38 11.5 20)"/><ellipse cx="13" cy="29" rx="2.4" ry="4.6" transform="rotate(-58 13 29)"/><ellipse cx="19" cy="37" rx="2.4" ry="4.6" transform="rotate(-75 19 37)"/><ellipse cx="106" cy="11" rx="2.4" ry="4.6" transform="rotate(15 106 11)"/><ellipse cx="108.5" cy="20" rx="2.4" ry="4.6" transform="rotate(38 108.5 20)"/><ellipse cx="107" cy="29" rx="2.4" ry="4.6" transform="rotate(58 107 29)"/><ellipse cx="101" cy="37" rx="2.4" ry="4.6" transform="rotate(75 101 37)"/></g></svg><b>Nota 5</b></span><span class="cx-lb">FIAP com nota máxima em todas as avaliações do MEC</span></li>
+          <li><span class="cx-aw"><svg class="lr" viewBox="0 0 120 48" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M30 44C14 38 9 22 15 6"/><path d="M90 44c16-6 21-22 15-38"/></g><g fill="currentColor"><ellipse cx="14" cy="11" rx="2.4" ry="4.6" transform="rotate(-15 14 11)"/><ellipse cx="11.5" cy="20" rx="2.4" ry="4.6" transform="rotate(-38 11.5 20)"/><ellipse cx="13" cy="29" rx="2.4" ry="4.6" transform="rotate(-58 13 29)"/><ellipse cx="19" cy="37" rx="2.4" ry="4.6" transform="rotate(-75 19 37)"/><ellipse cx="106" cy="11" rx="2.4" ry="4.6" transform="rotate(15 106 11)"/><ellipse cx="108.5" cy="20" rx="2.4" ry="4.6" transform="rotate(38 108.5 20)"/><ellipse cx="107" cy="29" rx="2.4" ry="4.6" transform="rotate(58 107 29)"/><ellipse cx="101" cy="37" rx="2.4" ry="4.6" transform="rotate(75 101 37)"/></g></svg><b>9 em 10</b></span><span class="cx-lb">Alunos mais confiantes após o curso</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · EXTENSÕES INTERNACIONAIS -->
 <section class="section black on-dark ext-sec" id="extensoes" aria-labelledby="ex-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">08</span> Estenda seu curso</p><h2 class="h2" id="ex-t">Imersões e extensões<br><span class="c2">internacionais</span></h2></div>
+      <div><p class="kicker"><span class="n">09</span> Estenda seu curso</p><h2 class="h2" id="ex-t">Imersões e extensões<br><span class="c2">internacionais</span></h2></div>
       <p class="lead">Ao término da sua Pós Tech, você pode expandir suas possibilidades profissionais com extensões internacionais, em parceria com universidades e instituições importantes das áreas de transformação digital e empreendedorismo.</p>
     </div>
     <div class="ext-grid" data-nota="Programas e imagens da página oficial da FIAP. Extensões opcionais, contratadas à parte.">
@@ -342,11 +362,11 @@
   </div>
 </section>
 
-<!-- 11 · FAQ -->
+<!-- 13 · FAQ -->
 <section class="section black on-dark faq-dark" id="duvidas" aria-labelledby="fq-t">
   <div class="wrap faq-grid">
     <div>
-      <p class="kicker"><span class="n">09</span> Dúvidas</p>
+      <p class="kicker"><span class="n">10</span> Dúvidas</p>
       <h2 class="h2" id="fq-t">Perguntas<br><span class="c2">frequentes</span></h2>
       <p class="muted" style="margin-top:20px">Fale com o time da Pós Tech pelo WhatsApp ou pelo e-mail contato@pm3.com.br.</p>
       <a class="btn btn-line btn-sm" href="https://wa.me/5511981700028" target="_blank" rel="noopener">Falar no WhatsApp</a>
@@ -359,20 +379,20 @@
       <details><summary>Como serei avaliado(a)?<i aria-hidden="true"></i></summary><p>A avaliação é composta por: Tech Challenge, um projeto entregue ao final de cada fase; Hackathon Experience, uma experiência imersiva e 100% digital que coloca em prática o conhecimento adquirido; e uma atividade individual presencial, que você agenda em um dos polos da FIAP para finalizar o curso. A presença nas aulas ao vivo (lives digitais) não é obrigatória.</p></details>
       <details><summary>Tem TCC?<i aria-hidden="true"></i></summary><p>Os cursos da Pós Tech não têm a obrigatoriedade de um TCC.</p></details>
       <details><summary>Quem emite o certificado de conclusão?<i aria-hidden="true"></i></summary><p>O certificado de conclusão da Pós Tech é emitido pela FIAP, Centro Universitário de referência em tecnologia e nota máxima na avaliação do Ministério da Educação (MEC).</p></details>
-      <details><summary>Quais são as formas de pagamento?<i aria-hidden="true"></i></summary><p>A Pós Tech pode ser paga à vista ou parcelada em até 10, 12 ou 18 vezes. A primeira parcela pode ser paga por cartão de crédito ou boleto bancário, e as demais por boleto bancário ou cartão de crédito recorrente.</p></details>
+      <details><summary>Onde faço a matrícula e o pagamento?<i aria-hidden="true"></i></summary><p>No site da FIAP, que gerencia as vendas da Pós Tech. A pós pode ser paga à vista ou parcelada em até 10, 12 ou 18 vezes. A primeira parcela pode ser paga por cartão de crédito ou boleto bancário, e as demais por boleto bancário ou cartão de crédito recorrente.</p></details>
       <details><summary>Sou aluno(a) ou ex-aluno(a), como tenho o benefício de 20% off?<i aria-hidden="true"></i></summary><p>Alunos e ex-alunos PM3 e Alura: na matrícula, use o mesmo e-mail que usa ou usava na plataforma. Alunos e ex-alunos FIAP: você é identificado(a) pelo CPF. Em ambos os casos, o desconto deve aparecer automaticamente na tela &ldquo;Plano de pagamento&rdquo;. Colaboradores de empresas parceiras FIAP informam o nome da empresa na matrícula e enviam, antes do início das aulas, um comprovante de vínculo (crachá, holerite ou documento similar).</p></details>
     </div>
   </div>
 </section>
 
-<!-- 12 · CTA FINAL -->
+<!-- 14 · CTA FINAL -->
 <section class="final grain on-dark" aria-labelledby="fn-t">
   <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap">
     <p class="kicker" style="justify-content:center">Pós Tech · Digital Product Management</p>
     <h2 class="display" id="fn-t">Transforme ideias<br>em produtos.<span class="em">Turmas com início em março de 2027.</span></h2>
-    <p>360 horas, 10 meses e 5 fases, do ciclo de vida do produto ao go-to-market. Deixe seus dados e garanta o benefício de lançamento.</p>
-    <div class="btns"><a class="btn btn-light" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Avise-me</a><a class="btn btn-line btn-em" href="#baixar-ementa" data-ementa="final">Baixar o e-book</a></div>
+    <p>360 horas, 10 meses e 5 fases, do ciclo de vida do produto ao go-to-market. Inscrição e matrícula no site da FIAP.</p>
+    <div class="btns"><a class="btn btn-light" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener">Inscreva-se na FIAP</a><a class="btn btn-line btn-em" href="#baixar-ementa" data-ementa="final">Baixar o e-book</a></div>
   </div>
 </section>
 
@@ -380,7 +400,7 @@
 
 <div class="buybar" id="buybar" aria-hidden="true">
   <div><b>18x R$ 735,00</b><small>Pós Tech Digital Product Management</small></div>
-  <a class="btn btn-light btn-sm" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener" tabindex="-1">Avise-me</a>
+  <a class="btn btn-light btn-sm" href="https://postech.fiap.com.br/curso/digital-product-management" target="_blank" rel="noopener" tabindex="-1">Inscreva-se</a>
 </div>
 
 <script src="assets/js/layout.js?v=42"></script>
