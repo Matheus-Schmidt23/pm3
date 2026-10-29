@@ -217,3 +217,31 @@ body.pos-page{background:#000}
   .pc-outs{grid-template-columns:1fr}
   .pj dd{font-size:15px}
 }
+
+/* ---------- sanfona das fases mais compacta: 3 colunas de disciplinas, texto menor, sem a linha repetida da micro-certificação ---------- */
+.pos-mods .mod-body .in{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding-bottom:26px}
+.pos-mods .mod-body .disc{min-width:0}
+.pos-mods .mod-body .disc{padding:16px 18px 10px}
+.pos-mods .disc h4{font-size:11px;margin-bottom:4px}
+.pos-mods .mod-body .disc li{font-size:13.5px;line-height:1.35;padding:7px 0 7px 16px}
+.pos-mods .mod-body .disc li::before{width:6px;height:6px;top:13px;left:0}
+.pos-mods .mod-body .disc:nth-last-child(2):nth-child(odd),.pos-mods .mod-body .disc:last-child{grid-column:auto}
+.pos-mods .mod-body .disc:nth-last-child(2):nth-child(odd) ul,.pos-mods .mod-body .disc:last-child ul{display:block}
+@media (max-width:1080px){ .pos-mods .mod-body .in{grid-template-columns:1fr 1fr} }
+@media (max-width:700px){ .pos-mods .mod-body .in{grid-template-columns:1fr} }
+
+/* ---------- faixa de certificações: 5 micro-certificações + certificado FIAP (no lugar da jornada em 5 passos) ---------- */
+.pcert{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;position:relative}
+.pcert::before{content:'';position:absolute;left:4%;right:4%;top:33px;height:2px;background:linear-gradient(90deg,var(--purple-royal),var(--fiap));opacity:.6}
+.pcert li{position:relative;z-index:1;display:flex;flex-direction:column;gap:8px;min-height:230px;padding:18px 18px 20px;border-radius:var(--r-card);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1)}
+.pcert .pc-n{width:34px;height:34px;border-radius:50%;background:var(--yellow);color:#000;font-family:var(--display);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.pcert .pc-k{font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);display:flex;align-items:center;gap:6px}
+.pcert .pc-k svg{width:16px;height:16px}
+.pcert h3{margin:0;font-size:15.5px;font-weight:700;line-height:1.2;letter-spacing:-.01em;color:#fff}
+.pcert .pc-m{margin-top:auto;font-size:12.5px;color:rgba(255,255,255,.6)}
+.pcert .pc-final{background:linear-gradient(160deg,rgba(237,20,91,.35),rgba(102,69,177,.35)),#1a0d2e;border-color:rgba(237,20,91,.55);box-shadow:0 24px 50px -30px rgba(237,20,91,.6)}
+.pcert .pc-final .pc-k{color:#ff6f9a;margin-top:46px}
+.pcert .pc-final h3{font-size:18px}
+.pcert .pc-final .pc-m{color:rgba(255,255,255,.8)}
+@media (max-width:1080px){ .pcert{grid-template-columns:repeat(3,minmax(0,1fr))} .pcert::before{display:none} .pcert li{min-height:0} .pcert .pc-final{grid-column:1/-1;flex-direction:row;align-items:center;flex-wrap:wrap;gap:6px 18px} .pcert .pc-final .pc-k{margin-top:0} .pcert .pc-final .pc-m{margin-top:0;margin-left:auto} }
+@media (max-width:640px){ .pcert{grid-template-columns:1fr 1fr} }
