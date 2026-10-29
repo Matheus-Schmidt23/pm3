@@ -556,3 +556,4 @@ a.step:hover{transform:translateY(-4px)}
 .mcard li::before{content:'';flex:none;width:6px;height:6px;border-radius:50%;background:var(--purple-royal);transform:translateY(-2px)}
 .mcard:first-child li{background:none;color:rgba(255,255,255,.92)}
 .mcard:first-child li::before{background:#f0c4ff}
+.em-cases-1 .em-cases-logos{grid-template-columns:minmax(0,340px)}
