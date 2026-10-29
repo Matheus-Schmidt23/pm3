@@ -12,7 +12,7 @@ window.PM3_CATALOGO = (function(){
     lideranca: { nome: 'Liderança e habilidades humanas', curto: 'Liderança' }
   };
 
-  /* formações: horas e módulos da página atual da Membership */
+  /* formações: horas e módulos da página atual do Membership */
   const FORMACOES = [
     { nome: 'Product Management', area: 'gestao', h: 37, mod: 6, nivel: 'Base', capa: 'product-manager', aprende: ['Product Market Fit','Discovery na era da IA','Dados e analytics'], url: 'formacao-product-manager.html', destaque: 'Comece aqui',
       quem: 'Para quem está entrando em produto ou quer consolidar estratégia, discovery e execução.' },

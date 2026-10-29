@@ -44,12 +44,12 @@
       <ul class="nav" id="nav">
         <li><a href="membership.html"${cur('membership')}>Membership</a></li>
         <li><button type="button" aria-expanded="false" aria-controls="mega-formacoes">Formações ${chev}</button>
-          ${mega('mega-formacoes','Formações','Cursos completos de 21 a 79 horas, com projeto real e certificado. Todos inclusos na Membership.',
+          ${mega('mega-formacoes','Formações','Cursos completos de 21 a 79 horas, com projeto real e certificado. Todos inclusos no Membership.',
             FORMACOES.map(([n,h,a])=>`<li><a href="${h}">${n}<small>${a}</small></a></li>`).join(''),
             '<a href="formacoes.html">Ver todas as formações →</a>')}
         </li>
         <li><button type="button" aria-expanded="false" aria-controls="mega-sprints">Sprints ${chev}</button>
-          ${mega('mega-sprints','Sprints','Cursos de 2 a 12 horas, cada um focado em um desafio específico. Inclusos na Membership.',
+          ${mega('mega-sprints','Sprints','Cursos de 2 a 12 horas, cada um focado em um desafio específico. Inclusos no Membership.',
             SPRINTS.map(([n,h,q])=>`<li><a href="${h}">${n}<small>${q} cursos</small></a></li>`).join(''),
             '<a href="sprints.html">Ver todos os sprints →</a>')}
         </li>
@@ -58,7 +58,7 @@
         <li><a href="comunidade.html"${cur('comunidade')}>Comunidade</a></li>
         <li><a href="blog.html"${cur('blog')}>Blog</a></li>
         <li><a href="faq.html"${cur('faq')}>FAQ</a></li>
-        <li class="nav-mobile-cta"><a class="btn btn-light btn-block" href="#">Login</a><a class="btn btn-primary btn-block" href="membership.html#planos">Assinar a Membership</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn-light btn-block" href="#">Login</a><a class="btn btn-primary btn-block" href="membership.html#planos">Assinar o Membership</a></li>
       </ul>
       <div class="bar-actions">
         <a class="login" href="#">Login</a>
@@ -75,7 +75,7 @@
         <div class="foot-brand">
           <img src="assets/logo/pm3-logo-branco.svg" alt="PM3" width="111" height="34">
           <p>Escola de produtos digitais e IA: formações, sprints, Membership e Pós Tech. Pessoas criam produtos.</p>
-          <a class="ft-link" href="membership.html#planos">Conhecer a Membership ${arrow}</a>
+          <a class="ft-link" href="membership.html#planos">Conhecer o Membership ${arrow}</a>
           <a class="ft-link" href="cursos.html">Catálogo completo ${arrow}</a>
         </div>
         <div><h4>PM3</h4><ul><li><a href="#">Biblioteca</a></li><li><a href="blog.html">Blog</a></li><li><a href="comunidade.html">Comunidade</a></li><li><a href="#">Contato</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Glossário de produto</a></li><li><a href="#">Instrutores</a></li><li><a href="#">Panorama 2026-2027</a></li><li><a href="para-empresas.html">Para empresas</a></li><li><a href="#">Trabalhe conosco</a></li></ul></div>

@@ -8,7 +8,7 @@
   const NIVEL = { 'Base': 1, 'Intermediário': 2, 'Avançado': 3 };
   const lvl = n => `<span class="lvl" aria-hidden="true">${[1,2,3].map(i => `<i class="${i <= NIVEL[n] ? 'on' : ''}"></i>`).join('')}</span>`;
 
-  /* card da Membership no fim dos catálogos de Formações e Sprints */
+  /* card do Membership no fim dos catálogos de Formações e Sprints */
   const membCard = (extra = '') => {
     const ok = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>';
     const itens = ['10 formações completas, com certificado', '+40 sprints de 2 a 12 horas', 'Mentorias e workshops ao vivo', 'Comunidade com +60 mil profissionais'];
@@ -17,7 +17,7 @@
         <p>Acesso completo ao catálogo da PM3 por 12 meses. Você escolhe a ordem, a PM3 indica o caminho.</p>
         <ul class="fm-list">${itens.map(t => `<li>${ok}${t}</li>`).join('')}</ul></div>
       <div class="fm-price"><small>Assinatura anual</small><b><i>12x</i> R$ 299,92</b><span>ou R$ 3.599 à vista</span>
-        <span class="btn btn-primary">Assinar a Membership ${arrow}</span><em>7 dias de garantia · acesso imediato</em></div></a>`;
+        <span class="btn btn-primary">Assinar o Membership ${arrow}</span><em>7 dias de garantia · acesso imediato</em></div></a>`;
   };
   /* ---------- /formacoes/ ---------- */
   if (PAGE === 'formacoes'){
@@ -25,7 +25,7 @@
     /* catálogo: um card de venda por formação, filtrável por área */
     const nomeA = a => AREAS[a].curto;
     const lista = ordem.flatMap(a => FORMACOES.filter(f => f.area === a));
-    /* mesmo card da Membership (cards-formacao.css) */
+    /* mesmo card do Membership (cards-formacao.css) */
     const ic = {
       h: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>',
       mod: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 1.8 14.2 5 8 8.2 1.8 5z"/><path d="m1.8 8 6.2 3.2L14.2 8"/><path d="m1.8 11 6.2 3.2 6.2-3.2"/></svg>',
