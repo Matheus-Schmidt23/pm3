@@ -44,13 +44,6 @@
 .mod-body .cert-line svg{width:18px;height:18px;flex:none;color:var(--fiap)}
 
 /* jornada em 5 passos */
-.pj{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:pj}
-.pj > li{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-card);padding:24px 22px 26px;display:flex;flex-direction:column;gap:14px}
-.pj .st{width:42px;height:42px;border-radius:50%;background:var(--fiap);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:14px}
-.pj h3{margin:0;font-size:clamp(18px,1.5vw,21px);font-weight:800;line-height:1.1;text-transform:uppercase;color:#fff}
-.pj dl{margin:0;display:grid;gap:12px}
-.pj dt{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fiap-soft)}
-.pj dd{margin:3px 0 0;font-size:14px;color:rgba(255,255,255,.76);line-height:1.45}
 
 /* comunidade, PM3 Sprints e parceiros */
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -108,8 +101,6 @@
 .imersao .val small{display:block;margin-top:10px;font-family:var(--body);font-size:12.5px;color:var(--gray-fog);line-height:1.4}
 
 @media (max-width:1080px){
-  .pj{grid-template-columns:repeat(2,1fr)}
-  .pj > li:last-child{grid-column:1/-1}
   .eco{grid-template-columns:1fr}
   .outs.six{grid-template-columns:repeat(2,1fr)}
 }
@@ -118,10 +109,50 @@
   .imersao .val{text-align:left}
 }
 @media (max-width:600px){
-  .pj,.outs.six{grid-template-columns:1fr}
-  .pj > li:last-child{grid-column:auto}
+  .outs.six{grid-template-columns:1fr}
 }
 
 .sobre-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,56px);margin:0 0 40px}
 .sobre-cols p{margin:0;color:#4a4458;font-size:16px;line-height:1.6}
 @media (max-width:860px){ .sobre-cols{grid-template-columns:1fr} }
+
+/* ementa: cada disciplina vira um cartão, em duas colunas (a lista corrida ficava longa demais) */
+.pos-mods .mod-body .in{padding:0 0 30px 72px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
+.pos-mods .mod-body .disc{margin:0;padding:20px 22px 14px;border-radius:var(--r-card);background:#f7f4fc;border:1px solid rgba(102,69,177,.16)}
+.pos-mods .disc h4{margin:0 0 6px;font-size:12px;line-height:1.35}
+.pos-mods .mod-body .disc ul{display:block;max-width:none;margin:0}
+.pos-mods .mod-body .disc li{display:block;font-size:14.5px;line-height:1.4;padding:9px 0 9px 20px;border-bottom:1px solid rgba(102,69,177,.14);color:#2a2438}
+.pos-mods .mod-body .disc li:last-child{border-bottom:0}
+.pos-mods .mod-body .disc li::before{width:7px;height:7px;top:16px;left:2px;background:var(--fiap);-webkit-mask:none;mask:none;border-radius:50%}
+.pos-mods .mod-body .cert-line{grid-column:1/-1;margin:2px 0 0;max-width:none}
+.pos-mods .mod-body .disc:nth-last-child(2):nth-child(odd){grid-column:1/-1}
+.pos-mods .mod-body .disc:nth-last-child(2):nth-child(odd) ul{display:grid;grid-template-columns:1fr 1fr;column-gap:36px}
+.pos-mods .mod > button{grid-template-columns:56px 1fr auto 30px}
+.em-dl .pdf svg{width:24px;height:24px;margin:auto}
+.em-dl .pdf.book{align-items:center;padding-bottom:0}
+
+/* jornada: linha do tempo vertical, um passo por linha */
+.pj{list-style:none;margin:0;padding:0;display:grid;gap:14px;position:relative}
+.pj::before{content:'';position:absolute;left:23px;top:30px;bottom:30px;width:2px;background:linear-gradient(180deg,var(--fiap),var(--purple-royal))}
+.pj > li{position:relative;display:grid;grid-template-columns:minmax(260px,.75fr) 2fr;gap:clamp(20px,3vw,48px);align-items:start;padding:28px clamp(20px,2.6vw,36px) 30px clamp(20px,2.6vw,36px);margin-left:48px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-card)}
+.pj .st{position:absolute;left:0;top:26px;width:48px;height:48px;border-radius:50%;background:var(--fiap);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:15px;box-shadow:0 0 0 6px #05030a}
+.pj h3{margin:6px 0 0;font-size:clamp(22px,2.1vw,30px);font-weight:800;line-height:1.05;text-transform:uppercase;color:#fff}
+.pj dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px 36px}
+.pj dt{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--fiap-soft)}
+.pj dd{margin:6px 0 0;font-size:16px;color:rgba(255,255,255,.84);line-height:1.5}
+.pj .st{left:-48px}
+
+
+@media (max-width:1080px){
+  .pos-mods .mod-body .in{grid-template-columns:1fr;padding-left:0}
+}
+@media (max-width:860px){
+  .pj > li{grid-template-columns:1fr;gap:14px;padding:24px 20px 26px}
+  .pj > li{margin-left:44px}
+  .pj .st{left:-44px;width:44px;height:44px;top:20px}
+  .pj::before{left:21px}
+}
+@media (max-width:600px){
+  .pj dd{font-size:15px}
+}
+@media (max-width:860px){ .pos-mods .mod-body .disc:nth-last-child(2):nth-child(odd) ul{display:block} }
