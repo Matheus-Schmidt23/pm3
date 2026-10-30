@@ -91,23 +91,35 @@
     $('#fx-mais').addEventListener('click', () => { limite = Infinity; mostra(); });
     mostra();
     /* entrada por link (menu, rodapé, Membership): sprints.html#dados ativa o filtro da vertical e rola até o catálogo */
-    const entraPorLink = (suave) => {
+    /* rolagem própria, com aceleração suave (ease-in-out, ~1,1 s): o scroll-behavior do navegador é curto e seco demais para esse salto */
+    const rolaAte = el => {
+      const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 68;
+      const de = scrollY, ate = el.getBoundingClientRect().top + scrollY - navH, dist = ate - de;
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches || Math.abs(dist) < 2){ scrollTo(0, ate); return; }
+      const html = document.documentElement, antes = html.style.scrollBehavior; html.style.scrollBehavior = 'auto';
+      const dur = Math.min(1400, 700 + Math.abs(dist) * .35), t0 = performance.now();
+      const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      let andou = false;
+      const passo = now => {
+        andou = true;
+        const t = Math.min(1, (now - t0) / dur);
+        scrollTo(0, de + dist * ease(t));
+        if (t < 1) requestAnimationFrame(passo); else html.style.scrollBehavior = antes;
+      };
+      requestAnimationFrame(passo);
+      /* aba em segundo plano (sem quadros de animação): vai direto ao ponto em vez de ficar parado */
+      setTimeout(() => { if (!andou){ scrollTo(0, ate); html.style.scrollBehavior = antes; } }, 350);
+    };
+    const entraPorLink = () => {
       const a = location.hash.slice(1);
       if (!ordem.includes(a)) return;
       filtra(a);
       const alvo = document.getElementById('catalogo');
-      if (!alvo) return;
-      setTimeout(() => {
-        if (suave){ alvo.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
-        /* na abertura o salto é imediato (o scroll-behavior: smooth do html é desligado por um instante) */
-        const html = document.documentElement, antes = html.style.scrollBehavior;
-        html.style.scrollBehavior = 'auto'; alvo.scrollIntoView({ block: 'start' }); html.style.scrollBehavior = antes;
-      }, 80);
+      if (alvo) setTimeout(() => rolaAte(alvo), 120);
     };
     /* na abertura, só depois do load: o ajuste do hero (layout.js) e o próprio navegador mexem na rolagem antes disso */
-    const aoAbrir = () => { entraPorLink(false); setTimeout(() => entraPorLink(false), 400); };
-    if (document.readyState === 'complete') aoAbrir(); else addEventListener('load', aoAbrir);
-    addEventListener('hashchange', () => entraPorLink(true));
+    if (document.readyState === 'complete') entraPorLink(); else addEventListener('load', entraPorLink);
+    addEventListener('hashchange', entraPorLink);
   }
 
   /* ---------- /cursos/ ---------- */
