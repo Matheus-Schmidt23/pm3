@@ -75,3 +75,6 @@ body .cat-dark :is(.chip[aria-pressed="true"],.fx-chips button.on) small{backgro
 .stats .stat .n{color:#a98bff}
 .stats .stat p{color:rgba(255,255,255,.62)}
 .stats .cross{display:none}
+
+/* catálogo de sprints: alvo dos links por vertical (sprints.html#dados), parando abaixo do menu fixo */
+#catalogo{scroll-margin-top:var(--nav-h)}

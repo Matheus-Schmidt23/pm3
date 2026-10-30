@@ -90,6 +90,24 @@
     $('#fx-chips').addEventListener('click', e => { const b = e.target.closest('button'); if (b) filtra(b.dataset.f); });
     $('#fx-mais').addEventListener('click', () => { limite = Infinity; mostra(); });
     mostra();
+    /* entrada por link (menu, rodapé, Membership): sprints.html#dados ativa o filtro da vertical e rola até o catálogo */
+    const entraPorLink = (suave) => {
+      const a = location.hash.slice(1);
+      if (!ordem.includes(a)) return;
+      filtra(a);
+      const alvo = document.getElementById('catalogo');
+      if (!alvo) return;
+      setTimeout(() => {
+        if (suave){ alvo.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+        /* na abertura o salto é imediato (o scroll-behavior: smooth do html é desligado por um instante) */
+        const html = document.documentElement, antes = html.style.scrollBehavior;
+        html.style.scrollBehavior = 'auto'; alvo.scrollIntoView({ block: 'start' }); html.style.scrollBehavior = antes;
+      }, 80);
+    };
+    /* na abertura, só depois do load: o ajuste do hero (layout.js) e o próprio navegador mexem na rolagem antes disso */
+    const aoAbrir = () => { entraPorLink(false); setTimeout(() => entraPorLink(false), 400); };
+    if (document.readyState === 'complete') aoAbrir(); else addEventListener('load', aoAbrir);
+    addEventListener('hashchange', () => entraPorLink(true));
   }
 
   /* ---------- /cursos/ ---------- */
