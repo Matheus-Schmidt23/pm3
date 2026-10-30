@@ -250,3 +250,5 @@ body.pos-page{background:#000}
 .pos-page .em-dl .row{margin-bottom:22px;align-items:flex-start}
 .pos-page .em-dl .meta{line-height:1.45;max-width:30ch}
 .pos-page .em-dl .pdf.book{margin-top:2px}
+/* submenu alinhado ao hero: o card do hero vai de ponta a ponta (gutter + padding interno), então o submenu segue a mesma margem */
+@media (min-width:1081px){ .pos-page .subnav .wrap{max-width:none;padding-left:calc(var(--gutter) + clamp(20px,3vw,44px));padding-right:calc(var(--gutter) + clamp(20px,3vw,44px))} }
