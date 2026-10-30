@@ -21,6 +21,14 @@
     });
   }
 
+
+  /* submenu dentro do hero (páginas da pós): no desktop os números do hero (.facts) entram na barra, antes dos links; no celular voltam ao hero */
+  const subHero = $('.subnav.in-hero'), factsHero = $('.pc-card .facts');
+  if (subHero && factsHero){
+    const casa = factsHero.parentElement, mq = matchMedia('(min-width:1081px)');
+    const posiciona = () => { if (mq.matches) subHero.querySelector('.wrap').prepend(factsHero); else casa.appendChild(factsHero); };
+    mq.addEventListener('change', posiciona); posiciona();
+  }
   /* subnavegação: mostra preço quando gruda e marca a seção atual */
   const sub = $('#subnav');
   if (sub){

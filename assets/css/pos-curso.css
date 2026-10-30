@@ -252,3 +252,22 @@ body.pos-page{background:#000}
 .pos-page .em-dl .pdf.book{margin-top:2px}
 /* submenu alinhado ao hero: o card do hero vai de ponta a ponta (gutter + padding interno), então o submenu segue a mesma margem */
 @media (min-width:1081px){ .pos-page .subnav .wrap{max-width:none;padding-left:calc(var(--gutter) + clamp(20px,3vw,44px));padding-right:calc(var(--gutter) + clamp(20px,3vw,44px))} }
+
+/* ---------- submenu dentro do hero: números, links e e-book na mesma linha, no pé do card; vira barra escura ao grudar ---------- */
+@media (min-width:1081px){
+  .pos-page .pc-card{padding-bottom:104px}
+  .pos-page .subnav.in-hero{margin-top:-92px}
+  .pos-page .subnav.in-hero:not(.stuck){background:transparent;border-bottom-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .pos-page .subnav.in-hero .wrap{min-height:68px;gap:28px}
+  .subnav.in-hero .facts{margin:0;padding:0;border:0;gap:0;flex:none}
+  .subnav.in-hero .facts div{padding:0 18px}
+  .subnav.in-hero .facts div:first-child{padding-left:0}
+  .subnav.in-hero .facts b{font-size:24px}
+  .subnav.in-hero .facts span{display:block;font-size:11.5px;margin-top:2px}
+  .subnav.in-hero.stuck .facts{display:none}
+}
+@media (min-width:1081px){
+  /* enquanto está no hero, o preço fica escondido de vez (sem ocupar espaço) para os links caberem na tela de notebook */
+  .pos-page .subnav.in-hero:not(.stuck) .mini{display:none}
+  .subnav.in-hero nav a{padding-left:10px;padding-right:10px}
+}
