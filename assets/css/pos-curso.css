@@ -271,3 +271,41 @@ body.pos-page{background:#000}
   .pos-page .subnav.in-hero:not(.stuck) .mini{display:none}
   .subnav.in-hero nav a{padding-left:10px;padding-right:10px}
 }
+
+/* ---------- certificações, versão trabalhada: vidro com borda em degradê, número em marca-d'água, barra de progresso por fase ---------- */
+.pcert{gap:12px}
+.pcert::before{top:36px;left:6%;right:10%;opacity:.5}
+.pcert li{min-height:250px;padding:20px 20px 22px;gap:10px;overflow:hidden;isolation:isolate;background:linear-gradient(#120b22,#120b22) padding-box,linear-gradient(160deg,rgba(255,255,255,.22),rgba(255,255,255,.04) 45%,rgba(102,69,177,.45)) border-box;border:1px solid transparent;box-shadow:0 20px 40px -30px rgba(0,0,0,.8);transition:transform .35s,box-shadow .35s}
+.pcert li::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 55% at 100% 0%,rgba(102,69,177,.28),transparent 60%)}
+.pcert li::after{content:attr(data-n);position:absolute;right:14px;top:4px;z-index:-1;font-family:var(--display);font-weight:800;font-size:72px;letter-spacing:-.05em;line-height:1;color:rgba(255,255,255,.06)}
+.pcert li:hover{transform:translateY(-5px);box-shadow:0 30px 50px -28px rgba(102,69,177,.7)}
+.pcert .pc-n{width:36px;height:36px;font-size:13.5px;box-shadow:0 0 0 6px #120b22,0 8px 18px -8px rgba(255,177,42,.9);margin-bottom:10px}
+.pcert .pc-k{font-size:10px;letter-spacing:.16em}
+.pcert h3{font-size:16px;line-height:1.22}
+.pcert .pc-m{margin-top:auto;font-size:12px;letter-spacing:.02em;color:rgba(255,255,255,.55)}
+.pcert .pc-bar{display:block;height:4px;border-radius:4px;background:rgba(255,255,255,.1);overflow:hidden}
+.pcert .pc-bar::before{content:'';display:block;height:100%;width:calc(var(--p) * 100%);border-radius:4px;background:linear-gradient(90deg,var(--purple-royal),var(--yellow));transform-origin:left;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.7,.2,1) .15s}
+.pcert.in .pc-bar::before,.pcert.is-in .pc-bar::before,.pcert.visible .pc-bar::before{transform:scaleX(1)}
+.pcert .pc-final{background:radial-gradient(80% 70% at 100% 0%,rgba(237,20,91,.55),transparent 60%),radial-gradient(70% 60% at 0% 100%,rgba(102,69,177,.6),transparent 65%),#1a0d2e;border:1px solid rgba(237,20,91,.6);box-shadow:0 30px 60px -30px rgba(237,20,91,.7)}
+.pcert .pc-final::after{content:'';}
+.pcert .pc-final::before{background:none}
+.pcert .pc-logo{height:14px;width:auto;filter:brightness(0) invert(1);opacity:.9;margin:4px 0 14px;align-self:flex-start}
+.pcert .pc-final .pc-k{margin-top:0;color:#ff8fb0}
+.pcert .pc-final .pc-k svg{width:18px;height:18px}
+.pcert .pc-final h3{font-size:19px}
+.pcert .pc-final .pc-m{color:rgba(255,255,255,.85);font-size:12.5px}
+@media (max-width:1080px){ .pcert li{min-height:0} .pcert .pc-final{flex-direction:row;align-items:center;flex-wrap:wrap;gap:6px 18px} .pcert .pc-final .pc-logo{margin:0 12px 0 0} }
+
+/* ---------- 'Você vai se preparar para', versão trabalhada: tile do ícone em degradê, número grande em marca-d'água, linha de acento no hover ---------- */
+.pc-outs{gap:16px}
+.pc-out{padding:28px 26px 30px;min-height:236px;display:flex;flex-direction:column;background:linear-gradient(#110a1f,#110a1f) padding-box,linear-gradient(160deg,rgba(255,255,255,.2),rgba(255,255,255,.04) 45%,rgba(102,69,177,.4)) border-box;border:1px solid transparent;box-shadow:0 20px 40px -30px rgba(0,0,0,.8)}
+.pc-out::before{opacity:1;background:radial-gradient(70% 55% at 100% 100%,rgba(102,69,177,.22),transparent 60%)}
+.pc-out::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--purple-royal),var(--fiap));transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.pc-out:hover{transform:translateY(-5px);border-color:transparent;box-shadow:0 30px 50px -28px rgba(102,69,177,.7)}
+.pc-out:hover::after{transform:scaleX(1)}
+.pc-out .top{margin-bottom:22px}
+.pc-out .ic{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,#FFB12A,#ff7a2a);color:#1a0d2e;box-shadow:0 10px 24px -10px rgba(255,177,42,.8)}
+.pc-out .ic svg{width:24px;height:24px;stroke-width:1.7}
+.pc-out .num{font-size:54px;letter-spacing:-.05em;color:rgba(255,255,255,.08);line-height:1}
+.pc-out h3{font-size:clamp(20px,1.7vw,24px);margin-bottom:12px}
+.pc-out p{font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.7);max-width:34ch}
