@@ -188,8 +188,6 @@
   addEventListener('resize', encaixa);
   addEventListener('load', encaixa);
   if (document.fonts) document.fonts.ready.then(encaixa);
-  /* fechar a faixa de campanha libera espaço: recalcula */
-  document.addEventListener('click', e => { if (e.target.closest('#camp button')) requestAnimationFrame(encaixa); });
 })();
 
 /* sem viúvas em todo o site: as últimas palavras de parágrafos, listas e legendas ficam juntas

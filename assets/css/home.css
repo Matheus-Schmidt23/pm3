@@ -1,13 +1,5 @@
 /* PM3 · Home */
 
-/* ---------- faixa de campanha (tem data de saída) ---------- */
-.camp{background:var(--yellow);color:#000;font-size:14px}
-.camp .wrap{display:flex;align-items:center;justify-content:center;gap:14px;min-height:44px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;text-align:center}
-.camp b{font-family:var(--display);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px}
-.camp a{font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#000}
-.camp button{background:none;border:0;cursor:pointer;font-size:20px;line-height:1;padding:4px 8px;margin-left:auto}
-.camp.off{display:none}
-
 /* ---------- hero ---------- */
 /* hero em cards, no mesmo sistema da Membership e da Pós Tech: texto, foto, número e atalhos */
 /* --livre e --s vêm do layout.js: o grid ocupa a primeira dobra e, se faltar altura, os tamanhos encolhem juntos */
@@ -212,8 +204,6 @@
   .free a:nth-child(n+3){border-top:1px solid var(--line)}
 }
 @media (max-width:600px){
-  .camp .wrap{justify-content:flex-start;text-align:left;gap:10px;flex-wrap:nowrap}
-  .camp .wrap > span{display:none}
   .h-hero h1{font-size:58px}
   .h-pic{aspect-ratio:4/5}
   .intent ul{grid-template-columns:1fr}
