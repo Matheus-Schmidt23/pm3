@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=30">
 <link rel="stylesheet" href="assets/css/components.css?v=9">
-<link rel="stylesheet" href="assets/css/content.css">
+<link rel="stylesheet" href="assets/css/hero-card.css?v=3">
+<link rel="stylesheet" href="assets/css/content.css?v=3">
 <script type="application/ld+json" id="ld-bc">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
  {"@type":"ListItem","position":1,"name":"Home","item":"https://pm3.com.br/"},
@@ -28,19 +29,35 @@
 
 <main>
 
-<!-- 1 · BUSCA -->
-<section class="faq-hero on-dark" aria-labelledby="h1">
-  <div class="wrap">
-    <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">FAQ</li></ol>
-    <div class="faq-hero-grid">
-      <h1 class="display" id="h1">Perguntas<br><span class="c2">frequentes</span></h1>
-      <div data-nota="O FAQ atual é de 2022, repete as mesmas perguntas em várias seções e cria 158 páginas de FAQ de curso. Aqui: cada pergunta aparece uma vez, com busca, e as respostas foram atualizadas para o Membership.">
-        <label class="search"><span class="sr-only">Buscar uma dúvida</span>
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6.5"/><path d="m14 14 4 4"/></svg>
-          <input id="fq" type="search" placeholder="Ex.: Pix, certificado, NuPay, renovação" autocomplete="off">
-        </label>
-        <p class="hint">Mais buscadas: <button type="button" data-q="pix">Pix</button> · <button type="button" data-q="certificado">certificado</button> · <button type="button" data-q="nupay">NuPay</button> · <button type="button" data-q="empresa">empresa</button></p>
+<!-- 1 · HERO -->
+<section class="m-hero on-dark" aria-labelledby="h1">
+  <div class="m-hero-grid">
+    <div class="m-main grain" data-nota="O FAQ atual é de 2022, repete as mesmas perguntas em várias seções e cria 158 páginas de FAQ de curso. Aqui: cada pergunta aparece uma vez, com busca, e as respostas foram atualizadas para o Membership. Hero no mesmo sistema de cards das outras páginas.">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+      <svg class="three" viewBox="0 0 55 55" aria-hidden="true"><path d="M47.9654 0H6.74073C3.01862 0 0 3.01757 0 6.73838V47.9486C0 51.6694 3.01862 54.687 6.74073 54.687H32.6165C37.0037 54.687 41.5188 49.7131 41.5188 44.0488C41.5188 37.6301 35.2897 32.4261 28.8688 32.4261H20.0687V29.3062L36.7351 13.4768H11.7163V8.59239H44.8572V11.9552L44.2944 12.4922L28.6513 27.5289C38.27 27.5289 46.4177 35.4564 46.4177 44.036C46.4177 48.2555 44.8956 51.7973 42.5165 54.6742H47.9526C51.6747 54.6742 54.6933 51.6567 54.6933 47.9358V6.73838C54.6933 3.01757 51.6747 0 47.9526 0"/></svg>
+      <div>
+        <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">FAQ</li></ol>
+        <h1 class="display" id="h1">FAQ<span class="em">Pesquise aqui por tópicos quais as nossas perguntas mais frequentes.</span></h1>
+        <p class="lead">Descontos e formas de pagamento, formações, sprints, pós-graduação, comunidade e PM3.</p>
       </div>
+      <div>
+        <label class="search"><span class="sr-only">Pesquise sua dúvida</span>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6.5"/><path d="m14 14 4 4"/></svg>
+          <input id="fq" type="search" placeholder="Ex.: Pagamento parcelado..." autocomplete="off">
+        </label>
+        <p class="hint">Tópicos: <button type="button" data-g="formas-de-pagamento">Descontos e formas de pagamento</button> · <button type="button" data-g="sobre-a-pm3">Sobre a PM3</button> · <button type="button" data-g="formacao">Formações</button> · <button type="button" data-g="sprints">Sprints</button> · <button type="button" data-g="pos-graduacao">Pós-graduação</button> · <button type="button" data-g="sobre-a-comunidade">Sobre a Comunidade</button></p>
+        <div class="m-safe">
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 1.5 3 9h4.5L7 14.5 13 7H8.5z"/></svg>Pix com 10% de desconto</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="3.5" width="13" height="9" rx="2"/><path d="M1.5 6.5h13"/></svg>Até 12x sem juros no cartão</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 1.5 2.5 3.8v3.7c0 3.2 2.3 6 5.5 7 3.2-1 5.5-3.8 5.5-7V3.8z"/><path d="m5.6 8 1.7 1.7 3.2-3.4"/></svg>Reembolso em até 7 dias</span>
+        </div>
+      </div>
+    </div>
+    <div class="m-photo" style="background-image:url('assets/img/foto-sofa-fone.jpg');background-position:50% 20%" role="img" aria-label="Aluna estudando no sofá com fones e notebook"><span class="tag">Dúvidas de quem estuda na PM3</span></div>
+    <div class="m-tile">
+      <span class="ic ic-tl" style="left:0;top:0;--c:#000;--r:40px" aria-hidden="true"></span>
+      <div class="big" id="fq-n">52<small>respostas, em seis temas</small></div>
+      <p>Ainda possui alguma pergunta? Fale com a equipe de atendimento por WhatsApp ou e-mail.</p>
     </div>
   </div>
 </section>
@@ -50,7 +67,7 @@
   <nav class="faq-nav" id="fnav" aria-label="Temas das perguntas"></nav>
   <div>
     <div id="groups"></div>
-    <div class="faq-empty" id="fempty"><b>Nenhum resultado para esta busca</b>Entre em contato pelo WhatsApp ou pelo e-mail contato@pm3.com.br.</div>
+    <div class="faq-empty" id="fempty"><b>Não encontramos nenhuma pergunta com esses termos:</b>Observe se não há erros nas palavras digitadas; procure por termos semelhantes ao buscado; tente palavras menos específicas.</div>
   </div>
 </div>
 
@@ -58,13 +75,13 @@
 <section class="section white" aria-labelledby="aj-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker">Ainda com dúvida</p><h2 class="h2" id="aj-t">Fale com<br><span class="c2">o atendimento</span></h2></div>
-      <p class="lead">O time de atendimento responde por WhatsApp e e-mail. Para empresas, há um time dedicado.</p>
+      <div><p class="kicker"><span class="n">01</span> Ainda com dúvida</p><h2 class="h2" id="aj-t">Ainda possui<br><span class="c2">alguma pergunta?</span></h2></div>
+      <p class="lead">Entre em contato com nossa equipe de atendimento.</p>
     </div>
-    <div class="helpbar" data-nota="Um WhatsApp só para o site inteiro (hoje são dois números, com página intermediária).">
-      <a class="reveal" href="#"><b>WhatsApp</b><span>Atendimento para alunos e interessados</span></a>
-      <a class="reveal" data-d="1" href="#"><b>contato@pm3.com.br</b><span>Pagamentos, acesso e certificados</span></a>
-      <a class="reveal" data-d="2" href="para-empresas.html#proposta"><b>Para empresas</b><span>Licenças, trilhas, in company e eventos</span></a>
+    <div class="helpbar" data-nota="Os dois WhatsApps do botão flutuante do site atual (não sou aluno / já sou aluno) e o e-mail de contato, no lugar do chat.">
+      <a class="reveal" href="https://go.pm3.com.br/wppvioleta" target="_blank" rel="noopener"><b>WhatsApp</b><span>Não sou aluno e tenho dúvidas</span></a>
+      <a class="reveal" data-d="1" href="https://go.pm3.com.br/wppblip" target="_blank" rel="noopener"><b>WhatsApp</b><span>Já sou aluno</span></a>
+      <a class="reveal" data-d="2" href="mailto:contato@pm3.com.br"><b>contato@pm3.com.br</b><span>Pagamentos, acesso e certificados</span></a>
     </div>
   </div>
 </section>
@@ -72,47 +89,206 @@
 </main>
 
 <script>
-/* FAQ: uma fonte só. No site real, vem do CMS e é renderizado no servidor, com FAQPage. */
+/* FAQ: as 52 perguntas do FAQ atual de pm3.com.br, nos mesmos seis temas e com o mesmo texto. No site real, vem do CMS e é renderizado no servidor, com FAQPage. */
 window.PM3_FAQ = [
- { id:'pagamento', nome:'Pagamento e descontos', qs:[
-  ['Quais são as formas de pagamento?', '<p>Você pode pagar à vista via Pix, parcelar em até 12x sem juros no cartão de crédito ou pagar pelo NuPay.</p><p>As opções valem para pessoa física, com nota fiscal emitida no seu CPF. A Pós Tech tem condições próprias de matrícula, em até 18x.</p>'],
-  ['Há desconto no pagamento via Pix?', '<p>Sim. Os cursos da PM3 têm 10% de desconto no pagamento via Pix. O QR Code é gerado diretamente no checkout.</p>'],
-  ['Como funciona o NuPay?', '<p>O NuPay é a forma de pagamento do Nubank para pessoas físicas. A compra é concluída no aplicativo do banco.</p>'],
-  ['É possível parcelar no boleto?', '<p>Não. O boleto é aceito apenas para pagamento à vista. Para outras formas de pagamento, entre em contato pelo e-mail contato@pm3.com.br ou pelo WhatsApp.</p>'],
-  ['Há parcelamento que não compromete o limite do cartão?', '<p>Para conhecer as opções de parcelamento inteligente, entre em contato pelo e-mail suporte@pm3.com.br ou pelo WhatsApp.</p>'],
-  ['Como comprar um curso para solicitar reembolso à empresa?', '<p>Faça a compra como pessoa física, no cartão de crédito em até 12x ou via Pix, e solicite o reembolso à sua empresa. A nota fiscal é enviada por e-mail em até 24 horas, sempre no valor integral da compra, mesmo quando parcelada.</p>'],
-  ['Posso usar cupom de desconto na pré-venda?', '<p>Na pré-venda, os descontos não são cumulativos, exceto o desconto do Pix. O valor exibido no checkout já é o valor final, e o desconto diminui à medida que a data de lançamento se aproxima.</p>']]},
- { id:'membership', nome:'Membership e assinaturas', qs:[
-  ['O que está incluso no Membership?', '<p>12 meses de acesso às 10 formações e a mais de 40 sprints, com mentorias, workshops ao vivo, a Comunidade PM3 e certificados de cada curso.</p><p>O Membership não inclui a Pós Tech, que é uma pós-graduação com matrícula e valor próprios.</p>'],
-  ['Qual a diferença entre Membership e PM3 Sprints?', '<p>A assinatura PM3 Sprints dá acesso só às sprints. O Membership inclui as sprints e também as 10 formações.</p>', 'Resposta atualizada: o FAQ atual diz que as formações são sempre vendidas à parte, o que não vale mais com o Membership.'],
-  ['Como funciona a renovação automática?', '<p>A assinatura anual é renovada automaticamente no mesmo cartão usado na compra. Compras via Pix ou NuPay não são renovadas automaticamente.</p><p>Para cancelar a renovação, envie um e-mail para contato@pm3.com.br antes da data de renovação. Você recebe pelo menos dois avisos por e-mail antes da cobrança, e o acesso continua até o fim do período contratado.</p>', 'Texto atual fala da PM3 Sprints. Confirmar se o Membership segue a mesma regra.'],
-  ['Qual é a política de reembolso?', '<p>Você pode solicitar o reembolso em até 7 dias após a compra, pelo e-mail contato@pm3.com.br.</p>']]},
- { id:'cursos', nome:'Formações e sprints', qs:[
-  ['Os cursos são online ou presenciais?', '<p>As formações e sprints são 100% online e sob demanda: você estuda no seu tempo e ritmo, sem turmas presenciais. Além das aulas gravadas, há atividades ao vivo:</p><ul><li>mentorias em grupo para esclarecer dúvidas</li><li>workshops práticos e grupos de estudo</li><li>orientações individuais</li><li>palco da comunidade, eventos e networking</li></ul>'],
-  ['Qual é o prazo para concluir um curso?', '<p>Depende da oferta contratada. No Membership, o prazo é de 12 meses. O prazo consta no e-mail de confirmação da compra e também pode ser consultado pelo e-mail contato@pm3.com.br.</p>'],
-  ['Preciso de mais prazo para concluir um curso. O que fazer?', '<p>Envie um e-mail para contato@pm3.com.br solicitando prazo adicional e informe o curso que deseja concluir para obter o certificado.</p>'],
-  ['Como funcionam as mentorias ao vivo?', '<p>São encontros ao vivo com profissionais de referência do mercado para esclarecer dúvidas, aprender práticas e frameworks e trocar experiências com pessoas que enfrentam desafios semelhantes. A participação não é obrigatória e não afeta o seu progresso no curso.</p>'],
-  ['Como funcionam as atividades práticas?', '<p>São exercícios baseados em empresas reais ou em cenários hipotéticos, para você aplicar o conteúdo antes de levá-lo ao trabalho.</p>'],
-  ['Os cursos têm legendas ou outros recursos de acessibilidade?', '<p>Alguns cursos já são 100% transcritos e legendados. A PM3 está ampliando esses recursos para todo o catálogo.</p>']]},
- { id:'certificados', nome:'Certificados', qs:[
-  ['Os certificados das formações e sprints são reconhecidos pelo MEC?', '<p>Não. Formações e sprints são cursos livres, com certificado emitido pela PM3. Se você precisa de um certificado de pós-graduação reconhecido pelo MEC, conheça a <a href="pos-tech.html">Pós Tech</a>, que tem matrícula própria e não faz parte do Membership.</p>'],
-  ['Preciso de nota mínima para receber o certificado?', '<p>Sim. Para receber o certificado das sprints, é necessário ter 70% de aproveitamento.</p>', 'Regra citada só para as sprints no FAQ atual. Confirmar para as formações.']]},
- { id:'pos', nome:'Pós Tech', qs:[
-  ['Qual a diferença entre a formação Product Management e a pós em Digital Product Management?', '<p>A formação é um curso livre, 100% online e sob demanda, focado nos temas essenciais de gestão de produtos. A pós em Digital Product Management, criada pela PM3 com a FIAP, tem 10 meses, 360 horas, projeto em 5 fases e certificado reconhecido pelo MEC.</p>'],
-  ['A Pós Tech é reconhecida pelo MEC?', '<p>Sim. A Pós Tech é uma pós-graduação da FIAP, criada com a PM3, com certificado reconhecido pelo MEC. É um produto separado do Membership, com matrícula e valor próprios. <a href="pos-tech.html">Conheça as três pós</a>.</p>']]},
- { id:'empresas', nome:'Para empresas', qs:[
-  ['Existe desconto para compras em grupo?', '<p>Sim. A PM3 oferece condições especiais para empresas, definidas caso a caso conforme o número de licenças. <a href="para-empresas.html#proposta">Solicite uma proposta</a>.</p>'],
-  ['A PM3 oferece treinamento in company?', '<p>Sim. A PM3 desenvolve programas in company sob medida, nos formatos ao vivo, gravado ou presencial, e também oferece licenças e trilhas da plataforma. <a href="para-empresas.html">Veja os formatos</a>.</p>', 'O FAQ atual chama o in company de "PM3 Boost". Confirmar se o nome continua.']]},
- { id:'comunidade', nome:'Comunidade', qs:[
-  ['Alunos têm acesso à Comunidade PM3?', '<p>Sim. Alunos têm acesso à Comunidade PM3 durante o período de acesso aos cursos, com atividades ao vivo, discussões, materiais e vagas de emprego.</p>']]},
- { id:'pm3', nome:'Sobre a PM3', qs:[
-  ['Onde estão os termos de uso?', '<p>Os termos com as regras de uso da plataforma e de acesso aos cursos estão em <a href="#">pm3.com.br/termos-de-uso</a>.</p>'],
-  ['Não encontrei a minha dúvida. Como entro em contato?', '<p>Entre em contato com o time de atendimento pelo WhatsApp ou pelo e-mail contato@pm3.com.br.</p>']]}
+ {
+  "id" : "formas-de-pagamento",
+  "nome" : "Descontos e formas de pagamento",
+  "qs" : [
+ [ "Tem parcelamento inteligente?",
+    "<p>Para saber mais informações sobre métodos de pagamento que não comprometem o limite do seu cartão de crédito, como o parcelamento inteligente, entre em contato com <a href=\"mailto:suporte@pm3.com.br\">suporte@pm3.com.br</a> ou pelo nosso <a href=\"https://go.pm3.com.br/whatsPM3\">whatsapp</a> 🙂</p>"
+   ],
+ [ "Como funciona a renovação automática da assinatura PM3 Sprints?",
+    "<p>Para evitar interrupções nos seus estudos, nós utilizamos a renovação automática na assinatura PM3 Sprints. Isso significa que, quando o seu plano anual terminar, sua assinatura será renovada automaticamente por mais um ano. A cobrança será realizada no mesmo cartão de crédito que você utilizou inicialmente. <strong>Importante: Se a sua assinatura foi realizada via PIX ou Nupay, a renovação automática não ocorrerá.</strong></p>\n<p>Caso prefira não ter sua assinatura renovada automaticamente, você pode cancelar essa opção. Basta enviar um e-mail para <a href=\"mailto:contato@pm3.com.br\">contato@pm3.com.br</a> em qualquer momento antes da data de renovação. Mesmo após o cancelamento da renovação automática, seu acesso aos cursos permanecerá ativo até o término do período contratado.</p>\n<p>Além disso, para manter você sempre informado, enviaremos notificações por e-mail pelo menos duas vezes antes da data de renovação da sua assinatura. Isso lhe dá a oportunidade de cancelar a renovação automática com até <strong>3 dias de antecedência</strong> em relação à data de renovação programada.</p>"
+   ],
+ [ "Como funciona o NuPay?",
+    "<p>O NuPay é uma solução de pagamento online que permite que clientes do banco (pessoas físicas) finalizem suas compras com poucos cliques direto no app do Nubank. Ao entrar no aplicativo, você escolhe entre pagamento por crédito, com parcelamento em até 24 vezes, ou à vista, utilizando o saldo disponível em conta. </p>\n<p><a href=\"https://blog.nubank.com.br/tudo-sobre-nupay\">Saiba mais aqui</a>.</p>"
+   ],
+ [ "Quero comprar para a minha empresa. Existe desconto para grupos?",
+    "<p>Sim! Temos condições especiais para compras para empresas, é só entrar em contato<a href=\"https://pm3.com.br/pm3-para-empresas/\"> através deste formulário</a> e nos informar a quantidade de licenças que analisamos caso a caso.</p>"
+   ],
+ [ "Gostei! mas estou sem condições de fazer :/",
+    "<p>Para te ajudar, oferecemos a opção de pagar em 12x sem juros no cartão de crédito, mas entendemos que ainda podem haver dificuldades.</p>\n<p>Estamos buscando parceiros para financiamento de estudos, para que você possa elevar a barra junto com a gente. Aguarde novidades! 😉</p>"
+   ],
+ [ "Posso parcelar no boleto?",
+    "<p>Para pagamentos através de boleto nós <strong>não</strong> parcelamos.</p>\n<p>Se você ainda preferir pagar por boleto (<strong>apenas à vista</strong>) ou verificar outros métodos de pagamento, você pode enviar um e-mail para: <a href=\"mailto:contato@pm3.com.br,\">contato@pm3.com.br</a> ou <a href=\"https://go.pm3.com.br/VioletaPM3\">falar com a gente pelo WhatsApp</a>.</p>"
+   ],
+ [ "Tem desconto através do pix?",
+    "<p>Sim! Oferecemos 10% de desconto nos Cursos da PM3, através do pagamento via pix 🙂<br>\nO QR Code pode ser gerado diretamente na nossa página de checkout do curso escolhido!</p>"
+   ],
+ [ "Vou comprar mas pedirei reembolso para minha empresa. Como devo proceder?",
+    "<p>É simples! Neste caso você pode realizar a compra como pessoa física, podendo parcelar em até 12x sem juros no cartão ou no pix e solicitar o reembolso para a sua empresa.</p>\n<p>&nbsp;</p>\n<p>A nota fiscal é enviada para o seu e-mail até 24 horas após a compra e, mesmo que seja uma compra parcelada, a NF é no valor integral da compra.</p>\n<p>&nbsp;</p>\n<p>Em caso de dúvidas, pode <a href=\"https://go.pm3.com.br/VioletaPM3?_gl=1*1x2ooll*_gcl_aw*R0NMLjE3NzQwMTA3MDQuQ2owS0NRanc0UFBOQmhEOEFSSXNBTW8taWN3MkU1dzVUNVFTZjB4eEo5Yi0tY2tYRWFxUEJaTWhscTFld0Jub2xYMmo4dHJ4dDJoMjBaRWFBdU9sRUFMd193Y0I.*_gcl_au*NTI0NzA0NjI3LjE3NzM2OTA3NTg.*_ga*MTcwMTEyMjk0LjE3NzM2OTA3NTk.*_ga_9CB1PP14P9*czE3NzQzODM0NjUkbzEyJGcwJHQxNzc0MzgzNDczJGo1MiRsMCRoOTU4OTIxNzA1\">acessar esse link</a> ou entrar em contato com a gente pelo e-mail <a href=\"mailto:contato@pm3.com.br\">contato@pm3.com.br</a></p>"
+   ],
+ [ "Tive problemas e vou precisar de mais tempo pra fazer o curso.",
+    "<p>Fica frio! Entendemos que imprevistos acontecem. Como queremos tornar o Brasil referência mundial em produto, a gente quer é que os nossos alunos se formem (e assim continuem desenvolvendo produtos incríveis).</p>\n<p>Envie um e-mail para: <a href=\"mailto:contato@pm3.com.br,\">contato@pm3.com.br,</a> e solicite um tempo a mais para você finalizar o curso e garantir o seu certificado.  🙂</p>"
+   ]
+  ]
+ },
+ {
+  "id" : "sobre-a-pm3",
+  "nome" : "Sobre a PM3",
+  "qs" : [
+ [ "Onde posso acessar os Termos e Condições de uso da PM3?",
+    "<p>Basta acessar esse link: <a href=\"https://pm3.com.br/termos-de-uso/\">https://pm3.com.br/termos-de-uso/</a><br>\nNele contém todas as informações que você precisa saber sobre o uso da nossa plataforma, acesso aos cursos e mais.</p>"
+   ],
+ [ "Vocês fazem treinamento in-company (presencial)?",
+    "<p>Para soluções in company temos agora o PM3 Boost, uma experiência imersiva e customizada de aprendizado construída junto a empresa para capacitar e engajar os times. Essa imersão pode ser online ou presencial, a depender da necessidade da sua equipe.</p>\n<p>&nbsp;</p>\n<p><a href=\"https://pm3.com.br/pm3-para-empresas/\">Consulte um de nossos especialistas</a> para saber mais detalhes e começar o planejamento do desenvolvimento do seu time!</p>"
+   ],
+ [ "Os certificados das Formações e Sprints são reconhecidos pelo MEC?",
+    "<p>Embora os nossos certificados não sejam reconhecidos pelo MEC, eles são tidos como <em>plus</em>/diferencial em diversas vagas em Produto.</p>\n<p>Ter o certificado da <a href=\"https://chat.openai.com/?q=vagas%20pedindo%20PM3%20como%20diferencial\">PM3 já é pré-requisito em muitas vagas</a> do mercado e pode ser um grande diferencial, na hora que os recrutadores virem o seu perfil e te chamarem para a entrevista.</p>"
+   ],
+ [ "Ainda tenho outras dúvidas, o que faço?",
+    "<p>Caso tenha outras dúvidas, você pode enviar uma mensagem pelo <a href=\"https://go.pm3.com.br/whatsPM3?\">WhatsApp, clicando aqui</a>; ou enviar um e-mail para o nosso suporte: <strong><a href=\"mailto:contato@pm3.com.br\">contato@pm3.com.br</a></strong>.</p>"
+   ]
+  ]
+ },
+ {
+  "id" : "formacao",
+  "nome" : "Formações",
+  "qs" : [
+ [ "Tem parcelamento inteligente?",
+    "<p>Para saber mais informações sobre métodos de pagamento que não comprometem o limite do seu cartão de crédito, como o parcelamento inteligente, entre em contato com <a href=\"mailto:suporte@pm3.com.br\">suporte@pm3.com.br</a> ou pelo nosso <a href=\"https://go.pm3.com.br/whatsPM3\">whatsapp</a> 🙂</p>"
+   ],
+ [ "Como funciona o NuPay?",
+    "<p>O NuPay é uma solução de pagamento online que permite que clientes do banco (pessoas físicas) finalizem suas compras com poucos cliques direto no app do Nubank. Ao entrar no aplicativo, você escolhe entre pagamento por crédito, com parcelamento em até 24 vezes, ou à vista, utilizando o saldo disponível em conta. </p>\n<p><a href=\"https://blog.nubank.com.br/tudo-sobre-nupay\">Saiba mais aqui</a>.</p>"
+   ],
+ [ "Os cursos são online ou presenciais?",
+    "<p>Os cursos da PM3 são <strong>100% online</strong> e on <em>demand</em>, você pode fazer no seu tempo e ritmo. Nós<strong> não</strong> temos turmas ou aulas presenciais.</p>\n<p>Porém, apesar das aulas serem gravadas, ao matricular-se em qualquer curso com a gente, você recebe acesso a diversas atividades ao vivo que promovemos.</p>\n<p>Você terá um<strong> espaço seguro</strong> para se desenvolver continuamente em <strong>atividades ao vivo</strong>, como: </p>\n<ul>\n<li><strong>Mentorias em Grupo</strong> (para tirar dúvidas dos temas do curso)</li>\n<li><strong>Workshops práticos</strong></li>\n<li><strong>Grupos de estudos</strong></li>\n<li><strong>Orientações individuais</strong></li>\n<li><strong>Palco da Comunidade </strong>(apresente ou assista cases de colegas)</li>\n<li><strong>Diversas outras iniciativas e eventos </strong>(com palestras, encontros de networking, cases reais, e mais)</li>\n</ul>\n<p>Além de interações <strong>ao vivo</strong>, você terá <strong>discussões de alto nível</strong> (com os temas mais sobre liderança, produto e negócios); acesso aos materiais de apoio; vagas de emprego (e pode <strong>falar diretamente</strong> com quem está recrutando); e muito mais!</p>\n<p>Todos estes benefícios são sem precedentes no segmento educacional no Brasil. Você vai perceber que ter aulas até as 10 da noite não faz qualquer sentido.</p>"
+   ],
+ [ "Como funciona o parcelamento na compra dos cursos?",
+    "<p>Você pode pagar à vista via Pix, parcelar a compra do seu curso em até 12x vezes sem juros no cartão de crédito ou pagar via Nupay em até 24 vezes sem juros.</p>\n<p>&nbsp;</p>\n<p>Lembrando que estas opções são válidas <strong>a</strong><strong>penas para pessoa física</strong>, com nota fiscal no seu CPF. 😉</p>"
+   ],
+ [ "Como são os cursos por dentro?",
+    "<p>Quer ter um gostinho de como é estudar com a PM3? <a href=\"https://www.youtube.com/watch?v=nMOjejEzBNY\"><strong>Criamos um vídeo</strong></a> que mostra a experiência de acessar a plataforma do curso e a comunidade exclusiva para alunos e alunas. Confira clicando na imagem abaixo.</p>\n<p><a href=\"https://www.youtube.com/watch?v=nMOjejEzBNY\"><img src=\"https://pm3.com.br/wp-content/uploads/2021/04/curso-product-management-pm3-por-dentro-1.png\" alt=\"curso product management pm3 por dentro\"></a></p>"
+   ],
+ [ "Consigo usar um cupom de desconto na pré-venda?",
+    "<p>Uma das políticas de pré-venda, é que <strong>não temos descontos acumulativos</strong> (exceto no PIX). O valor apresentado no <em>checkout</em> do curso é o valor final!</p>\n<p><strong>Mas atenção: </strong>quanto mais nos aproximamos do <strong>dia de lançamento</strong> do curso, <strong>menor é o desconto</strong>. Então corra e garanta essa condição especial por tempo limitado. 😉</p>\n<p>Vem elevar a barra em Produto com a gente!</p>"
+   ],
+ [ "Após me inscrever, quanto tempo tenho pra concluir o curso?",
+    "<p>Isso dependa da oferta que você comprou.</p>\n<p>&nbsp;</p>\n<p>Esse prazo aparece no email de confirmação de compra, mas você também pode consultá-lo pelo nosso suporte, no email: <a href=\"mailto:contato@pm3.com.br\">contato@pm3.com.br</a></p>"
+   ],
+ [ "Os cursos têm legendas ou outros tipos de acessibilidade?",
+    "<p>Este é um ponto muito importante que consideramos ouvindo o <em>feedback</em> de quem estuda com a gente, e nosso time está já trabalhando nisso.</p>\n<p>Já temos alguns cursos 100% transcritos (com todas as falas e slides) e legendados (dentro do próprio vídeo). Este é um trabalho contínuo aqui na PM3 para disponibilizarmos o restante para todos os alunos e alunas assim que possível!</p>"
+   ],
+ [ "Posso parcelar no boleto?",
+    "<p>Para pagamentos através de boleto nós <strong>não</strong> parcelamos.</p>\n<p>Se você ainda preferir pagar por boleto (<strong>apenas à vista</strong>) ou verificar outros métodos de pagamento, você pode enviar um e-mail para: <a href=\"mailto:contato@pm3.com.br,\">contato@pm3.com.br</a> ou <a href=\"https://go.pm3.com.br/VioletaPM3\">falar com a gente pelo WhatsApp</a>.</p>"
+   ],
+ [ "Tem desconto através do pix?",
+    "<p>Sim! Oferecemos 10% de desconto nos Cursos da PM3, através do pagamento via pix 🙂<br>\nO QR Code pode ser gerado diretamente na nossa página de checkout do curso escolhido!</p>"
+   ],
+ [ "Vou comprar mas pedirei reembolso para minha empresa. Como devo proceder?",
+    "<p>É simples! Neste caso você pode realizar a compra como pessoa física, podendo parcelar em até 12x sem juros no cartão ou no pix e solicitar o reembolso para a sua empresa.</p>\n<p>&nbsp;</p>\n<p>A nota fiscal é enviada para o seu e-mail até 24 horas após a compra e, mesmo que seja uma compra parcelada, a NF é no valor integral da compra.</p>\n<p>&nbsp;</p>\n<p>Em caso de dúvidas, pode <a href=\"https://go.pm3.com.br/VioletaPM3?_gl=1*1x2ooll*_gcl_aw*R0NMLjE3NzQwMTA3MDQuQ2owS0NRanc0UFBOQmhEOEFSSXNBTW8taWN3MkU1dzVUNVFTZjB4eEo5Yi0tY2tYRWFxUEJaTWhscTFld0Jub2xYMmo4dHJ4dDJoMjBaRWFBdU9sRUFMd193Y0I.*_gcl_au*NTI0NzA0NjI3LjE3NzM2OTA3NTg.*_ga*MTcwMTEyMjk0LjE3NzM2OTA3NTk.*_ga_9CB1PP14P9*czE3NzQzODM0NjUkbzEyJGcwJHQxNzc0MzgzNDczJGo1MiRsMCRoOTU4OTIxNzA1\">acessar esse link</a> ou entrar em contato com a gente pelo e-mail <a href=\"mailto:contato@pm3.com.br\">contato@pm3.com.br</a></p>"
+   ],
+ [ "Tive problemas e vou precisar de mais tempo pra fazer o curso.",
+    "<p>Fica frio! Entendemos que imprevistos acontecem. Como queremos tornar o Brasil referência mundial em produto, a gente quer é que os nossos alunos se formem (e assim continuem desenvolvendo produtos incríveis).</p>\n<p>Envie um e-mail para: <a href=\"mailto:contato@pm3.com.br,\">contato@pm3.com.br,</a> e solicite um tempo a mais para você finalizar o curso e garantir o seu certificado.  🙂</p>"
+   ],
+ [ "Ainda tenho outras dúvidas, o que faço?",
+    "<p>Caso tenha outras dúvidas, você pode enviar uma mensagem pelo <a href=\"https://go.pm3.com.br/whatsPM3?\">WhatsApp, clicando aqui</a>; ou enviar um e-mail para o nosso suporte: <strong><a href=\"mailto:contato@pm3.com.br\">contato@pm3.com.br</a></strong>.</p>"
+   ]
+  ]
+ },
+ {
+  "id" : "sprints",
+  "nome" : "Sprints",
+  "qs" : [
+ [ "Tem parcelamento inteligente?",
+    "<p>Para saber mais informações sobre métodos de pagamento que não comprometem o limite do seu cartão de crédito, como o parcelamento inteligente, entre em contato com <a href=\"mailto:suporte@pm3.com.br\">suporte@pm3.com.br</a> ou pelo nosso <a href=\"https://go.pm3.com.br/whatsPM3\">whatsapp</a> 🙂</p>"
+   ],
+ [ "Ainda tenho outras dúvidas, o que faço?",
+    "<p>Caso tenha outras dúvidas, você pode enviar uma mensagem pelo <a href=\"https://go.pm3.com.br/whatsPM3?\">WhatsApp, clicando aqui</a>; ou enviar um e-mail para o nosso suporte: <strong><a href=\"mailto:contato@pm3.com.br\">contato@pm3.com.br</a></strong>.</p>"
+   ],
+ [ "Como funciona a renovação automática da assinatura PM3 Sprints?",
+    "<p>Para evitar interrupções nos seus estudos, nós utilizamos a renovação automática na assinatura PM3 Sprints. Isso significa que, quando o seu plano anual terminar, sua assinatura será renovada automaticamente por mais um ano. A cobrança será realizada no mesmo cartão de crédito que você utilizou inicialmente. <strong>Importante: Se a sua assinatura foi realizada via PIX ou Nupay, a renovação automática não ocorrerá.</strong></p>\n<p>Caso prefira não ter sua assinatura renovada automaticamente, você pode cancelar essa opção. Basta enviar um e-mail para <a href=\"mailto:contato@pm3.com.br\">contato@pm3.com.br</a> em qualquer momento antes da data de renovação. Mesmo após o cancelamento da renovação automática, seu acesso aos cursos permanecerá ativo até o término do período contratado.</p>\n<p>Além disso, para manter você sempre informado, enviaremos notificações por e-mail pelo menos duas vezes antes da data de renovação da sua assinatura. Isso lhe dá a oportunidade de cancelar a renovação automática com até <strong>3 dias de antecedência</strong> em relação à data de renovação programada.</p>"
+   ],
+ [ "O que está incluso na assinatura?",
+    "<p>Ao comprar a Assinatura Anual PM3 Sprints, você terá acesso a:</p>\n<p>&nbsp;</p>\n<ul>\n<li>Acesso a todos os cursos da PM3 Sprints, sobre Marketing, Dados, Inovação, Produto, Negócios, Design, Liderança e Habilidades Humanas por 12 meses, 24h por dia</li>\n<li>Atividades práticas a cada módulo</li>\n<li>Apresentações e frameworks compartilhados pelos instrutores, disponíveis para download;</li>\n<li>Networking na Comunidade PM3, a maior comunidade de produtos e negócios digitais do país;</li>\n<li>Certificados reconhecidos no mercado (sujeito a 70% de aproveitamento).</li>\n</ul>"
+   ],
+ [ "Os cursos da PM3 Sprints são ao vivo ou gravados?",
+    "<p>Os cursos da PM3 Sprints são 100% online e com aulas gravadas. Desta forma, você pode estudar onde, quando e no ritmo que quiser.</p>\n<p>&nbsp;</p>\n<p>Com a assinatura anual, você ainda tem acesso à Comunidade PM3, a maior comunidade de Negócios e Produtos Digitais do Brasil. Lá, você também terá acesso a atividades quinzenais ao vivo, para tirar dúvidas e trocar experiências com referências do mercado.</p>"
+   ],
+ [ "Como funciona o NuPay?",
+    "<p>O NuPay é uma solução de pagamento online que permite que clientes do banco (pessoas físicas) finalizem suas compras com poucos cliques direto no app do Nubank. Ao entrar no aplicativo, você escolhe entre pagamento por crédito, com parcelamento em até 24 vezes, ou à vista, utilizando o saldo disponível em conta. </p>\n<p><a href=\"https://blog.nubank.com.br/tudo-sobre-nupay\">Saiba mais aqui</a>.</p>"
+   ],
+ [ "E se eu não gostar dos cursos?",
+    "<p>Não se preocupe! Caso não goste dos cursos, você terá 7 dias após a compra para mandar um email para <a href=\"mailto:contato@pm3.com.br\">contato@pm3.com.br</a> e pedir seu dinheiro de volta. Sem pegadinhas. 😉</p>"
+   ],
+ [ "A assinatura dá acesso a todos os cursos da PM3?",
+    "<p>Não. A assinatura dá acesso a todos os cursos da PM3 Sprints, nossos conteúdos profundos em diversas áreas de conhecimento como: Negócios, Design, Inovação, Marketing, Dados, Produto e Liderança.</p>\n<p>&nbsp;</p>\n<p>As nossas formações, cursos completos com mais de 20h de duração: Curso de Product Management, Product Discovery, Product Analytics, Product Growth, Product Marketing, Product Design, Product Leadership e Analista de Dados. Estes são vendidos à parte. <a href=\"https://pm3.com.br/\">Confira todos os nossos cursos aqui.</a></p>"
+   ],
+ [ "Quero comprar para a minha empresa. Existe desconto para grupos?",
+    "<p>Sim! Temos condições especiais para compras para empresas, é só entrar em contato<a href=\"https://pm3.com.br/pm3-para-empresas/\"> através deste formulário</a> e nos informar a quantidade de licenças que analisamos caso a caso.</p>"
+   ],
+ [ "Os cursos têm certificado?",
+    "<p>Sim, todas as Sprints contam com certificados de peso e são reconhecidas no mercado.</p>"
+   ],
+ [ "Como funcionam as mentorias ao vivo?",
+    "<p>As #MentoriasEmGrupoPM3 são encontros ao vivo, para você interagir diretamente com um profissional referência do mercado, tirar suas dúvidas e aprender as melhores práticas, conceitos, ferramentas e frameworks, além de trocar com outras pessoas que vivem realidades e desafios semelhantes aos seus.</p>\n<p>&nbsp;</p>\n<p>É uma oportunidade perfeita para quem deseja conhecer ainda mais sobre o dia a dia, ampliar a sua rede de conexões e o seu repertório em Produto e Negócios Digitais.</p>\n<p>&nbsp;</p>\n<p>As atividades ao vivo não são obrigatórias na sua jornada de aprendizado, ou seja, elas não sobrecarregam a sua rotina, muito menos impedem o seu progresso nos cursos.</p>"
+   ],
+ [ "Como funcionam as atividades práticas?",
+    "<p>As atividades são pensadas para que você possa colocar a mão na massa por meio de exercícios, que podem ser baseados em empresas reais ou cenários hipotéticos, e assim colocar em prática o que aprendeu no curso antes de executar no seu trabalho, e ganhar mais confiança.</p>"
+   ],
+ [ "Terei acesso a Comunidade PM3?",
+    "<p>Sim, todos nossos alunos e alunas da PM3 Sprints tem acesso a Comunidade durante a vigência da assinatura.</p>"
+   ],
+ [ "Os cursos são online ou presenciais?",
+    "<p>Os cursos da PM3 são <strong>100% online</strong> e on <em>demand</em>, você pode fazer no seu tempo e ritmo. Nós<strong> não</strong> temos turmas ou aulas presenciais.</p>\n<p>Porém, apesar das aulas serem gravadas, ao matricular-se em qualquer curso com a gente, você recebe acesso a diversas atividades ao vivo que promovemos.</p>\n<p>Você terá um<strong> espaço seguro</strong> para se desenvolver continuamente em <strong>atividades ao vivo</strong>, como: </p>\n<ul>\n<li><strong>Mentorias em Grupo</strong> (para tirar dúvidas dos temas do curso)</li>\n<li><strong>Workshops práticos</strong></li>\n<li><strong>Grupos de estudos</strong></li>\n<li><strong>Orientações individuais</strong></li>\n<li><strong>Palco da Comunidade </strong>(apresente ou assista cases de colegas)</li>\n<li><strong>Diversas outras iniciativas e eventos </strong>(com palestras, encontros de networking, cases reais, e mais)</li>\n</ul>\n<p>Além de interações <strong>ao vivo</strong>, você terá <strong>discussões de alto nível</strong> (com os temas mais sobre liderança, produto e negócios); acesso aos materiais de apoio; vagas de emprego (e pode <strong>falar diretamente</strong> com quem está recrutando); e muito mais!</p>\n<p>Todos estes benefícios são sem precedentes no segmento educacional no Brasil. Você vai perceber que ter aulas até as 10 da noite não faz qualquer sentido.</p>"
+   ],
+ [ "Posso parcelar no boleto?",
+    "<p>Para pagamentos através de boleto nós <strong>não</strong> parcelamos.</p>\n<p>Se você ainda preferir pagar por boleto (<strong>apenas à vista</strong>) ou verificar outros métodos de pagamento, você pode enviar um e-mail para: <a href=\"mailto:contato@pm3.com.br,\">contato@pm3.com.br</a> ou <a href=\"https://go.pm3.com.br/VioletaPM3\">falar com a gente pelo WhatsApp</a>.</p>"
+   ]
+  ]
+ },
+ {
+  "id" : "pos-graduacao",
+  "nome" : "Pós-graduação",
+  "qs" : [
+ [ "Qual a diferença entre o curso de Product Management e a Pós-graduação Digital Product Management",
+    "<p>O Curso de Product Management da PM3 foca nos tópicos essenciais para gestores de produto, abrangendo desde a ideia até a execução e análise de dados, destinado a quem busca aprofundar conhecimentos específicos na área de gestão de produtos digitais. O curso é 100% online e on demand, sem aulas presenciais, mas com atividades ao vivo opcionais e +40 horas de conteúdo.</p>\n<p>&nbsp;</p>\n<p>Já a Pós-Graduação em Digital Product Management oferece uma experiência mais imersiva e detalhada, adequada para profissionais que desejam uma compreensão profunda e prática da área, além de oferecer uma experiência de aprendizado junto com uma turma, resultando em um ambiente de aprendizado mais contextual e colaborativo. A Pós é estruturada em turmas e atividades ao vivo planejadas, totalizando 360h de conteúdo.</p>\n<p>&nbsp;</p>\n<p><strong>Há sobreposição de conteúdo?</strong><br>\nSim, mas nas sobreposições, a pós-graduação utiliza professores diferentes para nova perspectiva ou gera conteúdo inédito para exploração mais detalhada.</p>"
+   ],
+ [ "Quais são os documentos necessários para a matrícula?",
+    "<p>Os seguintes documentos podem ser enviados no momento da matrícula ou você pode realizar a matrícula e enviar os documentos posteriormente, desde que seja antes do início das aulas:</p>\n<ul>\n<li>RG e CPF (cópia)</li>\n<li>Comprovante de residência (cópia)</li>\n<li>Histórico escolar da Graduação (cópia &#8211; é necessária a indicação da carga horária do curso, que deve ser igual ou superior a 1.600 horas/aula)</li>\n<li>Diploma da Graduação (cópia &#8211; não são aceitos cursos superiores de formação sequencial ou específica)</li>\n</ul>"
+   ],
+ [ "Sou aluno (a) ou ex-aluno (a) da FIAP ou PM3, como faço para ter o benefício de 20% OFF?",
+    "<p>Se você é aluno(a) ou ex-aluno(a) FIAP, no momento da matrícula, quando estiver inserindo seus dados, você será identificado(a) através do seu CPF. Assim, o desconto deverá aparecer automaticamente aplicado na tela “Plano de pagamento”.</p>\n<p>Se você é aluno(a) ou ex-aluno(a) de qualquer curso pago da PM3, no momento da matrícula, quando estiver inserindo seus dados, é só usar o mesmo e-mail que você utiliza ou costumava utilizar para acessar a plataforma da PM3. Seu e-mail será identificado e o desconto deverá aparecer automaticamente aplicado na tela “Plano de pagamento”.</p>\n<p>Dúvidas, entre em contato com time de atendimento FIAP:<br>\nE-mail: <a href=\"mailto:atendimento.postech@fiap.com.br\">atendimento.postech@fiap.com.br</a><br>\nWhats App: (11) 98170-0028</p>"
+   ],
+ [ "Quais são as formas de pagamento da pós-graduação?",
+    "<p>A Pós Tech pode ser paga à vista, em 12 vezes ou em 18 vezes pelo sistema da FIAP. Você pode optar por realizar o pagamento da primeira parcela via cartão de crédito ou boleto bancário. As demais parcelas serão cobradas via boleto bancário.</p>"
+   ],
+ [ "Qual é a instituição de ensino que emite o certificado de conclusão?",
+    "<p>O certificado de conclusão da Pós Tech será emitido pela FIAP, Centro Universitário de referência em tecnologia e nota máxima na avaliação do Ministério da Educação (MEC).</p>"
+   ],
+ [ "Com quem posso falar durante a pós-graduação?",
+    "<p>Você terá acesso à comunidade Pós Tech via Discord para compartilhar experiências, estudar, tirar dúvidas e construir soluções com seus colegas e professores.<br>\nAlém disso, a cada 15 dias você terá uma live hands-on com especialistas técnicos que ajudarão na construção do seu projeto.</p>\n<p>Ou ainda, entrar em contato com time de atendimento FIAP:</p>\n<p>E-mail: <a href=\"mailto:atendimento.postech@fiap.com.br\">atendimento.postech@fiap.com.br</a><br>\nWhats App: (11) 98170-0028</p>"
+   ],
+ [ "O que é a pós tech?",
+    "<p>Pós Tech são pós-graduações em diferentes áreas da tecnologia. Cursos de especialização técnica para graduados (lato sensu) desenhados por experts que contam com o melhor da FIAP, PM3 e da Alura – o maior ecossistema de ensino tech do Brasil.</p>"
+   ],
+ [ "Quem pode fazer Pós-graduação?",
+    "<p>Pessoas com formação superior completa realizada no Brasil e colação de grau em cursos Tecnólogos, Bacharelados ou Licenciaturas. Cursos de formação específica ou sequenciais não habilitam para ingresso em cursos de pós-graduação. Se você tiver realizado uma graduação fora do Brasil, por favor entre em contato pelo WhatsApp (11) 98170-0028 para orientações.</p>"
+   ]
+  ]
+ },
+ {
+  "id" : "sobre-a-comunidade",
+  "nome" : "Sobre a comunidade",
+  "qs" : [
+ [ "Como funcionam as mentorias ao vivo?",
+    "<p>As #MentoriasEmGrupoPM3 são encontros ao vivo, para você interagir diretamente com um profissional referência do mercado, tirar suas dúvidas e aprender as melhores práticas, conceitos, ferramentas e frameworks, além de trocar com outras pessoas que vivem realidades e desafios semelhantes aos seus.</p>\n<p>&nbsp;</p>\n<p>É uma oportunidade perfeita para quem deseja conhecer ainda mais sobre o dia a dia, ampliar a sua rede de conexões e o seu repertório em Produto e Negócios Digitais.</p>\n<p>&nbsp;</p>\n<p>As atividades ao vivo não são obrigatórias na sua jornada de aprendizado, ou seja, elas não sobrecarregam a sua rotina, muito menos impedem o seu progresso nos cursos.</p>"
+   ],
+ [ "Como funcionam as atividades práticas?",
+    "<p>As atividades são pensadas para que você possa colocar a mão na massa por meio de exercícios, que podem ser baseados em empresas reais ou cenários hipotéticos, e assim colocar em prática o que aprendeu no curso antes de executar no seu trabalho, e ganhar mais confiança.</p>"
+   ],
+ [ "Terei acesso a Comunidade PM3?",
+    "<p>Sim, todos nossos alunos e alunas da PM3 Sprints tem acesso a Comunidade durante a vigência da assinatura.</p>"
+   ]
+  ]
+ }
 ];
 
 (function(){
   const D = window.PM3_FAQ, $ = s => document.querySelector(s);
   const total = D.reduce((t, g) => t + g.qs.length, 0);
+  const tn = $('#fq-n'); if (tn) tn.firstChild.nodeValue = total;
   $('#fnav').innerHTML = `<button type="button" aria-pressed="true" data-g="todos">Todas<small>${total}</small></button>` +
     D.map(g => `<button type="button" aria-pressed="false" data-g="${g.id}">${g.nome}<small>${g.qs.length}</small></button>`).join('');
   $('#groups').innerHTML = D.map(g => `<section class="faq-group" id="${g.id}" aria-labelledby="t-${g.id}"><h2 id="t-${g.id}">${g.nome}<small>${g.qs.length} ${g.qs.length > 1 ? 'perguntas' : 'pergunta'}</small></h2>` +
@@ -147,9 +323,10 @@ window.PM3_FAQ = [
   $('#fnav').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return;
     grupo = b.dataset.g; document.querySelectorAll('#fnav button').forEach(x => x.setAttribute('aria-pressed', x === b)); aplica(); });
   $('#fq').addEventListener('input', e => { q = sem(e.target.value.trim()); aplica(); });
-  document.querySelectorAll('[data-q]').forEach(b => b.addEventListener('click', () => { $('#fq').value = b.dataset.q; q = sem(b.dataset.q); aplica(); }));
+  document.querySelectorAll('.hint [data-g]').forEach(b => b.addEventListener('click', () => { const t = document.querySelector('#fnav [data-g="' + b.dataset.g + '"]'); if (t){ t.click(); document.getElementById(b.dataset.g).scrollIntoView({ behavior: 'smooth', block: 'start' }); } }));
 })();
 </script>
 <script src="assets/js/layout.js?v=46"></script>
+<script src="assets/js/hero-card.js?v=2"></script>
 </body>
 </html>

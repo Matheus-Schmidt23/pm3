@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog da PM3: produto, IA, dados e carreira</title>
-<meta name="description" content="Artigos, guias e pesquisas sobre gestão de produtos, IA, dados, design, marketing e carreira em produto, escritos por quem faz produto no Brasil.">
+<title>Blog do Product Manager | Conteúdo sobre Product Management no Brasil</title>
+<meta name="description" content="Conteúdo de altíssima qualidade sobre tudo que um Product Manager (PM) precisa saber sobre o mercado de Product Management no Brasil.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://pm3.com.br/blog/">
 <meta property="og:title" content="Blog da PM3">
@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=30">
 <link rel="stylesheet" href="assets/css/components.css?v=9">
-<link rel="stylesheet" href="assets/css/content.css">
+<link rel="stylesheet" href="assets/css/hero-card.css?v=3">
+<link rel="stylesheet" href="assets/css/content.css?v=3">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -31,143 +32,168 @@
 
 <main>
 
-<!-- 1 · CABEÇALHO DO BLOG -->
-<section class="mast" aria-labelledby="h1" data-nota="O blog segue no WordPress atual, em /blog/ (os 910 posts não mudam de endereço). Só esta capa é refeita, com o mesmo cabeçalho e rodapé do site novo: hoje o blog tem menu próprio.">
-  <div class="wrap">
-    <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Blog</li></ol>
-    <div class="mast-grid">
-      <h1 class="display" id="h1">Blog<br><span class="c2">da PM3</span></h1>
+<!-- 1 · HERO -->
+<section class="m-hero on-dark" aria-labelledby="h1" data-nota="O blog segue no WordPress atual, em /blog/ (os 910 posts não mudam de endereço). Só esta capa é refeita, no mesmo sistema de cards das outras páginas, com o cabeçalho e o rodapé do site novo: hoje o blog tem menu próprio.">
+  <div class="m-hero-grid">
+    <div class="m-main grain">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+      <svg class="three" viewBox="0 0 55 55" aria-hidden="true"><path d="M47.9654 0H6.74073C3.01862 0 0 3.01757 0 6.73838V47.9486C0 51.6694 3.01862 54.687 6.74073 54.687H32.6165C37.0037 54.687 41.5188 49.7131 41.5188 44.0488C41.5188 37.6301 35.2897 32.4261 28.8688 32.4261H20.0687V29.3062L36.7351 13.4768H11.7163V8.59239H44.8572V11.9552L44.2944 12.4922L28.6513 27.5289C38.27 27.5289 46.4177 35.4564 46.4177 44.036C46.4177 48.2555 44.8956 51.7973 42.5165 54.6742H47.9526C51.6747 54.6742 54.6933 51.6567 54.6933 47.9358V6.73838C54.6933 3.01757 51.6747 0 47.9526 0"/></svg>
       <div>
-        <p class="lead">Produto, IA, dados e carreira, escritos por quem faz produto no Brasil. Guias, pesquisas e o que acontece nos eventos da comunidade.</p>
+        <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">Blog</li></ol>
+        <h1 class="display" id="h1">Blog<br><span class="l2">da PM3.</span><span class="em">Produto, IA, dados e carreira.</span></h1>
+        <p class="lead">Conteúdo de altíssima qualidade sobre tudo que um Product Manager (PM) precisa saber sobre o mercado de Product Management no Brasil.</p>
+      </div>
+      <div>
         <label class="search"><span class="sr-only">Buscar no blog</span>
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6.5"/><path d="m14 14 4 4"/></svg>
           <input id="bq" type="search" placeholder="Buscar artigos, guias e termos" autocomplete="off">
         </label>
+        <div class="m-safe">
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13M6 8.5h5M6 11h5"/></svg>916 artigos publicados</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 3h5a1 1 0 0 1 1 1v9.5a1 1 0 0 0-1-1H2zM14 3H9a1 1 0 0 0-1 1v9.5a1 1 0 0 1 1-1h5z"/></svg>Colunistas convidados</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>Glossário de Produto</span>
+        </div>
       </div>
     </div>
-    <nav class="cats" aria-label="Temas" data-nota="26 categorias e 115 tags viram 8 temas, a mesma taxonomia dos cursos (regra 5 da arquitetura). Categoria de cada post é proposta: revisar com o time de conteúdo.">
-      <button type="button" aria-pressed="true" data-c="todos">Todos</button>
-      <button type="button" aria-pressed="false" data-c="gestao">Gestão de produtos</button>
-      <button type="button" aria-pressed="false" data-c="ia">IA</button>
-      <button type="button" aria-pressed="false" data-c="dados">Dados</button>
-      <button type="button" aria-pressed="false" data-c="marketing">Marketing</button>
-      <button type="button" aria-pressed="false" data-c="design">Design</button>
-      <button type="button" aria-pressed="false" data-c="lideranca">Liderança</button>
-      <button type="button" aria-pressed="false" data-c="carreira">Carreira</button>
-      <button type="button" aria-pressed="false" data-c="eventos">Eventos</button>
-    </nav>
-  </div>
-</section>
-
-<!-- 2 · DESTAQUES -->
-<section class="section" aria-label="Destaques">
-  <div class="wrap feat">
-    <a class="post-big reveal" href="#"><div class="bg" style="background-image:url('assets/img/foto-equipe.jpg?v=4')"></div>
-      <span class="tag tag-yellow" style="align-self:flex-start">Eventos</span>
-      <h2>Product Camp 2026: tudo sobre o maior evento de produto da América Latina</h2>
-      <p>O encontro anual da comunidade de produto, em números: dois dias, seis palcos e mais de 3.000 pessoas.</p>
-    </a>
-    <div class="side">
-      <a class="post-sm reveal" data-d="1" href="#"><div class="im"><div style="background-image:url('assets/tex/tex-aurora.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">IA</span><span>PM3 Summit</span></div><h3>Sachin Rekhi no PM3 Summit: a IA está devolvendo o product management ao seu lugar mais estratégico</h3></a>
-      <a class="post-sm reveal" data-d="2" href="#"><div class="im"><div style="background-image:url('assets/tex/tex-dobras-azuis.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Gestão de produtos</span><span>Product Camp</span></div><h3>O que Marty Cagan ensinou no Product Camp sobre o futuro de produto e o Product Operating Model</h3></a>
+    <div class="m-photo" style="background-image:url('assets/img/foto-mesa-cafe.jpg');background-position:60% 30%" role="img" aria-label="Profissional lendo no notebook em um café"><span class="tag">Leitura de quem faz produto</span></div>
+    <div class="m-tile">
+      <span class="ic ic-tl" style="left:0;top:0;--c:#000;--r:40px" aria-hidden="true"></span>
+      <div class="big">916<small>artigos sobre produto,<br>carreira, dados e IA</small></div>
+      <p>Colunistas, glossário de produto e biblioteca, como no blog atual.</p>
     </div>
   </div>
 </section>
 
-<!-- 3 · MAIS RECENTES -->
+<!-- 2 · DESTAQUE -->
+<section class="section" aria-label="Destaque">
+  <div class="wrap feat">
+    <a class="post-big reveal" href="https://pm3.com.br/blog/panorama-do-mercado-de-produto-2026-2027/" target="_blank" rel="noopener"><div class="bg" style="background-image:url('assets/img/blog/capa-panorama-blog-1.jpg')"></div>
+      <span class="tag tag-yellow" style="align-self:flex-start">Carreira em Produto</span>
+      <h2>Panorama do Mercado de Produto 2026-2027: o que os dados revelam sobre o futuro da área</h2>
+      <p>2.337 responderam à edição do Panorama da PM3. Veja os dados de salário, carreira, empresas mais admiradas, maturidade e IA em Produto.</p>
+      <div class="pmeta"><span>Por Bruno Compri</span><span>27 de outubro de 2026</span></div>
+    </a>
+    <div class="hl reveal" data-d="1">
+      <p class="kicker">Destaques do mês</p>
+      <div class="glist">
+        <a href="https://pm3.com.br/blog/sachin-rekhi-no-pm3-summit-a-ia-esta-devolvendo-o-product-management-ao-seu-lugar-mais-estrategico/" target="_blank" rel="noopener"><span><b>Sachin Rekhi no PM3 Summit: a IA está devolvendo o Product Management ao seu lugar mais estratégico</b><span>Por Bruno Compri</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        <a href="https://pm3.com.br/blog/product-builder-na-era-ia/" target="_blank" rel="noopener"><span><b>O Product Manager Builder na era da IA: por que esse perfil virou o mais cobiçado do mercado</b><span>Por Luanna Braga</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        <a href="https://pm3.com.br/blog/ai-product-builder-formacao-pm3/" target="_blank" rel="noopener"><span><b>AI Product Builder ou AI Product Specialist: qual formação de IA da PM3 é para você?</b><span>Por Luanna Braga</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        <a href="https://pm3.com.br/blog/o-que-marty-cagan-ensinou-no-product-camp-sobre-o-futuro-de-produto-e-o-product-operating-model/" target="_blank" rel="noopener"><span><b>O que Marty Cagan ensinou no Product Camp sobre o futuro de Produto e o Product Operating Model</b><span>Por Bruno Compri</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        <a href="https://pm3.com.br/blog/salarios-de-produto-2025/" target="_blank" rel="noopener"><span><b>Salários de Produto 2025–2026: veja dados do nosso novo estudo</b><span>Por Equipe de conteúdo - PM3</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · COLUNISTAS MAIS LIDOS -->
+<section class="section black on-dark" aria-labelledby="cl-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker"><span class="n">01</span> Colunistas</p><h2 class="h2" id="cl-t">Colunistas<br><span class="c2">mais lidos</span></h2></div>
+      <p class="lead">Nos últimos 3 meses.</p>
+    </div>
+    <div class="cols reveal" data-nota="Os mesmos dez colunistas do carrossel da capa atual do blog, com as fotos de perfil do WordPress.">
+      <a class="col" href="https://pm3.com.br/blog/author/cursos-pm3/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/144131489_351094709254069_8683355148609386737_n-100x100.jpg" alt="" loading="lazy" width="56" height="56"><b>Equipe de conteúdo – PM3</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/matheus-clemente/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/gravatar-default.jpg" alt="" loading="lazy" width="56" height="56"><b>Matheus Clemente</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/bruno/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/Bruno_coutinho-100x100.png" alt="" loading="lazy" width="56" height="56"><b>Bruno Coutinho</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/carolina-araujo/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/1677760503093-150x150.jpg" alt="" loading="lazy" width="56" height="56"><b>Carolina Araujo</b><span>Senior Community Manager na PM3</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/marcellcursospm3-com-br/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/PM3_0Marcell-2-scaled-1-150x150.png" alt="" loading="lazy" width="56" height="56"><b>Marcell Almeida</b><span>CEO – PM3</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/augusto-brito/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/Augusto-Brito-100x100.jpg" alt="" loading="lazy" width="56" height="56"><b>Augusto Brito</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/sergiopena/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/sergio-pena-100x100.png" alt="" loading="lazy" width="56" height="56"><b>Sergio Pena</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/gustavo-paiva/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/Gustavo-Paiva-150x150.jpg" alt="" loading="lazy" width="56" height="56"><b>Gustavo Paiva</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/barbara-lannapm3-com-br/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/Barbara-Lanna-100x100.jpg" alt="" loading="lazy" width="56" height="56"><b>Bárbara Lanna</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/isabele-reusing/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/IMG_20230914_195039-150x150.jpg" alt="" loading="lazy" width="56" height="56"><b>Isabele Reusing</b><span>Colunista</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · ÚLTIMOS ARTIGOS -->
 <section class="section white" aria-labelledby="rc-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">01</span> Atualizados recentemente</p><h2 class="h2" id="rc-t">Mais<br><span class="c2">recentes</span></h2></div>
-      <p class="lead">Todo artigo mostra a data da última atualização, para você saber se o conteúdo está em dia.</p>
+      <div><p class="kicker"><span class="n">02</span> Artigos</p><h2 class="h2" id="rc-t">Últimos<br><span class="c2">artigos</span></h2></div>
+      <p class="lead">Os seis artigos mais recentes da capa atual do blog. Filtre por tema ou busque no topo da página.</p>
     </div>
-    <div class="posts-g" id="posts" data-nota="Data visível em todos os posts. Hoje 90% dos artigos não são atualizados desde 2024, e frescor é a dimensão mais fraca no diagnóstico GEO (85 de 100).">
-      <a class="post-c reveal" href="#" data-cat="carreira"><div class="im"><div style="background-image:url('assets/img/foto-fone-branco.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Carreira</span><span>22 set 2026</span></div><h3>Product Builder: o que faz, salário, habilidades e como entrar na carreira</h3><p>O perfil que constrói antes de pedir permissão, e como desenvolvê-lo.</p></a>
-      <a class="post-c reveal" data-d="1" href="#" data-cat="marketing"><div class="im"><div style="background-image:url('assets/tex/tex-linhas-dados.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Marketing</span><span>10 set 2026</span></div><h3>Construí um time de PMM do zero, e faria diferente com IA hoje</h3><p>O que mudaria na estrutura de um time de product marketing com IA.</p></a>
-      <a class="post-c reveal" data-d="2" href="#" data-cat="ia"><div class="im"><div style="background-image:url('assets/tex/tex-dobras-roxas.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">IA</span><span>4 set 2026</span></div><h3>O Product Manager Builder na era da IA: por que esse perfil virou o mais cobiçado do mercado</h3><p>Como a IA aproximou estratégia e construção no trabalho de produto.</p></a>
-      <a class="post-c reveal" href="#" data-cat="ia"><div class="im"><div style="background-image:url('assets/img/foto-sofa-homem.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">IA</span><span>1 set 2026</span></div><h3>Quem são os builders que estão construindo antes de pedir permissão</h3><p>Histórias de profissionais que trocaram o slide pelo protótipo.</p></a>
-      <a class="post-c reveal" data-d="1" href="#" data-cat="ia"><div class="im"><div style="background-image:url('assets/tex/tex-montanhas-dados.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">IA</span><span>25 ago 2026</span></div><h3>Como a IA virou o time de produto de founders sem engenheiros</h3><p>Do MVP ao primeiro cliente sem time técnico.</p></a>
-      <a class="post-c reveal" data-d="2" href="#" data-cat="gestao"><div class="im"><div style="background-image:url('assets/img/foto-conversa.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Gestão de produtos</span><span>18 ago 2026</span></div><h3>O que a IA ainda não faz pelo PM (e provavelmente nunca vai)</h3><p>Julgamento, contexto e escolha continuam sendo trabalho humano.</p></a>
+    <nav class="cats" aria-label="Filtrar por tema" data-nota="Os 13 filtros da capa atual do blog (Todos + 12 categorias). No site real, filtro e botão Carregar mais consultam o WordPress.">
+      <button type="button" aria-pressed="true" data-c="all">Todos</button>
+      <button type="button" aria-pressed="false" data-c="carreira-em-produto">Carreira em Produto</button>
+      <button type="button" aria-pressed="false" data-c="conteudos-traduzidos">Conteúdos Traduzidos</button>
+      <button type="button" aria-pressed="false" data-c="eventos-de-produtos">Eventos de Produtos</button>
+      <button type="button" aria-pressed="false" data-c="iniciativas-pm3">Iniciativas PM3</button>
+      <button type="button" aria-pressed="false" data-c="livros-de-product-manager">Livros para Product Manager</button>
+      <button type="button" aria-pressed="false" data-c="product-analytics">Product Analytics</button>
+      <button type="button" aria-pressed="false" data-c="product-discovery">Product Discovery</button>
+      <button type="button" aria-pressed="false" data-c="product-growth">Product Growth</button>
+      <button type="button" aria-pressed="false" data-c="product-leadership">Product Leadership</button>
+      <button type="button" aria-pressed="false" data-c="product-management">Product Management</button>
+      <button type="button" aria-pressed="false" data-c="product-marketing">Product Marketing</button>
+      <button type="button" aria-pressed="false" data-c="pm3-stories">PM3 Stories</button>
+    </nav>
+    <div class="posts-g" id="posts">
+      <a class="post-c reveal" href="https://pm3.com.br/blog/panorama-do-mercado-de-produto-2026-2027/" target="_blank" rel="noopener" data-cat="carreira-em-produto essencial-para-pms iniciativas-pm3"><div class="im"><div style="background-image:url('assets/img/blog/capa-panorama-blog-1.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Carreira em Produto</span><span>27 de outubro de 2026</span><span>Por Bruno Compri</span></div><h3>Panorama do Mercado de Produto 2026-2027: o que os dados revelam sobre o futuro da área</h3><p>2.337 responderam à edição do Panorama da PM3. Veja os dados de salário, carreira, empresas mais admiradas, maturidade e IA em Produto.</p></a>
+      <a class="post-c reveal" data-d="1" href="https://pm3.com.br/blog/como-crescer-na-carreira-de-pm-quando-a-ia-muda-as-regras-do-jogo/" target="_blank" rel="noopener" data-cat="ai-product-builder ai-product-specialist carreira-em-produto essencial-para-pms"><div class="im"><div style="background-image:url('assets/img/blog/artigo-capa-p.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Ai Product Builder</span><span>19 de outubro de 2026</span><span>Por Luanna Braga</span></div><h3>Como crescer na carreira de PM quando a IA muda as regras do jogo</h3></a>
+      <a class="post-c reveal" data-d="2" href="https://pm3.com.br/blog/product-camp-2026/" target="_blank" rel="noopener" data-cat="essencial-para-pms"><div class="im"><div style="background-image:url('assets/img/blog/picpay.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Essencial para PMs</span><span>30 de setembro de 2026</span><span>Por Luanna Braga</span></div><h3>Product Camp 2026: tudo sobre o maior evento de Produto da América Latina</h3><p>Tudo sobre o Product Camp 2026, o maior evento de Produto da América Latina: programação, palestrantes, ingressos e como participar. Saiba mais!</p></a>
+      <a class="post-c reveal" href="https://pm3.com.br/blog/product-builder-o-que-faz-salario-habilidades-carreira/" target="_blank" rel="noopener" data-cat="ai-product-builder carreira-em-produto essencial-para-pms"><div class="im"><div style="background-image:url('assets/img/blog/product-builder.webp')"></div></div><div class="pmeta"><span class="tag tag-soft">Ai Product Builder</span><span>22 de setembro de 2026</span><span>Por Luanna Braga</span></div><h3>Product Builder: o que faz, salário, habilidades e como entrar na carreira</h3><p>O que faz um Product Builder, quanto ganha no Brasil e fora, quais habilidades e ferramentas exige e como começar. Guia completo da PM3.</p></a>
+      <a class="post-c reveal" data-d="1" href="https://pm3.com.br/blog/estruturar-time-de-product-marketing-com-ia/" target="_blank" rel="noopener" data-cat="carreira-em-produto essencial-para-pms product-marketing"><div class="im"><div style="background-image:url('assets/img/blog/pmm-ia.webp')"></div></div><div class="pmeta"><span class="tag tag-soft">Carreira em Produto</span><span>9 de setembro de 2026</span><span>Por Jaqueline Santos</span></div><h3>Construí um time de PMM do zero, e faria diferente com IA hoje</h3><p>Construí um time de Product Marketing do zero. O que acelerar com IA, o que jamais delegar e um checklist para você.</p></a>
+      <a class="post-c reveal" data-d="2" href="https://pm3.com.br/blog/movimento-builder-quem-constroi-antes-de-pedir-permissao/" target="_blank" rel="noopener" data-cat="ai-product-builder essencial-para-pms inteligencia-artificial"><div class="im"><div style="background-image:url('assets/img/blog/imagem3-deploy.jpg')"></div></div><div class="pmeta"><span class="tag tag-soft">Ai Product Builder</span><span>1 de setembro de 2026</span><span>Por Luanna Braga</span></div><h3>Quem são os builders que estão construindo antes de pedir permissão</h3><p>Conheça o movimento builder, os perfis que estão saindo da gestão para a construção e as ferramentas que tornam isso possível hoje</p></a>
       <div class="no-res" id="nores"><b style="display:block;font-family:var(--display);font-size:19px;color:var(--ink)">Nenhum artigo encontrado</b>Tente outro termo ou tema.</div>
     </div>
+    <div class="more"><button class="btn btn-line" type="button" data-nota="No protótipo o botão não carrega mais artigos: são 916 no WordPress.">Carregar mais</button></div>
   </div>
 </section>
 
-<!-- 4 · PESQUISAS -->
-<section class="section tex" aria-labelledby="ps-t">
+<!-- 5 · ARTIGOS MAIS LIDOS -->
+<section class="section tex" aria-labelledby="ml-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">02</span> Pesquisas PM3</p><h2 class="h2" id="ps-t">Dados do<br><span class="c2">mercado</span></h2></div>
-      <p class="lead">Estudos próprios da PM3 sobre salários e o mercado de produto no Brasil, para consultar e citar.</p>
+      <div><p class="kicker"><span class="n">03</span> Mais lidos</p><h2 class="h2" id="ml-t">Artigos<br><span class="c2">mais lidos</span></h2></div>
+      <p class="lead">Os três artigos mais lidos do blog, os mesmos da capa atual.</p>
     </div>
-    <div class="studies">
-      <a class="study s1 grain reveal" href="#"><span class="n">Novo</span><div><h3>Salários de produto</h3><p>Os dados do novo estudo da PM3 sobre salários no mercado de produto.</p></div><span class="go">Ver o estudo →</span></a>
-      <a class="study s2 reveal" data-d="1" href="#"><span class="n">2.337</span><div><h3>Panorama do Mercado de Produto</h3><p>Profissionais de produto responderam a maior pesquisa do mercado no Brasil.</p></div><span class="go">Baixar o Panorama →</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- 5 · GUIAS E TEMAS -->
-<section class="section white" aria-labelledby="gd-t">
-  <div class="wrap guides">
-    <div>
-      <p class="kicker"><span class="n">03</span> Guias essenciais</p>
-      <h2 class="h2" id="gd-t">Por onde<br><span class="c2">começar</span></h2>
-      <div class="glist" style="margin-top:28px">
-        <a href="#"><span><b>Product Manager: o que faz, salário e como ingressar na profissão</b><span>Guia completo da carreira</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-        <a href="#"><span><b>AI Product Builder ou AI Product Specialist: qual formação é para você?</b><span>Comparativo das formações de IA</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-        <a href="#"><span><b>OKR e KPI: qual a diferença e qual utilizar?</b><span>Métricas e metas</span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-      </div>
-    </div>
-    <div>
-      <p class="kicker">Explore por tema</p>
-      <div class="topics-g reveal">
-        <a href="#">Gestão de produtos<small>Estratégia, discovery, roadmap</small></a>
-        <a href="#">IA<small>Builders, agentes e automação</small></a>
-        <a href="#">Dados<small>Analytics, métricas e experimentos</small></a>
-        <a href="#">Marketing<small>Growth e product marketing</small></a>
-        <a href="#">Design<small>UX, pesquisa e interface</small></a>
-        <a href="#">Carreira<small>Salários, cargos e transição</small></a>
-        <a href="#">Liderança<small>Times, feedback e gestão</small></a>
-        <a href="#">Eventos<small>Product Camp e PM3 Summit</small></a>
-      </div>
+    <div class="posts-g">
+      <a class="post-c reveal" href="https://pm3.com.br/product-owner-o-que-faz-salario-habilidades/" target="_blank" rel="noopener" data-cat="carreira-em-produto"><div class="im"><div style="background-image:url('assets/img/blog/product-owner.webp')"></div></div><div class="pmeta"><span class="tag tag-soft">Carreira em Produto</span><span>Por Equipe de conteúdo - PM3</span></div><h3>Product Owner: o que faz, quanto ganha e tudo que você precisa saber</h3><p>Pensando em atuar como Product Owner? Confira aqui mais informações sobre responsabilidades, salário e habilidades de um PO!</p></a>
+      <a class="post-c reveal" data-d="1" href="https://pm3.com.br/blog/product-manager-guia-o-que-faz-salario-como-ingressar-na-profissao/" target="_blank" rel="noopener" data-cat="carreira-em-produto product-management"><div class="im"><div style="background-image:url('assets/img/blog/product-manager.webp')"></div></div><div class="pmeta"><span class="tag tag-soft">Carreira em Produto</span><span>Por Equipe de conteúdo - PM3</span></div><h3>Product Manager: o que faz, salário e como ingressar na profissão</h3><p>Se você quer saber mais sobre a profissão de Product Manager, este artigo vai ser um guia para esclarecer suas principais dúvidas. Confira!</p></a>
+      <a class="post-c reveal" data-d="2" href="https://pm3.com.br/blog/qual-e-diferenca-entre-okr-e-kpi/" target="_blank" rel="noopener" data-cat="estrategia-de-produto product-leadership"><div class="im"><div style="background-image:url('assets/img/blog/okr-e-kpi.webp')"></div></div><div class="pmeta"><span class="tag tag-soft">Estratégia de Produto</span><span>Por Bruno Coutinho</span></div><h3>OKR e KPI: qual a diferença e qual utilizar?</h3><p>OKR e KPI são dois conceitos que geram muita confusão. Por isso, resolvemos explicar aqui as siglas e como aplicar no dia a dia. Confira!</p></a>
     </div>
   </div>
 </section>
 
-<!-- 6 · GLOSSÁRIO -->
-<section class="section deep on-dark grain" aria-labelledby="gl-t">
-  <div class="wrap gloss">
-    <div><p class="kicker"><span class="n">04</span> Glossário de produto</p><h2 class="h2" id="gl-t">143 termos,<br><span class="c2">de A a Z</span></h2><p class="lead" style="margin-top:16px">Do backlog ao zero-based roadmap, explicados em linguagem simples.</p></div>
-    <nav class="az" aria-label="Glossário por letra" data-nota="O glossário continua no WordPress (143 URLs, sem redirecionamento). A capa do blog passa a linkar para ele: hoje ele só aparece no menu do blog.">
-      <a href="#">A</a><a href="#">B</a><a href="#">C</a><a href="#">D</a><a href="#">E</a><a href="#">F</a><a href="#">G</a><a href="#">H</a><a href="#">I</a><a href="#">J</a><a href="#">K</a><a href="#">L</a><a href="#">M</a><a href="#">N</a><a href="#">O</a><a href="#">P</a><a href="#">Q</a><a href="#">R</a><a href="#">S</a><a href="#">T</a><a href="#">U</a><a href="#">V</a><a href="#">W</a><a href="#">X</a><a href="#">Y</a><a href="#">Z</a>
-    </nav>
-  </div>
-</section>
-
-<!-- 7 · DO ARTIGO AO CURSO -->
-<section class="final grain on-dark" aria-labelledby="fn-t">
-  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<!-- 6 · QUEM MAIS ESCREVE -->
+<section class="section white" aria-labelledby="qe-t">
   <div class="wrap">
-    <p class="kicker" style="justify-content:center">Do artigo ao curso</p>
-    <h2 class="display" id="fn-t">Aprofunde o<br>tema em um curso.</h2>
-    <p>Sprints de 2 a 12 horas para um desafio específico, ou formações de 21 a 79 horas com projeto real. As duas estão no Membership.</p>
-    <div class="btns"><a class="btn btn-light" href="formacoes.html">Ver as formações</a><a class="btn btn-line" href="membership.html">Conhecer o Membership</a></div>
+    <div class="sec-head">
+      <div><p class="kicker"><span class="n">04</span> Colunistas</p><h2 class="h2" id="qe-t">Quem mais escreve<br><span class="c2">com a PM3</span></h2></div>
+      <p class="lead">Profissionais de produto, dados, design e marketing que assinam artigos no blog.</p>
+    </div>
+    <div class="cols reveal">
+      <a class="col" href="https://pm3.com.br/blog/author/cursos-pm3/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/144131489_351094709254069_8683355148609386737_n-100x100.jpg" alt="" loading="lazy" width="56" height="56"><b>Equipe de conteúdo – PM3</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/victoria-carneiro/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/PXL_20230930_201956652-01-150x150.jpeg" alt="" loading="lazy" width="56" height="56"><b>Victoria Carneiro</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/jessica-moraes/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/IMG-20200902-WA0029-1-150x150.jpg" alt="" loading="lazy" width="56" height="56"><b>Jéssica Moraes</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/marcellcursospm3-com-br/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/PM3_0Marcell-2-scaled-1-150x150.png" alt="" loading="lazy" width="56" height="56"><b>Marcell Almeida</b><span>CEO – PM3</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/isabele-reusing/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/IMG_20230914_195039-150x150.jpg" alt="" loading="lazy" width="56" height="56"><b>Isabele Reusing</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/bruno/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/Bruno_coutinho-100x100.png" alt="" loading="lazy" width="56" height="56"><b>Bruno Coutinho</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/gustavo-paiva/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/Gustavo-Paiva-150x150.jpg" alt="" loading="lazy" width="56" height="56"><b>Gustavo Paiva</b><span>Colunista</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/luanna-braga/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/WhatsApp-Image-2026-05-05-at-17.43.01-e1778013837352-150x150.jpeg" alt="" loading="lazy" width="56" height="56"><b>Luanna Braga</b><span>Analista de Marketing</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/anselmo-domingues-filho/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/anselmo-filho-150x150.jpg" alt="" loading="lazy" width="56" height="56"><b>Anselmo Filho</b><span>Senior Product Manager</span></a>
+      <a class="col" href="https://pm3.com.br/blog/author/vanessa-lopes/" target="_blank" rel="noopener"><img src="assets/img/blog/autores/vanessa-lopes-100x100.jpg" alt="" loading="lazy" width="56" height="56"><b>Vanessa Lopes</b><span>Product Owner na Tmov</span></a>
+    </div>
+    <div class="more"><a class="btn btn-primary" href="https://pm3.com.br/blog/colunistas/" target="_blank" rel="noopener">Ver todos os colunistas <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
   </div>
 </section>
 
 </main>
 
 <script src="assets/js/layout.js?v=46"></script>
+<script src="assets/js/hero-card.js?v=2"></script>
 <script>
 /* capa do blog: tema e busca filtram os mais recentes (no WordPress, busca e temas vão para o servidor) */
 (function(){
   const cards = [...document.querySelectorAll('#posts .post-c')], btns = [...document.querySelectorAll('.cats button')];
   const sem = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
-  let cat = 'todos', q = '';
+  let cat = 'all', q = '';
   const aplica = () => {
     let n = 0;
-    cards.forEach(c => { const ok = (cat === 'todos' || c.dataset.cat === cat) && (!q || sem(c.textContent).includes(q)); c.classList.toggle('is-hidden', !ok); if (ok){ n++; c.classList.add('in'); } });
+    cards.forEach(c => { const ok = (cat === 'all' || c.dataset.cat.split(' ').includes(cat)) && (!q || sem(c.textContent).includes(q)); c.classList.toggle('is-hidden', !ok); if (ok){ n++; c.classList.add('in'); } });
     document.getElementById('nores').classList.toggle('show', n === 0);
   };
   btns.forEach(b => b.addEventListener('click', () => { cat = b.dataset.c; btns.forEach(x => x.setAttribute('aria-pressed', x === b)); aplica(); }));
