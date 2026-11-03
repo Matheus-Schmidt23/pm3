@@ -17,7 +17,10 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=30">
 <link rel="stylesheet" href="assets/css/components.css?v=9">
-<link rel="stylesheet" href="assets/css/b2b.css?v=7">
+<link rel="stylesheet" href="assets/css/hero-card.css?v=3">
+<link rel="stylesheet" href="assets/css/certificado.css?v=12">
+<link rel="stylesheet" href="assets/css/depoimentos.css?v=1">
+<link rel="stylesheet" href="assets/css/b2b.css?v=8">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
@@ -33,23 +36,33 @@
 <main>
 
 <!-- 1 · HERO -->
-<section class="b-hero" aria-labelledby="h1">
-  <div class="wrap">
-    <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">PM3 para empresas</li></ol>
-    <div class="b-hero-grid">
-      <div class="pad">
-        <p class="kicker">Treinamentos corporativos</p>
-        <h1 class="display" id="h1">Produto<br>em<br><span class="c2">resultado.</span><span class="em">Para o seu time inteiro, do analista à liderança.</span></h1>
+<section class="m-hero on-dark" aria-labelledby="h1">
+  <div class="m-hero-grid">
+    <div class="m-main grain" data-nota="Dois caminhos claros já no topo: licenças para o time todo ou treinamento sob medida. Os dois levam ao mesmo formulário, com o interesse já marcado. Hero no mesmo sistema de cards das outras páginas.">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+      <svg class="three" viewBox="0 0 55 55" aria-hidden="true"><path d="M47.9654 0H6.74073C3.01862 0 0 3.01757 0 6.73838V47.9486C0 51.6694 3.01862 54.687 6.74073 54.687H32.6165C37.0037 54.687 41.5188 49.7131 41.5188 44.0488C41.5188 37.6301 35.2897 32.4261 28.8688 32.4261H20.0687V29.3062L36.7351 13.4768H11.7163V8.59239H44.8572V11.9552L44.2944 12.4922L28.6513 27.5289C38.27 27.5289 46.4177 35.4564 46.4177 44.036C46.4177 48.2555 44.8956 51.7973 42.5165 54.6742H47.9526C51.6747 54.6742 54.6933 51.6567 54.6933 47.9358V6.73838C54.6933 3.01757 51.6747 0 47.9526 0"/></svg>
+      <div>
+        <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li aria-current="page">PM3 para empresas</li></ol>
+        <h1 class="display" id="h1">Produto em<br><span class="l2">resultado.</span><span class="em">Para o seu time inteiro, do analista à liderança.</span></h1>
         <p class="lead">Treinamentos em produto, IA, dados e liderança em três formatos: licenças da plataforma, trilhas de cursos e programas in company.</p>
-        <div class="btns" data-nota="Dois caminhos claros já no topo: licenças para o time todo ou treinamento sob medida. Os dois levam ao mesmo formulário, com o interesse já marcado.">
-          <a class="btn btn-primary" href="#proposta">Falar com um especialista <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </div>
+      <div>
+        <div class="m-buy"><div class="btns">
+          <a class="btn btn-light" href="#proposta">Falar com um especialista <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
           <a class="btn btn-line" href="#caminhos">Ver os formatos</a>
+        </div></div>
+        <div class="m-safe">
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="5.5" r="2.5"/><path d="M1.5 13.5c.6-2.4 2.4-3.7 4.5-3.7s3.9 1.3 4.5 3.7"/><path d="M10.5 3.3a2.5 2.5 0 0 1 0 4.4M12 10c1.3.4 2.2 1.4 2.5 3.5"/></svg>Licenças e trilhas para o time</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13M6 8.5h5M6 11h5"/></svg>In company sob medida</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 14.5s4.5-4.2 4.5-7.8a4.5 4.5 0 0 0-9 0c0 3.6 4.5 7.8 4.5 7.8z"/><circle cx="8" cy="6.7" r="1.6"/></svg>Ao vivo, gravado ou presencial</span>
         </div>
       </div>
-      <div class="b-pic" role="img" aria-label="Equipe reunida em ambiente de trabalho">
-        <div class="b-card"><b data-count="800" data-pre="+">+800</b><span>empresas confiam na PM3</span></div>
-        <div class="b-card"><b>+100</b><span>especialistas de mercado</span></div>
-      </div>
+    </div>
+    <div class="m-photo" style="background-image:url('assets/img/foto-equipe.jpg?v=4');background-position:60% 30%" role="img" aria-label="Equipe reunida em ambiente de trabalho"><span class="tag">Times de produto, dados e negócio</span></div>
+    <div class="m-tile">
+      <span class="ic ic-tl" style="left:0;top:0;--c:#000;--r:40px" aria-hidden="true"></span>
+      <div class="big">+800<small>empresas confiam<br>na PM3</small></div>
+      <p>Mais de 100 especialistas de mercado, de Nubank, iFood, Mercado Livre e Itaú.</p>
     </div>
   </div>
 </section>
@@ -169,18 +182,33 @@
   </div>
 </section>
 
-<!-- 8 · RELATOS -->
-<section class="section black on-dark" aria-labelledby="rl-t">
+<!-- 8 · DEPOIMENTOS (depoimentos.css + depoimentos.js, o mesmo das Formações) -->
+<section class="section black on-dark" aria-labelledby="dp-t">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="kicker"><span class="n">06</span> Relatos</p><h2 class="h2" id="rl-t">O que dizem<br><span class="c2">os times</span></h2></div>
-      <p class="lead">Profissionais de empresas que passaram pela PM3.</p>
+      <div><p class="kicker"><span class="n">06</span> Depoimentos</p><h2 class="h2" id="dp-t">Quem passa pela PM3<br><span class="c2">recomenda</span></h2></div>
+      <p class="lead">Profissionais de empresas como Nubank, iFood, QuintoAndar e Claro que passaram pelos cursos da PM3.</p>
     </div>
-    <div class="stories" data-nota="Relatos da página atual, resumidos. Para B2B, o ideal é somar cases de empresa: problema, programa e resultado, com autorização do cliente.">
-      <figure class="story reveal"><blockquote>O conteúdo é de qualidade, estruturado com cases reais do mercado brasileiro e instrutores de referência.</blockquote><figcaption><img class="av" src="assets/people/ramon-rodrigues.jpg" alt="Foto de Ramon Rodrigues" loading="lazy" width="96" height="96"><div><b>Ramon Rodrigues</b><span>Head of Product, AutoForce</span></div></figcaption></figure>
-      <figure class="story reveal" data-d="1"><blockquote>Gostei bastante do curso como forma de validar que eu e meu time estamos no caminho certo.</blockquote><figcaption><img class="av" src="assets/people/priscylla-teixeira.jpg" alt="Foto de Priscylla Teixeira" loading="lazy" width="96" height="96"><div><b>Priscylla Teixeira</b><span>Gerente de Marketing de Produto, Cobli</span></div></figcaption></figure>
-      <figure class="story reveal" data-d="2"><blockquote>As novas técnicas que aprendi estão ajudando no meu dia a dia dentro da empresa.</blockquote><figcaption><img class="av" src="assets/people/diego-krause.webp" alt="Foto de Diego Krause" loading="lazy" width="96" height="96"><div><b>Diego Krause</b><span>Product Designer, CustomerX</span></div></figcaption></figure>
-      <figure class="story reveal" data-d="3"><blockquote>Poucas vezes eu vi um curso tão bem produzido, do conteúdo à qualidade dos vídeos.</blockquote><figcaption><img class="av" src="assets/people/luisa-barwinski.webp" alt="Foto de Luísa Barwinski" loading="lazy" width="96" height="96"><div><b>Luísa Barwinski</b><span>Growth Product Manager</span></div></figcaption></figure>
+    <div class="dp-car reveal" id="dpCar" data-nota="16 depoimentos reais com foto, vindos das páginas de curso do site atual (post type depoimentos do WordPress). Trechos resumidos dos textos originais. Avança sozinho e pausa com o cursor.">
+      <div class="dp-track" role="region" aria-roledescription="carrossel" aria-label="Depoimentos de alunos" tabindex="0">
+        <figure class="dp-card" aria-label="1 de 16"><div class="ph"><img src="assets/people/cassia-costa-32.jpg" alt="Foto de Cássia Costa" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Só tenho 1 arrependimento com relação ao curso da PM3: não ter feito antes! Dá pra sentir que os instrutores realmente passaram pelas dores e desafios que a gente enfrenta no dia a dia.</p></blockquote><div class="who"><b>Cássia Costa</b><span>Product Manager no QuintoAndar</span></div></div></figure>
+        <figure class="dp-card" aria-label="2 de 16"><div class="ph"><img src="assets/people/luisa-barwinski-32.jpg" alt="Foto de Luísa Barwinski" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Poucas vezes eu vi um curso tão bem produzido – tanto do ponto de vista do conteúdo, quanto da organização e a qualidade dos vídeos.</p></blockquote><div class="who"><b>Luísa Barwinski</b><span>Growth Product Manager</span></div></div></figure>
+        <figure class="dp-card" aria-label="3 de 16"><div class="ph"><img src="assets/people/geisel-alves-32.jpg" alt="Foto de Geisel Alves" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Várias técnicas apresentadas por profissionais que admiro muito. Sem contar nos cases práticos do curso. Já estou aplicando tudo, além de poder ajudar colegas também.</p></blockquote><div class="who"><b>Geisel Alves</b><span>Product Manager no Nubank</span></div></div></figure>
+        <figure class="dp-card" aria-label="4 de 16"><div class="ph"><img src="assets/people/katia-nakassima-32.jpg" alt="Foto de Katia Nakassima" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Que jornada incrível! Bom demais poder contar com um conteúdo tão rico e profundo, apresentado por profissionais ainda mais incríveis.</p></blockquote><div class="who"><b>Katia Nakassima</b><span>Senior Product Manager no iFood</span></div></div></figure>
+        <figure class="dp-card" aria-label="5 de 16"><div class="ph"><img src="assets/people/angelica-reis-32.jpg" alt="Foto de Angélica Reis" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Escolhi a PM3, que é excelente e altamente recomendável a todos os profissionais que acreditam que um bom produto é a base da estratégia de crescimento de uma empresa.</p></blockquote><div class="who"><b>Angélica Reis</b><span>Product Marketing Manager no Meta (Facebook)</span></div></div></figure>
+        <figure class="dp-card" aria-label="6 de 16"><div class="ph"><img src="assets/people/mauricio-gontijo-de-sa-32.jpg" alt="Foto de Maurício Gontijo de Sá" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Tem uma combinação perfeita entre teoria e prática. Os cases reais de companhias como Nubank, OLX Brasil, GetNinjas, Creditas e Booking.com foram essenciais para tangibilizar toda a teoria.</p></blockquote><div class="who"><b>Maurício Gontijo de Sá</b><span>Digital Product Leader na MRV</span></div></div></figure>
+        <figure class="dp-card" aria-label="7 de 16"><div class="ph"><img src="assets/people/mariana-pieslak-32.jpg" alt="Foto de Mariana Pieslak" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Todos os instrutores, além de possuírem uma excelente didática, também trazem cases reais para as aulas. O conteúdo é muito bem organizado, recheado de materiais adicionais e mentorias.</p></blockquote><div class="who"><b>Mariana Pieslak</b><span>Product Manager na Clicksign</span></div></div></figure>
+        <figure class="dp-card" aria-label="8 de 16"><div class="ph"><img src="assets/people/diego-magnani-32.jpg" alt="Foto de Diego Magnani" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Se eu pudesse descrever o curso de Product Growth da PM3 em apenas uma palavra seria: sensacional! Esse é um curso transformador.</p></blockquote><div class="who"><b>Diego Magnani</b><span>CCO e Head de Produto na iCasei</span></div></div></figure>
+        <figure class="dp-card" aria-label="9 de 16"><div class="ph"><img src="assets/people/clayton-sena-32.jpg" alt="Foto de Clayton Sena" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Uma das melhores experiências de treinamento com os maiores nomes do mercado nacional e internacional. A PM3 é incrível, excelente conteúdo.</p></blockquote><div class="who"><b>Clayton Sena</b><span>Head of Digital Product &amp; CX na Claro Brasil</span></div></div></figure>
+        <figure class="dp-card" aria-label="10 de 16"><div class="ph"><img src="assets/people/vitor-barbosa-32.jpg" alt="Foto de Vitor Barbosa" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>O curso de Product Discovery foi uma bela surpresa, e posso dizer que foi o curso onde mais aprendi coisas novas. Conteúdos com profundidade ímpar.</p></blockquote><div class="who"><b>Vitor Barbosa</b><span>Product Manager no iFood</span></div></div></figure>
+        <figure class="dp-card" aria-label="11 de 16"><div class="ph"><img src="assets/people/monica-vicente-32.jpg" alt="Foto de Mônica Vicente" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Tive várias aulas sensacionais no curso de Product Growth, que deram um novo significado para Growth. É um ótimo curso para PMs, obrigada PM3!</p></blockquote><div class="who"><b>Mônica Vicente</b><span>Product Manager na Nuvemshop</span></div></div></figure>
+        <figure class="dp-card" aria-label="12 de 16"><div class="ph"><img src="assets/people/ramon-rodrigues-32.jpg" alt="Foto de Ramon Rodrigues" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Recomendo! O conteúdo é de qualidade, estruturado com cases reais do mercado brasileiro e instrutores de referência para transmitir o conhecimento.</p></blockquote><div class="who"><b>Ramon Rodrigues</b><span>Head of Product na AutoForce</span></div></div></figure>
+        <figure class="dp-card" aria-label="13 de 16"><div class="ph"><img src="assets/people/marcele-godinho-32.jpg" alt="Foto de Marcele Godinho" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Tirei proveito de cada parte, através de exemplos reais que foram passados ao longo das aulas. Esse foi um investimento que valeu cada centavo.</p></blockquote><div class="who"><b>Marcele Godinho</b><span>Product Marketing Manager no KMV (Abastece aí)</span></div></div></figure>
+        <figure class="dp-card" aria-label="14 de 16"><div class="ph"><img src="assets/people/bruno-ferreira-32.jpg" alt="Foto de Bruno Ferreira" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Instrutores do mercado que trouxeram cases reais e atualizados! Virei fã e em breve irei fazer outros cursos da PM3.</p></blockquote><div class="who"><b>Bruno Ferreira</b><span>Analista de Marketing Pleno na Alelo</span></div></div></figure>
+        <figure class="dp-card" aria-label="15 de 16"><div class="ph"><img src="assets/people/diego-krause-32.jpg" alt="Foto de Diego Krause" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>A quantidade de novas técnicas que aprendi estão ajudando no meu dia a dia dentro da empresa.</p></blockquote><div class="who"><b>Diego Krause</b><span>Product Designer na CustomerX</span></div></div></figure>
+        <figure class="dp-card" aria-label="16 de 16"><div class="ph"><img src="assets/people/priscylla-teixeira-32.jpg" alt="Foto de Priscylla Teixeira" loading="lazy" width="900" height="600"></div><div class="tx"><span class="qm" aria-hidden="true">“</span><blockquote><p>Gostei bastante do curso como forma de validar que eu e meu time estamos no caminho certo.</p></blockquote><div class="who"><b>Priscylla Teixeira</b><span>Gerente de Marketing de Produto na Cobli</span></div></div></figure>
+      </div>
+      <div class="dp-nav"><span class="dp-bar" aria-hidden="true"><i></i></span><div class="dp-btns"><button type="button" data-dp="ant" aria-label="Depoimento anterior"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8H3M7 4 3 8l4 4"/></svg></button><button type="button" data-dp="prox" aria-label="Próximo depoimento"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button></div></div>
     </div>
   </div>
 </section>
@@ -235,9 +263,27 @@
   </div>
 </section>
 
+<!-- 11 · PANORAMA (a mesma faixa que fecha as outras páginas) -->
+<section class="section black on-dark" aria-label="Panorama do Mercado de Produto">
+  <div class="wrap">
+    <div class="cx-band grain on-dark reveal" style="margin-top:0" data-nota="Números publicados no Panorama do Mercado de Produto: entrada direta 4,74% → 8,13% (comparação com 2025 marcada no rascunho para conferir); 55,52% dos PMs entre R$ 12 e 20 mil; 56,19% dos Heads/Leads acima de R$ 21 mil; 70,09% usam IA sempre ou com frequência em análise de dados. Conferir no PDF final.">
+      <div class="cx-band-head pan-head"><div><p class="kicker pan-k"><span class="pan-badge">Panorama do Mercado de Produto</span> Pesquisa da PM3</p><h3>A maior pesquisa do mercado<br>de produto do Brasil<span class="em">é feita pela PM3.</span></h3></div><div class="pan-n"><b>+2.300</b><span>profissionais de produto ouvidos em todo o país</span></div></div>
+      <div class="cx-stats cx-levels">
+        <div><b>2x</b><span>A entrada direta em Produto quase dobrou em um ano</span></div>
+        <div><b>55%</b><span>Dos Product Managers ganham entre R$&nbsp;12&nbsp;mil e R$&nbsp;20&nbsp;mil por mês</span></div>
+        <div><b>56%</b><span>Dos Heads de Produto ganham acima de R$&nbsp;21&nbsp;mil por mês</span></div>
+        <div><b>70%</b><span>Usam IA com frequência para analisar dados de produto</span></div>
+      </div>
+      <div class="pan-foot"><p class="cx-src">Alguns números do Panorama do Mercado de Produto: salários, carreira, contratação e uso de IA em produto.</p><a class="btn btn-light" href="#">Baixar o Panorama <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <script src="assets/js/layout.js?v=46"></script>
+<script src="assets/js/hero-card.js?v=2"></script>
+<script src="assets/js/depoimentos.js?v=1"></script>
 <script src="assets/js/b2b.js"></script>
 </body>
 </html>
