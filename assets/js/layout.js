@@ -3,7 +3,7 @@
 (function(){
   const PAGE = document.body.dataset.page || '';
   /* páginas já desenhadas no protótipo; as outras mostram um aviso */
-  const PRONTAS = ['membership.html','home.html','formacao-product-manager.html','pos-digital-product-management.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html','comunidade.html'];
+  const PRONTAS = ['membership.html','home.html','formacao-product-manager.html','pos-digital-product-management.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html','comunidade.html','panorama.html'];
 
   const FORMACOES = [
     ['Product Management','formacao-product-manager.html','Gestão de produtos'],
