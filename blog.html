@@ -44,10 +44,6 @@
         <p class="lead">Conteúdo de altíssima qualidade sobre tudo que um Product Manager (PM) precisa saber sobre o mercado de Product Management no Brasil.</p>
       </div>
       <div>
-        <label class="search"><span class="sr-only">Buscar no blog</span>
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6.5"/><path d="m14 14 4 4"/></svg>
-          <input id="bq" type="search" placeholder="Buscar artigos, guias e termos" autocomplete="off">
-        </label>
         <div class="m-safe">
           <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13M6 8.5h5M6 11h5"/></svg>916 artigos publicados</span>
           <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 3h5a1 1 0 0 1 1 1v9.5a1 1 0 0 0-1-1H2zM14 3H9a1 1 0 0 0-1 1v9.5a1 1 0 0 1 1-1h5z"/></svg>Colunistas convidados</span>
@@ -78,7 +74,7 @@
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">01</span> Artigos</p><h2 class="h2" id="rc-t">Últimos<br><span class="c2">artigos</span></h2></div>
-      <p class="lead">Os seis artigos mais recentes da capa atual do blog. Filtre por tema ou busque no topo da página.</p>
+      <p class="lead">Os seis artigos mais recentes da capa atual do blog. Filtre por tema.</p>
     </div>
     <nav class="cats" aria-label="Filtrar por tema" data-nota="Os 13 filtros da capa atual do blog (Todos + 12 categorias). No site real, filtro e botão Carregar mais consultam o WordPress.">
       <button type="button" aria-pressed="true" data-c="all">Todos</button>
@@ -173,18 +169,16 @@
 <script src="assets/js/layout.js?v=48"></script>
 <script src="assets/js/hero-card.js?v=2"></script>
 <script>
-/* capa do blog: tema e busca filtram os mais recentes (no WordPress, busca e temas vão para o servidor) */
+/* capa do blog: o tema filtra os mais recentes (no WordPress, os temas vão para o servidor) */
 (function(){
   const cards = [...document.querySelectorAll('#posts .post-c')], btns = [...document.querySelectorAll('.cats button')];
-  const sem = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
-  let cat = 'all', q = '';
+  let cat = 'all';
   const aplica = () => {
     let n = 0;
-    cards.forEach(c => { const ok = (cat === 'all' || c.dataset.cat.split(' ').includes(cat)) && (!q || sem(c.textContent).includes(q)); c.classList.toggle('is-hidden', !ok); if (ok){ n++; c.classList.add('in'); } });
+    cards.forEach(c => { const ok = (cat === 'all' || c.dataset.cat.split(' ').includes(cat)); c.classList.toggle('is-hidden', !ok); if (ok){ n++; c.classList.add('in'); } });
     document.getElementById('nores').classList.toggle('show', n === 0);
   };
   btns.forEach(b => b.addEventListener('click', () => { cat = b.dataset.c; btns.forEach(x => x.setAttribute('aria-pressed', x === b)); aplica(); }));
-  document.getElementById('bq').addEventListener('input', e => { q = sem(e.target.value.trim()); aplica(); });
 })();
 </script>
 </body>
