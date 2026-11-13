@@ -3,15 +3,14 @@
    dúvidas, Seja PM3 e formulário final. Formulário e FAQ no mesmo padrão de Para empresas e do FAQ do site. */
 
 /* ---------- hero + formulário ---------- */
-.pn-hero{position:relative;background:#000;color:#fff;padding:clamp(40px,5vw,72px) 0 clamp(48px,6vw,80px);overflow:hidden}
-/* Fundo: mockup do Panorama (provisório: hero-mockup.jpg; trocar por hero-capa.jpg quando a arte do Magnific existir).
-   Imagem em cover alinhada à direita; o degradê escurece a esquerda (título, texto e destaques) e as bordas. */
-.pn-hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;background:url('../img/panorama/hero-mockup.jpg') right center / cover no-repeat;opacity:.9}
-.pn-hero-bg::after{content:'';position:absolute;inset:0;background:
-  linear-gradient(90deg,#000 0,#000 30%,rgba(0,0,0,.92) 48%,rgba(0,0,0,.62) 70%,rgba(0,0,0,.45) 100%),
-  linear-gradient(180deg,rgba(0,0,0,.75) 0,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 65%,#000 100%)}
-.pn-hero::before{content:'';position:absolute;inset:auto -10% -40% -10%;height:70%;z-index:0;background:radial-gradient(60% 60% at 30% 100%,rgba(102,69,177,.55),transparent 70%);pointer-events:none}
-.pn-hero.grain::after{z-index:1}
+/* Fundo no padrão do hero da Home: roxo profundo indo para preto, aurora e o "3" da PM3 em marca-d'água. */
+.pn-hero{position:relative;isolation:isolate;background:linear-gradient(135deg,#2a1a52 0%,#140b2a 38%,#000 72%);color:#fff;padding:clamp(40px,5vw,72px) 0 clamp(48px,6vw,80px);overflow:hidden}
+.pn-hero::before{content:'';position:absolute;inset:0;z-index:-3;background:radial-gradient(55% 70% at 8% 0%,rgba(102,69,177,.6),transparent 70%),radial-gradient(45% 55% at 95% 100%,rgba(176,77,221,.35),transparent 70%);pointer-events:none}
+.pn-hero .aurora{inset:-30% -20% -30% 25%;opacity:.5;z-index:-2}
+.pn-hero .three{position:absolute;right:-3%;bottom:-16%;width:min(38%,440px);z-index:-1;opacity:.5;pointer-events:none}
+.pn-hero .three path{fill:none;stroke:rgba(255,255,255,.5);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.pn-hero.grain::after{z-index:0}
+.pn-capa{height:72px;width:auto;border-radius:6px;box-shadow:0 12px 28px rgba(0,0,0,.6);transform:rotate(-4deg);flex:none}
 .pn-hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,96px);align-items:start}
 .pn-intro .crumbs{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:13px;margin:0 0 28px;padding:0;list-style:none}
 .pn-intro .crumbs li+li::before{content:'/';margin-right:10px;color:rgba(255,255,255,.35)}
@@ -88,8 +87,7 @@
 /* ---------- responsivo ---------- */
 @media (max-width:1080px){
   .pn-hero-grid{grid-template-columns:1fr}
-  .pn-hero-bg{background-position:center top;opacity:.6}
-  .pn-hero-bg::after{background:linear-gradient(180deg,rgba(0,0,0,.55) 0,rgba(0,0,0,.85) 45%,#000 75%)}
+  .pn-hero .three{width:60%;right:-20%;bottom:auto;top:-8%;opacity:.25}
   .pn-cards{grid-template-columns:1fr 1fr}
 }
 @media (max-width:600px){
