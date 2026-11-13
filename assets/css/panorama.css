@@ -52,31 +52,25 @@
 .sec-head.center{display:block;text-align:center;max-width:720px;margin:0 auto 44px}
 .sec-head.center .kicker{justify-content:center}
 .sec-head.center .lead{margin:16px auto 0}
-.pn-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pn-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .pn-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
 .pn-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.pn-card .cv{position:relative;background:var(--purple-deep);color:#fff;padding:22px 24px 22px;min-height:230px;display:flex;flex-direction:column;overflow:hidden}
-.pn-card .cv::after{content:'';position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;border:28px solid rgba(255,255,255,.07)}
+/* capa: logo no topo, nome do estudo e o ano em destaque; escala cromática do roxo royal ao preto, na ordem dos cards */
+.pn-card .cv{position:relative;isolation:isolate;background:var(--purple-deep);color:#fff;padding:24px 26px 26px;min-height:300px;display:flex;flex-direction:column;overflow:hidden}
+.pn-card .cv::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 60% at 100% 100%,rgba(255,255,255,.14),transparent 70%)}
+.pn-card .cv::after{content:'';position:absolute;right:-56px;top:-56px;width:200px;height:200px;border-radius:50%;border:30px solid rgba(255,255,255,.08);z-index:-1}
 .pn-card .cv img{height:18px;width:auto;align-self:flex-start;margin-bottom:auto}
-.pn-card .cv h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:1;font-size:clamp(22px,1.8vw,26px);margin:28px 0 8px;position:relative}
-.pn-card .cv h3 small{display:block;font-size:.78em;font-weight:700;color:var(--lilac-a,#c9b8ff);margin-bottom:4px}
-.pn-card .cv > span{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.08em;color:rgba(255,255,255,.75);position:relative}
-/* capas em escala cromatica, do lilas mais claro ao preto, na ordem dos cards */
-.pn-card .cv.t1{background:#efe9ff}
-.pn-card .cv.t2{background:#cdbcff}
-.pn-card .cv.t1,.pn-card .cv.t2{color:var(--purple-deep)}
-.pn-card .cv.t1::after,.pn-card .cv.t2::after{border-color:rgba(69,46,120,.08)}
-.pn-card .cv.t1 h3 small,.pn-card .cv.t2 h3 small{color:var(--purple-royal)}
-.pn-card .cv.t1 > span,.pn-card .cv.t2 > span{color:rgba(69,46,120,.7)}
-.pn-card .cv.t3{background:#8f6fd8}
-.pn-card .cv.t3 h3 small{color:#efe9ff}
-.pn-card .cv.t4{background:var(--purple-royal)}
-.pn-card .cv.t5{background:var(--purple-deep)}
+.pn-card .cv h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:1.05;font-size:clamp(17px,1.4vw,20px);margin:36px 0 0;color:rgba(255,255,255,.92)}
+.pn-card .cv h3 small{display:block;font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--lilac-a,#c9b8ff);margin-bottom:8px}
+.pn-card .cv > span{display:block;font-family:var(--display);font-weight:800;font-size:clamp(38px,3.4vw,50px);letter-spacing:-.05em;line-height:1;color:#fff;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.18)}
+.pn-card .cv.t1{background:var(--purple-royal)}
+.pn-card .cv.t2{background:#563a9a}
+.pn-card .cv.t3{background:var(--purple-deep)}
+.pn-card .cv.t4{background:#311f5c}
+.pn-card .cv.t5{background:#1b1136}
 .pn-card .cv.t6{background:#000}
-.pn-card .cv.t6 h3 small{color:#bdb4d8}
-.pn-card .bd{padding:20px 24px 24px;display:flex;flex-direction:column;gap:18px;flex:1}
-.pn-card .bd p{margin:0;font-size:15px;line-height:1.45;color:#4a4458;flex:1}
-.pn-card .btn-line{border-color:var(--ink);color:var(--ink);justify-content:center}
+.pn-card .bd{padding:18px 20px 20px}
+.pn-card .btn-line{width:100%;border-color:var(--ink);color:var(--ink);justify-content:center}
 .pn-card .btn-line:hover{background:var(--ink);color:#fff}
 .pn-more{display:flex;justify-content:center;margin-top:40px}
 
@@ -121,6 +115,6 @@ body.pn-lock{overflow:hidden}
 @media (max-width:600px){
   .pn-hl > div{grid-template-columns:1fr;gap:6px}
   .pn-cards{grid-template-columns:1fr}
-  .pn-card .cv{min-height:200px}
+  .pn-card .cv{min-height:250px}
   .qa .ans{padding-right:0}
 }
