@@ -87,10 +87,6 @@
 .pn-seja-end{font-family:var(--display);font-weight:700;color:#fff!important;margin-top:6px!important}
 .pn-seja-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 
-/* ---------- todos os relatórios ---------- */
-.pn-final .sec-head.center .lead{color:#ddd8e8}
-.pn-final .lead-form{max-width:640px;margin:0 auto;box-shadow:none}
-
 /* ---------- responsivo ---------- */
 @media (max-width:1080px){
   .pn-hero-grid{grid-template-columns:1fr}
