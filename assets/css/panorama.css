@@ -61,21 +61,19 @@
 .pn-card .cv h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:1;font-size:clamp(22px,1.8vw,26px);margin:28px 0 8px;position:relative}
 .pn-card .cv h3 small{display:block;font-size:.78em;font-weight:700;color:var(--lilac-a,#c9b8ff);margin-bottom:4px}
 .pn-card .cv > span{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.08em;color:rgba(255,255,255,.75);position:relative}
-/* seis cores de capa, uma por estudo */
-.pn-card .cv.c-preto{background:#000}
-.pn-card .cv.c-preto h3 small{color:#bdb4d8}
-.pn-card .cv.c-royal{background:var(--purple-royal)}
-.pn-card .cv.c-royal h3 small{color:var(--yellow)}
-.pn-card .cv.c-magenta{background:linear-gradient(135deg,#6645B1,#b04ddd)}
-.pn-card .cv.c-magenta h3 small{color:#ffd9a6}
-.pn-card .cv.c-amarelo{background:var(--yellow);color:#000}
-.pn-card .cv.c-amarelo::after{border-color:rgba(0,0,0,.07)}
-.pn-card .cv.c-amarelo h3 small{color:var(--purple-deep)}
-.pn-card .cv.c-amarelo > span{color:rgba(0,0,0,.65)}
-.pn-card .cv.c-lilas{background:#e6dcff;color:var(--purple-deep)}
-.pn-card .cv.c-lilas::after{border-color:rgba(69,46,120,.08)}
-.pn-card .cv.c-lilas h3 small{color:var(--purple-royal)}
-.pn-card .cv.c-lilas > span{color:rgba(69,46,120,.7)}
+/* capas em escala cromatica, do lilas mais claro ao preto, na ordem dos cards */
+.pn-card .cv.t1{background:#efe9ff}
+.pn-card .cv.t2{background:#cdbcff}
+.pn-card .cv.t1,.pn-card .cv.t2{color:var(--purple-deep)}
+.pn-card .cv.t1::after,.pn-card .cv.t2::after{border-color:rgba(69,46,120,.08)}
+.pn-card .cv.t1 h3 small,.pn-card .cv.t2 h3 small{color:var(--purple-royal)}
+.pn-card .cv.t1 > span,.pn-card .cv.t2 > span{color:rgba(69,46,120,.7)}
+.pn-card .cv.t3{background:#8f6fd8}
+.pn-card .cv.t3 h3 small{color:#efe9ff}
+.pn-card .cv.t4{background:var(--purple-royal)}
+.pn-card .cv.t5{background:var(--purple-deep)}
+.pn-card .cv.t6{background:#000}
+.pn-card .cv.t6 h3 small{color:#bdb4d8}
 .pn-card .bd{padding:20px 24px 24px;display:flex;flex-direction:column;gap:18px;flex:1}
 .pn-card .bd p{margin:0;font-size:15px;line-height:1.45;color:#4a4458;flex:1}
 .pn-card .btn-line{border-color:var(--ink);color:var(--ink);justify-content:center}
