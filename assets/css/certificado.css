@@ -107,3 +107,14 @@
 .pan-foot .cx-src{margin:0;max-width:60ch}
 .pan-foot .btn svg{width:16px;height:16px}
 @media (max-width:860px){ .pan-head{grid-template-columns:1fr} .pan-n{text-align:left;padding-left:0;border-left:0} .pan-n span{margin-left:0} }.pan-head h3{max-width:none}
+
+/* ---------- certificado: linha fina + esteira de logos (empresas com profissionais certificados pela PM3) ---------- */
+.cx-fine{margin:22px 0 0;font-size:14.5px;line-height:1.5;color:var(--gray-fog);max-width:52ch}
+.cx-fine b{color:#fff;font-weight:600}
+.cx-logos{margin-top:14px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.cx-logos .track{display:flex;align-items:center;gap:48px;padding-right:48px;width:max-content;animation:cx-corre 40s linear infinite}
+.cx-logos img{display:block;height:calc(var(--h,30px) * .72);width:auto;max-width:none;filter:brightness(0) invert(1);opacity:.6}
+.cx-logos img.cor{filter:grayscale(1) contrast(1.15);opacity:.75}
+.cx-logos:hover .track{animation-play-state:paused}
+@keyframes cx-corre{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){ .cx-logos .track{animation:none} }
