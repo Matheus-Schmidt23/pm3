@@ -52,22 +52,38 @@
 .sec-head.center{display:block;text-align:center;max-width:720px;margin:0 auto 44px}
 .sec-head.center .kicker{justify-content:center}
 .sec-head.center .lead{margin:16px auto 0}
-.pn-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pn-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .pn-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
 .pn-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.pn-card .cv{position:relative;background:var(--purple-deep);color:#fff;padding:22px 24px 22px;min-height:230px;display:flex;flex-direction:column;overflow:hidden}
-.pn-card .cv::after{content:'';position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;border:28px solid rgba(255,255,255,.07)}
-.pn-card .cv.dark{background:#000}
-.pn-card .cv img{height:18px;width:auto;align-self:flex-start;margin-bottom:auto}
-.pn-card .cv h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:1;font-size:clamp(22px,1.8vw,26px);margin:28px 0 8px;position:relative}
-.pn-card .cv h3 small{display:block;font-size:.78em;font-weight:700;color:var(--lilac-a,#c9b8ff);margin-bottom:4px}
-.pn-card .cv.dark h3 small{color:#bdb4d8}
-.pn-card .cv > span{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.08em;color:rgba(255,255,255,.75);position:relative}
-.pn-card .bd{padding:20px 24px 24px;display:flex;flex-direction:column;gap:18px;flex:1}
+/* capa = uma página real do estudo, cortada pelo topo (onde fica o título do slide) */
+.pn-card .pv{position:relative;aspect-ratio:4/3;background:#f3f0f8;overflow:hidden;border-bottom:1px solid var(--line)}
+.pn-card .pv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform .5s}
+.pn-card:hover .pv img{transform:scale(1.03)}
+.pn-card .pv .ano{position:absolute;left:14px;bottom:14px;font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.08em;color:#000;background:var(--yellow);padding:6px 11px;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.pn-card .bd{padding:22px 24px 24px;display:flex;flex-direction:column;gap:14px;flex:1}
+.pn-card .bd h3{font-family:var(--display);font-weight:800;letter-spacing:-.02em;line-height:1.05;font-size:clamp(21px,1.7vw,25px);margin:0;color:var(--ink)}
+.pn-card .bd h3 small{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--purple-royal);margin-bottom:8px}
 .pn-card .bd p{margin:0;font-size:15px;line-height:1.45;color:#4a4458;flex:1}
-.pn-card .btn-line{border-color:var(--ink);color:var(--ink);justify-content:center}
+.pn-card .btn-line{border-color:var(--ink);color:var(--ink);justify-content:center;margin-top:6px}
 .pn-card .btn-line:hover{background:var(--ink);color:#fff}
 .pn-more{display:flex;justify-content:center;margin-top:40px}
+
+/* ---------- modal "Acessar estudo" (mesmo comportamento do hub atual) ---------- */
+.pn-modal{position:fixed;inset:0;z-index:400;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s,visibility 0s .25s}
+.pn-modal.open{opacity:1;visibility:visible;transition:opacity .25s}
+.pn-back{position:absolute;inset:0;background:rgba(10,6,20,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pn-box{position:relative;width:min(560px,100%);max-height:calc(100vh - 40px);overflow:auto;background:#fff;color:var(--ink);border-radius:var(--r-xl);padding:clamp(28px,3.4vw,44px);box-shadow:0 40px 100px rgba(0,0,0,.5);transform:translateY(16px) scale(.98);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.pn-modal.open .pn-box{transform:none}
+.pn-x{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:0;background:#f3f0f8;color:#000;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .25s,background .2s}
+.pn-x:hover{background:#e8e2f3;transform:rotate(90deg)}
+.pn-x svg{width:16px;height:16px}
+.pn-x:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.pn-box .kicker{margin-bottom:10px}
+.pn-box h2{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.4vw,28px);letter-spacing:-.02em;line-height:1.1;margin:0 0 8px;padding-right:40px}
+.pn-box .sub{margin:0 0 22px;font-size:15px;color:var(--muted)}
+.pn-box .lead-form{padding:0;box-shadow:none;border-radius:0}
+body.pn-lock{overflow:hidden}
+@media (prefers-reduced-motion:reduce){.pn-box,.pn-modal{transition:none}}
 
 /* ---------- dúvidas ---------- */
 .pn-faq-list{max-width:860px;margin:0 auto}
@@ -93,6 +109,6 @@
 @media (max-width:600px){
   .pn-hl > div{grid-template-columns:1fr;gap:6px}
   .pn-cards{grid-template-columns:1fr}
-  .pn-card .cv{min-height:200px}
+  .pn-card .bd h3{font-size:21px}
   .qa .ans{padding-right:0}
 }
