@@ -262,5 +262,5 @@
   #colunistas .prof-nav{flex-direction:column;align-items:stretch} #colunistas .prof-nav .btn-line{justify-content:center}
 }
 
-/* blog: boxe do Panorama no fim da pagina, sem o respiro extra que ele tem dentro da dobra do certificado */
-#panorama-box .cx-band{margin-top:0}
+/* blog: boxe do Panorama no fim da faixa escura dos colunistas, com respiro curto */
+#colunistas .cx-band{margin-top:clamp(40px,4vw,56px)}
