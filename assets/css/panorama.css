@@ -78,15 +78,6 @@
 .qa .ans{padding:0 50px 22px 0;color:#4a4458;max-width:70ch}
 .qa .ans p{margin:0 0 10px}
 
-/* ---------- Seja PM3 ---------- */
-.pn-seja .wrap{max-width:calc(900px + var(--gutter)*2)}
-.pn-seja-logo{height:26px;width:auto;display:block;margin-bottom:28px}
-.pn-seja .h2{font-size:clamp(28px,3.4vw,48px);max-width:22ch}
-.pn-seja-tx{margin-top:28px;display:grid;gap:14px;max-width:62ch}
-.pn-seja-tx p{margin:0;font-size:clamp(16px,1.3vw,18px);line-height:1.55;color:#ddd8e8}
-.pn-seja-end{font-family:var(--display);font-weight:700;color:#fff!important;margin-top:6px!important}
-.pn-seja-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-
 /* ---------- responsivo ---------- */
 @media (max-width:1080px){
   .pn-hero-grid{grid-template-columns:1fr}
@@ -98,5 +89,4 @@
   .pn-cards{grid-template-columns:1fr}
   .pn-card .cv{min-height:200px}
   .qa .ans{padding-right:0}
-  .pn-seja-ctas .btn{width:100%;justify-content:center}
 }
