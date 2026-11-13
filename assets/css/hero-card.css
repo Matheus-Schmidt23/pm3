@@ -72,3 +72,6 @@
   .m-hero-grid{grid-template-rows:auto clamp(300px,82vw,420px) 200px}
   .m-photo{background-position-y:18% !important}
 }
+
+/* titulo de cinco linhas (Membership): corpo um pouco menor para caber no card */
+.m-main h1.h-5l{font-size:clamp(40px,4.9vw,72px)}
