@@ -52,19 +52,33 @@
 .sec-head.center{display:block;text-align:center;max-width:720px;margin:0 auto 44px}
 .sec-head.center .kicker{justify-content:center}
 .sec-head.center .lead{margin:16px auto 0}
-.pn-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pn-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .pn-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
 .pn-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-/* capa = uma página real do estudo, cortada pelo topo (onde fica o título do slide) */
-.pn-card .pv{position:relative;aspect-ratio:4/3;background:#f3f0f8;overflow:hidden;border-bottom:1px solid var(--line)}
-.pn-card .pv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform .5s}
-.pn-card:hover .pv img{transform:scale(1.03)}
-.pn-card .pv .ano{position:absolute;left:14px;bottom:14px;font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.08em;color:#000;background:var(--yellow);padding:6px 11px;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
-.pn-card .bd{padding:22px 24px 24px;display:flex;flex-direction:column;gap:14px;flex:1}
-.pn-card .bd h3{font-family:var(--display);font-weight:800;letter-spacing:-.02em;line-height:1.05;font-size:clamp(21px,1.7vw,25px);margin:0;color:var(--ink)}
-.pn-card .bd h3 small{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--purple-royal);margin-bottom:8px}
+.pn-card .cv{position:relative;background:var(--purple-deep);color:#fff;padding:22px 24px 22px;min-height:230px;display:flex;flex-direction:column;overflow:hidden}
+.pn-card .cv::after{content:'';position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;border:28px solid rgba(255,255,255,.07)}
+.pn-card .cv img{height:18px;width:auto;align-self:flex-start;margin-bottom:auto}
+.pn-card .cv h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:1;font-size:clamp(22px,1.8vw,26px);margin:28px 0 8px;position:relative}
+.pn-card .cv h3 small{display:block;font-size:.78em;font-weight:700;color:var(--lilac-a,#c9b8ff);margin-bottom:4px}
+.pn-card .cv > span{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.08em;color:rgba(255,255,255,.75);position:relative}
+/* seis cores de capa, uma por estudo */
+.pn-card .cv.c-preto{background:#000}
+.pn-card .cv.c-preto h3 small{color:#bdb4d8}
+.pn-card .cv.c-royal{background:var(--purple-royal)}
+.pn-card .cv.c-royal h3 small{color:var(--yellow)}
+.pn-card .cv.c-magenta{background:linear-gradient(135deg,#6645B1,#b04ddd)}
+.pn-card .cv.c-magenta h3 small{color:#ffd9a6}
+.pn-card .cv.c-amarelo{background:var(--yellow);color:#000}
+.pn-card .cv.c-amarelo::after{border-color:rgba(0,0,0,.07)}
+.pn-card .cv.c-amarelo h3 small{color:var(--purple-deep)}
+.pn-card .cv.c-amarelo > span{color:rgba(0,0,0,.65)}
+.pn-card .cv.c-lilas{background:#e6dcff;color:var(--purple-deep)}
+.pn-card .cv.c-lilas::after{border-color:rgba(69,46,120,.08)}
+.pn-card .cv.c-lilas h3 small{color:var(--purple-royal)}
+.pn-card .cv.c-lilas > span{color:rgba(69,46,120,.7)}
+.pn-card .bd{padding:20px 24px 24px;display:flex;flex-direction:column;gap:18px;flex:1}
 .pn-card .bd p{margin:0;font-size:15px;line-height:1.45;color:#4a4458;flex:1}
-.pn-card .btn-line{border-color:var(--ink);color:var(--ink);justify-content:center;margin-top:6px}
+.pn-card .btn-line{border-color:var(--ink);color:var(--ink);justify-content:center}
 .pn-card .btn-line:hover{background:var(--ink);color:#fff}
 .pn-more{display:flex;justify-content:center;margin-top:40px}
 
@@ -109,6 +123,6 @@ body.pn-lock{overflow:hidden}
 @media (max-width:600px){
   .pn-hl > div{grid-template-columns:1fr;gap:6px}
   .pn-cards{grid-template-columns:1fr}
-  .pn-card .bd h3{font-size:21px}
+  .pn-card .cv{min-height:200px}
   .qa .ans{padding-right:0}
 }
