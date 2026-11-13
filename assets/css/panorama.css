@@ -3,7 +3,7 @@
    dúvidas, Seja PM3 e formulário final. Formulário e FAQ no mesmo padrão de Para empresas e do FAQ do site. */
 
 /* ---------- hero + formulário ---------- */
-.pn-hero{position:relative;background:#000;color:#fff;padding:clamp(40px,5vw,72px) 0 clamp(64px,8vw,112px);overflow:hidden}
+.pn-hero{position:relative;background:#000;color:#fff;padding:clamp(40px,5vw,72px) 0 clamp(48px,6vw,80px);overflow:hidden}
 .pn-hero::before{content:'';position:absolute;inset:auto -10% -40% -10%;height:70%;background:radial-gradient(60% 60% at 30% 100%,rgba(102,69,177,.55),transparent 70%);pointer-events:none}
 .pn-hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,96px);align-items:start}
 .pn-intro .crumbs{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:13px;margin:0 0 28px;padding:0;list-style:none}
@@ -13,13 +13,13 @@
 .pn-intro .display{font-size:clamp(40px,4.9vw,72px)}
 .pn-intro .display .l2{color:var(--lilac-a,#c9b8ff)}
 .pn-intro .lead{color:#ddd8e8;margin-top:22px}
-.pn-hl{margin:36px 0 0;padding:0;display:grid;gap:0;border-top:1px solid rgba(255,255,255,.14)}
-.pn-hl > div{display:grid;grid-template-columns:150px 1fr;gap:6px 24px;align-items:start;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
-.pn-hl dt{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);padding-top:6px}
-.pn-hl dd{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 20px;align-items:baseline}
-.pn-hl dd b{font-family:var(--display);font-weight:800;font-size:clamp(30px,2.6vw,40px);letter-spacing:-.04em;line-height:1;color:#fff;white-space:nowrap}
-.pn-hl dd span{font-size:14.5px;line-height:1.4;color:#c9c3d6;max-width:38ch}
-.pn-proof{display:flex;align-items:center;gap:12px;margin:28px 0 0;font-size:15px;color:#ddd8e8}
+.pn-hl{margin:28px 0 0;padding:0;display:grid;gap:0;border-top:1px solid rgba(255,255,255,.14)}
+.pn-hl > div{display:grid;grid-template-columns:92px minmax(150px,auto) 1fr;gap:0 20px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.pn-hl dt{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow)}
+.pn-hl dd{display:contents;margin:0}
+.pn-hl dd b{font-family:var(--display);font-weight:800;font-size:clamp(28px,2.4vw,36px);letter-spacing:-.04em;line-height:1;color:#fff;white-space:nowrap}
+.pn-hl dd span{font-size:14px;line-height:1.4;color:#c9c3d6;max-width:40ch}
+.pn-proof{display:flex;align-items:center;gap:12px;margin:24px 0 0;font-size:15px;color:#ddd8e8}
 .pn-proof img{height:18px;width:auto}
 .pn-proof b{color:#fff}
 
@@ -84,8 +84,7 @@
   .pn-cards{grid-template-columns:1fr 1fr}
 }
 @media (max-width:600px){
-  .pn-hl > div{grid-template-columns:1fr;gap:4px}
-  .pn-hl dd{grid-template-columns:1fr;gap:6px}
+  .pn-hl > div{grid-template-columns:1fr;gap:6px}
   .pn-cards{grid-template-columns:1fr}
   .pn-card .cv{min-height:200px}
   .qa .ans{padding-right:0}
