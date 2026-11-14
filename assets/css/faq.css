@@ -1,0 +1,77 @@
+/* PM3 · FAQ: réplica visual da página atual (pm3.com.br/faq). Página que não migra; só o cabeçalho e o rodapé são os do site novo. */
+.faqv3{font-family:'Inter',var(--body);color:#fff;background:#000}
+.faqv3 .fq-wrap{max-width:1328px;margin:0 auto;padding:0 24px}
+.faqv3 h1,.faqv3 h2,.faqv3 h3{font-family:'Inter',var(--body);margin:0}
+
+/* hero roxo */
+.fq-hero{background:#452E78;padding:64px 0 80px}
+.fq-hero .fq-wrap{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:40px 72px;align-items:start}
+.fq-hero h1{font-size:44px;font-weight:800;line-height:1.1;color:#fefefe;margin-bottom:28px}
+.fq-hero p{font-size:18px;line-height:1.5;color:#fff;max-width:34ch;margin:0}
+.fq-topics{display:flex;flex-wrap:wrap;gap:16px;padding-top:4px}
+.fq-topics a{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 20px 0 24px;border-radius:999px;background:#6645B1;color:#fff;text-decoration:none;font-size:16px;line-height:1;transition:background .2s,transform .2s}
+.fq-topics a:hover{background:#7a5bc7;transform:translateY(-1px)}
+.fq-topics a svg{width:32px;height:32px;flex:none}
+.fq-topics a svg rect{fill:#452E78}
+
+/* faixa de busca sobre a textura */
+.fq-search{background:#1e1e1e url('../img/faq/busca.webp') center/cover no-repeat;padding:30px 0}
+.fq-search .fq-wrap{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:24px 72px;align-items:center;min-height:182px}
+.fq-search h2{font-size:32px;font-weight:500;letter-spacing:-.023em;color:#fff}
+.fq-box{display:flex;align-items:center;gap:14px;background:#fefefe;border:.8px solid #e5e5e5;border-radius:8px;padding:24px;cursor:text}
+.fq-box svg{flex:none}
+.fq-box input{flex:1;border:0;outline:0;background:transparent;font-family:inherit;font-size:16px;color:#221c28;height:24px;padding:0;min-width:0}
+.fq-box input::placeholder{color:#8a8a8a}
+
+/* temas em duas colunas sobre preto */
+.fq-body{background:#000;padding:48px 0 80px}
+.fq-group{display:flex;gap:12px;align-items:flex-start;padding:24px 24px 56px}
+.fq-group.is-hidden{display:none}
+.fq-group h2{flex:0 0 355px;font-size:32px;font-weight:500;line-height:1.3;color:#fff;padding-right:24px}
+.fq-acc{flex:1;min-width:0;max-width:884px;margin-left:auto}
+.fq-qa{border-bottom:.8px solid #3c3c3c}
+.fq-qa.is-hidden{display:none}
+.fq-qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0}
+.fq-qa summary::-webkit-details-marker{display:none}
+.fq-qa summary:focus{outline:none}
+.fq-qa summary:focus-visible{outline:2px solid #a98bff;outline-offset:4px;border-radius:4px}
+.fq-qa h3{font-size:18.72px;font-weight:800;line-height:1.56;color:#fff}
+.fq-qa summary svg{width:40px;height:40px;flex:none;transition:transform .3s}
+.fq-qa[open] summary svg{transform:rotate(180deg)}
+.fq-ans{padding:0 64px 24px 0;font-size:16px;line-height:1.56;color:#fff}
+.fq-ans p{margin:0 0 12px}
+.fq-ans p:last-child{margin-bottom:0}
+.fq-ans ul,.fq-ans ol{margin:0 0 12px;padding-left:22px}
+.fq-ans a{color:#a98bff;text-decoration:none}
+.fq-ans a:hover{text-decoration:underline}
+.fq-ans strong{font-weight:800}
+.fq-empty{display:none;padding:32px 0;color:#fff;font-size:16px;line-height:1.6}
+.fq-empty.show{display:block}
+.fq-empty b{display:block;font-weight:800;margin-bottom:6px}
+
+/* faixa final roxa */
+.fq-cta{background:#452E78 url('../img/faq/busca.webp') center/cover no-repeat;padding:72px 0;text-align:center}
+.fq-cta h2{font-size:32px;font-weight:500;color:#fefefe;margin-bottom:14px}
+.fq-cta p{font-size:18px;color:#fefefe;margin:0 0 32px}
+.fq-btn{display:inline-flex;align-items:center;justify-content:center;min-width:196px;height:40px;padding:0 24px;border-radius:4px;background:#000;color:#fff;text-decoration:none;font-size:14px;font-weight:500;transition:background .2s}
+.fq-btn:hover{background:#221c28}
+
+@media (max-width:1024px){
+  .fq-group h2{flex-basis:280px}
+}
+@media (max-width:860px){
+  .fq-hero{padding:48px 0 56px}
+  .fq-hero .fq-wrap,.fq-search .fq-wrap{grid-template-columns:1fr;gap:24px}
+  .fq-hero h1{font-size:40px;margin-bottom:16px}
+  .fq-topics a{height:48px;padding:0 16px 0 18px;font-size:15px}
+  .fq-topics a svg{width:28px;height:28px}
+  .fq-search h2{font-size:26px}
+  .fq-box{padding:18px 20px}
+  .fq-group{flex-direction:column;gap:8px;padding:16px 24px 40px}
+  .fq-group h2{flex-basis:auto;font-size:26px;padding-right:0}
+  .fq-acc{margin-left:0;max-width:none}
+  .fq-qa h3{font-size:17px}
+  .fq-ans{padding-right:0}
+  .fq-cta{padding:56px 0}
+  .fq-cta h2{font-size:26px}
+}
