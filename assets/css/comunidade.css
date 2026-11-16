@@ -171,28 +171,36 @@
 .bc-nav [data-bc]:disabled{opacity:.3;cursor:default;background:transparent;color:#fff;border-color:rgba(255,255,255,.22)}
 .bc-nav [data-bc] svg{width:18px;height:18px}
 
-/* ---------- Jornada de Protagonismo: faixa própria ---------- */
-.jp{position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-xl);background:#0B0713;padding:clamp(32px,4.5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,5vw,72px);align-items:center}
-.jp::before{content:'';position:absolute;inset:0;z-index:-2;background:radial-gradient(70% 80% at 100% 100%,rgba(176,77,221,.55),transparent 60%),radial-gradient(60% 70% at 0% 0%,rgba(77,43,159,.8),transparent 65%)}
-.jp.grain::after{z-index:-1;opacity:.3}
-.jp .aurora{inset:-30% -20% -30% 40%;opacity:.5;z-index:-1}
+/* ---------- Jornada de Protagonismo: faixa de ponta a ponta, foto de fundo muda com os balões ---------- */
+.jp-sec{position:relative;isolation:isolate;overflow:hidden;background:#000;padding:clamp(80px,10vw,140px) 0;min-height:min(760px,92vh);display:flex;align-items:center}
+.jp-bgs{position:absolute;inset:0;z-index:-2}
+.jp-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.06);transition:opacity 1.1s ease,transform 7s linear;filter:saturate(1.05)}
+.jp-bg.on{opacity:1;transform:scale(1)}
+.jp-sec::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,3,10,.94) 0%,rgba(5,3,10,.82) 42%,rgba(5,3,10,.45) 70%,rgba(5,3,10,.3) 100%),linear-gradient(180deg,rgba(5,3,10,.55),transparent 30%,transparent 70%,rgba(5,3,10,.7))}
+.jp-in{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center;width:100%}
 .jp-tx .kicker .n{background:var(--yellow);color:#000}
-.jp-tx .lead{margin:22px 0 0;max-width:46ch}
+.jp-tx .lead{margin:22px 0 0;max-width:46ch;color:#e9e4f2}
+.jp-hint{margin:26px 0 0;font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow)}
 .jp-path{list-style:none;margin:0;padding:0;display:grid;gap:10px;position:relative}
-.jp-path li{position:relative;display:grid;grid-template-columns:118px 1fr;gap:4px 18px;align-items:center;padding:16px 20px;border-radius:var(--r-card);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);transition:transform .3s,background .3s,border-color .3s}
-.jp-path li:hover{transform:translateX(8px);background:rgba(255,255,255,.1);border-color:rgba(255,177,42,.6)}
-.jp-path li:first-child{background:var(--yellow);border-color:transparent;color:#000}
-.jp-path li:first-child .jp-step,.jp-path li:first-child span:last-child{color:#3a2b00}
+.jp-path li{position:relative}
+.jp-path button{width:100%;text-align:left;cursor:pointer;display:grid;grid-template-columns:118px 1fr;gap:4px 18px;align-items:center;padding:16px 20px;border-radius:var(--r-card);background:rgba(11,7,19,.55);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);color:#fff;font-family:var(--body);transition:transform .3s,background .3s,border-color .3s}
+.jp-path button:hover{transform:translateX(8px);background:rgba(11,7,19,.75);border-color:rgba(255,177,42,.6)}
+.jp-path button:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.jp-path button[aria-pressed="true"]{background:var(--yellow);border-color:transparent;color:#000;transform:translateX(8px)}
+.jp-path button[aria-pressed="true"] .jp-step,.jp-path button[aria-pressed="true"] span:last-child{color:#3a2b00}
 .jp-step{grid-row:1/3;font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
 .jp-path b{font-family:var(--display);font-size:clamp(17px,1.4vw,20px);line-height:1.15;color:inherit}
-.jp-path li span:last-child{font-size:13.5px;color:var(--gray-fog);line-height:1.35}
-.jp-path li + li::before{content:'';position:absolute;left:36px;top:-11px;width:2px;height:12px;background:rgba(255,255,255,.25)}
-
+.jp-path button span:last-child{font-size:13.5px;color:var(--gray-fog);line-height:1.35}
+.jp-path li + li::before{content:'';position:absolute;left:36px;top:-11px;width:2px;height:12px;background:rgba(255,255,255,.3)}
+@media (max-width:860px){
+  .jp-sec{min-height:0;padding:72px 0}
+  .jp-sec::before{background:linear-gradient(180deg,rgba(5,3,10,.9),rgba(5,3,10,.8))}
+  .jp-in{grid-template-columns:1fr}
+  .jp-path button{grid-template-columns:1fr}
+  .jp-step{grid-row:auto}
+}
 @media (max-width:1180px){ .bc{flex-basis:calc((100% - 32px) / 3)} }
 @media (max-width:860px){
-  .jp{grid-template-columns:1fr}
-  .jp-path li{grid-template-columns:1fr}
-  .jp-step{grid-row:auto}
   .bc-nav{flex-direction:column;align-items:flex-start}
 }
 @media (max-width:600px){

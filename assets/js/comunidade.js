@@ -32,3 +32,16 @@
     if (noFim) track.scrollTo({ left: 0 }); else track.scrollBy({ left: passo() });
   }, 2600);
 })();
+
+/* Jornada de Protagonismo: cada balão troca a foto de fundo; passa sozinha até o primeiro clique */
+(function(){
+  const sec = document.getElementById('protagonismo');
+  if (!sec) return;
+  const bgs = [...sec.querySelectorAll('.jp-bg')], btns = [...sec.querySelectorAll('[data-jp]')];
+  let i = 0, auto = true;
+  const mostra = n => { i = n; bgs.forEach((b, k) => b.classList.toggle('on', k === n)); btns.forEach((b, k) => b.setAttribute('aria-pressed', k === n ? 'true' : 'false')); };
+  btns.forEach(b => b.addEventListener('click', () => { auto = false; mostra(+b.dataset.jp); }));
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const visivel = () => { const r = sec.getBoundingClientRect(); return r.bottom > innerHeight * .2 && r.top < innerHeight * .8; };
+  setInterval(() => { if (auto && visivel() && !document.hidden) mostra((i + 1) % bgs.length); }, 5000);
+})();
