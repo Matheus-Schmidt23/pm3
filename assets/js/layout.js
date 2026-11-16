@@ -34,7 +34,7 @@
 
   const EVENTOS = [
     ['Product Camp','https://www.productcamp.com.br/','O maior evento de produto da América Latina'],
-    ['PCamp Pocket','https://www.productcamp.com.br/pocket','Edições compactas do Product Camp pelo Brasil'],
+    ['PCamp Pocket','https://www.productcamp.com.br/pocket','Edições compactas do Product Camp pelo Brasil'],
     ['Builders Camp','https://builderscamp.com.br/','Automação e IA para resultados']
   ];
   const chev = '<svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1.5 3.5 5 7l3.5-3.5"/></svg>';
