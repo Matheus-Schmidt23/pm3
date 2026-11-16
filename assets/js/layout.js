@@ -77,11 +77,10 @@
         </li>
         <li><a href="blog.html"${cur('blog')}>Blog</a></li>
         <li><a href="faq.html"${cur('faq')}>FAQ</a></li>
-        <li class="nav-mobile-cta"><a class="btn btn-light btn-block" href="#">Login</a><a class="btn btn-primary btn-block" href="membership.html#planos">Assinar o Membership</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn-primary btn-block" href="#">Login</a></li>
       </ul>
       <div class="bar-actions">
-        <a class="login" href="#">Login</a>
-        <a class="btn btn-primary btn-sm" href="membership.html#planos">Assinar</a>
+        <a class="btn btn-primary btn-sm" href="#" data-nota="Entra na área do aluno; no site atual o Login fica no mesmo lugar.">Login</a>
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span></button>
       </div>
     </div>
