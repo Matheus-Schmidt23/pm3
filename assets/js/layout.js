@@ -32,6 +32,10 @@
     ['Tech Management','pos-tech.html#pos-tech','Tecnologia']
   ];
 
+  const EVENTOS = [
+    ['Product Camp','https://www.productcamp.com.br/','O maior evento de produto da América Latina'],
+    ['Builders Camp','https://builderscamp.com.br/','Automação e IA para resultados']
+  ];
   const chev = '<svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1.5 3.5 5 7l3.5-3.5"/></svg>';
   const arrow = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg>';
   const cur = f => PAGE === f ? ' aria-current="page"' : '';
@@ -66,7 +70,11 @@
         </li>
         <li><a href="para-empresas.html"${cur('para-empresas')}>Para empresas</a></li>
         <li><a href="comunidade.html"${cur('comunidade')}>Comunidade</a></li>
-        <li><a href="https://www.productcamp.com.br/" target="_blank" rel="noopener" title="Abre o site do Product Camp em outra aba">PCamp</a></li>
+        <li><button type="button" aria-expanded="false" aria-controls="mega-eventos">Eventos ${chev}</button>
+          ${mega('mega-eventos','Eventos','Encontros da comunidade PM3, presenciais e online. Os sites dos eventos abrem em outra aba.',
+            EVENTOS.map(([n,h,q])=>`<li><a href="${h}" target="_blank" rel="noopener">${n}<small>${q}</small></a></li>`).join(''),
+            '<a href="comunidade.html#eventos">Ver a agenda da comunidade →</a>')}
+        </li>
         <li><a href="blog.html"${cur('blog')}>Blog</a></li>
         <li><a href="faq.html"${cur('faq')}>FAQ</a></li>
         <li class="nav-mobile-cta"><a class="btn btn-light btn-block" href="#">Login</a><a class="btn btn-primary btn-block" href="membership.html#planos">Assinar o Membership</a></li>
