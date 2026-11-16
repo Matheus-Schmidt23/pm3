@@ -66,6 +66,7 @@
         </li>
         <li><a href="para-empresas.html"${cur('para-empresas')}>Para empresas</a></li>
         <li><a href="comunidade.html"${cur('comunidade')}>Comunidade</a></li>
+        <li><a href="https://www.productcamp.com.br/" target="_blank" rel="noopener" title="Abre o site do Product Camp em outra aba">PCamp</a></li>
         <li><a href="blog.html"${cur('blog')}>Blog</a></li>
         <li><a href="faq.html"${cur('faq')}>FAQ</a></li>
         <li class="nav-mobile-cta"><a class="btn btn-light btn-block" href="#">Login</a><a class="btn btn-primary btn-block" href="membership.html#planos">Assinar o Membership</a></li>
