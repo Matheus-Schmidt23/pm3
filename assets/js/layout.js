@@ -78,10 +78,10 @@
         </li>
         <li><a href="blog.html"${cur('blog')}>Blog</a></li>
         <li><a href="faq.html"${cur('faq')}>FAQ</a></li>
-        <li class="nav-mobile-cta"><a class="btn btn-primary btn-block" href="#">Login</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn-primary btn-block" href="https://plataforma.cursospm3.com.br/" target="_blank" rel="noopener">Login</a></li>
       </ul>
       <div class="bar-actions">
-        <a class="btn btn-primary btn-sm" href="#" data-nota="Entra na área do aluno; no site atual o Login fica no mesmo lugar.">Login</a>
+        <a class="btn btn-primary btn-sm" href="https://plataforma.cursospm3.com.br/" target="_blank" rel="noopener" data-nota="Plataforma dos cursos (separada da plataforma da comunidade).">Login</a>
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span></button>
       </div>
     </div>
