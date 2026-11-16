@@ -125,6 +125,9 @@ button{font:inherit;color:inherit}
 .mega-list a:hover{color:var(--blaze-b);padding-left:6px}
 .mega-foot{grid-column:2;display:flex;gap:28px;margin-top:8px}
 .mega-foot a{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);text-decoration:none}
+/* submenu Eventos: três itens em coluna única, com a legenda alinhada à direita */
+#mega-eventos .mega-list{grid-template-columns:1fr;max-width:640px}
+#mega-eventos .mega-list a small{text-align:right;max-width:30ch}
 
 /* ---------- rodapé ---------- */
 .site-footer{background:#000;color:var(--gray-fog);padding:96px 0 0;position:relative;overflow:hidden}
