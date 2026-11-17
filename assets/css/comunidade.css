@@ -194,7 +194,8 @@
 .jobs-track:focus-visible{outline:2px solid var(--yellow);outline-offset:6px}
 .jobw{flex:0 0 calc((100% - 48px) / 4);scroll-snap-align:start;display:flex;flex-direction:column;gap:14px;padding:22px 22px 24px;border-radius:var(--r-card);background:#fff;color:var(--ink);box-shadow:0 10px 30px rgba(11,7,19,.18);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 .jobw:hover{transform:translateY(-5px);box-shadow:0 22px 44px rgba(11,7,19,.28)}
-.jw-top{display:flex;justify-content:space-between;align-items:center;min-height:30px}
+.jw-top{display:flex;justify-content:space-between;align-items:center;height:44px}
+.jw-logo img{max-height:44px}
 .jw-logo{display:inline-flex;align-items:center}
 .jw-logo img{display:block;width:auto;max-width:110px}
 .jw-new{font-family:var(--display);font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--purple-royal);display:inline-flex;align-items:center;gap:6px}
