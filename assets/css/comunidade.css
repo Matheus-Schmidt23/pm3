@@ -203,7 +203,8 @@
 .jw-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .jw-chips li{font-family:var(--display);font-weight:600;font-size:12px;padding:5px 10px;border-radius:var(--r-pill);background:#f3f0f8;color:#4a4458}
 .jobs-nav{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:22px}
-.jobs-note{margin:0;font-size:13px;color:#e9e4f2;opacity:.85;max-width:60ch}
+.jobs-note{margin:0;font-size:13px;line-height:1.6;color:#e9e4f2;opacity:.85;max-width:none}
+@media (max-width:860px){ .jobs-note br{display:none} }
 .jobs-note a{color:#fff;font-family:var(--display);font-weight:700;text-decoration:none;white-space:nowrap}
 .jobs-note a:hover{text-decoration:underline}
 .jobs-nav .prof-btns button{border-color:rgba(255,255,255,.35)}
