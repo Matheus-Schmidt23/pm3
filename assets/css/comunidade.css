@@ -41,29 +41,7 @@
 .cv-tx b{display:block;font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow)}
 .cv-tx span{display:block;margin-top:4px;font-family:var(--display);font-weight:700;font-size:clamp(16px,1.3vw,20px);line-height:1.15;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.6)}
 
-/* ---------- vagas ---------- */
-.jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.job{position:relative;display:flex;flex-direction:column;gap:12px;padding:24px 24px 22px;border-radius:var(--r-card);background:rgba(11,7,19,.55);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(8px);color:#fff;text-decoration:none;transition:transform .3s,border-color .3s}
-.job:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.3)}
-.job-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.job .co-logo{display:inline-flex;align-items:center;min-height:32px;padding:7px 12px;border-radius:999px;background:#fff}
-.job .co-logo img{display:block;width:auto;max-width:120px}
-.job h3{font-size:clamp(20px,1.8vw,24px);font-weight:800;line-height:1.08;letter-spacing:-.02em}
-.job p{margin:0;font-size:14.5px;line-height:1.5;color:var(--gray-fog)}
-.chips{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
-.chips li{font-family:var(--display);font-weight:600;font-size:12px;padding:5px 10px;border-radius:var(--r-pill);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14)}
-.job-src{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);font-size:12.5px;color:var(--gray-fog)}
-.job.more{grid-column:1/-1;flex-direction:row;align-items:center;gap:24px;padding:22px 28px;background:var(--yellow);border:0;color:#000}
-.job.more h3{font-size:clamp(20px,1.9vw,26px);max-width:16ch}
-.job.more p{max-width:44ch}
-.job.more .lock{width:48px;height:48px;border-radius:50%;background:#000;color:var(--yellow);display:flex;align-items:center;justify-content:center}
-.job.more .lock svg{width:22px;height:22px}
-.job.more p{color:#3a2b00}
-.job.more .go{margin-left:auto;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
-.job.more .go svg{width:16px;height:16px;transition:transform .25s}
-.job.more:hover .go svg{transform:translateX(4px)}
-.jobs-note{margin:22px 0 0;font-size:13px;color:var(--gray-fog);opacity:.8}
-
+/* ---------- vagas: ver bloco no fim do arquivo ---------- */
 /* ---------- mentorias ---------- */
 .mt-head{align-items:end}
 .mt-side{display:flex;flex-direction:column;gap:22px}
@@ -208,3 +186,43 @@
   .bc{flex-basis:84%}
   .bc-track{-webkit-mask-image:none;mask-image:none}
 }
+
+/* ---------- vagas: cards brancos, limpos, em carrossel de quatro ---------- */
+.jobs-wrap{position:relative}
+.jobs-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;padding:6px 0 8px}
+.jobs-track::-webkit-scrollbar{display:none}
+.jobs-track:focus-visible{outline:2px solid var(--yellow);outline-offset:6px}
+.jobw{flex:0 0 calc((100% - 48px) / 4);scroll-snap-align:start;display:flex;flex-direction:column;gap:14px;padding:22px 22px 20px;border-radius:var(--r-card);background:#fff;color:var(--ink);box-shadow:0 10px 30px rgba(11,7,19,.18);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.jobw:hover{transform:translateY(-5px);box-shadow:0 22px 44px rgba(11,7,19,.28)}
+.jw-top{display:flex;justify-content:space-between;align-items:center;min-height:30px}
+.jw-logo{display:inline-flex;align-items:center}
+.jw-logo img{display:block;width:auto;max-width:110px}
+.jw-new{font-family:var(--display);font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--purple-royal);display:inline-flex;align-items:center;gap:6px}
+.jw-new::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--purple-royal);box-shadow:0 0 0 3px rgba(102,69,177,.18)}
+.jobw h3{font-size:clamp(17px,1.35vw,20px);font-weight:800;line-height:1.15;letter-spacing:-.02em;color:var(--ink);min-height:2.3em}
+.jw-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.jw-chips li{font-family:var(--display);font-weight:600;font-size:12px;padding:5px 10px;border-radius:var(--r-pill);background:#f3f0f8;color:#4a4458}
+.jw-src{margin:auto 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px;color:#7a7488}
+.jobs-nav{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:22px}
+.jobs-note{margin:0;font-size:13px;color:#e9e4f2;opacity:.85;max-width:60ch}
+.jobs-note a{color:#fff;font-family:var(--display);font-weight:700;text-decoration:none;white-space:nowrap}
+.jobs-note a:hover{text-decoration:underline}
+.jobs-nav .prof-btns button{border-color:rgba(255,255,255,.35)}
+
+/* ---------- mentores: card próprio (foto quadrada, selo Mentor PM3, empresa com marca) ---------- */
+.prof.mentor{background:#0d0a14;border:1px solid rgba(255,255,255,.1);border-radius:var(--r-card)}
+.prof.mentor .ph{aspect-ratio:1/1}
+.prof.mentor .ph img{object-position:center 22%}
+.prof.mentor .ph::after{display:none}
+.mt-badge{position:absolute;left:12px;top:12px;z-index:1;font-family:var(--display);font-weight:800;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;border-radius:var(--r-pill);background:var(--yellow);color:#000;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.prof.mentor figcaption{padding:16px 18px 16px;display:flex;flex-direction:column;gap:4px}
+.prof.mentor figcaption b{font-size:17px}
+.prof.mentor figcaption span{margin:0}
+.mt-co{display:flex!important;align-items:center;gap:8px;margin-top:10px!important;padding-top:12px;border-top:1px solid rgba(255,255,255,.1);font-family:var(--display);font-weight:700;font-size:12.5px!important;color:#fff!important;letter-spacing:.01em}
+.mt-co img{width:20px;height:20px;border-radius:5px;object-fit:contain;background:#fff;padding:2px;flex:none}
+.mt-co img[src$=".svg"]{width:auto;max-width:64px;height:18px;padding:2px 5px;border-radius:5px}
+.prof.mentor:hover{border-color:rgba(255,177,42,.55)}
+
+@media (max-width:1180px){ .jobw{flex-basis:calc((100% - 32px) / 3)} }
+@media (max-width:860px){ .jobs-nav{flex-direction:column;align-items:flex-start} }
+@media (max-width:600px){ .jobw{flex-basis:80%} }
