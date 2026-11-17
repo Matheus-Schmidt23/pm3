@@ -59,9 +59,11 @@
     const tr = car.querySelector('.car-track'), ant = car.querySelector('[data-car=ant]'), prox = car.querySelector('[data-car=prox]');
     if (!tr || !ant || !prox) return;
     const passo = () => { const c = tr.children[0], g = parseFloat(getComputedStyle(tr).columnGap) || 16; return (c ? c.getBoundingClientRect().width : tr.clientWidth) + g; };
-    const estado = () => { ant.disabled = tr.scrollLeft < 4; prox.disabled = tr.scrollLeft + tr.clientWidth >= tr.scrollWidth - 4; };
-    ant.addEventListener('click', () => tr.scrollBy({ left: -passo(), behavior: 'smooth' }));
-    prox.addEventListener('click', () => tr.scrollBy({ left: passo(), behavior: 'smooth' }));
+    const estado = () => { ant.disabled = false; prox.disabled = false; };
+    /* loop: no fim volta ao primeiro cartão; no início, a seta "anterior" vai ao último */
+    const noFim = () => tr.scrollLeft + tr.clientWidth >= tr.scrollWidth - 4, noInicio = () => tr.scrollLeft < 4;
+    ant.addEventListener('click', () => noInicio() ? tr.scrollTo({ left: tr.scrollWidth, behavior: 'smooth' }) : tr.scrollBy({ left: -passo(), behavior: 'smooth' }));
+    prox.addEventListener('click', () => noFim() ? tr.scrollTo({ left: 0, behavior: 'smooth' }) : tr.scrollBy({ left: passo(), behavior: 'smooth' }));
     tr.addEventListener('scroll', estado, { passive: true }); addEventListener('resize', estado); estado();
   });
 })();

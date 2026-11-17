@@ -82,12 +82,16 @@
   const passo = () => { const v = vis(); return v[1] ? v[1].offsetLeft - v[0].offsetLeft : track.clientWidth; };
   const porTela = () => Math.max(1, Math.round(track.clientWidth / passo()));
   const atualiza = () => {
-    ant.disabled = track.scrollLeft <= 4;
-    prox.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+    /* setas sempre ativas: o carrossel é um loop */
+
+    ant.disabled = false; prox.disabled = false;
   };
   let ate = 0;
   const segura = (ms = 6000) => { ate = Date.now() + ms; };
-  const vai = d => track.scrollBy({ left: d * porTela() * passo() });
+  const noFim = () => track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+    const noInicio = () => track.scrollLeft <= 4;
+    /* loop: no fim, a seta volta ao primeiro card; no início, a seta "anterior" vai ao último */
+    const vai = d => { if (d > 0 && noFim()) track.scrollTo({ left: 0 }); else if (d < 0 && noInicio()) track.scrollTo({ left: track.scrollWidth }); else track.scrollBy({ left: d * porTela() * passo() }); };
   ant.addEventListener('click', () => { vai(-1); segura(); });
   prox.addEventListener('click', () => { vai(1); segura(); });
   track.addEventListener('scroll', atualiza, { passive: true });
