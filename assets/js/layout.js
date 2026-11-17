@@ -69,13 +69,13 @@
             POSTECH.map(([n,h,a])=>`<li><a href="${h}">${n}<small>${a}</small></a></li>`).join(''),
             '<a href="pos-tech.html">Conhecer a Pós Tech →</a>')}
         </li>
-        <li><a href="para-empresas.html"${cur('para-empresas')}>Para empresas</a></li>
-        <li><a href="comunidade.html"${cur('comunidade')}>Comunidade</a></li>
         <li><button type="button" aria-expanded="false" aria-controls="mega-eventos">Eventos ${chev}</button>
           ${mega('mega-eventos','Eventos','Encontros da comunidade PM3, presenciais e online. Os sites dos eventos abrem em outra aba.',
             EVENTOS.map(([n,h,q])=>`<li><a href="${h}" target="_blank" rel="noopener">${n}<small>${q}</small></a></li>`).join(''),
             '<a href="comunidade.html#eventos">Ver a agenda da comunidade →</a>')}
         </li>
+        <li><a href="comunidade.html"${cur('comunidade')}>Comunidade</a></li>
+        <li><a href="para-empresas.html"${cur('para-empresas')}>Para empresas</a></li>
         <li><a href="blog.html"${cur('blog')}>Blog</a></li>
         <li><a href="faq.html"${cur('faq')}>FAQ</a></li>
         <li class="nav-mobile-cta"><a class="btn btn-primary btn-block" href="https://plataforma.cursospm3.com.br/" target="_blank" rel="noopener">Login</a></li>
@@ -97,7 +97,6 @@
           <a class="ft-link" href="membership.html#planos">Conhecer o Membership ${arrow}</a>
           <a class="ft-link" href="cursos.html">Catálogo completo ${arrow}</a>
         </div>
-        <div><h4>PM3</h4><ul><li><a href="para-empresas.html">Para empresas</a></li><li><a href="comunidade.html">Comunidade</a></li><li><a href="#">Instrutores</a></li><li><a href="panorama.html">Panorama 2026-2027</a></li><li><a href="blog.html">Blog</a></li><li><a href="#">Biblioteca</a></li><li><a href="#">Glossário de produto</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#">Contato</a></li><li><a href="#">Trabalhe conosco</a></li></ul></div>
         <div><h4>Formações</h4><ul>${FORMACOES.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}</ul></div>
         <div><h4>Sprints</h4><ul>${SPRINTS.map(([n,h])=>`<li><a href="${h}">${n.replace(" e habilidades humanas","")}</a></li>`).join('')}<li><a href="sprints.html#ia">Inteligência Artificial</a></li></ul></div>
         <div><h4>Pós Tech</h4><ul><li><a href="pos-tech.html">Conhecer a Pós Tech</a></li><li><a href="pos-digital-product-management.html">Digital Product Management</a></li><li><a href="pos-tech.html#pos-tech">Tech Management</a></li><li><a href="pos-tech.html#pos-ia">IA para Negócios</a></li><li><a href="https://alun.com.br/" target="_blank" rel="noopener">Grupo Alun</a></li></ul></div>
