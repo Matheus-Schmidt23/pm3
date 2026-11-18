@@ -109,3 +109,6 @@
 /* ---------- capas puxadas de leve para o lilás da PM3 (sem mexer nos arquivos: véu roxo em soft-light) ---------- */
 .f-vis::before{content:"";position:absolute;inset:0;z-index:1;background:#8e5cf0;mix-blend-mode:soft-light;opacity:.38;pointer-events:none}
 .f-vis::after{z-index:2}
+/* revisão mobile: card do Membership não estoura a coluna em 320px */
+@media (max-width:860px){ .f-more,.f-more-full{grid-template-columns:minmax(0,1fr)} .f-more > *{min-width:0} }
+@media (max-width:400px){ .f-more{padding:24px 20px} .fm-price{padding:20px 18px 18px} }

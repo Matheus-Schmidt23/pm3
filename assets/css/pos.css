@@ -621,3 +621,6 @@
 /* fluxo refeito no Magnific em alta resolução (fibras de dados azuis) */
 .p-fluxo .p-foto{background-image:url('../img/pos-hero-fibra.jpg');background-position:right center;filter:none}
 .p-fluxo .p-main h1 .l2{color:#7fb4ff}
+/* revisão mobile: rótulos dos números quebram linha em vez de vazar do quadro */
+@media (max-width:600px){ .pos-spec{grid-template-columns:repeat(2,minmax(0,1fr))} .pos-spec li{padding:16px 18px;min-width:0} .pos-spec span{white-space:normal} }
+@media (max-width:600px){ .p-main h1,.p-grid.p-forte .p-main h1{font-size:clamp(34px,11.6vw,44px)} }

@@ -563,3 +563,6 @@ a.step:hover{transform:translateY(-4px)}
 .ementa-aside .em-cases-lb h3{font-size:clamp(22px,2vw,26px)}
 .ementa-aside .em-cases-1 .em-cases-logos{grid-template-columns:1fr}
 .ementa-aside .em-cases-logos li{height:88px}
+/* revisão mobile: título do hero cabe na largura do celular (MANAGEMENT estourava a coluna) */
+@media (max-width:860px){ .c-hero-grid,.c-hero-grid > *{min-width:0} .c-hero-grid{grid-template-columns:minmax(0,1fr)} }
+@media (max-width:600px){ .c-hero h1{font-size:clamp(38px,12.6vw,52px)} .c-hero h1.h-sprint{font-size:clamp(32px,10.6vw,42px)} }

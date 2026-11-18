@@ -277,3 +277,15 @@ button{font:inherit;color:inherit}
 .cx-sec + .alun-sec2,.cx-sec + section.on-dark{padding-top:clamp(40px,4.5vw,72px)}
 .section.on-dark + .section.on-dark,.section.on-dark + .cx-sec .cx-hero{padding-top:clamp(64px,7vw,112px)}
 .section.on-dark:has(+ .section.on-dark),.section.on-dark:has(+ .alun-sec2),.section.on-dark:has(+ .cx-sec){padding-bottom:clamp(64px,7vw,112px)}
+
+/* ---------- revisão mobile (2026-11-18) ---------- */
+/* iOS ignora overflow-x do body: o corte precisa estar também no html */
+html{overflow-x:clip}
+@supports not (overflow:clip){ html{overflow-x:hidden} }
+/* gaveta fechada fica fora do fluxo de toque e de leitura (não gera rolagem lateral) */
+@media (max-width:1080px){
+  .nav{visibility:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),visibility 0s .35s}
+  .nav-open .nav{visibility:visible;transition:transform .35s cubic-bezier(.2,.7,.2,1),visibility 0s}
+}
+/* telas pequenas (320–400px): botão longo quebra linha em vez de empurrar o card */
+@media (max-width:400px){ .btn{white-space:normal;text-align:center;line-height:1.2} }

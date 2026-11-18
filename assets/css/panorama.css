@@ -117,3 +117,7 @@ body.pn-lock{overflow:hidden}
   .pn-card .cv{min-height:250px}
   .qa .ans{padding-right:0}
 }
+/* revisão mobile: coluna única sem estourar a largura */
+@media (max-width:1080px){ .pn-hero-grid{grid-template-columns:minmax(0,1fr)} .pn-hero-grid > *{min-width:0} }
+@media (max-width:600px){ .pn-intro .display{font-size:clamp(32px,10.4vw,40px)} }
+@media (max-width:400px){ .pn-form{padding-left:18px;padding-right:18px} }

@@ -72,3 +72,8 @@
   .m-hero-grid{grid-template-rows:auto clamp(300px,82vw,420px) 200px}
   .m-photo{background-position-y:18% !important}
 }
+/* revisão mobile: o tile lilás cresce com o texto (altura fixa cortava o parágrafo) */
+@media (max-width:860px){
+  .m-hero-grid{grid-template-columns:minmax(0,1fr);grid-template-rows:auto clamp(300px,82vw,420px) auto}
+  .m-tile{min-height:200px;gap:18px}
+}
