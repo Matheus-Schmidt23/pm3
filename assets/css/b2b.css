@@ -326,3 +326,22 @@ fieldset.field{border:0;margin:0;padding:0}
 .obj-tx{padding-top:14px}
 /* formatos: pessoas empurradas para a direita, longe do texto */
 .fmt-acc.acc .trb.open .trb-vis{background-position:100% 50%!important}
+
+/* depoimentos sobre o roxo: cards claros (em vez de pretos), como as vagas da Comunidade */
+.section.deep .dp-card{background:#fff;border-color:rgba(255,255,255,.6);box-shadow:0 24px 60px -30px rgba(10,4,24,.55)}
+.section.deep .dp-card .qm{color:var(--purple-royal)}
+.section.deep .dp-card blockquote p{color:var(--ink)}
+.section.deep .dp-card .who b{color:var(--ink)}
+.section.deep .dp-card .who span{color:var(--muted)}
+.section.deep .dp-bar{background:rgba(255,255,255,.22)}
+
+/* proposta: formulário mais compacto e coluna da esquerda centralizada na altura dele */
+.lead-grid{align-items:center}
+.lead-form{gap:14px 14px;padding:clamp(22px,2.6vw,36px)}
+.lead-form .field input,.lead-form .field select{padding:11px 14px}
+.lead-form .field textarea{min-height:76px;padding:11px 14px}
+.lead-form .seg-opt{flex-wrap:nowrap;gap:6px}
+.lead-form .seg-opt label{font-size:13px;padding:8px 12px;white-space:nowrap}
+@media (max-width:1100px){ .lead-form .seg-opt{flex-wrap:wrap} }
+.asmt-claro::before{background:linear-gradient(90deg,#f4f0fb 0%,rgba(244,240,251,.94) 50%,rgba(244,240,251,.35) 72%,rgba(244,240,251,0) 100%)}
+@media (max-width:900px){ .asmt-claro::before{background:linear-gradient(180deg,rgba(244,240,251,.94),rgba(244,240,251,.97))} }
