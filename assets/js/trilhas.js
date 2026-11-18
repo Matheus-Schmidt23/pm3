@@ -1,12 +1,11 @@
-/* trilhas: acordeão — uma trilha aberta por vez, as outras recolhidas com botão de expandir */
-(function(){
-  const grid = document.querySelector('.trb-grid');
-  if (!grid) return;
+/* trilhas: acordeão — um card aberto por vez, os outros recolhidos com botão de expandir.
+   Funciona em mais de um .trb-grid na mesma página (ex.: formatos e eventos em Para empresas). */
+document.querySelectorAll('.trb-grid').forEach((grid, g) => {
   const cards = [...grid.querySelectorAll('.trb')];
   const MAIS = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>';
   cards.forEach((c, i) => {
     const body = c.querySelector('.trb-body');
-    body.id = body.id || 'trb-body-' + (i + 1);
+    body.id = body.id || 'trb-body-' + (g + 1) + '-' + (i + 1);
     const mini = document.createElement('div');
     mini.className = 'trb-mini';
     mini.innerHTML = `<b>${c.querySelector('h3').innerHTML}</b><span>${c.querySelector('.trb-pack').textContent}</span>`;
@@ -14,7 +13,7 @@
     bt.type = 'button';
     bt.className = 'trb-tog';
     bt.setAttribute('aria-controls', body.id);
-    bt.setAttribute('aria-label', 'Expandir trilha ' + c.querySelector('h3').textContent);
+    bt.setAttribute('aria-label', 'Expandir ' + c.querySelector('h3').textContent);
     bt.innerHTML = MAIS;
     mini.appendChild(bt);
     c.querySelector('.trb-vis').after(mini);
@@ -26,8 +25,8 @@
     c.querySelector('.trb-tog').setAttribute('aria-expanded', on);
     c.querySelector('.trb-body').inert = !on;
   });
-  
-  /* altura das trilhas = a do conteúdo mais longo (no acordeão vertical, cada card aberto tem a sua) */
+
+  /* altura = a do conteúdo mais longo (no acordeão vertical, cada card aberto tem a sua) */
   const mede = () => {
     grid.classList.add('mede');
     const hs = cards.map(c => c.querySelector('.trb-body').offsetHeight);
@@ -42,4 +41,4 @@
   abre(0);
   mede();
   if (document.fonts) document.fonts.ready.then(mede);
-})();
+});
