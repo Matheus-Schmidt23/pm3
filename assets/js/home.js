@@ -33,8 +33,8 @@
     tag.classList.add('troca');
     setTimeout(() => { tag.innerHTML = html; tag.classList.remove('troca'); }, 700);
   };
-  /* cada visita começa por uma pessoa sorteada (sem animação na troca inicial) */
-  let i = Math.floor(Math.random() * fotos.length);
+  /* toda visita começa pelo Farinazzo (sem animação na troca inicial); depois segue a ordem do HTML */
+  let i = Math.max(0, fotos.findIndex(f => /Farinazzo/.test(f.dataset.nome || '')));
   /* a primeira foto aparece já visível, mas sem zoom; ao soltar o sem-anim o Ken Burns começa nela também */
   {
     const f = fotos[i];
