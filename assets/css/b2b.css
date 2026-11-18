@@ -296,3 +296,21 @@ fieldset.field{border:0;margin:0;padding:0}
   .asmt-cta{align-self:stretch;min-width:0}
 }
 .asmt-in > .h2{max-width:none}
+
+/* Assessment: versão clara (entre duas faixas escuras) com texto que se preenche ao rolar */
+.asmt-claro{background:#f4f0fb;color:var(--ink);padding:clamp(96px,12vw,170px) 0}
+.asmt-claro .asmt-bg{background-position:100% 50%;transform:none}
+.asmt-claro::before{background:linear-gradient(90deg,#f4f0fb 0%,rgba(244,240,251,.92) 42%,rgba(244,240,251,.2) 75%,rgba(244,240,251,0) 100%)}
+.asmt-claro .asmt-in{gap:30px}
+.asmt-claro .kicker{color:var(--muted)}
+.asmt-claro .fill-text{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(32px,4.2vw,60px);line-height:1.08;letter-spacing:-.03em;max-width:21ch}
+.asmt-claro .fill-text .w{color:rgba(22,18,31,.14);transition:color .35s}
+.asmt-claro .fill-text .w.on{color:var(--ink)}
+.asmt-claro .fill-text .w.hl.on{color:var(--purple-royal)}
+.asmt-claro .asmt-dims{max-width:none;flex-direction:row;flex-wrap:nowrap;gap:8px}
+.asmt-claro .asmt-dims li{color:var(--ink);border-color:rgba(22,18,31,.18);background:rgba(255,255,255,.6);white-space:nowrap}
+@media (max-width:900px){
+  .asmt-claro::before{background:linear-gradient(180deg,rgba(244,240,251,.94),rgba(244,240,251,.97))}
+  .asmt-claro .asmt-dims{flex-wrap:wrap}
+}
+@media (prefers-reduced-motion:reduce){ .asmt-claro .fill-text .w{color:var(--ink)} }

@@ -35,3 +35,22 @@
     form.querySelector('.ok').focus?.();
   });
 })();
+
+/* Assessment: palavras se preenchem conforme a rolagem; *palavra* ganha destaque (mesmo efeito do manifesto do Membership) */
+(function(){
+  const fill = document.getElementById('asFill');
+  if (!fill) return;
+  fill.innerHTML = fill.textContent.trim().split(/\s+/).map(w => {
+    const hl = /^\*.*\*[.,]?$/.test(w);
+    return `<span class="w${hl ? ' hl' : ''}">${w.replace(/\*/g,'')}</span>`;
+  }).join(' ');
+  const ws = [...fill.querySelectorAll('.w')];
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches){ ws.forEach(w => w.classList.add('on')); return; }
+  const pinta = () => {
+    const r = fill.getBoundingClientRect(), vh = innerHeight;
+    const p = Math.max(0, Math.min(1, (vh * .82 - r.top) / (r.height + vh * .38)));
+    const k = Math.round(p * ws.length);
+    ws.forEach((w, i) => w.classList.toggle('on', i < k));
+  };
+  addEventListener('scroll', pinta, { passive: true }); pinta();
+})();
