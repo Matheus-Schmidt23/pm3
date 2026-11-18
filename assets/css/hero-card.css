@@ -19,7 +19,7 @@
 .m-price b{font-size:clamp(30px,3vw,40px);font-weight:800;letter-spacing:-.03em}
 .m-price span{display:block;font-family:var(--body);font-size:14px;color:var(--gray-fog);margin-top:8px}
 .m-buy .btns{display:flex;gap:12px;flex-wrap:wrap}
-.m-safe{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--gray-fog);margin-top:4px}
+.m-safe{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--gray-fog);margin-top:22px}
 .m-safe span{display:flex;align-items:center;gap:8px}
 .m-safe svg{width:16px;height:16px;color:var(--blaze-b)}
 .m-photo{position:relative;overflow:hidden;border-radius:0 var(--r-xl) 0 0;background:#1a1028 center/cover}
