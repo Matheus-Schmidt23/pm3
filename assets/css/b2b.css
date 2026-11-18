@@ -314,3 +314,15 @@ fieldset.field{border:0;margin:0;padding:0}
   .asmt-claro .asmt-dims{flex-wrap:wrap}
 }
 @media (prefers-reduced-motion:reduce){ .asmt-claro .fill-text .w{color:var(--ink)} }
+
+/* rostos livres: foto no topo dos programas, texto abaixo dela (não sobre as pessoas) */
+.progs .prog:not(.own){min-height:440px;background:#120c1e}
+.progs .prog:not(.own) .bg{bottom:auto;height:62%;background-position:50% 30%}
+.progs .prog:not(.own)::after{background:linear-gradient(180deg,rgba(18,12,30,0) 30%,rgba(18,12,30,.2) 45%,#120c1e 64%)}
+.progs .prog.own{min-height:440px}
+/* objetivos: número sai de cima da foto e vai para o texto */
+.obj-ph::after{background:linear-gradient(180deg,rgba(20,16,25,0) 70%,#141019 100%)}
+.obj-n{position:static;display:block;font-size:44px;margin-bottom:4px}
+.obj-tx{padding-top:14px}
+/* formatos: pessoas empurradas para a direita, longe do texto */
+.fmt-acc.acc .trb.open .trb-vis{background-position:100% 50%!important}
