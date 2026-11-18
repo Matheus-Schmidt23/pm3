@@ -31,7 +31,8 @@ document.querySelectorAll('.trb-grid').forEach((grid, g) => {
     grid.classList.add('mede');
     const hs = cards.map(c => c.querySelector('.trb-body').offsetHeight);
     grid.classList.remove('mede');
-    const vis = matchMedia('(max-width:900px)').matches ? 180 : 210;
+    /* distância do topo do card até o conteúdo (210/180 nas trilhas; menor quando a foto fica no fundo) */
+    const vis = parseFloat(getComputedStyle(cards[0].querySelector('.trb-body')).top) || (matchMedia('(max-width:900px)').matches ? 180 : 210);
     cards.forEach((c, k) => c.style.setProperty('--h', (vis + hs[k]) + 'px'));
     grid.style.setProperty('--hmax', (vis + Math.max(...hs)) + 'px');
   };

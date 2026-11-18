@@ -266,3 +266,11 @@ fieldset.field{border:0;margin:0;padding:0}
 /* capas do Magnific já vêm na paleta: sem filtro extra */
 .obj-ph img{filter:none}
 .obj-ph::before{display:none}
+/* in company: duas fileiras de 3 destaques */
+.ev-facts.ev-6 > div:nth-child(3n+1){padding-left:0;border-left:0}
+.ev-facts.ev-6 > div:nth-child(n+4){border-top:1px solid rgba(255,255,255,.12)}
+.ev-facts.ev-6 > div:nth-child(4) dt{color:var(--yellow)}
+.fmt-temas li{background:rgba(255,255,255,.06)}
+@media (max-width:900px){ .ev-facts.ev-6 > div:nth-child(n+2){border-top:1px solid rgba(255,255,255,.12)} }
+.fmt-temas{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.fmt-temas li{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.01em;padding:6px 11px;border-radius:var(--r-pill);border:1px solid rgba(255,255,255,.16);color:#fff}
