@@ -278,3 +278,21 @@ fieldset.field{border:0;margin:0;padding:0}
 .fmt-tg{display:flex;flex-direction:column;gap:10px}
 .fmt-lbl{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .fmt-acc .trb-cta{margin-top:10px}
+
+/* Assessment para equipes de produto: faixa de ponta a ponta com foto (Magnific) */
+.asmt{position:relative;overflow:hidden;isolation:isolate;background:#07040d;color:#fff;padding:clamp(80px,9vw,140px) 0}
+.asmt-bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:100% 50%;transform:scale(1.02)}
+.asmt::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,4,13,.96) 0%,rgba(7,4,13,.9) 38%,rgba(7,4,13,.35) 70%,rgba(7,4,13,.15) 100%),linear-gradient(180deg,rgba(7,4,13,.5),transparent 25%,transparent 75%,rgba(7,4,13,.6))}
+.asmt-in{display:flex;flex-direction:column;gap:22px;max-width:min(1240px,100%)}
+.asmt-in > *{max-width:640px}
+.asmt .h2{margin:0}
+.asmt .lead{margin:0;color:rgba(255,255,255,.78)}
+.asmt-dims{display:flex;flex-direction:column;gap:10px}
+.asmt-facts{max-width:640px}
+.asmt-cta{align-self:flex-start;min-width:300px}
+@media (max-width:900px){
+  .asmt-bg{background-position:80% 50%}
+  .asmt::before{background:linear-gradient(180deg,rgba(7,4,13,.7),rgba(7,4,13,.92) 45%,rgba(7,4,13,.97))}
+  .asmt-cta{align-self:stretch;min-width:0}
+}
+.asmt-in > .h2{max-width:none}
