@@ -72,7 +72,7 @@
         <li><button type="button" aria-expanded="false" aria-controls="mega-eventos">Eventos ${chev}</button>
           ${mega('mega-eventos','Eventos','Encontros da comunidade PM3, presenciais e online. Os sites dos eventos abrem em outra aba.',
             EVENTOS.map(([n,h,q])=>`<li><a href="${h}" target="_blank" rel="noopener">${n}<small>${q}</small></a></li>`).join(''),
-            '<a href="comunidade.html#eventos">Ver a agenda da comunidade →</a>')}
+            '<a href="https://comunidade.cursospm3.com.br/" target="_blank" rel="noopener">Ver a agenda da comunidade →</a>')}
         </li>
         <li><a href="comunidade.html"${cur('comunidade')}>Comunidade</a></li>
         <li><a href="para-empresas.html"${cur('para-empresas')}>Para empresas</a></li>
