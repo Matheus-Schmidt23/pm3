@@ -262,3 +262,7 @@ fieldset.field{border:0;margin:0;padding:0}
 .fmt-acc .trb-pack{top:16px;bottom:auto;left:auto;right:18px}
 .fmt-acc.acc .trb.open .trb-vis{transition:height .8s cubic-bezier(.75,0,.2,1)}
 @media (max-width:900px){ .fmt-acc.acc .trb-body{top:70px} .fmt-acc .trb-pack{display:none} }
+
+/* capas do Magnific já vêm na paleta: sem filtro extra */
+.obj-ph img{filter:none}
+.obj-ph::before{display:none}
