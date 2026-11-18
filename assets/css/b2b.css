@@ -252,3 +252,13 @@ fieldset.field{border:0;margin:0;padding:0}
 @media (max-width:900px){ .fmts{grid-template-columns:1fr} .fmt .trb-cta{align-self:stretch;min-width:0} }
 /* eventos: selo de nome nunca quebra em duas linhas */
 .ev-acc .trb-n{white-space:nowrap}
+
+/* formatos: foto no fundo inteiro do card, com filtro bem escuro (imagens do Magnific) */
+.fmt-acc.acc .trb .trb-vis{height:100%!important;filter:none!important}
+.fmt-acc.acc .trb .trb-vis::before{opacity:1!important;background:linear-gradient(90deg,rgba(9,5,16,.95) 0%,rgba(9,5,16,.84) 40%,rgba(9,5,16,.42) 100%)}
+.fmt-acc.acc .trb:not(.open) .trb-vis::before{background:linear-gradient(180deg,rgba(9,5,16,.55),rgba(9,5,16,.92) 80%)}
+.fmt-acc.acc .trb .trb-vis::after{background:linear-gradient(180deg,rgba(9,5,16,0) 55%,rgba(9,5,16,.7) 100%)}
+.fmt-acc.acc .trb-body{top:96px;z-index:2}
+.fmt-acc .trb-pack{top:16px;bottom:auto;left:auto;right:18px}
+.fmt-acc.acc .trb.open .trb-vis{transition:height .8s cubic-bezier(.75,0,.2,1)}
+@media (max-width:900px){ .fmt-acc.acc .trb-body{top:70px} .fmt-acc .trb-pack{display:none} }
