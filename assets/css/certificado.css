@@ -110,3 +110,9 @@
 
 /* Panorama: terceira linha do título no mesmo tipo do título, em tom mais claro (sem itálico) */
 .pan-head h3 .pan-c2{color:var(--gray-fog)}
+/* hover dos números: só o boxe, sem a linha amarela solta em cima e sem deslocar (a linha do topo some sob o boxe) */
+.cx-levels div::before{display:none}
+.cx-levels div::after{inset:0}
+@media (hover:hover){
+  .cx-levels div:hover{transform:none;border-top-color:transparent}
+}
