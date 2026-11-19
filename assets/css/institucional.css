@@ -46,13 +46,15 @@
 @media (max-width:600px){ .i-hero{padding:8px} .i-hero-in{padding:26px 22px 28px} .i-hero h1{font-size:42px;margin:16px 0} }
 
 /* mural de rostos (hero de Instrutores) */
-.faces{position:relative;z-index:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;transform:rotate(-4deg);margin:-14% -16% -14% 0;align-self:stretch;align-content:center}
-.faces span{aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:#1a1028;opacity:0;transform:translateY(16px) scale(.96);transition:opacity .7s,transform .7s}
+/* mural do hero: grade reta 4×3, toda dentro do card, só fotos do estúdio PM3 e um tratamento único (duotone roxo; cor ao passar o mouse) */
+.faces{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-self:center}
+.faces span{position:relative;aspect-ratio:1;border-radius:16px;overflow:hidden;background:var(--purple-deep);opacity:0;transform:translateY(12px);transition:opacity .6s,transform .6s}
 .faces.in span{opacity:1;transform:none}
-.faces span:nth-child(5n+2){margin-top:24%}.faces span:nth-child(5n+4){margin-top:12%}.faces span:nth-child(5n){margin-top:30%}
-.faces img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:grayscale(.35) contrast(1.02);transition:filter .4s}
-.faces span:hover img{filter:none}
-@media (max-width:960px){ .faces{margin:0;transform:none;grid-template-columns:repeat(6,minmax(0,1fr))} .faces span:nth-child(n){margin-top:0} .faces span:nth-child(n+13){display:none} }
+.faces span::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(176,77,221,.55),rgba(69,46,120,.75));mix-blend-mode:color;transition:opacity .4s;pointer-events:none}
+.faces img{width:100%;height:100%;object-fit:cover;object-position:center 26%;filter:grayscale(1) contrast(1.08) brightness(1.05);transition:filter .4s,transform .6s cubic-bezier(.2,.7,.2,1)}
+.faces span:hover img{filter:none;transform:scale(1.04)}
+.faces span:hover::after{opacity:0}
+@media (max-width:960px){ .faces{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px} .faces span{border-radius:12px} }
 @media (max-width:600px){ .faces{grid-template-columns:repeat(4,minmax(0,1fr))} .faces span:nth-child(n+9){display:none} }
 
 /* ---------- seções ---------- */

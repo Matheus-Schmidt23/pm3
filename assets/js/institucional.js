@@ -28,7 +28,7 @@
 
     /* mural de rostos no hero */
     const faces = $('#faces');
-    faces.innerHTML = embaralha(ins, 11).slice(0, 15).map((p, i) => `<span style="transition-delay:${(i % 5) * 60 + Math.floor(i / 5) * 90}ms"><img src="assets/people/instrutores/${p.f}" alt="" width="160" height="200" loading="${i < 10 ? 'eager' : 'lazy'}"></span>`).join('');
+    faces.innerHTML = embaralha(ins.filter(p => p.m), 11).slice(0, 12).map((p, i) => `<span style="transition-delay:${(i % 4) * 60 + Math.floor(i / 4) * 90}ms"><img src="assets/people/instrutores/${p.f}" alt="" width="160" height="200" loading="${i < 10 ? 'eager' : 'lazy'}"></span>`).join('');
     requestAnimationFrame(() => setTimeout(() => faces.classList.add('in'), 120));
 
     /* faixa de empresas: as que mais aparecem primeiro */
