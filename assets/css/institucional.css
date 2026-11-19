@@ -355,3 +355,5 @@
   .fbar select{order:3;flex:1}
   .fbar .fcount{order:4}
 }
+.lead2.one{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr)}
+@media (max-width:860px){ .lead2.one{grid-template-columns:1fr} .lead2.one .ldr{aspect-ratio:4/4.4} }
