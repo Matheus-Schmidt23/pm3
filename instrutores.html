@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instrutores da PM3: quem ensina produto, dados, design e IA</title>
+<meta name="description" content="Conheça os instrutores das formações da PM3: profissionais que lideram produto, dados, design, marketing e IA em empresas como Nubank, iFood, Stripe, VTEX e Mercado Livre.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://pm3.com.br/instrutores/">
+<meta property="og:title" content="Instrutores da PM3">
+<meta property="og:description" content="Quem ensina na PM3: profissionais que fazem produto todos os dias nas melhores empresas do país.">
+<meta property="og:image" content="https://pm3.com.br/og/instrutores.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/logo/pm3-simbolo-roxo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Rubik:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=2">
+<link rel="stylesheet" href="assets/css/base.css?v=32">
+<link rel="stylesheet" href="assets/css/components.css?v=9">
+<link rel="stylesheet" href="assets/css/institucional.css?v=4">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"CollectionPage","name":"Instrutores da PM3","url":"https://pm3.com.br/instrutores/","isPartOf":{"@id":"https://pm3.com.br/#website"}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://pm3.com.br/"},
+  {"@type":"ListItem","position":2,"name":"Instrutores","item":"https://pm3.com.br/instrutores/"}]}
+]}
+</script>
+</head>
+<body data-page="instrutores">
+
+<main class="inst">
+
+<!-- 1 · HERO -->
+<section class="i-hero on-dark" aria-labelledby="h1">
+  <div class="i-hero-in grain">
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div data-nota="Página nova: hoje existem 233 URLs /instrutores/nome/ no WordPress, várias de teste ('confirmacao-em-breve', 'teste-de-instrutor'). Aqui entram só os 112 ligados a uma formação ativa, com foto real. As URLs antigas redirecionam para esta página.">
+      <ol class="crumbs" aria-label="Você está em"><li><a href="home.html">Home</a></li><li><a href="sobre.html">Sobre a PM3</a></li><li aria-current="page">Instrutores</li></ol>
+      <h1 class="display" id="h1">Quem ensina<br><span class="l2">na PM3</span></h1>
+      <p class="lead">Profissionais que lideram produto, dados, design, marketing e IA nas melhores empresas do país, e levam para a aula os problemas que resolvem no trabalho.</p>
+      <ul class="i-facts">
+        <li><b id="n-ins">112</b>instrutores nas formações</li>
+        <li><b id="n-emp">80</b>empresas onde trabalham</li>
+        <li><b>9</b>formações com aulas deles</li>
+      </ul>
+    </div>
+    <div class="faces" id="faces" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- 2 · FILTROS -->
+<div class="fbar on-dark" id="lista">
+  <div class="wrap">
+    <label class="fsearch"><span class="sr-only">Buscar instrutor</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="m11 11 3.5 3.5"/></svg><input id="f-q" type="search" placeholder="Buscar por nome, empresa ou cargo" autocomplete="off"></label>
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por área"></div>
+    <label class="sr-only" for="f-form">Filtrar por formação</label>
+    <select id="f-form" class="fsel" style="height:40px;border-radius:99px;border:1px solid rgba(255,255,255,.18);background:#0E0A16;color:#fff;padding:0 14px;font:inherit;font-size:14px"></select>
+    <span class="fcount" id="fcount" aria-live="polite"></span>
+  </div>
+</div>
+
+<!-- 3 · GRADE -->
+<section class="section black on-dark" style="padding-top:clamp(32px,4vw,56px)" aria-label="Lista de instrutores">
+  <div class="wrap">
+    <div class="ins-grid" id="ins-grid" data-nota="Nome, cargo, empresa, foto e LinkedIn vêm do WordPress atual (post type instrutores); as formações vêm do campo 'instrutores em destaque' de cada curso. A confirmar: os 7 instrutores de IA vêm do curso Especialista em Lovable e Automação com IA (hoje redirecionado), atribuídos aqui ao AI Product Builder, que ainda não tem instrutores cadastrados. No site real a lista é renderizada no servidor."></div>
+    <div class="empty" id="ins-empty"><p>Nenhum instrutor com esses filtros.</p><button type="button" class="btn btn-line" id="ins-limpa">Limpar filtros</button></div>
+    <div class="more-row"><button type="button" class="btn btn-primary" id="ins-mais">Ver todos os instrutores</button></div>
+  </div>
+</section>
+
+<!-- 4 · EMPRESAS -->
+<section class="section black on-dark" aria-labelledby="em-t" style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker"><span class="n">01</span> Onde nossos instrutores trabalham</p>
+    <h2 class="h2" id="em-t" style="margin-bottom:clamp(28px,4vw,48px)">Do mercado<br><span class="c2">para a sala de aula</span></h2>
+  </div>
+  <div class="cos" aria-label="Empresas onde os instrutores trabalham"><div class="cos-track" id="cos"></div></div>
+</section>
+
+<!-- 5 · CHAMADA -->
+<section class="section black on-dark" style="padding-top:0" aria-labelledby="cta-t">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <svg class="three" viewBox="0 0 55 55" aria-hidden="true"><path d="M47.9654 0H6.74073C3.01862 0 0 3.01757 0 6.73838V47.9486C0 51.6694 3.01862 54.687 6.74073 54.687H32.6165C37.0037 54.687 41.5188 49.7131 41.5188 44.0488C41.5188 37.6301 35.2897 32.4261 28.8688 32.4261H20.0687V29.3062L36.7351 13.4768H11.7163V8.59239H44.8572V11.9552L44.2944 12.4922L28.6513 27.5289C38.27 27.5289 46.4177 35.4564 46.4177 44.036C46.4177 48.2555 44.8956 51.7973 42.5165 54.6742H47.9526C51.6747 54.6742 54.6933 51.6567 54.6933 47.9358V6.73838C54.6933 3.01757 51.6747 0 47.9526 0"/></svg>
+      <div>
+        <h2 id="cta-t">Você faz produto<br>todos os dias?</h2>
+        <p>A PM3 está sempre buscando gente que resolve problemas reais para ensinar em formações, sprints e workshops.</p>
+      </div>
+      <div class="btns"><a class="btn btn-dark" href="seja-instrutor.html">Quero ser instrutor</a><a class="btn btn-line" style="color:#000;border-color:rgba(0,0,0,.35)" href="formacoes.html">Ver as formações</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/instrutores-dados.js?v=1"></script>
+<script src="assets/js/institucional.js?v=2"></script>
+<script src="assets/js/layout.js?v=61"></script>
+</body>
+</html>

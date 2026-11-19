@@ -52,7 +52,7 @@
   /* ---------- /sprints/ ---------- */
   if (PAGE === 'sprints'){
     /* catálogo: um card por sprint (mesmo card de Formações), filtrável por vertical */
-    const ordem = ['gestao','dados','design','marketing','negocios','lideranca'];
+    const ordem = ['ia','gestao','dados','design','marketing','negocios','lideranca'];
     const nomeA = a => a === 'lideranca' ? 'Liderança' : AREAS[a].curto;
     const ic = {
       h: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>',
@@ -215,6 +215,8 @@
     const p = new URLSearchParams(location.hash.slice(1));
     (p.get('tipo') || '').split(',').filter(v => TIPOS[v]).forEach(v => st.tipo.add(v));
     (p.get('area') || '').split(',').filter(v => AREAS[v]).forEach(v => st.area.add(v));
+    /* busca vinda de outra página (ex.: a 404): /cursos/?q=... */
+    if (p.get('q')){ st.q = p.get('q').trim(); $('#q').value = st.q; }
     sync(); render();
   }
 })();

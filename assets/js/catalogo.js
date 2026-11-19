@@ -82,11 +82,14 @@ window.PM3_CATALOGO = (function(){
     S('Inteligência emocional para líderes','lideranca',3,'Autoconsciência e empatia para decidir e liderar.'),
     S('Inteligência emocional no trabalho','lideranca',3,'Inteligências socioemocionais para comunicação e saúde mental.'),
     S('Oratória para apresentações de impacto','lideranca',3,'Voz, corpo e discurso para falar com segurança.'),
-    S('Técnicas de negociação','lideranca',3,'Método Harvard, perfis comportamentais e persuasão.')
+    S('Técnicas de negociação','lideranca',3,'Método Harvard, perfis comportamentais e persuasão.'),
+    /* AI Skills: no site atual em pré-venda (descubra.pm3.com.br/ai-skills); no site novo entram como sprints */
+    S('RAG para produtos de IA','ia',4,'Produtos de IA mais confiáveis: busca, curadoria de fontes, avaliação e custo, sem programar.'),
+    S('Responsible AI','ia',3,'Riscos, vieses e fairness na prática, com o case da Skyscanner.')
   ];
 
   /* capa de cada sprint (assets/capas/sprints/), na mesma ordem da lista acima */
-  const CAPAS = ['fundamentos-gestao-produtos','roadmap-priorizacao','tecnicas-pesquisa','tecnologia-pms','prd','product-ops-fundamentos','product-ops-avancado','metodos-analise-dados','power-bi','excel','metricas-negocios','python','visualizacao-dashboards','teste-ab','sql','lgpd','problem-solving','vieses-analises','design-thinking','design-servico','ui-design','go-to-market','product-growth','product-marketing','aquisicao','sales-enablement','okrs','metodologias-ageis','gestao-processos','educacao-corporativa','negociacao-lideres','comunicacao-assertiva','apresentacao-slides','diversidade-inclusao','trabalho-remoto','gestao-tempo','lideranca-equipe','saude-mental','delegacao','feedback','ie-lideres','ie-trabalho','oratoria','tecnicas-negociacao'];
+  const CAPAS = ['fundamentos-gestao-produtos','roadmap-priorizacao','tecnicas-pesquisa','tecnologia-pms','prd','product-ops-fundamentos','product-ops-avancado','metodos-analise-dados','power-bi','excel','metricas-negocios','python','visualizacao-dashboards','teste-ab','sql','lgpd','problem-solving','vieses-analises','design-thinking','design-servico','ui-design','go-to-market','product-growth','product-marketing','aquisicao','sales-enablement','okrs','metodologias-ageis','gestao-processos','educacao-corporativa','negociacao-lideres','comunicacao-assertiva','apresentacao-slides','diversidade-inclusao','trabalho-remoto','gestao-tempo','lideranca-equipe','saude-mental','delegacao','feedback','ie-lideres','ie-trabalho','oratoria','tecnicas-negociacao','rag-produtos-ia','responsible-ai'];
   SPRINTS.forEach((s, i) => { s.capa = CAPAS[i]; });
 
   return { AREAS, FORMACOES, SPRINTS };
