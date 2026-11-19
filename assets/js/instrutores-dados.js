@@ -108,7 +108,7 @@ window.PM3_INSTRUTORES = [
     { n: 'Alexandre Spengler', c: 'Product Director', e: 'Bitso', f: 'alexandre-spengler.jpg', m: 1, li: 'https://www.linkedin.com/in/alexandrespengler/', cursos: ['Product Discovery'], areas: ['gestao'] },
     { n: 'Maria Luísa Cantadori', c: 'Senior Product Manager', e: 'Stripe', f: 'maria-luisa-cantadori.jpg', m: 1, li: 'https://www.linkedin.com/in/mlcantadori/', cursos: ['Product Discovery','Product Management'], areas: ['gestao'] },
     { n: 'Bernardo Srulzon', c: 'Senior Product Lead', e: 'Nubank', f: 'bernardo-srulzon.jpg', m: 1, li: 'https://www.linkedin.com/in/bernardosrulzon/', cursos: ['Product Growth','Product Management'], areas: ['gestao','marketing'] },
-    { n: 'Pedro Axelrud', c: 'Product Director', e: 'Nubank', f: 'pedro-axerud.jpg', m: 1, li: 'https://www.linkedin.com/in/pedroaxl/', cursos: ['Product Management'], areas: ['gestao'] },
+    { n: 'Pedro Axelrud', c: 'Product Director', e: 'Nubank', f: 'pedro-axerud.jpg', li: 'https://www.linkedin.com/in/pedroaxl/', cursos: ['Product Management'], areas: ['gestao'] },
     { n: 'Loren Monteiro', c: 'CPO Adevinta Benelux', e: 'Adevinta', f: 'loren-monteiro.jpg', m: 1, li: 'https://www.linkedin.com/in/loren-monteiro-560a3416/', cursos: ['Product Management'], areas: ['gestao'] },
     { n: 'Joaquim Torres', c: 'Founder & Principal Consultant', e: 'Gyaco', f: 'joaquim-torres.jpg', m: 1, li: 'https://www.linkedin.com/in/jocatorres/', cursos: ['Product Leadership','Product Management','Product Marketing'], areas: ['gestao','lideranca','marketing'] },
     { n: 'André Nery', c: 'Founder & CEO', e: 'Alpha', f: 'andre-nery.jpg', m: 1, li: 'https://www.linkedin.com/in/andrenery/', cursos: ['Product Management'], areas: ['gestao'] },

@@ -51,8 +51,8 @@
 .faces span{position:relative;aspect-ratio:1;border-radius:16px;overflow:hidden;background:var(--purple-deep);opacity:0;transform:translateY(12px);transition:opacity .6s,transform .6s}
 .faces.in span{opacity:1;transform:none}
 .faces span::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(176,77,221,.55),rgba(69,46,120,.75));mix-blend-mode:color;transition:opacity .4s;pointer-events:none}
-.faces img{width:100%;height:100%;object-fit:cover;object-position:center 26%;filter:grayscale(1) contrast(1.08) brightness(1.05);transition:filter .4s,transform .6s cubic-bezier(.2,.7,.2,1)}
-.faces span:hover img{filter:none;transform:scale(1.04)}
+.faces img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transform:scale(1.2);transform-origin:50% 18%;filter:grayscale(1) contrast(1.08) brightness(1.05);transition:filter .4s,transform .6s cubic-bezier(.2,.7,.2,1)}
+.faces span:hover img{filter:none;transform:scale(1.26)}
 .faces span:hover::after{opacity:0}
 @media (max-width:960px){ .faces{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px} .faces span{border-radius:12px} }
 @media (max-width:600px){ .faces{grid-template-columns:repeat(4,minmax(0,1fr))} .faces span:nth-child(n+9){display:none} }
