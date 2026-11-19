@@ -235,7 +235,7 @@ fieldset.field{border:0;margin:0;padding:0}
 
 /* dois formatos: mesmo card dos eventos (foto no topo, selo amarelo, borda em degradê) */
 .fmts{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
-.fmt{position:relative;display:flex;flex-direction:column;border-radius:var(--r-card);overflow:hidden;border:1px solid transparent;background:linear-gradient(180deg,#1a1030,#0d0818) padding-box,linear-gradient(160deg,rgba(255,177,42,.7),rgba(170,120,255,.35) 40%,rgba(255,255,255,.08) 75%) border-box;box-shadow:0 24px 60px -28px rgba(0,0,0,.8)}
+.fmt{position:relative;display:flex;flex-direction:column;border-radius:var(--r-card);overflow:hidden;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#1a1030,#0d0818);box-shadow:0 24px 60px -28px rgba(0,0,0,.8)}
 .fmt-vis{position:relative;height:clamp(240px,22vw,320px);background-size:cover;background-repeat:no-repeat;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
 .fmt-vis::after{content:'';position:absolute;inset:0 0 -2px 0;background:linear-gradient(180deg,rgba(13,8,24,0) 40%,#160d29 100%)}
 .fmt-tag{position:absolute;left:20px;top:18px;z-index:1;font-family:var(--display);font-weight:800;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--yellow);color:#000;border-radius:var(--r-pill);padding:6px 12px;white-space:nowrap}

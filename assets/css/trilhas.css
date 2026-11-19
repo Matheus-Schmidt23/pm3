@@ -25,7 +25,7 @@
 
 /* Trilhas como produto (downsell entre formação avulsa e Membership): mais presença visual */
 .trb-grid{gap:20px;align-items:stretch}
-.trb{position:relative;border:1px solid transparent;background:linear-gradient(180deg,#1a1030,#0d0818) padding-box,linear-gradient(160deg,rgba(255,177,42,.7),rgba(170,120,255,.35) 40%,rgba(255,255,255,.08) 75%) border-box;box-shadow:0 24px 60px -28px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.02) inset}
+.trb{position:relative;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#1a1030,#0d0818);box-shadow:0 24px 60px -28px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.02) inset}
 .trb::before{content:'';position:absolute;inset:auto -30% -40% -30%;height:60%;background:radial-gradient(closest-side,rgba(170,120,255,.22),transparent);pointer-events:none;opacity:.6;transition:opacity .4s}
 .trb-vis{height:170px}
 .trb-vis::after{background:linear-gradient(180deg,rgba(13,8,24,0) 35%,#140c26 100%)}
