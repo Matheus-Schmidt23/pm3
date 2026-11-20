@@ -13,6 +13,7 @@ window.PM3_INSTRUTORES = [
     { n: 'Éfrem Maranhão Filho', c: 'Principal Product Manager', e: 'Pipefy', f: 'efrem-maranhao-filho.jpg', li: 'https://www.linkedin.com/in/efremfilho/', cursos: ['AI Product Specialist'], areas: ['ia'] },
     { n: 'Juliana Araújo', c: 'Principal Product Manager', e: 'Mozilla.ai', f: 'juliana-araujo.jpg', li: 'https://www.linkedin.com/in/jularase/', cursos: ['AI Product Specialist'], areas: ['ia'] },
     { n: 'Aiman Mustafa Smaili', c: 'AI Product Manager Specialist', e: 'Itaú', f: 'aiman-smaili.jpg', li: 'https://www.linkedin.com/in/aimansmaili/', cursos: ['AI Product Specialist'], areas: ['ia'] },
+    { n: 'Juliano Alves de Oliveira', c: 'Coordenador Cientista de Dados', e: 'Itaú', f: 'juliano-alves-de-oliveira.jpg', li: 'https://www.linkedin.com/in/julianoalvesoliveira/', cursos: ['AI Product Specialist'], areas: ['ia','dados'] },
     { n: 'Thaís Lobato', c: 'Head of People Analytics', e: 'BTG Pactual', f: 'thais-lobato.jpg', m: 1, li: 'https://www.linkedin.com/in/tha%C3%ADs-lobato-642bb060/', cursos: ['Analista de Dados'], areas: ['dados'] },
     { n: 'Amanda Caixeta', c: 'Data Analytics Manager', e: 'unico IDtech', f: 'amanda-caixeta.jpg', m: 1, li: 'https://www.linkedin.com/in/amanda-caixeta/', cursos: ['Analista de Dados'], areas: ['dados'] },
     { n: 'Guilherme Neves', c: 'Data Science Manager', e: 'Nubank', f: 'guilherme-neves.jpg', m: 1, li: 'https://www.linkedin.com/in/guilherme-coelho-neves/', cursos: ['Analista de Dados'], areas: ['dados'] },
