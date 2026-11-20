@@ -79,11 +79,24 @@ $($lis -join "`n")
 
 "@
 }
-$COORD_LEAD = 'Direção de Pós-Graduação Digital da FIAP e uma coordenação com especialistas de empresas como Itaú, McCain, Ambev Tech e Trustly.'
-# a página modelo (Digital Product Management) também recebe a coordenação completa
+$COORD_LEAD = 'Direção de Pós-Graduação Digital da FIAP e uma coordenação com especialistas de empresas como Itaú, McCain, Ambev Tech e Trustly. A mesma equipe conduz as três pós.'
+
+# Decisão (2026-11-20): a faixa de coordenação fica só na página mãe (pos-tech.html); as páginas de cada pós não têm a seção.
+# 1) página mãe: coordenação completa, seção 7
+$hubPath = Join-Path $proto 'pos-tech.html'
+$hub = [IO.File]::ReadAllText($hubPath, $utf8)
+$hub = Entre $hub '<!-- 7 · COORDENAÇÃO -->' '<!-- 9 · FAQ -->' ((CoordBlock '' $COORD_LEAD).Replace('<!-- 8 · COORDENAÇÃO -->', '<!-- 7 · COORDENAÇÃO -->'))
+[IO.File]::WriteAllText($hubPath, $hub, $utf8)
+# 2) modelo (Digital Product Management): sem a seção, sem o link no submenu e kickers renumerados
 $dpmPath = Join-Path $proto 'pos-digital-product-management.html'
-$modelo = Entre $modelo '<!-- 8 · COORDENAÇÃO -->' '<!-- 9 · INVESTIMENTO -->' (CoordBlock '' $COORD_LEAD)
-[IO.File]::WriteAllText($dpmPath, $modelo, $utf8)
+if ($modelo.Contains('<!-- 8 · COORDENAÇÃO -->')) {
+  $modelo = Entre $modelo '<!-- 8 · COORDENAÇÃO -->' '<!-- 9 · INVESTIMENTO -->' ''
+  $modelo = $modelo.Replace('<a href="#coordenacao">Coordenação</a>', '')
+  foreach ($k in @(@('06','05','Investimento'), @('07','06','Certificação'), @('08','07','Estenda seu curso'), @('10','08','Dúvidas'))) {
+    $modelo = Troca $modelo ('<p class="kicker"><span class="n">' + $k[0] + '</span> ' + $k[2] + '</p>') ('<p class="kicker"><span class="n">' + $k[1] + '</span> ' + $k[2] + '</p>')
+  }
+  [IO.File]::WriteAllText($dpmPath, $modelo, $utf8)
+}
 
 $CURSOS = @(
  @{
@@ -315,8 +328,7 @@ $($mods -join "`n")
   $lis = for ($i = 0; $i -lt 5; $i++) { "      <li data-n=`"0$($i+1)`"><span class=`"pc-n`">0$($i+1)</span><span class=`"pc-k`">Achievement $($i+1) · $($CERTN[$i])</span><h3>$($c.fases[$i].c)</h3><span class=`"pc-m`">$($meses[$i])</span><i class=`"pc-bar`" style=`"--p:$((($i+1)*0.2).ToString([Globalization.CultureInfo]::InvariantCulture))`" aria-hidden=`"true`"></i></li>" }
   $t = [regex]::Replace($t, '(<ol class="pcert reveal" data-nota=")[^"]*(">).*?(\s*<li class="pc-final">)', { param($m) $m.Groups[1].Value + 'Uma microcertificação a cada fase, com os nomes oficiais da FIAP (Achievement 1: Discover a Achievement 5: Go Live). O título abaixo de cada uma resume a fase.' + $m.Groups[2].Value + "`n" + ($lis -join "`n") + $m.Groups[3].Value }, 'Singleline')
 
-  # 8 · coordenação (todos os coordenadores; quem coordena esta pós vem primeiro)
-  $t = Entre $t '<!-- 8 · COORDENAÇÃO -->' '<!-- 9 · INVESTIMENTO -->' (CoordBlock $c.coordNome $c.coordLead)
+  # 8 · coordenação: só na página mãe (pos-tech.html); o modelo já vem sem a seção
 
   # certificado, barra de compra e e-book
   $t = Troca $t 'e o curso por Digital Product Management.' "e o curso por Digital Product Management. PROVISÓRIO: o mockup ainda mostra Digital Product Management; gerar a versão de $($c.nome)."
