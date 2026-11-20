@@ -24,7 +24,7 @@
     ['Marketing','sprints.html#marketing',5],
     ['Negócios','sprints.html#negocios',3],
     ['Liderança e habilidades humanas','sprints.html#lideranca',19],
-    ['Inteligência artificial','sprints.html#ia',2]
+    ['AI Skills','sprints.html#ia',2]
   ];
 
   const POSTECH = [

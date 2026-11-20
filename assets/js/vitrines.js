@@ -53,7 +53,7 @@
   if (PAGE === 'sprints'){
     /* catálogo: um card por sprint (mesmo card de Formações), filtrável por vertical */
     const ordem = ['ia','gestao','dados','design','marketing','negocios','lideranca'];
-    const nomeA = a => a === 'lideranca' ? 'Liderança' : AREAS[a].curto;
+    const nomeA = a => a === 'lideranca' ? 'Liderança' : a === 'ia' ? 'AI Skills' : AREAS[a].curto;  /* nas sprints, IA = linha AI Skills */
     const ic = {
       h: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>',
       cert: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.2" r="4.2"/><path d="m5.6 9.6-1.1 4.8L8 12.8l3.5 1.6-1.1-4.8"/></svg>',

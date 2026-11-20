@@ -122,7 +122,7 @@ $($cards -join "`n")
 
 </main>
 
-<script src="assets/js/layout.js?v=65"></script>
+<script src="assets/js/layout.js?v=66"></script>
 <script>
 /* filtro por categoria + busca por nome */
 (function(){

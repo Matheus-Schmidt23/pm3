@@ -102,7 +102,7 @@ foreach ($sp in $SP) {
   $arqHtml = "sprint-$($sp.capa).html"
   $nome = $sp.nome; $h = [int]$d.horas; if (-not $h) { $h = $sp.h }
   $mods = @($d.modulos); $nm = $mods.Count
-  $areaNome = $AREAS[$sp.area]; $areaLow = $areaNome.Substring(0,1) + $areaNome.Substring(1)
+  $areaNome = $(if ($sp.area -eq 'ia') { 'AI Skills' } else { $AREAS[$sp.area] });  # cursos de IA = linha AI Skills $areaLow = $areaNome.Substring(0,1) + $areaNome.Substring(1)
   $lead = Curto ([string]$d.descricao)
   $obj = $sp.obj
 
