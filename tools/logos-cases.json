@@ -5,11 +5,11 @@
                 },
     "Involves":  {
                      "h":  24,
-                     "f":  "assets/logos/involves.png"
+                     "f":  "assets/logos/cases/involves-escuro.png"
                  },
     "Creditas":  {
                      "h":  22,
-                     "f":  "assets/logos/creditas.svg"
+                     "f":  "assets/logos/cases/creditas-escuro.svg"
                  },
     "unico":  {
                   "h":  20,
@@ -92,7 +92,7 @@
             },
     "Lovable":  {
                     "h":  20,
-                    "f":  "assets/logos/lovable.svg"
+                    "f":  "assets/logos/cases/lovable-escuro.svg"
                 },
     "Python":  {
                    "ic":  "assets/logos/cases/python.svg"
@@ -137,7 +137,7 @@
               },
     "TotalPass":  {
                       "h":  22,
-                      "f":  "assets/logos/cases/totalpass.png"
+                      "f":  "assets/logos/cases/totalpass-escuro.png"
                   },
     "Studocu":  {
                     "dark":  true,
@@ -160,7 +160,8 @@
              },
     "Verios":  {
                    "h":  24,
-                   "f":  "assets/logos/cases/verios.png"
+                   "f":  "assets/logos/cases/verios.png",
+                   "dark":  true
                },
     "VTEX":  {
                  "h":  24,
