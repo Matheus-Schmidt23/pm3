@@ -92,34 +92,63 @@
     mostra();
     /* entrada por link (menu, rodapé, Membership): sprints.html#dados ativa o filtro da vertical e rola até o catálogo */
     /* rolagem própria, com aceleração suave (ease-in-out, ~1,1 s): o scroll-behavior do navegador é curto e seco demais para esse salto */
+    /* o destino é recalculado a cada quadro: se imagens ou o ajuste do hero mexerem no layout durante a animação, ela ainda termina no catálogo */
+    const navH = () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 68;
+    const destino = el => el.getBoundingClientRect().top + scrollY - navH();
+    let rolando = false;
     const rolaAte = el => {
-      const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 68;
-      const de = scrollY, ate = el.getBoundingClientRect().top + scrollY - navH, dist = ate - de;
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches || Math.abs(dist) < 2){ scrollTo(0, ate); return; }
+      const de = scrollY, dist0 = destino(el) - de;
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches || Math.abs(dist0) < 2){ scrollTo(0, destino(el)); return; }
       const html = document.documentElement, antes = html.style.scrollBehavior; html.style.scrollBehavior = 'auto';
-      const dur = Math.min(1400, 700 + Math.abs(dist) * .35), t0 = performance.now();
+      const dur = Math.min(1400, 700 + Math.abs(dist0) * .35), t0 = performance.now();
       const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      let andou = false;
+      let andou = false; rolando = true;
       const passo = now => {
         andou = true;
         const t = Math.min(1, (now - t0) / dur);
-        scrollTo(0, de + dist * ease(t));
-        if (t < 1) requestAnimationFrame(passo); else html.style.scrollBehavior = antes;
+        scrollTo(0, de + (destino(el) - de) * ease(t));
+        if (t < 1) requestAnimationFrame(passo); else { html.style.scrollBehavior = antes; rolando = false; }
       };
       requestAnimationFrame(passo);
       /* aba em segundo plano (sem quadros de animação): vai direto ao ponto em vez de ficar parado */
-      setTimeout(() => { if (!andou){ scrollTo(0, ate); html.style.scrollBehavior = antes; } }, 350);
+      setTimeout(() => { if (!andou){ scrollTo(0, destino(el)); html.style.scrollBehavior = antes; rolando = false; } }, 350);
     };
-    const entraPorLink = () => {
-      const a = location.hash.slice(1);
-      if (!ordem.includes(a)) return;
+    const entraNaArea = a => {
+      if (!ordem.includes(a)) return false;
       filtra(a);
       const alvo = document.getElementById('catalogo');
-      if (alvo) setTimeout(() => rolaAte(alvo), 120);
+      if (alvo) rolaAte(alvo);
+      return true;
     };
-    /* na abertura, só depois do load: o ajuste do hero (layout.js) e o próprio navegador mexem na rolagem antes disso */
-    if (document.readyState === 'complete') entraPorLink(); else addEventListener('load', entraPorLink);
-    addEventListener('hashchange', entraPorLink);
+    /* abertura vinda de outra página (sprints.html#dados): filtra na hora e começa a descer logo, sem esperar todas as imagens carregarem */
+    const area0 = location.hash.slice(1);
+    if (ordem.includes(area0)){
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      filtra(area0);
+      let mexeu = false;
+      const marca = () => { if (!rolando) mexeu = true; };
+      addEventListener('wheel', marca, { passive: true }); addEventListener('touchmove', marca, { passive: true });
+      setTimeout(() => entraNaArea(area0), 250);
+      /* se o layout ainda mudou até o load (fontes, imagens), corrige a posição, a menos que a pessoa já tenha rolado */
+      addEventListener('load', () => setTimeout(() => {
+        const alvo = document.getElementById('catalogo');
+        if (alvo && !mexeu && !rolando && Math.abs(destino(alvo) - scrollY) > 24) rolaAte(alvo);
+      }, 100));
+    }
+    /* menu ou rodapé clicado já dentro de sprints.html: o endereço pode não mudar (mesma categoria, ou filtro trocado nos chips),
+       então o clique é tratado aqui: fecha o menu, aplica o filtro e desce até o catálogo */
+    document.addEventListener('click', e => {
+      const l = e.target.closest('a[href]'); if (!l || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      const u = new URL(l.getAttribute('href'), location.href);
+      if (u.pathname !== location.pathname) return;
+      const a = u.hash.slice(1); if (!ordem.includes(a)) return;
+      e.preventDefault();
+      document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
+      document.body.style.overflow = ''; document.querySelector('.menu-toggle')?.setAttribute('aria-expanded', 'false');
+      if (location.hash !== '#' + a) history.pushState(null, '', '#' + a);
+      entraNaArea(a);
+    });
+    addEventListener('hashchange', () => entraNaArea(location.hash.slice(1)));
   }
 
   /* ---------- /cursos/ ---------- */
