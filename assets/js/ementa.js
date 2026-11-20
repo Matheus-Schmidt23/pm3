@@ -42,6 +42,7 @@
             '<div class="em-field"><label for="em-area">Em qual área você quer aprofundar seus conhecimentos?</label><select id="em-area" name="pm3_b2c_area_de_interesse"><option value="">Selecione</option>' + AREAS.map(a => '<option>' + a + '</option>').join('') + '</select></div>' +
             '<button class="btn btn-primary btn-em" type="submit"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg>' + botao + '</button>' +
             '<p class="em-legal">Ao baixar, você aceita receber contato da PM3 sobre este curso. Veja a <a href="#">Política de Privacidade</a>.</p>' +
+          '<input type="text" name="_site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">' +
           '</form>' +
         '</div>' +
         '<div class="em-ok" aria-live="polite">' +
@@ -117,8 +118,17 @@
     ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(k => carga[k] = q.get(k) || '');
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: 'ementa_enviar', form_name_tracking: tracking });
-    console.info('[protótipo] lead de ementa (não enviado):', carga);
-    box.classList.add('sent'); box.scrollTop = 0;
-    el.querySelector('.em-ok .btn').focus();
+    /* envio pelo PM3Forms (assets/js/forms.js): formações, sprints e pós têm formulários diferentes no HubSpot */
+    const chave = /^ementa sprint/.test(tracking) ? 'ementa-sprint' : /^ebook pos/.test(tracking) ? 'ebook-pos' : 'ementa';
+    const btn = form.querySelector('button[type=submit]'); btn.disabled = true;
+    comForms(() => window.PM3Forms.enviar(chave, carga, { form }))
+      .then(() => { box.classList.add('sent'); box.scrollTop = 0; el.querySelector('.em-ok .btn').focus(); })
+      .catch(() => { window.pm3Aviso && window.pm3Aviso('Não foi possível enviar agora. Tente de novo em instantes.'); })
+      .finally(() => { btn.disabled = false; });
   });
+  /* carrega o forms.js só quando alguém envia (evita mais um script nas 58 páginas com ementa) */
+  function comForms(fn){
+    if (window.PM3Forms) return Promise.resolve().then(fn);
+    return new Promise((ok, erro) => { const s = document.createElement('script'); s.src = 'assets/js/forms.js?v=1'; s.onload = ok; s.onerror = erro; document.head.appendChild(s); }).then(fn);
+  }
 })();

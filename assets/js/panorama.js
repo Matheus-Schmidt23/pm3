@@ -3,6 +3,10 @@
 (function(){
   const base = document.getElementById('form');
   if (!base) return;
+  /* carrega o forms.js (envio ao HubSpot) só quando alguém envia */
+  const comForms = fn => window.PM3Forms ? Promise.resolve().then(fn)
+    : new Promise((ok, erro) => { const s = document.createElement('script'); s.src = 'assets/js/forms.js?v=1'; s.onload = ok; s.onerror = erro; document.head.appendChild(s); }).then(fn);
+  base.insertAdjacentHTML('beforeend', '<input type="text" name="_site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">');
 
   const erro = (el, msg) => {
     const f = el.closest('.field'); if (!f) return;
@@ -23,8 +27,15 @@
       e.preventDefault();
       const ok = campos.map(valida).every(Boolean);
       if (!ok){ campos.find(c => c.closest('.field').classList.contains('err')).focus(); return; }
-      form.classList.add('sent');
-      form.querySelector('.ok').scrollIntoView({block:'nearest'});
+      /* envio pelo PM3Forms (assets/js/forms.js, carregado sob demanda); no modal, o nome do estudo vai junto */
+      const btn = form.querySelector('button[type=submit]'); btn.disabled = true;
+      comForms(() => {
+        const campos = window.PM3Forms.ler(form);
+        const est = form.closest('[role=dialog]')?.querySelector('h2, h3')?.textContent.trim(); if (est) campos.pm3_estudo = est;
+        return window.PM3Forms.enviar('panorama', campos, { form });
+      }).then(() => { form.classList.add('sent'); form.querySelector('.ok').scrollIntoView({block:'nearest'}); })
+        .catch(() => { window.pm3Aviso && window.pm3Aviso('Não foi possível enviar agora. Tente de novo em instantes.'); })
+        .finally(() => { btn.disabled = false; });
     });
   };
   prepara(base);

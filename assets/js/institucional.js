@@ -136,14 +136,22 @@
       if (el.name === 'linkedin' && v && !/linkedin\.com\//i.test(v)) return err(el, 'Cole o link do seu perfil no LinkedIn.');
       return err(el, '');
     };
+    form.insertAdjacentHTML('beforeend', '<input type="text" name="_site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">');
     form.querySelectorAll('input, select, textarea').forEach(el => el.addEventListener('blur', () => { if (el.closest('.fld,.fchk')) valida(el); }));
     form.addEventListener('submit', e => {
       e.preventDefault();
       const campos = [...form.querySelectorAll('[required]')];
       const ok = campos.map(valida).every(Boolean);
       if (!ok){ form.querySelector('.err input, .err select, .err textarea')?.focus(); return; }
-      form.hidden = true;
-      const fim = $('#f-ok'); fim.classList.add('show'); fim.querySelector('h2').focus();
+      /* envio pelo PM3Forms (assets/js/forms.js), com o texto do consentimento (LGPD) */
+      const btn = form.querySelector('button[type=submit]'); btn.disabled = true;
+      const consentimento = form.querySelector('input[name=lgpd]')?.closest('label')?.textContent.replace(/\s+/g, ' ').trim();
+      const comForms = fn => window.PM3Forms ? Promise.resolve().then(fn)
+        : new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/js/forms.js?v=1'; s.onload = res; s.onerror = rej; document.head.appendChild(s); }).then(fn);
+      comForms(() => window.PM3Forms.enviar('instrutor', window.PM3Forms.ler(form), { form, consentimento }))
+        .then(() => { form.hidden = true; const fim = $('#f-ok'); fim.classList.add('show'); fim.querySelector('h2').focus(); })
+        .catch(() => { window.pm3Aviso && window.pm3Aviso('Não foi possível enviar agora. Tente de novo em instantes.'); })
+        .finally(() => { btn.disabled = false; });
     });
   }
 

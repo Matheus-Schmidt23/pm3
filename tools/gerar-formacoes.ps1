@@ -401,7 +401,7 @@ $faqHtml    </div>
 <script src="assets/js/course.js?v=5"></script>
 <script src="assets/js/instrutores.js?v=6"></script>
 <script>window.EMENTA={curso:"$(JsEsc $nome)",tracking:"ementa $codigo",stats:"$(JsEsc $statsTxt).",capa:"assets/capas/$($cf.capa)-800.jpg"};</script>
-<script src="assets/js/ementa.js?v=5"></script>
+<script src="assets/js/ementa.js?v=6"></script>
 </body>
 </html>
 "@
