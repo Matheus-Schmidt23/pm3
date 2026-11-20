@@ -569,7 +569,7 @@ a.step:hover{transform:translateY(-4px)}
 .ementa-aside .em-cases-logos li{height:88px}
 /* revisão mobile: título do hero cabe na largura do celular (MANAGEMENT estourava a coluna) */
 @media (max-width:860px){ .c-hero-grid,.c-hero-grid > *{min-width:0} .c-hero-grid{grid-template-columns:minmax(0,1fr)} }
-@media (max-width:600px){ .c-hero h1{font-size:clamp(38px,12.6vw,52px)} .c-hero h1.h-sprint{font-size:clamp(32px,10.6vw,42px)} }
+@media (max-width:600px){ .c-hero h1{font-size:clamp(38px,12.6vw,52px)} .c-hero h1.h-sprint{font-size:calc(clamp(32px,10.6vw,42px) * var(--s,1))} }
 
 /* faixa de cases: no celular e tablet, rótulo em cima e grade embaixo (a regra da linha ~480 redefinia as colunas e esmagava os logos) */
 @media (max-width:1080px){ .em-cases-band{grid-template-columns:1fr} }
