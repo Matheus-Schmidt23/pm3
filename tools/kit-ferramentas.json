@@ -1,0 +1,910 @@
+﻿[
+    {
+        "t":  "APIs",
+        "itens":  [
+                      {
+                          "n":  "Croct",
+                          "u":  "https://croct.com/"
+                      },
+                      {
+                          "n":  "Algolia",
+                          "u":  "https://www.algolia.com/"
+                      },
+                      {
+                          "n":  "Foursquare",
+                          "u":  "https://foursquare.com/"
+                      },
+                      {
+                          "n":  "MessageBird",
+                          "u":  "https://www.messagebird.com/en/"
+                      },
+                      {
+                          "n":  "Nylas",
+                          "u":  "https://www.nylas.com/"
+                      },
+                      {
+                          "n":  "Radar.io",
+                          "u":  "https://radar.io/about"
+                      },
+                      {
+                          "n":  "Sendbird",
+                          "u":  "https://sendbird.com/"
+                      },
+                      {
+                          "n":  "Twilio",
+                          "u":  "https://www.twilio.com/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Automações de marketing",
+        "itens":  [
+                      {
+                          "n":  "RD Station",
+                          "u":  "https://www.rdstation.com/"
+                      },
+                      {
+                          "n":  "Take blip",
+                          "u":  "https://digital.blip.ai/conversas-inteligentes/?utm_feeditemid=\u0026amp;utm_device=c\u0026amp;utm_term=take%20blip\u0026amp;utm_campaign=GG-P_Conv_BOFU_Always-On_INT-GERAL_Institucional_Search_TakeBlip\u0026amp;utm_source=Google\u0026amp;utm_medium=cpc\u0026amp;hsa_acc=2783574544\u0026amp;hsa_kw=take%20blip\u0026amp;hsa_ver=3\u0026amp;hsa_ad=498236959849\u0026amp;hsa_net=adwords\u0026amp;hsa_mt=e\u0026amp;hsa_cam=12320816312\u0026amp;hsa_src=g\u0026amp;hsa_tgt=kwd-809239209550\u0026amp;hsa_grp=117951638579\u0026amp;gad_source=1\u0026amp;gclid=CjwKCAiAjrarBhAWEiwA2qWdCFbEw7KlzP-8ITM8B-WoaKOYmM79NPXaFdvVw4IPXPConOpYatrGuRoCWFIQAvD_BwE"
+                      },
+                      {
+                          "n":  "Autopilot",
+                          "u":  "https://www.autopilothq.com/"
+                      },
+                      {
+                          "n":  "Active Campaign",
+                          "u":  "https://www.activecampaign.com/br/"
+                      },
+                      {
+                          "n":  "Braze",
+                          "u":  "https://www.braze.com/"
+                      },
+                      {
+                          "n":  "Oracle",
+                          "u":  "https://www.oracle.com/cx/marketing/automation/"
+                      },
+                      {
+                          "n":  "HubSpot",
+                          "u":  "https://www.hubspot.com/"
+                      },
+                      {
+                          "n":  "Iterable",
+                          "u":  "https://iterable.com/"
+                      },
+                      {
+                          "n":  "Marketo",
+                          "u":  "https://www.marketo.com/"
+                      },
+                      {
+                          "n":  "Outreach",
+                          "u":  "https://www.outreach.io/"
+                      },
+                      {
+                          "n":  "Pardot",
+                          "u":  "https://pi.pardot.com/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Colaboração em equipe",
+        "itens":  [
+                      {
+                          "n":  "Gliffy",
+                          "u":  "https://www.gliffy.com/"
+                      },
+                      {
+                          "n":  "Loom",
+                          "u":  "https://www.loom.com/"
+                      },
+                      {
+                          "n":  "Lucid",
+                          "u":  "https://lucid.co/"
+                      },
+                      {
+                          "n":  "Miro",
+                          "u":  "https://miro.com/pt/"
+                      },
+                      {
+                          "n":  "Mural",
+                          "u":  "https://www.mural.co/"
+                      },
+                      {
+                          "n":  "Viima",
+                          "u":  "https://www.viima.com/"
+                      },
+                      {
+                          "n":  "Visio",
+                          "u":  "https://www.microsoft.com/en/microsoft-365/visio/flowchart-software"
+                      }
+                  ]
+    },
+    {
+        "t":  "Comunicação em equipe",
+        "itens":  [
+                      {
+                          "n":  "Rocket.Chat",
+                          "u":  "https://rocket.chat/pt-br/"
+                      },
+                      {
+                          "n":  "BlueJeans",
+                          "u":  "https://www.bluejeans.com/"
+                      },
+                      {
+                          "n":  "Cisco Jabber",
+                          "u":  "https://www.cisco.com/c/en/us/products/unified-communications/jabber/index.html"
+                      },
+                      {
+                          "n":  "Discord",
+                          "u":  "https://discord.com/"
+                      },
+                      {
+                          "n":  "EmojiCreator.ai",
+                          "u":  "https://emojicreator.ai/"
+                      },
+                      {
+                          "n":  "Facebook Workplace",
+                          "u":  "https://www.workplace.com/"
+                      },
+                      {
+                          "n":  "Google Chat",
+                          "u":  "https://workspace.google.com/products/chat/"
+                      },
+                      {
+                          "n":  "Intermedia",
+                          "u":  "https://www.intermedia.com/products/unite"
+                      },
+                      {
+                          "n":  "Lark",
+                          "u":  "https://www.larksuite.com/"
+                      },
+                      {
+                          "n":  "Microsoft Teams",
+                          "u":  "https://www.microsoft.com/pt-br/microsoft-teams/group-chat-software?rtc=1"
+                      },
+                      {
+                          "n":  "Slack",
+                          "u":  "https://slack.com/intl/pt-br/"
+                      },
+                      {
+                          "n":  "Whereby",
+                          "u":  "https://whereby.com/"
+                      },
+                      {
+                          "n":  "Zoho",
+                          "u":  "https://www.zoho.com/pt-br/cliq/"
+                      },
+                      {
+                          "n":  "Zoom",
+                          "u":  "https://zoom.us/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Dados de produto",
+        "itens":  [
+                      {
+                          "n":  "Croct",
+                          "u":  "https://croct.com/"
+                      },
+                      {
+                          "n":  "Adobe Experience Cloud",
+                          "u":  "https://business.adobe.com/br/products/analytics/adobe-analytics.html"
+                      },
+                      {
+                          "n":  "Amplitude",
+                          "u":  "https://amplitude.com/"
+                      },
+                      {
+                          "n":  "FullStory",
+                          "u":  "https://www.fullstory.com/"
+                      },
+                      {
+                          "n":  "Google Analytics",
+                          "u":  "https://analytics.google.com/analytics/web/#/"
+                      },
+                      {
+                          "n":  "Heap.io",
+                          "u":  "https://heap.io/"
+                      },
+                      {
+                          "n":  "Keen.io",
+                          "u":  "https://keen.io/"
+                      },
+                      {
+                          "n":  "Logi Analytics",
+                          "u":  "https://www.logianalytics.com/"
+                      },
+                      {
+                          "n":  "Mixpanel",
+                          "u":  "https://mixpanel.com/"
+                      },
+                      {
+                          "n":  "Pendo",
+                          "u":  "https://www.pendo.io/"
+                      },
+                      {
+                          "n":  "Pyramid Analytics",
+                          "u":  "https://www.pyramidanalytics.com/"
+                      },
+                      {
+                          "n":  "Revenera",
+                          "u":  "https://www.revenera.com/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Dados do usuário",
+        "itens":  [
+                      {
+                          "n":  "Croct",
+                          "u":  "https://croct.com/"
+                      },
+                      {
+                          "n":  "ActionIQ",
+                          "u":  "https://www.actioniq.com/"
+                      },
+                      {
+                          "n":  "Exponea",
+                          "u":  "https://exponea.com/"
+                      },
+                      {
+                          "n":  "Gainsight",
+                          "u":  "https://www.gainsight.com/"
+                      },
+                      {
+                          "n":  "Interaction Studio",
+                          "u":  "https://www.salesforce.com/products/marketing-cloud/customer-interaction/"
+                      },
+                      {
+                          "n":  "Lytics",
+                          "u":  "https://www.lytics.com/"
+                      },
+                      {
+                          "n":  "mParticle",
+                          "u":  "https://www.mparticle.com/"
+                      },
+                      {
+                          "n":  "Segment",
+                          "u":  "https://segment.com/"
+                      },
+                      {
+                          "n":  "Tealium",
+                          "u":  "https://tealium.com/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Documentação e Wiki",
+        "itens":  [
+                      {
+                          "n":  "Coda",
+                          "u":  "https://coda.io/welcome"
+                      },
+                      {
+                          "n":  "Confluence",
+                          "u":  "https://www.atlassian.com/software/confluence"
+                      },
+                      {
+                          "n":  "FYI",
+                          "u":  "https://usefyi.com/"
+                      },
+                      {
+                          "n":  "GitHub",
+                          "u":  "https://github.com/"
+                      },
+                      {
+                          "n":  "GitLab",
+                          "u":  "https://about.gitlab.com/"
+                      },
+                      {
+                          "n":  "Google Sites",
+                          "u":  "https://sites.google.com/new"
+                      },
+                      {
+                          "n":  "Notion",
+                          "u":  "http://notion.so"
+                      },
+                      {
+                          "n":  "SharePoint",
+                          "u":  "https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration"
+                      }
+                  ]
+    },
+    {
+        "t":  "Formulários",
+        "itens":  [
+                      {
+                          "n":  "Airtable",
+                          "u":  "https://airtable.com/"
+                      },
+                      {
+                          "n":  "Formstack",
+                          "u":  "https://www.formstack.com/"
+                      },
+                      {
+                          "n":  "Google Forms",
+                          "u":  "https://www.google.com/forms/about/"
+                      },
+                      {
+                          "n":  "JotForm",
+                          "u":  "https://www.jotform.com/"
+                      },
+                      {
+                          "n":  "Mailchimp",
+                          "u":  "https://mailchimp.com/pt-br/"
+                      },
+                      {
+                          "n":  "Smartsheet",
+                          "u":  "https://www.smartsheet.com/"
+                      },
+                      {
+                          "n":  "Typeform",
+                          "u":  "https://www.typeform.com/"
+                      },
+                      {
+                          "n":  "Wefoo",
+                          "u":  "https://www.wufoo.com/"
+                      },
+                      {
+                          "n":  "Zoho Forms",
+                          "u":  "https://www.zoho.com/pt-br/forms/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Gestão de tempo e tarefas",
+        "itens":  [
+                      {
+                          "n":  "KalendMe",
+                          "u":  "https://www.kalendme.com/"
+                      },
+                      {
+                          "n":  "Airtable",
+                          "u":  "https://airtable.com/"
+                      },
+                      {
+                          "n":  "Asana",
+                          "u":  "https://asana.com/pt"
+                      },
+                      {
+                          "n":  "Coda",
+                          "u":  "https://coda.io/welcome"
+                      },
+                      {
+                          "n":  "Jira",
+                          "u":  "https://www.atlassian.com/software/jira"
+                      },
+                      {
+                          "n":  "Monday",
+                          "u":  "https://monday.com/lang/pt/"
+                      },
+                      {
+                          "n":  "Notion",
+                          "u":  "https://www.notion.so/"
+                      },
+                      {
+                          "n":  "Pivotal Tracker",
+                          "u":  "https://www.pivotaltracker.com/"
+                      },
+                      {
+                          "n":  "Smart Sheet",
+                          "u":  "https://www.smartsheet.com/"
+                      },
+                      {
+                          "n":  "Todoist",
+                          "u":  "https://todoist.com/pt-BR"
+                      },
+                      {
+                          "n":  "Trello",
+                          "u":  "https://trello.com/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Integrações",
+        "itens":  [
+                      {
+                          "n":  "Pluga",
+                          "u":  "https://pluga.co/"
+                      },
+                      {
+                          "n":  "Automate.io",
+                          "u":  "https://automate.io/"
+                      },
+                      {
+                          "n":  "Integromat",
+                          "u":  "https://www.integromat.com/en"
+                      },
+                      {
+                          "n":  "MuleSoft",
+                          "u":  "https://www.mulesoft.com/"
+                      },
+                      {
+                          "n":  "Parabola.io",
+                          "u":  "https://parabola.io/"
+                      },
+                      {
+                          "n":  "Tray.io",
+                          "u":  "https://tray.io/"
+                      },
+                      {
+                          "n":  "Workato",
+                          "u":  "https://www.workato.com/"
+                      },
+                      {
+                          "n":  "Zapier",
+                          "u":  "https://zapier.com/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Mapas de calor",
+        "itens":  [
+                      {
+                          "n":  "Contentsquare",
+                          "u":  "https://contentsquare.com/"
+                      },
+                      {
+                          "n":  "Crazy Egg",
+                          "u":  "https://www.crazyegg.com/"
+                      },
+                      {
+                          "n":  "Fullstory",
+                          "u":  "https://www.fullstory.com/"
+                      },
+                      {
+                          "n":  "Hotjar",
+                          "u":  "https://www.hotjar.com/"
+                      },
+                      {
+                          "n":  "Log Rocket",
+                          "u":  "https://logrocket.com/"
+                      },
+                      {
+                          "n":  "Lucky Orange",
+                          "u":  "https://www.luckyorange.com/"
+                      },
+                      {
+                          "n":  "Mouseflow",
+                          "u":  "https://mouseflow.com/"
+                      },
+                      {
+                          "n":  "Uxcam",
+                          "u":  "https://uxcam.com/"
+                      },
+                      {
+                          "n":  "VWO",
+                          "u":  "https://vwo.com/insights/heatmaps/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Onboarding",
+        "itens":  [
+                      {
+                          "n":  "Binds",
+                          "u":  "https://binds.co/"
+                      },
+                      {
+                          "n":  "Conpass",
+                          "u":  "https://www.conpass.io/"
+                      },
+                      {
+                          "n":  "Appcues",
+                          "u":  "https://www.zoho.com/pt-br/sites/"
+                      },
+                      {
+                          "n":  "Braze",
+                          "u":  "https://www.braze.com/"
+                      },
+                      {
+                          "n":  "Chameleon",
+                          "u":  "https://www.trychameleon.com/"
+                      },
+                      {
+                          "n":  "Eloqua",
+                          "u":  "https://www.oracle.com/cx/marketing/automation/"
+                      },
+                      {
+                          "n":  "Gainsight",
+                          "u":  "https://www.gainsight.com/product-experience/"
+                      },
+                      {
+                          "n":  "Hansel.io",
+                          "u":  "https://hansel.io/"
+                      },
+                      {
+                          "n":  "Intercom",
+                          "u":  "https://www.intercom.com/"
+                      },
+                      {
+                          "n":  "Pendo",
+                          "u":  "https://www.pendo.io/"
+                      },
+                      {
+                          "n":  "UserGuiding",
+                          "u":  "https://userguiding.com/"
+                      },
+                      {
+                          "n":  "UserIQ",
+                          "u":  "https://useriq.com/"
+                      },
+                      {
+                          "n":  "UserPilot",
+                          "u":  "https://userpilot.com/"
+                      },
+                      {
+                          "n":  "WalkMe",
+                          "u":  "https://www.walkme.com/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Pesquisa e feedback",
+        "itens":  [
+                      {
+                          "n":  "Sense Data",
+                          "u":  "https://www.sensedata.com.br/"
+                      },
+                      {
+                          "n":  "Appcues",
+                          "u":  "https://www.appcues.com/"
+                      },
+                      {
+                          "n":  "Apptentive",
+                          "u":  "https://www.apptentive.com/"
+                      },
+                      {
+                          "n":  "Delighted",
+                          "u":  "https://delighted.com/"
+                      },
+                      {
+                          "n":  "Gainsight",
+                          "u":  "https://www.gainsight.com/customer-experience/"
+                      },
+                      {
+                          "n":  "Hotjar",
+                          "u":  "https://www.hotjar.com/"
+                      },
+                      {
+                          "n":  "Medallia",
+                          "u":  "https://www.medallia.com/"
+                      },
+                      {
+                          "n":  "Pendo",
+                          "u":  "https://www.pendo.io/"
+                      },
+                      {
+                          "n":  "Qualtrics",
+                          "u":  "https://www.qualtrics.com/pt-br/?rid=langMatch\u0026amp;prevsite=en\u0026amp;newsite=pt-br\u0026amp;geo=\u0026amp;geomatch="
+                      },
+                      {
+                          "n":  "UserIQ",
+                          "u":  "https://useriq.com/"
+                      },
+                      {
+                          "n":  "UserLeap",
+                          "u":  "https://userleap.com/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Plataforma para negócios e websites",
+        "itens":  [
+                      {
+                          "n":  "Jet",
+                          "u":  "https://www.jetecommerce.com.br/"
+                      },
+                      {
+                          "n":  "VTEX",
+                          "u":  "https://vtex.com/br-pt/"
+                      },
+                      {
+                          "n":  "Craft CMS",
+                          "u":  "https://craftcms.com/"
+                      },
+                      {
+                          "n":  "Drupal",
+                          "u":  "https://www.drupal.org/"
+                      },
+                      {
+                          "n":  "Magento",
+                          "u":  "https://magento.com/"
+                      },
+                      {
+                          "n":  "Shopify",
+                          "u":  "https://www.shopify.com/"
+                      },
+                      {
+                          "n":  "Squarespace",
+                          "u":  "https://pt.squarespace.com/"
+                      },
+                      {
+                          "n":  "Webflow",
+                          "u":  "https://webflow.com/"
+                      },
+                      {
+                          "n":  "Weebly",
+                          "u":  "https://www.weebly.com/?lang=en"
+                      },
+                      {
+                          "n":  "Wix",
+                          "u":  "https://www.wix.com/"
+                      },
+                      {
+                          "n":  "WordPress",
+                          "u":  "https://wordpress.com/pt-br/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Protótipos e Wireframes",
+        "itens":  [
+                      {
+                          "n":  "Adobe XD",
+                          "u":  "https://www.adobe.com/products/xd.html"
+                      },
+                      {
+                          "n":  "Axure",
+                          "u":  "https://www.axure.com/"
+                      },
+                      {
+                          "n":  "Balsamiq",
+                          "u":  "https://balsamiq.com/"
+                      },
+                      {
+                          "n":  "Figma",
+                          "u":  "https://www.figma.com/login"
+                      },
+                      {
+                          "n":  "InVision",
+                          "u":  "https://www.invisionapp.com/"
+                      },
+                      {
+                          "n":  "Marvel",
+                          "u":  "https://marvelapp.com/"
+                      },
+                      {
+                          "n":  "Proto.io",
+                          "u":  "https://proto.io/"
+                      },
+                      {
+                          "n":  "Sketch",
+                          "u":  "https://www.sketch.com/"
+                      },
+                      {
+                          "n":  "UXPin",
+                          "u":  "https://www.uxpin.com/"
+                      },
+                      {
+                          "n":  "Whismsical",
+                          "u":  "https://whimsical.com/"
+                      },
+                      {
+                          "n":  "Zeplin",
+                          "u":  "https://zeplin.io/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Roadmaps",
+        "itens":  [
+                      {
+                          "n":  "Aha!",
+                          "u":  "https://www.aha.io/"
+                      },
+                      {
+                          "n":  "Airtable",
+                          "u":  "https://airtable.com/"
+                      },
+                      {
+                          "n":  "Coda",
+                          "u":  "https://coda.io/welcome"
+                      },
+                      {
+                          "n":  "Glidr",
+                          "u":  "https://www.glidr.io/"
+                      },
+                      {
+                          "n":  "Pendo",
+                          "u":  "https://www.pendo.io/"
+                      },
+                      {
+                          "n":  "ProductBoard",
+                          "u":  "https://www.productboard.com/"
+                      },
+                      {
+                          "n":  "ProductPlan",
+                          "u":  "https://www.productplan.com/"
+                      },
+                      {
+                          "n":  "Roadmunk",
+                          "u":  "https://roadmunk.com/"
+                      },
+                      {
+                          "n":  "Smartsheet",
+                          "u":  "https://www.smartsheet.com/"
+                      },
+                      {
+                          "n":  "Uservoice",
+                          "u":  "https://www.uservoice.com/"
+                      },
+                      {
+                          "n":  "Wizeline",
+                          "u":  "https://www.wizeline.com/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Suporte e atendimento",
+        "itens":  [
+                      {
+                          "n":  "MoviDesk",
+                          "u":  "https://www.movidesk.com/"
+                      },
+                      {
+                          "n":  "Octadesk",
+                          "u":  "https://pt.octadesk.com/"
+                      },
+                      {
+                          "n":  "Take blip",
+                          "u":  "https://www.take.net/solucoes/atendimento/"
+                      },
+                      {
+                          "n":  "FreshDesk",
+                          "u":  "https://freshdesk.com/br/"
+                      },
+                      {
+                          "n":  "Intercom",
+                          "u":  "https://www.intercom.com/pt-BR"
+                      },
+                      {
+                          "n":  "Jivo Desk",
+                          "u":  "https://www.jivochat.com.br/"
+                      },
+                      {
+                          "n":  "Zendesk",
+                          "u":  "https://www.zendesk.com.br/"
+                      },
+                      {
+                          "n":  "Zoho Desk",
+                          "u":  "https://www.zoho.com/pt-br/desk/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Teste A/B",
+        "itens":  [
+                      {
+                          "n":  "AB Tasty",
+                          "u":  "https://www.abtasty.com/"
+                      },
+                      {
+                          "n":  "Adobe Target",
+                          "u":  "https://business.adobe.com/products/target/adobe-target.html"
+                      },
+                      {
+                          "n":  "Apptimize",
+                          "u":  "https://apptimize.com/"
+                      },
+                      {
+                          "n":  "CrazyEgg",
+                          "u":  "https://www.crazyegg.com/"
+                      },
+                      {
+                          "n":  "Google Optimize",
+                          "u":  "https://marketingplatform.google.com/intl/pt-BR_br/about/optimize/"
+                      },
+                      {
+                          "n":  "LaunchDarkly",
+                          "u":  "https://launchdarkly.com/"
+                      },
+                      {
+                          "n":  "Optimizely",
+                          "u":  "https://www.optimizely.com/"
+                      },
+                      {
+                          "n":  "Split.io",
+                          "u":  "https://www.split.io/"
+                      },
+                      {
+                          "n":  "VWO",
+                          "u":  "https://vwo.com/"
+                      },
+                      {
+                          "n":  "Zoho PageSense",
+                          "u":  "https://www.zoho.com/pt-br/pagesense/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Testes de usabilidade",
+        "itens":  [
+                      {
+                          "n":  "Applause",
+                          "u":  "https://www.applause.com/"
+                      },
+                      {
+                          "n":  "Centercode",
+                          "u":  "https://www.centercode.com/"
+                      },
+                      {
+                          "n":  "Instabug",
+                          "u":  "https://instabug.com/"
+                      },
+                      {
+                          "n":  "Maze",
+                          "u":  "https://maze.co/"
+                      },
+                      {
+                          "n":  "Rainforest",
+                          "u":  "https://www.rainforestqa.com/"
+                      },
+                      {
+                          "n":  "Test.io",
+                          "u":  "https://test.io/"
+                      },
+                      {
+                          "n":  "Test Fairy",
+                          "u":  "https://www.testfairy.com/"
+                      },
+                      {
+                          "n":  "Userlytics",
+                          "u":  "https://www.userlytics.com/"
+                      },
+                      {
+                          "n":  "User Testing",
+                          "u":  "https://www.usertesting.com/"
+                      },
+                      {
+                          "n":  "User Zoom",
+                          "u":  "https://www.userzoom.com/"
+                      }
+                  ]
+    },
+    {
+        "t":  "Visualização de dados",
+        "itens":  [
+                      {
+                          "n":  "Croct",
+                          "u":  "https://croct.com/"
+                      },
+                      {
+                          "n":  "Chartio",
+                          "u":  "https://chartio.com/"
+                      },
+                      {
+                          "n":  "Data Studio",
+                          "u":  "https://datastudio.google.com/u/0/"
+                      },
+                      {
+                          "n":  "Domo",
+                          "u":  "https://www.domo.com/"
+                      },
+                      {
+                          "n":  "Looker",
+                          "u":  "https://looker.com/"
+                      },
+                      {
+                          "n":  "Microsoft Power BI",
+                          "u":  "https://powerbi.microsoft.com/en-us/"
+                      },
+                      {
+                          "n":  "Qlik",
+                          "u":  "https://www.qlik.com/us"
+                      },
+                      {
+                          "n":  "Sisense",
+                          "u":  "https://www.sisense.com/"
+                      },
+                      {
+                          "n":  "Tableau",
+                          "u":  "https://www.tableau.com/"
+                      },
+                      {
+                          "n":  "YellowFin",
+                          "u":  "https://www.yellowfinbi.com/"
+                      }
+                  ]
+    }
+]

@@ -397,7 +397,7 @@ $faqHtml    </div>
   <a class="btn btn-light btn-sm" href="#investimento" tabindex="-1">Inscrever</a>
 </div>
 
-<script src="assets/js/layout.js?v=64"></script>
+<script src="assets/js/layout.js?v=65"></script>
 <script src="assets/js/course.js?v=5"></script>
 <script src="assets/js/instrutores.js?v=6"></script>
 <script>window.EMENTA={curso:"$(JsEsc $nome)",tracking:"ementa $codigo",stats:"$(JsEsc $statsTxt).",capa:"assets/capas/$($cf.capa)-800.jpg"};</script>
