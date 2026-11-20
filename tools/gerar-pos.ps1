@@ -30,6 +30,61 @@ $IC = @{
 }
 $CERTN = 'Discover','Build','Deploy','Scale','Go Live'
 
+# COORDENAÇÃO: as três pós mostram sempre todos os coordenadores da Pós Tech, na ordem e com os cargos da página oficial da FIAP.
+# A FIAP tirou as fotos do site (imagens vazias; os arquivos antigos dão 403). Só há foto real de Andréa Paiva (FIAP, outubro) e
+# Flávia Varga (cadastro de instrutores da PM3). Quem não tem foto entra na lista em texto, nunca com avatar de iniciais.
+$COORD = @(
+  @{ n='Andréa Paiva'; r='Diretora de Pós-Graduação Digital'; e='FIAP'; foto='assets/people/pos-andrea-paiva-hd.jpg'; logo='<img src="assets/alun/site/fiap.svg" alt="FIAP" style="height:14px">' },
+  @{ n='Flávia Varga'; r='Head of Innovation'; e='alacre'; foto='assets/people/pos-flavia-varga.jpg' },
+  @{ n='Queit Elizandra Zunino'; r='Diretoria Global de Tecnologia & Pessoas'; e='' },
+  @{ n='Erika Tavares'; r='Líder de Iniciativas, mentora e embaixadora'; e='Mulheres de Produto' },
+  @{ n='Viviane Elias'; r='C-Level, board member e governança corporativa'; e='FIAP' },
+  @{ n='Celso Poderoso'; r='Global Director, Business Reporting Governance'; e='McCain' },
+  @{ n='Ana Raquel'; r='Cientista de dados'; e='Itaú' },
+  @{ n='Gustavo Lima'; r='Engenheiro de software principal'; e='F1rst Digital Services' },
+  @{ n='Thamiris Adriano'; r='IT Analyst III'; e='F1rst Digital Services' },
+  @{ n='Vinicius Vieira'; r='SecOps Manager'; e='Trustly' },
+  @{ n='Douglas Martins'; r='Senior DevOps Engineer'; e='iugu' },
+  @{ n='Daniele Garcia'; r='Developer'; e='Ambev Tech' }
+)
+function CoordBlock([string]$destaque, [string]$frase) {
+  # $destaque: nome de quem coordena esta pós (vem primeiro e ganha o selo); $frase: lead da seção
+  $lista = @($COORD | Where-Object { $_.n -eq $destaque }) + @($COORD | Where-Object { $_.n -ne $destaque })
+  $comFoto = @($lista | Where-Object { $_.foto }); $semFoto = @($lista | Where-Object { -not $_.foto })
+  $cards = for ($i = 0; $i -lt $comFoto.Count; $i++) {
+    $p = $comFoto[$i]; $co = if ($p.logo) { '<span class="co co-logo">' + $p.logo + '</span>' } elseif ($p.e) { '<span class="co">' + (Esc $p.e) + '</span>' } else { '' }
+    $papel = $(if ($p.n -eq 'Andréa Paiva') { $p.r } elseif ($p.n -eq $destaque) { 'Coordenação desta pós · ' + $p.r } else { 'Coordenadora · ' + $p.r })
+    '        <figure class="prof reveal"' + $(if ($i) { ' data-d="' + $i + '"' }) + '><div class="ph"><img src="' + $p.foto + '" alt="Foto de ' + (Esc $p.n) + '" loading="lazy">' + $co + '</div><figcaption><b>' + (Esc $p.n) + '</b><span>' + (Esc $papel) + '</span></figcaption></figure>'
+  }
+  $lis = foreach ($p in $semFoto) { '        <li' + $(if ($p.n -eq $destaque) { ' class="is-curso"' }) + '><b>' + (Esc $p.n) + '</b><span>' + (Esc $p.r) + '</span>' + $(if ($p.e) { '<em>' + (Esc $p.e) + '</em>' }) + $(if ($p.n -eq $destaque) { '<i>Coordenação desta pós</i>' }) + '</li>' }
+@"
+<!-- 8 · COORDENAÇÃO -->
+<section class="section on-dark coord-sec" id="coordenacao" aria-labelledby="co-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker"><span class="n">05</span> Coordenação</p><h2 class="h2" id="co-t">Sua pós conduzida<br><span class="c2">por grandes especialistas</span></h2></div>
+      <p class="lead">$frase</p>
+    </div>
+    <div class="coord-wrap" data-nota="Todos os coordenadores da Pós Tech, como na página oficial da FIAP (a mesma equipe nas três pós). A FIAP tirou as fotos do site: só Andréa Paiva e Flávia Varga têm foto real; os demais aparecem em texto até a FIAP enviar as fotos oficiais.">
+      <div class="prof-row coord-fotos">
+$($cards -join "`n")
+      </div>
+      <ul class="coord-list" aria-label="Coordenadores da Pós Tech">
+$($lis -join "`n")
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+"@
+}
+$COORD_LEAD = 'Direção de Pós-Graduação Digital da FIAP e uma coordenação com especialistas de empresas como Itaú, McCain, Ambev Tech e Trustly.'
+# a página modelo (Digital Product Management) também recebe a coordenação completa
+$dpmPath = Join-Path $proto 'pos-digital-product-management.html'
+$modelo = Entre $modelo '<!-- 8 · COORDENAÇÃO -->' '<!-- 9 · INVESTIMENTO -->' (CoordBlock '' $COORD_LEAD)
+[IO.File]::WriteAllText($dpmPath, $modelo, $utf8)
+
 $CURSOS = @(
  @{
   slug = 'tech-management'; arq = 'pos-tech-management.html'; nome = 'Tech Management'
@@ -97,13 +152,14 @@ $CURSOS = @(
      @('IA para liderança', @('O novo papel do líder tech na era da IA','Organizações aumentadas por IA','Delegação, confiança e responsabilidade com IA','Construção de budget à prova de IA','Talentos, carreira e retenção na era da IA')) ) }
   )
   notaFases = 'Disciplinas e tópicos das 5 fases conforme o dossiê Pós Tech 2027.1 e a página oficial da FIAP. A FIAP só dá título à fase 1 (Digital Strategy &amp; Agile); os títulos das fases 2 a 5 resumem as disciplinas de cada fase e precisam do ok da coordenação.'
-  coordLead = 'Coordenação de Queit Elizandra Zunino, da Diretoria Global de Tecnologia &amp; Pessoas, com a direção de Pós-Graduação Digital da FIAP.'
+  coordNome = 'Queit Elizandra Zunino'
+  coordLead = 'Coordenação de Queit Elizandra Zunino, da Diretoria Global de Tecnologia &amp; Pessoas, com a direção de Pós-Graduação Digital da FIAP e especialistas de empresas como Itaú, McCain, Ambev Tech e Trustly.'
   coordNota = 'Coordenação conforme o dossiê Pós Tech 2027.1 (Queit Zunino). A página oficial da FIAP lista a equipe sem fotos, e não há foto de Queit Zunino no site da PM3: por isso ela aparece só no texto. Pedir a foto oficial à FIAP para incluir o card.'
   coordCards = @(
     '<figure class="prof reveal"><div class="ph"><img src="assets/people/pos-andrea-paiva-hd.jpg" alt="Foto de Andréa Paiva" loading="lazy"><span class="co co-logo"><img src="assets/alun/site/fiap.svg" alt="FIAP" style="height:14px"></span></div><figcaption><b>Andréa Paiva</b><span>Diretora de Pós-Graduação Digital</span></figcaption></figure>')
  },
  @{
-  slug = 'ia-para-negocios'; arq = 'pos-ia-para-negocios.html'; nome = 'IA para Negócios'
+  slug = 'ia-para-negocios'; arq = 'pos-ia-para-negocios.html'; nome = 'IA para Negócios'; coverB = '1.2'
   h1 = 'IA para<br><span class="l2">Negócios</span>'
   titulo = 'Pós Tech em IA para Negócios: PM3 + FIAP, Grupo Alun | PM3'
   desc = 'Pós-graduação 100% digital e hands-on em IA para Negócios, da PM3 com a FIAP, no Grupo Alun: gestão estratégica e liderança com IA, da estratégia ao go-to-market. 360 horas, 10 meses e 5 fases.'
@@ -158,7 +214,8 @@ $CURSOS = @(
      @('Liderança com propósito', @('Autoconsciência em um mundo complexo','Competências e carreiras com propósito','Conexões de valor para o impacto coletivo','A estratégia com alma: inteligência emocional','Construindo um legado de liderança autêntica')) ) }
   )
   notaFases = 'Grade 2027.1 já consolidada, como na página oficial da FIAP: Foresight Estratégico deu lugar a Inteligência Competitiva e Cenários com IA (fase 1) e os blocos de IA para Negócios das fases 1 a 4 viraram uma disciplina só na fase 5. Títulos das fases conforme a página da Pós Tech (pos-tech.html). Atenção: a FIAP e o dossiê repetem a mesma lista de tópicos em Go-to-Market e escalabilidade e em Growth hacking (fase 5); confirmar com a coordenação.'
-  coordLead = 'Coordenação de Flávia Varga, Head of Innovation, com a direção de Pós-Graduação Digital da FIAP.'
+  coordNome = 'Flávia Varga'
+  coordLead = 'Coordenação de Flávia Varga, Head of Innovation, com a direção de Pós-Graduação Digital da FIAP e especialistas de empresas como Itaú, McCain, Ambev Tech e Trustly.'
   coordNota = 'Coordenação conforme o dossiê Pós Tech 2027.1 (Flavia Varga). A página oficial da FIAP lista a equipe sem fotos; a foto de Flávia Varga vem do cadastro de instrutores do site da PM3.'
   coordCards = @(
     '<figure class="prof reveal"><div class="ph"><img src="assets/people/pos-flavia-varga.jpg" alt="Foto de Flávia Varga" loading="lazy"></div><figcaption><b>Flávia Varga</b><span>Coordenadora · Head of Innovation</span></figcaption></figure>',
@@ -184,6 +241,8 @@ foreach ($c in $CURSOS) {
 
   # hero
   $t = Troca $t 'assets/capas/pos-fiap/digital-product-management.webp' "assets/capas/pos-fiap/$($c.slug).webp"
+  # brilho da capa (pos-curso.css clareia 2,2x por padrão; a capa de IA para Negócios já é clara)
+  if ($c.coverB) { $t = Troca $t "<div class=`"cover`" aria-hidden=`"true`" style=`"background-image" "<div class=`"cover`" aria-hidden=`"true`" style=`"--cover-b:$($c.coverB);background-image" }
   $t = Troca $t '/pos-tech/digital-product-management/.' "/pos-tech/$($c.slug)/."
   $t = Troca $t '<li aria-current="page">Digital Product Management</li>' "<li aria-current=`"page`">$($c.nome)</li>"
   $t = Troca $t '<h1 class="display" id="h1">Digital<br>Product<br><span class="l2">Management</span></h1>' "<h1 class=`"display`" id=`"h1`">$($c.h1)</h1>"
@@ -256,24 +315,8 @@ $($mods -join "`n")
   $lis = for ($i = 0; $i -lt 5; $i++) { "      <li data-n=`"0$($i+1)`"><span class=`"pc-n`">0$($i+1)</span><span class=`"pc-k`">Achievement $($i+1) · $($CERTN[$i])</span><h3>$($c.fases[$i].c)</h3><span class=`"pc-m`">$($meses[$i])</span><i class=`"pc-bar`" style=`"--p:$((($i+1)*0.2).ToString([Globalization.CultureInfo]::InvariantCulture))`" aria-hidden=`"true`"></i></li>" }
   $t = [regex]::Replace($t, '(<ol class="pcert reveal" data-nota=")[^"]*(">).*?(\s*<li class="pc-final">)', { param($m) $m.Groups[1].Value + 'Uma microcertificação a cada fase, com os nomes oficiais da FIAP (Achievement 1: Discover a Achievement 5: Go Live). O título abaixo de cada uma resume a fase.' + $m.Groups[2].Value + "`n" + ($lis -join "`n") + $m.Groups[3].Value }, 'Singleline')
 
-  # 8 · coordenação
-  $coord = @"
-<!-- 8 · COORDENAÇÃO -->
-<section class="section on-dark coord-sec" id="coordenacao" aria-labelledby="co-t">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><p class="kicker"><span class="n">05</span> Coordenação</p><h2 class="h2" id="co-t">Sua pós conduzida<br><span class="c2">por grandes especialistas</span></h2></div>
-      <p class="lead">$($c.coordLead)</p>
-    </div>
-    <div class="prof-row" data-nota="$($c.coordNota)">
-      $($c.coordCards -join "`n      ")
-    </div>
-  </div>
-</section>
-
-
-"@
-  $t = Entre $t '<!-- 8 · COORDENAÇÃO -->' '<!-- 9 · INVESTIMENTO -->' $coord
+  # 8 · coordenação (todos os coordenadores; quem coordena esta pós vem primeiro)
+  $t = Entre $t '<!-- 8 · COORDENAÇÃO -->' '<!-- 9 · INVESTIMENTO -->' (CoordBlock $c.coordNome $c.coordLead)
 
   # certificado, barra de compra e e-book
   $t = Troca $t 'e o curso por Digital Product Management.' "e o curso por Digital Product Management. PROVISÓRIO: o mockup ainda mostra Digital Product Management; gerar a versão de $($c.nome)."
