@@ -190,12 +190,20 @@
   "resumo": "Formação prática em construção de produtos com IA: mentalidade builder, arquitetura de produtos de IA, automações e workflows com n8n, agentes com Claude Code, aplicações completas com Lovable, validação e operação.",
   "quem": "Sim, se você quer construir automações, agentes e aplicações com IA de verdade, não só entender a tecnologia. Não há pré-requisito formal; conforto com ferramentas digitais ajuda.",
   "modDesc": {
-    "1": "Saia do uso da IA para a criação de produtos: a mentalidade de quem constrói, com duas aplicações práticas.",
-    "2": "O blueprint por trás de um produto de IA: componentes, decisões de arquitetura e trade-offs, com duas aplicações práticas.",
-    "3": "Automações e workflows com IA no n8n, do fluxo simples ao processo de ponta a ponta.",
-    "4": "Construa agentes com Claude Code e aprenda a dar contexto e manter o controle sobre eles.",
-    "5": "Crie aplicações completas com IA e Lovable, da ideia ao produto funcionando.",
-    "6": "Valide e opere produtos com IA em produção, com responsabilidade, em duas aplicações práticas."
+    "1": "Vá além de usar IA para economizar 20 minutos. Aprenda a identificar onde ela realmente gera valor e comece a construir soluções que mudam o resultado do seu trabalho.",
+    "2": "Entenda como sistemas com IA funcionam e tome decisões de arquitetura conscientes, com clareza sobre custo, latência, complexidade e risco.",
+    "3": "Transforme tarefas repetitivas em fluxos automatizados que realmente funcionam, conectados a dados reais, com tratamento de erro e prontos para uso.",
+    "4": "Construa agentes que executam tarefas para você e sua equipe, com clareza sobre quando faz sentido usá-los, como estruturá-los e como manter o controle do que eles fazem.",
+    "5": "Vá além da automação: construa aplicações com interface, lógica e IA integrada, algo que seu time, líderes e até clientes consigam usar.",
+    "6": "Saia do “parece que está funcionando” e aprenda a medir, validar e operar produtos com IA com critérios claros, antes e depois do go-live."
+  },
+  "modTopicos": {
+    "1": ["O que é possível construir com IA hoje: copilots, automações, agentes e aplicações AI-native", "Como identificar oportunidades reais de alto potencial na sua rotina ou empresa", "Discovery assistido por IA: explorar problemas antes de escolher soluções", "Como enquadrar o problema certo e definir o recorte que vale a pena construir"],
+    "2": ["Anatomia de um produto com IA: interface, lógica, modelo, memória e integrações", "Como funciona o fluxo do input ao output (e onde os sistemas costumam quebrar)", "Quando usar prompt, workflow ou agente, e quando não usar nenhum", "Memória, contexto e persistência: o que transforma um produto de mediano em útil", "Como escolher o modelo certo e o impacto dessa decisão no custo e na qualidade"],
+    "3": ["Como decompor um problema em etapas e construir sua primeira automação no n8n", "Integração com ferramentas como Google Sheets, APIs, CRMs, Slack, Notion e mais", "Como estruturar automações robustas com validações, retries, fallback e revisão humana", "Boas práticas de versionamento, organização e evolução de workflows"],
+    "4": ["O que são agentes e como funcionam na prática (sem mistério, sem hype)", "Quando usar agente, e quando um workflow simples resolve melhor", "Construção de um agente funcional com ferramentas externas usando Claude Code", "Como equipar agentes com contexto, memória e ferramentas para aumentar a utilidade", "Validações, approval gates e human-in-the-loop: tornando agentes confiáveis"],
+    "5": ["Como criar uma aplicação completa com frontend, backend e IA usando Lovable", "Estrutura de uma aplicação moderna: entrada, lógica, integrações e resposta", "Persistência de dados, histórico do usuário e contexto contínuo na prática", "Como transformar um protótipo funcional em um produto utilizável de verdade", "UX para produtos com IA: explicabilidade, previsibilidade e confiança do usuário"],
+    "6": ["Como testar utilidade com usuários reais (sem precisar de pesquisa complexa)", "Evals na prática: como criar exemplos de teste, comparar respostas e definir “bom o suficiente”", "Observabilidade, logs e como identificar degradação de qualidade ao longo do tempo", "Responsible AI na prática: guardrails, fallback, transparência e LGPD", "O playbook completo do AI Product Builder: um framework para continuar construindo sozinho"]
   },
   "secao": {"tipo": "ia", "kicker": "O que você constrói", "h2": "Mão na massa,<br><span class=\"c2\">do zero ao produto</span>", "lead": "São 9 aplicações práticas ao longo dos 6 módulos. Você termina com automações, agentes e uma aplicação construídos por você.",
     "itens": [

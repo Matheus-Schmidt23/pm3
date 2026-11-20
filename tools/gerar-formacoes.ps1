@@ -102,6 +102,13 @@ foreach ($cf in $cfgs) {
     foreach ($m in $mods) { if ($m.aulas -match '(\d+) aulas \+ (\d+) aplica') { $aulasB += [int]$Matches[1]; $aplic += [int]$Matches[2]; [void]$m.topicos.Add("$($Matches[1]) aulas e $($Matches[2]) $(if ([int]$Matches[2] -gt 1) {'aplicações práticas'} else {'aplicação prática'})") } }
     $aulas = $aulasB
   }
+  # tópicos publicados no site atual (quando o plano de estudos não traz as aulas) substituem a lista do módulo
+  if ($cf.PSObject.Properties.Name -contains 'modTopicos') {
+    foreach ($m in $mods) {
+      $k = [string]$m.n
+      if ($cf.modTopicos.PSObject.Properties.Name -contains $k) { $m.topicos.Clear(); foreach ($t in $cf.modTopicos.$k) { [void]$m.topicos.Add($t) } }
+    }
+  }
 
   # ---------- montagem ----------
   $nome = $cf.nome; $nomeH = Esc $nome
