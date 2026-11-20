@@ -64,7 +64,7 @@
       ordem.map(a => `<button type="button" data-f="${a}">${nomeA(a)} <small>${SPRINTS.filter(s => s.area === a).length}</small></button>`).join('');
     $('#fx-grid').innerHTML = lista.map((s, i) => `<a class="f-card reveal${s.destaque ? ' feature' : ''}" data-a="${s.area}" data-d="${i % 4}" href="${s.url}">
       <div class="f-vis" style="background-image:url('assets/capas/sprints/${s.capa}.jpg')" aria-hidden="true"></div>
-      <div class="f-body"><div class="top"><span class="tag tag-area">${nomeA(s.area)}</span>${s.destaque ? '<span class="tag tag-yellow">' + s.destaque + '</span>' : ''}</div>
+      <div class="f-body"><div class="top"><span class="tag tag-area">${s.tag || nomeA(s.area)}</span>${s.destaque ? '<span class="tag tag-yellow">' + s.destaque + '</span>' : ''}</div>
         <h3>${s.nome}</h3><p>${s.obj}</p>
         <ul class="f-facts"><li>${ic.h}${s.h}h</li><li>${ic.cert}Certificado</li></ul>
         <div class="meta"><span>Ver sprint</span><span class="go">${ic.go}</span></div></div></a>`).join('') + membCard(' f-more-full');
@@ -162,7 +162,7 @@
     const ITENS = [
       ...FORMACOES.map(f => ({ tipo: 'formacao', nome: f.nome, area: f.area, h: f.h, mod: f.mod, txt: f.quem, url: f.url, dest: f.destaque, capa: `assets/capas/${f.capa}-800.jpg?v=3` })),
       ...POS.map(p => ({ tipo: 'pos', nome: p.nome, area: p.area, h: null, txt: p.obj, url: `https://postech.fiap.com.br/curso/${p.capa}`, capa: `assets/capas/pos-fiap/${p.capa}.webp` })),
-      ...SPRINTS.map(s => ({ tipo: 'sprint', nome: s.nome, area: s.area, h: s.h, txt: s.obj, url: s.url, dest: s.destaque || '', capa: `assets/capas/sprints/${s.capa}.jpg` })),
+      ...SPRINTS.map(s => ({ tipo: 'sprint', nome: s.nome, area: s.area, h: s.h, txt: s.obj, url: s.url, dest: s.destaque || '', tag: s.tag, capa: `assets/capas/sprints/${s.capa}.jpg` })),
     ];
     const TIPOS = { formacao: 'Formação', sprint: 'Sprint', pos: 'Pós Tech' };
     const DUR = { curta: ['Até 5 horas', h => h != null && h <= 5], media: ['De 6 a 15 horas', h => h > 5 && h <= 15], longa: ['Mais de 15 horas', h => h > 15] };
@@ -193,7 +193,7 @@
         ? `<li>${ic.cert}Pós-graduação reconhecida pelo MEC</li>`
         : (i.h ? `<li>${ic.h}${i.h}h</li>` : '') + (i.mod ? `<li>${ic.mod}${i.mod} módulos</li>` : '') + `<li>${ic.cert}Certificado</li>`;
       return `<a class="f-card c-${i.tipo}${i.dest === 'Comece aqui' ? ' feature' : ''}" href="${i.url}"${pos ? ' target="_blank" rel="noopener"' : ''}>${vis}
-        <div class="f-body"><div class="top"><span class="tag tag-tipo">${TIPOS[i.tipo]}</span><span class="tag tag-area">${AREAS[i.area].curto}</span></div>
+        <div class="f-body"><div class="top"><span class="tag tag-tipo">${TIPOS[i.tipo]}</span><span class="tag tag-area">${i.tag || AREAS[i.area].curto}</span></div>
         <h3>${i.nome}</h3><p>${i.txt}</p><ul class="f-facts">${facts}</ul>
         <div class="meta"><span>${VER[i.tipo]}</span><span class="go">${ic.go}</span></div></div></a>`;
     };

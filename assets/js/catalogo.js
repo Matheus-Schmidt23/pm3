@@ -93,6 +93,8 @@ window.PM3_CATALOGO = (function(){
   SPRINTS.forEach((s, i) => { s.capa = CAPAS[i]; });
   /* só a porta de entrada de produto leva o selo e o card em destaque */
   SPRINTS.forEach(s => { if (s.capa === 'fundamentos-gestao-produtos') s.destaque = 'Comece aqui'; });
+  /* os cursos de IA (RAG e Responsible AI) são a linha AI Skills: é o que aparece na tag do card */
+  SPRINTS.forEach(s => { if (s.area === 'ia') s.tag = 'AI Skills'; });
 
   return { AREAS, FORMACOES, SPRINTS };
 })();
