@@ -441,8 +441,12 @@ a.step:hover{transform:translateY(-4px)}
 .em-cases-logos li{background:#fff;display:flex;align-items:center;justify-content:center;height:96px;padding:0 14px}
 .em-cases-logos img{display:block;width:auto;max-width:100%;filter:grayscale(1);opacity:.7;transition:filter .3s,opacity .3s,transform .3s}
 .em-cases-logos li:hover img{filter:none;opacity:1;transform:scale(1.04)}
+/* faixa de cases em texto (formações sem logos dos cases): mesma grade, nome da empresa no lugar do logo */
+.em-cases-logos.em-cases-txt{grid-template-columns:repeat(var(--n,6),minmax(0,1fr))}
+.em-cases-txt li{font-family:var(--display);font-weight:700;font-size:clamp(14px,1.25vw,17px);letter-spacing:-.01em;color:#4a4458;text-align:center;line-height:1.2;transition:color .3s}
+.em-cases-txt li:hover{color:var(--purple-royal)}
 @media (max-width:1080px){ .em-cases-band{grid-template-columns:1fr} .em-cases-lb{max-width:none} }
-@media (max-width:640px){ .em-cases-logos{grid-template-columns:repeat(3,1fr)} .em-cases-logos li{height:78px} }#ementa .ementa-tot{background:none;border:0;border-radius:0;gap:0;margin:0 0 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (max-width:640px){ .em-cases-logos{grid-template-columns:repeat(3,1fr)} .em-cases-logos li{height:78px} .em-cases-logos.em-cases-txt{grid-template-columns:repeat(2,minmax(0,1fr))} }#ementa .ementa-tot{background:none;border:0;border-radius:0;gap:0;margin:0 0 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 #ementa .ementa-tot div{background:none;padding:16px 0}
 #ementa .ementa-tot div+div{padding-left:18px;border-left:1px solid var(--line)}
 #ementa .em-dl .row{margin-bottom:20px}
@@ -566,3 +570,6 @@ a.step:hover{transform:translateY(-4px)}
 /* revisão mobile: título do hero cabe na largura do celular (MANAGEMENT estourava a coluna) */
 @media (max-width:860px){ .c-hero-grid,.c-hero-grid > *{min-width:0} .c-hero-grid{grid-template-columns:minmax(0,1fr)} }
 @media (max-width:600px){ .c-hero h1{font-size:clamp(38px,12.6vw,52px)} .c-hero h1.h-sprint{font-size:clamp(32px,10.6vw,42px)} }
+
+/* faixa de cases: no celular e tablet, rótulo em cima e grade embaixo (a regra da linha ~480 redefinia as colunas e esmagava os logos) */
+@media (max-width:1080px){ .em-cases-band{grid-template-columns:1fr} }

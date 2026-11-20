@@ -1,0 +1,212 @@
+[
+{
+  "id": "product-discovery", "md": "cpd-product-discovery", "nome": "Product Discovery", "h1": "Product<br>Discovery",
+  "arquivo": "formacao-product-discovery.html", "canonical": "https://pm3.com.br/curso-product-discovery/", "capa": "product-discovery",
+  "area": "Gestão de produtos", "destaque": "",
+  "lead": "Valide hipóteses e reduza o risco de produto antes de construir: pesquisa, oportunidades, solução e teste, com IA em cada etapa do discovery.",
+  "desc": "Formação Product Discovery da PM3: 26 horas e 5 módulos de pesquisa, oportunidades, desenho e teste de soluções, com IA aplicada ao discovery. 12x R$ 274,92 ou incluída no Membership.",
+  "resumo": "Formação em product discovery: target customer, jobs-to-be-done, pesquisas qualitativas e quantitativas, usuários sintéticos, mapeamento e priorização de oportunidades, testes de usabilidade e continuous discovery, com IA aplicada.",
+  "quem": "Sim, se você quer validar hipóteses antes de construir, de PM júnior a quem lidera discovery no time. Ter contato com fundamentos de produto ajuda, mas não é obrigatório.",
+  "modDesc": {"3": "Transforme insights em oportunidades bem mapeadas, priorize o que tem mais valor e veja como Creditas e Tapps Games levaram isso para o dia a dia."},
+  "secao": {"tipo": "ia", "kicker": "IA na formação", "h2": "Discovery com IA,<br><span class=\"c2\">na prática</span>", "lead": "A IA entra onde o discovery acontece: para entender clientes, pesquisar, categorizar insights e documentar o que o time aprendeu.",
+    "itens": [
+      {"ic": "users", "t": "Target customer com IA", "p": "Explore e segmente clientes com Gemini, Google Planilhas e NotebookLM.", "m": "Módulo 1 · Discovery que dá retorno"},
+      {"ic": "spark", "t": "Usuários sintéticos", "p": "Crie usuários sintéticos do zero e saiba quando eles ajudam (e quando não).", "m": "Módulo 2 · Problemas e oportunidades"},
+      {"ic": "search", "t": "Deep research em discovery", "p": "Pesquise além do viés com IA e domine os prompts certos para cada etapa.", "m": "Módulo 2 · Problemas e oportunidades"},
+      {"ic": "flow", "t": "IA no fluxo de pesquisa", "p": "Um case real de pesquisa automatizada com IA e Zapier, do problema ao resultado.", "m": "Módulo 2 · Problemas e oportunidades"},
+      {"ic": "grid", "t": "Insights categorizados com IA", "p": "O case Involves compara a categorização manual com Miro AI e Gemini.", "m": "Módulo 3 · Oportunidades e soluções", "case": "Case Involves"},
+      {"ic": "tree", "t": "Árvore de oportunidades com IA", "p": "Documente aprendizados e evolua a árvore de oportunidades com apoio de IA.", "m": "Módulo 5 · Continuidade do processo"}
+    ]},
+  "cases": {"titulo": "Cases reais", "texto": "Você vai aprender com cases reais como:", "itens": ["Netflix", "Involves", "Creditas", "Tapps Games", "Admissão Digital"]},
+  "sprint": {"nome": "Técnicas de Pesquisa", "texto": "A sprint Técnicas de Pesquisa tem 11 horas e foca em métodos de pesquisa. A formação tem 26 horas e cobre o discovery inteiro: oportunidades, priorização, desenho e teste de soluções, e continuous discovery."}
+},
+{
+  "id": "product-leadership", "md": "cpl-product-leadership", "nome": "Product Leadership", "h1": "Product<br>Leadership",
+  "arquivo": "formacao-product-leadership.html", "canonical": "https://pm3.com.br/curso-product-leadership/", "capa": "product-leadership",
+  "area": "Liderança", "destaque": "",
+  "lead": "Para quem está assumindo a liderança de produto: visão e estratégia, gestão de pessoas, estrutura de times e portfólio, com finanças e cases de empresas brasileiras.",
+  "desc": "Formação Product Leadership da PM3: 29 horas e 5 módulos de liderança, visão e estratégia, gestão de pessoas, estrutura de times e portfólio. 12x R$ 274,92 ou incluída no Membership.",
+  "resumo": "Formação em liderança de produto: papel da liderança, finanças para líderes, visão e estratégia, gestão de pessoas, leveling, estrutura e governança de times e estratégia de portfólio.",
+  "quem": "Sim, se você é PM pleno ou sênior e está assumindo a gestão de um time, ou já lidera e quer chegar a Head ou Director com fundamentos sólidos.",
+  "modDesc": {},
+  "secao": {"tipo": "pratica", "kicker": "Na prática", "h2": "Liderança que<br><span class=\"c2\">sai do papel</span>", "lead": "Cada módulo traz ferramentas para o dia a dia de quem lidera produto, com cases de empresas brasileiras.",
+    "itens": [
+      {"ic": "dollar", "t": "Finanças para líderes de produto", "p": "Fale a língua do negócio e conecte as decisões de produto ao resultado financeiro.", "m": "Módulo 1 · Fundamentos da Liderança"},
+      {"ic": "search", "t": "Market research para decidir", "p": "Use pesquisa de mercado para sustentar a estratégia, com o case By Aliens.", "m": "Módulo 2 · Visão e Estratégia", "case": "Case By Aliens"},
+      {"ic": "rocket", "t": "Estratégia product-led", "p": "Como a RD Station desenhou a estratégia de aquisição guiada pelo produto.", "m": "Módulo 2 · Visão e Estratégia", "case": "Case RD Station"},
+      {"ic": "users", "t": "Product sense, leveling e ladder", "p": "Avalie, desenvolva e dê caminho de carreira para cada pessoa do time.", "m": "Módulo 3 · Gestão de Pessoas"},
+      {"ic": "layers", "t": "Estrutura de times e Product Ops", "p": "Organize times para os objetivos e escale a área com Product Operations.", "m": "Módulo 4 · Estrutura e Governança"},
+      {"ic": "globe", "t": "Portfólio e internacionalização", "p": "Construa a estratégia de portfólio de ponta a ponta e planeje a expansão.", "m": "Módulo 5 · Estratégia de Portfólio"}
+    ]},
+  "cases": {"titulo": "Cases reais", "texto": "Você vai aprender com cases reais como:", "itens": ["unico", "By Aliens", "RD Station"]},
+  "sprint": {"nome": "Liderança e trabalho em equipe", "texto": "As sprints de liderança têm de 2 a 5 horas e tratam de um tema por vez, como feedback ou delegação. A formação tem 29 horas e cobre a liderança de produto inteira: estratégia, pessoas, estrutura e portfólio."}
+},
+{
+  "id": "product-growth", "md": "cpg-product-growth", "nome": "Product Growth", "h1": "Product<br>Growth",
+  "arquivo": "formacao-product-growth.html", "canonical": "https://pm3.com.br/curso-product-growth/", "capa": "product-growth",
+  "area": "Marketing", "destaque": "",
+  "lead": "Domine as cinco alavancas de crescimento, de aquisição a monetização, e as práticas de priorização e experimentação dos melhores times de growth.",
+  "desc": "Formação Product Growth da PM3: 44 horas e 7 módulos de aquisição, ativação, retenção, recomendação e monetização. 12x R$ 274,92 ou incluída no Membership.",
+  "resumo": "Formação em product growth: product-led growth, métricas, aquisição, SEO e ASO, ativação, retenção, member get member, pricing e monetização, priorização e experimentação.",
+  "quem": "Sim, se você é PM ou atua com growth e quer dominar aquisição, ativação, retenção, recomendação e monetização. Ter fundamentos de produto ajuda.",
+  "modDesc": {"6": "Defina e avalie o modelo de negócio, entenda as dinâmicas de pricing e use upsell e cross-sell para crescer a receita."},
+  "secao": {"tipo": "pratica", "kicker": "Na prática", "h2": "As cinco alavancas<br><span class=\"c2\">do crescimento</span>", "lead": "Um case prático em quatro partes acompanha a formação, e cada alavanca vem com exemplos de empresas que cresceram com produto.",
+    "itens": [
+      {"ic": "target", "t": "Aquisição, SEO e ASO", "p": "Canais, viral loops e SEO e ASO tratados como produto, com o case RD Station.", "m": "Módulo 2 · Aquisição", "case": "Case RD Station"},
+      {"ic": "spark", "t": "Ativação e reativação", "p": "Gatilhos de ativação, ferramentas do dia a dia e como trazer usuários de volta.", "m": "Módulo 3 · Ativação"},
+      {"ic": "loop", "t": "Retenção com Customer Success", "p": "Réguas de relacionamento, onboarding e o case GetNinjas em duas partes.", "m": "Módulo 4 · Retenção", "case": "Case GetNinjas"},
+      {"ic": "users", "t": "Member Get Member", "p": "Loops de recomendação e NPS, com o case de MGM do Nubank.", "m": "Módulo 5 · Recomendação", "case": "Case Nubank"},
+      {"ic": "dollar", "t": "Pricing e monetização", "p": "Modelo de negócio, dinâmicas de preço, upsell e cross-sell.", "m": "Módulo 6 · Receita e Monetização"},
+      {"ic": "flask", "t": "Experimentos de growth", "p": "Priorize e rode experimentos, e use storytelling para conseguir buy-in.", "m": "Módulo 7 · Growth no dia a dia"}
+    ]},
+  "cases": {"titulo": "Cases reais", "texto": "Você vai aprender com cases reais como:", "itens": ["Nubank", "RD Station", "GetNinjas"]},
+  "sprint": {"nome": "Fundamentos de Product Growth", "texto": "A sprint Fundamentos de Product Growth tem 10 horas e apresenta product-led growth e retenção. A formação tem 44 horas e aprofunda as cinco alavancas, de aquisição a monetização, com experimentação e um case prático."}
+},
+{
+  "id": "product-marketing", "md": "cpmk-product-marketing", "nome": "Product Marketing", "h1": "Product<br>Marketing",
+  "arquivo": "formacao-product-marketing.html", "canonical": "https://pm3.com.br/curso-product-marketing/", "capa": "product-marketing",
+  "area": "Marketing", "destaque": "",
+  "lead": "Da inteligência de mercado ao go-to-market: posicionamento, pricing e lançamentos com quem fez product marketing em RD Station, Nubank, QuintoAndar e Atlassian.",
+  "desc": "Formação Product Marketing da PM3: 36 horas e 5 módulos de inteligência de mercado, posicionamento, pricing e go-to-market. 12x R$ 274,92 ou incluída no Membership.",
+  "resumo": "Formação em product marketing: fundamentos de PMM, pesquisa e inteligência de mercado, análise win/loss, posicionamento, naming, tom de voz, pricing e packaging, go-to-market e sales enablement.",
+  "quem": "Sim, se você vem de marketing e quer atuar na interface com produto, ou se é PM e precisa de mais profundidade em posicionamento e go-to-market.",
+  "modDesc": {"1": "O essencial do Product Marketing: o papel do PMM e a diferença para o PM, ciclo de vida do produto, modelos de negócio e OKRs da área."},
+  "secao": {"tipo": "pratica", "kicker": "Na prática", "h2": "Do mercado<br><span class=\"c2\">ao lançamento</span>", "lead": "Cases práticos fecham os módulos: você aplica cada etapa do product marketing em um produto, do estudo de mercado às métricas do lançamento.",
+    "itens": [
+      {"ic": "search", "t": "Inteligência de mercado", "p": "Público-alvo, análise competitiva, customer insights e análise win/loss.", "m": "Módulo 2 · Pesquisa e Inteligência", "case": "Case RD Station"},
+      {"ic": "target", "t": "Posicionamento na prática", "p": "Defina o posicionamento do produto, com naming e tom de voz.", "m": "Módulo 3 · Posicionamento"},
+      {"ic": "dollar", "t": "Pricing e packaging", "p": "Estratégias e táticas de preço, e como revisar e validar o seu.", "m": "Módulo 4 · Pricing e Packaging"},
+      {"ic": "rocket", "t": "Go-to-market e lançamentos", "p": "Tipos de lançamento, mensagem e a relação com o onboarding do usuário.", "m": "Módulo 5 · Go-to-market"},
+      {"ic": "chart", "t": "Métricas de GTM", "p": "Como medir um lançamento, com um case real da própria PM3.", "m": "Módulo 5 · Go-to-market", "case": "Case PM3"},
+      {"ic": "chat", "t": "Sales enablement", "p": "Prepare o time comercial para vender o produto que você posicionou.", "m": "Módulo 5 · Go-to-market"}
+    ]},
+  "cases": {"titulo": "Quem ensina", "texto": "Aprenda com quem fez product marketing em empresas como:", "itens": ["RD Station", "Nubank", "QuintoAndar", "Atlassian", "Loft", "Cortex"]},
+  "sprint": {"nome": "Fundamentos de Product Marketing", "texto": "A sprint Fundamentos de Product Marketing tem 7 horas e apresenta os pilares da área. A formação tem 36 horas e aprofunda inteligência de mercado, posicionamento, pricing e go-to-market, com cases práticos."}
+},
+{
+  "id": "product-analytics", "md": "cpa-product-analytics", "nome": "Product Analytics", "h1": "Product<br>Analytics",
+  "arquivo": "formacao-product-analytics.html", "canonical": "https://pm3.com.br/curso-product-analytics/", "capa": "product-analytics",
+  "area": "Dados", "destaque": "",
+  "lead": "Use dados com segurança no dia a dia de produto: escolha as métricas certas, rode experimentos e leve análises que convencem os stakeholders.",
+  "desc": "Formação Product Analytics da PM3: 21 horas e 6 módulos de métricas, visualização, testes A/B, SQL e análise de dados para decisões de produto. 12x R$ 274,92 ou incluída no Membership.",
+  "resumo": "Formação em product analytics: métricas de negócio, marketing, produto e UX, frameworks HEART e AARRR, tagueamento, data visualization, testes A/B, SQL e análises de cohort.",
+  "quem": "Sim, se você é PM ou profissional de produto e precisa usar dados com mais segurança: definir métricas, rodar experimentos e comunicar com stakeholders. Não há pré-requisito.",
+  "modDesc": {"5": "Entenda a estrutura dos dados, aprenda a pedir o que precisa para o time de dados e pratique SQL para tirar suas próprias respostas.", "6": "Análises de cohort e um caso guiado, do dado ao plano de ação que convence os stakeholders."},
+  "secao": {"tipo": "pratica", "kicker": "Na prática", "h2": "Uma atividade<br><span class=\"c2\">por módulo</span>", "lead": "Cada módulo termina com uma atividade aplicada ao seu produto. No fim, você tem métricas, dashboard, teste e plano de ação.",
+    "itens": [
+      {"ic": "target", "t": "Escolhendo suas métricas", "p": "Métricas de negócio, marketing, produto e UX, com os frameworks HEART e AARRR.", "m": "Módulo 1 · Aprofundando em Métricas", "case": "Case Techfit"},
+      {"ic": "flag", "t": "Traçando seus objetivos", "p": "Conecte as métricas do produto aos objetivos do negócio.", "m": "Módulo 2 · Métricas no dia a dia", "case": "Case Ume"},
+      {"ic": "chart", "t": "Dashboard de acompanhamento", "p": "Tagueamento, boas práticas de data viz e os vieses que distorcem a leitura.", "m": "Módulo 3 · Visualização de dados"},
+      {"ic": "flask", "t": "Desenhando um teste A/B", "p": "Planeje um experimento e conheça interleaving e multi-armed bandit.", "m": "Módulo 4 · Experimentação"},
+      {"ic": "code", "t": "SQL na prática", "p": "Estrutura de dados e consultas para responder às suas próprias perguntas.", "m": "Módulo 5 · Coleta e manipulação", "case": "Case Grupo Boticário"},
+      {"ic": "users", "t": "Conquistando os stakeholders", "p": "Análises de cohort e um plano de ação que leva a decisões melhores.", "m": "Módulo 6 · Decisões com dados"}
+    ]},
+  "cases": {"titulo": "Cases reais", "texto": "Você vai aprender com cases reais como:", "itens": ["Grupo Boticário", "Techfit", "Octadesk", "Ume", "Easy Taxi", "Intuit"]},
+  "sprint": {"nome": "Métricas de Negócios Digitais", "texto": "A sprint Métricas de Negócios Digitais tem 5 horas e foca na escolha de indicadores. A formação tem 21 horas e vai além: visualização, experimentação, SQL e análises para decidir, com uma atividade prática por módulo."}
+},
+{
+  "id": "analista-de-dados", "md": "ad-analista-de-dados", "nome": "Analista de Dados", "h1": "Analista<br>de Dados",
+  "arquivo": "formacao-analista-de-dados.html", "canonical": "https://pm3.com.br/curso-analista-dados/", "capa": "analista-de-dados",
+  "area": "Dados", "destaque": "",
+  "lead": "A formação mais completa da PM3 em dados: estatística, SQL, Python, Power BI e machine learning, aplicados a produto, marketing, finanças, operações e RH.",
+  "desc": "Formação Analista de Dados da PM3: 74 horas e 6 módulos de estatística, SQL, Python, Power BI, Looker Studio e machine learning. 12x R$ 274,92 ou incluída no Membership.",
+  "resumo": "Formação para analista de dados: dados na estratégia, arquitetura e governança, LGPD, estatística, teste A/B, regressão, SQL, Python, data mining, machine learning, storytelling, Looker Studio e Power BI.",
+  "quem": "Sim, se você vem de marketing, operações ou negócios e quer migrar para dados, ou se já é analista e quer estruturar a base técnica. Não há pré-requisito.",
+  "modDesc": {
+    "1": "Entenda como os dados impactam a estratégia, o ciclo de um projeto de dados, métricas e KPIs, e como criar uma cultura de dados.",
+    "2": "Estruturas e arquitetura de dados, LGPD e cibersegurança, governança e as ferramentas usadas por quem analisa dados.",
+    "3": "Os fundamentos de estatística para análise: amostragem, distribuições, testes de hipótese, teste A/B, regressão e raciocínio analítico.",
+    "4": "Prepare dados brutos e analise com SQL e Python, conheça data mining e dê os primeiros passos em machine learning.",
+    "5": "Transforme análises em histórias visuais e construa dashboards com Looker Studio e Power BI.",
+    "6": "Veja como os dados movem produto, marketing e vendas, finanças, cadeia de suprimentos e RH."
+  },
+  "secao": {"tipo": "pratica", "kicker": "Na prática", "h2": "Do dado bruto<br><span class=\"c2\">ao dashboard</span>", "lead": "Um desafio prático em quatro partes atravessa a formação, com as ferramentas que o mercado pede de quem trabalha com dados.",
+    "itens": [
+      {"ic": "flask", "t": "Estatística e teste A/B", "p": "Amostragem, intervalos de confiança, testes de hipótese e regressão.", "m": "Módulo 3 · Estatística"},
+      {"ic": "code", "t": "SQL e Python", "p": "Prepare, manipule e analise dados com as duas linguagens do dia a dia.", "m": "Módulo 4 · Preparação e Análise"},
+      {"ic": "spark", "t": "Data mining e machine learning", "p": "Modelos de análise e os primeiros passos em machine learning.", "m": "Módulo 4 · Preparação e Análise"},
+      {"ic": "chart", "t": "Dashboards no Power BI e Looker Studio", "p": "Construa painéis que respondem às perguntas certas.", "m": "Módulo 5 · Visualização de dados"},
+      {"ic": "chat", "t": "Storytelling com dados", "p": "Escolha o gráfico certo para o público e conte a história por trás do número.", "m": "Módulo 5 · Visualização de dados"},
+      {"ic": "grid", "t": "Dados em cada área", "p": "Produto, marketing e vendas, finanças, cadeia de suprimentos e RH.", "m": "Módulo 6 · Dados no negócio"}
+    ]},
+  "cases": {"titulo": "Ferramentas", "texto": "Você vai praticar com as ferramentas mais usadas por quem analisa dados:", "itens": ["SQL", "Python", "Power BI", "Looker Studio"]},
+  "sprint": {"nome": "Métodos de Análise de Dados", "texto": "As sprints de dados têm de 2 a 9 horas e tratam de uma ferramenta ou método por vez, como SQL ou Power BI. A formação tem 74 horas e forma a base completa de quem trabalha com dados, com um desafio prático em quatro partes."}
+},
+{
+  "id": "product-design", "md": "cpde-product-design", "nome": "Product Design", "h1": "Product<br>Design",
+  "arquivo": "formacao-product-design.html", "canonical": "https://pm3.com.br/curso-product-design/", "capa": "product-design",
+  "area": "Design", "destaque": "",
+  "lead": "Design com lugar à mesa: da estratégia e da pesquisa ao enquadramento de problemas, à interface e à validação, com cases de Nubank, iFood e Inter.",
+  "desc": "Formação Product Design da PM3: 79 horas e 6 módulos de design estratégico, pesquisa, problem framing, prototipação, testes e design de interfaces. 12x R$ 274,92 ou incluída no Membership.",
+  "resumo": "Formação em product design: design estratégico, métricas de design, user research, jornada do usuário, problem framing, ideação, arquitetura de informação, prototipação, acessibilidade, UX writing, testes, UI e design system.",
+  "quem": "Sim, se você é designer e quer se aproximar de produto e negócio, ou se é profissional de produto e precisa entender o processo de design da pesquisa à interface.",
+  "modDesc": {
+    "1": "Leve o design para a estratégia do negócio: ferramentas de estratégia, métricas de design, cultura de design e carreira.",
+    "2": "Metodologias, cerimônias e user research orientada a negócio, do planejamento à comunicação dos resultados.",
+    "3": "Mapeie a jornada do usuário, enquadre o problema certo, gere ideias e engaje stakeholders.",
+    "4": "Arquitetura de informação, prototipação e wireframing, acessibilidade, UX writing e o melhor das ferramentas.",
+    "5": "Design emocional, testes de usabilidade, experimentação, otimização de conversão e IA no processo de design.",
+    "6": "Estética e percepção de qualidade, responsividade, protótipos navegáveis, Gestalt e design system."
+  },
+  "secao": {"tipo": "pratica", "kicker": "Na prática", "h2": "Da estratégia<br><span class=\"c2\">à interface</span>", "lead": "Um desafio prático em quatro partes leva você da pesquisa à interface final, ao lado de cases de empresas que tratam design como estratégia.",
+    "itens": [
+      {"ic": "target", "t": "Design na estratégia do negócio", "p": "Métricas de design, cultura e como conquistar lugar à mesa.", "m": "Módulo 1 · Design Estratégico", "case": "Case iFood"},
+      {"ic": "search", "t": "Pesquisa orientada a negócio", "p": "O discovery da estratégia de member get member do Nubank, em detalhe.", "m": "Módulo 2 · Processos e pesquisa", "case": "Case Nubank"},
+      {"ic": "grid", "t": "Problem framing", "p": "Jornada do usuário, enquadramento do problema e técnicas de ideação.", "m": "Módulo 3 · Enquadramento"},
+      {"ic": "layers", "t": "Prototipação e acessibilidade", "p": "Arquitetura de informação, wireframes, acessibilidade e UX writing.", "m": "Módulo 4 · Solução e experiência"},
+      {"ic": "spark", "t": "IA no processo de design", "p": "Ferramentas de IA e ChatGPT aplicados às etapas do design.", "m": "Módulo 5 · Testes e validação"},
+      {"ic": "code", "t": "UI e design system", "p": "Protótipos navegáveis no Figma, responsividade e atomic design.", "m": "Módulo 6 · Design de interfaces"}
+    ]},
+  "cases": {"titulo": "Cases reais", "texto": "Você vai aprender com cases reais como:", "itens": ["Nubank", "iFood", "Inter", "TV 3.0"]},
+  "sprint": {"nome": "UI Design", "texto": "As sprints de design têm de 3 a 5 horas e tratam de um tema por vez, como UI ou design thinking. A formação tem 79 horas e cobre o processo inteiro, da estratégia à interface, com um desafio prático em quatro partes."}
+},
+{
+  "id": "ai-product-specialist", "md": "ais-ai-product-specialist", "nome": "AI Product Specialist", "h1": "AI Product<br>Specialist",
+  "arquivo": "formacao-ai-product-specialist.html", "canonical": "https://pm3.com.br/curso-ai-product-specialist/", "capa": "ai-product-specialist",
+  "area": "Inteligência artificial", "destaque": "",
+  "lead": "Leve IA para a estratégia do produto sem precisar ser engenheiro de ML: base técnica, prompting, RAG e agentes, governança, growth e monetização.",
+  "desc": "Formação AI Product Specialist da PM3: 40 horas e 5 módulos de IA aplicada a produto: LLMs, prompting, RAG, agentes, governança, growth e monetização. 12x R$ 274,92 ou incluída no Membership.",
+  "resumo": "Formação em gestão de produtos de IA: fundamentos de IA e LLMs, escolha de modelos, fine-tuning, prompt engineering, RAG, agentes, avaliação e observabilidade, governança, vieses, guardrails, estratégia, monetização e go-to-market de produtos de IA.",
+  "quem": "Sim, se você é de produto ou de uma área próxima e quer aplicar IA de forma estratégica, sem ser engenheiro de ML. Não há pré-requisito técnico; vivência em produto ajuda.",
+  "modDesc": {},
+  "secao": {"tipo": "ia", "kicker": "IA na formação", "h2": "Do prompt<br><span class=\"c2\">ao pricing</span>", "lead": "A formação inteira é sobre IA em produto: entender a tecnologia o bastante para decidir, construir features e levar produtos de IA ao mercado com segurança.",
+    "itens": [
+      {"ic": "layers", "t": "O LLM certo para o produto", "p": "Critérios para escolher modelos de texto, imagem, áudio e vídeo.", "m": "Módulo 2 · Base técnica"},
+      {"ic": "chat", "t": "Prompt engineering para PMs", "p": "Técnicas, gestão de prompts e testes automáticos, do discovery ao delivery.", "m": "Módulo 3 · IA no seu produto", "case": "Case DunderOps"},
+      {"ic": "graph", "t": "RAG no seu produto", "p": "Embeddings, pipeline completo e onde o RAG gera valor.", "m": "Módulo 3 · IA no seu produto"},
+      {"ic": "flow", "t": "Agentes e workflows", "p": "Componentes, abordagens e memória de agentes de IA.", "m": "Módulo 3 · IA no seu produto"},
+      {"ic": "shield", "t": "Guardrails e governança", "p": "Vieses, fairness, segurança e prompt injection na prática.", "m": "Módulo 4 · Confiabilidade e segurança", "case": "Case Spotify"},
+      {"ic": "dollar", "t": "Monetização e growth de IA", "p": "Modelos de monetização, pricing de GenAI e growth loops com IA.", "m": "Módulo 5 · Estratégia e liderança", "case": "Case Solinftec"}
+    ]},
+  "cases": {"titulo": "Cases reais", "texto": "Você vai aprender com cases reais como:", "itens": ["Spotify", "Itaú", "Solinftec", "DunderOps"]},
+  "sprint": {"nome": "RAG para produtos de IA", "texto": "As sprints de IA tratam de um tema por vez, como RAG ou Responsible AI. A formação tem 40 horas e cobre a gestão de produtos de IA inteira: base técnica, construção, governança, estratégia e monetização."}
+},
+{
+  "id": "ai-product-builder", "md": "ai-product-builder", "nome": "AI Product Builder", "h1": "AI Product<br>Builder",
+  "arquivo": "formacao-ai-product-builder.html", "canonical": "https://pm3.com.br/curso-de-ai-product-builder/", "capa": "ai-product-builder",
+  "area": "Inteligência artificial", "destaque": "Lançamento",
+  "lead": "Saia de usuário de IA para criador de produtos com IA: automações com n8n, agentes com Claude Code e aplicações completas com Lovable, do blueprint à operação.",
+  "desc": "Formação AI Product Builder da PM3: 6 módulos e 9 aplicações práticas para construir produtos com IA usando n8n, Claude Code e Lovable. 12x R$ 274,92 ou incluída no Membership.",
+  "resumo": "Formação prática em construção de produtos com IA: mentalidade builder, arquitetura de produtos de IA, automações e workflows com n8n, agentes com Claude Code, aplicações completas com Lovable, validação e operação.",
+  "quem": "Sim, se você quer construir automações, agentes e aplicações com IA de verdade, não só entender a tecnologia. Não há pré-requisito formal; conforto com ferramentas digitais ajuda.",
+  "modDesc": {
+    "1": "Saia do uso da IA para a criação de produtos: a mentalidade de quem constrói, com duas aplicações práticas.",
+    "2": "O blueprint por trás de um produto de IA: componentes, decisões de arquitetura e trade-offs, com duas aplicações práticas.",
+    "3": "Automações e workflows com IA no n8n, do fluxo simples ao processo de ponta a ponta.",
+    "4": "Construa agentes com Claude Code e aprenda a dar contexto e manter o controle sobre eles.",
+    "5": "Crie aplicações completas com IA e Lovable, da ideia ao produto funcionando.",
+    "6": "Valide e opere produtos com IA em produção, com responsabilidade, em duas aplicações práticas."
+  },
+  "secao": {"tipo": "ia", "kicker": "O que você constrói", "h2": "Mão na massa,<br><span class=\"c2\">do zero ao produto</span>", "lead": "São 9 aplicações práticas ao longo dos 6 módulos. Você termina com automações, agentes e uma aplicação construídos por você.",
+    "itens": [
+      {"ic": "spark", "t": "Mentalidade builder", "p": "De usuário de IA a criador de produtos, em duas aplicações práticas.", "m": "Módulo 1 · Mentalidade Builder"},
+      {"ic": "layers", "t": "Blueprint de produto de IA", "p": "A arquitetura por trás de tudo, em duas aplicações práticas.", "m": "Módulo 2 · Arquitetura"},
+      {"ic": "flow", "t": "Automações com n8n", "p": "Workflows com IA que rodam sozinhos.", "m": "Módulo 3 · Automações e workflows", "logo": "n8n"},
+      {"ic": "code", "t": "Agentes com Claude Code", "p": "Construção, contexto e controle de agentes.", "m": "Módulo 4 · Agentes"},
+      {"ic": "rocket", "t": "Aplicações com Lovable", "p": "Uma aplicação completa, da ideia ao produto no ar.", "m": "Módulo 5 · Aplicações completas", "logo": "lovable"},
+      {"ic": "shield", "t": "Validação e operação", "p": "Produtos de IA em produção, com responsabilidade.", "m": "Módulo 6 · Validação e operação"}
+    ]},
+  "cases": {"titulo": "Ferramentas", "texto": "Você vai construir com as ferramentas que os builders usam hoje:", "itens": ["n8n", "Claude Code", "Lovable"]},
+  "sprint": {"nome": "AI Product Specialist", "texto": "A AI Product Specialist é mais estratégica: decidir, priorizar e liderar iniciativas de IA. A AI Product Builder é mão na massa: construir automações, agentes e aplicações. As duas estão incluídas no Membership e se complementam."}
+}
+]

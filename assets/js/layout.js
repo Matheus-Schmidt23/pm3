@@ -3,19 +3,19 @@
 (function(){
   const PAGE = document.body.dataset.page || '';
   /* páginas já desenhadas no protótipo; as outras mostram um aviso */
-  const PRONTAS = ['membership.html','home.html','formacao-product-manager.html','pos-digital-product-management.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html','comunidade.html','panorama.html','sobre.html','instrutores.html','depoimentos.html','seja-instrutor.html','contato.html','404.html'];
+  const PRONTAS = ['membership.html','formacao-product-discovery.html','formacao-product-leadership.html','formacao-product-growth.html','formacao-product-marketing.html','formacao-product-analytics.html','formacao-analista-de-dados.html','formacao-product-design.html','formacao-ai-product-builder.html','formacao-ai-product-specialist.html','home.html','formacao-product-manager.html','pos-digital-product-management.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html','comunidade.html','panorama.html','sobre.html','instrutores.html','depoimentos.html','seja-instrutor.html','contato.html','404.html'];
 
   const FORMACOES = [
     ['Product Management','formacao-product-manager.html','Gestão de produtos'],
-    ['Product Discovery','#','Gestão de produtos'],
-    ['Product Leadership','#','Liderança'],
-    ['Product Growth','#','Marketing'],
-    ['Product Marketing','#','Marketing'],
-    ['Product Analytics','#','Dados'],
-    ['Analista de Dados','#','Dados'],
-    ['Product Design','#','Design'],
-    ['AI Product Builder','#','IA'],
-    ['AI Product Specialist','#','IA']
+    ['Product Discovery','formacao-product-discovery.html','Gestão de produtos'],
+    ['Product Leadership','formacao-product-leadership.html','Liderança'],
+    ['Product Growth','formacao-product-growth.html','Marketing'],
+    ['Product Marketing','formacao-product-marketing.html','Marketing'],
+    ['Product Analytics','formacao-product-analytics.html','Dados'],
+    ['Analista de Dados','formacao-analista-de-dados.html','Dados'],
+    ['Product Design','formacao-product-design.html','Design'],
+    ['AI Product Builder','formacao-ai-product-builder.html','IA'],
+    ['AI Product Specialist','formacao-ai-product-specialist.html','IA']
   ];
   const SPRINTS = [
     ['Gestão de produtos','sprints.html#gestao',6],
