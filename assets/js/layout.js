@@ -3,7 +3,7 @@
 (function(){
   const PAGE = document.body.dataset.page || '';
   /* páginas já desenhadas no protótipo; as outras mostram um aviso */
-  const PRONTAS = ['membership.html','formacao-product-discovery.html','formacao-product-leadership.html','formacao-product-growth.html','formacao-product-marketing.html','formacao-product-analytics.html','formacao-analista-de-dados.html','formacao-product-design.html','formacao-ai-product-builder.html','formacao-ai-product-specialist.html','home.html','formacao-product-manager.html','pos-digital-product-management.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html','comunidade.html','panorama.html','sobre.html','instrutores.html','depoimentos.html','seja-instrutor.html','contato.html','404.html'];
+  const PRONTAS = ['membership.html','pos-tech-management.html','pos-ia-para-negocios.html','formacao-product-discovery.html','formacao-product-leadership.html','formacao-product-growth.html','formacao-product-marketing.html','formacao-product-analytics.html','formacao-analista-de-dados.html','formacao-product-design.html','formacao-ai-product-builder.html','formacao-ai-product-specialist.html','home.html','formacao-product-manager.html','pos-digital-product-management.html','sprint-fundamentos-gestao-produtos.html','formacoes.html','sprints.html','cursos.html','pos-tech.html','para-empresas.html','blog.html','faq.html','comunidade.html','panorama.html','sobre.html','instrutores.html','depoimentos.html','seja-instrutor.html','contato.html','404.html'];
 
   const FORMACOES = [
     ['Product Management','formacao-product-manager.html','Gestão de produtos'],
@@ -29,8 +29,8 @@
 
   const POSTECH = [
     ['Digital Product Management','pos-digital-product-management.html','Produto'],
-    ['IA para Negócios','pos-tech.html#pos-ia','IA'],
-    ['Tech Management','pos-tech.html#pos-tech','Tecnologia']
+    ['IA para Negócios','pos-ia-para-negocios.html','IA'],
+    ['Tech Management','pos-tech-management.html','Tecnologia']
   ];
 
   const EVENTOS = [
@@ -101,7 +101,7 @@
         <div><h4>PM3</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="https://pm3.com.br/biblioteca/" target="_blank" rel="noopener">Biblioteca</a></li><li><a href="https://pm3.com.br/glossario/" target="_blank" rel="noopener">Glossário de produto</a></li><li><a href="panorama.html">Panorama 2026-2027</a></li><li><a href="sobre.html">Sobre a PM3</a></li><li><a href="instrutores.html">Instrutores</a></li><li><a href="depoimentos.html">Depoimentos</a></li><li><a href="seja-instrutor.html">Seja instrutor</a></li><li><a href="contato.html">Contato</a></li><li><a href="https://www.inhire.com.br/carreiras/pm3/" target="_blank" rel="noopener">Trabalhe conosco</a></li></ul></div>
         <div><h4>Formações</h4><ul>${FORMACOES.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join('')}</ul></div>
         <div><h4>Sprints</h4><ul>${SPRINTS.map(([n,h])=>`<li><a href="${h}">${n.replace(" e habilidades humanas","")}</a></li>`).join('')}</ul></div>
-        <div><h4>Pós Tech</h4><ul><li><a href="pos-tech.html">Conhecer a Pós Tech</a></li><li><a href="pos-digital-product-management.html">Digital Product Management</a></li><li><a href="pos-tech.html#pos-tech">Tech Management</a></li><li><a href="pos-tech.html#pos-ia">IA para Negócios</a></li><li><a href="https://alun.com.br/" target="_blank" rel="noopener">Grupo Alun</a></li></ul></div>
+        <div><h4>Pós Tech</h4><ul><li><a href="pos-tech.html">Conhecer a Pós Tech</a></li><li><a href="pos-digital-product-management.html">Digital Product Management</a></li><li><a href="pos-tech-management.html">Tech Management</a></li><li><a href="pos-ia-para-negocios.html">IA para Negócios</a></li><li><a href="https://alun.com.br/" target="_blank" rel="noopener">Grupo Alun</a></li></ul></div>
       </div>
     </div>
     <div class="wrap"><div class="foot-bottom"><span>© 2027 PM3. Todos os direitos reservados.</span><nav><a href="https://materias.pm3.com.br/hubfs/politica%20privacidade%20-%20Alun.pdf" target="_blank" rel="noopener">Política de privacidade</a><a href="https://pm3.com.br/termos-de-uso/" target="_blank" rel="noopener">Termos de uso</a><a href="https://www.contatoseguro.com.br/grupoalun" target="_blank" rel="noopener">Canal de ética</a><a href="#" data-consent-open>Preferências de cookies</a></nav></div></div>
