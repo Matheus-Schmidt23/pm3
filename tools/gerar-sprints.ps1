@@ -7,6 +7,7 @@ $ErrorActionPreference = 'Stop'
 $proto = Split-Path $PSScriptRoot -Parent
 $utf8 = New-Object System.Text.UTF8Encoding($false)
 Add-Type -AssemblyName PresentationCore, WindowsBase
+. (Join-Path $PSScriptRoot 'logos-cases.ps1')  # CaseItem: nome da empresa → logo
 
 function Esc([string]$s) { if ($null -eq $s) { return '' }; $s.Replace('&','&amp;').Replace('<','&lt;').Replace('>','&gt;').Replace('"','&quot;') }
 function JsEsc([string]$s) { $s.Replace('\','\\').Replace('"','\"') }
@@ -133,9 +134,9 @@ foreach ($sp in $SP) {
   if ($cases.Count) {
     $txt = if ($cases.Count -eq 1) { "Você vai aprender com o case aplicado de $($cases[0])." } else { 'Você vai aprender com cases aplicados de ' + (($cases[0..($cases.Count - 2)]) -join ', ') + ' e ' + $cases[-1] + '.' }
     $casesHtml = @"
-    <div class="em-cases-band reveal" data-nota="Cases usados nas aulas da sprint, os mesmos que a página atual mostra em 'Com cases de empresas'. Nomes em texto: os logos do site atual são brancos, feitos para fundo escuro.">
+    <div class="em-cases-band reveal" data-nota="Cases usados nas aulas da sprint, os mesmos que a página atual mostra em 'Com cases de empresas'. Logos em tools/logos-cases.json; os brancos do site atual aparecem em preto.">
       <div class="em-cases-lb"><h3>$(if ($cases.Count -eq 1) { 'Case real' } else { 'Cases reais' })</h3><p>$(Esc $txt)</p></div>
-      <ul class="em-cases-logos em-cases-txt" style="--n:$($cases.Count)">$(($cases | ForEach-Object { '<li>' + (Esc $_) + '</li>' }) -join '')</ul>
+      <ul class="em-cases-logos em-cases-txt" style="--n:$($cases.Count)">$(($cases | ForEach-Object { CaseItem $_ }) -join '')</ul>
     </div>
 "@
   }
@@ -159,8 +160,11 @@ foreach ($sp in $SP) {
       <p class="lead" style="margin-top:20px">Confira tudo que você vai dominar nesta sprint.</p>
       <div class="ementa-tot"><div><b>${h}h</b><span>de conteúdo</span></div><div><b>$nm</b><span>módulo$(if ($nm -ne 1) { 's' })</span></div><div><b>1</b><span>certificado</span></div></div>
       <div class="em-dl"><div class="row"><span class="pdf" aria-hidden="true">PDF</span><div><b>Quer ver mais?</b><div class="meta">Baixe a ementa completa. Preencha o formulário e faça o download da ementa da sprint.</div></div></div><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="lateral-ementa"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa</a></div>
+    </div>
+    <div class="em-main">
 $casesHtml    <div class="mcards" id="mods" data-nota="$(Esc $notaMods)">
 $($cards -join "`n")
+    </div>
     </div>
   </div>
 </section>

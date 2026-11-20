@@ -142,7 +142,9 @@ foreach ($cf in $cfgs) {
     $iaHtml += '      <article class="ia-item reveal" data-d="' + (($i - 1) % 3) + '"><div class="ia-top"><span class="ia-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' + $ICON[$it.ic] + '</svg></span><span class="ia-n">' + $pref + ' ' + $i.ToString('00') + '</span></div><div class="ia-txt"><h3>' + (Esc $it.t) + '</h3><p>' + (Esc $it.p) + '</p></div><div class="ia-foot">' + $foot + '</div></article>' + "`n"
   }
 
-  $casesHtml = ($cf.cases.itens | ForEach-Object { '<li>' + (Esc $_) + '</li>' }) -join ''
+  # logos dos cases: tools/logos-cases.ps1 (nome → logo; sem logo, texto)
+  if (-not (Get-Command CaseItem -ErrorAction SilentlyContinue)) { . (Join-Path $PSScriptRoot 'logos-cases.ps1') }
+  $casesHtml = ($cf.cases.itens | ForEach-Object { CaseItem $_ }) -join ''
 
   # instrutores da formação: CEO e co-founder primeiro, depois a ordem do cadastro
   $lista = @($INSTR | Where-Object { $_.cursos -match ("'" + [regex]::Escape($nome) + "'") })
@@ -194,7 +196,7 @@ foreach ($cf in $cfgs) {
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=32">
 <link rel="stylesheet" href="assets/css/components.css?v=9">
-<link rel="stylesheet" href="assets/css/course.css?v=27">
+<link rel="stylesheet" href="assets/css/course.css?v=29">
 <link rel="stylesheet" href="assets/css/ementa.css?v=2">
 <link rel="stylesheet" href="assets/css/certificado.css?v=14">
 <link rel="stylesheet" href="assets/css/instrutores.css?v=5">

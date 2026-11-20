@@ -573,3 +573,14 @@ a.step:hover{transform:translateY(-4px)}
 
 /* faixa de cases: no celular e tablet, rótulo em cima e grade embaixo (a regra da linha ~480 redefinia as colunas e esmagava os logos) */
 @media (max-width:1080px){ .em-cases-band{grid-template-columns:1fr} }
+
+/* sprints: coluna direita da ementa (cases + cards de módulos) */
+.em-main{display:flex;flex-direction:column;gap:clamp(20px,2.4vw,32px);min-width:0}
+.em-main .em-cases-band{margin:0}
+
+/* logos dos cases (tools/logos-cases.ps1): logo real; os brancos do site atual em preto; ferramentas com ícone + nome */
+.em-cases-logos li img{display:block;width:auto;max-width:100%;object-fit:contain}
+.em-cases-logos img.lg-dark{filter:brightness(0);opacity:.82}
+.em-cases-logos img.lg-sombra{filter:drop-shadow(0 0 1px rgba(0,0,0,.35))}
+.em-cases-logos li.lg-ic{display:flex;align-items:center;justify-content:center;gap:10px}
+.em-cases-logos li.lg-ic img{height:26px;width:26px}

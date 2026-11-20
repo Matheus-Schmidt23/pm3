@@ -1,0 +1,173 @@
+﻿{
+    "Netflix":  {
+                    "h":  22,
+                    "f":  "assets/logos/cases/netflix.svg"
+                },
+    "Involves":  {
+                     "h":  24,
+                     "f":  "assets/logos/involves.png"
+                 },
+    "Creditas":  {
+                     "h":  22,
+                     "f":  "assets/logos/creditas.svg"
+                 },
+    "unico":  {
+                  "h":  20,
+                  "f":  "assets/logos/unico.svg"
+              },
+    "By Aliens":  {
+                      "h":  36,
+                      "f":  "assets/logos/by-aliens.png"
+                  },
+    "RD Station":  {
+                       "h":  20,
+                       "f":  "assets/logos/cases/rd-station.png"
+                   },
+    "Nubank":  {
+                   "h":  26,
+                   "f":  "assets/logos/nubank.svg"
+               },
+    "GetNinjas":  {
+                      "dark":  true,
+                      "f":  "assets/logos/cases/getninjas.png",
+                      "h":  22
+                  },
+    "QuintoAndar":  {
+                        "h":  22,
+                        "f":  "assets/logos/cases/quintoandar.png"
+                    },
+    "Atlassian":  {
+                      "h":  18,
+                      "f":  "assets/logos/cases/atlassian.png"
+                  },
+    "Loft":  {
+                 "h":  26,
+                 "f":  "assets/logos/cases/loft.svg"
+             },
+    "Cortex":  {
+                   "h":  22,
+                   "f":  "assets/logos/cases/cortex.png"
+               },
+    "Grupo Boticário":  {
+                            "dark":  true,
+                            "f":  "assets/logos/cases/grupo-boticario.png",
+                            "h":  34
+                        },
+    "Octadesk":  {
+                     "h":  22,
+                     "f":  "assets/logos/cases/octadesk.png"
+                 },
+    "Ume":  {
+                "h":  36,
+                "f":  "assets/logos/cases/ume.png"
+            },
+    "Intuit":  {
+                   "dark":  true,
+                   "f":  "assets/logos/cases/intuit.svg",
+                   "h":  16
+               },
+    "iFood":  {
+                  "h":  28,
+                  "f":  "assets/logos/ifood.svg"
+              },
+    "Inter":  {
+                  "h":  24,
+                  "f":  "assets/logos/mentores/inter.svg"
+              },
+    "Spotify":  {
+                    "h":  26,
+                    "f":  "assets/logos/cases/spotify.png"
+                },
+    "Itaú":  {
+                 "h":  36,
+                 "f":  "assets/logos/itau.svg"
+             },
+    "Solinftec":  {
+                      "h":  26,
+                      "f":  "assets/logos/cases/solinftec.png"
+                  },
+    "n8n":  {
+                "h":  26,
+                "f":  "assets/logos/n8n.svg"
+            },
+    "Lovable":  {
+                    "h":  20,
+                    "f":  "assets/logos/lovable.svg"
+                },
+    "Python":  {
+                   "ic":  "assets/logos/cases/python.svg"
+               },
+    "Power BI":  {
+                     "ic":  "assets/logos/cases/power-bi.svg"
+                 },
+    "Claude Code":  {
+                        "ic":  "assets/logos/cases/claude.svg"
+                    },
+    "Livework":  {
+                     "dark":  true,
+                     "f":  "assets/logos/cases/livework.png",
+                     "h":  20
+                 },
+    "Dotz":  {
+                 "dark":  true,
+                 "f":  "assets/logos/cases/dotz.png",
+                 "h":  24
+             },
+    "PM3":  {
+                "h":  20,
+                "f":  "assets/logo/pm3-logo-preto.svg"
+            },
+    "Pipefy":  {
+                   "h":  24,
+                   "f":  "assets/logos/pipefy.svg"
+               },
+    "Favo":  {
+                 "sombra":  true,
+                 "f":  "assets/logos/cases/favo.png",
+                 "h":  36
+             },
+    "OLX":  {
+                "h":  30,
+                "f":  "assets/logos/cases/olx.svg"
+            },
+    "Catho":  {
+                  "dark":  true,
+                  "f":  "assets/logos/cases/catho.png",
+                  "h":  22
+              },
+    "TotalPass":  {
+                      "h":  22,
+                      "f":  "assets/logos/cases/totalpass.png"
+                  },
+    "Studocu":  {
+                    "dark":  true,
+                    "f":  "assets/logos/cases/studocu.png",
+                    "h":  22
+                },
+    "Gupy":  {
+                 "dark":  true,
+                 "f":  "assets/logos/cases/gupy.png",
+                 "h":  24
+             },
+    "Memed":  {
+                  "h":  20,
+                  "f":  "assets/logos/cases/memed.png"
+              },
+    "Seek":  {
+                 "dark":  true,
+                 "f":  "assets/logos/cases/seek.png",
+                 "h":  26
+             },
+    "Verios":  {
+                   "h":  24,
+                   "f":  "assets/logos/cases/verios.png"
+               },
+    "VTEX":  {
+                 "h":  24,
+                 "f":  "assets/logos/cases/vtex.png"
+             },
+    "Zé Delivery":  {
+                        "h":  40,
+                        "f":  "assets/logos/cases/ze-delivery.png"
+                    }
+}
