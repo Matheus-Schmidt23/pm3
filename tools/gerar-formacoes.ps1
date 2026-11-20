@@ -123,7 +123,9 @@ foreach ($cf in $cfgs) {
     elseif ($m.desc) { $d = $m.desc }
     $tit = ($m.t -replace '^M.dulo \d+\s*[:\-–]\s*', '')
     $lis = ($m.topicos | ForEach-Object { '<li>' + (Esc $_) + '</li>' }) -join ''
-    '      <div class="mod"><button type="button" aria-expanded="false"><span class="mn">' + $m.n.ToString('00') + '</span><span class="mt">' + (Esc $tit) + '</span><span class="pl" aria-hidden="true"></span></button>' + "`n" +
+    # o primeiro módulo carrega aberto para equilibrar a coluna da ementa com a lateral; os demais, fechados
+    $ab = [object]::ReferenceEquals($m, $mods[0])
+    '      <div class="mod' + $(if ($ab) { ' open' }) + '"><button type="button" aria-expanded="' + $(if ($ab) { 'true' } else { 'false' }) + '"><span class="mn">' + $m.n.ToString('00') + '</span><span class="mt">' + (Esc $tit) + '</span><span class="pl" aria-hidden="true"></span></button>' + "`n" +
     '        <div class="mod-body"><div><div class="in">' + $(if ($d) { '<p>' + (Esc $d) + '</p>' } else { '' }) + "`n" +
     '          <ul>' + $lis + '</ul></div></div></div></div>'
   }) -join "`n"
