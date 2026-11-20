@@ -91,6 +91,8 @@ window.PM3_CATALOGO = (function(){
   /* capa de cada sprint (assets/capas/sprints/), na mesma ordem da lista acima */
   const CAPAS = ['fundamentos-gestao-produtos','roadmap-priorizacao','tecnicas-pesquisa','tecnologia-pms','prd','product-ops-fundamentos','product-ops-avancado','metodos-analise-dados','power-bi','excel','metricas-negocios','python','visualizacao-dashboards','teste-ab','sql','lgpd','problem-solving','vieses-analises','design-thinking','design-servico','ui-design','go-to-market','product-growth','product-marketing','aquisicao','sales-enablement','okrs','metodologias-ageis','gestao-processos','educacao-corporativa','negociacao-lideres','comunicacao-assertiva','apresentacao-slides','diversidade-inclusao','trabalho-remoto','gestao-tempo','lideranca-equipe','saude-mental','delegacao','feedback','ie-lideres','ie-trabalho','oratoria','tecnicas-negociacao','rag-produtos-ia','responsible-ai'];
   SPRINTS.forEach((s, i) => { s.capa = CAPAS[i]; });
+  /* só a porta de entrada de produto leva o selo e o card em destaque */
+  SPRINTS.forEach(s => { if (s.capa === 'fundamentos-gestao-produtos') s.destaque = 'Comece aqui'; });
 
   return { AREAS, FORMACOES, SPRINTS };
 })();
