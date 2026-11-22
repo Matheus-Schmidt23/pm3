@@ -78,3 +78,5 @@ body .cat-dark :is(.chip[aria-pressed="true"],.fx-chips button.on) small{backgro
 
 /* catálogo de sprints: alvo dos links por vertical (sprints.html#dados), parando abaixo do menu fixo */
 #catalogo{scroll-margin-top:var(--nav-h)}
+/* revisão de responsividade: números dos stats não quebram ("+60 mil") em duas colunas no celular */
+@media (max-width:600px){ .stat .n{font-size:clamp(30px,10vw,44px);white-space:nowrap} }

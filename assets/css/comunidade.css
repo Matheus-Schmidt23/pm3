@@ -248,3 +248,6 @@
   .ev-facts > div + div{border-top:1px solid rgba(255,255,255,.12)}
   .ev-acc .trb-cta{min-width:0;justify-self:stretch}
 }
+/* revisão de responsividade: logo do mentor não passa da borda do card; no celular o passo ativo não desloca para fora da tela */
+.mt-logo{max-width:min(150px,100%)}
+@media (max-width:760px){ .jp-path button:hover,.jp-path button[aria-pressed="true"]{transform:none} }

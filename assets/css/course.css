@@ -179,7 +179,7 @@
   .subnav .mini{display:none}
 }
 @media (max-width:860px){
-  .c-hero-grid,.ementa-grid,.fit,.next,.cert,.inv,.faq-grid{grid-template-columns:1fr}
+  .c-hero-grid,.ementa-grid,.fit,.next,.cert,.inv,.faq-grid{grid-template-columns:minmax(0,1fr)}
   .ementa-aside{position:static}
   .mod-body .in{padding:0 0 26px 0}
   .mod-body ul{grid-template-columns:1fr}
@@ -422,7 +422,7 @@ a.step:hover{transform:translateY(-4px)}
 .ia-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 11px;border-radius:999px}
 .ia-tag svg{width:14px;height:14px;color:var(--yellow)}
 .ia-case{display:inline-flex;align-items:center}
-.ia-case img{display:block;width:auto;filter:brightness(0) invert(1);opacity:.85}
+.ia-case img{display:block;width:auto;filter:brightness(0) invert(1);opacity:.85;object-fit:contain;flex-shrink:0;max-width:none}
 .ia-case b{font-family:var(--display);font-size:12.5px;font-weight:700;color:rgba(255,255,255,.85)}
 /* ementa: tópicos em lista com check, sem caixas */
 .mod-body ul{gap:0 28px}
@@ -584,3 +584,5 @@ a.step:hover{transform:translateY(-4px)}
 .em-cases-logos img.lg-sombra{filter:drop-shadow(0 0 1px rgba(0,0,0,.35))}
 .em-cases-logos li.lg-ic{display:flex;align-items:center;justify-content:center;gap:10px}
 .em-cases-logos li.lg-ic img{height:26px;width:26px}
+/* revisão de responsividade: rodapé dos cases de IA quebra linha em vez de achatar o logo */
+.ia-foot{flex-wrap:wrap}

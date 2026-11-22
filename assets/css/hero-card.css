@@ -62,7 +62,7 @@
 @media (max-width:600px){
   .m-hero{padding:8px}
   .m-main{padding:26px 22px 28px;gap:28px}
-  .m-main h1{font-size:44px;margin:16px 0}
+  .m-main h1{font-size:min(44px,12.4vw);margin:16px 0}
   .m-buy{gap:16px}
   .m-buy .btns,.m-buy .btns .btn{width:100%}
 }

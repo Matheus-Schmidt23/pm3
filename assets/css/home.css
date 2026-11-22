@@ -72,7 +72,7 @@
 .t-member{grid-column:1/3;grid-row:1/3;background:var(--purple-deep);color:#fff;min-height:620px}
 .t-member::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(90% 70% at 100% 0%,rgba(176,77,221,.6),transparent 62%),radial-gradient(80% 60% at 0% 100%,rgba(77,43,159,.95),transparent 70%)}
 .t-member.grain::after{z-index:-1}
-.t-member h3{font-size:clamp(40px,5vw,76px)}
+.t-member h3{font-size:clamp(min(40px,11vw),5vw,76px)}
 .t-member p{color:var(--gray-fog);font-size:17px}
 .t-member .price{font-family:var(--display);line-height:1}
 .t-member .price small{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-fog);margin-bottom:10px}
@@ -386,6 +386,7 @@
 .stats .stat{border-left-color:rgba(255,255,255,.08)}
 /* legenda do hero: nome sempre em uma linha; o selo do logo encolhe para caber */
 .h-pic .tag{max-width:calc(100% - 236px)}
+@media (max-width:760px){ .h-pic .tag{max-width:calc(100% - 32px)} }
 .h-pic .tag .tg-t b{white-space:nowrap}
 .h-pic .tag .tg-co{min-width:0;padding:0 10px;height:34px}
 .h-pic .tag .tg-co img{max-width:84px;max-height:22px}
@@ -408,4 +409,4 @@
 /* card do Top 5 leva ao Panorama */
 .aw-list li a{display:block;min-width:0;color:inherit;text-decoration:none}
 /* revisão mobile: título do hero cabe em 320px */
-@media (max-width:600px){ .h-hero h1{font-size:clamp(40px,14.6vw,58px)} }
+@media (max-width:600px){ .h-hero h1{font-size:clamp(36px,calc(16.9vw - 14px),58px)} }

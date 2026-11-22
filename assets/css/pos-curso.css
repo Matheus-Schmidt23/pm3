@@ -331,3 +331,5 @@ body.pos-page{background:#000}
 /* revisão mobile: "MANAGEMENT" cabe no card em 320px */
 @media (max-width:860px){ .pc-card{grid-template-columns:minmax(0,1fr)} .pc-card > *{min-width:0} }
 @media (max-width:600px){ .pc-card h1{font-size:clamp(34px,11.4vw,46px)} }
+/* revisão de responsividade: em telas muito estreitas os cards de certificação ganham menos padding e o título quebra palavras longas */
+@media (max-width:380px){ .pcert li{padding:16px 14px 18px} .pcert h3{font-size:14.5px;hyphens:auto;overflow-wrap:break-word} }
