@@ -124,7 +124,10 @@ foreach ($sp in $SP) {
   $maior = ($nome -split ' ' | Measure-Object Length -Maximum).Maximum
   $escala = if ($maior -gt 12) { ' style="--s:' + ([Math]::Round(12 / $maior, 2)).ToString([Globalization.CultureInfo]::InvariantCulture) + '"' } else { '' }
   $t = Troca $t '<h1 class="display h-sprint" id="h1">Fundamentos<br>de Gestão<br>de Produtos</h1>' ('<h1 class="display h-sprint" id="h1"' + $escala + '>' + (Linhas $nome) + '</h1>')
-  $t = [regex]::Replace($t, '(<h1 class="display h-sprint" id="h1">.*?</h1>\s*<p class="lead">)[^<]*(</p>)', { param($m) $m.Groups[1].Value + (Esc $lead) + $m.Groups[2].Value }, 'Singleline')
+  # [^>]* porque o h1 pode levar style="--s:…" (nomes com palavra longa); sem isso o lead do modelo ficava nessas sprints
+  $antes = $t
+  $t = [regex]::Replace($t, '(<h1 class="display h-sprint" id="h1"[^>]*>.*?</h1>\s*<p class="lead">)[^<]*(</p>)', { param($m) $m.Groups[1].Value + (Esc $lead) + $m.Groups[2].Value }, 'Singleline')
+  if ($t -eq $antes -and $lead -notmatch '^Em 12 horas e 4 módulos') { throw "lead do hero não foi trocado: $nome" }
   $facts = "<div><b>${h}h</b><span>de conteúdo</span></div>`n          <div><b>$nm</b><span>módulo$(if ($nm -ne 1) { 's' })</span></div>`n          <div><b>1</b><span>certificado</span></div>"
   $t = Troca $t "<div><b>12h</b><span>de conteúdo</span></div>`n          <div><b>4</b><span>módulos</span></div>`n          <div><b>1</b><span>certificado</span></div>" $facts
 
