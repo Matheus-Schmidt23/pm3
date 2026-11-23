@@ -333,3 +333,12 @@ body.pos-page{background:#000}
 @media (max-width:600px){ .pc-card h1{font-size:clamp(34px,11.4vw,46px)} }
 /* revisão de responsividade: em telas muito estreitas os cards de certificação ganham menos padding e o título quebra palavras longas */
 @media (max-width:380px){ .pcert li{padding:16px 14px 18px} .pcert h3{font-size:14.5px;hyphens:auto;overflow-wrap:break-word} }
+/* disciplinas das fases sem linha incompleta: no computador (3 colunas) a grade vira 6 trilhas; sobrando 2, ficam meio a meio; sobrando 1, ocupa a linha toda.
+   No tablet (2 colunas), número ímpar: a última ocupa a linha toda. */
+@media (min-width:1081px){
+  .pos-mods .mod-body .in{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .pos-mods .mod-body .in > .disc.disc.disc{grid-column:span 2}
+  .pos-mods .mod-body .in > .disc.disc.disc:nth-child(3n+1):nth-last-child(2),.pos-mods .mod-body .in > .disc.disc.disc:nth-child(3n+2):last-child{grid-column:span 3}
+  .pos-mods .mod-body .in > .disc.disc.disc:nth-child(3n+1):last-child{grid-column:1/-1}
+}
+@media (max-width:1080px) and (min-width:701px){ .pos-mods .mod-body .in > .disc:last-child:nth-child(odd){grid-column:1/-1} }

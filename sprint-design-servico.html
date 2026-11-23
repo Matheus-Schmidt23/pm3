@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=33">
 <link rel="stylesheet" href="assets/css/components.css?v=9">
-<link rel="stylesheet" href="assets/css/course.css?v=29">
+<link rel="stylesheet" href="assets/css/course.css?v=30">
 <link rel="stylesheet" href="assets/css/ementa.css?v=2">
 <link rel="stylesheet" href="assets/css/certificado.css?v=14">
 <link rel="stylesheet" href="assets/css/instrutores.css?v=5">
@@ -110,23 +110,27 @@
       <div class="ementa-tot"><div><b>5h</b><span>de conteúdo</span></div><div><b>4</b><span>módulos</span></div><div><b>1</b><span>certificado</span></div></div>
       <div class="em-dl"><div class="row"><span class="pdf" aria-hidden="true">PDF</span><div><b>Quer ver mais?</b><div class="meta">Baixe a ementa completa. Preencha o formulário e faça o download da ementa da sprint.</div></div></div><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="lateral-ementa"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa</a></div>
     </div>
-    <div class="em-main">
+    <div class="mods" id="mods" data-nota="Sprint com 4 módulos, no mesmo padrão de ementa da formação: blocos recolhíveis, só o primeiro aberto. Títulos, descrições e tópicos da página atual da sprint.">
+      <div class="mod open"><button type="button" aria-expanded="true"><span class="mn">01</span><span class="mt">Entendendo serviço e design</span><span class="pl" aria-hidden="true"></span></button>
+        <div class="mod-body"><div><div class="in"><p>No primeiro módulo, você vai entender o que é Design de Serviço e os princípios para aplicar esse conhecimento em seu contexto.</p>
+          <ul><li>Diferenças entre produto e serviço</li><li>Frameworks do design de serviço</li><li>Design de serviço na prática</li></ul></div></div></div></div>
+      <div class="mod"><button type="button" aria-expanded="false"><span class="mn">02</span><span class="mt">Imergindo no contexto do serviço</span><span class="pl" aria-hidden="true"></span></button>
+        <div class="mod-body"><div><div class="in"><p>Seguindo sua jornada, você irá mergulhar no contexto de serviço usando a pesquisa como ferramenta e será conduzido na compreensão de como obter insights valiosos sobre a perspectiva do usuário, identificar tendências do mercado e alinhar o serviço à estratégia do negócio.</p>
+          <ul><li>Design de serviço na prática: começando um projeto</li><li>Quais são as tendências de mercado e comportamento?</li><li>Como é o serviço do ponto de vista de quem usa?</li><li>Entregáveis desta etapa</li></ul></div></div></div></div>
+      <div class="mod"><button type="button" aria-expanded="false"><span class="mn">03</span><span class="mt">Transformando a pesquisa em insights e oportunidades</span><span class="pl" aria-hidden="true"></span></button>
+        <div class="mod-body"><div><div class="in"><p>Nesta etapa, você já será capaz de criar um mapa que detalha as etapas e pontos de contato ao longo da jornada do usuário em relação ao serviço.</p>
+          <ul><li>Como fazer análise e síntese e encontrar padrões Como construir um mapa de ecossistema</li></ul></div></div></div></div>
+      <div class="mod"><button type="button" aria-expanded="false"><span class="mn">04</span><span class="mt">Projetando o serviço ideal</span><span class="pl" aria-hidden="true"></span></button>
+        <div class="mod-body"><div><div class="in"><p>Ao fim do curso, você estará preparado para desenvolver soluções de serviços que sejam sólidas e criativas, além de conseguir testá-las de maneira eficaz.</p>
+          <ul><li>Como desenhar a solução?</li><li>Como testar um serviço?</li><li>Blueprint</li><li>Como é e quem faz a gestão do serviço?</li></ul></div></div></div></div>
+    </div>
+  </div>
+  <div class="wrap">
     <div class="em-cases-band reveal" data-nota="Cases usados nas aulas da sprint, os mesmos que a página atual mostra em 'Com cases de empresas'. Logos em tools/logos-cases.json; os brancos do site atual aparecem em preto.">
       <div class="em-cases-lb"><h3>Cases reais</h3><p>Você vai aprender com cases aplicados de Livework e Dotz.</p></div>
       <ul class="em-cases-logos em-cases-txt" style="--n:2"><li><img src="assets/logos/cases/livework.png" alt="Livework" class="lg-dark" style="height:20px" loading="lazy"></li><li><img src="assets/logos/cases/dotz.png" alt="Dotz" class="lg-dark" style="height:24px" loading="lazy"></li></ul>
-    </div>    <div class="mcards" id="mods" data-nota="Sprint com 4 módulos, abertos em cards com os tópicos à vista. Títulos, descrições e tópicos da página atual da sprint.">
-      <article class="mcard reveal"><div class="mc-top"><span class="mc-n">01</span><span class="mc-lb">Módulo 1</span></div><h3>Entendendo serviço e design</h3><p>No primeiro módulo, você vai entender o que é Design de Serviço e os princípios para aplicar esse conhecimento em seu contexto.</p>
-        <ul><li>Diferenças entre produto e serviço</li><li>Frameworks do design de serviço</li><li>Design de serviço na prática</li></ul></article>
-      <article class="mcard reveal" data-d="1"><div class="mc-top"><span class="mc-n">02</span><span class="mc-lb">Módulo 2</span></div><h3>Imergindo no contexto do serviço</h3><p>Seguindo sua jornada, você irá mergulhar no contexto de serviço usando a pesquisa como ferramenta e será conduzido na compreensão de como obter insights valiosos sobre a perspectiva do usuário, identificar tendências do mercado e alinhar o serviço à estratégia do negócio.</p>
-        <ul><li>Design de serviço na prática: começando um projeto</li><li>Quais são as tendências de mercado e comportamento?</li><li>Como é o serviço do ponto de vista de quem usa?</li><li>Entregáveis desta etapa</li></ul></article>
-      <article class="mcard reveal"><div class="mc-top"><span class="mc-n">03</span><span class="mc-lb">Módulo 3</span></div><h3>Transformando a pesquisa em insights e oportunidades</h3><p>Nesta etapa, você já será capaz de criar um mapa que detalha as etapas e pontos de contato ao longo da jornada do usuário em relação ao serviço.</p>
-        <ul><li>Como fazer análise e síntese e encontrar padrões Como construir um mapa de ecossistema</li></ul></article>
-      <article class="mcard reveal" data-d="1"><div class="mc-top"><span class="mc-n">04</span><span class="mc-lb">Módulo 4</span></div><h3>Projetando o serviço ideal</h3><p>Ao fim do curso, você estará preparado para desenvolver soluções de serviços que sejam sólidas e criativas, além de conseguir testá-las de maneira eficaz.</p>
-        <ul><li>Como desenhar a solução?</li><li>Como testar um serviço?</li><li>Blueprint</li><li>Como é e quem faz a gestão do serviço?</li></ul></article>
     </div>
-    </div>
-  </div>
-</section>
+  </div></section>
 
 <!-- 4 · COMO ACESSAR (planos.css, o mesmo componente da formação) -->
 <section class="section inv-tint" id="investimento" aria-labelledby="iv-t">
@@ -186,7 +190,7 @@
     <div class="wrap">
       <div class="cx-copy">
         <p class="kicker"><span class="n">04</span> Certificado</p>
-        <h2 class="h2" id="ce-t">Certificado<br><span class="c2">reconhecido<br>pelo mercado<br>de produto.</span></h2>
+        <h2 class="h2" id="ce-t">Certificados<br><span class="c2">reconhecidos<br>pelo mercado<br>de produto.</span></h2>
         <p class="lead">Ao concluir as 5 horas, você recebe o certificado PM3 Sprints de Design de Serviço, com o nome do curso e a carga horária, pronto para o LinkedIn e o currículo.</p>
         <ul class="cx-proof">
           <li><span class="cx-aw"><svg class="lr" viewBox="0 0 120 48" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M30 44C14 38 9 22 15 6"/><path d="M90 44c16-6 21-22 15-38"/></g><g fill="currentColor"><ellipse cx="14" cy="11" rx="2.4" ry="4.6" transform="rotate(-15 14 11)"/><ellipse cx="11.5" cy="20" rx="2.4" ry="4.6" transform="rotate(-38 11.5 20)"/><ellipse cx="13" cy="29" rx="2.4" ry="4.6" transform="rotate(-58 13 29)"/><ellipse cx="19" cy="37" rx="2.4" ry="4.6" transform="rotate(-75 19 37)"/><ellipse cx="106" cy="11" rx="2.4" ry="4.6" transform="rotate(15 106 11)"/><ellipse cx="108.5" cy="20" rx="2.4" ry="4.6" transform="rotate(38 108.5 20)"/><ellipse cx="107" cy="29" rx="2.4" ry="4.6" transform="rotate(58 107 29)"/><ellipse cx="101" cy="37" rx="2.4" ry="4.6" transform="rotate(75 101 37)"/></g></svg><b>Top 5</b></span><span class="cx-lb">Empresas mais admiradas em Produto no Brasil</span></li>

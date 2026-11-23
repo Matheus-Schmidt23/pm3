@@ -136,23 +136,28 @@ foreach ($sp in $SP) {
   $casesHtml = ''
   if ($cases.Count) {
     $txt = if ($cases.Count -eq 1) { "Você vai aprender com o case aplicado de $($cases[0])." } else { 'Você vai aprender com cases aplicados de ' + (($cases[0..($cases.Count - 2)]) -join ', ') + ' e ' + $cases[-1] + '.' }
+    # mesmo padrão da formação: faixa de cases embaixo da ementa, na largura toda; a grade tem uma coluna por logo (nunca sobra célula vazia)
+    $clsN = if ($cases.Count -eq 1) { ' em-cases-1' } else { '' }
     $casesHtml = @"
-    <div class="em-cases-band reveal" data-nota="Cases usados nas aulas da sprint, os mesmos que a página atual mostra em 'Com cases de empresas'. Logos em tools/logos-cases.json; os brancos do site atual aparecem em preto.">
+  <div class="wrap">
+    <div class="em-cases-band$clsN reveal" data-nota="Cases usados nas aulas da sprint, os mesmos que a página atual mostra em 'Com cases de empresas'. Logos em tools/logos-cases.json; os brancos do site atual aparecem em preto.">
       <div class="em-cases-lb"><h3>$(if ($cases.Count -eq 1) { 'Case real' } else { 'Cases reais' })</h3><p>$(Esc $txt)</p></div>
       <ul class="em-cases-logos em-cases-txt" style="--n:$($cases.Count)">$(($cases | ForEach-Object { CaseItem $_ }) -join '')</ul>
     </div>
+  </div>
 "@
   }
+  # padrão aprovado de ementa (igual à formação): sanfona com só o primeiro módulo aberto
   $cards = for ($i = 0; $i -lt $nm; $i++) {
     $m = $mods[$i]
     $desc = ([string]$m.descricao) -replace '\s*(Neste|Nesse|No)\s[^.]*?(vai|você vai|vamos)\s+(aprender|ver|abordar)[^.]*:\s*$','' -replace '\s*(Você|Voce) vai aprender:\s*$','' -replace '\s*(Em seguida|Para finalizar)[^.]*:\s*$',''
     $tops = @($m.topicos | Where-Object { $_ })
-    $ul = if ($tops.Count) { "`n        <ul>" + (($tops | ForEach-Object { '<li>' + (Esc $_) + '</li>' }) -join '') + '</ul>' } else { '' }
-    $dd = if ($i % 2) { ' data-d="1"' } else { '' }
-    "      <article class=`"mcard reveal`"$dd><div class=`"mc-top`"><span class=`"mc-n`">$('{0:D2}' -f ($i + 1))</span><span class=`"mc-lb`">Módulo $($i + 1)</span></div><h3>$(Esc $m.titulo)</h3>$(if ($desc) { '<p>' + (Esc $desc) + '</p>' })$ul</article>"
+    $ul = if ($tops.Count) { "`n          <ul>" + (($tops | ForEach-Object { '<li>' + (Esc $_) + '</li>' }) -join '') + '</ul>' } else { '' }
+    $ab = $i -eq 0
+    "      <div class=`"mod$(if ($ab) { ' open' })`"><button type=`"button`" aria-expanded=`"$(if ($ab) { 'true' } else { 'false' })`"><span class=`"mn`">$('{0:D2}' -f ($i + 1))</span><span class=`"mt`">$(Esc $m.titulo)</span><span class=`"pl`" aria-hidden=`"true`"></span></button>`n        <div class=`"mod-body`"><div><div class=`"in`">$(if ($desc) { '<p>' + (Esc $desc) + '</p>' })$ul</div></div></div></div>"
   }
   $semTop = @($mods | Where-Object { -not @($_.topicos).Count }).Count
-  $notaMods = "Sprint com $nm módulo$(if ($nm -ne 1) { 's' }), abertos em cards com os tópicos à vista. Títulos, descrições e tópicos da página atual da sprint." + $(if ($semTop) { " $semTop módulo(s) sem lista de tópicos no site atual: o card mostra só a descrição." } else { '' })
+  $notaMods = "Sprint com $nm módulo$(if ($nm -ne 1) { 's' }), no mesmo padrão de ementa da formação: blocos recolhíveis, só o primeiro aberto. Títulos, descrições e tópicos da página atual da sprint." + $(if ($semTop) { " $semTop módulo(s) sem lista de tópicos no site atual: o bloco mostra só a descrição." } else { '' })
   $ementa = @"
 <!-- 3 · EMENTA -->
 <section class="section white" id="ementa" aria-labelledby="em-t">
@@ -164,13 +169,11 @@ foreach ($sp in $SP) {
       <div class="ementa-tot"><div><b>${h}h</b><span>de conteúdo</span></div><div><b>$nm</b><span>módulo$(if ($nm -ne 1) { 's' })</span></div><div><b>1</b><span>certificado</span></div></div>
       <div class="em-dl"><div class="row"><span class="pdf" aria-hidden="true">PDF</span><div><b>Quer ver mais?</b><div class="meta">Baixe a ementa completa. Preencha o formulário e faça o download da ementa da sprint.</div></div></div><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="lateral-ementa"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa</a></div>
     </div>
-    <div class="em-main">
-$casesHtml    <div class="mcards" id="mods" data-nota="$(Esc $notaMods)">
+    <div class="mods" id="mods" data-nota="$(Esc $notaMods)">
 $($cards -join "`n")
     </div>
-    </div>
   </div>
-</section>
+$casesHtml</section>
 
 
 "@

@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=33">
 <link rel="stylesheet" href="assets/css/components.css?v=9">
-<link rel="stylesheet" href="assets/css/course.css?v=29">
+<link rel="stylesheet" href="assets/css/course.css?v=30">
 <link rel="stylesheet" href="assets/css/ementa.css?v=2">
 <link rel="stylesheet" href="assets/css/certificado.css?v=14">
 <link rel="stylesheet" href="assets/css/instrutores.css?v=5">
@@ -110,23 +110,27 @@
       <div class="ementa-tot"><div><b>11h</b><span>de conteúdo</span></div><div><b>4</b><span>módulos</span></div><div><b>1</b><span>certificado</span></div></div>
       <div class="em-dl"><div class="row"><span class="pdf" aria-hidden="true">PDF</span><div><b>Quer ver mais?</b><div class="meta">Baixe a ementa completa. Preencha o formulário e faça o download da ementa da sprint.</div></div></div><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="lateral-ementa"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa</a></div>
     </div>
-    <div class="em-main">
+    <div class="mods" id="mods" data-nota="Sprint com 4 módulos, no mesmo padrão de ementa da formação: blocos recolhíveis, só o primeiro aberto. Títulos, descrições e tópicos da página atual da sprint.">
+      <div class="mod open"><button type="button" aria-expanded="true"><span class="mn">01</span><span class="mt">Discovery com Job-to-be-done na prática</span><span class="pl" aria-hidden="true"></span></button>
+        <div class="mod-body"><div><div class="in"><p>Entenda, a partir de um case real, como utilizar a metodologia do Job-to-be-done para descobrir as reais necessidades dos usuários e priorizar oportunidades.</p>
+          <ul><li>O que é Jobs-to-be-done (JTBD) e como surgiu</li><li>Quando usar JTBD</li><li>Como realizar um processo de discovery profundo com JTBD</li></ul></div></div></div></div>
+      <div class="mod"><button type="button" aria-expanded="false"><span class="mn">02</span><span class="mt">Aplicando as principais técnicas de pesquisa</span><span class="pl" aria-hidden="true"></span></button>
+        <div class="mod-body"><div><div class="in"><p>Conheça as técnicas de pesquisa mais utilizadas e aprenda a aplicar cada uma delas de forma correta.</p>
+          <ul><li>Design Thinking</li><li>Pesquisa qualitativa: tipos, quando e como usar</li><li>Pesquisa quantitativa: tipos, quando e como usar</li><li>Benchmark, Desk Research, Análise de Mercado, e outras técnicas de discovery</li></ul></div></div></div></div>
+      <div class="mod"><button type="button" aria-expanded="false"><span class="mn">03</span><span class="mt">Boas práticas na construção de roteiros</span><span class="pl" aria-hidden="true"></span></button>
+        <div class="mod-body"><div><div class="in"><p>Neste módulo você vai aprender o passo a passo e as melhores práticas para elaborar o roteiro da sua pesquisa.</p>
+          <ul><li>Como construir um roteiro de pesquisa</li><li>Quais perguntas fazer e quais não fazer</li><li>Viéses e armadilhas</li></ul></div></div></div></div>
+      <div class="mod"><button type="button" aria-expanded="false"><span class="mn">04</span><span class="mt">Recrutando os usuários certos</span><span class="pl" aria-hidden="true"></span></button>
+        <div class="mod-body"><div><div class="in"><p>Aprenda a identificar e segmentar os usuários da sua pesquisa, economizando tempo e tornando seu processo de recrutamento mais eficiente.</p>
+          <ul><li>Como definir o público-alvo</li><li>Como fazer o recrutamento</li><li>LGPD (Lei Geral de Proteção dos Dados) e melhores práticas</li></ul></div></div></div></div>
+    </div>
+  </div>
+  <div class="wrap">
     <div class="em-cases-band reveal" data-nota="Cases usados nas aulas da sprint, os mesmos que a página atual mostra em 'Com cases de empresas'. Logos em tools/logos-cases.json; os brancos do site atual aparecem em preto.">
       <div class="em-cases-lb"><h3>Cases reais</h3><p>Você vai aprender com cases aplicados de iFood, RD Station, Memed e Seek.</p></div>
       <ul class="em-cases-logos em-cases-txt" style="--n:4"><li><img src="assets/logos/ifood.svg" alt="iFood" style="height:28px" loading="lazy"></li><li><img src="assets/logos/cases/rd-station.png" alt="RD Station" style="height:20px" loading="lazy"></li><li><img src="assets/logos/cases/memed.png" alt="Memed" style="height:20px" loading="lazy"></li><li><img src="assets/logos/cases/seek.png" alt="Seek" class="lg-dark" style="height:26px" loading="lazy"></li></ul>
-    </div>    <div class="mcards" id="mods" data-nota="Sprint com 4 módulos, abertos em cards com os tópicos à vista. Títulos, descrições e tópicos da página atual da sprint.">
-      <article class="mcard reveal"><div class="mc-top"><span class="mc-n">01</span><span class="mc-lb">Módulo 1</span></div><h3>Discovery com Job-to-be-done na prática</h3><p>Entenda, a partir de um case real, como utilizar a metodologia do Job-to-be-done para descobrir as reais necessidades dos usuários e priorizar oportunidades.</p>
-        <ul><li>O que é Jobs-to-be-done (JTBD) e como surgiu</li><li>Quando usar JTBD</li><li>Como realizar um processo de discovery profundo com JTBD</li></ul></article>
-      <article class="mcard reveal" data-d="1"><div class="mc-top"><span class="mc-n">02</span><span class="mc-lb">Módulo 2</span></div><h3>Aplicando as principais técnicas de pesquisa</h3><p>Conheça as técnicas de pesquisa mais utilizadas e aprenda a aplicar cada uma delas de forma correta.</p>
-        <ul><li>Design Thinking</li><li>Pesquisa qualitativa: tipos, quando e como usar</li><li>Pesquisa quantitativa: tipos, quando e como usar</li><li>Benchmark, Desk Research, Análise de Mercado, e outras técnicas de discovery</li></ul></article>
-      <article class="mcard reveal"><div class="mc-top"><span class="mc-n">03</span><span class="mc-lb">Módulo 3</span></div><h3>Boas práticas na construção de roteiros</h3><p>Neste módulo você vai aprender o passo a passo e as melhores práticas para elaborar o roteiro da sua pesquisa.</p>
-        <ul><li>Como construir um roteiro de pesquisa</li><li>Quais perguntas fazer e quais não fazer</li><li>Viéses e armadilhas</li></ul></article>
-      <article class="mcard reveal" data-d="1"><div class="mc-top"><span class="mc-n">04</span><span class="mc-lb">Módulo 4</span></div><h3>Recrutando os usuários certos</h3><p>Aprenda a identificar e segmentar os usuários da sua pesquisa, economizando tempo e tornando seu processo de recrutamento mais eficiente.</p>
-        <ul><li>Como definir o público-alvo</li><li>Como fazer o recrutamento</li><li>LGPD (Lei Geral de Proteção dos Dados) e melhores práticas</li></ul></article>
     </div>
-    </div>
-  </div>
-</section>
+  </div></section>
 
 <!-- 4 · COMO ACESSAR (planos.css, o mesmo componente da formação) -->
 <section class="section inv-tint" id="investimento" aria-labelledby="iv-t">
@@ -190,7 +194,7 @@
     <div class="wrap">
       <div class="cx-copy">
         <p class="kicker"><span class="n">04</span> Certificado</p>
-        <h2 class="h2" id="ce-t">Certificado<br><span class="c2">reconhecido<br>pelo mercado<br>de produto.</span></h2>
+        <h2 class="h2" id="ce-t">Certificados<br><span class="c2">reconhecidos<br>pelo mercado<br>de produto.</span></h2>
         <p class="lead">Ao concluir as 11 horas, você recebe o certificado PM3 Sprints de Técnicas de Pesquisa, com o nome do curso e a carga horária, pronto para o LinkedIn e o currículo.</p>
         <ul class="cx-proof">
           <li><span class="cx-aw"><svg class="lr" viewBox="0 0 120 48" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M30 44C14 38 9 22 15 6"/><path d="M90 44c16-6 21-22 15-38"/></g><g fill="currentColor"><ellipse cx="14" cy="11" rx="2.4" ry="4.6" transform="rotate(-15 14 11)"/><ellipse cx="11.5" cy="20" rx="2.4" ry="4.6" transform="rotate(-38 11.5 20)"/><ellipse cx="13" cy="29" rx="2.4" ry="4.6" transform="rotate(-58 13 29)"/><ellipse cx="19" cy="37" rx="2.4" ry="4.6" transform="rotate(-75 19 37)"/><ellipse cx="106" cy="11" rx="2.4" ry="4.6" transform="rotate(15 106 11)"/><ellipse cx="108.5" cy="20" rx="2.4" ry="4.6" transform="rotate(38 108.5 20)"/><ellipse cx="107" cy="29" rx="2.4" ry="4.6" transform="rotate(58 107 29)"/><ellipse cx="101" cy="37" rx="2.4" ry="4.6" transform="rotate(75 101 37)"/></g></svg><b>Top 5</b></span><span class="cx-lb">Empresas mais admiradas em Produto no Brasil</span></li>

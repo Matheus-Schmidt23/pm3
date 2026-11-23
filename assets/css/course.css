@@ -586,3 +586,13 @@ a.step:hover{transform:translateY(-4px)}
 .em-cases-logos li.lg-ic img{height:26px;width:26px}
 /* revisão de responsividade: rodapé dos cases de IA quebra linha em vez de achatar o logo */
 .ia-foot{flex-wrap:wrap}
+
+/* faixa de cases: grade simétrica no celular (número ímpar de logos: o último ocupa a linha toda) */
+@media (max-width:640px){ .em-cases-logos.em-cases-txt li:last-child:nth-child(odd){grid-column:1/-1} .em-cases-1 .em-cases-logos.em-cases-txt{grid-template-columns:1fr} }
+/* números do hero com 3 itens (horas, módulos, certificado/aulas): no celular ficam lado a lado, em vez de 2 + 1 sozinho */
+@media (max-width:600px){
+  .facts:has(> div:nth-child(3):last-child){grid-template-columns:repeat(3,auto);gap:0}
+  .facts:has(> div:nth-child(3):last-child) div{padding:0 16px}
+  .facts:has(> div:nth-child(3):last-child) div:first-child{padding-left:0}
+  .facts:has(> div:nth-child(3):last-child) div:nth-child(3){padding-left:16px;border-left:1px solid rgba(255,255,255,.16)}
+}

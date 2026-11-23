@@ -45,3 +45,7 @@
 @media (max-width:760px){ .kit-cta{grid-template-columns:minmax(0,1fr)} .kit-stats b{font-size:24px} .kit-stats > div{padding:18px 14px} }
 /* revisão de responsividade: os três números cabem em 320–420px */
 @media (max-width:420px){ .kit-stats b{font-size:20px} .kit-stats > div{padding:16px 12px} .kit-stats span{font-size:12px} }
+/* 20 categorias: 4 colunas no computador (5 linhas completas), 2 no tablet, 1 no celular; cartões da mesma linha com a mesma altura */
+.kit-grid{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
+@media (max-width:1100px){ .kit-grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:640px){ .kit-grid{grid-template-columns:minmax(0,1fr)} }

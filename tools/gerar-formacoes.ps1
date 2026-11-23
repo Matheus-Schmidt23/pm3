@@ -371,7 +371,7 @@ $profHtml
     <div class="wrap">
       <div class="cx-copy">
         <p class="kicker"><span class="n">05</span> Certificado</p>
-        <h2 class="h2" id="ce-t">Certificado<br><span class="c2">reconhecido<br>pelo mercado<br>de produto.</span></h2>
+        <h2 class="h2" id="ce-t">Certificados<br><span class="c2">reconhecidos<br>pelo mercado<br>de produto.</span></h2>
         <p class="lead">$(Esc $certTxt)</p>
         <ul class="cx-proof">
           <li><span class="cx-aw">$LOUROS<b>Top 5</b></span><span class="cx-lb">Empresas mais admiradas em Produto no Brasil</span></li>
