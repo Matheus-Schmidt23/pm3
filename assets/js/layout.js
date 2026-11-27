@@ -78,10 +78,11 @@
         <li><a href="comunidade.html"${cur('comunidade')}>Comunidade</a></li>
         <li><a href="para-empresas.html"${cur('para-empresas')}>Para empresas</a></li>
         <li><a href="blog.html"${cur('blog')}>Blog</a></li>
-        <li><a href="faq.html"${cur('faq')}>FAQ</a></li>
+        <li class="nav-mobile-cta"><a class="btn btn-line btn-block" href="https://comunidade.cursospm3.com.br/" target="_blank" rel="noopener">Comunidade</a></li>
         <li class="nav-mobile-cta"><a class="btn btn-primary btn-block" href="https://plataforma.cursospm3.com.br/" target="_blank" rel="noopener">Login</a></li>
       </ul>
       <div class="bar-actions">
+        <a class="btn btn-line btn-sm" href="https://comunidade.cursospm3.com.br/" target="_blank" rel="noopener" data-nota="Plataforma da comunidade (separada da plataforma dos cursos).">Comunidade</a>
         <a class="btn btn-primary btn-sm" href="https://plataforma.cursospm3.com.br/" target="_blank" rel="noopener" data-nota="Plataforma dos cursos (separada da plataforma da comunidade).">Login</a>
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span></button>
       </div>

@@ -102,7 +102,7 @@ button{font:inherit;color:inherit}
 .nav > li > a:hover::after,.nav > li > button:hover::after,.nav > li > a[aria-current="page"]::after,.nav > li.open > button::after{transform:scaleX(1)}
 .nav .chev{width:10px;height:10px;transition:transform .25s}
 .nav li.open .chev{transform:rotate(180deg)}
-.bar-actions{display:flex;align-items:center;gap:18px;margin-left:auto}
+.bar-actions{display:flex;align-items:center;gap:10px;margin-left:auto}
 .bar-actions .login{font-family:var(--display);font-weight:600;font-size:14px;color:var(--gray-fog);text-decoration:none}
 .bar-actions .login:hover{color:#fff}
 .menu-toggle{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;align-items:center;justify-content:center;margin-right:-10px}
@@ -215,6 +215,7 @@ button{font:inherit;color:inherit}
 }
 .nav .nav-mobile-cta{display:none}
 @media (max-width:1080px){.nav .nav-mobile-cta{display:flex}}
+.nav .nav-mobile-cta + .nav-mobile-cta{padding-top:0}
 @media (max-width:600px){
   body{font-size:16px}
   .foot-top{grid-template-columns:1fr}
@@ -291,3 +292,25 @@ html{overflow-x:clip}
 @media (max-width:400px){ .btn{white-space:normal;text-align:center;line-height:1.2} }
 /* revisão de responsividade: breadcrumbs com área de toque de ~31px no celular, sem mudar o visual */
 @media (max-width:860px){ .crumbs a{display:inline-block;padding:8px 0;margin:-8px 0} }
+
+/* cabeçalho: itens sem quebra; botão Comunidade (contorno claro) ao lado do Login; mais compacto em notebooks */
+.nav > li > a,.nav > li > button{white-space:nowrap}
+.bar-actions .btn-line{color:#fff;border-color:rgba(255,255,255,.35)}
+.bar-actions .btn-line:hover{border-color:#fff}
+@media (min-width:1081px) and (max-width:1366px){
+  .nav{gap:0}
+  .nav > li > a,.nav > li > button{padding:0 10px;font-size:13.5px}
+  .nav > li > a::after,.nav > li > button::after{left:10px;right:10px}
+  .bar-actions .btn-sm{padding:10px 14px}
+}
+@media (min-width:1081px) and (max-width:1200px){
+  .nav > li > a,.nav > li > button{padding:0 7px;font-size:13px}
+  .nav > li > a::after,.nav > li > button::after{left:7px;right:7px}
+}
+@media (max-width:1080px){
+  .nav li.nav-mobile-cta > a.btn{display:flex;justify-content:center;align-items:center;height:auto;padding:16px 20px;font-size:13px;border-radius:999px;border:1px solid transparent}
+  .nav li.nav-mobile-cta > a.btn-primary{background:var(--purple-royal);color:#fff}
+  .nav li.nav-mobile-cta > a.btn-line{background:none;color:#fff;border-color:rgba(255,255,255,.35)}
+  .nav li.nav-mobile-cta > a.btn::after{display:none}
+  .nav .nav-mobile-cta + .nav-mobile-cta{padding-top:10px}
+}
