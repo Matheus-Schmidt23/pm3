@@ -76,7 +76,7 @@
             '<a href="https://comunidade.cursospm3.com.br/" target="_blank" rel="noopener">Ver a agenda da comunidade →</a>')}
         </li>
         <li><a href="comunidade.html"${cur('comunidade')}>Comunidade</a></li>
-        <li><a href="para-empresas.html"${cur('para-empresas')}>Para empresas</a></li>
+        <li><a href="para-empresas.html"${cur('para-empresas')}>Empresas</a></li>
         <li><a href="blog.html"${cur('blog')}>Blog</a></li>
         <li class="nav-mobile-cta"><a class="btn btn-line btn-block" href="https://comunidade.cursospm3.com.br/" target="_blank" rel="noopener">Comunidade</a></li>
         <li class="nav-mobile-cta"><a class="btn btn-primary btn-block" href="https://plataforma.cursospm3.com.br/" target="_blank" rel="noopener">Login</a></li>
