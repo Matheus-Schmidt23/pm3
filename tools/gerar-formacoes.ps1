@@ -377,7 +377,7 @@ $profHtml
         <ul class="cx-proof">
           <li><span class="cx-aw">$LOUROS<b>Top 5</b></span><span class="cx-lb">Empresas mais admiradas em Produto no Brasil</span></li>
           <li><span class="cx-aw">$LOUROS<b>+1.000</b></span><span class="cx-lb">Empresas confiam nas formações da PM3</span></li>
-          <li><span class="cx-aw">$LOUROS<b>9 em 10</b></span><span class="cx-lb">Profissionais de produto conhecem a PM3</span></li>
+          <li><span class="cx-aw">$LOUROS<b>9 em 10</b></span><span class="cx-lb">Profissionais de produto no Brasil conhecem a PM3</span></li>
         </ul>
       </div>
     </div>
