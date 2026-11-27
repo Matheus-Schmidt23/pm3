@@ -13,7 +13,7 @@
 .dp-card blockquote{margin:0;flex:1}
 .dp-card blockquote p{font-family:var(--serif);font-style:italic;font-weight:500;font-size:15px;line-height:1.45;color:#fff;margin:2px 0 0}
 .dp-card .who b{display:block;font-family:var(--display);color:#fff;font-size:15px}
-.dp-card .who span{font-size:12.5px;color:var(--gray-fog)}
+.dp-card .who span{display:block;font-size:12.5px;color:var(--gray-fog);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dp-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:24px}
 .dp-bar{flex:1;height:2px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;max-width:420px}
 .dp-bar i{display:block;height:100%;width:0;background:var(--yellow);transition:width .4s ease}

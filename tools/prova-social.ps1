@@ -19,7 +19,7 @@ function Add-ProvaSocial([string]$h) {
   $h = $antes + $snip.Replace('{{N}}', ('{0:D2}' -f $n)) + "`n`n" + $depois
   $h = $h.Replace('<a href="#certificado">Certificado</a>', '<a href="#depoimentos">Depoimentos</a><a href="#certificado">Certificado</a>')
   if ($h -notmatch 'assets/css/depoimentos\.css') {
-    $h = [regex]::Replace($h, '(<link rel="stylesheet" href="assets/css/certificado\.css[^"]*">)', { param($m) $m.Value + "`n" + '<link rel="stylesheet" href="assets/css/depoimentos.css?v=2">' })
+    $h = [regex]::Replace($h, '(<link rel="stylesheet" href="assets/css/certificado\.css[^"]*">)', { param($m) $m.Value + "`n" + '<link rel="stylesheet" href="assets/css/depoimentos.css?v=3">' })
   }
   if ($h -notmatch 'assets/js/depoimentos\.js') {
     $k = $h.LastIndexOf('</body>')
