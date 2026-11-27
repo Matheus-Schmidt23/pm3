@@ -7,6 +7,7 @@
 # A página de Product Management é feita à mão e não é gerada aqui.
 $ErrorActionPreference = 'Stop'
 $proto = Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot 'prova-social.ps1')  # carrossel de depoimentos (Add-ProvaSocial)
 $utf8 = New-Object System.Text.UTF8Encoding($false)
 $cat = Join-Path (Resolve-Path 'C:\Users\Administrador\Desktop\Vibecoding\00. DADOS PM3\Cat*logo de cursos').Path 'formacoes'
 $cfgs = [IO.File]::ReadAllText((Join-Path $PSScriptRoot 'formacoes.json'), $utf8) | ConvertFrom-Json
@@ -420,6 +421,7 @@ $faqHtml    </div>
     $html = $html.Replace('<span class="n">05</span> Certificado', '<span class="n">04</span> Certificado').Replace('<span class="n">06</span> Dúvidas', '<span class="n">05</span> Dúvidas')
     $html = $html -replace '<script src="assets/js/instrutores\.js\?v=6"></script>\r?\n', ''
   }
+  $html = Add-ProvaSocial $html
   [IO.File]::WriteAllText((Join-Path $proto $cf.arquivo), $html, $utf8)
   "{0,-40} {1,3}h {2} mod {3,3} aulas {4,2} instrutores" -f $cf.arquivo, $horas, $nMods, $aulas, $lista.Count
 }

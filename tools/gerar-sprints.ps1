@@ -8,6 +8,7 @@ $proto = Split-Path $PSScriptRoot -Parent
 $utf8 = New-Object System.Text.UTF8Encoding($false)
 Add-Type -AssemblyName PresentationCore, WindowsBase
 . (Join-Path $PSScriptRoot 'logos-cases.ps1')  # CaseItem: nome da empresa → logo
+. (Join-Path $PSScriptRoot 'prova-social.ps1')  # carrossel de depoimentos (Add-ProvaSocial / Remove-ProvaSocial)
 
 function Esc([string]$s) { if ($null -eq $s) { return '' }; $s.Replace('&','&amp;').Replace('<','&lt;').Replace('>','&gt;').Replace('"','&quot;') }
 function JsEsc([string]$s) { $s.Replace('\','\\').Replace('"','\"') }
@@ -108,6 +109,7 @@ foreach ($sp in $SP) {
 
   # 1 · hero e cabeçalho
   $t = $modelo
+  $t = Remove-ProvaSocial $t  # o modelo já traz a prova social; ela volta no fim, com a numeração certa
   $t = Troca $t 'Fundamentos de Gestão de Produtos: curso rápido | PM3' ((Esc $nome) + ": curso rápido | PM3")
   $t = [regex]::Replace($t, '<meta name="description" content="[^"]*">', { '<meta name="description" content="' + (Esc "Curso rápido ${nome}: $nm módulos. $obj Incluso no Membership PM3.") + '">' })
   $t = $t.Replace('https://pm3.com.br/sprints/gestao-produtos/curso-fundamentos-gestao-produtos/', $d.url)
@@ -262,6 +264,7 @@ $((($faq | ForEach-Object { '  {"@type":"Question","name":"' + (JsEsc $_[0]) + '
   $t = [regex]::Replace($t, '<script>window\.EMENTA=.*?</script>', { '<script>window.EMENTA={curso:"' + (JsEsc $nome) + '",tracking:"ementa sprint ' + $sp.capa + '",stats:"' + $nm + ' módulo' + $(if ($nm -ne 1) { 's' }) + '.",capa:"assets/capas/sprints/' + $sp.capa + '.jpg"};</script>' })
 
   if ($t -match 'Fundamentos de Gestão de Produtos' -and $t -notmatch 'PROVISÓRIO') { Write-Warning "$arqHtml cita Fundamentos" }
+  $t = Add-ProvaSocial $t
   [IO.File]::WriteAllText((Join-Path $proto $arqHtml), $t, $utf8)
   $feitas += [pscustomobject]@{ arq = $arqHtml; nome = $nome; h = $h; mod = $nm; instr = $pessoas.Count; cases = $cases.Count }
 }

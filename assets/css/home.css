@@ -489,3 +489,15 @@
     .intent.h-routes.pilares ul{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:26px}
   }
 }
+
+/* pilares sempre numa linha só (pedido do Matheus): card da foto um pouco mais estreito para dar largura ao texto */
+@media (min-width:861px){
+  .h-grid{grid-template-columns:minmax(0,2.6fr) minmax(0,1fr)}
+  .intent.h-routes.pilares a{padding-left:clamp(12px,1vw,18px);padding-right:8px}
+  .intent.h-routes.pilares .q{font-size:min(calc(clamp(17px,1.35vw,22px) * max(var(--s,1),.9)),9.4cqi)}
+  @container pil (max-width:959px){ .intent.h-routes.pilares ul{grid-template-columns:repeat(4,minmax(0,1fr))} }
+  @container pil (max-width:680px){ .intent.h-routes.pilares ul{grid-template-columns:repeat(2,minmax(0,1fr))} }
+}
+@media (min-width:861px){ .intent.h-routes.pilares .to span{font-size:min(13px,6.7cqi)} }
+/* card da foto mais estreito: a legenda (nome, cargo, logo) sobe para o topo e não disputa espaço com o selo +70 mil */
+@media (min-width:861px){ .h-pic .tag{top:18px;bottom:auto;max-width:calc(100% - 36px)} }
