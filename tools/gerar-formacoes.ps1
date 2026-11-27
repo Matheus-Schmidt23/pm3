@@ -371,7 +371,7 @@ $profHtml
 
 <!-- 7 · CERTIFICADO -->
 <section class="cx-sec on-dark" id="certificado" aria-labelledby="ce-t">
-  <div class="cx-hero cx-var" style="--cert-full:url('../img/$($certImg).jpg?v=1');--cert-crop:url('../img/$($certImg)-crop.jpg?v=1')" data-nota="$certNota">
+  <div class="cx-hero cx-var" style="--cert-full:url('../img/$($certImg).jpg?v=2');--cert-crop:url('../img/$($certImg)-crop.jpg?v=2')" data-nota="$certNota">
     <div class="wrap">
       <div class="cx-copy">
         <p class="kicker"><span class="n">05</span> Certificado</p>
