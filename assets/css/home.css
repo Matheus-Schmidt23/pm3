@@ -467,3 +467,25 @@
 .t-pos .seal{background:rgba(255,45,111,.18);border-color:rgba(255,79,139,.6)}
 .t-pos .more{color:#fff}
 .t-pos:hover .more{color:#ff8fb6}
+
+/* título do hero em 3 linhas ("Sua carreira é / o seu produto / mais importante."): a fonte se ajusta à largura
+   da coluna (cqi) para a linha mais longa nunca quebrar; texto de apoio balanceado, sem viúva */
+.h-copy{container-type:inline-size}
+.h-hero h1{font-size:min(calc(clamp(56px,7.2vw,124px) * var(--s,1)),10.6cqi)}
+.h-hero .lead{text-wrap:balance}
+
+/* pilares harmônicos: todo título em 2 linhas e todo rótulo em 1 linha; a fonte acompanha a largura da coluna (cqi) */
+@media (min-width:861px){
+  .intent.h-routes.pilares li{container-type:inline-size}
+  .intent.h-routes.pilares a{padding-right:12px}
+  .intent.h-routes.pilares .q{white-space:nowrap;font-size:min(calc(clamp(17px,1.35vw,22px) * max(var(--s,1),.9)),7.6cqi);text-wrap:nowrap}
+  .intent.h-routes.pilares .to span{white-space:nowrap;font-size:min(13px,5.4cqi)}
+}
+/* área estreita para 4 colunas (ex.: telas de 1024 a ~1500px): pilares em 2x2, com fonte cheia */
+@media (min-width:861px){
+  .intent.h-routes.pilares{container:pil / inline-size}
+  .intent.h-routes.pilares .q{font-size:min(calc(clamp(17px,1.35vw,22px) * max(var(--s,1),.9)),7.3cqi)}
+  @container pil (max-width:959px){
+    .intent.h-routes.pilares ul{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:26px}
+  }
+}
