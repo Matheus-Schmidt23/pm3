@@ -108,18 +108,18 @@ foreach ($sp in $SP) {
 
   # 1 · hero e cabeçalho
   $t = $modelo
-  $t = Troca $t 'Sprint Fundamentos de Gestão de Produtos: curso de 12h | PM3' ("Sprint " + (Esc $nome) + ": curso de ${h}h | PM3")
-  $t = [regex]::Replace($t, '<meta name="description" content="[^"]*">', { '<meta name="description" content="' + (Esc "Sprint ${nome}: $h horas e $nm módulos. $obj Incluso no Membership PM3.") + '">' })
+  $t = Troca $t 'Fundamentos de Gestão de Produtos: curso rápido | PM3' ((Esc $nome) + ": curso rápido | PM3")
+  $t = [regex]::Replace($t, '<meta name="description" content="[^"]*">', { '<meta name="description" content="' + (Esc "Curso rápido ${nome}: $nm módulos. $obj Incluso no Membership PM3.") + '">' })
   $t = $t.Replace('https://pm3.com.br/sprints/gestao-produtos/curso-fundamentos-gestao-produtos/', $d.url)
-  $t = Troca $t '<meta property="og:title" content="Sprint Fundamentos de Gestão de Produtos | PM3">' ('<meta property="og:title" content="Sprint ' + (Esc $nome) + ' | PM3">')
+  $t = Troca $t '<meta property="og:title" content="Curso rápido Fundamentos de Gestão de Produtos | PM3">' ('<meta property="og:title" content="Curso rápido ' + (Esc $nome) + ' | PM3">')
   $t = [regex]::Replace($t, '<meta property="og:description" content="[^"]*">', { '<meta property="og:description" content="' + (Esc $obj) + '">' })
   $t = Troca $t 'og/sprint-fundamentos-gestao-produtos.jpg' "og/sprint-$($sp.capa).jpg"
   $t = Troca $t '<body data-page="sprint-fundamentos-gestao-produtos">' "<body data-page=`"sprint-$($sp.capa)`">"
   $t = [regex]::Replace($t, '<!--\s*MODELO DE PÁGINA DE CURSO.*?-->', "<!--`n  PÁGINA DA SPRINT $($nome.ToUpper()), gerada por tools/gerar-sprints.ps1 a partir de sprint-fundamentos-gestao-produtos.html (mesmo modelo).`n  Conteúdo: página atual $($d.url) (módulos, tópicos, cases e instrutores), extraído em tools/sprints-wp.json.`n  Para mudar, edite os dados ou o script e rode de novo; não edite este HTML à mão.`n-->", 'Singleline')
   $t = Troca $t "assets/capas/sprints/fundamentos-gestao-produtos.jpg')" "assets/capas/sprints/$($sp.capa).jpg')"
-  $notaCrumb = 'A sprint mostra a vertical no caminho (Sprints › ' + $areaNome + '). URL atual mantida: ' + ($d.url -replace 'https://pm3.com.br','') + '.' + $(if ($d.selo -eq 'Gratuito') { ' No site atual esta sprint é gratuita; no protótipo ela segue o modelo das demais (inclusa no Membership). Decidir se continua gratuita.' } else { '' })
-  $t = [regex]::Replace($t, '<ol class="crumbs".*?</ol>', { '<ol class="crumbs" aria-label="Você está em" data-nota="' + (Esc $notaCrumb) + '"><li><a href="home.html">Home</a></li><li><a href="sprints.html">Sprints</a></li><li><a href="sprints.html#' + $sp.area + '">' + (Esc $areaNome) + '</a></li><li aria-current="page">' + (Esc $nome) + '</li></ol>' }, 'Singleline')
-  $t = Troca $t '<div class="c-tags"><span class="tag tag-dark">Sprint</span><span class="tag tag-dark">Gestão de produtos</span><span class="tag tag-yellow">Para iniciantes</span></div>' ('<div class="c-tags"><span class="tag tag-dark">Sprint</span><span class="tag tag-dark">' + (Esc $areaNome) + '</span><span class="tag tag-yellow">' + $h + 'h de conteúdo</span></div>')
+  $notaCrumb = 'O curso rápido mostra a vertical no caminho (Cursos rápidos › ' + $areaNome + '). URL atual mantida: ' + ($d.url -replace 'https://pm3.com.br','') + '.' + $(if ($d.selo -eq 'Gratuito') { ' No site atual este curso rápido é gratuito; no protótipo ele segue o modelo dos demais (incluso no Membership). Decidir se continua gratuito.' } else { '' })
+  $t = [regex]::Replace($t, '<ol class="crumbs".*?</ol>', { '<ol class="crumbs" aria-label="Você está em" data-nota="' + (Esc $notaCrumb) + '"><li><a href="home.html">Home</a></li><li><a href="sprints.html">Cursos rápidos</a></li><li><a href="sprints.html#' + $sp.area + '">' + (Esc $areaNome) + '</a></li><li aria-current="page">' + (Esc $nome) + '</li></ol>' }, 'Singleline')
+  $t = Troca $t '<div class="c-tags"><span class="tag tag-dark">Curso rápido</span><span class="tag tag-dark">Gestão de produtos</span><span class="tag tag-yellow">Para iniciantes</span></div>' ('<div class="c-tags"><span class="tag tag-dark">Curso rápido</span><span class="tag tag-dark">' + (Esc $areaNome) + '</span><span class="tag tag-yellow">Conclua em menos de 1 semana</span></div>')
   # palavra muito longa (ex.: Experimentação) não cabe no celular: reduz a fonte do título pela variável --s do course.css
   $maior = ($nome -split ' ' | Measure-Object Length -Maximum).Maximum
   $escala = if ($maior -gt 12) { ' style="--s:' + ([Math]::Round(12 / $maior, 2)).ToString([Globalization.CultureInfo]::InvariantCulture) + '"' } else { '' }
@@ -127,9 +127,9 @@ foreach ($sp in $SP) {
   # [^>]* porque o h1 pode levar style="--s:…" (nomes com palavra longa); sem isso o lead do modelo ficava nessas sprints
   $antes = $t
   $t = [regex]::Replace($t, '(<h1 class="display h-sprint" id="h1"[^>]*>.*?</h1>\s*<p class="lead">)[^<]*(</p>)', { param($m) $m.Groups[1].Value + (Esc $lead) + $m.Groups[2].Value }, 'Singleline')
-  if ($t -eq $antes -and $lead -notmatch '^Em 12 horas e 4 módulos') { throw "lead do hero não foi trocado: $nome" }
-  $facts = "<div><b>${h}h</b><span>de conteúdo</span></div>`n          <div><b>$nm</b><span>módulo$(if ($nm -ne 1) { 's' })</span></div>`n          <div><b>1</b><span>certificado</span></div>"
-  $t = Troca $t "<div><b>12h</b><span>de conteúdo</span></div>`n          <div><b>4</b><span>módulos</span></div>`n          <div><b>1</b><span>certificado</span></div>" $facts
+  if ($t -eq $antes -and $lead -notmatch '^Em 4 módulos') { throw "lead do hero não foi trocado: $nome" }
+  $facts = "<div><b>$nm</b><span>módulo$(if ($nm -ne 1) { 's' })</span></div>`n          <div><b>100%</b><span>online</span></div>`n          <div><b>1</b><span>certificado</span></div>"
+  $t = Troca $t "<div><b>4</b><span>módulos</span></div>`n          <div><b>100%</b><span>online</span></div>`n          <div><b>1</b><span>certificado</span></div>" $facts
 
   # 3 · ementa
   $cases = @($d.cases | ForEach-Object { CaseNome $_ } | Select-Object -Unique)
@@ -140,7 +140,7 @@ foreach ($sp in $SP) {
     $clsN = if ($cases.Count -eq 1) { ' em-cases-1' } else { '' }
     $casesHtml = @"
   <div class="wrap">
-    <div class="em-cases-band$clsN reveal" data-nota="Cases usados nas aulas da sprint, os mesmos que a página atual mostra em 'Com cases de empresas'. Logos em tools/logos-cases.json; os brancos do site atual aparecem em preto.">
+    <div class="em-cases-band$clsN reveal" data-nota="Cases usados nas aulas do curso, os mesmos que a página atual mostra em 'Com cases de empresas'. Logos em tools/logos-cases.json; os brancos do site atual aparecem em preto.">
       <div class="em-cases-lb"><h3>$(if ($cases.Count -eq 1) { 'Case real' } else { 'Cases reais' })</h3><p>$(Esc $txt)</p></div>
       <ul class="em-cases-logos em-cases-txt" style="--n:$($cases.Count)">$(($cases | ForEach-Object { CaseItem $_ }) -join '')</ul>
     </div>
@@ -157,7 +157,7 @@ foreach ($sp in $SP) {
     "      <div class=`"mod$(if ($ab) { ' open' })`"><button type=`"button`" aria-expanded=`"$(if ($ab) { 'true' } else { 'false' })`"><span class=`"mn`">$('{0:D2}' -f ($i + 1))</span><span class=`"mt`">$(Esc $m.titulo)</span><span class=`"pl`" aria-hidden=`"true`"></span></button>`n        <div class=`"mod-body`"><div><div class=`"in`">$(if ($desc) { '<p>' + (Esc $desc) + '</p>' })$ul</div></div></div></div>"
   }
   $semTop = @($mods | Where-Object { -not @($_.topicos).Count }).Count
-  $notaMods = "Sprint com $nm módulo$(if ($nm -ne 1) { 's' }), no mesmo padrão de ementa da formação: blocos recolhíveis, só o primeiro aberto. Títulos, descrições e tópicos da página atual da sprint." + $(if ($semTop) { " $semTop módulo(s) sem lista de tópicos no site atual: o bloco mostra só a descrição." } else { '' })
+  $notaMods = "Curso rápido com $nm módulo$(if ($nm -ne 1) { 's' }), no mesmo padrão de ementa da formação: blocos recolhíveis, só o primeiro aberto. Títulos, descrições e tópicos da página atual do curso." + $(if ($semTop) { " $semTop módulo(s) sem lista de tópicos no site atual: o bloco mostra só a descrição." } else { '' })
   $ementa = @"
 <!-- 3 · EMENTA -->
 <section class="section white" id="ementa" aria-labelledby="em-t">
@@ -165,9 +165,9 @@ foreach ($sp in $SP) {
     <div class="ementa-aside">
       <p class="kicker"><span class="n">01</span> Ementa</p>
       <h2 class="h2" id="em-t">O que<br>você vai<br><span class="c2">aprender</span></h2>
-      <p class="lead" style="margin-top:20px">Confira tudo que você vai dominar nesta sprint.</p>
-      <div class="ementa-tot"><div><b>${h}h</b><span>de conteúdo</span></div><div><b>$nm</b><span>módulo$(if ($nm -ne 1) { 's' })</span></div><div><b>1</b><span>certificado</span></div></div>
-      <div class="em-dl"><div class="row"><span class="pdf" aria-hidden="true">PDF</span><div><b>Quer ver mais?</b><div class="meta">Baixe a ementa completa. Preencha o formulário e faça o download da ementa da sprint.</div></div></div><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="lateral-ementa"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa</a></div>
+      <p class="lead" style="margin-top:20px">Confira tudo que você vai dominar neste curso.</p>
+      <div class="ementa-tot"><div><b>$nm</b><span>módulo$(if ($nm -ne 1) { 's' })</span></div><div><b>100%</b><span>online</span></div><div><b>1</b><span>certificado</span></div></div>
+      <div class="em-dl"><div class="row"><span class="pdf" aria-hidden="true">PDF</span><div><b>Quer ver mais?</b><div class="meta">Baixe a ementa completa. Preencha o formulário e faça o download da ementa do curso rápido.</div></div></div><a class="btn btn-light btn-em" href="#baixar-ementa" data-ementa="lateral-ementa"><svg class="ic-doc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M10.5 9v5M8.2 12l2.3 2.3 2.3-2.3"/></svg> Baixar ementa</a></div>
     </div>
     <div class="mods" id="mods" data-nota="$(Esc $notaMods)">
 $($cards -join "`n")
@@ -205,7 +205,7 @@ $casesHtml</section>
       <div><p class="kicker"><span class="n">03</span> Quem ensina</p><h2 class="h2" id="in-t">$titI</h2></div>
       <p class="lead">$(Esc $leadI)</p>
     </div>
-    <div class="prof-grid" role="region" aria-label="Instrutores da sprint" tabindex="0" data-nota="Instrutores listados hoje na página da sprint no site da PM3. Quem já está no protótipo usa o cadastro de instrutores-dados.js; os demais, cargo, empresa e foto da página atual.">
+    <div class="prof-grid" role="region" aria-label="Instrutores do curso rápido" tabindex="0" data-nota="Instrutores listados hoje na página do curso no site da PM3. Quem já está no protótipo usa o cadastro de instrutores-dados.js; os demais, cargo, empresa e foto da página atual.">
 $($figs -join "`n")
     </div>
     <div class="prof-nav"><div class="prof-btns"><button type="button" data-pf="ant" aria-label="Instrutores anteriores"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8H3M7 4 3 8l4 4"/></svg></button><button type="button" data-pf="prox" aria-label="Próximos instrutores"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button></div></div>
@@ -222,20 +222,20 @@ $($figs -join "`n")
   }
 
   # 6 · certificado (mockup ainda é o de Fundamentos)
-  $t = Troca $t 'Ao concluir as 12 horas, você recebe o certificado PM3 Sprints de Fundamentos de Gestão de Produtos, com o nome do curso e a carga horária, pronto para o LinkedIn e o currículo.' ("Ao concluir as $h horas, você recebe o certificado PM3 Sprints de " + (Esc $nome) + ', com o nome do curso e a carga horária, pronto para o LinkedIn e o currículo.')
-  $t = Troca $t 'data-nota="Mockup do certificado desta sprint. Para outro curso' 'data-nota="PROVISÓRIO: o mockup ainda é o da sprint Fundamentos de Gestão de Produtos; gerar o desta sprint. Para outro curso'
+  $t = Troca $t 'Ao concluir o curso, você recebe o certificado PM3 de Fundamentos de Gestão de Produtos, com o nome do curso, pronto para o LinkedIn e o currículo.' ("Ao concluir o curso, você recebe o certificado PM3 de " + (Esc $nome) + ', com o nome do curso, pronto para o LinkedIn e o currículo.')
+  $t = Troca $t 'data-nota="Mockup do certificado deste curso. Para outro curso' 'data-nota="PROVISÓRIO: o mockup ainda é o do curso rápido Fundamentos de Gestão de Produtos; gerar o deste curso. Para outro curso'
 
   # 7 · FAQ
   $faq = [System.Collections.ArrayList]@()
-  [void]$faq.Add(@('As aulas são ao vivo ou gravadas?', 'As sprints são 100% online, com aulas gravadas: você estuda onde, quando e no ritmo que quiser. Na Comunidade PM3, há encontros ao vivo para tirar dúvidas e trocar experiências com referências do mercado.'))
-  [void]$faq.Add(@('Quanto tempo leva?', "São $h horas de conteúdo, em $nm módulo$(if ($nm -ne 1) { 's' }), para fazer no seu ritmo."))
-  [void]$faq.Add(@('Recebo certificado?', 'Sim. Ao concluir a sprint, você recebe o certificado da PM3, pronto para adicionar ao LinkedIn.'))
-  [void]$faq.Add(@('Como acesso esta sprint?', 'Ela está inclusa no Membership PM3 (12x R$ 299,92), com todas as sprints e as 10 formações por 12 meses, e na assinatura PM3 Sprints (12x R$ 166,50), só com as sprints.'))
+  [void]$faq.Add(@('As aulas são ao vivo ou gravadas?', 'Os cursos rápidos são 100% online, com aulas gravadas: você estuda onde, quando e no ritmo que quiser. Na Comunidade PM3, há encontros ao vivo para tirar dúvidas e trocar experiências com referências do mercado.'))
+  [void]$faq.Add(@('Quanto tempo leva?', "São $nm módulo$(if ($nm -ne 1) { 's' }) para fazer no seu ritmo: dá para concluir em menos de uma semana."))
+  [void]$faq.Add(@('Recebo certificado?', 'Sim. Ao concluir o curso, você recebe o certificado da PM3, pronto para adicionar ao LinkedIn.'))
+  [void]$faq.Add(@('Como acesso este curso rápido?', 'Ele está incluso no Membership PM3 (12x R$ 299,92), com todos os cursos rápidos e as 10 formações por 12 meses, e na assinatura PM3 Cursos Rápidos (12x R$ 166,50), só com os cursos rápidos.'))
   $cod = $COMP[(Norm $(if ($ALIAS.ContainsKey($sp.nome)) { $ALIAS[$sp.nome] } else { $sp.nome }))]
-  if ($cod) { $f = $FORM[$cod]; [void]$faq.Add(@('Quero me aprofundar no tema. Qual formação faço depois?', "A Formação $($f[0]) aprofunda o assunto desta sprint. No Membership, as duas estão no mesmo acesso de 12 meses.")) }
+  if ($cod) { $f = $FORM[$cod]; [void]$faq.Add(@('Quero me aprofundar no tema. Qual formação faço depois?', "A Formação $($f[0]) aprofunda o assunto deste curso. No Membership, as duas estão no mesmo acesso de 12 meses.")) }
   [void]$faq.Add(@('E se eu não gostar?', 'Você tem 7 dias de garantia: se não gostar, pede o reembolso pelo e-mail contato@pm3.com.br.'))
   $det = for ($i = 0; $i -lt $faq.Count; $i++) { '      <details' + $(if ($i -eq 0) { ' open' }) + '><summary>' + (Esc $faq[$i][0]) + '<i aria-hidden="true"></i></summary><p>' + (Esc $faq[$i][1]) + '</p></details>' }
-  $t = [regex]::Replace($t, '(<div class="faq")>.*?(\s*</div>\s*</div>\s*</section>\s*</main>)', { param($m) $m.Groups[1].Value + ' data-nota="Respostas adaptadas da FAQ atual das sprints (ao vivo ou gravadas, certificado, garantia). A formação indicada vem da coluna Complementa do catálogo de sprints.">' + "`n" + ($det -join "`n") + $m.Groups[2].Value }, 'Singleline')
+  $t = [regex]::Replace($t, '(<div class="faq")>.*?(\s*</div>\s*</div>\s*</section>\s*</main>)', { param($m) $m.Groups[1].Value + ' data-nota="Respostas adaptadas da FAQ atual dos cursos rápidos (ao vivo ou gravadas, certificado, garantia). A formação indicada vem da coluna Complementa do catálogo de cursos rápidos.">' + "`n" + ($det -join "`n") + $m.Groups[2].Value }, 'Singleline')
 
   # JSON-LD
   $ld = @"
@@ -243,9 +243,9 @@ $($figs -join "`n")
 {"@context":"https://schema.org","@graph":[
  {"@type":"BreadcrumbList","itemListElement":[
   {"@type":"ListItem","position":1,"name":"Home","item":"https://pm3.com.br/"},
-  {"@type":"ListItem","position":2,"name":"Sprints","item":"https://pm3.com.br/sprints/"},
+  {"@type":"ListItem","position":2,"name":"Cursos rápidos","item":"https://pm3.com.br/sprints/"},
   {"@type":"ListItem","position":3,"name":"$(JsEsc $nome)","item":"$($d.url)"}]},
- {"@type":"Course","name":"Sprint $(JsEsc $nome)",
+ {"@type":"Course","name":"$(JsEsc $nome)",
   "description":"$(JsEsc $obj)",
   "provider":{"@type":"EducationalOrganization","name":"PM3","sameAs":"https://pm3.com.br/"},
   "inLanguage":"pt-BR","timeRequired":"PT${h}H",
@@ -259,7 +259,7 @@ $((($faq | ForEach-Object { '  {"@type":"Question","name":"' + (JsEsc $_[0]) + '
   $t = [regex]::Replace($t, '<script type="application/ld\+json">.*?</script>', { $ld }, 'Singleline')
 
   # e-book da ementa
-  $t = [regex]::Replace($t, '<script>window\.EMENTA=.*?</script>', { '<script>window.EMENTA={curso:"' + (JsEsc $nome) + '",tracking:"ementa sprint ' + $sp.capa + '",stats:"' + $h + ' horas e ' + $nm + ' módulo' + $(if ($nm -ne 1) { 's' }) + '.",capa:"assets/capas/sprints/' + $sp.capa + '.jpg"};</script>' })
+  $t = [regex]::Replace($t, '<script>window\.EMENTA=.*?</script>', { '<script>window.EMENTA={curso:"' + (JsEsc $nome) + '",tracking:"ementa sprint ' + $sp.capa + '",stats:"' + $nm + ' módulo' + $(if ($nm -ne 1) { 's' }) + '.",capa:"assets/capas/sprints/' + $sp.capa + '.jpg"};</script>' })
 
   if ($t -match 'Fundamentos de Gestão de Produtos' -and $t -notmatch 'PROVISÓRIO') { Write-Warning "$arqHtml cita Fundamentos" }
   [IO.File]::WriteAllText((Join-Path $proto $arqHtml), $t, $utf8)

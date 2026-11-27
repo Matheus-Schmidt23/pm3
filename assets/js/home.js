@@ -21,14 +21,16 @@
   if (!pic) return;
   const fotos = [...pic.querySelectorAll('.ph')];
   if (fotos.length < 2) return;
-  /* só a primeira foto entra no carregamento da página; as outras vêm depois */
-  const carrega = () => fotos.forEach(f => { if (f.dataset.bg) f.style.backgroundImage = `url('${f.dataset.bg}')`; });
-  if (document.readyState === 'complete') carrega(); else addEventListener('load', carrega);
-  /* etiqueta com o nome de quem está na foto (Instrutor/Instrutora PM3) */
+  /* peso da página: só a foto da tela entra no carregamento; as próximas vêm uma de cada vez,
+     duas à frente da que está aparecendo (antes as 17 fotos baixavam juntas, cerca de 4 MB) */
+  const bg = k => { const f = fotos[(k + fotos.length) % fotos.length]; if (f.dataset.bg && !f.style.backgroundImage) f.style.backgroundImage = `url('${f.dataset.bg}')`; };
+  const carrega = () => { bg(i + 1); bg(i + 2); };
+  /* etiqueta com o nome e o cargo de quem está na foto, ao lado do logo da empresa (sem cargo: Instrutor/Instrutora PM3) */
   const tag = pic.querySelector('.tag');
   const legenda = (f, anima) => {
     if (!tag || !f.dataset.nome) return;
-    const html = `<span class="tg-t"><b>${f.dataset.nome}</b><span>Instrutor${f.dataset.g === 'a' ? 'a' : ''} PM3</span></span>` + (f.dataset.logo ? `<span class="tg-co"><img src="${f.dataset.logo}" alt="${f.dataset.emp || ''}" style="height:${f.dataset.lh || 16}px"></span>` : '');
+    const cargo = f.dataset.cargo || `Instrutor${f.dataset.g === 'a' ? 'a' : ''} PM3`;
+    const html = `<span class="tg-t"><b>${f.dataset.nome}</b><span>${cargo}</span></span>` + (f.dataset.logo ? `<span class="tg-co"><img src="${f.dataset.logo}" alt="${f.dataset.emp || ''}" style="height:${f.dataset.lh || 16}px"></span>` : '');
     if (!anima) { tag.innerHTML = html; return; }
     tag.classList.add('troca');
     setTimeout(() => { tag.innerHTML = html; tag.classList.remove('troca'); }, 700);
@@ -46,6 +48,7 @@
     setTimeout(() => pic.classList.remove('sem-anim'), 60);
   }
   legenda(fotos[i], false);
+  if (document.readyState === 'complete') carrega(); else addEventListener('load', carrega);
   /* só gira com a foto na tela: assim a primeira pessoa vista é a sorteada, inclusive no celular,
      onde a foto fica abaixo do texto */
   let visivel = false;
@@ -56,6 +59,7 @@
     i = (i + 1) % fotos.length;
     fotos[i].classList.add('on');
     legenda(fotos[i], true);
+    bg(i + 2);
   }, 6500);
 })();
 
@@ -103,4 +107,28 @@
       t.style.setProperty('--ry', '0deg');
     });
   });
+})();
+
+/* certificado: os quatro modelos se alternam a cada 5 s (fade no mockup); clicar escolhe um e pausa a troca */
+(() => {
+  const box = document.getElementById('cxTroca'); if (!box) return;
+  const tabs = [...box.querySelectorAll('.cx-tabs button')]; if (!tabs.length) return;
+  const T = 5000, img = n => `url('../img/${n}')`;
+  tabs.forEach(b => { new Image().src = 'assets/img/' + (matchMedia('(min-width:861px)').matches ? b.dataset.crop : b.dataset.full); });
+  let i = 0, timer = null, visivel = false;
+  box.style.setProperty('--cx-t', T / 1000 + 's');
+  const mostra = n => {
+    i = (n + tabs.length) % tabs.length;
+    tabs.forEach((b, k) => { b.classList.toggle('on', k === i); b.setAttribute('aria-selected', k === i); });
+    box.classList.add('saindo');
+    setTimeout(() => {
+      box.style.setProperty('--cert-full', img(tabs[i].dataset.full));
+      box.style.setProperty('--cert-crop', img(tabs[i].dataset.crop));
+      box.classList.remove('saindo');
+    }, 320);
+  };
+  const roda = () => { clearInterval(timer); if (matchMedia('(prefers-reduced-motion:reduce)').matches) return; timer = setInterval(() => visivel && mostra(i + 1), T); };
+  tabs.forEach((b, k) => b.addEventListener('click', () => { clearInterval(timer); box.classList.add('parado'); mostra(k); }));
+  new IntersectionObserver(es => es.forEach(e => { visivel = e.isIntersecting; }), { threshold: .3 }).observe(box);
+  roda();
 })();

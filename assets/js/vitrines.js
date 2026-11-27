@@ -11,7 +11,7 @@
   /* card do Membership no fim dos catálogos de Formações e Sprints */
   const membCard = (extra = '') => {
     const ok = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>';
-    const itens = ['10 formações completas, com certificado', '+40 sprints de 2 a 12 horas', 'Mentorias e workshops ao vivo', 'Comunidade com +60 mil profissionais'];
+    const itens = ['10 formações completas, com certificado', '+50 cursos rápidos', 'Mentorias e workshops ao vivo', 'Comunidade com +70 mil profissionais'];
     return `<a class="f-more${extra} reveal" href="membership.html">
       <div class="fm-copy"><small>Membership PM3</small><h3>Um ano para<span class="em">acelerar a sua carreira.</span></h3>
         <p>Acesso completo ao catálogo da PM3 por 12 meses. Você escolhe a ordem, a PM3 indica o caminho.</p>
@@ -38,7 +38,7 @@
       <div class="f-vis" style="background-image:url('assets/capas/${f.capa}-800.jpg?v=3')" aria-hidden="true"></div>
       <div class="f-body"><div class="top"><span class="tag tag-area">${nomeA(f.area)}</span>${f.destaque ? `<span class="tag tag-yellow">${f.destaque}</span>` : ''}</div>
         <h3>${f.nome}</h3><p>${f.quem}</p>
-        <ul class="f-facts">${f.h ? `<li>${ic.h}${f.h}h</li>` : ''}<li>${ic.mod}${f.mod} módulos</li><li class="fc-cert">${ic.cert}Certificado</li></ul>
+        <ul class="f-facts"><li>${ic.mod}${f.mod} módulos</li><li class="fc-cert">${ic.cert}Certificado</li></ul>
         <div class="meta"><span>Ver formação</span><span class="go">${ic.go}</span></div></div></a>`).join('') + membCard();
     const filtra = a => {
       document.querySelectorAll('#fx-chips button').forEach(b => b.classList.toggle('on', b.dataset.f === a));
@@ -66,11 +66,11 @@
       <div class="f-vis" style="background-image:url('assets/capas/sprints/${s.capa}.jpg')" aria-hidden="true"></div>
       <div class="f-body"><div class="top"><span class="tag tag-area">${s.tag || nomeA(s.area)}</span>${s.destaque ? '<span class="tag tag-yellow">' + s.destaque + '</span>' : ''}</div>
         <h3>${s.nome}</h3><p>${s.obj}</p>
-        <ul class="f-facts"><li>${ic.h}${s.h}h</li><li>${ic.cert}Certificado</li></ul>
-        <div class="meta"><span>Ver sprint</span><span class="go">${ic.go}</span></div></div></a>`).join('') + membCard(' f-more-full');
+        <ul class="f-facts"><li>${ic.h}Menos de 1 semana</li><li>${ic.cert}Certificado</li></ul>
+        <div class="meta"><span>Ver curso</span><span class="go">${ic.go}</span></div></div></a>`).join('') + membCard(' f-more-full');
     /* mostra 12; "Carregar mais" abre todas as restantes de uma vez (respeitando o filtro) */
     const PAG = 12; let area = '', limite = PAG;
-    $('#fx-grid').insertAdjacentHTML('afterend', '<div class="fx-more"><button type="button" class="btn btn-primary" id="fx-mais">Carregar mais sprints</button><small id="fx-cont"></small></div>');
+    $('#fx-grid').insertAdjacentHTML('afterend', '<div class="fx-more"><button type="button" class="btn btn-primary" id="fx-mais">Carregar mais cursos</button><small id="fx-cont"></small></div>');
     $('.fx-more').after($('#fx-grid .f-more'));
     const mostra = () => {
       const cards = [...document.querySelectorAll('#fx-grid .f-card')];
@@ -164,7 +164,7 @@
       ...POS.map(p => ({ tipo: 'pos', nome: p.nome, area: p.area, h: null, txt: p.obj, url: `https://postech.fiap.com.br/curso/${p.capa}`, capa: `assets/capas/pos-fiap/${p.capa}.webp` })),
       ...SPRINTS.map(s => ({ tipo: 'sprint', nome: s.nome, area: s.area, h: s.h, txt: s.obj, url: s.url, dest: s.destaque || '', tag: s.tag, capa: `assets/capas/sprints/${s.capa}.jpg` })),
     ];
-    const TIPOS = { formacao: 'Formação', sprint: 'Sprint', pos: 'Pós Tech' };
+    const TIPOS = { formacao: 'Formação', sprint: 'Curso rápido', pos: 'Pós Tech' };
     const DUR = { curta: ['Até 5 horas', h => h != null && h <= 5], media: ['De 6 a 15 horas', h => h > 5 && h <= 15], longa: ['Mais de 15 horas', h => h > 15] };
     const st = { q: '', tipo: new Set(), area: new Set(), dur: '', ord: 'rel' };
 
@@ -173,7 +173,7 @@
     const opt = (name, type, v, lb) => `<label class="fopt"><input type="${type}" name="${name}" value="${v}"><span class="bx"></span><span class="lb">${lb}</span><small>${cnt(name, v)}</small></label>`;
     $('#f-tipo').innerHTML = Object.entries(TIPOS).map(([v, l]) => opt('tipo','checkbox',v,l)).join('');
     $('#f-area').innerHTML = Object.keys(AREAS).filter(a => ITENS.some(i => i.area === a)).map(a => opt('area','checkbox',a,AREAS[a].nome)).join('');
-    $('#f-dur').innerHTML = Object.entries(DUR).map(([v, [l]]) => opt('dur','radio',v,l)).join('');
+    if ($('#f-dur')) $('#f-dur').innerHTML =Object.entries(DUR).map(([v, [l]]) => opt('dur','radio',v,l)).join('');
     if (matchMedia('(max-width:860px)').matches) document.querySelector('.filters').open = false;
 
     /* mesmos cards de Formações, Sprints e Pós Tech (cards-formacao.css) */
@@ -183,7 +183,7 @@
       cert: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.2" r="4.2"/><path d="m5.6 9.6-1.1 4.8L8 12.8l3.5 1.6-1.1-4.8"/></svg>',
       go: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg>'
     };
-    const VER = { formacao: 'Ver formação', sprint: 'Ver sprint', pos: 'Ver a pós' };
+    const VER = { formacao: 'Ver formação', sprint: 'Ver curso', pos: 'Ver a pós' };
     const card = i => {
       const pos = i.tipo === 'pos';
       const vis = pos
@@ -191,7 +191,7 @@
         : `<div class="f-vis" style="background-image:url('${i.capa}')" aria-hidden="true"></div>`;
       const facts = pos
         ? `<li>${ic.cert}Pós-graduação reconhecida pelo MEC</li>`
-        : (i.h ? `<li>${ic.h}${i.h}h</li>` : '') + (i.mod ? `<li>${ic.mod}${i.mod} módulos</li>` : '') + `<li>${ic.cert}Certificado</li>`;
+        : (i.mod ? `<li>${ic.mod}${i.mod} módulos</li>` : `<li>${ic.h}Menos de 1 semana</li>`) + `<li>${ic.cert}Certificado</li>`;
       return `<a class="f-card c-${i.tipo}${i.dest === 'Comece aqui' ? ' feature' : ''}" href="${i.url}"${pos ? ' target="_blank" rel="noopener"' : ''}>${vis}
         <div class="f-body"><div class="top"><span class="tag tag-tipo">${TIPOS[i.tipo]}</span><span class="tag tag-area">${i.tag || AREAS[i.area].curto}</span></div>
         <h3>${i.nome}</h3><p>${i.txt}</p><ul class="f-facts">${facts}</ul>

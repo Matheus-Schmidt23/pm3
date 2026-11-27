@@ -112,11 +112,11 @@ foreach ($cf in $cfgs) {
 
   # ---------- montagem ----------
   $nome = $cf.nome; $nomeH = Esc $nome
-  $statsTxt = $(if ($isBuilder) { "$nMods módulos, $aulas aulas e $aplic aplicações práticas" } else { "${horas}h, $nMods módulos, $aulas aulas" })
+  $statsTxt = $(if ($isBuilder) { "$nMods módulos, $aulas aulas e $aplic aplicações práticas" } else { "$nMods módulos e $aulas aulas" })
   $factsHtml = $(if ($isBuilder) {
       "<div><b>$nMods</b><span>módulos</span></div><div><b>$aulas</b><span>aulas</span></div><div><b>$aplic</b><span>aplicações práticas</span></div>"
     } else {
-      "<div><b>${horas}h</b><span>de conteúdo</span></div><div><b>$nMods</b><span>módulos</span></div><div><b>$aulas</b><span>aulas</span></div>"
+      "<div><b>$nMods</b><span>módulos</span></div><div><b>$aulas</b><span>aulas</span></div><div><b>1</b><span>certificado</span></div>"
     })
   $notaFacts = $(if ($isBuilder) { 'Formação em lançamento: o plano oficial traz só a estrutura (6 módulos, aulas e aplicações práticas), sem carga horária. Os módulos são publicados aos poucos; não mostrar horas até o time confirmar.' } else { "Números do plano de estudos oficial (Catálogo de cursos): $durTxt de conteúdo, $aulas aulas em vídeo e dedicação estimada de $dedTxt." })
   $tags = '<span class="tag tag-dark">Formação</span><span class="tag tag-dark">' + (Esc $cf.area) + '</span>' + $(if ($cf.destaque) { '<span class="tag tag-yellow">' + (Esc $cf.destaque) + '</span>' } else { '' })
@@ -165,23 +165,23 @@ foreach ($cf in $cfgs) {
   }) -join "`n"
   $profLead = "$($lista.Count) instrutores com experiência em " + ((@($empresas) | ForEach-Object { Esc $_ }) -join ', ') + ' e outras empresas, que levam para a aula a prática do dia a dia.'
 
-  $tempoFaq = $(if ($isBuilder) { "A formação está em lançamento: os 6 módulos são publicados aos poucos e você acompanha cada um assim que é liberado, dentro dos 12 meses de acesso. A carga horária final ainda não está fechada." } else { "São $horas horas de conteúdo. Contando exercícios e práticas, a dedicação estimada é de cerca de $dedic horas, no seu ritmo, dentro dos 12 meses de acesso." })
-  $sprintQ = $(if ($isBuilder) { 'Qual a diferença para a formação AI Product Specialist?' } else { 'Qual a diferença para a sprint ' + $cf.sprint.nome + '?' })
+  $tempoFaq = $(if ($isBuilder) { "A formação está em lançamento: os 6 módulos são publicados aos poucos e você acompanha cada um assim que é liberado, dentro dos 12 meses de acesso." } else { "Você estuda no seu ritmo, com exercícios e práticas, dentro dos 12 meses de acesso." })
+  $sprintQ = $(if ($isBuilder) { 'Qual a diferença para a formação AI Product Specialist?' } else { 'Qual a diferença para o curso rápido ' + $cf.sprint.nome + '?' })
   $faqs = @(
     @("A formação $nome é para mim?", $cf.quem),
     @($sprintQ, $cf.sprint.texto),
     @('A formação tem certificado?', "Sim. Ao concluir, você recebe o certificado PM3 de $nome, pronto para adicionar ao LinkedIn."),
     @('Quanto tempo leva para concluir?', $tempoFaq),
     @('Como funciona o parcelamento?', 'Você paga no cartão em até 12x ou à vista. Condições de Pix e outras formas aparecem no checkout.'),
-    @('Qual a diferença para o Membership?', "A formação avulsa dá acesso só a $nome, por 12 meses. O Membership custa 12x R$ 299,92 (R$ 3.599 à vista) e inclui, também por 12 meses, as 10 formações, as +40 sprints, mentorias, workshops ao vivo e comunidade.")
+    @('Qual a diferença para o Membership?', "A formação avulsa dá acesso só a $nome, por 12 meses. O Membership custa 12x R$ 299,92 (R$ 3.599 à vista) e inclui, também por 12 meses, as 10 formações, os +50 cursos rápidos, mentorias, workshops ao vivo e comunidade.")
   )
   $faqHtml = ''; $k = 0
   foreach ($q in $faqs) { $faqHtml += '      <details' + $(if ($k -eq 0) { ' open' } else { '' }) + '><summary>' + (Esc $q[0]) + '<i aria-hidden="true"></i></summary><p>' + (Esc $q[1]) + '</p></details>' + "`n"; $k++ }
   $faqLd = ($faqs | ForEach-Object { '  {"@type":"Question","name":"' + (JsEsc $_[0]) + '","acceptedAnswer":{"@type":"Answer","text":"' + (JsEsc $_[1]) + '"}}' }) -join ",`n"
   $tempoLd = $(if ($isBuilder) { '' } else { '"timeRequired":"PT' + $horas + 'H",' })
   $workLd = $(if ($isBuilder) { '' } else { ',"courseWorkload":"PT' + $horas + 'H"' })
-  $certTxt = $(if ($isBuilder) { "Ao concluir a formação, você recebe o certificado PM3 de $nome, com o nome do curso e a carga horária, pronto para o LinkedIn e o currículo." } else { "Ao concluir as $horas horas da formação, você recebe o certificado PM3 de $nome, com o nome do curso e a carga horária, pronto para o LinkedIn e o currículo." })
-  $itemF = $(if ($isBuilder) { "$nMods módulos e $aplic aplicações práticas" } else { "$nMods módulos, ${horas}h, $aulas aulas" })
+  $certTxt = $(if ($isBuilder) { "Ao concluir a formação, você recebe o certificado PM3 de $nome, com o nome do curso, pronto para o LinkedIn e o currículo." } else { "Ao concluir a formação, você recebe o certificado PM3 de $nome, com o nome do curso, pronto para o LinkedIn e o currículo." })
+  $itemF = $(if ($isBuilder) { "$nMods módulos e $aplic aplicações práticas" } else { "$nMods módulos e $aulas aulas" })
 
   $html = @"
 <!DOCTYPE html>
@@ -203,7 +203,7 @@ foreach ($cf in $cfgs) {
 <link rel="stylesheet" href="assets/css/tokens.css?v=2">
 <link rel="stylesheet" href="assets/css/base.css?v=33">
 <link rel="stylesheet" href="assets/css/components.css?v=9">
-<link rel="stylesheet" href="assets/css/course.css?v=29">
+<link rel="stylesheet" href="assets/css/course.css?v=31">
 <link rel="stylesheet" href="assets/css/ementa.css?v=2">
 <link rel="stylesheet" href="assets/css/certificado.css?v=14">
 <link rel="stylesheet" href="assets/css/instrutores.css?v=5">
@@ -256,7 +256,7 @@ $faqLd]}
           <li>$CHECK Estude no seu ritmo, 100% online</li>
           <li>$CHECK 7 dias de garantia</li>
         </ul>
-        <a class="upsell" href="membership.html" data-nota="Venda cruzada: por 12x R$ 299,92 a pessoa leva as 10 formações e as +40 sprints.">
+        <a class="upsell" href="membership.html" data-nota="Venda cruzada: por 12x R$ 299,92 a pessoa leva as 10 formações e os +50 cursos rápidos.">
           <span class="sym"><img src="assets/logo/pm3-simbolo-preto.svg" alt=""></span>
           <span><b>Ou acesse as 10 formações</b><span>Membership: 12x R$ 299,92</span></span>
           $ARROW
@@ -316,7 +316,7 @@ $iaHtml    </div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="kicker"><span class="n">03</span> Investimento</p><h2 class="h2" id="iv-t">Escolha<br><span class="c2">o seu plano</span></h2></div>
-      <p class="lead">Só esta formação, todas as formações e sprints com o Membership, ou a pós-graduação com a FIAP. Formação e Membership em até 12x, Pós Tech em 18x.</p>
+      <p class="lead">Só esta formação, todas as formações e cursos rápidos com o Membership, ou a pós-graduação com a FIAP. Formação e Membership em até 12x, Pós Tech em 18x.</p>
     </div>
     <div class="pl3">
       <article class="pl3-card pl3-f reveal">
@@ -329,9 +329,9 @@ $iaHtml    </div>
       <article class="pl3-card pl3-m on-dark reveal" data-d="1">
         <span class="pl3-best">Melhor escolha</span>
         <span class="pl3-k">Membership PM3</span>
-        <h3>Todas as formações<small>10 formações e +40 sprints · 12 meses</small></h3>
+        <h3>Todas as formações<small>10 formações e +50 cursos rápidos · 12 meses</small></h3>
         <div class="pl3-v"><span class="x">12x</span><b><sup>R$</sup>299,92</b><small>ou R$ 3.599 à vista</small></div>
-        <ul><li>$CHECK Esta formação e mais 9</li><li>$CHECK +40 sprints, mentorias e workshops ao vivo</li><li>$CHECK Comunidade PM3 e Certificado de Product Master</li></ul>
+        <ul><li>$CHECK Esta formação e mais 9</li><li>$CHECK +50 cursos rápidos, mentorias e workshops ao vivo</li><li>$CHECK Comunidade PM3 e Certificado de Product Master</li></ul>
         <a class="btn btn-light" href="membership.html">Assinar o Membership $ARROW</a>
       </article>
       <article class="pl3-card pl3-p on-dark reveal" data-d="2">
@@ -375,7 +375,7 @@ $profHtml
         <p class="lead">$(Esc $certTxt)</p>
         <ul class="cx-proof">
           <li><span class="cx-aw">$LOUROS<b>Top 5</b></span><span class="cx-lb">Empresas mais admiradas em Produto no Brasil</span></li>
-          <li><span class="cx-aw">$LOUROS<b>+800</b></span><span class="cx-lb">Empresas confiam nas formações da PM3</span></li>
+          <li><span class="cx-aw">$LOUROS<b>+1.000</b></span><span class="cx-lb">Empresas confiam nas formações da PM3</span></li>
           <li><span class="cx-aw">$LOUROS<b>9 em 10</b></span><span class="cx-lb">Profissionais de produto conhecem a PM3</span></li>
         </ul>
       </div>

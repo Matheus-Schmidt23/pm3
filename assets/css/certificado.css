@@ -116,3 +116,15 @@
 @media (hover:hover){
   .cx-levels div:hover{transform:none;border-top-color:transparent}
 }
+
+/* home: os certificados se alternam (fade do mockup) e o seletor mostra qual está na tela */
+.cx-troca::before{transition:opacity .6s ease}
+.cx-troca.saindo::before{opacity:0}
+.cx-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.cx-tabs button{font-family:var(--display);font-weight:600;font-size:13px;color:rgba(255,255,255,.72);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-pill);padding:8px 14px;cursor:pointer;position:relative;overflow:hidden;transition:color .25s,border-color .25s,background .25s}
+.cx-tabs button:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+.cx-tabs button.on{color:#000;background:#fff;border-color:#fff}
+.cx-tabs button.on::after{content:'';position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--purple-royal);transform-origin:left;animation:cx-tempo var(--cx-t,5s) linear forwards}
+@keyframes cx-tempo{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.cx-troca.parado .cx-tabs button.on::after{animation:none;transform:scaleX(0)}
+@media (prefers-reduced-motion:reduce){ .cx-troca::before{transition:none} .cx-tabs button.on::after{display:none} }

@@ -409,4 +409,61 @@
 /* card do Top 5 leva ao Panorama */
 .aw-list li a{display:block;min-width:0;color:inherit;text-decoration:none}
 /* revisão mobile: título do hero cabe em 320px */
-@media (max-width:600px){ .h-hero h1{font-size:clamp(36px,calc(16.9vw - 14px),58px)} }
+@media (max-width:600px){ .h-hero h1{font-size:clamp(34px,calc(13.6vw - 6px),58px)} }
+
+/* ---------- objetivos como pilares (pedido do Yuri: a seta entre colunas sugeria uma sequência) ----------
+   desktop: quatro colunas verticais com fio à esquerda, ícone no topo e seta diagonal no canto ("ir para"), sem fluxo da esquerda para a direita */
+.intent.pilares .pi{width:26px;height:26px;color:var(--yellow);flex:none}
+@media (min-width:861px){
+  .intent.h-routes.pilares ul{column-gap:clamp(12px,1.4vw,24px)}
+  .intent.h-routes.pilares li,.intent.h-routes.pilares li:first-child{border-top:0;border-left:1px solid rgba(255,255,255,.18)}
+  .intent.h-routes.pilares a{justify-content:flex-start;gap:calc(12px * var(--s,1));padding:calc(4px * var(--s,1)) 34px calc(6px * var(--s,1)) clamp(14px,1.2vw,20px)}
+  .intent.h-routes.pilares a::before{left:-1px;right:auto;top:0;bottom:0;width:2px;height:auto;transform:scaleY(0);transform-origin:top}
+  .intent.h-routes.pilares a:hover::before{transform:scaleY(1)}
+  .intent.h-routes.pilares .q{flex:1}
+  .intent.h-routes.pilares .to svg{top:calc(6px * var(--s,1));right:4px;transform:none;width:16px;height:16px}
+  .intent.h-routes.pilares a:hover .to svg{transform:translate(2px,-2px)}
+}
+@media (max-width:860px){
+  .intent.pilares a{flex-direction:row;align-items:center;gap:16px}
+  .intent.pilares .q{flex:1}
+}
+
+/* ---------- quem ensina: faixa de prova e link para todos os instrutores ---------- */
+#instrutores .in-proof{list-style:none;margin:0 0 clamp(28px,3vw,44px);padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}
+#instrutores .in-proof li{display:flex;align-items:baseline;gap:14px;padding:clamp(18px,2vw,26px) clamp(16px,2vw,28px);border-left:1px solid rgba(255,255,255,.14)}
+#instrutores .in-proof li:first-child{border-left:0;padding-left:0}
+#instrutores .in-proof b{font-family:var(--display);font-weight:800;font-size:clamp(26px,2.6vw,38px);letter-spacing:-.03em;line-height:1;color:var(--yellow);white-space:nowrap}
+#instrutores .in-proof span{font-size:14.5px;line-height:1.4;color:var(--gray-fog)}
+#instrutores .prof-nav{justify-content:space-between}
+#instrutores .in-all{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:15px;color:#fff;text-decoration:none}
+#instrutores .in-all svg{width:16px;height:16px;transition:transform .25s}
+#instrutores .in-all:hover{color:var(--yellow)}
+#instrutores .in-all:hover svg{transform:translateX(4px)}
+@media (max-width:860px){
+  #instrutores .in-proof{grid-template-columns:1fr}
+  #instrutores .in-proof li{border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.14)}
+  #instrutores .in-proof li:first-child{border-top:0}
+}
+
+/* ---------- "Escolha o seu formato" todo no escuro (pedido do Yuri) ----------
+   os cartões brancos pareciam outra marca e apagavam a Pós Tech. Agora: Membership roxo (principal),
+   Formações e Cursos rápidos em superfície escura neutra, Pós Tech com o neon da própria pós (produto à parte). */
+.bento-sec .t-form,.bento-sec .t-sprint{background:#120c1f;border:1px solid rgba(255,255,255,.09);color:#fff}
+.bento-sec .t-sprint{background:linear-gradient(160deg,#1b1230 0%,#100a1c 100%)}
+.bento-sec .t-form h3,.bento-sec .t-sprint h3,.bento-sec .t-sprint .n-lbl{color:#fff}
+.bento-sec .t-form .kicker{color:var(--gray-fog)}
+.bento-sec .t-form p,.bento-sec .t-sprint p{color:var(--gray-fog)}
+.bento-sec .t-form .more,.bento-sec .t-sprint .more{color:#fff}
+.bento-sec .t-form .tag-fog{background:rgba(255,255,255,.08);color:#e9e5f0;border:1px solid rgba(255,255,255,.12)}
+.bento-sec .t-sprint .n{background:linear-gradient(135deg,var(--lilac-a),var(--lilac-b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.t-form .tl-spot,.t-sprint .tl-spot{background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(176,77,221,.22),transparent 45%)}
+.bento-sec .t-form:hover .more,.bento-sec .t-sprint:hover .more{color:var(--yellow)}
+/* Pós Tech com brilho próprio */
+.t-pos{background:#0a0612;box-shadow:0 0 0 1px rgba(255,79,139,.35),0 30px 80px -40px rgba(255,45,111,.7)}
+.t-pos .bg{background-image:linear-gradient(180deg,rgba(10,6,18,.15) 0%,rgba(10,6,18,.55) 55%,rgba(10,6,18,.92) 100%),url('../img/pos-hero-neon.jpg');background-size:cover,auto 135%;background-position:center,78% 50%;opacity:1;animation:none}
+.t-pos h3{font-size:clamp(32px,3.4vw,50px)}
+.t-pos p{color:#f1e9f5}
+.t-pos .seal{background:rgba(255,45,111,.18);border-color:rgba(255,79,139,.6)}
+.t-pos .more{color:#fff}
+.t-pos:hover .more{color:#ff8fb6}
