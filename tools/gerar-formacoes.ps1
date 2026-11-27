@@ -61,9 +61,9 @@ foreach ($l in [IO.File]::ReadAllLines((Join-Path $proto 'assets\js\instrutores-
 }
 
 foreach ($cf in $cfgs) {
-  # mockup do certificado: português na frente e inglês atrás (AI Product Specialist e AI Product Builder têm o seu; as demais seguem com o de Product Management)
-  $certImg = switch -Wildcard ($cf.arquivo) { '*ai-product-specialist*' { 'certificado-duo-aips' } '*ai-product-builder*' { 'certificado-duo-aipb' } default { 'certificado-veludo' } }
-  $certNota = if ($certImg -eq 'certificado-veludo') { 'PROVISÓRIO: o mockup ainda é o de Product Management. Falta o mockup do certificado desta formação.' } else { 'Mockup do certificado desta formação, em português (frente) e inglês (atrás).' }
+  # mockup do certificado: grade em perspectiva com os certificados, o desta formação no centro (AI Product Specialist e AI Product Builder têm o seu; as demais seguem com o de Product Management)
+  $certImg = switch -Wildcard ($cf.arquivo) { '*ai-product-specialist*' { 'certificados-grade-aips' } '*ai-product-builder*' { 'certificados-grade-aipb' } default { 'certificado-veludo' } }
+  $certNota = if ($certImg -eq 'certificado-veludo') { 'PROVISÓRIO: o mockup ainda é o de Product Management. Falta o mockup do certificado desta formação.' } else { 'Grade em perspectiva com os certificados PM3 em português e inglês, com o desta formação no centro.' }
   $resumo = [IO.File]::ReadAllLines((Join-Path $cat ($cf.md + '.md')), $utf8)
   $durTxt = ''; $dedTxt = ''
   foreach ($l in $resumo) { if ($l -match 'Dura..o do conte.do\*\*: (\S+) .*Dedica..o estimada\*\*: (\S+)') { $durTxt = $Matches[1]; $dedTxt = $Matches[2] } }
@@ -371,7 +371,7 @@ $profHtml
 
 <!-- 7 · CERTIFICADO -->
 <section class="cx-sec on-dark" id="certificado" aria-labelledby="ce-t">
-  <div class="cx-hero cx-var" style="--cert-full:url('../img/$($certImg).jpg?v=3');--cert-crop:url('../img/$($certImg)-crop.jpg?v=3')" data-nota="$certNota">
+  <div class="cx-hero cx-var" style="--cert-full:url('../img/$($certImg).jpg?v=1');--cert-crop:url('../img/$($certImg)-crop.jpg?v=1')" data-nota="$certNota">
     <div class="wrap">
       <div class="cx-copy">
         <p class="kicker"><span class="n">05</span> Certificado</p>
